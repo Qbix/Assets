@@ -1,0 +1,648 @@
+{
+	"Q": {
+		"pluginInfo": {
+			"Assets": {
+				"version": "1.0.177",
+				"compatible": "0.7",
+				"requires": {"Q": "0.9", "Streams": "0.9"},
+				"connections": ["Assets", "Streams"]
+			}
+		},
+		"handlersBeforeEvent": {
+			"Q/responseExtras": ["Assets/before/Q_responseExtras"],
+			"Streams/create/Assets/service": ["Assets/before/Streams_create_Assets_service"],
+			"Streams/Stream/save/Assets/NFT": ["Assets/before/Streams_manage_Assets_NFT"],
+			"Streams/close/Assets/NFT": ["Assets/before/Streams_manage_Assets_NFT"],
+			"Streams/Stream/save/Assets/NFT/series": ["Assets/before/Streams_manage_Assets_NFT_series"],
+			"Streams/close/Assets/NFT/series": ["Assets/before/Streams_manage_Assets_NFT_series"]
+		},
+		"handlersAfterEvent": {
+			"Users/insertUser": ["Assets/after/Users_insertUser"],
+			"Users/updateUserIds": ["Assets/after/Users_updateUserIds"],
+			"Users/filter/users": ["Assets/after/Users_filter_users"],
+			"Assets/charge": ["Assets/after/Assets_charge"],
+			"Assets/credits/spent": ["Assets/after/Assets_credits_spent"],
+			"Assets/startSubscription": ["Assets/after/Assets_startSubscription"],
+			"Streams/invite/accept": ["Assets/after/Streams_inviteAccept"],
+			"Streams/Stream/exportArray": ["Assets/after/Streams_Stream_exportArray"],
+			"Db/Row/Streams_Stream/insertManyAndExecute": ["Assets/after/Db_Row_Streams_Stream_insertManyAndExecute"],
+			"Db/Row/Streams_Stream/saveExecute": ["Assets/after/Streams_save"],
+			"Streams/fetch/Assets/NFT/contract": ["Assets/after/Streams_fetch_Assets_NFT_contract"],
+			"Streams/updateStreamNames": ["Assets/after/Streams_updateStreamNames"],
+			"Streams/create/Assets/plan": ["Assets/after/Streams_create_Assets_plan"],
+			"Streams/relateTo/Assets/plan": ["Assets/after/Streams_relateTo_Assets_plan"],
+			"Streams/unrelateTo/Assets/plan": ["Assets/after/Streams_unrelateTo_Assets_plan"],
+			"Streams/close/Assets/plan": ["Assets/after/Streams_close_Assets_plan"]
+		},
+		"routes@start": {
+			"Q/plugins/Assets/:action": {"module": "Assets"},
+			"Assets/NFT/:publisherId/:streamId": {"module": "Assets", "action": "NFT"},
+			"Assets/NFT/:tokenId": {"module": "Assets", "action": "NFT"},
+			"Assets/services": { "module": "Assets", "action": "services" },
+			"Assets/billing": { "module": "Assets", "action": "billing" },
+			"Assets/NFTprofile/:userId": {"module": "Assets", "action": "NFTprofile"},
+			"Assets/NFTprofile": {"module": "Assets", "action": "NFTprofile"},
+			"Assets/NFTcollections": {"module": "Assets", "action": "NFTcollections"},
+			"Assets/NFTowned": {"module": "Assets", "action": "NFTowned"},
+			"Assets/NFTcontract": {"module": "Assets", "action": "NFTcontract"},
+			"assetsIcons": { "module": "Assets", "action": "icons" },
+			"Q/plugins/Assets/webhooks/:serviceName": {"module": "Assets", "action": "blockchainWebhook"},
+			"Assets/plan/:publisherId/:planId": { "module": "Assets", "action": "plan" },
+			"Assets/subscription": {"module": "Assets", "action": "subscription"},
+			"Assets/connected": {"module": "Assets", "action": "connected"},
+			"Assets/connected/:payments": {"module": "Assets", "action": "connected"},
+			"Assets/connected/:payments/:method": {"module": "Assets", "action": "connected"}
+		},
+		"web": {
+			"contentSecurityPolicy": {
+				"script": ["https://js.stripe.com"]
+			},
+			"requireValidNonce": {
+				"include": ["Assets"]
+			}
+		},
+		"bundle": {
+			"exclude": {
+				"Assets": ["img"]
+			}
+		},
+		"environments": {
+			"live": {
+				"prepare": {
+					"{{Assets}}": ["js", "css"]
+				}
+			}
+		},
+		"text": {
+			"Assets": {
+				"*": ["Assets/content"]
+			}
+		},
+		"views": {
+			"Assets/charge.php": {"html": true},
+			"Assets/charged.php": {"html": true},
+			"Assets/startedSubscription.php": {"html": true},
+			"Assets/startSubscription.php": {"html": true}
+		},
+		"images": {
+			"Assets/product": {
+				"sizes": ["40", "50", "80", "200", "400", "400x", "x400", "x100", "500x"],
+				"defaultSize": "400",
+				"maxStretch": 2
+			},
+			"Assets/service": {
+				"sizes": ["40", "50", "80", "200", "400", "400x", "x400", "x100", "500x"],
+				"defaultSize": "400",
+				"maxStretch": 2
+			},
+			"NFT/icon": {
+				"sizes": ["300x","500x","700x","x"],
+				"defaultSize": "300x",
+				"defaultCacheBust": 1000,
+				"maxStretch": 2
+			},
+			"NFT/series/icon": {
+				"sizes": ["300x","500x","700x","x"],
+				"defaultSize": "300x",
+				"defaultCacheBust": 1000,
+				"maxStretch": 2
+			}
+		}
+	},
+	"Users": {
+		"web3": {
+			"contracts": {
+				"Assets/templates/R1/Auction/factory": {
+					"0x38": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x89": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x13881": "0x4ff8710f6b6e3CAac333d4AB44470F392F6b7D18"
+				},
+				"Assets/templates/R1/AuctionCommunity/factory": {
+					"0x38": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x89": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x13881": "0x4ff8710f6b6e3CAac333d4AB44470F392F6b7D18"
+				},
+				"Assets/templates/R1/AuctionNFT/factory": {
+					"0x38": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x89": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x13881": "0x4ff8710f6b6e3CAac333d4AB44470F392F6b7D18"
+				},
+				"Assets/templates/R1/AuctionSubscription/factory": {
+					"0x38": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x89": "0x090101003c69e3E3D777Db1EAb500BDC74469fA6",
+					"0x13881": "0x4ff8710f6b6e3CAac333d4AB44470F392F6b7D18"
+				},
+				"Assets/templates/R1/AuthorizedInviteManager/factory": {
+					"0x38": "0x010201000BEf7a6CFeaB3cE5E3a8DD378B45Faf2",
+					"0x89": "0x010201000BEf7a6CFeaB3cE5E3a8DD378B45Faf2",
+					"0x13881": "0x1E84e70D6614F4848aEfDcC358f9776a76B81A85"
+				},
+				"Assets/templates/R1/AuthorizedInviteManager/contract": {
+					"0x38": "0xB6bC20e0Bc7DACb47D01BaFAae602FDd8e33E336",
+					"0x89": "0xB6bC20e0Bc7DACb47D01BaFAae602FDd8e33E336",
+					"0x13881": "0xce080378825C79CB0668c47C03f63d65020973A1"
+				},
+				"Assets/templates/R1/ClaimManager/factory": {
+					"0x38": "0x130101007bA13B731669bdF23819924F3213f1B8",
+					"0x89": "0x130101007bA13B731669bdF23819924F3213f1B8",
+					"0x13881": "0x27771453Ab75d3CD6f7Aa90b2D68609F055811A2"
+				},
+				"Assets/templates/R1/CommunityCoin/factory": {
+					"0x38": "0x03010100a373cDEEaF08cebA6130e21d191d9962",
+					"0x89": "0x03010100a373cDEEaF08cebA6130e21d191d9962",
+					"0x13881": "0x1207394326FEF47066E35d6C267445a3F7511ECC"
+				},
+				"Assets/templates/R1/Contest/factory": {
+					"all": "0x07010100806783309eD30F1E1F157F239a010545",
+					"0x89": "0x07010100806783309eD30F1E1F157F239a010545",
+					"0x13881": "0x25c850F82A54c83776Aaaf8a1AB4EE244939BC99"
+				},
+				"Assets/templates/R1/ContestETHOnly/factory": {
+					"all": "0x07010100806783309eD30F1E1F157F239a010545",
+					"0x89": "0x07010100806783309eD30F1E1F157F239a010545",
+					"0x13881": "0x25c850F82A54c83776Aaaf8a1AB4EE244939BC99"
+				},
+				"Assets/templates/R1/Control/factory": {
+					"all": "0x11010100A4CEb22C0a9E035CB650CebAc290c3B3",
+					"0x89": "0x11010100A4CEb22C0a9E035CB650CebAc290c3B3",
+					"0x13881": "0x97b0bcdC4677bC2db7c93786E7BE6420193848A2"
+				},
+				"Assets/templates/R1/Escrow/factory": {
+					"all": "0x10010100E97280E4ef42EFb0834402F9f2d4c1b5",
+					"0x89": "0x10010100E97280E4ef42EFb0834402F9f2d4c1b5",
+					"0x13881": "0x12Fa616220E1c55c98268690e2eAa5024a3F8BD7"
+				},
+				"Assets/templates/R1/Sales/factory": {
+					"all": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+					"0x38": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0x89": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0x2105": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0xa": "0x08010100d9d250947417b9de5b6622fa1dcb64b8"
+				},
+				"Assets/templates/R1/SalesWithStablePrices/factory": {
+					"all": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+					"0x38": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0x89": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0x2105": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0xa": "0x08010100d9d250947417b9de5b6622fa1dcb64b8"
+				},
+				"Assets/templates/R1/SalesForToken/factory": {
+					"all": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+					"0x38": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0x89": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0x2105": "0x08010100d9d250947417b9de5b6622fa1dcb64b8",
+                    "0xa": "0x08010100d9d250947417b9de5b6622fa1dcb64b8"
+				},
+				"Assets/templates/R1/Income/factory": {
+					"all": "<put address here>",
+					"0x89": "<put address here>",
+					"0x13881": "<put address here>"
+				},
+				"Assets/templates/R1/IncomeUBI/factory": {
+					"all": "<put address here>",
+					"0x89": "<put address here>",
+					"0x13881": "<put address here>"
+				},
+				"Assets/templates/R1/IncomeUBILinear/factory": {
+					"all": "<put address here>",
+					"0x89": "<put address here>",
+					"0x13881": "<put address here>"
+				},
+				"Assets/templates/R1/NFT/factory": {
+					"0x38": "0x0201010079282290a2b0d2E4cbc2a688c029db63",
+					"0x89": "0x0201010079282290a2b0d2E4cbc2a688c029db63",
+					"0x13881": "0x0b2200D3db4A70774Af2304B83F08F3Dd0A18a3A"
+				},
+				"Assets/templates/R1/NFT/sales/factory": {
+					"0x38": "0x020201008CefCC7bE7627cb6C767988F413B0Db1",
+					"0x89": "0x020201008CefCC7bE7627cb6C767988F413B0Db1",
+					"0x13881": "0x282856296DEd09d8630f011Ac7797556a2b99414"
+				},
+				"Assets/templates/R1/NFT/locked/contract": {
+					"0x1": "0x50c8a01f1ab285d4341ab99d2b1965add4f52d1e",
+					"0x38": "0x300d5f5a3227f75551bf050fb2debcf3a8034dd4",
+					"0x89": "0xb9216ebe3a42da670c484a064bb5a93d8122e421",
+					"0x13881": "0x6BbB0ccD3acCFE3CA4CBc799041b4FC9598859c7"
+				},
+				"Assets/templates/R1/Rewards/factory": {
+					"all": "0x03040100032A238C9E092E80A6dB1720AB16d2c9",
+					"0x89": "0x03040100032A238C9E092E80A6dB1720AB16d2c9",
+					"0x13881": "0x8BDa578c81589aB58c757F3b395b58b45a51197B"
+				},
+				"Assets/templates/R1/Subscription/factory": {
+					"all": "0x04010100099d18Da3d85886Ad297e8F654797d99",
+					"0x89": "0x04010100099d18Da3d85886Ad297e8F654797d99",
+					"0x13881": "0x12Fa616220E1c55c98268690e2eAa5024a3F8BD7"
+				}
+			}
+		},
+		"roles": {
+			"Users/owners": {
+				"canManageLabels": [
+					"Assets/"
+				]
+			},
+			"Users/admins": {
+				"canManageLabels": [
+					"Assets/"
+				]
+			}
+		}
+	},
+	"Streams": {
+		"userStreams": {
+			"Assets": "streams.json"
+		},
+		"types": {
+			"Assets/credits": {
+				"emoji": "💳",
+				"create": false,
+				"edit": false,
+				"defaults": {
+					"title": "Credits",
+					"icon": "{{Assets}}/img/credits.png",
+					"content": "",
+					"attributes": {
+						"amount": 0,
+						"peak": 0
+					},
+					"readLevel": 0,
+					"writeLevel": 0,
+					"adminLevel": 0
+				},
+				"messages": {
+					"Assets/credits/alert": {
+						"subject": ["Assets/content", ["notifications", "Assets/credits/alert"]],
+						"Q/notice": {
+							"timeout": 60
+						}
+					}
+				},
+				"updateRelations": ["from"]
+			},
+			"Assets/plan": {
+				"emoji": "📊",
+				"create": true, 
+				"edit": true,
+				"canCreate": ["Users/admins", "Users/owners", "Assets/admins"],
+				"inheritAccess": false,
+				"defaults": {
+					"title": "Subscription plan",
+					"readLevel": 40,
+					"writeLevel": 10,
+					"adminLevel": 0
+				}
+			},
+			"Assets/subscription": {
+				"emoji": "🔄",
+				"create": false, 
+				"edit": false,
+				"defaults": {
+					"title": "Subscription",
+					"readLevel": 0,
+					"writeLevel": 0,
+					"adminLevel": 0
+				}
+			},
+			"Assets/product": {
+				"emoji": "🛍️",
+				"create": true, 
+				"edit": true,
+				"defaults": {
+					"title": "Product",
+					"readLevel": 40,
+					"writeLevel": 23,
+					"adminLevel": 0
+				}
+			},
+			"Assets/service": {
+				"emoji": "🛠️",
+				"create": true,
+				"edit": true,
+				"defaults": {
+					"title": "Service",
+					"readLevel": 40,
+					"writeLevel": 23,
+					"adminLevel": 0
+				}
+			},
+			"Assets/NFT": {
+				"emoji": "🎴",
+				"create": true,
+				"close": true,
+				"edit": true,
+				"defaults": {
+					"title": "",
+					"icon": "{{Assets}}/img/empty_white.png"
+				}
+			},
+			"Assets/NFT/series": {
+				"emoji": "🃏",
+				"create": true,
+				"close": true,
+				"edit": true,
+				"defaults": {
+					"title": "",
+					"icon": "{{Assets}}/img/empty_white.png"
+				}
+			},
+			"Assets/NFT/contract": {
+				"emoji": "📜",
+				"create": true,
+				"close": true,
+				"edit": true,
+				"canCreate": ["Users/admins", "Users/owners"],
+				"defaults": {
+					"icon": "{{Assets}}/img/empty_white.png",
+					"readLevel": 40,
+					"writeLevel": 10,
+					"adminLevel": 20
+				}
+			},
+			"Assets/NFT/pointer": {
+				"emoji": "↩",
+				"create": true,
+				"close": true,
+				"edit": true,
+				"defaults": {
+					"title": "NFT Pointer",
+					"icon": "Streams/file"
+				}
+			},
+			"Assets/NFT/collection": {
+				"emoji": "🗃️",
+				"create": true,
+				"close": true,
+				"edit": true,
+				"defaults": {
+					"title": "",
+					"icon": "Streams/category"
+				}
+			},
+			"Assets/fundraise": {
+				"emoji": "💸",
+				"create": true,
+				"close": true,
+				"edit": ["content", "icon"],
+				"defaults": {
+					"title": "fundraise",
+					"icon": "Assets/product",
+					"readLevel": 40,
+					"writeLevel": 10,
+					"adminLevel": 20
+				}
+			},
+			"Assets/invoice": {
+				"emoji": "🧾",
+				"create": true, 
+				"edit": true,
+				"defaults": {
+					"title": "Invoice to receive funds",
+					"readLevel": 40,
+					"writeLevel": 0,
+					"adminLevel": 0
+				}
+			}
+		},
+		"possibleUserStreams": {
+			"Assets/user/NFTs": true,
+			"Assets/NFT/contracts": true,
+			"Assets/NFT/series": true
+		},
+		"onInsert": {
+			"community": [],
+			"person": ["Assets/NFT/series"]
+		}
+	},
+	"Assets": {
+		"users": {
+			"filter": {
+				"peak": {
+					"min": 20
+				}
+			}
+		},
+		"payments": {
+			"stripe": {
+				"jsLibrary": "https://js.stripe.com/v3/",
+				"appearance": { /* stripe param allow to change themes and styles of stripe content */
+					"theme": "stripe"
+				}
+			}
+		},
+		"credits": {
+			"spend": {
+				"Communities/create": 20,
+				"chat": {
+					"private": 10
+				}
+			},
+			"grant": {
+				"Users/insertUser": 0,
+				"Users/newUserAcceptedYourInvite": 10,
+				"invitedUserEntered": {
+					"Streams/user/firstName": 1,
+					"Streams/user/lastName": 1,
+					"Streams/user/icon": 10,
+					"Places/user/location": 10,
+					"Streams/greeting/": 10
+				},
+				"forStreams": {
+					"Streams/user/firstName": 5,
+					"Streams/user/lastName": 5,
+					"Streams/user/birthday": 1,
+					"Streams/user/icon": 5,
+					"Streams/user/gender": 1,
+					"Streams/user/height": 1,
+					"Streams/user/affiliation": 1,
+					"Places/user/location": 5,
+					"Streams/greeting": 5,
+					"Streams/user/dating": 1,
+					"Streams/user/jobs": 1,
+					"Streams/user/education": 1,
+					"Streams/user/twitter": 1,
+					"Streams/user/github": 1,
+					"Streams/user/facebook": 1,
+					"Streams/user/instagram": 1
+				}
+			},
+			"exchange": {
+				"credits": 1,
+				"USD": 1
+			},
+			"bonus": {
+				"bought": {
+					"500": 50, /* if user bought 500 credits at once, he will get 50 credits bonus */
+					"1000": 150 /* if user bought 1000 credits at once, he will get 150 credits bonus */
+				}
+			},
+			"amount": {
+				"min": 10, /* when users credits amount less or equal this, auto charge with "additional" credits or send alert */
+				"add": 100 /* when users credits amount less or equal "min", auto charge with this credits amount */
+			},
+			"buyLink": "Communities/me tab=credits"
+		},
+		"currencies": {
+			"ignoreCache": false,
+			"dontCache": false,
+			"duration": 3600,
+			"tokens": {
+				"BNB": {
+					"symbol": "BNB",
+					"name": "Binance Coin",
+					"decimals": 18,
+					"0x4": "0x5eD8BD53B0c3fa3dEaBd345430B1A3a6A4e8BD7C",
+					"0x1": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
+					"0x61": "0x0000000000000000000000000000000000000000",
+					"0x38": "0x0000000000000000000000000000000000000000"
+				},
+				"USDT": {
+					"symbol": "USDT",
+					"name": "Tether",
+					"decimals": 6,
+					"0x1": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+					"0x89": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
+				},
+				"USDC": {
+					"symbol": "USDC",
+					"name": "USD Coin",
+					"decimals": 18,
+					"0x4": "0xbaAeF3b2756F35F933A55EDcCd27338F74F18f9c",
+					"0x1": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+					"0x38": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+					"0x61": "0x1543580c3AE98385E2655894bC89461B7f3E17F7",
+					"0x89": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174"
+				},
+				"BUSD": {
+					"symbol": "BUSD",
+					"name": "Binance USD",
+					"decimals": 18,
+					"0x4": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+					"0x1": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+					"0x38": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+					"0x61": "0x50ad281587A1a85aeF214346436E046a6601fE49",
+					"0x89": "0xdab529f40e671a1d4bf91361c21bf9f0c9712ab7"
+				},
+				"ETH": {
+					"symbol": "ETH",
+					"name": "Ethereum",
+					"decimals": 18,
+					"0x4": "0x0000000000000000000000000000000000000000",
+					"0x1": "0x0000000000000000000000000000000000000000",
+					"0x38": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+					"0x61": "0xBa0fc9605D1c71ABFCEa8b93E4CC5619c4a03606"
+				},
+				"DAI": {
+					"symbol": "DAI",
+					"name": "DAI",
+					"decimals": 18,
+					"0x4": "0x73f0415F66dd4F7a20e6e9bB658Ff02bD358D6fD",
+					"0x1": "0x6b175474e89094c44da98b954eedeac495271d0f",
+					"0x38": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+					"0x61": "0x370e042A7C3A5E65032C6A134eb3C333Ff6bd4cA"
+				},
+				"MATIC": {
+					"symbol": "MATIC",
+					"name": "MATIC",
+					"decimals": 18,
+					"0x1": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+					"0x38": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+					"0x89": "0x0000000000000000000000000000000000000000",
+					"0x13881": "0x0000000000000000000000000000000000000000"
+				}
+			}
+		},
+		"reasons": {
+			"Assets/purchased": {
+				"by": "purchasing credits"
+			},
+			"Assets/received": {
+				"by": "receiving credits"
+			}
+		},
+		"transactional": {
+			"charge": {
+				"subject": ["Assets/content", ["charge", "Subject"]],
+				"body": "Assets/email/charge.php",
+				"mobile": "Assets/mobile/charge.php"
+			},
+			"charged": {
+				"subject": ["Assets/content", ["charged", "Subject"]],
+				"body": "Assets/email/charged.php",
+				"mobile": "Assets/mobile/charged.php"
+			},
+			"startSubscription": {
+				"subject": ["Assets/content", ["notifications", "SubscribedTo"]],
+				"body": "Assets/email/startSubscription.php",
+				"mobile": "Assets/mobile/startSubscription.php"
+			},
+			"startedSubscription": {
+				"subject": ["Assets/content", ["notifications", "YouSubscribedTo"]],
+				"body": "Assets/email/startedSubscription.php",
+				"mobile": "Assets/mobile/startedSubscription.php"
+			}
+		},
+		"browsertab": {
+			"css": []
+		},
+		"canCheckPaid": ["Users/owners", "Users/admins", "Assets/admins"],
+		"NFT": {
+			"contract": {
+				"allow": {
+					"author": true
+				}
+			},
+			"attributes": {
+				"display_type": [
+					{
+						"name": "Text",
+						"value": "string"
+					},
+					{
+						"name": "Date",
+						"value": "date"
+					},
+					{
+						"name": "Number",
+						"value": "number"
+					},
+					{
+						"name": "Relative Number",
+						"value": "boost_number"
+					},
+					{
+						"name": "Relative Percentage",
+						"value": "boost_percentage"
+					}
+				]
+			},
+			"methods": {
+				"tokensByOwner": {
+					"limit": 100
+				}
+			},
+			"URI": {
+				"base": "{{baseUrl}}/Assets/NFT/{{contractId}}/{{tokenId}}",
+				"suffix": ".json"
+			}
+		},
+		"ethplorer": {
+			"endPoint": "https://api.ethplorer.io/getAddressInfo/{{address}}?apiKey={{apiKey}}"
+		},
+		"moralis": {
+			"endPoints": {
+				"ERC20": "https://deep-index.moralis.io/api/v2/{{walletAddress}}/erc20?chain={{chainId}}{{tokenAddresses}}",
+				"native": "https://deep-index.moralis.io/api/v2/{{walletAddress}}/balance?chain={{chainId}}",
+				"priceEndPoint": "https://deep-index.moralis.io/api/v2/erc20/{{wrappedTokenAddress}}/price?chain={{chainId}}" /* this endpoint return balance in USD */
+			},
+			"wrappedTokenAddresses": {
+				"0x1": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",	/* Ethereum  */
+				"0x89": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",	/* Polygon   */
+				"0x38": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",	/* Binance   */
+				"0xa86a": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",	/* Avalanche */
+				"0xfa": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",	/* Fantom    */
+				"0x19": "0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23"	/* Cronos    */
+			}
+		}
+	}
+}

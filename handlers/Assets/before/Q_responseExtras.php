@@ -1,0 +1,57 @@
+<?php
+
+function Assets_before_Q_responseExtras() {
+	Q_Response::addStylesheet('{{Assets}}/css/Assets.css', 'Assets');
+	Q_Response::addScript('{{Assets}}/js/Assets.js?'.filemtime(ASSETS_PLUGIN_WEB_DIR.DS.'js/Assets.js'), 'Assets');
+
+	Q_Response::setScriptData('Q.plugins.Assets.Credits.amount', Assets_Credits::amount());
+	Q_Response::setScriptData('Q.plugins.Assets.Credits.exchange', Q_Config::expect('Assets', 'credits', 'exchange'));
+
+	if ($publishableKey = Q_Config::get('Assets', 'payments', 'stripe', 'publishableKey', null)) {
+		if ($jsLibrary = Q_Config::get('Assets', 'payments', 'stripe', 'jsLibrary', null)) {
+			Q_Response::setScriptData('Q.plugins.Assets.Payments.stripe.jsLibrary', $jsLibrary);
+		}
+		Q_Response::setScriptData('Q.plugins.Assets.Payments.stripe.publishableKey', $publishableKey);
+		Q_Response::setScriptData('Q.plugins.Assets.Payments.stripe.appearance', Q_Config::get('Assets', 'payments', 'stripe', 'appearance', null));
+
+		$applPayMerchantId = Q_Config::get('Assets', 'payments', 'applePay', 'merchantIdentifier', null);
+		if ($applPayMerchantId) {
+			Q_Response::setScriptData('Q.plugins.Assets.Payments.applePay.merchantIdentifier', $applPayMerchantId);
+		}
+
+		Q_Response::setScriptData('Q.plugins.Assets.Payments.googlePay', Q_Config::get('Assets', 'payments', 'googlePay', null));
+		Q_Response::setScriptData('Q.plugins.Assets.Payments.stripe.version', Q_Config::get('Assets', 'payments', 'stripe', 'version', null));
+	}
+
+	Q_Response::setScriptData('Q.plugins.Assets.service.relatedParticipants', Q_Config::get('Assets', 'service', 'relatedParticipants', null));
+	Q_Response::setScriptData('Q.plugins.Assets.credits.bonus', Q_Config::get('Assets', 'credits', 'bonus', null));
+	Q_Response::setScriptData('Q.plugins.Assets.credits.spend.chat.private', Q_Config::get('Assets', 'credits', 'spend', 'chat', 'private', null));
+
+	if (!empty($_GET['browsertab']) && $_GET['browsertab'] == 'yes') {
+		Q::event('Assets/browsertab/response/content');
+	}
+
+	// blockchain data
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.contract.streamName', Assets_NFT_Contract::$streamName);
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.series.categoryStreamName', Assets_NFT_Series::$categoryStreamName);
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.series.relationType', Assets_NFT_Series::$relationType);
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.series.streamType', Assets_NFT_Series::$streamType);
+	Q_Response::setScriptData('Q.plugins.Assets.Web3.chains', Assets_NFT::getChains());
+	Q_Response::setScriptData('Q.plugins.Assets.Web3.defaultChain', Assets_NFT::getDefaultChain());
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.relationType', Assets_NFT::$relationType);
+	Q_Response::setScriptData('Q.plugins.Assets.currencies.tokens', Q_Config::get("Assets", "currencies", "tokens", array()));
+
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.icon', Q_Config::expect("Q", "images", "NFT/icon"));
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.series.icon', Q_Config::expect("Q", "images", "NFT/series/icon"));
+
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.contract.allow.author', Q_Config::get("Assets", "NFT", "contract", "allow", "author", true));
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.URI.base', Q_Config::get("Assets", "NFT", "URI", "base", array()));
+	Q_Response::setScriptData('Q.plugins.Assets.NFT.URI.suffix', Q_Config::get("Assets", "NFT", "URI", "suffix", array()));
+        
+    Q_Response::setScriptData('Q.Assets.Web3.contracts', Q_Config::get("Assets", "NFT", "sales", "factory", array()));
+        
+	Q_Response::setScriptData('Q.plugins.Assets.Web3.contracts', Q_Config::get('Assets', 'Web3', 'factories'));
+	Q_Response::setScriptData('Q.plugins.Assets.Subscriptions.plan.relationType', Assets_Subscription::$relationType);
+
+	Q_Response::setScriptData('Q.plugins.Assets.plan.defaults', Q_Config::get('Streams', 'types', 'Assets/plan', 'defaults', array()));
+}

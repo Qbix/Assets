@@ -1,0 +1,692 @@
+{
+    "errors": {
+        "Error": "错误",
+        "WalletAbsent": "钱包未连接。",
+        "Rendering": "渲染时出错<span class='url'>{{1}}<\/span>",
+        "PriceRequired": "需要价格！",
+        "NameRequired": "姓名必填！",
+        "PriceInvalid": "价格无效！",
+        "AmountInvalid": "金额无效！",
+        "TransactionFailed": "交易失败",
+        "ChainNotSupported": "不支持所选链。支持链数： {{supportedChain}}",
+        "NeedMetaMaskConnected": "需要连接 MetaMask 才能使用应用程序",
+        "UserNotLoggedInMetaMask": "用户未登录到 MetaMask",
+        "CurrencyNotFound": "找不到货币",
+        "WrongChain": "此 NFT 创建于“ {{chain}} ”之下。请使用这条链。",
+        "NoRecipientSelected": "未选择收件人",
+        "NotEnoughPermissionsWallet": "没有足够的权限读取该用户的钱包",
+        "ThisUserHaveNoWallet": "该用户没有分配钱包",
+        "TheWalletOfThisUserInvalid": "该用户钱包无效",
+        "WalletInvalid": "钱包地址无效",
+        "CantManageFrozenSeries": "你无法管理《冰雪奇缘》系列",
+        "SubscriptionStreamNotPaid": "您尚未付费查看该内容。请点击{{subscriptionUrl}}并订阅相应的计划。"
+    },
+    "admin": {
+        "Title": "资产管理",
+        "SubscriptionTitle": "订阅计划"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "点击支付"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : 处理费用为{{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "感谢您支付给{{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}}订阅{{plan.title}}",
+        "YouSubscribedTo": "您已订阅{{plan.title}}",
+        "Assets\/credits\/alert": "您有与您的帐户相关的警报"
+    },
+    "charge": {
+        "Subject": "您通过“ {{description}} ”从{{call 'publisher.displayName'}}中获得{{displayAmount}}的付款",
+        "HasBeenCharged": "嘿，这只是想让你知道{{1}}已经被{{4}}收了{{3}}的{{2}}"
+    },
+    "charged": {
+        "Subject": "感谢您支付“ {{description}} ”",
+        "HavePaid": "嘿{{1}} ，这只是一个快速确认，您已经成功地为{{4}}支付了{{2}}到{{3}}"
+    },
+    "payment": {
+        "AboutOrder": "订单信息",
+        "PaymentMethod": "付款方式",
+        "ContactInfo": "联系方式",
+        "Pay": "支付",
+        "PaymentSucceeded": "支付成功",
+        "PaymentProcessing.": "您的付款正在处理中",
+        "FailTryAgain": "您的支付失败，请重试",
+        "SomethingWrong": "出了些问题",
+        "PaymentStatus": "支付状态",
+        "PayTo": "支付{{displayName}}",
+        "ChooseCurrency": "选择货币",
+        "YouCanSendUpTo": "您最多可以发送{{amount}} {{symbol}}",
+        "Send": "发送",
+        "EnterAmount": "输入金额"
+    },
+    "credits": {
+        "InviteAcceptedBy": "{{invitedUserName}}接受邀请",
+        "InvitedUserFilledStream": "{{invitedUserName}}满{{FilledStreamTitle}}",
+        "ForFillingStream": "填充用{{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "您有{{amount}}积分可以开始",
+        "PaymentFor": "支付“ {{1}} ”",
+        "PaymentTo": "付款至{{1}}",
+        "PaymentToUser": "付款至{{toUserName}}",
+        "CreatePrivateChat": "与{{toUserName}}私聊",
+        "CreatePaidStream": "创造{{toStreamName}}",
+        "JoinedPaidStream": "对于保留在“ <a data-publisherId='<i translate='no'>999&#39;data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> ”",
+        "CreatedCommunity": "为创建社区“ {{communityId}} ”",
+        "LeftPaidStream": "作为“ <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39; &gt; {{fromStreamTitle}}<\/a> ”中的预订退款",
+        "BoughtCredits": "已购买{{amount}}积分",
+        "BonusCredits": "奖金{{amount}}学分",
+        "BuyAmountCredits": "购买{{amount}}积分",
+        "WatchClip": "观看{{fromStreamTitle}}获得{{amount}}学分",
+        "MissingCredits": "缺少学分",
+        "YouMissingCredits": "您需要额外的{{amount}}学分才能继续。",
+        "BuyCredits": "购买学分",
+        "BuyBonus": "一次购买{{amount}}积分，将获得{{bonus}}积分奖励。",
+        "Buy": "买",
+        "PurchaseCredits": "购买积分",
+        "Credits": "学分",
+        "ErrorInvalidAmount": "金额无效",
+        "ErrorInvalidCurrency": "很遗憾，我们还不支持货币{{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}}学分",
+            "BonusCredits": "{{amount}}学分"
+        }
+    },
+    "history": {
+        "Date": "日期",
+        "Amount": "数量",
+        "Description": "描述",
+        "Client": "客户",
+        "User": "用户",
+        "To": "到",
+        "From": "从",
+        "SeeHistory": "查看{{1}}的付款记录",
+        "HistoryEmpty": "您还没有数据",
+        "PaymentFor": "已发送{{amount}}积分",
+        "PaymentTo": "已发送{{amount}}积分",
+        "PaymentToUser": "已发送{{amount}}积分",
+        "CreatePaidStream": "花费{{amount}}积分",
+        "WatchClip": {
+            "+": "获得{{amount}}学分",
+            "-": "花费{{amount}}积分"
+        },
+        "JoinedPaidStream": {
+            "+": "获得{{amount}}学分",
+            "-": "花费{{amount}}积分"
+        },
+        "LeftPaidStream": {
+            "+": "获得{{amount}}学分",
+            "-": "已发送{{amount}}积分"
+        },
+        "CreatedCommunity": "花费{{amount}}积分",
+        "BoughtCredits": "已购买{{amount}}积分",
+        "BonusCredits": "获得奖励{{amount}}学分",
+        "InviteAcceptedBy": "获得{{amount}}学分",
+        "Streams_user_firstname": "获得{{amount}}学分",
+        "Streams_user_lastname": "获得{{amount}}学分",
+        "Streams_user_icon": "获得{{amount}}学分",
+        "Places_user_location": "获得{{amount}}学分",
+        "Streams_greeting": "获得{{amount}}学分",
+        "YouHaveCreditsToStart": "获得{{amount}}学分",
+        "InvitedUserFilledStream": "获得{{amount}}学分",
+        "ForFillingStream": "获得{{amount}}学分",
+        "CreatePrivateChat": "已花费{{amount}}积分"
+    },
+    "subscriptions": {
+        "infoTitle": "设置支付信息",
+        "confirm": {
+            "title": "开始订阅",
+            "message": "开始定期订阅“ {{title}} ”？",
+            "ok": "好的",
+            "cancel": "取消"
+        },
+        "CreditOrDebitCard": "信用卡或借记卡",
+        "SubscribePayment": "订阅付款",
+        "ImmediatePayment": "立即付款",
+        "ProcessingPayment": "处理付款",
+        "SubscriptionAlreadyPaid": "此订阅已付款",
+        "SubscriptionNotActive": "此订阅无效",
+        "Subscribed": "已订阅",
+        "Unsubscribed": "取消订阅",
+        "Unsubscribe": "退订",
+        "Subscribe": "订阅",
+        "Started": "开始",
+        "EndsIn": "结束于",
+        "NextPay": "下次付款",
+        "Period": "时期",
+        "Price": "价格",
+        "AreYouSureUnsubscribe": "您确定要取消订阅此计划吗？",
+        "YouUnsubscribedFromPlan": "您退订了计划“ {{planTitle}} ”。您不会被收费，但您的订阅将持续到{{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "计划名称",
+            "PricePlaceholder": "价格",
+            "DescriptionPlaceholder": "订阅计划说明",
+            "SavePlan": "保存计划",
+            "NewPlan": "新计划",
+            "SubscriptionTitle": "订阅计划",
+            "AreYouSureDeletePlan": "您确实要删除此计划吗？",
+            "Duration": "期间",
+            "Discount": "折扣",
+            "Interrupt": "打断",
+            "Continue": "继续",
+            "SelectDisplayType": "选择{{displayType}}",
+            "EndDate": "结束日期"
+        }
+    },
+    "payments": {
+        "infoTitle": "设置支付信息",
+        "BuyAmountCredits": "购买{{amount}}积分",
+        "confirm": {
+            "title": "进行付款",
+            "message": "你同意付{{symbol}} {{amount}}吗？",
+            "ok": "好的",
+            "cancel": "取消"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "学分",
+            "description": "跟踪信用和付款"
+        },
+        "Assets\/plan": {
+            "displayType": "订阅计划",
+            "description": "订阅计划"
+        },
+        "Assets\/subscription": {
+            "displayType": "订阅",
+            "description": "订阅"
+        },
+        "Assets\/product": {
+            "displayType": "产品",
+            "description": "正在销售的产品"
+        },
+        "Assets\/service": {
+            "displayType": "服务",
+            "description": "提供的服务"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "获得{{amount}}学分"
+        },
+        "Assets\/credits\/bought": {
+            "content": "已购买{{amount}}积分"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "奖金{{amount}}学分"
+        },
+        "Assets\/credits\/spent": {
+            "content": "花费{{amount}}积分"
+        },
+        "Assets\/credits\/sent": {
+            "content": "发送{{amount}}积分到{{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "从{{fromUserName}}获得{{amount}}学分"
+        },
+        "Assets\/credits\/alert": {
+            "content": "您的帐户上几乎没有存款。请访问<a href='<i translate='no'>999&#39;&gt; 此链接<\/a>以购买更多积分。"
+        }
+    },
+    "billing": {
+        "Title": "资产计费",
+        "CreditsMinimum": "最低学分",
+        "CreditsToAdd": "要添加的学分",
+        "Save": "节省",
+        "ThisLink": "这个链接",
+        "errors": {
+            "CreditsMinimumNegative": "最低学分不能为负",
+            "CreditsToAddNegative": "添加的学分不能为负"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "新服务",
+            "TitlePlaceholder": "服务名称",
+            "PricePlaceholder": "定价",
+            "LinkPlaceholder": "设置附加信息链接",
+            "DescriptionPlaceholder": "服务说明",
+            "SaveService": "保存服务",
+            "SelectRequiredParticipants": "所需相关参与者",
+            "RequiredParticipantsDesc": "请选择需要使用此服务的相关参与者（例如“狗展”的宠物，或“儿童假期”的儿童等）。如果服务是付费的，则用户还需要为每个相关参与者付费。"
+        },
+        "EditServiceTemplate": {
+            "Title": "编辑服务"
+        },
+        "ManageServiceTemplates": "管理服务模板",
+        "ManageServices": "管理服务",
+        "Free": "自由的",
+        "OptionalContribution": "选择性贡献",
+        "RequiredPayment": "所需付款",
+        "AreYouSureDelete": "您确定要删除此服务吗？",
+        "AmountServicesRelated": "有{{amount}}与此服务相关的可用性。它们也将被删除。"
+    },
+    "transfer": {
+        "SelectRecipient": "选择收件人",
+        "TransactionSuccess": "交易成功",
+        "OrTypeWalletAddress": "或输入收件人钱包地址",
+        "AppCredits": "应用积分"
+    },
+    "NFT": {
+        "Title": "标题",
+        "Name": "姓名",
+        "EnterName": "输入名字",
+        "EnterAuthorWallet": "进入作者钱包",
+        "InformationAboutTitle": "关于{{title}} NFT 的信息",
+        "Description": "描述",
+        "DetailedInformationAboutNFT": "NFT的详细信息",
+        "PresaleStarts": "12 月 23 日开始预售",
+        "OwnerUserNotFound": "此 NFT 的所有者未在我们的应用程序中注册。",
+        "BuyNow": "立即购买",
+        "Buy": "买",
+        "Add": "添加",
+        "Remove": "消除",
+        "NoNFTyet": "还没有 NFT",
+        "Conversation": "对话",
+        "Create": "创造",
+        "CurrentBid": "当前出价",
+        "StartingIn": "开始于",
+        "EndingIn": "结束于",
+        "CreateNFT": "创建 NFT",
+        "TitlePlaceholder": "给你的 NFT 一个标题",
+        "DescriptionPlaceholder": "给你的 NFT 一个描述",
+        "CreateYourNFT": "创建你的 NFT",
+        "Royalties": "版税",
+        "RoyaltyPlaceholder": "选修的。转移前支付给创作者的金额。",
+        "ExpirationDate": "截止日期",
+        "StartingDate": "开始日期",
+        "BidsBelowThisAmount": "低于此金额的出价将不被允许",
+        "MinimumBid": "最低出价",
+        "Author": "作者",
+        "Price": "价格",
+        "Commission": "委员会",
+        "EnterCommission": "输入佣金",
+        "Owner": "所有者",
+        "SelectCategory": "选择类别",
+        "Day": "天",
+        "Days": "天",
+        "Hour": "小时",
+        "Hours": "小时",
+        "Minute": "分钟",
+        "Minutes": "分钟",
+        "Second": "第二",
+        "Seconds": "秒",
+        "SalesCreator": "的销售额将归创作者所有",
+        "Details": "细节",
+        "Bids": "出价",
+        "History": "历史",
+        "LoremIpsum": "Lorem Ipsum 只是印刷和排版行业的虚拟文本。",
+        "PutOnSale": "发售",
+        "PutOffSale": "退出销售",
+        "Transfer": "转移",
+        "Actions": "动作",
+        "Claim": "宣称",
+        "ClaimNFT": "认领 NFT",
+        "Unlocking": "解锁",
+        "Unlock": "开锁",
+        "Update": "更新",
+        "UpdateToken": "更新令牌",
+        "UpdateNFT": "更新 NFT",
+        "CreateToken": "创建代币",
+        "PlaceBid": "出价",
+        "SoldOut": "卖",
+        "NotOnSale": "不出售",
+        "NftName": "NFT名称",
+        "DescribeYourNFT": "请描述你的 NFT",
+        "NFTImage": "NFT 图像",
+        "NFTVideo": "NFT 视频（如果有）",
+        "UploadMovie": "上传影片",
+        "MovieSource": "片源",
+        "MovieURL": "影片网址",
+        "UploadFile": "上传一个文件",
+        "PutOnMarketplace": "投放市场",
+        "InstantPurchase": "输入价格让用户立即购买你的 NFT",
+        "FixedPrice": "固定价格",
+        "TimedAuction": "定时拍卖",
+        "OpenForBids": "公开招标",
+        "PriceOnePiece": "输入一件的价格",
+        "EnterPrice": "输入价格",
+        "EnterMinimumBid": "输入最低出价",
+        "SelectChain": "选择链",
+        "Currency": "货币",
+        "AreYouSureDeleteImage": "您确定要删除图片吗？",
+        "AreYouSureDeleteVideo": "您确定要删除视频吗？",
+        "series": {
+            "Name": "姓名",
+            "Icon": "图标",
+            "Description": "描述",
+            "Author": "作者",
+            "SelectSeries": "选择系列",
+            "Value": "价值",
+            "AreYouSure": "你确定吗？",
+            "AuthorInvalid": "作者地址无效！",
+            "Address": "地址",
+            "CoverImage": "封面图片",
+            "UploadCoverImage": "上传封面图片",
+            "CommissionAddressInvalid": "委托地址无效",
+            "OnSale": "特价中",
+            "OffSale": "下架",
+            "CreateSeries": "创建系列",
+            "UpdateSeries": "更新系列",
+            "SeriesInfo": "系列信息",
+            "SelectAuthor": "选择作者",
+            "NewItem": "新NFT系列",
+            "NamePlaceholder": "输入系列名称",
+            "DescPlaceholder": "输入系列描述",
+            "EndingIn": "结束于"
+        },
+        "contract": {
+            "CreateContract": "创建合约",
+            "SelectContract": "选择合约",
+            "CreateContractFor": "创建合同为{{userName}}",
+            "ContractFor": "签约{{userName}}",
+            "UpdateContract": "更新合约",
+            "TransferOwnership": "所有权转让",
+            "SetBaseURI": "设置基本 URI",
+            "SetSuffix": "设置后缀",
+            "CurrentOwner": "当前所有者",
+            "CurrentBaseURL": "当前 BaseURL",
+            "ContractAddressAbsent": "合同地址不存在",
+            "FactoryAddressAbsent": "没有工厂地址",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "需要标题",
+            "SymbolRequired": "需要符号",
+            "TypeContractName": "合约名称",
+            "TypeContractSymbol": "合约符号（最多 10 个字符）"
+        },
+        "contests": {
+            "Title": "比赛",
+            "NewContest": "新比赛"
+        },
+        "import": {
+            "importNFT": "导入 NFT",
+            "importAttributes": "导入 NFT 属性",
+            "fileNotFound": "抱歉，找不到 CSV 文件。",
+            "fileEmpty": "抱歉，CSV 文件为空。",
+            "userIdNotFound": "用户存在但id为空",
+            "errorLine": "{{1}}行",
+            "fieldNotFound": "未找到必填字段“ {{1}} ”",
+            "displayTypeEmpty": "未找到“ {{1}} ”的显示类型",
+            "taskStreamInvalid": "任务流无效",
+            "instructionsEmpty": "任务流指令为空",
+            "complete": "完全的",
+            "activateUsers": "向用户发送激活消息？",
+            "importProgress": "进步",
+            "importOptions": "选项",
+            "sampleCSV": "下载样本 CSV",
+            "fileLabel": "上传电子表格：",
+            "errorsTitle": "发生错误"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "按 NFT 收藏过滤",
+                "ShowNFTCollection": "在...中显示 NFT 收藏",
+                "AllCollections": "所有系列"
+            },
+            "ByUser": {
+                "AllAuthors": "所有作者",
+                "AllUsers": "每个人",
+                "FilterByAuthors": "按作者过滤"
+            }
+        },
+        "Back": "返回收藏",
+        "attributes": {
+            "Title": "管理属性",
+            "Attributes": "属性",
+            "DisplayTitle": "显示类型",
+            "AddDisplayType": "添加新的显示类型",
+            "NewDisplay": "新展示",
+            "TraitTitle": "特质类型",
+            "AddTraitTitle": "添加新的特征类型",
+            "NewTrait": "新特征类型",
+            "ValueTitle": "价值",
+            "AddValueTitle": "增加新价值",
+            "NewValue": "新价值",
+            "NewAttribute": "新属性",
+            "UpdateAttributes": "更新属性",
+            "SaveAttributes": "保存属性"
+        },
+        "profile": {
+            "LogOut": "登出",
+            "Title": "简介{{userName}}",
+            "Description": "用户详情",
+            "aboutPlaceholder": "编辑简介",
+            "SureLogOut": "您确定要退出吗？",
+            "UploadCoverPhoto": "上传封面照片"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFT合约",
+                        "seriesId": "系列编号",
+                        "owner": "所有者",
+                        "currency": "货币",
+                        "price": "价格",
+                        "beneficiary": "受益人",
+                        "autoindex": "自动索引",
+                        "duration": "期间",
+                        "rateInterval": "速率间隔",
+                        "rateAmount": "费率金额"
+                    },
+                    "small": {
+                        "NFTContract": "NFT合约",
+                        "seriesId": "代币将在这个系列中铸造",
+                        "owner": "实例的所有者，否则将是发件人",
+                        "currency": "购买代币的货币，如果为零 - 对于原生硬币",
+                        "price": "价格",
+                        "beneficiary": "出售代币的受益人，否则将是发件人",
+                        "autoindex": "自动索引",
+                        "duration": "铸造后锁定。零意味着立即得到它。",
+                        "rateInterval": "特购桶间隔",
+                        "rateAmount": "特购桶金额"
+                    }
+                },
+                "placeholders": {
+                    "optional": "（选修的）",
+                    "number": "数字",
+                    "address": "地址",
+                    "fraction": "分数",
+                    "integer": "整数",
+                    "seconds": "秒",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "生产",
+                "viewInstancesList": "刷新列表"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "系列编号",
+                        "account": "帐户",
+                        "amount": "数量"
+                    },
+                    "small": {
+                        "seriesId": "新代币将属于具有此类 ID 的系列",
+                        "account": "新创建的 NFT 的所有者。如果未设置 - 将使用当前钱包",
+                        "amount": "铸币数量 NFT"
+                    }
+                },
+                "placeholders": {
+                    "optional": "（选修的）",
+                    "seriesId": "ID",
+                    "account": "帐户",
+                    "amount": "数量",
+                    "integer": "整数"
+                },
+                "btn": {
+                    "Purchase": "购买",
+                    "SpecialPurchase": "特价采购"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "地址"
+                    },
+                    "small": {
+                        "account": "地址"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "无效地址"
+                },
+                "placeholders": {
+                    "account": "地址"
+                },
+                "addToWhitelist": "添加到白名单",
+                "removeFromWhitelist": "从白名单中删除"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "代币编号",
+                    "custodian": "保管人",
+                    "recipient": "接受者"
+                },
+                "small": {
+                    "tokenId": "token id 什么需要加锁或解锁",
+                    "custodian": "可以解锁的地址",
+                    "recipient": "将接收令牌的地址"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "无效的 tokenId",
+                "invalidCustodian": "保管人无效",
+                "invalidRecipient": "收件人无效"
+            },
+            "placeholders": {
+                "optional": "（选修的）",
+                "tokenId": "ID",
+                "custodian": "地址"
+            },
+            "Lock": "锁",
+            "Unlock": "开锁",
+            "Locked": "锁定",
+            "CustodianAddress": "托管地址",
+            "TokenWasClaimed": "令牌“ {{title}} ”已被认领",
+            "TokenWasLocked": "令牌“ {{title}} ”被锁定",
+            "TokenWasUnlocked": "令牌“ {{title}} ”已解锁"
+        },
+        "GenerateDescription": "或自动生成",
+        "collections": {
+            "Title": "收藏",
+            "EnterTitle": "输入标题",
+            "EnterDescription": "输入描述",
+            "NewCollection": "新系列",
+            "Name": "姓名",
+            "Icon": "图标",
+            "Description": "描述",
+            "Author": "作者",
+            "SelectCollection": "选择收藏",
+            "Value": "价值",
+            "AreYouSure": "你确定吗？",
+            "AuthorInvalid": "作者地址无效！",
+            "Address": "地址",
+            "CoverImage": "封面图片",
+            "UploadIcon": "上传图标",
+            "CommissionAddressInvalid": "委托地址无效",
+            "OnSale": "出售",
+            "OffSale": "下架",
+            "CreateCollection": "创建收藏",
+            "UpdateCollection": "更新集合",
+            "CollectionInfo": "收藏信息",
+            "SelectAuthor": "选择作者",
+            "NewItem": "新 NFT 系列",
+            "NamePlaceholder": "输入集合名称",
+            "DescPlaceholder": "输入集合描述",
+            "EndingIn": "结束于",
+            "SubmitSeries": "提交系列"
+        }
+    },
+    "currencies": {
+        "choose": "选择货币"
+    },
+    "connectedAccount": {
+        "Title": "连接账户",
+        "Success": "成功",
+        "YourAccountCreated": "您的帐户创建成功！",
+        "YourAccountAlreadyCreated": "您的帐户已创建并可以使用"
+    },
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "储备代币",
+                        "amount": "数量"
+                    },
+                    "small": {
+                        "reserveToken": "储备代币",
+                        "amount": "数量"
+                    }
+                },
+                "placeholders": {
+                    "amount": "数量"
+                },
+                "btns": {
+                    "stake": "赌注"
+                },
+                "stake": "赌注",
+                "loading": "加载中"
+            }
+        },
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "代币Erc20",
+                    "duration": "期间",
+                    "bonusTokenFraction": "奖金代币分数",
+                    "popularToken": "流行代币",
+                    "donations": "捐款",
+                    "rewardsRateFraction": "奖励率分数",
+                    "numerator": "分子",
+                    "denominator": "分母"
+                },
+                "small": {
+                    "tokenErc20": "代币Erc20",
+                    "duration": "持续时间（天）",
+                    "bonusTokenFraction": "奖金代币分数",
+                    "popularToken": "流行代币",
+                    "donations": "捐款",
+                    "rewardsRateFraction": "奖励率分数",
+                    "numerator": "分子",
+                    "denominator": "分母"
+                }
+            },
+            "placeholders": {
+                "optional": "（选修的）",
+                "tuple": "元组[]",
+                "number": "数字",
+                "address": "地址",
+                "fraction": "分数",
+                "integer": "整数",
+                "seconds": "秒",
+                "days": "天",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "没有泳池"
+            },
+            "btns": {
+                "createPool": "创建池",
+                "createPoolInForm": "创造"
+            },
+            "createPool": "创建池",
+            "produce": "生产",
+            "loading": "加载中",
+            "viewInstancesList": "刷新列表"
+        }
+    },
+    "fundrise": {
+        "placeholder": "输入一些关于此贡献的内容..."
+    }
+}

@@ -1,0 +1,692 @@
+{
+    "errors": {
+        "Error": "Kļūda",
+        "WalletAbsent": "Maks nav savienots.",
+        "Rendering": "Renderējot <span class='url'>{{1}}<\/span> , radās kļūdas",
+        "PriceRequired": "Nepieciešama cena!",
+        "NameRequired": "Nepieciešams vārds!",
+        "PriceInvalid": "Cena nav derīga!",
+        "AmountInvalid": "Summa nav derīga!",
+        "TransactionFailed": "Darījums neizdevās",
+        "ChainNotSupported": "Atlasītā ķēde netiek atbalstīta. Atbalstītā ķēde: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Nepieciešams pievienot MetaMask darbam ar lietojumprogrammu",
+        "UserNotLoggedInMetaMask": "Lietotājs nav pieteicies MetaMask",
+        "CurrencyNotFound": "Valūta nav atrasta",
+        "WrongChain": "Šis NFT ir izveidots ar &quot; {{chain}} &quot;. Lūdzu, izmantojiet šo ķēdi.",
+        "NoRecipientSelected": "Nav atlasīts neviens adresāts",
+        "NotEnoughPermissionsWallet": "Nav pietiekami daudz atļauju, lai lasītu šī lietotāja maku",
+        "ThisUserHaveNoWallet": "Šim lietotājam nav piešķirts maks",
+        "TheWalletOfThisUserInvalid": "Šī lietotāja maks nav derīgs",
+        "WalletInvalid": "Maka adrese nav derīga",
+        "CantManageFrozenSeries": "Jūs nevarat pārvaldīt iesaldētas sērijas",
+        "SubscriptionStreamNotPaid": "Jūs neesat maksājis, lai skatītu šo saturu. Lūdzu, noklikšķiniet uz {{subscriptionUrl}} un abonējiet atbilstošo plānu."
+    },
+    "admin": {
+        "Title": "Aktīvi administratīvi",
+        "SubscriptionTitle": "Abonēšanas plāni"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Pieskarieties, lai maksātu"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : maksa apstrādāta par {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Paldies par maksājumu uz {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} abonēja {{plan.title}}",
+        "YouSubscribedTo": "Jūs esat abonējis numuru {{plan.title}}",
+        "Assets\/credits\/alert": "Jums ir ar jūsu kontu saistīts brīdinājums"
+    },
+    "charge": {
+        "Subject": "Jūs saņemat maksājumu {{displayAmount}} no {{call 'publisher.displayName'}} ar &quot; {{description}} &quot;",
+        "HasBeenCharged": "Sveiki, tas ir tikai tāpēc, lai jūs zinātu, ka {{1}} ir iekasēta maksa {{2}} par {{3}} līdz {{4}}"
+    },
+    "charged": {
+        "Subject": "Paldies par maksājumu par &quot; {{description}} &quot;",
+        "HavePaid": "Sveiki, {{1}} , šis ir tikai ātrs apstiprinājums, ka esat veiksmīgi samaksājis {{2}} līdz {{3}} par {{4}}"
+    },
+    "payment": {
+        "AboutOrder": "Informācija par pasūtījumu",
+        "PaymentMethod": "Apmaksas veids",
+        "ContactInfo": "Kontaktinformācija",
+        "Pay": "Maksājiet",
+        "PaymentSucceeded": "Maksājums izdevās",
+        "PaymentProcessing.": "Jūsu maksājums tiek apstrādāts",
+        "FailTryAgain": "Jūsu maksājums nebija veiksmīgs. Lūdzu, mēģiniet vēlreiz",
+        "SomethingWrong": "Kaut kas nogāja greizi",
+        "PaymentStatus": "Maksājuma statuss",
+        "PayTo": "Maksājiet {{displayName}}",
+        "ChooseCurrency": "Izvēlieties valūtu",
+        "YouCanSendUpTo": "Varat nosūtīt līdz pat {{amount}} {{symbol}}",
+        "Send": "Sūtīt",
+        "EnterAmount": "ievadiet summu"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Uzaicinājumu pieņēma {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} aizpildīti {{FilledStreamTitle}}",
+        "ForFillingStream": "{{FilledStreamTitle}} aizpildīšanai",
+        "YouHaveCreditsToStart": "Lai sāktu, jums ir {{amount}} kredītpunkti",
+        "PaymentFor": "Maksājums par &quot; {{1}} &quot;",
+        "PaymentTo": "Maksājums uz {{1}}",
+        "PaymentToUser": "Maksājums uz {{toUserName}}",
+        "CreatePrivateChat": "privātai tērzēšanai ar {{toUserName}}",
+        "CreatePaidStream": "{{toStreamName}} izveidošanai",
+        "JoinedPaidStream": "rezervācijai &quot; <a data-publisherId='<i translate='no'>999&quot; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "kopienas &quot; {{communityId}} &quot; izveidei",
+        "LeftPaidStream": "kā rezervācijas atmaksa sadaļā &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Nopirka {{amount}} kredītus",
+        "BonusCredits": "Bonuss {{amount}} kredīti",
+        "BuyAmountCredits": "Pērciet {{amount}} kredītus",
+        "WatchClip": "Par {{fromStreamTitle}} noskatīšanos nopelnīti {{amount}} kredītpunkti",
+        "MissingCredits": "Trūkst kredītu",
+        "YouMissingCredits": "Lai turpinātu, jums ir nepieciešami papildu {{amount}} kredīti.",
+        "BuyCredits": "Pirkt kredītus",
+        "BuyBonus": "Pērkot {{amount}} kredītus uzreiz, jūs saņemsiet {{bonus}} kredītu bonusu.",
+        "Buy": "Pirkt",
+        "PurchaseCredits": "Pirkuma kredīti",
+        "Credits": "Kredīti",
+        "ErrorInvalidAmount": "Summa nav derīga",
+        "ErrorInvalidCurrency": "Diemžēl mēs vēl neatbalstām valūtu {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kredīti",
+            "BonusCredits": "{{amount}} kredīti"
+        }
+    },
+    "history": {
+        "Date": "Datums",
+        "Amount": "Summa",
+        "Description": "Apraksts",
+        "Client": "Klients",
+        "User": "Lietotājs",
+        "To": "uz",
+        "From": "no",
+        "SeeHistory": "Skatiet maksājumu vēsturi par {{1}}",
+        "HistoryEmpty": "Jums vēl nav datu",
+        "PaymentFor": "Nosūtīti {{amount}} kredīti",
+        "PaymentTo": "Nosūtīti {{amount}} kredīti",
+        "PaymentToUser": "Nosūtīti {{amount}} kredīti",
+        "CreatePaidStream": "Iztērēti {{amount}} kredīti",
+        "WatchClip": {
+            "+": "Nopelnīti {{amount}} kredītpunkti",
+            "-": "Iztērēti {{amount}} kredīti"
+        },
+        "JoinedPaidStream": {
+            "+": "Nopelnīti {{amount}} kredītpunkti",
+            "-": "Iztērēti {{amount}} kredīti"
+        },
+        "LeftPaidStream": {
+            "+": "Saņemti {{amount}} kredītpunkti",
+            "-": "Nosūtīti {{amount}} kredīti"
+        },
+        "CreatedCommunity": "Iztērēti {{amount}} kredīti",
+        "BoughtCredits": "Nopirka {{amount}} kredītus",
+        "BonusCredits": "Saņēma bonusu {{amount}} kredītpunktus",
+        "InviteAcceptedBy": "Nopelnīti {{amount}} kredītpunkti",
+        "Streams_user_firstname": "Nopelnīti {{amount}} kredītpunkti",
+        "Streams_user_lastname": "Nopelnīti {{amount}} kredītpunkti",
+        "Streams_user_icon": "Nopelnīti {{amount}} kredītpunkti",
+        "Places_user_location": "Nopelnīti {{amount}} kredītpunkti",
+        "Streams_greeting": "Nopelnīti {{amount}} kredītpunkti",
+        "YouHaveCreditsToStart": "Nopelnīti {{amount}} kredītpunkti",
+        "InvitedUserFilledStream": "Nopelnīti {{amount}} kredītpunkti",
+        "ForFillingStream": "Nopelnīti {{amount}} kredītpunkti",
+        "CreatePrivateChat": "Iztērēti {{amount}} kredīti"
+    },
+    "subscriptions": {
+        "infoTitle": "Iestatiet maksājuma informāciju",
+        "confirm": {
+            "title": "Sāciet abonementu",
+            "message": "Vai sākt periodisku &quot; {{title}} &quot; abonementu?",
+            "ok": "labi",
+            "cancel": "Atcelt"
+        },
+        "CreditOrDebitCard": "Kredītkarte vai debetkarte",
+        "SubscribePayment": "Abonēt Maksājumu",
+        "ImmediatePayment": "Tūlītēja samaksa",
+        "ProcessingPayment": "Maksājuma apstrāde",
+        "SubscriptionAlreadyPaid": "Šis abonements jau ir samaksāts",
+        "SubscriptionNotActive": "Šis abonements nav aktīvs",
+        "Subscribed": "Abonēts",
+        "Unsubscribed": "Anulēts abonements",
+        "Unsubscribe": "Anulēt abonementu",
+        "Subscribe": "Abonēt",
+        "Started": "Sākts",
+        "EndsIn": "Beidzas",
+        "NextPay": "Nākamais maksājums",
+        "Period": "Periods",
+        "Price": "Cena",
+        "AreYouSureUnsubscribe": "Vai tiešām vēlaties anulēt šī plāna abonementu?",
+        "YouUnsubscribedFromPlan": "Jūs anulējāt plāna “ {{planTitle}} ” abonementu. No jums netiks iekasēta maksa, taču jūsu abonements turpināsies līdz {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "plāna nosaukums",
+            "PricePlaceholder": "cena",
+            "DescriptionPlaceholder": "abonēšanas plāna apraksts",
+            "SavePlan": "Saglabāt plānu",
+            "NewPlan": "Jauns plāns",
+            "SubscriptionTitle": "Abonēšanas plāni",
+            "AreYouSureDeletePlan": "Vai tiešām vēlaties dzēst šo plānu?",
+            "Duration": "Ilgums",
+            "Discount": "Atlaide",
+            "Interrupt": "Pārtraukt",
+            "Continue": "Turpināt",
+            "SelectDisplayType": "Izvēlieties {{displayType}}",
+            "EndDate": "beigu datums"
+        }
+    },
+    "payments": {
+        "infoTitle": "Iestatiet maksājuma informāciju",
+        "BuyAmountCredits": "Pērciet {{amount}} kredītus",
+        "confirm": {
+            "title": "Veikt maksājumu",
+            "message": "Vai piekrītat maksāt {{symbol}} {{amount}} ?",
+            "ok": "labi",
+            "cancel": "Atcelt"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Kredīti",
+            "description": "seko kredītiem un maksājumiem"
+        },
+        "Assets\/plan": {
+            "displayType": "Abonēšanas plāns",
+            "description": "abonēšanas plāns"
+        },
+        "Assets\/subscription": {
+            "displayType": "Abonēšana",
+            "description": "abonements"
+        },
+        "Assets\/product": {
+            "displayType": "Produkts",
+            "description": "produkts tiek pārdots"
+        },
+        "Assets\/service": {
+            "displayType": "apkalpošana",
+            "description": "tiek piedāvāts pakalpojums"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Nopelnīti {{amount}} kredītpunkti"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Nopirka {{amount}} kredītus"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonuss {{amount}} kredīti"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Iztērēti {{amount}} kredīti"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Nosūtīja {{amount}} kredītus uz {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Saņemti {{amount}} kredīti no {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Jūsu kontā ir maz kredītu. Lūdzu, apmeklējiet <a href='<i translate='no'>999 &#39;&gt;šo saiti,<\/a> lai iegādātos vairāk kredītu."
+        }
+    },
+    "billing": {
+        "Title": "Aktīvu norēķini",
+        "CreditsMinimum": "Minimālie kredīti",
+        "CreditsToAdd": "Pievienojamie kredīti",
+        "Save": "Saglabāt",
+        "ThisLink": "šo saiti",
+        "errors": {
+            "CreditsMinimumNegative": "Kredīta minimums nevar būt negatīvs",
+            "CreditsToAddNegative": "Pievienojamie kredīti nevar būt negatīvi"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Jauns pakalpojums",
+            "TitlePlaceholder": "Pakalpojuma nosaukums",
+            "PricePlaceholder": "Iestatiet cenu",
+            "LinkPlaceholder": "iestatiet papildu informācijas saiti",
+            "DescriptionPlaceholder": "Pakalpojuma apraksts",
+            "SaveService": "Saglabāt pakalpojumu",
+            "SelectRequiredParticipants": "Nepieciešamie saistītie dalībnieki",
+            "RequiredParticipantsDesc": "Lūdzu, atlasiet saistītos dalībniekus, kuri ir nepieciešami, lai izmantotu šo pakalpojumu (piemēram, mājdzīvnieki &quot;Suņu izstādei&quot; vai bērni &quot;Bērnu brīvdienām&quot; utt.). Ja pakalpojums ir apmaksāts, lietotājam būs jāmaksā arī par katru saistīto dalībnieku."
+        },
+        "EditServiceTemplate": {
+            "Title": "Rediģēt pakalpojumu"
+        },
+        "ManageServiceTemplates": "Pārvaldīt pakalpojumu veidnes",
+        "ManageServices": "Pārvaldīt pakalpojumus",
+        "Free": "Bezmaksas",
+        "OptionalContribution": "Izvēles ieguldījums",
+        "RequiredPayment": "Nepieciešamais maksājums",
+        "AreYouSureDelete": "Vai tiešām vēlaties dzēst šo pakalpojumu?",
+        "AmountServicesRelated": "Ar šo pakalpojumu ir saistītas {{amount}} pieejamības. Tie arī tiks noņemti."
+    },
+    "transfer": {
+        "SelectRecipient": "Izvēlieties adresātu",
+        "TransactionSuccess": "Darījuma veiksme",
+        "OrTypeWalletAddress": "VAI ierakstiet adresāta maka adresi",
+        "AppCredits": "Lietotņu kredīti"
+    },
+    "NFT": {
+        "Title": "Nosaukums",
+        "Name": "Vārds",
+        "EnterName": "Ievadiet vārdu",
+        "EnterAuthorWallet": "Ievadiet autora maku",
+        "InformationAboutTitle": "Informācija par {{title}} NFT",
+        "Description": "Apraksts",
+        "DetailedInformationAboutNFT": "Sīkāka informācija par NFT",
+        "PresaleStarts": "Iepriekšpārdošana sākas 23. decembrī",
+        "OwnerUserNotFound": "Šī NFT īpašnieks nav reģistrēts mūsu pieteikumā.",
+        "BuyNow": "Pērc tagad",
+        "Buy": "Pirkt",
+        "Add": "Pievienot",
+        "Remove": "Noņemt",
+        "NoNFTyet": "Vēl nav NFT",
+        "Conversation": "Saruna",
+        "Create": "Izveidot",
+        "CurrentBid": "pašreizējā likme",
+        "StartingIn": "Sākot ar",
+        "EndingIn": "Beidzas",
+        "CreateNFT": "Izveidojiet NFT",
+        "TitlePlaceholder": "Piešķiriet savam NFT virsrakstu",
+        "DescriptionPlaceholder": "Sniedziet savam NFT aprakstu",
+        "CreateYourNFT": "Izveidojiet savu NFT",
+        "Royalties": "Autoratlīdzības",
+        "RoyaltyPlaceholder": "Neobligāti. Summa, kas samaksāta radītājam pirms pārsūtīšanas.",
+        "ExpirationDate": "Derīguma termiņš",
+        "StartingDate": "Sākuma datums",
+        "BidsBelowThisAmount": "Cenas, kas ir zemākas par šo summu, netiks atļautas",
+        "MinimumBid": "Minimālā cena",
+        "Author": "Autors",
+        "Price": "Cena",
+        "Commission": "Komisija",
+        "EnterCommission": "Ievadiet komisiju",
+        "Owner": "Īpašnieks",
+        "SelectCategory": "Izvēlieties kategoriju",
+        "Day": "diena",
+        "Days": "Dienas",
+        "Hour": "Stunda",
+        "Hours": "Stundas",
+        "Minute": "Minūte",
+        "Minutes": "Minūtes",
+        "Second": "Otrkārt",
+        "Seconds": "Sekundes",
+        "SalesCreator": "pārdošanas apjoms tiks piešķirts radītājam",
+        "Details": "Sīkāka informācija",
+        "Bids": "Cenas",
+        "History": "Vēsture",
+        "LoremIpsum": "Lorem Ipsum ir vienkārši drukas un salikšanas nozares fiktīvais teksts.",
+        "PutOnSale": "Laist pārdošanā",
+        "PutOffSale": "Izstāties no pārdošanas",
+        "Transfer": "Pārsūtīšana",
+        "Actions": "Darbības",
+        "Claim": "Pretenzija",
+        "ClaimNFT": "Pieprasīt NFT",
+        "Unlocking": "Atbloķēšana",
+        "Unlock": "Atbloķēt",
+        "Update": "Atjaunināt",
+        "UpdateToken": "Atjaunināt marķieri",
+        "UpdateNFT": "Atjauniniet NFT",
+        "CreateToken": "Izveidot marķieri",
+        "PlaceBid": "Vieta solīšana",
+        "SoldOut": "Pārdots",
+        "NotOnSale": "Nav Pārdošanā",
+        "NftName": "NFT nosaukums",
+        "DescribeYourNFT": "Lūdzu, aprakstiet savu NFT",
+        "NFTImage": "Attēls NFT",
+        "NFTVideo": "Videoklips NFT, ja tāds ir",
+        "UploadMovie": "Augšupielādēt filmu",
+        "MovieSource": "Filmas avots",
+        "MovieURL": "Filmas URL",
+        "UploadFile": "Augšupielādējiet failu",
+        "PutOnMarketplace": "Ielieciet tirgū",
+        "InstantPurchase": "Ievadiet cenu, lai lietotāji varētu uzreiz iegādāties jūsu NFT",
+        "FixedPrice": "Fiksētā cena",
+        "TimedAuction": "Laika izsole",
+        "OpenForBids": "Atvērts piedāvājumiem",
+        "PriceOnePiece": "Ievadiet cenu par vienu gabalu",
+        "EnterPrice": "Ievadiet cenu",
+        "EnterMinimumBid": "Ievadiet minimālo cenu",
+        "SelectChain": "Izvēlieties ķēdi",
+        "Currency": "Valūta",
+        "AreYouSureDeleteImage": "Vai tiešām vēlaties noņemt attēlu?",
+        "AreYouSureDeleteVideo": "Vai tiešām vēlaties noņemt videoklipu?",
+        "series": {
+            "Name": "Vārds",
+            "Icon": "Ikona",
+            "Description": "Apraksts",
+            "Author": "Autors",
+            "SelectSeries": "Izvēlieties sēriju",
+            "Value": "Vērtība",
+            "AreYouSure": "Vai tu esi pārliecināts?",
+            "AuthorInvalid": "Autora adrese nav derīga!",
+            "Address": "Adrese",
+            "CoverImage": "Vāka attēls",
+            "UploadCoverImage": "Augšupielādējiet vāka attēlu",
+            "CommissionAddressInvalid": "Komisijas adrese nav derīga",
+            "OnSale": "izpārdošanā",
+            "OffSale": "izpārdošana",
+            "CreateSeries": "Izveidot sēriju",
+            "UpdateSeries": "Atjaunināt sēriju",
+            "SeriesInfo": "Sērijas informācija",
+            "SelectAuthor": "Izvēlieties autoru",
+            "NewItem": "Jauna NFT sērija",
+            "NamePlaceholder": "Ievadiet sērijas nosaukumu",
+            "DescPlaceholder": "Ievadiet sērijas aprakstu",
+            "EndingIn": "Beidzas"
+        },
+        "contract": {
+            "CreateContract": "Izveidot līgumu",
+            "SelectContract": "Izvēlieties līgumu",
+            "CreateContractFor": "Izveidojiet līgumu par {{userName}}",
+            "ContractFor": "Līgums par {{userName}}",
+            "UpdateContract": "Atjaunināt līgumu",
+            "TransferOwnership": "Īpašumtiesību nodošana",
+            "SetBaseURI": "Iestatiet bāzes URI",
+            "SetSuffix": "Iestatiet sufiksu",
+            "CurrentOwner": "Pašreizējais īpašnieks",
+            "CurrentBaseURL": "Pašreizējais bāzes URL",
+            "ContractAddressAbsent": "Līguma adrese nav",
+            "FactoryAddressAbsent": "Trūkst rūpnīcas adreses",
+            "ContractName": "{{contractName}} ( {{contractSymbol}} {{chainNetwork}}",
+            "TitleRequired": "Nepieciešams nosaukums",
+            "SymbolRequired": "Nepieciešams simbols",
+            "TypeContractName": "līguma nosaukums",
+            "TypeContractSymbol": "līguma simbols (maks. 10 rakstzīmes)"
+        },
+        "contests": {
+            "Title": "Konkursi",
+            "NewContest": "Jauns konkurss"
+        },
+        "import": {
+            "importNFT": "NFT importēšana",
+            "importAttributes": "Importējiet NFT atribūtus",
+            "fileNotFound": "Atvainojiet, CSV fails netika atrasts.",
+            "fileEmpty": "Atvainojiet, CSV fails ir tukšs.",
+            "userIdNotFound": "lietotājs pastāv, bet ID ir tukšs",
+            "errorLine": "{{1}} rinda",
+            "fieldNotFound": "Obligātais lauks &quot; {{1}} &quot; nav atrasts",
+            "displayTypeEmpty": "Displeja veids &quot; {{1}} &quot; nav atrasts",
+            "taskStreamInvalid": "uzdevumu straume nav derīga",
+            "instructionsEmpty": "uzdevumu straumes norādījumi ir tukši",
+            "complete": "Pabeigts",
+            "activateUsers": "Vai nosūtīt lietotājiem aktivizācijas ziņojumu?",
+            "importProgress": "Progress",
+            "importOptions": "Iespējas",
+            "sampleCSV": "Lejupielādēt CSV paraugu",
+            "fileLabel": "Augšupielādēt izklājlapu:",
+            "errorsTitle": "Radās kļūdas"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filtrējiet pēc NFT kolekcijām",
+                "ShowNFTCollection": "Rādīt NFT kolekciju...",
+                "AllCollections": "Visas kolekcijas"
+            },
+            "ByUser": {
+                "AllAuthors": "Visi autori",
+                "AllUsers": "Visi",
+                "FilterByAuthors": "Filtrēt pēc autoriem"
+            }
+        },
+        "Back": "Atpakaļ uz kolekciju",
+        "attributes": {
+            "Title": "Pārvaldīt atribūtus",
+            "Attributes": "Atribūti",
+            "DisplayTitle": "Displeja veids",
+            "AddDisplayType": "Pievienojiet jaunu displeja veidu",
+            "NewDisplay": "Jauns displejs",
+            "TraitTitle": "Iezīmes veids",
+            "AddTraitTitle": "Pievienojiet jaunu iezīmes veidu",
+            "NewTrait": "Jauns īpašību veids",
+            "ValueTitle": "Vērtība",
+            "AddValueTitle": "Pievienojiet jaunu vērtību",
+            "NewValue": "Jauna vērtība",
+            "NewAttribute": "Jauns atribūts",
+            "UpdateAttributes": "Atjaunināt atribūtus",
+            "SaveAttributes": "Saglabāt atribūtus"
+        },
+        "profile": {
+            "LogOut": "Izlogoties",
+            "Title": "Profils par {{userName}}",
+            "Description": "Lietotāja informācija",
+            "aboutPlaceholder": "Rediģēt biogrāfiju",
+            "SureLogOut": "Vai tiešām vēlaties atteikties?",
+            "UploadCoverPhoto": "Augšupielādējiet vāka fotoattēlu"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTLīgums",
+                        "seriesId": "sērijas ID",
+                        "owner": "Īpašnieks",
+                        "currency": "valūta",
+                        "price": "Cena",
+                        "beneficiary": "Saņēmējs",
+                        "autoindex": "Autoindekss",
+                        "duration": "Ilgums",
+                        "rateInterval": "Likmes intervāls",
+                        "rateAmount": "Likmes summa"
+                    },
+                    "small": {
+                        "NFTContract": "NFTLīgums",
+                        "seriesId": "šajā sērijā tiks kalti žetoni",
+                        "owner": "piemēram, īpašnieks, pretējā gadījumā tas būs sūtītājs",
+                        "currency": "Valūta par iegādātajiem žetoniem, ja nulle - par vietējām monētām",
+                        "price": "Cena",
+                        "beneficiary": "Tokenu pārdošanas saņēmējs, pretējā gadījumā tas būs sūtītājs",
+                        "autoindex": "Autoindekss",
+                        "duration": "Slēdzene pēc kalšanas. Nulle nozīmē iegūt to nekavējoties.",
+                        "rateInterval": "kausa intervāls īpašam pirkumam",
+                        "rateAmount": "spaiņa summa īpašam pirkumam"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(neobligāti)",
+                    "number": "numuru",
+                    "address": "adrese",
+                    "fraction": "frakcija",
+                    "integer": "vesels skaitlis",
+                    "seconds": "sekundes",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Ražot",
+                "viewInstancesList": "Atsvaidzināt sarakstu"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Sērijas ID",
+                        "account": "Konts",
+                        "amount": "Summa"
+                    },
+                    "small": {
+                        "seriesId": "jauns marķieris piederēs sērijai ar šādu ID",
+                        "account": "jaunizveidotā NFT īpašnieks. ja nav iestatīts - izmantos pašreizējo maku",
+                        "amount": "summa NFT uz piparmētru"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(neobligāti)",
+                    "seriesId": "id",
+                    "account": "konts",
+                    "amount": "summa",
+                    "integer": "vesels skaitlis"
+                },
+                "btn": {
+                    "Purchase": "Pirkums",
+                    "SpecialPurchase": "Īpašs pirkums"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adrese"
+                    },
+                    "small": {
+                        "account": "Adrese"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Nederīga adrese"
+                },
+                "placeholders": {
+                    "account": "Adrese"
+                },
+                "addToWhitelist": "Pievienot baltajam sarakstam",
+                "removeFromWhitelist": "Noņemt no baltā saraksta"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Aizbildnis",
+                    "recipient": "Saņēmējs"
+                },
+                "small": {
+                    "tokenId": "marķiera ID, kas jābloķē vai jāatbloķē",
+                    "custodian": "adrese, kuru var atbloķēt",
+                    "recipient": "adrese, kas saņems žetonus"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Nederīgs marķiera ID",
+                "invalidCustodian": "Nederīgs Turētājs",
+                "invalidRecipient": "Nederīgs adresāts"
+            },
+            "placeholders": {
+                "optional": "(neobligāti)",
+                "tokenId": "id",
+                "custodian": "adrese"
+            },
+            "Lock": "Slēdzene",
+            "Unlock": "Atbloķēt",
+            "Locked": "Bloķēts",
+            "CustodianAddress": "Turētājbankas adrese",
+            "TokenWasClaimed": "Tika pieprasīts marķieris &quot; {{title}} &quot;.",
+            "TokenWasLocked": "Tokens &quot; {{title}} &quot; tika bloķēts",
+            "TokenWasUnlocked": "Tokens &quot; {{title}} &quot; tika atbloķēts"
+        },
+        "GenerateDescription": "vai automātiski ģenerēt",
+        "collections": {
+            "Title": "Kolekcijas",
+            "EnterTitle": "ievadiet virsrakstu",
+            "EnterDescription": "ievadiet aprakstu",
+            "NewCollection": "Jauna kolekcija",
+            "Name": "Vārds",
+            "Icon": "Ikona",
+            "Description": "Apraksts",
+            "Author": "Autors",
+            "SelectCollection": "Izvēlieties kolekciju",
+            "Value": "Vērtība",
+            "AreYouSure": "Vai tu esi pārliecināts?",
+            "AuthorInvalid": "Autora adrese nav derīga!",
+            "Address": "Adrese",
+            "CoverImage": "Vāka attēls",
+            "UploadIcon": "Augšupielādes ikona",
+            "CommissionAddressInvalid": "Komisijas adrese nav derīga",
+            "OnSale": "izpārdošanā",
+            "OffSale": "izpārdošana",
+            "CreateCollection": "Izveidot kolekciju",
+            "UpdateCollection": "Atjaunināt kolekciju",
+            "CollectionInfo": "Informācija par kolekciju",
+            "SelectAuthor": "Izvēlieties autoru",
+            "NewItem": "Jauna NFT kolekcija",
+            "NamePlaceholder": "Ievadiet kolekcijas nosaukumu",
+            "DescPlaceholder": "Ievadiet kolekcijas aprakstu",
+            "EndingIn": "Beidzas",
+            "SubmitSeries": "Iesniedziet sēriju"
+        }
+    },
+    "currencies": {
+        "choose": "Izvēlieties valūtu"
+    },
+    "connectedAccount": {
+        "Title": "Pievienojiet kontu",
+        "Success": "Panākumi",
+        "YourAccountCreated": "Jūsu konts ir veiksmīgi izveidots!",
+        "YourAccountAlreadyCreated": "Jūsu konts jau ir izveidots un gatavs lietošanai"
+    },
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "rezervesToken",
+                        "amount": "Summa"
+                    },
+                    "small": {
+                        "reserveToken": "rezervesToken",
+                        "amount": "Summa"
+                    }
+                },
+                "placeholders": {
+                    "amount": "summa"
+                },
+                "btns": {
+                    "stake": "Miets"
+                },
+                "stake": "Miets",
+                "loading": "Notiek ielāde"
+            }
+        },
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Ilgums",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "ziedojumi",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "skaitītājs",
+                    "denominator": "saucējs"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Ilgums dienās",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "ziedojumi",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "skaitītājs",
+                    "denominator": "saucējs"
+                }
+            },
+            "placeholders": {
+                "optional": "(neobligāti)",
+                "tuple": "tuple[]",
+                "number": "numuru",
+                "address": "adrese",
+                "fraction": "frakcija",
+                "integer": "vesels skaitlis",
+                "seconds": "sekundes",
+                "days": "dienas",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Nav baseinu"
+            },
+            "btns": {
+                "createPool": "Izveidojiet baseinu",
+                "createPoolInForm": "Izveidot"
+            },
+            "createPool": "Izveidojiet baseinu",
+            "produce": "Ražot",
+            "loading": "Notiek ielāde",
+            "viewInstancesList": "Atsvaidzināt sarakstu"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ierakstiet kaut ko par šo ieguldījumu..."
+    }
+}

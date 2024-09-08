@@ -1,0 +1,692 @@
+{
+    "errors": {
+        "Error": "Error",
+        "WalletAbsent": "La billetera no está conectada.",
+        "Rendering": "Hubo errores al renderizar <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "¡Precio requerido!",
+        "NameRequired": "¡Nombre (requerido!",
+        "PriceInvalid": "¡Precio no válido!",
+        "AmountInvalid": "¡Cantidad no válida!",
+        "TransactionFailed": "Transacción fallida",
+        "ChainNotSupported": "La cadena seleccionada no es compatible. Cadena soportada: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Necesita MetaMask conectado para trabajar con la aplicación",
+        "UserNotLoggedInMetaMask": "El usuario no ha iniciado sesión en MetaMask",
+        "CurrencyNotFound": "Moneda no encontrada",
+        "WrongChain": "Este NFT creado bajo &quot; {{chain}} &quot;. Utilice esta cadena.",
+        "NoRecipientSelected": "Ningún destinatario seleccionado",
+        "NotEnoughPermissionsWallet": "No hay suficientes permisos para leer la billetera de este usuario",
+        "ThisUserHaveNoWallet": "Este usuario no tiene billetera asignada",
+        "TheWalletOfThisUserInvalid": "La billetera de este usuario no es válida",
+        "WalletInvalid": "Dirección de billetera no válida",
+        "CantManageFrozenSeries": "No puedes gestionar series congeladas",
+        "SubscriptionStreamNotPaid": "No has pagado para ver este contenido. Haga clic en {{subscriptionUrl}} y suscríbase al plan apropiado."
+    },
+    "admin": {
+        "Title": "Administrativo de bienes",
+        "SubscriptionTitle": "planes de suscripción"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Toca para pagar"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : cargo procesado por {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Gracias por su pago al {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} suscrito a {{plan.title}}",
+        "YouSubscribedTo": "Te has suscrito a {{plan.title}}",
+        "Assets\/credits\/alert": "Tienes una alerta relacionada con tu cuenta"
+    },
+    "charge": {
+        "Subject": "Obtienes un pago de {{displayAmount}} de {{call 'publisher.displayName'}} por &quot; {{description}} &quot;",
+        "HasBeenCharged": "Oye, esto es solo para informarte que {{1}} ha cobrado {{2}} por {{3}} por {{4}}"
+    },
+    "charged": {
+        "Subject": "Gracias por su pago por &quot; {{description}} &quot;",
+        "HavePaid": "Hola {{1}} , esto es solo una confirmación rápida de que has pagado con éxito {{2}} a {{3}} por {{4}}"
+    },
+    "payment": {
+        "AboutOrder": "Información sobre el pedido",
+        "PaymentMethod": "Método de pago",
+        "ContactInfo": "Datos de contacto",
+        "Pay": "Pagar",
+        "PaymentSucceeded": "Pago exitoso",
+        "PaymentProcessing.": "Su pago se está procesando",
+        "FailTryAgain": "Su pago no fue exitoso, por favor inténtelo de nuevo",
+        "SomethingWrong": "Algo salió mal",
+        "PaymentStatus": "Estado de pago",
+        "PayTo": "Paga {{displayName}}",
+        "ChooseCurrency": "Elige una moneda",
+        "YouCanSendUpTo": "Puedes enviar hasta el {{amount}} {{symbol}}",
+        "Send": "Enviar",
+        "EnterAmount": "ingrese la cantidad"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Invitación aceptada por {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} lleno {{FilledStreamTitle}}",
+        "ForFillingStream": "Para llenar {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Tienes {{amount}} créditos para empezar",
+        "PaymentFor": "Pago por &quot; {{1}} &quot;",
+        "PaymentTo": "Pago al {{1}}",
+        "PaymentToUser": "Pago al {{toUserName}}",
+        "CreatePrivateChat": "para chat privado con {{toUserName}}",
+        "CreatePaidStream": "por crear {{toStreamName}}",
+        "JoinedPaidStream": "para reserva en &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "por crear la comunidad &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "como reembolso de reserva en &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Compró {{amount}} créditos",
+        "BonusCredits": "Bono {{amount}} créditos",
+        "BuyAmountCredits": "Compra {{amount}} créditos",
+        "WatchClip": "Obtuvo {{amount}} créditos por ver {{fromStreamTitle}}",
+        "MissingCredits": "Créditos faltantes",
+        "YouMissingCredits": "Necesita {{amount}} créditos adicionales para continuar.",
+        "BuyCredits": "Compra creditos",
+        "BuyBonus": "La compra {{amount}} créditos a la vez dará lugar a una bonificación {{bonus}} créditos.",
+        "Buy": "Comprar",
+        "PurchaseCredits": "Comprar créditos",
+        "Credits": "Créditos",
+        "ErrorInvalidAmount": "Importe no válido",
+        "ErrorInvalidCurrency": "Lamentablemente, todavía no admitimos la moneda {{currency}} .",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} créditos",
+            "BonusCredits": "{{amount}} créditos"
+        }
+    },
+    "history": {
+        "Date": "Fecha",
+        "Amount": "Cantidad",
+        "Description": "Descripción",
+        "Client": "Cliente",
+        "User": "Usuario",
+        "To": "a",
+        "From": "de",
+        "SeeHistory": "Ver historial de pago de {{1}}",
+        "HistoryEmpty": "Aún no tienes datos",
+        "PaymentFor": "Envió {{amount}} créditos",
+        "PaymentTo": "Envió {{amount}} créditos",
+        "PaymentToUser": "Envió {{amount}} créditos",
+        "CreatePaidStream": "Gastó {{amount}} créditos",
+        "WatchClip": {
+            "+": "Obtuvo {{amount}} créditos",
+            "-": "Gastó {{amount}} créditos"
+        },
+        "JoinedPaidStream": {
+            "+": "Obtuvo {{amount}} créditos",
+            "-": "Gastó {{amount}} créditos"
+        },
+        "LeftPaidStream": {
+            "+": "{{amount}} créditos recibidos",
+            "-": "Envió {{amount}} créditos"
+        },
+        "CreatedCommunity": "Gastó {{amount}} créditos",
+        "BoughtCredits": "Compró {{amount}} créditos",
+        "BonusCredits": "Obtuve {{amount}} créditos de bonificación",
+        "InviteAcceptedBy": "Obtuvo {{amount}} créditos",
+        "Streams_user_firstname": "Obtuvo {{amount}} créditos",
+        "Streams_user_lastname": "Obtuvo {{amount}} créditos",
+        "Streams_user_icon": "Obtuvo {{amount}} créditos",
+        "Places_user_location": "Obtuvo {{amount}} créditos",
+        "Streams_greeting": "Obtuvo {{amount}} créditos",
+        "YouHaveCreditsToStart": "Obtuvo {{amount}} créditos",
+        "InvitedUserFilledStream": "Obtuvo {{amount}} créditos",
+        "ForFillingStream": "Obtuvo {{amount}} créditos",
+        "CreatePrivateChat": "Gastó {{amount}} créditos"
+    },
+    "subscriptions": {
+        "infoTitle": "Establecer información de pago",
+        "confirm": {
+            "title": "Iniciar suscripción",
+            "message": "¿Iniciar una suscripción recurrente a &quot; {{title}} &quot;?",
+            "ok": "DE ACUERDO",
+            "cancel": "Cancelar"
+        },
+        "CreditOrDebitCard": "Tarjeta de crédito o débito",
+        "SubscribePayment": "Suscríbete Pago",
+        "ImmediatePayment": "Pago inmediato",
+        "ProcessingPayment": "Procesando el pago",
+        "SubscriptionAlreadyPaid": "Esta suscripción ya se pagó",
+        "SubscriptionNotActive": "Esta suscripción no está activa.",
+        "Subscribed": "Suscrito",
+        "Unsubscribed": "dado de baja",
+        "Unsubscribe": "Darse de baja",
+        "Subscribe": "Suscribir",
+        "Started": "Comenzó",
+        "EndsIn": "Termina en",
+        "NextPay": "Siguiente pago",
+        "Period": "Período",
+        "Price": "Precio",
+        "AreYouSureUnsubscribe": "¿Estás seguro de que quieres darte de baja de este plan?",
+        "YouUnsubscribedFromPlan": "Se dio de baja del plan &quot; {{planTitle}} &quot;. No se le cobrará, pero su suscripción continuará hasta {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "título del plan",
+            "PricePlaceholder": "precio",
+            "DescriptionPlaceholder": "descripción del plan de suscripción",
+            "SavePlan": "Guardar plan",
+            "NewPlan": "Nuevo plan",
+            "SubscriptionTitle": "Planes de suscripción",
+            "AreYouSureDeletePlan": "¿Estás seguro de que deseas eliminar este plan?",
+            "Duration": "Duración",
+            "Discount": "Descuento",
+            "Interrupt": "Interrumpir",
+            "Continue": "Continuar",
+            "SelectDisplayType": "Seleccione {{displayType}}",
+            "EndDate": "fecha final"
+        }
+    },
+    "payments": {
+        "infoTitle": "Establecer información de pago",
+        "BuyAmountCredits": "Compra {{amount}} créditos",
+        "confirm": {
+            "title": "Realizar un pago",
+            "message": "¿Estás de acuerdo en pagar {{symbol}} {{amount}} ?",
+            "ok": "DE ACUERDO",
+            "cancel": "Cancelar"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Créditos",
+            "description": "realiza un seguimiento de los créditos y pagos"
+        },
+        "Assets\/plan": {
+            "displayType": "Plan de Suscripción",
+            "description": "plan de suscripción"
+        },
+        "Assets\/subscription": {
+            "displayType": "Suscripción",
+            "description": "suscripción"
+        },
+        "Assets\/product": {
+            "displayType": "Producto",
+            "description": "producto que se vende"
+        },
+        "Assets\/service": {
+            "displayType": "Servicio",
+            "description": "servicio que se ofrece"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Obtuvo {{amount}} créditos"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Compró {{amount}} créditos"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bono {{amount}} créditos"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Gastó {{amount}} créditos"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Envió {{amount}} créditos a {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Recibió {{amount}} créditos de {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Tienes pocos créditos en tu cuenta. Visite <a href='<i translate='no'>999 &#39;&gt;este enlace<\/a> para comprar más créditos."
+        }
+    },
+    "billing": {
+        "Title": "facturación de activos",
+        "CreditsMinimum": "Créditos mínimos",
+        "CreditsToAdd": "Créditos para agregar",
+        "Save": "Ahorrar",
+        "ThisLink": "este enlace",
+        "errors": {
+            "CreditsMinimumNegative": "El mínimo de créditos no puede ser negativo",
+            "CreditsToAddNegative": "Los créditos para agregar no pueden ser negativos"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Nuevo servicio",
+            "TitlePlaceholder": "Título del servicio",
+            "PricePlaceholder": "Fijar precio",
+            "LinkPlaceholder": "establecer enlace de información adicional",
+            "DescriptionPlaceholder": "Descripción del servicio",
+            "SaveService": "Guardar servicio",
+            "SelectRequiredParticipants": "Participantes relacionados requeridos",
+            "RequiredParticipantsDesc": "Seleccione los participantes relacionados que se requieren para usar este servicio (por ejemplo, mascotas para &quot;Exhibición de perros&quot;, o niños para &quot;Vacaciones para niños&quot;, etc.). Si se paga el servicio, el usuario deberá pagar también por cada participante relacionado."
+        },
+        "EditServiceTemplate": {
+            "Title": "Editar servicio"
+        },
+        "ManageServiceTemplates": "Administrar plantillas de servicio",
+        "ManageServices": "Administrar servicios",
+        "Free": "Gratis",
+        "OptionalContribution": "Contribución opcional",
+        "RequiredPayment": "pago requerido",
+        "AreYouSureDelete": "¿Está seguro de que desea eliminar este servicio?",
+        "AmountServicesRelated": "Hay {{amount}} disponibilidades relacionadas con este servicio. También serán eliminados."
+    },
+    "transfer": {
+        "SelectRecipient": "Seleccionar destinatario",
+        "TransactionSuccess": "Éxito de la transacción",
+        "OrTypeWalletAddress": "O escriba la dirección de la billetera del destinatario",
+        "AppCredits": "Créditos de la aplicación"
+    },
+    "NFT": {
+        "Title": "Título",
+        "Name": "Nombre",
+        "EnterName": "Ingrese su nombre",
+        "EnterAuthorWallet": "Ingrese la billetera del autor",
+        "InformationAboutTitle": "Información sobre {{title}} NFT",
+        "Description": "Descripción",
+        "DetailedInformationAboutNFT": "Información detallada sobre NFT",
+        "PresaleStarts": "La preventa comienza el 23 de diciembre",
+        "OwnerUserNotFound": "El propietario de este NFT no está registrado en nuestra aplicación.",
+        "BuyNow": "Comprar ahora",
+        "Buy": "Comprar",
+        "Add": "Agregar",
+        "Remove": "Eliminar",
+        "NoNFTyet": "Aún no hay NFT",
+        "Conversation": "Conversación",
+        "Create": "Crear",
+        "CurrentBid": "oferta actual",
+        "StartingIn": "A partir de",
+        "EndingIn": "terminando en",
+        "CreateNFT": "Crear una NFT",
+        "TitlePlaceholder": "Dale un título a tu NFT",
+        "DescriptionPlaceholder": "Dale una descripción a tu NFT",
+        "CreateYourNFT": "Crea tu NFT",
+        "Royalties": "Regalías",
+        "RoyaltyPlaceholder": "Opcional. Importe pagado al creador antes de la transferencia.",
+        "ExpirationDate": "Fecha de caducidad",
+        "StartingDate": "Fecha de inicio",
+        "BidsBelowThisAmount": "No se admitirán pujas por debajo de este importe",
+        "MinimumBid": "Oferta mínima",
+        "Author": "Autor",
+        "Price": "Precio",
+        "Commission": "Comisión",
+        "EnterCommission": "Ingrese la comisión",
+        "Owner": "Dueño",
+        "SelectCategory": "Selecciona una categoría",
+        "Day": "Día",
+        "Days": "Días",
+        "Hour": "Hora",
+        "Hours": "Horas",
+        "Minute": "Minuto",
+        "Minutes": "Minutos",
+        "Second": "Segundo",
+        "Seconds": "Segundos",
+        "SalesCreator": "de las ventas irá al creador",
+        "Details": "Detalles",
+        "Bids": "Ofertas",
+        "History": "Historia",
+        "LoremIpsum": "Lorem Ipsum es simplemente un texto ficticio de la industria de la impresión y la composición tipográfica.",
+        "PutOnSale": "poner a la venta",
+        "PutOffSale": "Retirar de la venta",
+        "Transfer": "Transferir",
+        "Actions": "Comportamiento",
+        "Claim": "Afirmar",
+        "ClaimNFT": "Reclamar NFT",
+        "Unlocking": "Desbloqueo",
+        "Unlock": "desbloquear",
+        "Update": "Actualizar",
+        "UpdateToken": "Ficha de actualización",
+        "UpdateNFT": "Actualizar NFT",
+        "CreateToken": "Crear ficha",
+        "PlaceBid": "Hacer oferta",
+        "SoldOut": "Vendido",
+        "NotOnSale": "No a la venta",
+        "NftName": "nombre NFT",
+        "DescribeYourNFT": "Describa su NFT",
+        "NFTImage": "Imagen para NFT",
+        "NFTVideo": "Video para NFT, si lo hay",
+        "UploadMovie": "Subir película",
+        "MovieSource": "Fuente de la película",
+        "MovieURL": "URL de la película",
+        "UploadFile": "Cargar un archivo",
+        "PutOnMarketplace": "poner en el mercado",
+        "InstantPurchase": "Ingrese el precio para permitir que los usuarios compren instantáneamente su NFT",
+        "FixedPrice": "Precio fijo",
+        "TimedAuction": "subasta cronometrada",
+        "OpenForBids": "Abierto para ofertas",
+        "PriceOnePiece": "Ingrese el precio de una pieza",
+        "EnterPrice": "Introduce el precio",
+        "EnterMinimumBid": "Ingrese la oferta mínima",
+        "SelectChain": "Seleccionar cadena",
+        "Currency": "Divisa",
+        "AreYouSureDeleteImage": "¿Está seguro de que desea eliminar la imagen?",
+        "AreYouSureDeleteVideo": "¿Seguro que quieres eliminar el vídeo?",
+        "series": {
+            "Name": "Nombre",
+            "Icon": "Icono",
+            "Description": "Descripción",
+            "Author": "Autor",
+            "SelectSeries": "Seleccionar serie",
+            "Value": "Valor",
+            "AreYouSure": "¿Está seguro?",
+            "AuthorInvalid": "¡La dirección del autor no es válida!",
+            "Address": "DIRECCIÓN",
+            "CoverImage": "Imagen de portada",
+            "UploadCoverImage": "Subir imagen de portada",
+            "CommissionAddressInvalid": "Dirección de la comisión inválida",
+            "OnSale": "en venta",
+            "OffSale": "en descuento",
+            "CreateSeries": "Crear serie",
+            "UpdateSeries": "Actualizar serie",
+            "SeriesInfo": "Información de la serie",
+            "SelectAuthor": "Seleccionar autor",
+            "NewItem": "Nueva serie NFT",
+            "NamePlaceholder": "Ingrese el nombre de la serie",
+            "DescPlaceholder": "Introduzca la descripción de la serie",
+            "EndingIn": "terminando en"
+        },
+        "contract": {
+            "CreateContract": "Crear contrato",
+            "SelectContract": "Seleccionar contrato",
+            "CreateContractFor": "Crear contrato para {{userName}}",
+            "ContractFor": "Contrato por {{userName}}",
+            "UpdateContract": "Actualizar contrato",
+            "TransferOwnership": "Transferir propiedad",
+            "SetBaseURI": "Establecer URI base",
+            "SetSuffix": "Establecer sufijo",
+            "CurrentOwner": "Dueño actual",
+            "CurrentBaseURL": "URL base actual",
+            "ContractAddressAbsent": "Dirección del contrato ausente",
+            "FactoryAddressAbsent": "Dirección de fábrica ausente",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Título requerido",
+            "SymbolRequired": "Símbolo requerido",
+            "TypeContractName": "nombre del contrato",
+            "TypeContractSymbol": "símbolo de contrato (máx. 10 caracteres)"
+        },
+        "contests": {
+            "Title": "Concursos",
+            "NewContest": "nuevo concurso"
+        },
+        "import": {
+            "importNFT": "Importación de NFT",
+            "importAttributes": "Importar atributos NFT",
+            "fileNotFound": "Lo sentimos, archivo CSV no encontrado.",
+            "fileEmpty": "Lo sentimos, el archivo CSV está vacío.",
+            "userIdNotFound": "el usuario existe pero la identificación está vacía",
+            "errorLine": "línea {{1}}",
+            "fieldNotFound": "Campo obligatorio &quot; {{1}} &quot; no encontrado",
+            "displayTypeEmpty": "Tipo de pantalla para &quot; {{1}} &quot; no encontrado",
+            "taskStreamInvalid": "secuencia de tareas no válida",
+            "instructionsEmpty": "instrucciones de secuencia de tareas vacías",
+            "complete": "Completo",
+            "activateUsers": "enviar mensaje de activación a los usuarios?",
+            "importProgress": "Progreso",
+            "importOptions": "Opciones",
+            "sampleCSV": "Descargar muestra CSV",
+            "fileLabel": "Subir hoja de cálculo:",
+            "errorsTitle": "Ocurrieron errores"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filtrar por Colecciones NFT",
+                "ShowNFTCollection": "Mostrar colección NFT en...",
+                "AllCollections": "Todas las colecciones"
+            },
+            "ByUser": {
+                "AllAuthors": "Todos los autores",
+                "AllUsers": "Todos",
+                "FilterByAuthors": "Filtrar por Autores"
+            }
+        },
+        "Back": "Volver a la colección",
+        "attributes": {
+            "Title": "Administrar atributos",
+            "Attributes": "Atributos",
+            "DisplayTitle": "Tipo de visualización",
+            "AddDisplayType": "Agregar nuevo tipo de visualización",
+            "NewDisplay": "Nueva pantalla",
+            "TraitTitle": "Tipo de rasgo",
+            "AddTraitTitle": "Agregar nuevo tipo de rasgo",
+            "NewTrait": "Nuevo tipo de rasgo",
+            "ValueTitle": "Valor",
+            "AddValueTitle": "Agregar nuevo valor",
+            "NewValue": "Nuevo valor",
+            "NewAttribute": "Nuevo atributo",
+            "UpdateAttributes": "Actualizar atributos",
+            "SaveAttributes": "Guardar atributos"
+        },
+        "profile": {
+            "LogOut": "Cerrar sesión",
+            "Title": "Perfil para {{userName}}",
+            "Description": "Detalles de usuario",
+            "aboutPlaceholder": "Editar biografía",
+            "SureLogOut": "¿Está seguro de que desea cerrar la sesión?",
+            "UploadCoverPhoto": "Subir foto de portada"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "Contrato NFT",
+                        "seriesId": "identificación de la serie",
+                        "owner": "Dueño",
+                        "currency": "moneda",
+                        "price": "Precio",
+                        "beneficiary": "Beneficiario",
+                        "autoindex": "Índice automático",
+                        "duration": "Duración",
+                        "rateInterval": "Intervalo de tasa",
+                        "rateAmount": "Importe de la tasa"
+                    },
+                    "small": {
+                        "NFTContract": "Contrato NFT",
+                        "seriesId": "los tokens se acuñarán en esta serie",
+                        "owner": "propietario de la instancia, de lo contrario será el remitente",
+                        "currency": "Moneda para tokens comprados, si es cero, para monedas nativas",
+                        "price": "Precio",
+                        "beneficiary": "Beneficiario de la venta de tokens, en caso contrario será remitente",
+                        "autoindex": "Índice automático",
+                        "duration": "Bloqueo después de la acuñación. Cero significa obtenerlo inmediatamente.",
+                        "rateInterval": "intervalo de cubo para compra especial",
+                        "rateAmount": "cantidad del cubo para la compra especial"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opcional)",
+                    "number": "número",
+                    "address": "DIRECCIÓN",
+                    "fraction": "fracción",
+                    "integer": "entero",
+                    "seconds": "segundos",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Producir",
+                "viewInstancesList": "Actualizar lista"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID de serie",
+                        "account": "Cuenta",
+                        "amount": "Cantidad"
+                    },
+                    "small": {
+                        "seriesId": "el nuevo token pertenecerá en serie con dicha identificación",
+                        "account": "propietario de NFT de nueva creación. si no está configurado, usará la billetera actual",
+                        "amount": "cantidad NFT a menta"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opcional)",
+                    "seriesId": "identificación",
+                    "account": "cuenta",
+                    "amount": "cantidad",
+                    "integer": "entero"
+                },
+                "btn": {
+                    "Purchase": "Compra",
+                    "SpecialPurchase": "compra especial"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "DIRECCIÓN"
+                    },
+                    "small": {
+                        "account": "DIRECCIÓN"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Dirección inválida"
+                },
+                "placeholders": {
+                    "account": "DIRECCIÓN"
+                },
+                "addToWhitelist": "Agregar a la lista blanca",
+                "removeFromWhitelist": "Eliminar de la lista blanca"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "identificador de token",
+                    "custodian": "Custodio",
+                    "recipient": "Recipiente"
+                },
+                "small": {
+                    "tokenId": "token id qué necesita para bloquear o desbloquear",
+                    "custodian": "dirección que puede ser capaz de desbloquear",
+                    "recipient": "dirección que recibirá los tokens"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "ID de token no válido",
+                "invalidCustodian": "Custodio inválido",
+                "invalidRecipient": "Recipiente inválido"
+            },
+            "placeholders": {
+                "optional": "(opcional)",
+                "tokenId": "identificación",
+                "custodian": "DIRECCIÓN"
+            },
+            "Lock": "Cerrar",
+            "Unlock": "desbloquear",
+            "Locked": "bloqueado",
+            "CustodianAddress": "dirección del custodio",
+            "TokenWasClaimed": "Se reclamó el token &quot; {{title}} &quot;",
+            "TokenWasLocked": "El token &quot; {{title}} &quot; estaba bloqueado",
+            "TokenWasUnlocked": "Se desbloqueó el token &quot; {{title}} &quot;"
+        },
+        "GenerateDescription": "o generar automáticamente",
+        "collections": {
+            "Title": "Colecciones",
+            "EnterTitle": "ingrese el título",
+            "EnterDescription": "ingrese la descripción",
+            "NewCollection": "Nueva colección",
+            "Name": "Nombre",
+            "Icon": "Icono",
+            "Description": "Descripción",
+            "Author": "Autor",
+            "SelectCollection": "Seleccionar colección",
+            "Value": "Valor",
+            "AreYouSure": "¿Está seguro?",
+            "AuthorInvalid": "¡La dirección del autor no es válida!",
+            "Address": "DIRECCIÓN",
+            "CoverImage": "Imagen de portada",
+            "UploadIcon": "Subir icono",
+            "CommissionAddressInvalid": "Dirección de la comisión inválida",
+            "OnSale": "en venta",
+            "OffSale": "en descuento",
+            "CreateCollection": "Crear colección",
+            "UpdateCollection": "Actualizar colección",
+            "CollectionInfo": "Información de la colección",
+            "SelectAuthor": "Seleccionar autor",
+            "NewItem": "Nueva colección NFT",
+            "NamePlaceholder": "Introduce el nombre de la colección",
+            "DescPlaceholder": "Ingrese la descripción de la colección",
+            "EndingIn": "terminando en",
+            "SubmitSeries": "Enviar una serie"
+        }
+    },
+    "currencies": {
+        "choose": "Elige una moneda"
+    },
+    "connectedAccount": {
+        "Title": "Conectar cuenta",
+        "Success": "Éxito",
+        "YourAccountCreated": "Tu cuenta creada con éxito!",
+        "YourAccountAlreadyCreated": "Tu cuenta ya creada y lista para usar"
+    },
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "token de reserva",
+                        "amount": "Cantidad"
+                    },
+                    "small": {
+                        "reserveToken": "token de reserva",
+                        "amount": "Cantidad"
+                    }
+                },
+                "placeholders": {
+                    "amount": "cantidad"
+                },
+                "btns": {
+                    "stake": "Apostar"
+                },
+                "stake": "Apostar",
+                "loading": "Cargando"
+            }
+        },
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duración",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "ficha popular",
+                    "donations": "donaciones",
+                    "rewardsRateFraction": "recompensasTasaFracción",
+                    "numerator": "numerador",
+                    "denominator": "denominador"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duración en días",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "ficha popular",
+                    "donations": "donaciones",
+                    "rewardsRateFraction": "recompensasTasaFracción",
+                    "numerator": "numerador",
+                    "denominator": "denominador"
+                }
+            },
+            "placeholders": {
+                "optional": "(opcional)",
+                "tuple": "tupla[]",
+                "number": "número",
+                "address": "DIRECCIÓN",
+                "fraction": "fracción",
+                "integer": "entero",
+                "seconds": "segundos",
+                "days": "días",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "no hay piscinas"
+            },
+            "btns": {
+                "createPool": "Crear grupo",
+                "createPoolInForm": "Crear"
+            },
+            "createPool": "Crear grupo",
+            "produce": "Producir",
+            "loading": "Cargando",
+            "viewInstancesList": "Actualizar lista"
+        }
+    },
+    "fundrise": {
+        "placeholder": "escribe algo sobre esta contribución..."
+    }
+}

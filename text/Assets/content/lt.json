@@ -1,0 +1,692 @@
+{
+    "errors": {
+        "Error": "Klaida",
+        "WalletAbsent": "Piniginė neprijungta.",
+        "Rendering": "Pateikiant <span class='url'>{{1}}<\/span> įvyko klaidų",
+        "PriceRequired": "Reikalinga kaina!",
+        "NameRequired": "Reikalingas vardas!",
+        "PriceInvalid": "Kaina negalioja!",
+        "AmountInvalid": "Neteisinga suma!",
+        "TransactionFailed": "Sandoris nepavyko",
+        "ChainNotSupported": "Pasirinkta grandinė nepalaikoma. Palaikoma grandinė: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Norint dirbti su programa, reikia prijungti „MetaMask“.",
+        "UserNotLoggedInMetaMask": "Vartotojas neprisijungęs prie MetaMask",
+        "CurrencyNotFound": "Valiuta nerasta",
+        "WrongChain": "Šis NFT sukurtas pagal „ {{chain}} “. Prašome naudoti šią grandinę.",
+        "NoRecipientSelected": "Nepasirinktas joks gavėjas",
+        "NotEnoughPermissionsWallet": "Nepakanka leidimų skaityti šio naudotojo piniginę",
+        "ThisUserHaveNoWallet": "Šiam vartotojui nepriskirta piniginė",
+        "TheWalletOfThisUserInvalid": "Šio naudotojo piniginė negalioja",
+        "WalletInvalid": "Netinkamas piniginės adresas",
+        "CantManageFrozenSeries": "Negalite valdyti šaldytų serijų",
+        "SubscriptionStreamNotPaid": "Jūs nemokėjote už šio turinio peržiūrą. Spustelėkite {{subscriptionUrl}} ir užsiprenumeruokite atitinkamą planą."
+    },
+    "admin": {
+        "Title": "Turtas administracinis",
+        "SubscriptionTitle": "Prenumeratos planai"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Palieskite norėdami sumokėti"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : mokestis apdorotas už {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Dėkojame, kad sumokėjote {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} užsiprenumeravo {{plan.title}}",
+        "YouSubscribedTo": "Jūs užsiprenumeravote {{plan.title}}",
+        "Assets\/credits\/alert": "Turite įspėjimą, susijusį su jūsų paskyra"
+    },
+    "charge": {
+        "Subject": "Jūs gaunate mokėjimą {{displayAmount}} nuo {{call 'publisher.displayName'}} iš &quot; {{description}} &quot;",
+        "HasBeenCharged": "Ei, tai tik noriu pranešti, kad {{1}} buvo apmokestinta {{2}} už {{3}} iki {{4}}"
+    },
+    "charged": {
+        "Subject": "Dėkojame už sumokėjimą už &quot; {{description}} &quot;",
+        "HavePaid": "Ei, {{1}} , tai tik greitas patvirtinimas, kad sėkmingai sumokėjote {{2}} iki {{3}} už {{4}}"
+    },
+    "payment": {
+        "AboutOrder": "Informacija apie užsakymą",
+        "PaymentMethod": "Mokėjimo būdas",
+        "ContactInfo": "Kontaktinė informacija",
+        "Pay": "Mokėti",
+        "PaymentSucceeded": "Mokėjimas pavyko",
+        "PaymentProcessing.": "Jūsų mokėjimas apdorojamas",
+        "FailTryAgain": "Mokėjimas nebuvo sėkmingas, bandykite dar kartą",
+        "SomethingWrong": "Kažkas nutiko",
+        "PaymentStatus": "Mokėjimo būsena",
+        "PayTo": "Mokėti {{displayName}}",
+        "ChooseCurrency": "Pasirinkite valiutą",
+        "YouCanSendUpTo": "Galite siųsti iki {{amount}} {{symbol}}",
+        "Send": "Siųsti",
+        "EnterAmount": "įveskite sumą"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Kvietimą priėmė {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} užpildyti {{FilledStreamTitle}}",
+        "ForFillingStream": "Užpildymui {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Pradėti turite {{amount}} kreditus",
+        "PaymentFor": "Mokėjimas už &quot; {{1}} &quot;",
+        "PaymentTo": "Mokėjimas iki {{1}}",
+        "PaymentToUser": "Mokėjimas iki {{toUserName}}",
+        "CreatePrivateChat": "privačiam pokalbiui su {{toUserName}}",
+        "CreatePaidStream": "už {{toStreamName}} sukūrimą",
+        "JoinedPaidStream": "rezervacijai &quot; <a data-publisherId='<i translate='no'>999 &quot; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "už bendruomenės &quot; {{communityId}} &quot; sukūrimą",
+        "LeftPaidStream": "kaip rezervacijos grąžinimas „ <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> “",
+        "BoughtCredits": "Nusipirkau {{amount}} kreditus",
+        "BonusCredits": "Premija {{amount}} kreditai",
+        "BuyAmountCredits": "Pirkite {{amount}} kreditus",
+        "WatchClip": "Uždirbote {{amount}} kreditus žiūrėdami {{fromStreamTitle}}",
+        "MissingCredits": "Trūksta kreditų",
+        "YouMissingCredits": "Norėdami tęsti, jums reikia papildomų {{amount}} kreditų.",
+        "BuyCredits": "Pirkite kreditus",
+        "BuyBonus": "Perkant {{amount}} kreditus iš karto gausite {{bonus}} kreditų premiją.",
+        "Buy": "Pirkti",
+        "PurchaseCredits": "Pirkimo kreditai",
+        "Credits": "Kreditai",
+        "ErrorInvalidAmount": "Neteisinga suma",
+        "ErrorInvalidCurrency": "Deja, kol kas nepalaikome {{currency}} valiutos",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kreditai",
+            "BonusCredits": "{{amount}} kreditai"
+        }
+    },
+    "history": {
+        "Date": "Data",
+        "Amount": "Suma",
+        "Description": "apibūdinimas",
+        "Client": "Klientas",
+        "User": "Vartotojas",
+        "To": "į",
+        "From": "iš",
+        "SeeHistory": "Žr. {{1}} mokėjimų istoriją",
+        "HistoryEmpty": "Dar neturite duomenų",
+        "PaymentFor": "Išsiųsta {{amount}} kreditai",
+        "PaymentTo": "Išsiųsta {{amount}} kreditai",
+        "PaymentToUser": "Išsiųsta {{amount}} kreditai",
+        "CreatePaidStream": "Išleido {{amount}} kreditus",
+        "WatchClip": {
+            "+": "Uždirbo {{amount}} kreditus",
+            "-": "Išleido {{amount}} kreditus"
+        },
+        "JoinedPaidStream": {
+            "+": "Uždirbo {{amount}} kreditus",
+            "-": "Išleido {{amount}} kreditus"
+        },
+        "LeftPaidStream": {
+            "+": "Gauti {{amount}} kreditai",
+            "-": "Išsiųsta {{amount}} kreditai"
+        },
+        "CreatedCommunity": "Išleido {{amount}} kreditus",
+        "BoughtCredits": "Nusipirkau {{amount}} kreditus",
+        "BonusCredits": "Gavau {{amount}} kreditų premiją",
+        "InviteAcceptedBy": "Uždirbo {{amount}} kreditus",
+        "Streams_user_firstname": "Uždirbo {{amount}} kreditus",
+        "Streams_user_lastname": "Uždirbo {{amount}} kreditus",
+        "Streams_user_icon": "Uždirbo {{amount}} kreditus",
+        "Places_user_location": "Uždirbo {{amount}} kreditus",
+        "Streams_greeting": "Uždirbo {{amount}} kreditus",
+        "YouHaveCreditsToStart": "Uždirbo {{amount}} kreditus",
+        "InvitedUserFilledStream": "Uždirbo {{amount}} kreditus",
+        "ForFillingStream": "Uždirbo {{amount}} kreditus",
+        "CreatePrivateChat": "Išleido {{amount}} kreditus"
+    },
+    "subscriptions": {
+        "infoTitle": "Nustatykite mokėjimo informaciją",
+        "confirm": {
+            "title": "Pradėti prenumeratą",
+            "message": "Pradėti periodinę „ {{title}} “ prenumeratą?",
+            "ok": "Gerai",
+            "cancel": "Atšaukti"
+        },
+        "CreditOrDebitCard": "Kreditinė arba debetinė kortelė",
+        "SubscribePayment": "Prenumeruoti mokėjimą",
+        "ImmediatePayment": "Iškart Apmokėjimas",
+        "ProcessingPayment": "Mokėjimo apdorojimas",
+        "SubscriptionAlreadyPaid": "Ši prenumerata jau sumokėta",
+        "SubscriptionNotActive": "Ši prenumerata neaktyvi",
+        "Subscribed": "Prenumeruoti",
+        "Unsubscribed": "Atsisakė prenumeratos",
+        "Unsubscribe": "Atsisakyti prenumeratos",
+        "Subscribe": "Prenumeruoti",
+        "Started": "Prasidėjo",
+        "EndsIn": "Baigiasi",
+        "NextPay": "Kitas mokėjimas",
+        "Period": "Laikotarpis",
+        "Price": "Kaina",
+        "AreYouSureUnsubscribe": "Ar tikrai norite atšaukti šio plano prenumeratą?",
+        "YouUnsubscribedFromPlan": "Atsisakėte plano „ {{planTitle}} “ prenumeratos. Nebūsite apmokestinti, bet prenumerata galios iki {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "plano pavadinimas",
+            "PricePlaceholder": "kaina",
+            "DescriptionPlaceholder": "prenumeratos plano aprašymas",
+            "SavePlan": "Išsaugoti planą",
+            "NewPlan": "Naujas planas",
+            "SubscriptionTitle": "Prenumeratos planai",
+            "AreYouSureDeletePlan": "Ar tikrai norite ištrinti šį planą?",
+            "Duration": "Trukmė",
+            "Discount": "Nuolaida",
+            "Interrupt": "Pertraukite",
+            "Continue": "Tęsti",
+            "SelectDisplayType": "Pasirinkite {{displayType}}",
+            "EndDate": "pabaigos data"
+        }
+    },
+    "payments": {
+        "infoTitle": "Nustatykite mokėjimo informaciją",
+        "BuyAmountCredits": "Pirkite {{amount}} kreditus",
+        "confirm": {
+            "title": "Atlikite mokėjimą",
+            "message": "Ar sutinkate mokėti {{symbol}} {{amount}} ?",
+            "ok": "Gerai",
+            "cancel": "Atšaukti"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Kreditai",
+            "description": "seka kreditus ir mokėjimus"
+        },
+        "Assets\/plan": {
+            "displayType": "Prenumeratos planas",
+            "description": "prenumeratos planas"
+        },
+        "Assets\/subscription": {
+            "displayType": "Prenumerata",
+            "description": "prenumerata"
+        },
+        "Assets\/product": {
+            "displayType": "Produktas",
+            "description": "parduodamas produktas"
+        },
+        "Assets\/service": {
+            "displayType": "Aptarnavimas",
+            "description": "siūloma paslauga"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Uždirbo {{amount}} kreditus"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Nusipirkau {{amount}} kreditus"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Premija {{amount}} kreditai"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Išleido {{amount}} kreditus"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Išsiųsta {{amount}} kreditai į {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Iš {{fromUserName}} gavo {{amount}} kreditus"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Jūsų sąskaitoje yra mažai kreditų. Jei norite nusipirkti daugiau kreditų, apsilankykite <a href='<i translate='no'>999 &#39;&gt;šioje nuorodoje<\/a> ."
+        }
+    },
+    "billing": {
+        "Title": "Atsiskaitymas už turtą",
+        "CreditsMinimum": "Minimalūs kreditai",
+        "CreditsToAdd": "Kreditai, kuriuos reikia pridėti",
+        "Save": "Sutaupyti",
+        "ThisLink": "šią nuorodą",
+        "errors": {
+            "CreditsMinimumNegative": "Kreditų minimumas negali būti neigiamas",
+            "CreditsToAddNegative": "Pridedami kreditai negali būti neigiami"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Nauja paslauga",
+            "TitlePlaceholder": "Paslaugos pavadinimas",
+            "PricePlaceholder": "Nustatyti kainą",
+            "LinkPlaceholder": "nustatyti papildomos informacijos nuorodą",
+            "DescriptionPlaceholder": "Aptarnavimo Aprašymas",
+            "SaveService": "Išsaugoti paslaugą",
+            "SelectRequiredParticipants": "Reikalingi susiję dalyviai",
+            "RequiredParticipantsDesc": "Prašome pasirinkti susijusius dalyvius, kurių reikia norint naudotis šia paslauga (pvz., augintiniai „Šunų parodoje“, vaikai – „Vaikų atostogos“ ir pan.). Jei paslauga mokama, vartotojas turės mokėti ir už kiekvieną susijusį dalyvį."
+        },
+        "EditServiceTemplate": {
+            "Title": "Redaguoti paslaugą"
+        },
+        "ManageServiceTemplates": "Tvarkykite paslaugų šablonus",
+        "ManageServices": "Tvarkyti paslaugas",
+        "Free": "Laisvas",
+        "OptionalContribution": "Neprivalomas įnašas",
+        "RequiredPayment": "Reikalingas mokėjimas",
+        "AreYouSureDelete": "Ar tikrai norite ištrinti šią paslaugą?",
+        "AmountServicesRelated": "Yra {{amount}} su šia paslauga susijusios galimybės. Jie taip pat bus pašalinti."
+    },
+    "transfer": {
+        "SelectRecipient": "Pasirinkite gavėją",
+        "TransactionSuccess": "Sandorio sėkmė",
+        "OrTypeWalletAddress": "ARBA įveskite gavėjo piniginės adresą",
+        "AppCredits": "Programos kreditai"
+    },
+    "NFT": {
+        "Title": "Pavadinimas",
+        "Name": "vardas",
+        "EnterName": "Įveskite vardą",
+        "EnterAuthorWallet": "Įveskite autoriaus piniginę",
+        "InformationAboutTitle": "Informacija apie {{title}} NFT",
+        "Description": "apibūdinimas",
+        "DetailedInformationAboutNFT": "Išsami informacija apie NFT",
+        "PresaleStarts": "Išankstinė prekyba prasidės gruodžio 23 d",
+        "OwnerUserNotFound": "Šio NFT savininkas nėra registruotas mūsų programoje.",
+        "BuyNow": "Pirkti dabar",
+        "Buy": "Pirkti",
+        "Add": "Papildyti",
+        "Remove": "Pašalinti",
+        "NoNFTyet": "Dar nėra NFT",
+        "Conversation": "Pokalbis",
+        "Create": "Sukurti",
+        "CurrentBid": "Dabartinis statymas",
+        "StartingIn": "Pradedant",
+        "EndingIn": "Baigiasi",
+        "CreateNFT": "Sukurkite NFT",
+        "TitlePlaceholder": "Suteikite savo NFT pavadinimą",
+        "DescriptionPlaceholder": "Pateikite savo NFT aprašymą",
+        "CreateYourNFT": "Sukurkite savo NFT",
+        "Royalties": "honorarai",
+        "RoyaltyPlaceholder": "Neprivaloma. Suma, sumokėta kūrėjui prieš pervedimą.",
+        "ExpirationDate": "Galiojimo laikas",
+        "StartingDate": "Pradžios data",
+        "BidsBelowThisAmount": "Siūlymai, mažesni už šią sumą, nebus leidžiami",
+        "MinimumBid": "Minimalus pasiūlymas",
+        "Author": "Autorius",
+        "Price": "Kaina",
+        "Commission": "Komisija",
+        "EnterCommission": "Įveskite komisinius",
+        "Owner": "Savininkas",
+        "SelectCategory": "Pasirinkite kategoriją",
+        "Day": "Diena",
+        "Days": "Dienos",
+        "Hour": "Valanda",
+        "Hours": "Valandos",
+        "Minute": "Minutė",
+        "Minutes": "Minutės",
+        "Second": "Antra",
+        "Seconds": "sekundės",
+        "SalesCreator": "pardavimų atiteks kūrėjui",
+        "Details": "Detalės",
+        "Bids": "Pasiūlymai",
+        "History": "Istorija",
+        "LoremIpsum": "Lorem Ipsum yra tiesiog netikras spausdinimo ir rinkimo pramonės tekstas.",
+        "PutOnSale": "Pateikti pardavimui",
+        "PutOffSale": "Pasitraukti iš pardavimo",
+        "Transfer": "Perdavimas",
+        "Actions": "Veiksmai",
+        "Claim": "Reikalauti",
+        "ClaimNFT": "Reikalauti NFT",
+        "Unlocking": "Atrakinimas",
+        "Unlock": "Atrakinti",
+        "Update": "Atnaujinti",
+        "UpdateToken": "Atnaujinti prieigos raktą",
+        "UpdateNFT": "Atnaujinkite NFT",
+        "CreateToken": "Sukurti žetoną",
+        "PlaceBid": "Daryti statymą",
+        "SoldOut": "Parduota",
+        "NotOnSale": "Neparduodama",
+        "NftName": "NFT pavadinimas",
+        "DescribeYourNFT": "Aprašykite savo NFT",
+        "NFTImage": "NFT vaizdas",
+        "NFTVideo": "Vaizdo įrašas, skirtas NFT, jei yra",
+        "UploadMovie": "Įkelti filmą",
+        "MovieSource": "Filmo šaltinis",
+        "MovieURL": "Filmo URL",
+        "UploadFile": "Įkelti failą",
+        "PutOnMarketplace": "Įdėkite į turgų",
+        "InstantPurchase": "Įveskite kainą, kad vartotojai galėtų iš karto įsigyti jūsų NFT",
+        "FixedPrice": "Fiksuota kaina",
+        "TimedAuction": "Laiku nustatytas aukcionas",
+        "OpenForBids": "Atvira pasiūlymams",
+        "PriceOnePiece": "Įveskite vienos dalies kainą",
+        "EnterPrice": "Įveskite kainą",
+        "EnterMinimumBid": "Įveskite minimalų pasiūlymą",
+        "SelectChain": "Pasirinkite grandinę",
+        "Currency": "Valiuta",
+        "AreYouSureDeleteImage": "Ar tikrai norite pašalinti vaizdą?",
+        "AreYouSureDeleteVideo": "Ar tikrai norite pašalinti vaizdo įrašą?",
+        "series": {
+            "Name": "vardas",
+            "Icon": "Piktograma",
+            "Description": "apibūdinimas",
+            "Author": "Autorius",
+            "SelectSeries": "Pasirinkite seriją",
+            "Value": "Vertė",
+            "AreYouSure": "Ar tu tuo tikras?",
+            "AuthorInvalid": "Neteisingas autoriaus adresas!",
+            "Address": "Adresas",
+            "CoverImage": "Viršelio vaizdas",
+            "UploadCoverImage": "Įkelti viršelio vaizdą",
+            "CommissionAddressInvalid": "Komisijos adresas neteisingas",
+            "OnSale": "Išpardavimas",
+            "OffSale": "išpardavimas",
+            "CreateSeries": "Sukurti seriją",
+            "UpdateSeries": "Atnaujinti seriją",
+            "SeriesInfo": "Serialo informacija",
+            "SelectAuthor": "Pasirinkite autorių",
+            "NewItem": "Nauja NFT serija",
+            "NamePlaceholder": "Įveskite serijos pavadinimą",
+            "DescPlaceholder": "Įveskite serijos aprašymą",
+            "EndingIn": "Baigiasi"
+        },
+        "contract": {
+            "CreateContract": "Sukurti sutartį",
+            "SelectContract": "Pasirinkite sutartį",
+            "CreateContractFor": "Sudarykite sutartį už {{userName}}",
+            "ContractFor": "Sutartis už {{userName}}",
+            "UpdateContract": "Atnaujinti sutartį",
+            "TransferOwnership": "Perleisti nuosavybės teisę",
+            "SetBaseURI": "Nustatyti bazinį URI",
+            "SetSuffix": "Nustatyti priesagą",
+            "CurrentOwner": "Dabartinis savininkas",
+            "CurrentBaseURL": "Dabartinis BaseURL",
+            "ContractAddressAbsent": "Nėra sutarties adreso",
+            "FactoryAddressAbsent": "Gamyklos adreso nėra",
+            "ContractName": "{{contractName}} {{contractSymbol}} {{chainNetwork}} )",
+            "TitleRequired": "Reikalingas pavadinimas",
+            "SymbolRequired": "Reikalingas simbolis",
+            "TypeContractName": "sutarties pavadinimas",
+            "TypeContractSymbol": "sutarties simbolis (maks. 10 simbolių)"
+        },
+        "contests": {
+            "Title": "Konkursai",
+            "NewContest": "Naujas konkursas"
+        },
+        "import": {
+            "importNFT": "NFT importavimas",
+            "importAttributes": "Importuokite NFT atributus",
+            "fileNotFound": "Atsiprašome, CSV failas nerastas.",
+            "fileEmpty": "Atsiprašome, CSV failas tuščias.",
+            "userIdNotFound": "vartotojas egzistuoja, bet ID tuščias",
+            "errorLine": "{{1}} eilutė",
+            "fieldNotFound": "Privalomas laukas &quot; {{1}} &quot; nerastas",
+            "displayTypeEmpty": "Ekrano tipas „ {{1}} “ nerastas",
+            "taskStreamInvalid": "užduočių srautas netinkamas",
+            "instructionsEmpty": "užduočių srauto instrukcijos tuščios",
+            "complete": "Užbaigti",
+            "activateUsers": "siųsti aktyvinimo pranešimą vartotojams?",
+            "importProgress": "Progresas",
+            "importOptions": "Galimybės",
+            "sampleCSV": "Atsisiųskite CSV pavyzdį",
+            "fileLabel": "Įkelti skaičiuoklę:",
+            "errorsTitle": "Įvyko klaidų"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filtruoti pagal NFT kolekcijas",
+                "ShowNFTCollection": "Rodyti NFT kolekciją...",
+                "AllCollections": "Visos kolekcijos"
+            },
+            "ByUser": {
+                "AllAuthors": "Visi autoriai",
+                "AllUsers": "Visi",
+                "FilterByAuthors": "Filtruoti pagal autorius"
+            }
+        },
+        "Back": "Atgal į Kolekciją",
+        "attributes": {
+            "Title": "Tvarkyti atributus",
+            "Attributes": "Atributai",
+            "DisplayTitle": "Ekrano tipas",
+            "AddDisplayType": "Pridėti naują rodymo tipą",
+            "NewDisplay": "Naujas ekranas",
+            "TraitTitle": "Požymio tipas",
+            "AddTraitTitle": "Pridėti naują bruožų tipą",
+            "NewTrait": "Naujas bruožo tipas",
+            "ValueTitle": "Vertė",
+            "AddValueTitle": "Pridėkite naują vertę",
+            "NewValue": "Nauja vertė",
+            "NewAttribute": "Naujas atributas",
+            "UpdateAttributes": "Atnaujinti atributus",
+            "SaveAttributes": "Išsaugoti atributus"
+        },
+        "profile": {
+            "LogOut": "Atsijungti",
+            "Title": "Profilis už {{userName}}",
+            "Description": "Vartotojo informacija",
+            "aboutPlaceholder": "Redaguoti biografiją",
+            "SureLogOut": "Ar tikrai norite atsijungti?",
+            "UploadCoverPhoto": "Įkelti viršelio nuotrauką"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "serijos ID",
+                        "owner": "Savininkas",
+                        "currency": "valiuta",
+                        "price": "Kaina",
+                        "beneficiary": "Naudos gavėjas",
+                        "autoindex": "Autoindex",
+                        "duration": "Trukmė",
+                        "rateInterval": "Kurso intervalas",
+                        "rateAmount": "Įvertinkite sumą"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "šioje serijoje bus nukaldinti žetonai",
+                        "owner": "egzemplioriaus savininkas, kitu atveju bus siuntėjas",
+                        "currency": "Valiuta už įsigytus žetonus, jei nulis – už vietines monetas",
+                        "price": "Kaina",
+                        "beneficiary": "Žetonų pardavimo gavėjas, kitu atveju bus siuntėjas",
+                        "autoindex": "Autoindex",
+                        "duration": "Užrakinti po kaldinimo. Nulis reiškia, kad gaukite jį nedelsiant.",
+                        "rateInterval": "kibiro intervalas specialiam pirkimui",
+                        "rateAmount": "kibiro suma specialiems pirkiniams"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(neprivaloma)",
+                    "number": "numerį",
+                    "address": "adresu",
+                    "fraction": "trupmena",
+                    "integer": "sveikasis skaičius",
+                    "seconds": "sekundžių",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Gaminti",
+                "viewInstancesList": "Atnaujinti sąrašą"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Serijos ID",
+                        "account": "sąskaita",
+                        "amount": "Suma"
+                    },
+                    "small": {
+                        "seriesId": "naujas prieigos raktas priklausys serijai su tokiu ID",
+                        "account": "naujai sukurto NFT savininkas. jei nenustatyta – bus naudojama dabartinė piniginė",
+                        "amount": "suma NFT iki mėtų"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(neprivaloma)",
+                    "seriesId": "id",
+                    "account": "sąskaitą",
+                    "amount": "suma",
+                    "integer": "sveikasis skaičius"
+                },
+                "btn": {
+                    "Purchase": "Pirkimas",
+                    "SpecialPurchase": "Specialus pirkinys"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adresas"
+                    },
+                    "small": {
+                        "account": "Adresas"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Neteisingas adresas"
+                },
+                "placeholders": {
+                    "account": "Adresas"
+                },
+                "addToWhitelist": "Pridėti į baltąjį sąrašą",
+                "removeFromWhitelist": "Pašalinti iš baltojo sąrašo"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Žetono ID",
+                    "custodian": "Saugotojas",
+                    "recipient": "Gavėjas"
+                },
+                "small": {
+                    "tokenId": "žetono ID, kurį reikia užrakinti arba atrakinti",
+                    "custodian": "adresą, kurį galima atrakinti",
+                    "recipient": "adresas, kuriuo gausite žetonus"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Neteisingas tokenId",
+                "invalidCustodian": "Neteisingas saugotojas",
+                "invalidRecipient": "Neteisingas gavėjas"
+            },
+            "placeholders": {
+                "optional": "(neprivaloma)",
+                "tokenId": "id",
+                "custodian": "adresu"
+            },
+            "Lock": "Užraktas",
+            "Unlock": "Atrakinti",
+            "Locked": "Užrakinta",
+            "CustodianAddress": "Saugotojo adresas",
+            "TokenWasClaimed": "Žetonas „ {{title}} “ buvo paimtas",
+            "TokenWasLocked": "Žetonas „ {{title}} “ buvo užrakintas",
+            "TokenWasUnlocked": "Žetonas „ {{title}} “ buvo atrakintas"
+        },
+        "GenerateDescription": "arba generuoti automatiškai",
+        "collections": {
+            "Title": "Kolekcijos",
+            "EnterTitle": "įveskite pavadinimą",
+            "EnterDescription": "įveskite aprašymą",
+            "NewCollection": "Nauja kolekcija",
+            "Name": "vardas",
+            "Icon": "Piktograma",
+            "Description": "apibūdinimas",
+            "Author": "Autorius",
+            "SelectCollection": "Pasirinkite kolekciją",
+            "Value": "Vertė",
+            "AreYouSure": "Ar tu tuo tikras?",
+            "AuthorInvalid": "Neteisingas autoriaus adresas!",
+            "Address": "Adresas",
+            "CoverImage": "Viršelio vaizdas",
+            "UploadIcon": "Įkėlimo piktograma",
+            "CommissionAddressInvalid": "Komisijos adresas neteisingas",
+            "OnSale": "Išpardavimas",
+            "OffSale": "išpardavimas",
+            "CreateCollection": "Sukurti kolekciją",
+            "UpdateCollection": "Atnaujinti kolekciją",
+            "CollectionInfo": "Kolekcijos informacija",
+            "SelectAuthor": "Pasirinkite autorių",
+            "NewItem": "Nauja NFT kolekcija",
+            "NamePlaceholder": "Įveskite kolekcijos pavadinimą",
+            "DescPlaceholder": "Įveskite kolekcijos aprašymą",
+            "EndingIn": "Baigiasi",
+            "SubmitSeries": "Pateikite seriją"
+        }
+    },
+    "currencies": {
+        "choose": "Pasirinkite valiutą"
+    },
+    "connectedAccount": {
+        "Title": "Susieti paskyrą",
+        "Success": "Sėkmė",
+        "YourAccountCreated": "Jūsų paskyra sėkmingai sukurta!",
+        "YourAccountAlreadyCreated": "Jūsų paskyra jau sukurta ir paruošta naudoti"
+    },
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "rezervo ženklas",
+                        "amount": "Suma"
+                    },
+                    "small": {
+                        "reserveToken": "rezervo ženklas",
+                        "amount": "Suma"
+                    }
+                },
+                "placeholders": {
+                    "amount": "suma"
+                },
+                "btns": {
+                    "stake": "Stalas"
+                },
+                "stake": "Stalas",
+                "loading": "Įkeliama"
+            }
+        },
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Trukmė",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populiarus Tokenas",
+                    "donations": "aukos",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "skaitiklis",
+                    "denominator": "vardiklis"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Trukmė dienomis",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populiarus Tokenas",
+                    "donations": "aukos",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "skaitiklis",
+                    "denominator": "vardiklis"
+                }
+            },
+            "placeholders": {
+                "optional": "(neprivaloma)",
+                "tuple": "rinkinys[]",
+                "number": "numerį",
+                "address": "adresu",
+                "fraction": "trupmena",
+                "integer": "sveikasis skaičius",
+                "seconds": "sekundžių",
+                "days": "dienų",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Baseinų nėra"
+            },
+            "btns": {
+                "createPool": "Sukurti baseiną",
+                "createPoolInForm": "Sukurti"
+            },
+            "createPool": "Sukurti baseiną",
+            "produce": "Gaminti",
+            "loading": "Įkeliama",
+            "viewInstancesList": "Atnaujinti sąrašą"
+        }
+    },
+    "fundrise": {
+        "placeholder": "parašyk ką nors apie šį indėlį..."
+    }
+}

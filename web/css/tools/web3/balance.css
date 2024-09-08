@@ -1,0 +1,41 @@
+.Assets_web3_balance_tool,
+.Assets_web3_balance_tool select,
+.Assets_web3_balance_tool select option {
+    font-size: 16px;
+}
+.Assets_web3_balance_tool select[name=tokens] option:first-child {
+    font-weight: bold;
+    font-style: italic;
+}
+.Assets_web3_balance_tool select {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.Assets_web3_balance_tool select,
+.Assets_web3_balance_tool select option {
+    text-align: left;
+}
+.Assets_web3_balance_tool select[data-count="1"],
+.Assets_web3_balance_tool select[data-count="1"] option {
+    text-align: left;
+}
+.Assets_web3_balance_tool select[data-count="1"] {
+    border: none;
+    pointer-events:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.Assets_web3_balance_tool .Assets_web3_balance_select {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 5px;
+}
+.Assets_web3_balance_tool .Assets_web3_balance_select .Assets_credits_balance_tool {
+    display: inline-block;
+    margin-left: 10px;
+}
+.Assets_web3_balance_tool button[name=connect] {
+    width: 100%;
+}

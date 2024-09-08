@@ -1,0 +1,85 @@
+.Assets_plan_tool .Streams_preview_icon {
+    width: 100%;
+    height: auto;
+}
+.Assets_plan_tool .Assets_plan_period,
+.Assets_plan_tool .Assets_plan_price,
+.Assets_plan_tool .Assets_plan_started,
+.Assets_plan_tool .Assets_plan_endsIn {
+    margin: 0 0 10px 0;
+}
+.Assets_plan_tool .Q_timestamp_tool {
+    display: inline-block;
+}
+.Assets_plan_tool button {
+    margin: 0 auto;
+    display: block;
+}
+.Assets_plan_tool .Assets_plan_status {
+    text-align: center;
+    margin: 10px 0;
+}
+.Assets_plan_tool[data-subscribed=true] .Assets_plan_status {
+    color: green;
+}
+.Assets_plan_tool[data-subscribed=false] .Assets_plan_status {
+    color: red;
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+.Assets_plan_tool[data-stopped=false] .Assets_plan_started,
+.Assets_plan_tool[data-stopped=false] .Assets_plan_endsIn,
+.Assets_plan_tool button[name=subscribe],
+.Assets_plan_tool button[name=unsubscribe] {
+    display: none;
+}
+.Assets_plan_tool[data-subscribed=false] button[name=subscribe],
+.Assets_plan_tool[data-subscribed=true] button[name=unsubscribe] {
+    display: block;
+    margin: 10px auto;
+}
+.Assets_plan_tool .Assets_plan_related_streams:empty {
+    display: none;
+}
+.Assets_plan_tool .Assets_plan_related_streams {
+    border-top: 1px solid;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.Assets_plan_tool .Assets_plan_description {
+    width: 100%;
+    text-align: justify;
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+.Assets_plan_tool .Assets_plan_description:empty {
+    display: none;
+}
+.Assets_plan_tool .Assets_plan_related_streams .Streams_participants_tool {
+    display: none;
+}
+.Assets_plan_select_stream {
+    width: 500px;
+}
+.Q_mobile .Assets_plan_select_stream {
+    width: 350px;
+}
+.Assets_plan_select_stream .Q_dialog_content {
+    padding: 5px;
+}
+.Assets_plan_select_stream .Streams_participants_tool {
+    display: none;
+}
+.Assets_plan_select_stream .Q_dialog_content > .Streams_related_tool > .Streams_preview_tool:not(:last-child),
+.Assets_plan_tool .Assets_plan_related_streams > .Streams_preview_tool:not(.Streams_related_composer) {
+    margin-bottom: 5px;
+}
+.Assets_plan_tool img.Assets_plan_image {
+    display: block;
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+}
+.Assets_plan_tool .Streams_participants_tool {
+    margin-top: -20px;
+}
