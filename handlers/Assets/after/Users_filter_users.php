@@ -34,7 +34,7 @@ function Assets_after_Users_filter_users($params, &$result)
     $filteredStreamNames = array_flip($sns);
     $filteredPersonIds = array();
     foreach ($personIds as $pid) {
-        if (!empty($filteredStreamNames["Assets/credits/$pid"])) {
+        if (isset($filteredStreamNames["Assets/credits/$pid"])) {
             $filteredPersonIds[] = $pid;
         }
     }
