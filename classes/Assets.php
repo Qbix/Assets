@@ -93,7 +93,8 @@ abstract class Assets extends Base_Assets
 	 * @param {array} [$options=array()] Any additional options
 	 * @param {string} [$options.chargeId] Payment id to set as id field of Assets_Charge table, If this defined it means
 	 * that payment already processed and hence no need to call $adapter->charge
- 	 * @param {Users_User} [$options.user=Users::loggedInUser()] Allows us to set the user to charge
+ 	 * @param {Users_User} [$options.user=Users::loggedInUser()] Can set which user to charge
+	 * @param {string} [$options.communityId] Can set which community's credits to grant on a successful charge. Defaults to main community.
 	 * @param {Streams_Stream} [$options.stream=null] if this charge is related to an Assets/product, Assets/service or Assets/subscription stream
 	 * @param {string} [$options.description=null] description of the charge, to be sent to customer
 	 * @param {string} [$options.metadata=null] any additional metadata to store with the charge
@@ -107,7 +108,7 @@ abstract class Assets extends Base_Assets
 	{
 		$currency = strtoupper($currency);
 		$user = Q::ifset($options, 'user', Users::loggedInUser(false));
-		$communityId = Users::communityId();
+		$communityId = Q::ifset($options, 'communityId', Users::communityId());
 		$chargeId = Q::ifset($options, "chargeId", null);
 		$className = 'Assets_Payments_' . ucfirst($payments);
 
@@ -120,6 +121,7 @@ abstract class Assets extends Base_Assets
 
 		// if charge id defined it means already paid, for example from webhook
 		if ($chargeId) {
+			$adapter = null;
 			$customerId = Q::ifset($options, "customerId", null);
 		} else {
 			$adapter = new $className((array)$options);
@@ -148,13 +150,20 @@ abstract class Assets extends Base_Assets
 		$charge->save();
 
 		/**
+		 * Event that occurs after a charge.
+		 * The default handler grants credits to a user.
 		 * @event Assets/charge {after}
 		 * @param {Assets_charge} charge
 		 * @param {Assets_Payments} adapter
+		 * @param {string} currency
+		 * @param {float} amount
+		 * @param {string} communityId
+		 * @param {string} payments
 		 * @param {array} options
 		 */
 		Q::event('Assets/charge', @compact(
-			'payments', 'amount', 'currency', 'user', 'charge', 'options', 'adapter'
+			'payments', 'amount', 'currency',
+			'user', 'communityId', 'charge', 'options', 'payments',
 		), 'after');
 
 		return $charge;

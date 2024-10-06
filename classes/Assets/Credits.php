@@ -64,7 +64,7 @@ class Assets_Credits extends Base_Assets_Credits
 		return $this;
 	}
 	/**
-	 * Get a community's stream of credits for  auser
+	 * Get a community's stream of credits for a user
 	 * @method stream
 	 * @static
 	 * @param {string} [$communityId=Users::communityId()]

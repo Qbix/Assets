@@ -13,8 +13,9 @@ function Assets_after_Assets_charge($params)
 	// rate for currency required
 	$credits = Assets_Credits::convert($amount, $currency, "credits");
 
-	// issue main community's currency to user
-	Assets_Credits::grant(null, $credits, 'BoughtCredits', $user->id, array(
+	// issue community's currency to user
+	$communityId = Q::ifset($params, 'communityId', null);
+	Assets_Credits::grant($communityId, $credits, 'BoughtCredits', $user->id, array(
 		"charge" => @compact("amount", "currency"),
 		"token" => Q::ifset($options, 'token', null)
 	));
