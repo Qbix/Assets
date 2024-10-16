@@ -169,7 +169,11 @@
             "Interrupt": "Torri ar draws",
             "Continue": "Parhau",
             "SelectDisplayType": "Dewiswch {{displayType}}",
-            "EndDate": "Dyddiad Gorffen"
+            "EndDate": "Dyddiad Gorffen",
+            "Available": "Ar gael",
+            "Hidden": "Cudd",
+            "InviteOnly": "Gwahoddiad yn unig",
+            "CantSubscribeUnlessInvited": "Ni allwch danysgrifio i&#39;r cynllun hwn oni bai eich bod wedi cael gwahoddiad"
         }
     },
     "payments": {

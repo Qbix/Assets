@@ -169,7 +169,11 @@
             "Interrupt": "kəsmək",
             "Continue": "Davam et",
             "SelectDisplayType": "{{displayType}} seçin",
-            "EndDate": "bitmə vaxtı"
+            "EndDate": "bitmə vaxtı",
+            "Available": "Mövcuddur",
+            "Hidden": "Gizli",
+            "InviteOnly": "Yalnız dəvət",
+            "CantSubscribeUnlessInvited": "Dəvət edilmədikcə bu plana abunə ola bilməzsiniz"
         }
     },
     "payments": {

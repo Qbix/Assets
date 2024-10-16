@@ -169,7 +169,11 @@
             "Interrupt": "مقاطعة",
             "Continue": "يكمل",
             "SelectDisplayType": "اختر {{displayType}}",
-            "EndDate": "تاريخ الانتهاء"
+            "EndDate": "تاريخ الانتهاء",
+            "Available": "متاح",
+            "Hidden": "مختفي",
+            "InviteOnly": "للدعوة فقط",
+            "CantSubscribeUnlessInvited": "لا يمكنك الاشتراك في هذه الخطة إلا إذا تمت دعوتك"
         }
     },
     "payments": {

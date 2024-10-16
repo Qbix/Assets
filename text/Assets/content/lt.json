@@ -169,7 +169,11 @@
             "Interrupt": "Pertraukite",
             "Continue": "Tęsti",
             "SelectDisplayType": "Pasirinkite {{displayType}}",
-            "EndDate": "pabaigos data"
+            "EndDate": "pabaigos data",
+            "Available": "Yra",
+            "Hidden": "Paslėpta",
+            "InviteOnly": "Tik su kvietimu",
+            "CantSubscribeUnlessInvited": "Negalite užsiprenumeruoti šio plano, nebent buvote pakviesti"
         }
     },
     "payments": {

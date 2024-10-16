@@ -169,7 +169,11 @@
             "Interrupt": "ማቋረጥ",
             "Continue": "ቀጥል",
             "SelectDisplayType": "{{displayType}} ይምረጡ",
-            "EndDate": "የመጨረሻ ቀን"
+            "EndDate": "የመጨረሻ ቀን",
+            "Available": "ይገኛል።",
+            "Hidden": "ተደብቋል",
+            "InviteOnly": "መጋበዝ-ብቻ",
+            "CantSubscribeUnlessInvited": "ካልተጋበዝክ በስተቀር ለዚህ እቅድ መመዝገብ አትችልም።"
         }
     },
     "payments": {

@@ -169,7 +169,11 @@
             "Interrupt": "خلل ڈالنا",
             "Continue": "جاری رہے",
             "SelectDisplayType": "{{displayType}} منتخب کریں۔",
-            "EndDate": "آخری تاریخ"
+            "EndDate": "آخری تاریخ",
+            "Available": "دستیاب ہے۔",
+            "Hidden": "پوشیدہ",
+            "InviteOnly": "صرف مدعو کریں۔",
+            "CantSubscribeUnlessInvited": "آپ اس پلان کو سبسکرائب نہیں کر سکتے جب تک کہ آپ کو مدعو نہ کیا جائے۔"
         }
     },
     "payments": {

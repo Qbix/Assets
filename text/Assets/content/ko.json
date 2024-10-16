@@ -169,7 +169,11 @@
             "Interrupt": "방해하다",
             "Continue": "계속하다",
             "SelectDisplayType": "{{displayType}} 선택하세요",
-            "EndDate": "종료일"
+            "EndDate": "종료일",
+            "Available": "사용 가능",
+            "Hidden": "숨겨진",
+            "InviteOnly": "초대 전용",
+            "CantSubscribeUnlessInvited": "초대를 받지 않는 한 이 플랜에 가입할 수 없습니다."
         }
     },
     "payments": {

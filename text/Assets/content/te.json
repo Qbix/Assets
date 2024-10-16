@@ -169,7 +169,11 @@
             "Interrupt": "అంతరాయం కలిగించు",
             "Continue": "కొనసాగించు",
             "SelectDisplayType": "{{displayType}} ఎంచుకోండి",
-            "EndDate": "ఆఖరి తేది"
+            "EndDate": "ఆఖరి తేది",
+            "Available": "అందుబాటులో ఉంది",
+            "Hidden": "దాచబడింది",
+            "InviteOnly": "ఆహ్వానం-మాత్రమే",
+            "CantSubscribeUnlessInvited": "మీరు ఆహ్వానించబడనంత వరకు మీరు ఈ ప్లాన్‌కు సభ్యత్వాన్ని పొందలేరు"
         }
     },
     "payments": {

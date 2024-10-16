@@ -169,7 +169,11 @@
             "Interrupt": "Přerušit",
             "Continue": "Pokračovat",
             "SelectDisplayType": "Vyberte {{displayType}}",
-            "EndDate": "datum ukončení"
+            "EndDate": "datum ukončení",
+            "Available": "K dispozici",
+            "Hidden": "Skrytý",
+            "InviteOnly": "Pouze pro pozvání",
+            "CantSubscribeUnlessInvited": "K odběru tohoto plánu se nemůžete přihlásit, pokud jste nebyli pozváni"
         }
     },
     "payments": {

@@ -169,7 +169,11 @@
             "Interrupt": "Прекини",
             "Continue": "Продолжи",
             "SelectDisplayType": "Изберете {{displayType}}",
-            "EndDate": "крајна дата"
+            "EndDate": "крајна дата",
+            "Available": "Достапно",
+            "Hidden": "Скриени",
+            "InviteOnly": "Само за покана",
+            "CantSubscribeUnlessInvited": "Не може да се претплатите на овој план освен ако не сте поканети"
         }
     },
     "payments": {

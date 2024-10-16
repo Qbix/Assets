@@ -169,7 +169,11 @@
             "Interrupt": "Pārtraukt",
             "Continue": "Turpināt",
             "SelectDisplayType": "Izvēlieties {{displayType}}",
-            "EndDate": "beigu datums"
+            "EndDate": "beigu datums",
+            "Available": "Pieejams",
+            "Hidden": "Slēpts",
+            "InviteOnly": "Tikai ar ielūgumu",
+            "CantSubscribeUnlessInvited": "Jūs nevarat abonēt šo plānu, ja neesat uzaicināts"
         }
     },
     "payments": {

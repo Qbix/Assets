@@ -169,7 +169,11 @@
             "Interrupt": "বাধা",
             "Continue": "চালিয়ে যান",
             "SelectDisplayType": "{{displayType}} নির্বাচন করুন",
-            "EndDate": "শেষ তারিখ"
+            "EndDate": "শেষ তারিখ",
+            "Available": "পাওয়া যায়",
+            "Hidden": "লুকানো",
+            "InviteOnly": "শুধুমাত্র আমন্ত্রণ",
+            "CantSubscribeUnlessInvited": "আপনি আমন্ত্রিত না হলে আপনি এই প্ল্যানে সদস্যতা নিতে পারবেন না"
         }
     },
     "payments": {

@@ -169,7 +169,11 @@
             "Interrupt": "Prekiniti",
             "Continue": "Nadaljuj",
             "SelectDisplayType": "Izberite {{displayType}}",
-            "EndDate": "končni datum"
+            "EndDate": "končni datum",
+            "Available": "Na voljo",
+            "Hidden": "Skrito",
+            "InviteOnly": "Samo povabljeni",
+            "CantSubscribeUnlessInvited": "Na ta načrt se ne morete naročiti, razen če ste bili povabljeni"
         }
     },
     "payments": {

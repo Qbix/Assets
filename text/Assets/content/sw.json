@@ -169,7 +169,11 @@
             "Interrupt": "Katiza",
             "Continue": "Endelea",
             "SelectDisplayType": "Chagua {{displayType}}",
-            "EndDate": "tarehe ya mwisho"
+            "EndDate": "tarehe ya mwisho",
+            "Available": "Inapatikana",
+            "Hidden": "Imefichwa",
+            "InviteOnly": "Mwaliko pekee",
+            "CantSubscribeUnlessInvited": "Huwezi kujiandikisha kwa mpango huu isipokuwa kama umealikwa"
         }
     },
     "payments": {

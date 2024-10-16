@@ -169,7 +169,11 @@
             "Interrupt": "Eten",
             "Continue": "Jarraitu",
             "SelectDisplayType": "Hautatu {{displayType}}",
-            "EndDate": "amaiera data"
+            "EndDate": "amaiera data",
+            "Available": "Eskuragarri",
+            "Hidden": "Ezkutuan",
+            "InviteOnly": "Gonbidatzeko soilik",
+            "CantSubscribeUnlessInvited": "Ezin duzu plan honetara harpidetu gonbidatu ez bazaituzten"
         }
     },
     "payments": {

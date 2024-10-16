@@ -169,7 +169,11 @@
             "Interrupt": "Ndërprisni",
             "Continue": "Vazhdoni",
             "SelectDisplayType": "Zgjidhni {{displayType}}",
-            "EndDate": "Data e përfundimit"
+            "EndDate": "Data e përfundimit",
+            "Available": "Në dispozicion",
+            "Hidden": "I fshehur",
+            "InviteOnly": "Vetëm me ftesë",
+            "CantSubscribeUnlessInvited": "Nuk mund të abonoheni në këtë plan nëse nuk jeni ftuar"
         }
     },
     "payments": {

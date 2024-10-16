@@ -169,7 +169,11 @@
             "Interrupt": "Mengganggu",
             "Continue": "Melanjutkan",
             "SelectDisplayType": "Pilih {{displayType}}",
-            "EndDate": "tanggal akhir"
+            "EndDate": "tanggal akhir",
+            "Available": "Tersedia",
+            "Hidden": "Tersembunyi",
+            "InviteOnly": "Hanya untuk undangan",
+            "CantSubscribeUnlessInvited": "Anda tidak dapat berlangganan paket ini kecuali Anda diundang"
         }
     },
     "payments": {

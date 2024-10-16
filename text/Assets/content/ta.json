@@ -169,7 +169,11 @@
             "Interrupt": "குறுக்கிடவும்",
             "Continue": "தொடரவும்",
             "SelectDisplayType": "{{displayType}} தேர்ந்தெடுக்கவும்",
-            "EndDate": "கடைசி தேதி"
+            "EndDate": "கடைசி தேதி",
+            "Available": "கிடைக்கும்",
+            "Hidden": "மறைக்கப்பட்டது",
+            "InviteOnly": "அழைப்பு மட்டும்",
+            "CantSubscribeUnlessInvited": "நீங்கள் அழைக்கப்படாத வரை இந்த திட்டத்திற்கு நீங்கள் குழுசேர முடியாது"
         }
     },
     "payments": {

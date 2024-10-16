@@ -169,7 +169,11 @@
             "Interrupt": "قطع کنید",
             "Continue": "ادامه هید",
             "SelectDisplayType": "{{displayType}} انتخاب کنید",
-            "EndDate": "تاریخ پایان"
+            "EndDate": "تاریخ پایان",
+            "Available": "موجود است",
+            "Hidden": "پنهان شده است",
+            "InviteOnly": "فقط برای دعوت",
+            "CantSubscribeUnlessInvited": "شما نمی توانید در این طرح مشترک شوید مگر اینکه دعوت شده باشید"
         }
     },
     "payments": {

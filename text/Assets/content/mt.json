@@ -169,7 +169,11 @@
             "Interrupt": "Tinterrompi",
             "Continue": "Kompli",
             "SelectDisplayType": "Agħżel {{displayType}}",
-            "EndDate": "data tat-tmiem"
+            "EndDate": "data tat-tmiem",
+            "Available": "Disponibbli",
+            "Hidden": "Moħbija",
+            "InviteOnly": "Stedinna biss",
+            "CantSubscribeUnlessInvited": "Ma tistax tabbona għal dan il-pjan sakemm ma tkunx mistieden"
         }
     },
     "payments": {

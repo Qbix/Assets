@@ -169,7 +169,11 @@
             "Interrupt": "menyampuk",
             "Continue": "teruskan",
             "SelectDisplayType": "Pilih {{displayType}}",
-            "EndDate": "tarikh tamat"
+            "EndDate": "tarikh tamat",
+            "Available": "Tersedia",
+            "Hidden": "Tersembunyi",
+            "InviteOnly": "Jemputan sahaja",
+            "CantSubscribeUnlessInvited": "Anda tidak boleh melanggan pelan ini melainkan anda dijemput"
         }
     },
     "payments": {

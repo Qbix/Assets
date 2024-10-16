@@ -169,7 +169,11 @@
             "Interrupt": "વિક્ષેપ",
             "Continue": "ચાલુ રાખો",
             "SelectDisplayType": "{{displayType}} પસંદ કરો",
-            "EndDate": "અંતિમ તારીખ"
+            "EndDate": "અંતિમ તારીખ",
+            "Available": "ઉપલબ્ધ છે",
+            "Hidden": "છુપાયેલ",
+            "InviteOnly": "માત્ર-આમંત્રિત કરો",
+            "CantSubscribeUnlessInvited": "જ્યાં સુધી તમને આમંત્રિત કરવામાં ન આવે ત્યાં સુધી તમે આ પ્લાનમાં સબ્સ્ક્રાઇબ કરી શકતા નથી"
         }
     },
     "payments": {

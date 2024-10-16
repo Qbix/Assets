@@ -169,7 +169,11 @@
             "Interrupt": "Megszakítás",
             "Continue": "Folytatni",
             "SelectDisplayType": "Válassza {{displayType}}",
-            "EndDate": "befejezés dátuma"
+            "EndDate": "befejezés dátuma",
+            "Available": "Elérhető",
+            "Hidden": "Rejtett",
+            "InviteOnly": "Csak meghívással",
+            "CantSubscribeUnlessInvited": "Nem fizethet elő erre a csomagra, hacsak nem kaptál meghívást"
         }
     },
     "payments": {

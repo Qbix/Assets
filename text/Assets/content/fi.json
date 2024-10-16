@@ -169,7 +169,11 @@
             "Interrupt": "Keskeyttää",
             "Continue": "Jatkaa",
             "SelectDisplayType": "Valitse {{displayType}}",
-            "EndDate": "päättymispäivä"
+            "EndDate": "päättymispäivä",
+            "Available": "Saatavilla",
+            "Hidden": "Piilotettu",
+            "InviteOnly": "Vain kutsu",
+            "CantSubscribeUnlessInvited": "Et voi tilata tätä suunnitelmaa, ellei sinua ole kutsuttu"
         }
     },
     "payments": {

@@ -169,7 +169,11 @@
             "Interrupt": "割り込み",
             "Continue": "続く",
             "SelectDisplayType": "{{displayType}}選択",
-            "EndDate": "終了日"
+            "EndDate": "終了日",
+            "Available": "利用可能",
+            "Hidden": "隠れた",
+            "InviteOnly": "招待者限定",
+            "CantSubscribeUnlessInvited": "招待されない限り、このプランに加入することはできません"
         }
     },
     "payments": {

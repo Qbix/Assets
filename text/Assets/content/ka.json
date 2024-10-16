@@ -169,7 +169,11 @@
             "Interrupt": "შეწყვეტა",
             "Continue": "განაგრძეთ",
             "SelectDisplayType": "აირჩიეთ {{displayType}}",
-            "EndDate": "დასრულების თარიღი"
+            "EndDate": "დასრულების თარიღი",
+            "Available": "ხელმისაწვდომია",
+            "Hidden": "დამალული",
+            "InviteOnly": "მხოლოდ მოწვევა",
+            "CantSubscribeUnlessInvited": "თქვენ ვერ გამოიწერთ ამ გეგმას, თუ არ იქნებით მოწვეული"
         }
     },
     "payments": {

@@ -169,7 +169,11 @@
             "Interrupt": "ขัดจังหวะ",
             "Continue": "ดำเนินการต่อ",
             "SelectDisplayType": "เลือก {{displayType}}",
-            "EndDate": "วันที่สิ้นสุด"
+            "EndDate": "วันที่สิ้นสุด",
+            "Available": "มีอยู่",
+            "Hidden": "ที่ซ่อนอยู่",
+            "InviteOnly": "เฉพาะผู้ได้รับเชิญเท่านั้น",
+            "CantSubscribeUnlessInvited": "คุณไม่สามารถสมัครแผนนี้ได้เว้นแต่คุณจะได้รับคำเชิญ"
         }
     },
     "payments": {

@@ -169,7 +169,11 @@
             "Interrupt": "打断",
             "Continue": "继续",
             "SelectDisplayType": "选择{{displayType}}",
-            "EndDate": "结束日期"
+            "EndDate": "结束日期",
+            "Available": "可用的",
+            "Hidden": "隐",
+            "InviteOnly": "仅限邀请",
+            "CantSubscribeUnlessInvited": "除非你受到邀请，否则你无法订阅此计划"
         }
     },
     "payments": {

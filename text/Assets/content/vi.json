@@ -169,7 +169,11 @@
             "Interrupt": "Ngắt",
             "Continue": "Tiếp tục",
             "SelectDisplayType": "Chọn {{displayType}}",
-            "EndDate": "ngày cuối"
+            "EndDate": "ngày cuối",
+            "Available": "Có sẵn",
+            "Hidden": "Ẩn giấu",
+            "InviteOnly": "Chỉ mời",
+            "CantSubscribeUnlessInvited": "Bạn không thể đăng ký gói này trừ khi bạn được mời"
         }
     },
     "payments": {

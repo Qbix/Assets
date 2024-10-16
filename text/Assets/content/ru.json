@@ -169,7 +169,11 @@
             "Interrupt": "Прерывать",
             "Continue": "Продолжать",
             "SelectDisplayType": "Выберите {{displayType}}",
-            "EndDate": "Дата окончания"
+            "EndDate": "Дата окончания",
+            "Available": "Доступный",
+            "Hidden": "Скрытый",
+            "InviteOnly": "Только по приглашению",
+            "CantSubscribeUnlessInvited": "Вы не можете подписаться на этот план, если вас не пригласили."
         }
     },
     "payments": {

@@ -169,7 +169,11 @@
             "Interrupt": "Перапыніць",
             "Continue": "Працягнуць",
             "SelectDisplayType": "Выберыце {{displayType}}",
-            "EndDate": "дата заканчэння"
+            "EndDate": "дата заканчэння",
+            "Available": "Даступны",
+            "Hidden": "Схаваны",
+            "InviteOnly": "Толькі па запрашэнні",
+            "CantSubscribeUnlessInvited": "Вы не можаце падпісацца на гэты план, калі вас не запрасілі"
         }
     },
     "payments": {

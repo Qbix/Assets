@@ -169,7 +169,11 @@
             "Interrupt": "Przerywać",
             "Continue": "Kontynuować",
             "SelectDisplayType": "Wybierz {{displayType}}",
-            "EndDate": "Data końcowa"
+            "EndDate": "Data końcowa",
+            "Available": "Dostępny",
+            "Hidden": "Ukryty",
+            "InviteOnly": "Tylko na zaproszenie",
+            "CantSubscribeUnlessInvited": "Nie możesz zapisać się na ten plan, jeśli nie otrzymałeś zaproszenia"
         }
     },
     "payments": {

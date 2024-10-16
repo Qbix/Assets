@@ -169,7 +169,11 @@
             "Interrupt": "Cur isteach",
             "Continue": "Leanúint ar aghaidh",
             "SelectDisplayType": "Roghnaigh {{displayType}}",
-            "EndDate": "dáta deiridh"
+            "EndDate": "dáta deiridh",
+            "Available": "Ar fáil",
+            "Hidden": "i bhfolach",
+            "InviteOnly": "Cuireadh-amháin",
+            "CantSubscribeUnlessInvited": "Ní féidir leat liostáil leis an bplean seo ach amháin má tugadh cuireadh duit"
         }
     },
     "payments": {

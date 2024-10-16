@@ -169,7 +169,11 @@
             "Interrupt": "Onderbreek",
             "Continue": "Aanhou",
             "SelectDisplayType": "Kies {{displayType}}",
-            "EndDate": "einddatum"
+            "EndDate": "einddatum",
+            "Available": "Beskikbaar",
+            "Hidden": "Versteek",
+            "InviteOnly": "Slegs uitnodigings",
+            "CantSubscribeUnlessInvited": "Jy kan nie op hierdie plan inteken tensy jy genooi is nie"
         }
     },
     "payments": {

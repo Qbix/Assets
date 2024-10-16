@@ -169,7 +169,11 @@
             "Interrupt": "Afbryde",
             "Continue": "Blive ved",
             "SelectDisplayType": "Vælg {{displayType}}",
-            "EndDate": "slutdato"
+            "EndDate": "slutdato",
+            "Available": "Tilgængelig",
+            "Hidden": "Skjult",
+            "InviteOnly": "Kun invitationer",
+            "CantSubscribeUnlessInvited": "Du kan ikke abonnere på denne plan, medmindre du er inviteret"
         }
     },
     "payments": {

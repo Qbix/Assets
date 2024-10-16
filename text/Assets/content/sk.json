@@ -169,7 +169,11 @@
             "Interrupt": "Prerušiť",
             "Continue": "ďalej",
             "SelectDisplayType": "Vyberte {{displayType}}",
-            "EndDate": "dátum ukončenia"
+            "EndDate": "dátum ukončenia",
+            "Available": "K dispozícii",
+            "Hidden": "Skryté",
+            "InviteOnly": "Iba na pozvanie",
+            "CantSubscribeUnlessInvited": "Nemôžete sa prihlásiť na odber tohto plánu, pokiaľ ste neboli pozvaní"
         }
     },
     "payments": {

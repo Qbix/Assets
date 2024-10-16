@@ -169,7 +169,11 @@
             "Interrupt": "Trufla",
             "Continue": "Halda áfram",
             "SelectDisplayType": "Veldu {{displayType}}",
-            "EndDate": "loka dagsetning"
+            "EndDate": "loka dagsetning",
+            "Available": "Í boði",
+            "Hidden": "Falinn",
+            "InviteOnly": "Aðeins boðið",
+            "CantSubscribeUnlessInvited": "Þú getur ekki gerst áskrifandi að þessari áætlun nema þér hafi verið boðið"
         }
     },
     "payments": {

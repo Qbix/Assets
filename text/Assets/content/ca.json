@@ -169,7 +169,11 @@
             "Interrupt": "Interrupció",
             "Continue": "Continua",
             "SelectDisplayType": "Seleccioneu {{displayType}}",
-            "EndDate": "data de finalització"
+            "EndDate": "data de finalització",
+            "Available": "Disponible",
+            "Hidden": "Ocult",
+            "InviteOnly": "Només per invitació",
+            "CantSubscribeUnlessInvited": "No us podeu subscriure a aquest pla tret que hàgiu estat convidat"
         }
     },
     "payments": {

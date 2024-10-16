@@ -169,7 +169,11 @@
             "Interrupt": "Διακοπή",
             "Continue": "Να συνεχίσει",
             "SelectDisplayType": "Επιλέξτε {{displayType}}",
-            "EndDate": "ημερομηνία λήξης"
+            "EndDate": "ημερομηνία λήξης",
+            "Available": "Διαθέσιμος",
+            "Hidden": "Κεκρυμμένος",
+            "InviteOnly": "Μόνο πρόσκληση",
+            "CantSubscribeUnlessInvited": "Δεν μπορείτε να εγγραφείτε σε αυτό το πρόγραμμα αν δεν προσκληθείτε"
         }
     },
     "payments": {

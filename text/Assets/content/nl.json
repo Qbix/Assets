@@ -169,7 +169,11 @@
             "Interrupt": "Onderbreken",
             "Continue": "Doorgaan",
             "SelectDisplayType": "Selecteer {{displayType}}",
-            "EndDate": "einddatum"
+            "EndDate": "einddatum",
+            "Available": "Beschikbaar",
+            "Hidden": "Verborgen",
+            "InviteOnly": "Alleen op uitnodiging",
+            "CantSubscribeUnlessInvited": "U kunt zich niet abonneren op dit abonnement, tenzij u bent uitgenodigd"
         }
     },
     "payments": {

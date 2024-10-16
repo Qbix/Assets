@@ -169,7 +169,11 @@
             "Interrupt": "रुकावट डालना",
             "Continue": "जारी रखना",
             "SelectDisplayType": "{{displayType}} चुनें",
-            "EndDate": "अंतिम तिथि"
+            "EndDate": "अंतिम तिथि",
+            "Available": "उपलब्ध",
+            "Hidden": "छिपा हुआ",
+            "InviteOnly": "केवल आमंत्रित",
+            "CantSubscribeUnlessInvited": "जब तक आपको आमंत्रित नहीं किया जाता, आप इस योजना की सदस्यता नहीं ले सकते"
         }
     },
     "payments": {

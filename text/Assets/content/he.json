@@ -169,7 +169,11 @@
             "Interrupt": "פסיקת",
             "Continue": "לְהַמשִׁיך",
             "SelectDisplayType": "בחר {{displayType}}",
-            "EndDate": "תאריך סיום"
+            "EndDate": "תאריך סיום",
+            "Available": "זָמִין",
+            "Hidden": "מוּסתָר",
+            "InviteOnly": "להזמנה בלבד",
+            "CantSubscribeUnlessInvited": "אינך יכול להירשם לתוכנית זו אלא אם הוזמנת"
         }
     },
     "payments": {

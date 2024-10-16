@@ -169,7 +169,11 @@
             "Interrupt": "ಅಡ್ಡಿಪಡಿಸು",
             "Continue": "ಮುಂದುವರಿಸಿ",
             "SelectDisplayType": "{{displayType}} ಆಯ್ಕೆಮಾಡಿ",
-            "EndDate": "ಅಂತಿಮ ದಿನಾಂಕ"
+            "EndDate": "ಅಂತಿಮ ದಿನಾಂಕ",
+            "Available": "ಲಭ್ಯವಿದೆ",
+            "Hidden": "ಮರೆಮಾಡಲಾಗಿದೆ",
+            "InviteOnly": "ಆಹ್ವಾನ-ಮಾತ್ರ",
+            "CantSubscribeUnlessInvited": "ನಿಮ್ಮನ್ನು ಆಹ್ವಾನಿಸದ ಹೊರತು ನೀವು ಈ ಯೋಜನೆಗೆ ಚಂದಾದಾರರಾಗಲು ಸಾಧ್ಯವಿಲ್ಲ"
         }
     },
     "payments": {

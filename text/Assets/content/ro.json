@@ -169,7 +169,11 @@
             "Interrupt": "Întrerupe",
             "Continue": "Continua",
             "SelectDisplayType": "Selectați {{displayType}}",
-            "EndDate": "Data de încheiere"
+            "EndDate": "Data de încheiere",
+            "Available": "Disponibil",
+            "Hidden": "Ascuns",
+            "InviteOnly": "Numai pe invitație",
+            "CantSubscribeUnlessInvited": "Nu vă puteți abona la acest plan decât dacă ați fost invitat"
         }
     },
     "payments": {

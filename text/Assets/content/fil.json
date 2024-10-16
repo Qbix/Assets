@@ -169,7 +169,11 @@
             "Interrupt": "Makagambala",
             "Continue": "Magpatuloy",
             "SelectDisplayType": "Piliin {{displayType}}",
-            "EndDate": "petsa ng pagtatapos"
+            "EndDate": "petsa ng pagtatapos",
+            "Available": "Available",
+            "Hidden": "Nakatago",
+            "InviteOnly": "Imbitasyon-lamang",
+            "CantSubscribeUnlessInvited": "Hindi ka makakapag-subscribe sa planong ito maliban kung inimbitahan ka"
         }
     },
     "payments": {

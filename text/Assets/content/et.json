@@ -169,7 +169,11 @@
             "Interrupt": "Vahele segama",
             "Continue": "Jätka",
             "SelectDisplayType": "Valige {{displayType}}",
-            "EndDate": "lõppkuupäev"
+            "EndDate": "lõppkuupäev",
+            "Available": "Saadaval",
+            "Hidden": "Peidetud",
+            "InviteOnly": "Ainult kutsetega",
+            "CantSubscribeUnlessInvited": "Te ei saa seda plaani tellida, kui teid pole kutsutud"
         }
     },
     "payments": {

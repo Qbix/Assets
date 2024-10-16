@@ -169,7 +169,11 @@
             "Interrupt": "Interromper",
             "Continue": "Continuar",
             "SelectDisplayType": "Seleccione {{displayType}}",
-            "EndDate": "data de finalización"
+            "EndDate": "data de finalización",
+            "Available": "Dispoñible",
+            "Hidden": "Oculto",
+            "InviteOnly": "Só por invitación",
+            "CantSubscribeUnlessInvited": "Non podes subscribirte a este plan a non ser que fose convidado"
         }
     },
     "payments": {

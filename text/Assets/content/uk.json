@@ -169,7 +169,11 @@
             "Interrupt": "Переривати",
             "Continue": "Продовжити",
             "SelectDisplayType": "Виберіть {{displayType}}",
-            "EndDate": "Дата закінчення"
+            "EndDate": "Дата закінчення",
+            "Available": "в наявності",
+            "Hidden": "Прихований",
+            "InviteOnly": "Тільки за запрошеннями",
+            "CantSubscribeUnlessInvited": "Ви не можете підписатися на цей план, якщо вас не запросили"
         }
     },
     "payments": {

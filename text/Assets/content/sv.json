@@ -169,7 +169,11 @@
             "Interrupt": "Avbryta",
             "Continue": "Fortsätta",
             "SelectDisplayType": "Välj {{displayType}}",
-            "EndDate": "slutdatum"
+            "EndDate": "slutdatum",
+            "Available": "Tillgänglig",
+            "Hidden": "Dold",
+            "InviteOnly": "Endast inbjudan",
+            "CantSubscribeUnlessInvited": "Du kan inte prenumerera på den här planen om du inte har blivit inbjuden"
         }
     },
     "payments": {
