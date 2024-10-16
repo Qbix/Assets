@@ -41,6 +41,85 @@
 			}
 		}, '{{Assets}}/js/methods/Assets/Credits'),
 
+		/**
+		 * Display credits badge
+		 * @method setCreditsBadge
+		 */
+		setCreditsBadge: function () {
+			var config = Assets.creditsBadge;
+			if (Q.isEmpty(config)) {
+				return console.warn("Assets.setCreditsBadge: if you want credits badge, please define object Q.Assets.creditsBadge");
+			}
+			var $element = config.$element;
+			if (Q.isEmpty(config)) {
+				return console.warn("Assets.setCreditsBadge: please set $element in Q.Assets.creditsBadge");
+			}
+			var $dashboard = $("#dashboard_slot");
+			var className = "Assets_credits_badge";
+			var $creditsBadge = $("." + className);
+			if (!$creditsBadge.length) {
+				$creditsBadge = $("<div>").addClass(className).appendTo("body");
+				if ($dashboard.hasClass("Q_columns_siblingContainsExpanded")) {
+					$creditsBadge.addClass("Q_columns_siblingContainsExpanded");
+				}
+			}
+			var _style = function () {
+				if (!document.body.contains($element[0])) {
+					return Assets.setCreditsBadge();
+				}
+
+				var tabOffset = $element.offset();
+				if (!tabOffset) {
+					return Assets.setCreditsBadge(); // it's not on the page
+				}
+				$creditsBadge.css({
+					position: "absolute",
+					"z-index": 990,
+					width: $element.width(),
+					height: 0,
+					left: Q.info.isMobile ? tabOffset.left : tabOffset.left - 10,
+					top: Q.info.isMobile ? tabOffset.top : tabOffset.top + $element.height() - 50
+				});
+			};
+
+			// relocate badge first 5 seconds
+			setTimeout(function () {
+				_style();
+				if (Q.info.isMobile) {
+					Q.onLayout($element[0]).set(_style, true);
+				} else {
+					new ResizeObserver(_style).observe($dashboard[0])
+				}
+			}, 2000);
+
+			$creditsBadge.tool("Q/badge", {
+				br: {
+					size: Q.info.isMobile ? '50px' : '60px',
+					left: Q.getObject("creditsBadge.left", Assets),
+					top: Q.getObject("creditsBadge.top", Assets),
+					content: $("<div>").tool("Assets/credits/balance", {
+						textfill: true,
+						decimals: 0
+					}).activate(function () {
+						this.state.onUpdate.set(function () {
+							var $badge = $(this.element).closest(".Q_badge");
+							$badge.addClass("Q_updated_flash");
+							setTimeout(function () {
+								$badge.removeClass("Q_updated_flash");
+							}, 1000);
+						}, this);
+					})
+				}
+			}).activate(function () {
+				$('.Users_avatar_credits')
+					.css('pointer-events', 'auto')
+					.css('cursor', 'pointer')
+					.click(function () {
+						Q.handle(Q.url('me/credits'));
+					});
+			});
+		},
+
 		onPaymentSuccess: new Q.Event(),
 
 		onBeforeNotice: new Q.Event(),
@@ -661,8 +740,12 @@
 			}
 
 			_listenUserStream();
+			Assets.setCreditsBadge();
 		}, "Assets");
 
+		Q.page('', function () {
+			Assets.setCreditsBadge();
+		}, 'Assets');
 	}, 'Assets');
 
 	function _error(message, code) {
