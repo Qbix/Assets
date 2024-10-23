@@ -441,8 +441,8 @@
 			 * @static
 			 * @method addAsset
 			 * @param {Object} asset
-			 * @param {string} asset.chainId
-			 * @param {string} asset.tokenAddress
+			 * @param {String} asset.chainId
+			 * @param {String} asset.tokenAddress
 			 * @param {String} symbol A ticker symbol or shorthand, up to 5 chars.
 			 * @param {Number} decimals The number of decimals in the token
 			 * @param {String} [image] A string url of the token logo
@@ -462,8 +462,8 @@
 				 * @return {String}
 				 */
 				addAsset: { trustwallet: function (asset) {
-						return 'https://link.trustwallet.com/add_asset?asset='+asset;
-					}},
+					return 'trust://add_asset?asset='+asset;
+				}},
 				/**
 				 * Generates a link for opening a coin
 				 * @static
@@ -472,8 +472,8 @@
 				 * @return {String}
 				 */
 				openCoin: { trustwallet: function (asset) {
-						return 'https://link.trustwallet.com/open_coin?asset='+asset;
-					}},
+					return 'trust://open_coin?asset='+asset;
+				}},
 				/**
 				 * Generates a link for sending a payment
 				 * @static
@@ -485,27 +485,27 @@
 				 * @return {String}
 				 */
 				send: { trustwallet: function (asset, address, amount, memo) {
-						return Q.url('https://link.trustwallet.com/send', {
-							asset: asset,
-							address: address,
-							amount: amount,
-							memo: memo || ''
-						});
-					}},
+					return 'trust://send?', Q.queryString({
+						asset: asset,
+						address: address,
+						amount: amount,
+						memo: memo || ''
+					});
+				}},
 				/**
 				 * Generates a link for swapping between tokens
 				 * @static
-				 * @method addAsset
+				 * @method swap
 				 * @param {String} from in UAI format https://github.com/trustwallet/developer/blob/master/assets/universal_asset_id.md
 				 * @param {String} to in UAI format https://github.com/trustwallet/developer/blob/master/assets/universal_asset_id.md
 				 * @return {String}
 				 */
 				swap: { trustwallet: function (from, to) {
-						return Q.url('https://link.trustwallet.com/swap', {
-							from: from,
-							to: to,
-						});
-					}}
+					return 'trust://send?', Q.queryString({
+						from: from,
+						to: to,
+					});
+				}}
 			}
 		}, '{{Assets}}/js/methods/Assets/Web3'),
 	};
