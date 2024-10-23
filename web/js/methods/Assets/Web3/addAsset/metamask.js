@@ -11,7 +11,7 @@ Q.exports(function () {
      * @param {Number} decimals The number of decimals in the token
      * @param {String} [image] A string url of the token logo
      */
-    return function metamask (asset, symbol, decimals, image) {Web3.switchChain(chain, function (err) {
+    return function metamask (asset, symbol, decimals, image) {
         Web3.switchChain(asset.chainId, function (err) {
             if (Q.firstErrorMessage(err)) {
                 return Q.handle(callback, null, [err]);
