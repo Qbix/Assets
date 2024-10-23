@@ -12,7 +12,7 @@ Q.exports(function () {
      * @param {String} [image] A string url of the token logo
      */
     return function metamask (asset, symbol, decimals, image) {
-        Web3.switchChain(asset.chainId, function (err) {
+        Q.Users.Web3.switchChain(asset.chainId, function (err) {
             if (Q.firstErrorMessage(err)) {
                 return Q.handle(callback, null, [err]);
             }
