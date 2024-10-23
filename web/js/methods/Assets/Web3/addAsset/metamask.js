@@ -1,25 +1,34 @@
 Q.exports(function () {
     /**
-     * 
-     * @param {type} asset
-     * @param {type} symbol
-     * @param {type} decimals
-     * @param {type} image
+     * Adds assets.
+     * @class Assets.Web3.addAssets
      */
-    return function metamask (asset, symbol, decimals, image) {
-        var parts = asset.split('_t');
-        var address = parts[1] || parts[0];
-        return ethereum.request({
-            method: 'wallet_watchAsset',
-            params: {
-                type: 'ERC20',
-                options: {
-                    address: address,
-                    symbol: symbol,
-                    decimals: decimals,
-                    image: image
-                }
+    /**
+     * @method metamask
+     * @param {String} asset.chainId
+     * @param {String} asset.tokenAddress
+     * @param {String} symbol A ticker symbol or shorthand, up to 5 chars.
+     * @param {Number} decimals The number of decimals in the token
+     * @param {String} [image] A string url of the token logo
+     */
+    return function metamask (asset, symbol, decimals, image) {Web3.switchChain(chain, function (err) {
+        Web3.switchChain(asset.chainId, function (err) {
+            if (Q.firstErrorMessage(err)) {
+                return Q.handle(callback, null, [err]);
             }
+            var address = Q.Users.Web3.toChecksumAddress(asset.tokenAddress);
+            return ethereum.request({
+                method: 'wallet_watchAsset',
+                params: {
+                    type: 'ERC20',
+                    options: {
+                        address: address,
+                        symbol: symbol,
+                        decimals: decimals,
+                        image: image
+                    }
+                }
+            });
         });
     }
 });

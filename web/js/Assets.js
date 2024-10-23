@@ -436,10 +436,13 @@
 				zeroAddress: '0x0000000000000000000000000000000000000000'
 			},
 			/**
-			 * Generates a link for opening a coin
+			 * Generates a link for opening a coin or token.
+			 * If a token address is provided, please use Q.Users.Web3.toChecksumAddress() on it first.
 			 * @static
 			 * @method addAsset
-			 * @param {String} asset in UAI format https://github.com/trustwallet/developer/blob/master/assets/universal_asset_id.md
+			 * @param {Object} asset
+			 * @param {string} asset.chainId
+			 * @param {string} asset.tokenAddress
 			 * @param {String} symbol A ticker symbol or shorthand, up to 5 chars.
 			 * @param {Number} decimals The number of decimals in the token
 			 * @param {String} [image] A string url of the token logo
