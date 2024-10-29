@@ -56,15 +56,16 @@
 				return;
 			}
 			var className = "Assets_credits_badge";
-			var creditsBadge = document.getElementsByClassName(className);
-			if (!creditsBadge.length) {
-				creditsBadge = Q.element('div', {"class": className});
-				document.body.appendChild(creditsBadge);
-				creditsBadge.setClassIf(
-					ds.hasClass('Q_columns_siblingContainsExpanded'),
-					'Q_columns_siblingContainsExpanded'
-				);
-			}
+			var c = document.getElementsByClassName(className);
+			var creditsBadge = c[0] || document.body.appendChild(
+				Q.element('div', {
+					"class": className + (
+						ds.hasClass('Q_columns_siblingContainsExpanded') 
+						? ' Q_columns_siblingContainsExpanded'
+						: ''
+					)
+				})
+			);
 			var _style = function () {
 				if (!document.body.contains(element)) {
 					return Assets.setCreditsBadge();
