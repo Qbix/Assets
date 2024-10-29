@@ -50,7 +50,7 @@
 			if (Q.isEmpty(config)) {
 				return console.info("Assets.setCreditsBadge: if you want credits badge, please define object Q.Assets.creditsBadge");
 			}
-			var element = config.$element ? config.$element[0] : (config.element || document.getElementById('dashboard_user'));
+			var element = config.$element ? config.$element[0] : (config.element || document.querySelector('.Users_loggedIn #dashboard_user'));
 			var ds = document.getElementById('dashboard_slot');
 			if (Q.isEmpty(config) || !element || !ds) {
 				return;
@@ -101,20 +101,21 @@
 					top: config.top,
 					right: config.right,
 					bottom: config.bottom,
-					content: Q.Tool.prepare('div', 'Assets/credits/balance', {
-						textfill: true,
-						decimals: 0
-					}), function () {
-						this.state.onUpdate.set(function () {
-							var badge = this.element.closest(".Q_badge");
-							badge.addClass("Q_updated_flash");
-							setTimeout(function () {
-								badge.removeClass("Q_updated_flash");
-							}, 1000);
-						}, this);
-					}
 				}
 			}), function () {
+				Q.activate(Q.Tool.prepare(this.badge, 'Assets/credits/balance', {
+					textfill: true,
+					decimals: 0
+				}), function () {
+					this.state.onUpdate.set(function (credits) {
+						var badge = this.element.closest(".Q_badge");
+						badge.setClassIf(credits == 0, 'Q_hidden');
+						badge.addClass("Q_updated_flash");
+						setTimeout(function () {
+							badge.removeClass("Q_updated_flash");
+						}, 1000);
+					}, this);
+				});
 				$('.Users_avatar_credits')
 					.css('pointer-events', 'auto')
 					.css('cursor', 'pointer')

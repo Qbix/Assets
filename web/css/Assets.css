@@ -180,7 +180,7 @@ input[type=text], input[type=number], input[type=datetime-local], input[type=dat
 html.Q_mobile[data-q-columns-depth]:not([data-q-columns-depth="1"]) .Assets_credits_badge,
 html.Q_columns_containsExpanded .Assets_credits_badge .Q_badge,
 html.Communities_dialog .Assets_credits_badge .Q_badge {
-	display: none;
+	display: none !important;
 }
 .Q_mobile .Assets_credits_badge .Q_badge.Q_badge_positioned {
 	font-size: 18px;

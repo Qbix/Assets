@@ -46,8 +46,7 @@ Q.Tool.define("Assets/credits/balance", function (options) {
 				$(tool.element).plugin('Q/textfill', {
 					maxFontPixels: 22,
 					minFontPixels: 14,
-					maxLines: 1,
-					fillParent: true
+					maxLines: 1
 				});
 			}
 		};
