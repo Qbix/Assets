@@ -67,6 +67,7 @@
 				})
 			);
 			creditsBadge.style.visibility = 'hidden';
+			var _rect = {};
 			var _style = function () {
 				if (!document.body.contains(element)) {
 					return Assets.setCreditsBadge();
@@ -81,9 +82,15 @@
 					width: rect.width + 'px',
 					height: rect.height + 'px',
 					left: rect.left + 'px',
-					top: rect.top + 'px',
-					visibility: "visible"
+					top: rect.top + 'px'
 				});
+				if (rect.left === _rect.left
+				 && rect.top === _rect.top) {
+					// the position stabilized
+					clearInterval(_ival);
+					creditsBadge.style.visibility = 'visible';
+				 }
+				 _rect = rect;
 			};
 
 			setTimeout(function () {
@@ -94,9 +101,7 @@
 				}
 			}, 500);
 
-			for (var i=0; i<10; ++i) {
-				setTimeout(_style, i * 500);
-			}
+			var _ival = setInterval(_style, 500);
 
 			var o = {};
 			var position = config.position || (config.right ? 'br' : 'bl');
