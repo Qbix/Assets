@@ -66,6 +66,7 @@
 					)
 				})
 			);
+			creditsBadge.style.visibility = 'hidden';
 			var _style = function () {
 				if (!document.body.contains(element)) {
 					return Assets.setCreditsBadge();
@@ -80,29 +81,33 @@
 					width: rect.width + 'px',
 					height: rect.height + 'px',
 					left: rect.left + 'px',
-					top: rect.top + 'px'
+					top: rect.top + 'px',
+					visibility: "visible"
 				});
 			};
 
-			// wait while badge relocates for 2 seconds
 			setTimeout(function () {
-				_style();
 				if (Q.info.isMobile) {
 					Q.onLayout(element).set(_style, true);
 				} else {
 					new ResizeObserver(_style).observe(ds)
 				}
-			}, 2000);
+			}, 500);
 
-			Q.activate(Q.Tool.prepare(creditsBadge, "Q/badge", {
-				br: {
-					size: config.size || (Q.info.isMobile ? '35px' : '50px'),
-					left: config.left,
-					top: config.top,
-					right: config.right,
-					bottom: config.bottom,
-				}
-			}), function () {
+			for (var i=0; i<10; ++i) {
+				setTimeout(_style, i * 500);
+			}
+
+			var o = {};
+			var position = config.position || (config.right ? 'br' : 'bl');
+			o[position] = {
+				size: config.size || (Q.info.isMobile ? '35px' : '50px'),
+				left: config.left,
+				top: config.top,
+				right: config.right,
+				bottom: config.bottom,
+			};
+			Q.activate(Q.Tool.prepare(creditsBadge, "Q/badge", o), function () {
 				Q.activate(Q.Tool.prepare(this.badge, 'Assets/credits/balance', {
 					textfill: true,
 					decimals: 0
