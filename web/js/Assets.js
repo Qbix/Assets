@@ -11,6 +11,7 @@
 	Streams.Stream.properties['Assets/canPayForStreams'] = true;
     
     var priv = {};
+	var _badgeRect = {};
     
 	var Assets = Q.Assets = Q.plugins.Assets = {
 
@@ -67,14 +68,10 @@
 				})
 			);
 			creditsBadge.style.visibility = 'hidden';
-			var _rect = {};
 			var _style = function () {
-				if (!document.body.contains(element)) {
-					return Assets.setCreditsBadge();
-				}
 				var rect = element.getBoundingClientRect();
-				if (!rect.width) {
-					return Assets.setCreditsBadge(); // it's not on the page
+				if (!document.body.contains(element) || !rect.width) {
+					return Assets.setCreditsBadge();
 				}
 				Q.extend(creditsBadge.style, {
 					position: "absolute",
@@ -84,22 +81,20 @@
 					left: rect.left + 'px',
 					top: rect.top + 'px'
 				});
-				if (rect.left === _rect.left
-				 && rect.top === _rect.top) {
+				if (Math.abs(rect.left - _badgeRect.left) < 2
+				 && Math.abs(rect.top - _badgeRect.top) < 2) {
 					// the position stabilized
 					clearInterval(_ival);
 					creditsBadge.style.visibility = 'visible';
 				 }
-				 _rect = rect;
+				 _badgeRect = rect;
 			};
 
-			setTimeout(function () {
-				if (Q.info.isMobile) {
-					Q.onLayout(element).set(_style, true);
-				} else {
-					new ResizeObserver(_style).observe(ds)
-				}
-			}, 500);
+			if (Q.info.isMobile) {
+				Q.onLayout(element).set(_style, true);
+			} else {
+				new ResizeObserver(_style).observe(ds)
+			}
 
 			var _ival = setInterval(_style, 500);
 
