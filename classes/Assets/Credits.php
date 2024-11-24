@@ -73,6 +73,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 *   The id of the user for which the stream is obtained. Defaults to logged-in user.
 	 * @param {string} [$asUserId=null]
 	 *   The id of the user who is trying to obtain it. Defaults to logged-in user.
+	 *   Pass false here to skip access checks during fetch.
 	 * @param {boolean} [$throwIfNotLoggedIn=false]
 	 *   Whether to throw a Users_Exception_NotLoggedIn if no user is logged in.
 	 * @return {Streams_Stream|null}
@@ -316,6 +317,13 @@ class Assets_Credits extends Base_Assets_Credits
 
 		// Post that this user granted $amount credits by $reason
 		$text = Q_Text::get('Assets/content');
+		$utext = Q_Text::get('Users/content');
+		$more['toUserName'] = $more['invitedUserName'] = Q::ifset($utext, 'avatar', 'Someone', 'Someone');
+		if ($communityId === Users::communityId()) {
+			$more['fromUserName'] = Users::communityName();
+		} else {
+			$more['fromUserName'] = 'Community'; // reason text usually won't interpolate this
+		}
 		$instructions = array_merge(array(
 			'app' => Q::app(),
 			'operation' => '+'
@@ -334,7 +342,7 @@ class Assets_Credits extends Base_Assets_Credits
 			'type' => $type,
 			'content' => Q::interpolate($content, @compact('amount')),
 			'instructions' => Q::json_encode($instructions)
-		));
+		), true);
 
 		// TODO: take commissions out of the grant and give to user who invited this user
 		// $commission = Q_Config::expect("Assets", "credits", "commissions", "watching");
