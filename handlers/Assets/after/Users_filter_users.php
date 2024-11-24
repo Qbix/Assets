@@ -18,7 +18,7 @@ function Assets_after_Users_filter_users($params, &$result)
     }
     // filter by users with at least $min credits
     list($communityIds, $personIds) = Users::splitIntoCommunityAndPersonIds($result);
-    $credits = $av = sprintf("%015.2f", $min);
+    $credits = floatval($min);
     $streamNames = array();
     foreach ($personIds as $pid) {
         $streamNames[] = "Assets/credits/$pid";

@@ -17,9 +17,11 @@ function Assets_1_1_Streams_mysql()
             $weights[$type] = floatval(substr($type, $len));
         }
         Streams_RelatedTo::delete()->where(array(
+            'publisherId !=' => '',
             'type' => $attribute
         ))->execute();
         Streams_RelatedFrom::delete()->where(array(
+            'publisherId !=' => '',
             'type' => $attribute
         ))->execute();
         foreach ($weights as $type => $weight) {
