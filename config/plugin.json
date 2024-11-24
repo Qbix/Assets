@@ -11,6 +11,7 @@
 		"handlersBeforeEvent": {
 			"Q/responseExtras": ["Assets/before/Q_responseExtras"],
 			"Streams/create/Assets/service": ["Assets/before/Streams_create_Assets_service"],
+			"Streams/Stream/save/Assets/credits": ["Assets/before/Streams_Stream_save_Assets_credits"],
 			"Streams/Stream/save/Assets/NFT": ["Assets/before/Streams_manage_Assets_NFT"],
 			"Streams/close/Assets/NFT": ["Assets/before/Streams_manage_Assets_NFT"],
 			"Streams/Stream/save/Assets/NFT/series": ["Assets/before/Streams_manage_Assets_NFT_series"],
