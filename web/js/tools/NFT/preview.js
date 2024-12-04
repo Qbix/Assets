@@ -9,7 +9,7 @@
     var Web3 = Assets.NFT.Web3;
     var NFT = Assets.NFT;
     /**
-     * YUIDoc description goes here
+     * Compact representation of an NFT, to be used in lists
      * @class Assets NFT/preview
      * @constructor
      * @param {Object} [options] Override various options for this tool
@@ -19,7 +19,7 @@
      *  @param {boolean} [src] URL of additional image which will use instead default image.
      *  @param {string} [options.fallback] Error message need to display in tool as content.
      *  @param {string} [options.linkPattern] If defined than on click tool will redirect to this link interpolated with contractAddress and tokenId
-     *  @param {string} [options.abiPath="Assets/templates/R1/NFT/locked"] Path to ABI file template
+     *  @param {string} [options.abiPath="Assets/templates/R1/NFT/contract"] Path to ABI file template
      *  @param {Q.Event} [options.onInvoke] Event occur when user click on tool element.
      *  @param {Q.Event} [options.onAvatar] Event occur when click on Users/avatar tool inside tool element.
      *  @param {Q.Event} [options.onClaim] Event occur when user click on "Claim" button
