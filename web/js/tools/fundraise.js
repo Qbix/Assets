@@ -4,6 +4,8 @@
  * @class Assets/fundraise
  * @constructor
  * @param {Object} [options] options to pass
+ * @param {String} [options.publisherId]
+ * @param {String} [options.streamName]
  */
 Q.Tool.define("Assets/fundraise", function(options) {
 	var tool = this;
@@ -21,9 +23,6 @@ Q.Tool.define("Assets/fundraise", function(options) {
 {
 	publisherId: null,
 	streamName: null,
-	icon: {
-		defaultSize: 200
-	}
 },
 
 {
