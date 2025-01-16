@@ -64,7 +64,7 @@ Q.mixin(Base, Row);
  * @property description
  * @type String
  * @default ""
- * key in Q.Text file with human-readable description of the charge
+ * human-readable description of the charge
  */
 /**
  * @property attributes
@@ -395,7 +395,7 @@ Base.prototype.beforeSet_publisherId = function (value) {
 		if (value instanceof Db.Expression) return value;
 		if (typeof value !== "string" && typeof value !== "number" && !(value instanceof Buffer))
 			throw new Error('Must pass a String or Buffer to '+this.table()+".publisherId");
-		if (typeof value === "string" && value.length > 255)
+		if (typeof value === "string" && value.length > 31)
 			throw new Error('Exceedingly long value being assigned to '+this.table()+".publisherId");
 		return value;
 };
@@ -406,7 +406,7 @@ Base.prototype.beforeSet_publisherId = function (value) {
 	 */
 Base.prototype.maxSize_publisherId = function () {
 
-		return 255;
+		return 31;
 };
 
 	/**
@@ -415,7 +415,7 @@ Base.prototype.maxSize_publisherId = function () {
 	 */
 Base.column_publisherId = function () {
 
-return [["varbinary","255","",false],false,"",""];
+return [["varbinary","31","",false],false,"",null];
 };
 
 /**

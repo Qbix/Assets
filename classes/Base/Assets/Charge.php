@@ -55,7 +55,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @property $description
 	 * @type string
 	 * @default ""
-	 * key in Q.Text file with key in Q.Text file with human-readable description of the charge
+	 * human-readable description of the charge
 	 */
 	/**
 	 * @property $attributes
@@ -419,7 +419,7 @@ return array (
 		}
 		if (!is_string($value) and !is_numeric($value))
 			throw new Exception('Must pass a string to '.$this->getTable().".publisherId");
-		if (strlen($value) > 255)
+		if (strlen($value) > 31)
 			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".publisherId");
 		return array('publisherId', $value);			
 	}
@@ -431,7 +431,7 @@ return array (
 	function maxSize_publisherId()
 	{
 
-		return 255;			
+		return 31;			
 	}
 
 	/**
@@ -445,13 +445,13 @@ return array (
   0 => 
   array (
     0 => 'varbinary',
-    1 => '255',
+    1 => '31',
     2 => '',
     3 => false,
   ),
   1 => false,
   2 => '',
-  3 => '',
+  3 => NULL,
 );			
 	}
 

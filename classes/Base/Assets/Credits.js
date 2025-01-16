@@ -29,7 +29,7 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.toPublisherId] defaults to null
  * @param {String|Buffer} [fields.toStreamName] defaults to null
  * @param {String} [fields.reason] defaults to ""
- * @param {String|Buffer} [fields.communityId] defaults to null
+ * @param {String|Buffer} [fields.communityId] defaults to "0x495452"
  * @param {Number} [fields.amount] defaults to 0
  * @param {String} [fields.attributes] defaults to null
  * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
@@ -87,12 +87,12 @@ Q.mixin(Base, Row);
  * @property reason
  * @type String
  * @default ""
- * key in Q.Text file with human-readable description of the charge
+ * human-readable description of the charge
  */
 /**
  * @property communityId
  * @type String|Buffer
- * @default null
+ * @default "0x495452"
  * community managing the credits
  */
 /**
@@ -644,7 +644,9 @@ return [["varchar","255","",false],false,"MUL",null];
  * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
  */
 Base.prototype.beforeSet_communityId = function (value) {
-		if (value == undefined) return value;
+		if (value == null) {
+			value='';
+		}
 		if (value instanceof Db.Expression) return value;
 		if (typeof value !== "string" && typeof value !== "number" && !(value instanceof Buffer))
 			throw new Error('Must pass a String or Buffer to '+this.table()+".communityId");
@@ -668,7 +670,7 @@ Base.prototype.maxSize_communityId = function () {
 	 */
 Base.column_communityId = function () {
 
-return [["varbinary","31","",false],true,"",null];
+return [["varbinary","31","",false],false,"","0x495452"];
 };
 
 /**

@@ -24,7 +24,7 @@
  * @param {string} [$fields.toPublisherId] defaults to null
  * @param {string} [$fields.toStreamName] defaults to null
  * @param {string} [$fields.reason] defaults to ""
- * @param {string} [$fields.communityId] defaults to null
+ * @param {string} [$fields.communityId] defaults to "0x495452"
  * @param {float} [$fields.amount] defaults to 0
  * @param {string} [$fields.attributes] defaults to null
  * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
@@ -78,12 +78,12 @@ abstract class Base_Assets_Credits extends Db_Row
 	 * @property $reason
 	 * @type string
 	 * @default ""
-	 * key in Q.Text file with human-readable description of the charge
+	 * human-readable description of the charge
 	 */
 	/**
 	 * @property $communityId
 	 * @type string
-	 * @default null
+	 * @default "0x495452"
 	 * community managing the credits
 	 */
 	/**
@@ -775,7 +775,7 @@ return array (
 	function beforeSet_communityId($value)
 	{
 		if (!isset($value)) {
-			return array('communityId', $value);
+			$value='';
 		}
 		if ($value instanceof Db_Expression
                or $value instanceof Db_Range) {
@@ -813,9 +813,9 @@ return array (
     2 => '',
     3 => false,
   ),
-  1 => true,
+  1 => false,
   2 => '',
-  3 => NULL,
+  3 => '0x495452',
 );			
 	}
 
