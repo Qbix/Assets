@@ -702,4 +702,28 @@ class Assets_Credits extends Base_Assets_Credits
 			}
 		}
 	}
+
+	/**
+	 * Does necessary preparations for saving the row in the database.
+	 * @method beforeSave
+	 * @param {array} $modifiedFields
+	 *	The array of fields
+	 * @param {array} $options
+	 *  Not used at the moment
+	 * @param {array} $internal
+	 *  Can be used to pass pre-fetched objects
+	 * @return {array}
+	 * @throws {Exception}
+	 *	If mandatory field is not set
+	 */
+	function beforeSave(
+		$modifiedFields,
+		$options = array(),
+		$internal = array()
+	) {
+		if (empty($this->communityId)) {
+			$this->communityId = Users::communityId();
+		}
+		return parent::beforeSave($modifiedFields);
+	}
 };
