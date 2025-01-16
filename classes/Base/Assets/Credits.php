@@ -24,7 +24,7 @@
  * @param {string} [$fields.toPublisherId] defaults to null
  * @param {string} [$fields.toStreamName] defaults to null
  * @param {string} [$fields.reason] defaults to ""
- * @param {string} [$fields.communityId] defaults to "0x495452"
+ * @param {string} [$fields.communityId] defaults to ""
  * @param {float} [$fields.amount] defaults to 0
  * @param {string} [$fields.attributes] defaults to null
  * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
@@ -83,7 +83,7 @@ abstract class Base_Assets_Credits extends Db_Row
 	/**
 	 * @property $communityId
 	 * @type string
-	 * @default "0x495452"
+	 * @default ""
 	 * community managing the credits
 	 */
 	/**
@@ -815,7 +815,7 @@ return array (
   ),
   1 => false,
   2 => '',
-  3 => '0x495452',
+  3 => NULL,
 );			
 	}
 

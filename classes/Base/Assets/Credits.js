@@ -29,7 +29,7 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.toPublisherId] defaults to null
  * @param {String|Buffer} [fields.toStreamName] defaults to null
  * @param {String} [fields.reason] defaults to ""
- * @param {String|Buffer} [fields.communityId] defaults to "0x495452"
+ * @param {String|Buffer} [fields.communityId] defaults to ""
  * @param {Number} [fields.amount] defaults to 0
  * @param {String} [fields.attributes] defaults to null
  * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
@@ -92,7 +92,7 @@ Q.mixin(Base, Row);
 /**
  * @property communityId
  * @type String|Buffer
- * @default "0x495452"
+ * @default ""
  * community managing the credits
  */
 /**
@@ -670,7 +670,7 @@ Base.prototype.maxSize_communityId = function () {
 	 */
 Base.column_communityId = function () {
 
-return [["varbinary","31","",false],false,"","0x495452"];
+return [["varbinary","31","",false],false,"",null];
 };
 
 /**
