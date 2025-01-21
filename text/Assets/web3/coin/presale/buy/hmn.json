@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Yuav nqis peev ntau npaum li cas?"
+                    },
+                    "placeholders": {
+                        "amount": "Tus nqi ntawm {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Yuav",
+                    "execute": "Ua kom tiav"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Iibinta Token",
+                        "timestamps": "Waqtiyada",
+                        "prices": "Qiimaha",
+                        "endTime": "Dhamaadka wakhtiga",
+                        "thresholds": "Heerarka",
+                        "bonuses": "Gunnooyinka"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Mulkiiluhu kama noqon karo",
+                            "option1": "Mulkiilaha waxa uu ka bixi karaa calaamadaha kaliya marka dhamaadkaTime dhaafo",
+                            "option2": "Mulkiiluhu wuu ka bixi karaa calaamadaha wakhti kasta"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Ciwaanka beesha",
+                    "methodkeccack": "Keccak256 hash function",
+                    "roleId": "Aqoonsiga doorka",
+                    "sellingToken": "Ciwaanka iibinta Token",
+                    "prices": "ETH, Qiimaha",
+                    "thresholds": "# calaamadaha",
+                    "bonuses": "Gunnada %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Wax dhaqaale ah ma jiraan"
+                },
+                "btns": {
+                    "createFund": "Samee Fund",
+                    "createFundInForm": "Abuur"
+                },
+                "fundAddress": "Cinwaanka sanduuqa",
+                "createFund": "Samee Fund",
+                "fundInfo": "Xog",
+                "produce": "Soo saar",
+                "loading": "Soodejinaya",
+                "viewInstancesList": "Liiska Cusbooneysii"
+            }
+        }
+    }
+}

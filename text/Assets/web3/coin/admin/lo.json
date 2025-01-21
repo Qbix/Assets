@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "ໄລຍະເວລາ",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "ການບໍລິຈາກ",
+                    "rewardsRateFraction": "ລາງວັນອັດຕາສ່ວນ",
+                    "numerator": "ຕົວເລກ",
+                    "denominator": "ຕົວຫານ"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "ໄລຍະເວລາເປັນມື້",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "ການບໍລິຈາກ",
+                    "rewardsRateFraction": "ລາງວັນອັດຕາສ່ວນ",
+                    "numerator": "ຕົວເລກ",
+                    "denominator": "ຕົວຫານ"
+                }
+            },
+            "placeholders": {
+                "optional": "(ທາງເລືອກ)",
+                "tuple": "tuple[]",
+                "number": "ເລກ",
+                "address": "ທີ່ຢູ່",
+                "fraction": "ເສດສ່ວນ",
+                "integer": "ຈຳນວນເຕັມ",
+                "seconds": "ວິນາທີ",
+                "days": "ມື້",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "ບໍ່ມີສະລອຍນ້ຳ"
+            },
+            "btns": {
+                "createPool": "ສ້າງສະນຸກເກີ",
+                "createPoolInForm": "ສ້າງ"
+            },
+            "createPool": "ສ້າງສະນຸກເກີ",
+            "produce": "ຜະລິດ",
+            "loading": "ກຳລັງໂຫຼດ",
+            "viewInstancesList": "ໂຫຼດລາຍຊື່ຄືນໃໝ່"
+        }
+    }
+}

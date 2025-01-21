@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Чӣ қадар сармоягузорӣ кардан лозим аст?"
+                    },
+                    "placeholders": {
+                        "amount": "Маблағи {{nativeCoin}}",
+                        "max": "Максимум: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "харид",
+                    "execute": "Иҷро кунед"
+                }
+            }
+        }
+    }
+}

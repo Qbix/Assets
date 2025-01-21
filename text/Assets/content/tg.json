@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Хатогӣ",
+        "WalletAbsent": "Ҳамён пайваст нест.",
+        "Rendering": "Ҳангоми намоиши <span class='url'>{{1}}<\/span> хатогиҳо ҷой доштанд",
+        "PriceRequired": "Нарх талаб карда мешавад!",
+        "NameRequired": "Ном лозим аст!",
+        "PriceInvalid": "Нарх беэътибор аст!",
+        "AmountInvalid": "Маблағ беэътибор аст!",
+        "TransactionFailed": "Муомилот ноком шуд",
+        "ChainNotSupported": "Занҷираи интихобшуда дастгирӣ намешавад. Занҷираи дастгирӣшаванда: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Барои кор бо барнома MetaMask пайваст шудан лозим аст",
+        "UserNotLoggedInMetaMask": "Корбар ба MetaMask ворид нашудааст",
+        "CurrencyNotFound": "Асъор ёфт нашуд",
+        "WrongChain": "Ин NFT зери &quot; {{chain}} &quot; сохта шудааст. Лутфан ин занҷирро истифода баред.",
+        "NoRecipientSelected": "Ягон қабулкунанда интихоб нашудааст",
+        "CantManageFrozenSeries": "Шумо наметавонед силсилаи яхкардашударо идора кунед",
+        "SubscriptionStreamNotPaid": "Шумо барои дидани ин мундариҷа пардохт накардаед. Лутфан {{subscriptionUrl}} клик кунед ва ба нақшаи мувофиқ обуна шавед."
+    },
+    "admin": {
+        "Title": "Дороиҳои маъмурӣ",
+        "SubscriptionTitle": "Нақшаҳои обуна"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Барои пардохт клик кунед"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : пардохт барои {{call 'user.displayName'}} коркард шудааст",
+        "ThankYouForYourPayment": "Ташаккур ба шумо барои пардохт ба {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} ба {{plan.title}} обуна шудааст",
+        "YouSubscribedTo": "Шумо ба {{plan.title}} обуна шудаед",
+        "Assets\/credits\/alert": "Шумо огоҳии марбут ба ҳисоби шумо доред"
+    },
+    "charge": {
+        "Subject": "Шумо барои &quot; {{description}} &quot; аз {{call 'publisher.displayName'}} {{displayAmount}} пардохт гирифтед",
+        "HasBeenCharged": "Ҳей, ин танҳо ба шумо хабар медиҳад, ки {{1}} ба {{2}} барои {{3}} то {{4}} ситонида шудааст."
+    },
+    "charged": {
+        "Subject": "Ташаккур ба шумо барои пардохти &quot; {{description}} &quot;",
+        "HavePaid": "Эй {{1}} , ин танҳо як тасдиқи зуд аст, ки шумо бомуваффақият аз {{2}} то {{3}} барои {{4}} пардохт кардаед"
+    },
+    "connectedAccount": {
+        "Title": "Ҳисобро пайваст кунед",
+        "Success": "Муваффакият",
+        "YourAccountCreated": "Ҳисоби шумо бомуваффақият сохта шуд!",
+        "YourAccountAlreadyCreated": "Ҳисоби шумо аллакай сохта шудааст ва барои истифода омода аст"
+    },
+    "payment": {
+        "AboutOrder": "Маълумот дар бораи фармоиш",
+        "PaymentMethod": "Тариқи пардохт",
+        "ContactInfo": "Маълумот барои тамос",
+        "Pay": "Пардохт",
+        "PaymentSucceeded": "Пардохт бомуваффақият коркард карда шуд",
+        "PaymentProcessing.": "Пардохти шумо коркард шуда истодааст",
+        "FailTryAgain": "Пардохти шумо муваффақ нашуд. Лутфан бори дигар кӯшиш кунед.",
+        "SomethingWrong": "Чизе хато рафт",
+        "PaymentStatus": "Ҳолати пардохт",
+        "PayTo": "{{displayName}} пардохт кунед",
+        "ChooseCurrency": "Як асъорро интихоб кунед",
+        "YouCanSendUpTo": "Шумо метавонед то {{amount}} {{symbol}} фиристед",
+        "Send": "Ирсол",
+        "EnterAmount": "маблағи ворид кунед"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Даъват аз ҷониби {{invitedUserName}} қабул карда шуд",
+        "InvitedUserFilledStream": "{{invitedUserName}} пур {{FilledStreamTitle}}",
+        "ForFillingStream": "Барои пур кардани {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Шумо барои оғоз кардани {{amount}} кредит доред",
+        "PaymentFor": "Пардохт барои &quot; {{1}} &quot;",
+        "PaymentTo": "Пардохт ба {{1}}",
+        "PaymentToUser": "Интиқол ба {{toUserName}}",
+        "CreatePrivateChat": "барои сӯҳбати хусусӣ бо {{toUserName}}",
+        "CreatePaidStream": "барои сохтани {{toStreamName}}",
+        "JoinedPaidStream": "барои фармоиш дар &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "барои ташкили ҷомеаи &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "ҳамчун баргардонидани маблағ дар &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "{{amount}} кредит харид",
+        "BonusCredits": "Бонус {{amount}} қарз",
+        "BuyAmountCredits": "{{amount}} кредит харед",
+        "WatchClip": "барои тамошои {{fromStreamTitle}}",
+        "MissingCredits": "Кредитҳои гумшуда",
+        "YouMissingCredits": "Барои идома додан ба шумо {{amount}} кредити иловагӣ лозим аст.",
+        "BuyCredits": "Қарзҳо харед",
+        "BuyBonus": "Дар як вақт харидани {{amount}} кредит ба бонуси {{bonus}} кредит оварда мерасонад.",
+        "Buy": "харид",
+        "PurchaseCredits": "Хариди кредитҳо",
+        "Credits": "Қарзҳо",
+        "ErrorInvalidAmount": "Маблағ беэътибор аст",
+        "ErrorInvalidCurrency": "Мутаассифона, мо то ҳол асъори {{currency}} ро дастгирӣ намекунем",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} кредит",
+            "BonusCredits": "{{amount}} кредит"
+        }
+    },
+    "history": {
+        "Date": "Сана",
+        "Amount": "Маблағ",
+        "Description": "Тавсифи",
+        "Client": "Мизоҷ",
+        "User": "Истифодабаранда",
+        "To": "ба",
+        "From": "аз",
+        "SeeHistory": "Ба таърихи пардохт барои {{1}} нигаред",
+        "HistoryEmpty": "Ҳанӯз транзаксия нест",
+        "PaymentFor": "{{amount}} кредит фиристод",
+        "PaymentTo": "{{amount}} кредит фиристод",
+        "PaymentToUser": "{{amount}} кредит фиристод",
+        "CreatePaidStream": "{{amount}} кредит сарф кард",
+        "WatchClip": {
+            "+": "{{amount}} кредит ба даст овард",
+            "-": "{{amount}} кредит сарф кард"
+        },
+        "JoinedPaidStream": {
+            "+": "{{amount}} кредит ба даст овард",
+            "-": "{{amount}} кредит сарф кард"
+        },
+        "LeftPaidStream": {
+            "+": "{{amount}} кредит гирифта шуд",
+            "-": "{{amount}} кредит фиристод"
+        },
+        "CreatedCommunity": "{{amount}} кредит сарф кард",
+        "BoughtCredits": "{{amount}} кредит харид",
+        "BonusCredits": "Бонус {{amount}} кредит гирифт",
+        "InviteAcceptedBy": "{{amount}} кредит ба даст овард",
+        "Streams_user_firstname": "{{amount}} кредит ба даст овард",
+        "Streams_user_lastname": "{{amount}} кредит ба даст овард",
+        "Streams_user_icon": "{{amount}} кредит ба даст овард",
+        "Places_user_location": "{{amount}} кредит ба даст овард",
+        "Streams_greeting": "{{amount}} кредит ба даст овард",
+        "YouHaveCreditsToStart": "{{amount}} кредит ба даст овард",
+        "InvitedUserFilledStream": "{{amount}} кредит ба даст овард",
+        "ForFillingStream": "{{amount}} кредит ба даст овард",
+        "CreatePrivateChat": "{{amount}} кредит сарф кард"
+    },
+    "subscriptions": {
+        "infoTitle": "Маълумоти пардохтро пешниҳод кунед",
+        "confirm": {
+            "title": "Обунаро оғоз кунед",
+            "message": "Ба &quot; {{title}} &quot; обунаи такрорӣ оғоз кунед?",
+            "ok": "ДУРУСТ",
+            "cancel": "Бекор кардан"
+        },
+        "CreditOrDebitCard": "Корти кредитӣ ё дебетӣ",
+        "SubscribePayment": "Пардохти обуна",
+        "ImmediatePayment": "Пардохти фаврӣ",
+        "ProcessingPayment": "Коркарди пардохт",
+        "SubscriptionAlreadyPaid": "Ин обуна аллакай пардохта шудааст",
+        "SubscriptionNotActive": "Обуна ҳоло ғайрифаъол аст",
+        "Subscribed": "Обуна шуд",
+        "Unsubscribed": "Аз обуна",
+        "Unsubscribe": "Қатъ кардани обуна",
+        "Subscribe": "Обуна шавед",
+        "Started": "Сар шуд",
+        "EndsIn": "Дар",
+        "NextPay": "Пардохти навбатӣ",
+        "Period": "Давра",
+        "Price": "Нарх",
+        "AreYouSureUnsubscribe": "Шумо мутмаин ҳастед, ки мехоҳед аз ин нақша обуна шавед?",
+        "YouUnsubscribedFromPlan": "Шумо обунаро аз нақшаи &quot; {{planTitle}} &quot; хориҷ кардед. Дафъаи дигар аз шумо пул ситонида намешавад, аммо обунаи шумо то {{endsIn}} идома хоҳад кард",
+        "plan": {
+            "TitlePlaceholder": "унвони нақша",
+            "PricePlaceholder": "нарх",
+            "SubscriptionTitle": "Нақшаҳои обуна",
+            "DescriptionPlaceholder": "тавсифи нақшаи обуна",
+            "AreYouSureDeletePlan": "Шумо мутмаин ҳастед, ки мехоҳед ин нақшаро нест кунед?",
+            "Duration": "Давомнокӣ",
+            "Discount": "Тахфиф",
+            "SavePlan": "Захира кунед",
+            "Interrupt": "Қатъ кардан",
+            "Continue": "Давом додан",
+            "NewPlan": "Нақшаи нав",
+            "SelectDisplayType": "{{displayType}} ро интихоб кунед",
+            "EndDate": "санаи анҷом",
+            "Available": "дастрас",
+            "Hidden": "Пинҳон",
+            "InviteOnly": "Танҳо даъват",
+            "CantSubscribeUnlessInvited": "Шумо наметавонед ба ин нақша обуна шавед, агар шуморо даъват накунанд"
+        }
+    },
+    "payments": {
+        "infoTitle": "Танзими маълумоти пардохт",
+        "BuyAmountCredits": "{{amount}} кредит харед",
+        "confirm": {
+            "title": "Пардохт кунед",
+            "message": "Оё шумо ба пардохти {{symbol}} {{amount}} розӣ ҳастед?",
+            "ok": "ДУРУСТ",
+            "cancel": "Бекор кардан"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Қарзҳо",
+            "description": "карзхо ва пардохтхоро ба хисоб мегирад"
+        },
+        "Assets\/plan": {
+            "displayType": "Нақшаи обуна",
+            "description": "плани обуна"
+        },
+        "Assets\/subscription": {
+            "displayType": "Обуна",
+            "description": "обуна"
+        },
+        "Assets\/product": {
+            "displayType": "Маҳсулот",
+            "description": "маҳсулот фурӯхта мешавад"
+        },
+        "Assets\/service": {
+            "displayType": "Хизмат",
+            "description": "хизматрасонӣ пешниҳод карда мешавад"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "{{amount}} кредит ба даст овард"
+        },
+        "Assets\/credits\/bought": {
+            "content": "{{amount}} кредит харид"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Бонус {{amount}} қарз"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} кредит сарф кард"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{amount}} кредитро ба {{toUserName}} фиристод"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{amount}} кредит аз {{fromUserName}} гирифта шуд"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Шумо дар ҳисоби шумо қарзҳои нокифоя доред. Лутфан ба истиноди <a href='<i translate='no'>999 &#39;&gt; барои харидани кредитҳои бештар муроҷиат кунед<\/a> ."
+        }
+    },
+    "billing": {
+        "Title": "Ҳисобкунии дороиҳо",
+        "CreditsMinimum": "Қарзҳои ҳадди аққал",
+        "CreditsToAdd": "Кредитҳо барои илова кардан",
+        "Save": "Захира кунед",
+        "ThisLink": "ин пайванд",
+        "errors": {
+            "CreditsMinimumNegative": "Қарзҳои ҳадди аққал наметавонанд манфӣ бошанд",
+            "CreditsToAddNegative": "Қарзҳои иловашуда наметавонанд манфӣ бошанд"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Хидмати нав",
+            "TitlePlaceholder": "Унвони хидмат",
+            "PricePlaceholder": "Нархи муқаррар",
+            "LinkPlaceholder": "истиноди маълумоти иловагӣ таъин кунед",
+            "DescriptionPlaceholder": "Тавсифи хидмат",
+            "SaveService": "Хидматро захира кунед",
+            "SelectRequiredParticipants": "Иштирокчиёни дахлдор талаб карда мешаванд",
+            "RequiredParticipantsDesc": "Лутфан иштирокчиёни алоқамандеро интихоб кунед, ки барои истифодаи ин хидмат заруранд (масалан, ҳайвоноти хонагӣ барои &quot;Намоиши сагҳо&quot; ё кӯдакон барои &quot;Иди кӯдакон&quot; ва ғайра). Агар хидмат пулакӣ бошад, корбар бояд барои ҳар як иштирокчии алоқаманд низ пардохт кунад."
+        },
+        "EditServiceTemplate": {
+            "Title": "Хидмати таҳрир"
+        },
+        "ManageServiceTemplates": "Шаблонҳои хидматро идора кунед",
+        "ManageServices": "Идоракунии хидматҳо",
+        "Free": "Озод",
+        "OptionalContribution": "Саҳми ихтиёрӣ",
+        "RequiredPayment": "Пардохти ҳатмӣ",
+        "AreYouSureDelete": "Оё мутмаин ҳастед, ки мехоҳед ин хидматро нест кунед?",
+        "AmountServicesRelated": "{{amount}} дастрасии марбут ба ин хидмат вуҷуд дорад. Онҳо инчунин хориҷ карда мешаванд."
+    },
+    "transfer": {
+        "SelectRecipient": "Қабулкунандаро интихоб кунед",
+        "TransactionSuccess": "Муваффақияти транзаксия",
+        "OrTypeWalletAddress": "Ё суроғаи ҳамёни гирандаро нависед",
+        "AppCredits": "Қарзҳои барнома"
+    },
+    "NFT": {
+        "Title": "Унвон",
+        "Name": "Ном",
+        "EnterName": "Номро ворид кунед",
+        "EnterAuthorWallet": "Ҳамёни муаллифро ворид кунед",
+        "InformationAboutTitle": "Маълумот дар бораи {{title}} NFT",
+        "Description": "Тавсифи",
+        "DetailedInformationAboutNFT": "Маълумоти муфассал дар бораи NFT",
+        "PresaleStarts": "Пеш аз фурӯш 23 декабр оғоз мешавад",
+        "OwnerUserNotFound": "Соҳиби ин NFT дар аризаи мо сабт нашудааст.",
+        "BuyNow": "Ҳозир харед",
+        "Buy": "харид",
+        "Add": "Илова",
+        "Remove": "Хориҷ кунед",
+        "NoNFTyet": "Ҳоло ягон NFTs нест",
+        "Conversation": "Сухбат",
+        "Create": "Эҷод кунед",
+        "CurrentBid": "Пешниҳоди ҷорӣ",
+        "StartingIn": "Оғоз дар",
+        "EndingIn": "Ба охир расидани",
+        "CreateNFT": "Эҷоди NFT",
+        "TitlePlaceholder": "Ба NFT-и худ унвон диҳед",
+        "DescriptionPlaceholder": "Тавсифи NFT-и худро диҳед",
+        "CreateYourNFT": "NFT-и худро эҷод кунед",
+        "Royalties": "Роялти",
+        "RoyaltyPlaceholder": "Ихтиёрӣ. Маблағе, ки пеш аз интиқол ба эҷодкор пардохта мешавад.",
+        "ExpirationDate": "Муҳлати тамомшави",
+        "StartingDate": "Саршавии Сана",
+        "BidsBelowThisAmount": "Пешниҳодҳои камтар аз ин маблағ иҷозат дода намешаванд",
+        "MinimumBid": "Ҳадди ақали пешниҳод",
+        "Author": "Муаллиф",
+        "Price": "Нарх",
+        "Commission": "Комиссия",
+        "EnterCommission": "Комиссия ворид кунед",
+        "Owner": "Соҳибкор",
+        "SelectCategory": "Категорияро интихоб кунед",
+        "Day": "рӯз",
+        "Days": "Рузхо",
+        "Hour": "Соат",
+        "Hours": "Соатхо",
+        "Minute": "дақиқа",
+        "Minutes": "Дакикахо",
+        "Second": "Дуюм",
+        "Seconds": "Сонияхо",
+        "SalesCreator": "аз фурӯш ба эҷодкор меравад",
+        "Details": "Тафсилот",
+        "Bids": "Тендерҳо",
+        "History": "Таърих",
+        "LoremIpsum": "Lorem Ipsum матни оддӣ дар соҳаи чоп ва чопкунӣ мебошад.",
+        "PutOnSale": "Ба фурӯш гузоштан",
+        "PutOffSale": "Аз фурӯш даст кашед",
+        "Transfer": "Интиқол",
+        "Actions": "Амалҳо",
+        "Claim": "Даъво",
+        "ClaimNFT": "Даъвои NFT",
+        "Unlocking": "Кушодан",
+        "Unlock": "Кушодан",
+        "Update": "Навсозӣ",
+        "UpdateToken": "Токенро навсозӣ кунед",
+        "UpdateNFT": "Навсозии NFT",
+        "CreateToken": "Токен эҷод кунед",
+        "PlaceBid": "Ҷойгир кардани пешниҳод",
+        "SoldOut": "фурӯхта шуд",
+        "NotOnSale": "Дар фурӯш нест",
+        "NftName": "Номи NFT",
+        "DescribeYourNFT": "Лутфан NFT-и худро тавсиф кунед",
+        "NFTImage": "Тасвир барои NFT",
+        "NFTVideo": "Видео барои NFT, агар мавҷуд бошад",
+        "GenerateDescription": "ё худкор тавлид кунед",
+        "UploadMovie": "Филмро бор кунед",
+        "MovieSource": "Манбаи филм",
+        "MovieURL": "URL-и филм",
+        "UploadFile": "Файлро бор кунед",
+        "PutOnMarketplace": "Ба бозор гузоред",
+        "InstantPurchase": "Нархро ворид кунед, то ба корбарон имкон диҳад, ки NFT-и худро фавран харанд",
+        "FixedPrice": "Нархи собит",
+        "TimedAuction": "Музоядаи саривақтӣ",
+        "OpenForBids": "Барои дархостҳо кушода",
+        "PriceOnePiece": "Нархи як донаро ворид кунед",
+        "EnterPrice": "Нархро ворид кунед",
+        "EnterMinimumBid": "Ҳадди ақали пешниҳодро ворид кунед",
+        "SelectChain": "Занҷирро интихоб кунед",
+        "Currency": "Асъор",
+        "AreYouSureDeleteImage": "Шумо мутмаин ҳастед, ки мехоҳед тасвирро нест кунед?",
+        "AreYouSureDeleteVideo": "Шумо мутмаин ҳастед, ки мехоҳед видеоро нест кунед?",
+        "series": {
+            "Name": "Ном",
+            "Icon": "Нишона",
+            "Description": "Тавсифи",
+            "Author": "Муаллиф",
+            "SelectSeries": "Силсиларо интихоб кунед",
+            "Value": "Арзиш",
+            "AreYouSure": "Шумо мутмаъин ҳастед?",
+            "AuthorInvalid": "Суроғаи муаллиф нодуруст аст!",
+            "Address": "Суроға",
+            "CoverImage": "Тасвири муқова",
+            "UploadCoverImage": "Тасвири муқоваро бор кунед",
+            "CommissionAddressInvalid": "Суроғаи комиссия эътибор надорад",
+            "OnSale": "дар фурӯш",
+            "OffSale": "аз фурӯш",
+            "CreateSeries": "Силсила эҷод кунед",
+            "UpdateSeries": "Силсилаи навсозӣ",
+            "SeriesInfo": "Маълумоти силсила",
+            "SelectAuthor": "Муаллифро интихоб кунед",
+            "NewItem": "Силсилаи нави NFT",
+            "NamePlaceholder": "Номи силсиларо ворид кунед",
+            "DescPlaceholder": "Тавсифи силсиларо ворид кунед",
+            "EndingIn": "Ба охир расидани"
+        },
+        "contract": {
+            "CreateContract": "Эҷоди шартнома",
+            "SelectContract": "Шартномаро интихоб кунед",
+            "CreateContractFor": "Барои {{userName}} шартнома созед",
+            "ContractFor": "Шартнома барои {{userName}}",
+            "UpdateContract": "Навсозии шартнома",
+            "TransferOwnership": "Интиқоли моликият",
+            "SetBaseURI": "Муайян кардани URI базавӣ",
+            "SetSuffix": "Танзими суффикс",
+            "CurrentOwner": "Соҳиби ҷорӣ",
+            "CurrentBaseURL": "BaseURL ҷорӣ",
+            "ContractAddressAbsent": "Суроғаи шартнома мавҷуд нест",
+            "FactoryAddressAbsent": "Адреси завод нест",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Унвон талаб карда мешавад",
+            "SymbolRequired": "Аломат лозим аст",
+            "TypeContractName": "номи шартнома",
+            "TypeContractSymbol": "рамзи шартнома (максимум 10 аломат)"
+        },
+        "contests": {
+            "Title": "Мусобикахо",
+            "NewContest": "Озмуни нав"
+        },
+        "collections": {
+            "Title": "Маҷмӯаҳо",
+            "EnterTitle": "сарлавҳа ворид кунед",
+            "EnterDescription": "тавсифро ворид кунед",
+            "NewCollection": "Коллексияи нав",
+            "Name": "Ном",
+            "Icon": "Нишона",
+            "Description": "Тавсифи",
+            "Author": "Муаллиф",
+            "SelectCollection": "Коллексияро интихоб кунед",
+            "Value": "Арзиш",
+            "AreYouSure": "Шумо мутмаъин ҳастед?",
+            "AuthorInvalid": "Суроғаи муаллиф нодуруст аст!",
+            "Address": "Суроға",
+            "CoverImage": "Тасвири муқова",
+            "UploadIcon": "Нишонаи боргузорӣ",
+            "CommissionAddressInvalid": "Суроғаи комиссия беэътибор аст",
+            "OnSale": "дар фурӯш",
+            "OffSale": "аз фурӯш",
+            "CreateCollection": "Маҷмӯа эҷод кунед",
+            "UpdateCollection": "Навсозии коллексия",
+            "CollectionInfo": "Маълумот дар бораи коллексия",
+            "SelectAuthor": "Муаллифро интихоб кунед",
+            "NewItem": "Коллексияи нави NFT",
+            "NamePlaceholder": "Номи коллексияро ворид кунед",
+            "DescPlaceholder": "Тавсифи коллексияро ворид кунед",
+            "EndingIn": "Ба охир расидани",
+            "SubmitSeries": "Силсиларо пешниҳод кунед"
+        },
+        "import": {
+            "importNFT": "Воридоти NFT",
+            "importAttributes": "Атрибутҳои NFT-ро ворид кунед",
+            "fileNotFound": "Бубахшед, файли CSV ёфт нашуд.",
+            "fileEmpty": "Бубахшед, файли CSV холист.",
+            "userIdNotFound": "корбар вуҷуд дорад, аммо ID холӣ аст",
+            "errorLine": "хати {{1}}",
+            "fieldNotFound": "Майдони ҳатмӣ &quot; {{1}} &quot; ёфт нашуд",
+            "displayTypeEmpty": "Навъи намоиш барои &quot; {{1}} &quot; ёфт нашуд",
+            "taskStreamInvalid": "ҷараёни вазифа беэътибор аст",
+            "instructionsEmpty": "дастурҳои ҷараёни вазифа холӣ",
+            "complete": "Анҷом",
+            "activateUsers": "паёми фаъолсозӣ ба корбарон ирсол кунед?",
+            "importProgress": "Пешрафт",
+            "importOptions": "Имконот",
+            "sampleCSV": "Намунаи CSV-ро зеркашӣ кунед",
+            "fileLabel": "Ҷадвали электрониро бор кунед:",
+            "errorsTitle": "Хатогиҳо рӯй доданд"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Филтр аз рӯи коллексияҳои NFT",
+                "ShowNFTCollection": "Намоиши коллексияи NFT дар ...",
+                "AllCollections": "Ҳама коллексияҳо"
+            },
+            "ByUser": {
+                "AllAuthors": "Хамаи Муаллифон",
+                "AllUsers": "Ҳама",
+                "FilterByAuthors": "Филтр аз рӯи муаллифон"
+            }
+        },
+        "Back": "Бозгашт ба Коллексия",
+        "attributes": {
+            "Title": "Аттрибутҳоро идора кунед",
+            "Attributes": "Хусусиятҳо",
+            "DisplayTitle": "Навъи намоиш",
+            "AddDisplayType": "Навъи нави намоишро илова кунед",
+            "NewDisplay": "Намоиши нав",
+            "TraitTitle": "Навъи хислат",
+            "AddTraitTitle": "Навъи нави хислатро илова кунед",
+            "NewTrait": "Навъи нави хислат",
+            "ValueTitle": "Арзиш",
+            "AddValueTitle": "Илова кардани арзиши нав",
+            "NewValue": "Арзиши нав",
+            "NewAttribute": "Аттрибути нав",
+            "UpdateAttributes": "Навсозии атрибутҳо",
+            "SaveAttributes": "Хусусиятҳоро захира кунед"
+        },
+        "profile": {
+            "LogOut": "Бароед",
+            "Title": "Профил барои {{userName}}",
+            "Description": "Тафсилоти корбар",
+            "aboutPlaceholder": "Таҳрири Bio",
+            "UploadCoverPhoto": "Акси муқоваро бор кунед",
+            "SureLogOut": "Шумо мутмаин ҳастед, ки мехоҳед аз система хориҷ шавед?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "Шартномаи NFT",
+                        "seriesId": "силсила Id",
+                        "owner": "Соҳибкор",
+                        "currency": "Асъор",
+                        "price": "Нарх",
+                        "beneficiary": "Бенефитсиар",
+                        "autoindex": "Автоиндекс",
+                        "duration": "Давомнокӣ",
+                        "rateInterval": "Фосилаи суръат",
+                        "rateAmount": "Маблағи нархгузорӣ"
+                    },
+                    "small": {
+                        "NFTContract": "Шартномаи NFT",
+                        "seriesId": "токенҳо дар ин силсила сикка карда мешаванд",
+                        "owner": "соҳиби мисол, дар акси ҳол ирсолкунанда хоҳад буд",
+                        "currency": "Асъор барои токенҳои харидашуда, агар сифр бошад - барои тангаҳои ватанӣ",
+                        "price": "Нарх",
+                        "beneficiary": "Бенефитсиари фурӯши токенҳо, дар акси ҳол ирсолкунанда хоҳад буд",
+                        "autoindex": "Автоиндекс",
+                        "duration": "Пас аз сиккабандӣ қулф кунед. Сифр маънои онро дорад, ки онро фавран гиред.",
+                        "rateInterval": "фосилаи сатил барои хариди махсус",
+                        "rateAmount": "маблағи сатил барои хариди махсус"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ихтиёрӣ)",
+                    "number": "рақам",
+                    "address": "суроға",
+                    "fraction": "каср",
+                    "integer": "бутун",
+                    "seconds": "сония",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Офаридан",
+                "viewInstancesList": "Рӯйхати навсозӣ"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID серия",
+                        "account": "Ҳисоб",
+                        "amount": "Маблағ"
+                    },
+                    "small": {
+                        "seriesId": "аломати нав дар силсила бо чунин ID тааллуқ хоҳад дошт",
+                        "account": "соҳиби NFT навтаъсис. агар муқаррар нашуда бошад - ҳамёни ҷорӣ истифода хоҳад кард",
+                        "amount": "маблағи NFT ба сикка"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ихтиёрӣ)",
+                    "seriesId": "id",
+                    "account": "ҳисоб",
+                    "amount": "маблағи",
+                    "integer": "бутун"
+                },
+                "btn": {
+                    "Purchase": "Харид",
+                    "SpecialPurchase": "Хариди махсус"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Суроға"
+                    },
+                    "small": {
+                        "account": "Суроға"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Суроғаи нодуруст"
+                },
+                "placeholders": {
+                    "account": "Суроға"
+                },
+                "addToWhitelist": "Илова ба Рӯйхати сафед",
+                "removeFromWhitelist": "Аз рӯйхати сафед хориҷ кунед"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ID аломати",
+                    "custodian": "нигаҳбон",
+                    "recipient": "Қабулкунанда"
+                },
+                "small": {
+                    "tokenId": "аломати id чӣ бояд қулф ё кушодан",
+                    "custodian": "суроғае, ки метавонад кушода шавад",
+                    "recipient": "суроғае, ки токенҳоро қабул мекунад"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "ID-и беэътибор",
+                "invalidCustodian": "Сарпарасти беэътибор",
+                "invalidRecipient": "Қабулкунандаи беэътибор"
+            },
+            "placeholders": {
+                "optional": "(ихтиёрӣ)",
+                "tokenId": "id",
+                "custodian": "суроға"
+            },
+            "Lock": "Қулф",
+            "Unlock": "Кушодан",
+            "Locked": "Қулф карда шудааст",
+            "CustodianAddress": "Суроғаи нигаҳбон",
+            "TokenWasClaimed": "Токени &quot; {{title}} &quot; даъво карда шуд",
+            "TokenWasLocked": "Токени &quot; {{title}} &quot; баста шуд",
+            "TokenWasUnlocked": "Токени &quot; {{title}} &quot; кушода шуд"
+        }
+    },
+    "fundrise": {
+        "placeholder": "дар бораи ин саҳм чизе нависед..."
+    },
+    "currencies": {
+        "choose": "Як асъорро интихоб кунед"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "موده",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "مشهور ټوکن",
+                    "donations": "بسپنه",
+                    "rewardsRateFraction": "د انعام نرخونه",
+                    "numerator": "شمیرونکی",
+                    "denominator": "فرق کوونکی"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "موده په ورځو کې",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "مشهور ټوکن",
+                    "donations": "بسپنه",
+                    "rewardsRateFraction": "د انعام نرخونه",
+                    "numerator": "شمیرونکی",
+                    "denominator": "فرق کوونکی"
+                }
+            },
+            "placeholders": {
+                "optional": "(اختیاری)",
+                "tuple": "ټپل[]",
+                "number": "شمیره",
+                "address": "پته",
+                "fraction": "برخه",
+                "integer": "عدد",
+                "seconds": "ثانیې",
+                "days": "ورځې",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "هیڅ حوضونه شتون نلري"
+            },
+            "btns": {
+                "createPool": "حوض جوړ کړئ",
+                "createPoolInForm": "جوړ کړئ"
+            },
+            "createPool": "حوض جوړ کړئ",
+            "produce": "تولیدوي",
+            "loading": "بار کول",
+            "viewInstancesList": "لیست تازه کړئ"
+        }
+    }
+}

@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Xato",
+        "WalletAbsent": "Hamyon ulanmagan.",
+        "Rendering": "<span class='url'>{{1}}<\/span> renderlashda xatolik yuz berdi",
+        "PriceRequired": "Narx talab qilinadi!",
+        "NameRequired": "Ism talab qilinadi!",
+        "PriceInvalid": "Narx noto&#39;g&#39;ri!",
+        "AmountInvalid": "Miqdor yaroqsiz!",
+        "TransactionFailed": "Tranzaksiya amalga oshmadi",
+        "ChainNotSupported": "Tanlangan zanjir qo‘llab-quvvatlanmaydi. Qo&#39;llab-quvvatlanadigan zanjir: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Ilova bilan ishlash uchun MetaMask ulangan bo&#39;lishi kerak",
+        "UserNotLoggedInMetaMask": "Foydalanuvchi MetaMask tizimiga kirmagan",
+        "CurrencyNotFound": "Valyuta topilmadi",
+        "WrongChain": "Ushbu NFT &quot; {{chain}} &quot; ostida yaratilgan. Iltimos, ushbu zanjirdan foydalaning.",
+        "NoRecipientSelected": "Hech bir qabul qiluvchi tanlanmagan",
+        "CantManageFrozenSeries": "Muzlatilgan seriyalarni boshqara olmaysiz",
+        "SubscriptionStreamNotPaid": "Siz bu kontentni ko‘rish uchun pul to‘lamagansiz. Iltimos, {{subscriptionUrl}} tugmasini bosing va tegishli rejaga obuna bo&#39;ling."
+    },
+    "admin": {
+        "Title": "Ma&#39;muriy aktivlar",
+        "SubscriptionTitle": "Obuna rejalari"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Toʻlash uchun bosing"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : to&#39;lov {{call 'user.displayName'}} uchun qayta ishlandi",
+        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} raqamiga to&#39;laganingiz uchun tashakkur",
+        "SubscribedTo": "{{call 'user.displayName'}} {{plan.title}} ga obuna bo&#39;ldi",
+        "YouSubscribedTo": "Siz {{plan.title}} ga obuna bo&#39;ldingiz",
+        "Assets\/credits\/alert": "Hisobingizga tegishli ogohlantirish bor"
+    },
+    "charge": {
+        "Subject": "Siz &quot; {{description}} &quot; uchun {{call 'publisher.displayName'}} dan {{displayAmount}} to&#39;lov oldingiz",
+        "HasBeenCharged": "Hey, bu sizga {{1}} {{3}} ga {{2}} dan {{4}} gacha to‘langanligini bildirish uchun."
+    },
+    "charged": {
+        "Subject": "&quot; {{description}} &quot; uchun to&#39;laganingiz uchun tashakkur",
+        "HavePaid": "Hey {{1}} , bu {{4}} uchun {{2}} dan {{3}} gacha muvaffaqiyatli toʻlaganingizning tezkor tasdigʻidir."
+    },
+    "connectedAccount": {
+        "Title": "Hisobni ulash",
+        "Success": "Muvaffaqiyat",
+        "YourAccountCreated": "Hisobingiz muvaffaqiyatli yaratildi!",
+        "YourAccountAlreadyCreated": "Hisobingiz allaqachon yaratilgan va foydalanishga tayyor"
+    },
+    "payment": {
+        "AboutOrder": "Buyurtma haqida ma&#39;lumot",
+        "PaymentMethod": "To&#39;lov usuli",
+        "ContactInfo": "Aloqa ma&#39;lumotlari",
+        "Pay": "To&#39;lash",
+        "PaymentSucceeded": "Toʻlov muvaffaqiyatli amalga oshirildi",
+        "PaymentProcessing.": "Toʻlovingiz qayta ishlanmoqda",
+        "FailTryAgain": "To‘lovingiz amalga oshmadi. Iltimos, qayta urinib koʻring.",
+        "SomethingWrong": "Nimadir xato ketdi",
+        "PaymentStatus": "To&#39;lov holati",
+        "PayTo": "{{displayName}} to&#39;lash",
+        "ChooseCurrency": "Valyutani tanlang",
+        "YouCanSendUpTo": "{{amount}} {{symbol}} gacha yuborishingiz mumkin",
+        "Send": "Yuborish",
+        "EnterAmount": "miqdorini kiriting"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Taklif {{invitedUserName}} tomonidan qabul qilindi",
+        "InvitedUserFilledStream": "{{invitedUserName}} {{FilledStreamTitle}} toʻldirdi",
+        "ForFillingStream": "{{FilledStreamTitle}} to&#39;ldirish uchun",
+        "YouHaveCreditsToStart": "Boshlash uchun sizda {{amount}} kredit bor",
+        "PaymentFor": "&quot; {{1}} &quot; uchun to&#39;lov",
+        "PaymentTo": "{{1}} raqamiga to&#39;lov",
+        "PaymentToUser": "{{toUserName}} raqamiga o&#39;tkazing",
+        "CreatePrivateChat": "{{toUserName}} bilan shaxsiy suhbat uchun",
+        "CreatePaidStream": "{{toStreamName}} yaratish uchun",
+        "JoinedPaidStream": "bron qilish uchun &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "&quot; {{communityId}} &quot; hamjamiyatini yaratish uchun",
+        "LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;da bandlov to&#39;lovini qaytarish sifatida",
+        "BoughtCredits": "{{amount}} ta kredit sotib olindi",
+        "BonusCredits": "Bonus {{amount}} kredit",
+        "BuyAmountCredits": "{{amount}} kredit sotib oling",
+        "WatchClip": "{{fromStreamTitle}} tomosha qilish uchun",
+        "MissingCredits": "Yo&#39;qolgan kreditlar",
+        "YouMissingCredits": "Davom etish uchun sizga qoʻshimcha {{amount}} ta kredit kerak boʻladi.",
+        "BuyCredits": "Kreditlarni sotib oling",
+        "BuyBonus": "Bir vaqtning o&#39;zida {{amount}} kreditni sotib olish {{bonus}} ta kredit bonusiga olib keladi.",
+        "Buy": "Sotib olish",
+        "PurchaseCredits": "Kreditlarni sotib olish",
+        "Credits": "Kreditlar",
+        "ErrorInvalidAmount": "Miqdor yaroqsiz",
+        "ErrorInvalidCurrency": "Afsuski, biz hali {{currency}} valyutasini qo&#39;llab-quvvatlamaymiz",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kredit",
+            "BonusCredits": "{{amount}} kredit"
+        }
+    },
+    "history": {
+        "Date": "Sana",
+        "Amount": "Miqdori",
+        "Description": "Tavsif",
+        "Client": "Mijoz",
+        "User": "Foydalanuvchi",
+        "To": "uchun",
+        "From": "dan",
+        "SeeHistory": "{{1}} uchun toʻlov tarixini koʻring",
+        "HistoryEmpty": "Hozircha tranzaksiya yo‘q",
+        "PaymentFor": "{{amount}} kredit yuborildi",
+        "PaymentTo": "{{amount}} kredit yuborildi",
+        "PaymentToUser": "{{amount}} kredit yuborildi",
+        "CreatePaidStream": "{{amount}} kredit sarfladi",
+        "WatchClip": {
+            "+": "{{amount}} kredit oldi",
+            "-": "{{amount}} kredit sarfladi"
+        },
+        "JoinedPaidStream": {
+            "+": "{{amount}} kredit oldi",
+            "-": "{{amount}} kredit sarfladi"
+        },
+        "LeftPaidStream": {
+            "+": "{{amount}} kredit oldi",
+            "-": "{{amount}} kredit yuborildi"
+        },
+        "CreatedCommunity": "{{amount}} kredit sarfladi",
+        "BoughtCredits": "{{amount}} ta kredit sotib olindi",
+        "BonusCredits": "{{amount}} ta bonusga ega boʻldi",
+        "InviteAcceptedBy": "{{amount}} kredit oldi",
+        "Streams_user_firstname": "{{amount}} kredit oldi",
+        "Streams_user_lastname": "{{amount}} kredit oldi",
+        "Streams_user_icon": "{{amount}} kredit oldi",
+        "Places_user_location": "{{amount}} kredit oldi",
+        "Streams_greeting": "{{amount}} kredit oldi",
+        "YouHaveCreditsToStart": "{{amount}} kredit oldi",
+        "InvitedUserFilledStream": "{{amount}} kredit oldi",
+        "ForFillingStream": "{{amount}} kredit oldi",
+        "CreatePrivateChat": "{{amount}} kredit sarfladi"
+    },
+    "subscriptions": {
+        "infoTitle": "To&#39;lov ma&#39;lumotlarini taqdim eting",
+        "confirm": {
+            "title": "Obunani boshlang",
+            "message": "&quot; {{title}} &quot; ga takroriy obuna boshlansinmi?",
+            "ok": "KELISHDIKMI",
+            "cancel": "Bekor qilish"
+        },
+        "CreditOrDebitCard": "Kredit yoki debet karta",
+        "SubscribePayment": "Obuna bo&#39;lish to&#39;lovi",
+        "ImmediatePayment": "Darhol to&#39;lov",
+        "ProcessingPayment": "To&#39;lovni qayta ishlash",
+        "SubscriptionAlreadyPaid": "Bu obuna allaqachon toʻlangan",
+        "SubscriptionNotActive": "Obuna hozirda faol emas",
+        "Subscribed": "Obuna boʻlgan",
+        "Unsubscribed": "Obuna bekor qilindi",
+        "Unsubscribe": "Obunani bekor qilish",
+        "Subscribe": "Obuna boʻling",
+        "Started": "Boshlandi",
+        "EndsIn": "In tugaydi",
+        "NextPay": "Keyingi to&#39;lov",
+        "Period": "Davr",
+        "Price": "Narxi",
+        "AreYouSureUnsubscribe": "Haqiqatan ham ushbu tarif rejasiga obunani bekor qilmoqchimisiz?",
+        "YouUnsubscribedFromPlan": "Siz &quot; {{planTitle}} &quot; rejasidan obunani bekor qildingiz. Keyingi safar sizdan to‘lov olinmaydi, lekin obunangiz {{endsIn}} gacha davom etadi",
+        "plan": {
+            "TitlePlaceholder": "reja sarlavhasi",
+            "PricePlaceholder": "narx",
+            "SubscriptionTitle": "Obuna rejalari",
+            "DescriptionPlaceholder": "obuna rejasi tavsifi",
+            "AreYouSureDeletePlan": "Bu rejani oʻchirib tashlamoqchimisiz?",
+            "Duration": "Davomiyligi",
+            "Discount": "Chegirma",
+            "SavePlan": "Saqlash",
+            "Interrupt": "To&#39;xtatish",
+            "Continue": "Davom eting",
+            "NewPlan": "Yangi reja",
+            "SelectDisplayType": "{{displayType}} tanlang",
+            "EndDate": "tugash sanasi",
+            "Available": "Mavjud",
+            "Hidden": "Yashirin",
+            "InviteOnly": "Faqat taklif",
+            "CantSubscribeUnlessInvited": "Taklif qilinmaguningizcha bu tarif rejasiga obuna boʻla olmaysiz"
+        }
+    },
+    "payments": {
+        "infoTitle": "To&#39;lov ma&#39;lumotlarini o&#39;rnating",
+        "BuyAmountCredits": "{{amount}} kredit sotib oling",
+        "confirm": {
+            "title": "Toʻlovni amalga oshirish",
+            "message": "{{symbol}} {{amount}} to&#39;lashga rozimisiz?",
+            "ok": "KELISHDIKMI",
+            "cancel": "Bekor qilish"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Kreditlar",
+            "description": "kreditlar va to&#39;lovlarni kuzatib boradi"
+        },
+        "Assets\/plan": {
+            "displayType": "Obuna rejasi",
+            "description": "obuna rejasi"
+        },
+        "Assets\/subscription": {
+            "displayType": "Obuna",
+            "description": "obuna"
+        },
+        "Assets\/product": {
+            "displayType": "Mahsulot",
+            "description": "mahsulot sotilmoqda"
+        },
+        "Assets\/service": {
+            "displayType": "Xizmat",
+            "description": "xizmat taklif etilmoqda"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "{{amount}} kredit oldi"
+        },
+        "Assets\/credits\/bought": {
+            "content": "{{amount}} ta kredit sotib olindi"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} kredit"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} kredit sarfladi"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{toUserName}} ga {{amount}} kredit yuborildi"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} dan {{amount}} kredit oldi"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Hisobingizda kreditlar yetarli emas. Ko&#39;proq kredit sotib olish uchun quyidagi <a href='<i translate='no'>999 &#39;&gt;havolaga<\/a> tashrif buyuring."
+        }
+    },
+    "billing": {
+        "Title": "Aktivlarni hisob-kitob qilish",
+        "CreditsMinimum": "Minimal kreditlar",
+        "CreditsToAdd": "Qo&#39;shish uchun kreditlar",
+        "Save": "Saqlash",
+        "ThisLink": "bu havola",
+        "errors": {
+            "CreditsMinimumNegative": "Minimal kreditlar salbiy bo&#39;lishi mumkin emas",
+            "CreditsToAddNegative": "Qo&#39;shiladigan kreditlar salbiy bo&#39;lishi mumkin emas"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Yangi xizmat",
+            "TitlePlaceholder": "Xizmat nomi",
+            "PricePlaceholder": "Narxni belgilash",
+            "LinkPlaceholder": "qo&#39;shimcha ma&#39;lumot havolasini o&#39;rnating",
+            "DescriptionPlaceholder": "Xizmat tavsifi",
+            "SaveService": "Xizmatni saqlash",
+            "SelectRequiredParticipants": "Kerakli tegishli ishtirokchilar",
+            "RequiredParticipantsDesc": "Iltimos, ushbu xizmatdan foydalanish uchun zarur bo&#39;lgan tegishli ishtirokchilarni tanlang (masalan, &quot;Itlar shousi&quot; uchun uy hayvonlari yoki &quot;Bolalar bayrami&quot; uchun bolalar va boshqalar). Agar xizmat pullik bo&#39;lsa, foydalanuvchi har bir tegishli ishtirokchi uchun ham to&#39;lashi kerak bo&#39;ladi."
+        },
+        "EditServiceTemplate": {
+            "Title": "Tahrirlash xizmati"
+        },
+        "ManageServiceTemplates": "Xizmat shablonlarini boshqarish",
+        "ManageServices": "Xizmatlarni boshqarish",
+        "Free": "Bepul",
+        "OptionalContribution": "Ixtiyoriy hissa",
+        "RequiredPayment": "Majburiy to&#39;lov",
+        "AreYouSureDelete": "Haqiqatan ham bu xizmatni oʻchirib tashlamoqchimisiz?",
+        "AmountServicesRelated": "Ushbu xizmatga tegishli {{amount}} imkoniyat mavjud. Ular ham olib tashlanadi."
+    },
+    "transfer": {
+        "SelectRecipient": "Qabul qiluvchini tanlang",
+        "TransactionSuccess": "Tranzaksiya muvaffaqiyati",
+        "OrTypeWalletAddress": "YOKI qabul qiluvchi hamyon manzilini kiriting",
+        "AppCredits": "Ilova kreditlari"
+    },
+    "NFT": {
+        "Title": "Sarlavha",
+        "Name": "Ism",
+        "EnterName": "Ismni kiriting",
+        "EnterAuthorWallet": "Muallif hamyonini kiriting",
+        "InformationAboutTitle": "{{title}} NFT haqida ma&#39;lumot",
+        "Description": "Tavsif",
+        "DetailedInformationAboutNFT": "NFT haqida batafsil ma&#39;lumot",
+        "PresaleStarts": "Oldindan sotuv 23 dekabrdan boshlanadi",
+        "OwnerUserNotFound": "Ushbu NFT egasi bizning ilovamizda ro&#39;yxatdan o&#39;tmagan.",
+        "BuyNow": "Hozir xarid qilish",
+        "Buy": "Sotib olish",
+        "Add": "Qo&#39;shish",
+        "Remove": "O&#39;chirish",
+        "NoNFTyet": "Hozircha NFT mavjud emas",
+        "Conversation": "Suhbat",
+        "Create": "Yaratish",
+        "CurrentBid": "Joriy taklif",
+        "StartingIn": "Boshlanishi",
+        "EndingIn": "Tugatish",
+        "CreateNFT": "NFT yarating",
+        "TitlePlaceholder": "NFTga nom bering",
+        "DescriptionPlaceholder": "NFTga tavsif bering",
+        "CreateYourNFT": "NFT-ni yarating",
+        "Royalties": "Royalti",
+        "RoyaltyPlaceholder": "Ixtiyoriy. O&#39;tkazishdan oldin ijodkorga to&#39;langan summa.",
+        "ExpirationDate": "Tugash muddati",
+        "StartingDate": "Boshlanish sanasi",
+        "BidsBelowThisAmount": "Bu miqdordan past takliflar qabul qilinmaydi",
+        "MinimumBid": "Minimal taklif",
+        "Author": "Muallif",
+        "Price": "Narxi",
+        "Commission": "Komissiya",
+        "EnterCommission": "Komissiya kiriting",
+        "Owner": "Egasi",
+        "SelectCategory": "Kategoriyani tanlang",
+        "Day": "kun",
+        "Days": "kunlar",
+        "Hour": "Soat",
+        "Hours": "Soat",
+        "Minute": "Daqiqa",
+        "Minutes": "Daqiqalar",
+        "Second": "Ikkinchidan",
+        "Seconds": "soniyalar",
+        "SalesCreator": "sotilgan mablag&#39; yaratuvchiga o&#39;tadi",
+        "Details": "Tafsilotlar",
+        "Bids": "Takliflar",
+        "History": "Tarix",
+        "LoremIpsum": "Lorem Ipsum matbaa va matn terish sanoatining oddiygina soxta matnidir.",
+        "PutOnSale": "Sotuvga qo&#39;ying",
+        "PutOffSale": "Sotishdan olib tashlash",
+        "Transfer": "Transfer",
+        "Actions": "Harakatlar",
+        "Claim": "Talab",
+        "ClaimNFT": "NFT daʼvosi",
+        "Unlocking": "Qulfni ochish",
+        "Unlock": "Qulfni ochish",
+        "Update": "Yangilash",
+        "UpdateToken": "Tokenni yangilang",
+        "UpdateNFT": "NFT-ni yangilang",
+        "CreateToken": "Token yaratish",
+        "PlaceBid": "Taklifni joylashtirish",
+        "SoldOut": "Sotilgan",
+        "NotOnSale": "Sotuvda emas",
+        "NftName": "NFT nomi",
+        "DescribeYourNFT": "Iltimos, NFTingizni tavsiflab bering",
+        "NFTImage": "NFT uchun rasm",
+        "NFTVideo": "Agar mavjud bo&#39;lsa, NFT uchun video",
+        "GenerateDescription": "yoki avtomatik yaratish",
+        "UploadMovie": "Kino yuklash",
+        "MovieSource": "Film manbai",
+        "MovieURL": "Film URL manzili",
+        "UploadFile": "Fayl yuklang",
+        "PutOnMarketplace": "Bozorga qo&#39;ying",
+        "InstantPurchase": "Foydalanuvchilarga NFT-ni darhol sotib olishga ruxsat berish uchun narxni kiriting",
+        "FixedPrice": "Ruxsat etilgan narx",
+        "TimedAuction": "Vaqtli auktsion",
+        "OpenForBids": "Takliflar uchun ochiq",
+        "PriceOnePiece": "Bir dona uchun narxni kiriting",
+        "EnterPrice": "Narxni kiriting",
+        "EnterMinimumBid": "Minimal taklifni kiriting",
+        "SelectChain": "Zanjirni tanlang",
+        "Currency": "Valyuta",
+        "AreYouSureDeleteImage": "Haqiqatan ham rasmni olib tashlamoqchimisiz?",
+        "AreYouSureDeleteVideo": "Haqiqatan ham videoni olib tashlamoqchimisiz?",
+        "series": {
+            "Name": "Ism",
+            "Icon": "Belgi",
+            "Description": "Tavsif",
+            "Author": "Muallif",
+            "SelectSeries": "Seriyani tanlang",
+            "Value": "Qiymat",
+            "AreYouSure": "Ishonchingiz komilmi?",
+            "AuthorInvalid": "Muallif manzili yaroqsiz!",
+            "Address": "Manzil",
+            "CoverImage": "Muqova rasmi",
+            "UploadCoverImage": "Muqova rasmini yuklang",
+            "CommissionAddressInvalid": "Komissiya manzili yaroqsiz",
+            "OnSale": "sotuvda",
+            "OffSale": "sotuvdan tashqari",
+            "CreateSeries": "Seriya yaratish",
+            "UpdateSeries": "Yangilash seriyasi",
+            "SeriesInfo": "Seriya haqida ma&#39;lumot",
+            "SelectAuthor": "Muallifni tanlang",
+            "NewItem": "Yangi NFT seriyasi",
+            "NamePlaceholder": "Seriya nomini kiriting",
+            "DescPlaceholder": "Seriya tavsifini kiriting",
+            "EndingIn": "In tugashi"
+        },
+        "contract": {
+            "CreateContract": "Shartnoma tuzing",
+            "SelectContract": "Shartnomani tanlang",
+            "CreateContractFor": "{{userName}} uchun shartnoma tuzing",
+            "ContractFor": "{{userName}} uchun shartnoma",
+            "UpdateContract": "Shartnomani yangilash",
+            "TransferOwnership": "Egalikni o&#39;tkazish",
+            "SetBaseURI": "Asosiy URI o&#39;rnating",
+            "SetSuffix": "Suffiksni o&#39;rnatish",
+            "CurrentOwner": "Hozirgi egasi",
+            "CurrentBaseURL": "Joriy BaseURL",
+            "ContractAddressAbsent": "Shartnoma manzili yo&#39;q",
+            "FactoryAddressAbsent": "Zavod manzili yo&#39;q",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Sarlavha kerak",
+            "SymbolRequired": "Belgi kerak",
+            "TypeContractName": "shartnoma nomi",
+            "TypeContractSymbol": "shartnoma belgisi (maksimal 10 ta belgi)"
+        },
+        "contests": {
+            "Title": "Musobaqalar",
+            "NewContest": "Yangi Konkurs"
+        },
+        "collections": {
+            "Title": "To&#39;plamlar",
+            "EnterTitle": "sarlavha kiriting",
+            "EnterDescription": "tavsifini kiriting",
+            "NewCollection": "Yangi kolleksiya",
+            "Name": "Ism",
+            "Icon": "Belgi",
+            "Description": "Tavsif",
+            "Author": "Muallif",
+            "SelectCollection": "To&#39;plamni tanlang",
+            "Value": "Qiymat",
+            "AreYouSure": "Ishonchingiz komilmi?",
+            "AuthorInvalid": "Muallif manzili yaroqsiz!",
+            "Address": "Manzil",
+            "CoverImage": "Muqova rasmi",
+            "UploadIcon": "Yuklash belgisi",
+            "CommissionAddressInvalid": "Komissiya manzili yaroqsiz",
+            "OnSale": "sotuvda",
+            "OffSale": "sotuvdan tashqari",
+            "CreateCollection": "To&#39;plam yaratish",
+            "UpdateCollection": "To&#39;plamni yangilash",
+            "CollectionInfo": "To&#39;plam ma&#39;lumotlari",
+            "SelectAuthor": "Muallifni tanlang",
+            "NewItem": "Yangi NFT to&#39;plami",
+            "NamePlaceholder": "To&#39;plam nomini kiriting",
+            "DescPlaceholder": "To&#39;plam tavsifini kiriting",
+            "EndingIn": "In tugashi",
+            "SubmitSeries": "Seriyani yuborish"
+        },
+        "import": {
+            "importNFT": "NFT import qilish",
+            "importAttributes": "NFT atributlarini import qilish",
+            "fileNotFound": "Kechirasiz, CSV fayli topilmadi.",
+            "fileEmpty": "Kechirasiz, CSV fayli boʻsh.",
+            "userIdNotFound": "foydalanuvchi mavjud, lekin identifikatori bo&#39;sh",
+            "errorLine": "{{1}} qator",
+            "fieldNotFound": "Majburiy maydon &quot; {{1}} &quot; topilmadi",
+            "displayTypeEmpty": "“ {{1}} ” uchun displey turi topilmadi",
+            "taskStreamInvalid": "vazifa oqimi yaroqsiz",
+            "instructionsEmpty": "vazifa oqimi ko&#39;rsatmalari bo&#39;sh",
+            "complete": "Bajarildi",
+            "activateUsers": "foydalanuvchilarga faollashtirish xabari yuborilsinmi?",
+            "importProgress": "Taraqqiyot",
+            "importOptions": "Variantlar",
+            "sampleCSV": "CSV namunasini yuklab oling",
+            "fileLabel": "Elektron jadvalni yuklash:",
+            "errorsTitle": "Xatolar yuz berdi"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "NFT toʻplamlari boʻyicha filtrlash",
+                "ShowNFTCollection": "NFT to&#39;plamini ko&#39;rsatish ...",
+                "AllCollections": "Barcha to&#39;plamlar"
+            },
+            "ByUser": {
+                "AllAuthors": "Barcha mualliflar",
+                "AllUsers": "Hamma",
+                "FilterByAuthors": "Mualliflar boʻyicha filtrlash"
+            }
+        },
+        "Back": "To&#39;plamga qaytish",
+        "attributes": {
+            "Title": "Atributlarni boshqarish",
+            "Attributes": "Atributlar",
+            "DisplayTitle": "Displey turi",
+            "AddDisplayType": "Yangi displey turini qo&#39;shing",
+            "NewDisplay": "Yangi displey",
+            "TraitTitle": "Xususiyat turi",
+            "AddTraitTitle": "Yangi xususiyat turini qo&#39;shing",
+            "NewTrait": "Yangi xususiyat turi",
+            "ValueTitle": "Qiymat",
+            "AddValueTitle": "Yangi qiymat qo&#39;shing",
+            "NewValue": "Yangi qiymat",
+            "NewAttribute": "Yangi atribut",
+            "UpdateAttributes": "Atributlarni yangilash",
+            "SaveAttributes": "Atributlarni saqlash"
+        },
+        "profile": {
+            "LogOut": "Chiqish",
+            "Title": "{{userName}} uchun profil",
+            "Description": "Foydalanuvchi tafsilotlari",
+            "aboutPlaceholder": "Bio-ni tahrirlash",
+            "UploadCoverPhoto": "Muqova fotosuratini yuklash",
+            "SureLogOut": "Haqiqatan ham tizimdan chiqmoqchimisiz?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFT Shartnomasi",
+                        "seriesId": "seriya identifikatori",
+                        "owner": "Egasi",
+                        "currency": "Valyuta",
+                        "price": "Narxi",
+                        "beneficiary": "Benefisiar",
+                        "autoindex": "Avtoindeks",
+                        "duration": "Davomiyligi",
+                        "rateInterval": "Tezlik oralig&#39;i",
+                        "rateAmount": "Tarif miqdori"
+                    },
+                    "small": {
+                        "NFTContract": "NFT Shartnomasi",
+                        "seriesId": "tokenlar ushbu seriyada zarb qilinadi",
+                        "owner": "misol egasi, aks holda jo&#39;natuvchi bo&#39;ladi",
+                        "currency": "Xarid qilingan tokenlar uchun valyuta, agar nol bo&#39;lsa - mahalliy tangalar uchun",
+                        "price": "Narxi",
+                        "beneficiary": "Tokenlarni sotishdan foyda oluvchi, aks holda jo&#39;natuvchi bo&#39;ladi",
+                        "autoindex": "Avtoindeks",
+                        "duration": "Zarbdan keyin qulflang. Nol darhol olish degan ma&#39;noni anglatadi.",
+                        "rateInterval": "maxsus sotib olish uchun paqir oralig&#39;i",
+                        "rateAmount": "maxsus xarid uchun chelak miqdori"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ixtiyoriy)",
+                    "number": "raqam",
+                    "address": "manzil",
+                    "fraction": "kasr",
+                    "integer": "butun son",
+                    "seconds": "soniya",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Mahsulot",
+                "viewInstancesList": "Roʻyxatni yangilash"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Seriya identifikatori",
+                        "account": "Hisob",
+                        "amount": "Miqdori"
+                    },
+                    "small": {
+                        "seriesId": "yangi token bunday identifikatorga ega bo&#39;ladi",
+                        "account": "yangi yaratilgan NFT egasi. o&#39;rnatilmagan bo&#39;lsa - joriy hamyonni ishlatadi",
+                        "amount": "yalpiz uchun NFT miqdori"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ixtiyoriy)",
+                    "seriesId": "id",
+                    "account": "hisob",
+                    "amount": "miqdori",
+                    "integer": "butun son"
+                },
+                "btn": {
+                    "Purchase": "Sotib olish",
+                    "SpecialPurchase": "Maxsus xarid"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Manzil"
+                    },
+                    "small": {
+                        "account": "Manzil"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Yaroqsiz manzil"
+                },
+                "placeholders": {
+                    "account": "Manzil"
+                },
+                "addToWhitelist": "Oq ro&#39;yxatga qo&#39;shish",
+                "removeFromWhitelist": "Oq ro&#39;yxatdan o&#39;chirish"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Qo&#39;riqchi",
+                    "recipient": "Qabul qiluvchi"
+                },
+                "small": {
+                    "tokenId": "token identifikatori nima qulflash yoki qulfni ochish kerak",
+                    "custodian": "qulfni ochish mumkin bo&#39;lgan manzil",
+                    "recipient": "tokenlarni oladigan manzil"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Yaroqsiz tokenId",
+                "invalidCustodian": "Yaroqsiz vasiy",
+                "invalidRecipient": "Yaroqsiz qabul qiluvchi"
+            },
+            "placeholders": {
+                "optional": "(ixtiyoriy)",
+                "tokenId": "id",
+                "custodian": "manzil"
+            },
+            "Lock": "Qulflash",
+            "Unlock": "Qulfni ochish",
+            "Locked": "Qulflangan",
+            "CustodianAddress": "Qo&#39;riqchining manzili",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; da&#39;vo qilingan",
+            "TokenWasLocked": "&quot; {{title}} &quot; tokeni qulflangan",
+            "TokenWasUnlocked": "&quot; {{title}} &quot; tokeni qulfdan chiqarildi"
+        }
+    },
+    "fundrise": {
+        "placeholder": "bu hissa haqida biror narsa yozing ..."
+    },
+    "currencies": {
+        "choose": "Valyutani tanlang"
+    }
+}

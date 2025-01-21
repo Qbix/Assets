@@ -1,0 +1,27 @@
+{
+    "title": "Kwụọ",
+    "steps": {
+        "sending_native_coins": "Na-eziga mkpụrụ ego obodo",
+        "sending_tokens": "Na-eziga akara",
+        "swap": "Gbanwee",
+        "approve": "Kwado",
+        "one_tx": "Ị ga-ezipụ otu azụmahịa",
+        "two_tx": "Ị ga-ezipụ azụmahịa abụọ"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Ego iji kwụọ ụgwọ"
+            }
+        },
+        "btns": {
+            "pay": "Kwụọ"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Achọrọ ịkwụ ụgwọ &quot; {{amountOut}} &quot; tokens"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "A naghị akwado yinye dị otú ahụ nwere id &quot; {{chainId}} &quot;."
+    }
+}

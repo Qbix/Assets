@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Tita Tokini",
+                        "timestamps": "Igba",
+                        "prices": "Awọn idiyele",
+                        "endTime": "Akoko Ipari",
+                        "thresholds": "Awọn iloro",
+                        "bonuses": "Awọn imoriri"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Olohun ko le yọkuro",
+                            "option1": "Onini le yọ awọn ami kuro nikan lẹhin opinTime ti kọja",
+                            "option2": "Eni le yọ awọn ami kuro nigbakugba"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Agbegbe adirẹsi",
+                    "methodkeccack": "Keccak256 elile iṣẹ",
+                    "roleId": "ID ipa",
+                    "sellingToken": "Tita Tokini adirẹsi",
+                    "prices": "ETH, idiyele",
+                    "thresholds": "# ti àmi",
+                    "bonuses": "Ajeseku%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Ko si owo"
+                },
+                "btns": {
+                    "createFund": "Ṣẹda Fund",
+                    "createFundInForm": "Ṣẹda"
+                },
+                "fundAddress": "Fund adirẹsi",
+                "createFund": "Ṣẹda Fund",
+                "fundInfo": "Alaye",
+                "produce": "Mu jade",
+                "loading": "Ikojọpọ",
+                "viewInstancesList": "Atokọ sọtun"
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "කාලසීමාව",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "ජනප්රිය ටෝකන්",
+                    "donations": "පරිත්යාග",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "සංඛ්යාංකය",
+                    "denominator": "හරය"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "කාලය දින වලින්",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "ජනප්රිය ටෝකන්",
+                    "donations": "පරිත්යාග",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "සංඛ්යාංකය",
+                    "denominator": "හරය"
+                }
+            },
+            "placeholders": {
+                "optional": "(විකල්ප)",
+                "tuple": "ටුපල්[]",
+                "number": "අංකය",
+                "address": "ලිපිනය",
+                "fraction": "භාගය",
+                "integer": "පූර්ණ සංඛ්යාව",
+                "seconds": "තත්පර",
+                "days": "දින",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "තටාක නොමැත"
+            },
+            "btns": {
+                "createPool": "තටාකය සාදන්න",
+                "createPoolInForm": "නිර්මාණය කරන්න"
+            },
+            "createPool": "තටාකය සාදන්න",
+            "produce": "නිපැයුම",
+            "loading": "පූරණය වෙමින් පවතී",
+            "viewInstancesList": "ලැයිස්තුව නැවුම් කරන්න"
+        }
+    }
+}

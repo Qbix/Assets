@@ -1,0 +1,27 @@
+{
+    "title": "Them",
+    "steps": {
+        "sending_native_coins": "Xa cov npib ib txwm muaj",
+        "sending_tokens": "Xa tokens",
+        "swap": "Sib pauv",
+        "approve": "Pom zoo",
+        "one_tx": "Koj yuav tsum xa ib qho kev sib pauv",
+        "two_tx": "Koj yuav tsum xa ob qhov kev hloov pauv"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Cov nyiaj them"
+            }
+        },
+        "btns": {
+            "pay": "Them"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Yuav tsum them &quot; {{amountOut}} &quot; tokens"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Xws li saw nrog ID &quot; {{chainId}} &quot; tsis txaus siab"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "title": "Utu",
+    "steps": {
+        "sending_native_coins": "Te tuku moni taketake",
+        "sending_tokens": "Te tuku tohu",
+        "swap": "Whakawhiti",
+        "approve": "Whakaae",
+        "one_tx": "Me tuku kotahi tauwhitinga",
+        "two_tx": "Me tuku e koe kia rua nga whakawhitinga"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Nga putea hei utu"
+            }
+        },
+        "btns": {
+            "pay": "Utu"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Me utu nga tohu &quot; {{amountOut}} &quot;."
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Ko taua mekameka me te id &quot; {{chainId}} &quot; kaore i te tautokohia"
+    }
+}

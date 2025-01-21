@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "tèarmann",
+                        "duration": "Fad",
+                        "amount": "Suim"
+                    },
+                    "small": {
+                        "reserveToken": "tèarmann",
+                        "duration": "Fad",
+                        "amount": "Suim"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Fad",
+                    "amount": "suim"
+                },
+                "btns": {
+                    "stake": "Sgeul"
+                },
+                "stake": "Sgeul",
+                "loading": "A&#39; luchdachadh"
+            }
+        }
+    }
+}

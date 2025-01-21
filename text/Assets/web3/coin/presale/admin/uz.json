@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Token sotiladi",
+                        "timestamps": "Vaqtlar",
+                        "prices": "Narxlar",
+                        "endTime": "Tugash vaqti",
+                        "thresholds": "Eshiklar",
+                        "bonuses": "Bonuslar"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Egasi qaytarib ololmaydi",
+                            "option1": "Egasi tokenlarni faqat endTime o&#39;tgandan keyin olib qo&#39;yishi mumkin",
+                            "option2": "Egasi istalgan vaqtda tokenlarni olib qo&#39;yishi mumkin"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Hamjamiyat manzili",
+                    "methodkeccack": "Keccak256 xesh funktsiyasi",
+                    "roleId": "Rol identifikatori",
+                    "sellingToken": "Token sotiladigan manzil",
+                    "prices": "ETH, narx",
+                    "thresholds": "# token",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Hech qanday mablag&#39; yo&#39;q"
+                },
+                "btns": {
+                    "createFund": "Fond yaratish",
+                    "createFundInForm": "Yaratish"
+                },
+                "fundAddress": "Fond manzili",
+                "createFund": "Fond yaratish",
+                "fundInfo": "Ma&#39;lumot",
+                "produce": "Mahsulot",
+                "loading": "Yuklanmoqda",
+                "viewInstancesList": "Roʻyxatni yangilash"
+            }
+        }
+    }
+}

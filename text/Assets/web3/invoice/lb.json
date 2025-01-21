@@ -1,0 +1,27 @@
+{
+    "title": "Bezuelen",
+    "steps": {
+        "sending_native_coins": "Schécken gebierteg Mënzen",
+        "sending_tokens": "Schécken Tokens",
+        "swap": "Tauschen",
+        "approve": "Zoustëmmen",
+        "one_tx": "Dir sollt eng Transaktioun schécken",
+        "two_tx": "Dir sollt zwou Transaktiounen schécken"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Fongen ze bezuelen"
+            }
+        },
+        "btns": {
+            "pay": "Bezuelen"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Muss &quot; {{amountOut}} &quot; Token bezuelen"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Esou Kette mat ID &quot; {{chainId}} &quot; gëtt net ënnerstëtzt"
+    }
+}

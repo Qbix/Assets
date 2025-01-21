@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "àmiErc20",
+                    "duration": "Iye akoko",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "gbajumoTokini",
+                    "donations": "awọn ẹbun",
+                    "rewardsRateFraction": "ereRateFraction",
+                    "numerator": "oni nọmba",
+                    "denominator": "iyeida"
+                },
+                "small": {
+                    "tokenErc20": "àmiErc20",
+                    "duration": "Iye akoko ni awọn ọjọ",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "gbajumoTokini",
+                    "donations": "awọn ẹbun",
+                    "rewardsRateFraction": "ereRateFraction",
+                    "numerator": "oni nọmba",
+                    "denominator": "iyeida"
+                }
+            },
+            "placeholders": {
+                "optional": "(aṣayan)",
+                "tuple": "tuple[]",
+                "number": "nọmba",
+                "address": "adirẹsi",
+                "fraction": "ida",
+                "integer": "odidi",
+                "seconds": "iṣẹju-aaya",
+                "days": "awọn ọjọ",
+                "uint256": "oju256",
+                "uint192": "oju192",
+                "uint64": "oju64",
+                "uint32": "oju32",
+                "uint16": "inu16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Nibẹ ni o wa ti ko si adagun"
+            },
+            "btns": {
+                "createPool": "Ṣẹda Pool",
+                "createPoolInForm": "Ṣẹda"
+            },
+            "createPool": "Ṣẹda Pool",
+            "produce": "Mu jade",
+            "loading": "Ikojọpọ",
+            "viewInstancesList": "Atokọ sọtun"
+        }
+    }
+}

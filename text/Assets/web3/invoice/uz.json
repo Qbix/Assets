@@ -1,0 +1,27 @@
+{
+    "title": "To&#39;lash",
+    "steps": {
+        "sending_native_coins": "Mahalliy tangalarni yuborish",
+        "sending_tokens": "Tokenlarni yuborish",
+        "swap": "Almashtirish",
+        "approve": "Tasdiqlash",
+        "one_tx": "Siz bitta tranzaktsiyani yuborishingiz kerak",
+        "two_tx": "Siz ikkita tranzaktsiyani yuborishingiz kerak"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "To&#39;lash uchun mablag&#39;lar"
+            }
+        },
+        "btns": {
+            "pay": "To&#39;lash"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "&quot; {{amountOut}} &quot; tokenlarini to&#39;lash kerak"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "&quot; {{chainId}} &quot; identifikatorli bunday zanjir qo&#39;llab-quvvatlanmaydi"
+    }
+}

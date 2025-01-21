@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "געדויער",
+                    "bonusTokenFraction": "באָנוסTokenFraction",
+                    "popularToken": "פאָלקס טאָקען",
+                    "donations": "דאָנאַטיאָנס",
+                    "rewardsRateFraction": "ריוואָרדזRateFraction",
+                    "numerator": "נומעראַטאָר",
+                    "denominator": "דענאָמינאַטאָר"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "געדויער אין טעג",
+                    "bonusTokenFraction": "באָנוסTokenFraction",
+                    "popularToken": "פאָלקס טאָקען",
+                    "donations": "דאָנאַטיאָנס",
+                    "rewardsRateFraction": "ריוואָרדזRateFraction",
+                    "numerator": "נומעראַטאָר",
+                    "denominator": "דענאָמינאַטאָר"
+                }
+            },
+            "placeholders": {
+                "optional": "(אַפּשאַנאַל)",
+                "tuple": "טאַפליע []",
+                "number": "נומער",
+                "address": "אַדרעס",
+                "fraction": "בראָכצאָל",
+                "integer": "גאַנץ נומער",
+                "seconds": "סעקונדעס",
+                "days": "טעג",
+                "uint256": "uint256",
+                "uint192": "וינט192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "עס זענען קיין פּאָאָלס"
+            },
+            "btns": {
+                "createPool": "שאַפֿן פּול",
+                "createPoolInForm": "שאַפֿן"
+            },
+            "createPool": "שאַפֿן פּול",
+            "produce": "פּראָדוצירן",
+            "loading": "Loading",
+            "viewInstancesList": "דערפרישן רשימה"
+        }
+    }
+}

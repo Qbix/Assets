@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc 20",
+                    "duration": "Duration",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "nrovToken",
+                    "donations": "nyiaj pub dawb",
+                    "rewardsRateFraction": "khoom pligRateFraction",
+                    "numerator": "tus lej",
+                    "denominator": "tus lej"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc 20",
+                    "duration": "Duration nyob rau hauv hnub",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "nrovToken",
+                    "donations": "nyiaj pub dawb",
+                    "rewardsRateFraction": "khoom pligRateFraction",
+                    "numerator": "tus lej",
+                    "denominator": "tus lej"
+                }
+            },
+            "placeholders": {
+                "optional": "(yeem)",
+                "tuple": "tuple[]",
+                "number": "tus lej",
+                "address": "chaw nyob",
+                "fraction": "feem",
+                "integer": "tus lej",
+                "seconds": "vib nas this",
+                "days": "hnub",
+                "uint256": "ua 256",
+                "uint192": "ib 192",
+                "uint64": "ua 64",
+                "uint32": "ntu 32",
+                "uint16": "ntu 16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Tsis muaj pas dej"
+            },
+            "btns": {
+                "createPool": "Tsim Pas Dej",
+                "createPoolInForm": "Tsim"
+            },
+            "createPool": "Tsim Pas Dej",
+            "produce": "Tsim tawm",
+            "loading": "Chaw thau khoom",
+            "viewInstancesList": "Refresh List"
+        }
+    }
+}

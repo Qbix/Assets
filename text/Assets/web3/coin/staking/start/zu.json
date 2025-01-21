@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ubude besikhathi",
+                        "amount": "Inani"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ubude besikhathi",
+                        "amount": "Inani"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Ubude besikhathi",
+                    "amount": "inani"
+                },
+                "btns": {
+                    "stake": "Isigxobo"
+                },
+                "stake": "Isigxobo",
+                "loading": "Iyalayisha"
+            }
+        }
+    }
+}

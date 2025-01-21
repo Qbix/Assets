@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Vendere Thochen",
+                        "timestamps": "Tempora",
+                        "prices": "Prices",
+                        "endTime": "Tempus finis",
+                        "thresholds": "Limina",
+                        "bonuses": "Bonuses"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Dominus non potest recedere",
+                            "option1": "Dominus potest recedere signa nisi post endTime transierunt",
+                            "option2": "Dominus potest recedere signis aliquando"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Communitas electronica",
+                    "methodkeccack": "Keccak256 Nullam functionem",
+                    "roleId": "Munus ID",
+                    "sellingToken": "Vendere Thochen oratio",
+                    "prices": "ETH, Price",
+                    "thresholds": "# De signis",
+                    "bonuses": "Bonus%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Nulla pecunia"
+                },
+                "btns": {
+                    "createFund": "Creare Fund",
+                    "createFundInForm": "Create"
+                },
+                "fundAddress": "Fund oratio",
+                "createFund": "Creare Fund",
+                "fundInfo": "Info",
+                "produce": "Profer",
+                "loading": "Loading",
+                "viewInstancesList": "Renovare List"
+            }
+        }
+    }
+}

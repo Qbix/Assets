@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Eraro",
+        "WalletAbsent": "La monujo ne estas konektita.",
+        "Rendering": "Estis eraroj dum bildigo de <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Prezo bezonata!",
+        "NameRequired": "Nomo bezonata!",
+        "PriceInvalid": "Prezo nevalida!",
+        "AmountInvalid": "Kvanto nevalida!",
+        "TransactionFailed": "La transakcio malsukcesis",
+        "ChainNotSupported": "La elektita ĉeno ne estas subtenata. Subtena ĉeno: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Bezonas MetaMask konektita por labori kun aplikaĵo",
+        "UserNotLoggedInMetaMask": "Uzanto ne estas ensalutinta al MetaMask",
+        "CurrencyNotFound": "Monero ne trovita",
+        "WrongChain": "Ĉi tiu NFT kreita sub &quot; {{chain}} &quot;. Bonvolu uzi ĉi tiun ĉenon.",
+        "NoRecipientSelected": "Neniu ricevanto estas elektita",
+        "CantManageFrozenSeries": "Vi ne povas administri frostitajn seriojn",
+        "SubscriptionStreamNotPaid": "Vi ne pagis por vidi ĉi tiun enhavon. Bonvolu klaki {{subscriptionUrl}} kaj aboni la taŭgan planon."
+    },
+    "admin": {
+        "Title": "Aktivoj administraj",
+        "SubscriptionTitle": "Abonplanoj"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Frapu por pagi"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : la akuzo estis prilaborita por {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Dankon pro via pago al {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} abonis {{plan.title}}",
+        "YouSubscribedTo": "Vi estis abonita al {{plan.title}}",
+        "Assets\/credits\/alert": "Vi havas atentigon rilatan al via konto"
+    },
+    "charge": {
+        "Subject": "Vi ricevis pagon de {{displayAmount}} el {{call 'publisher.displayName'}} por la &quot; {{description}} &quot;",
+        "HasBeenCharged": "He, ĉi tio estas nur por sciigi vin, {{1}} estis ŝargita {{2}} por {{3}} antaŭ {{4}}"
+    },
+    "charged": {
+        "Subject": "Dankon pro via pago por la &quot; {{description}} &quot;",
+        "HavePaid": "Hej {{1}} , ĉi tio estas nur rapida konfirmo, ke vi sukcese pagis {{2}} ĝis {{3}} por {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Konekti konton",
+        "Success": "Sukceso",
+        "YourAccountCreated": "Via konto estas kreita sukcese!",
+        "YourAccountAlreadyCreated": "Via konto jam estas kreita kaj estas preta por uzi"
+    },
+    "payment": {
+        "AboutOrder": "Informoj pri mendo",
+        "PaymentMethod": "Pagmetodo",
+        "ContactInfo": "Kontaktinformoj",
+        "Pay": "Pagu",
+        "PaymentSucceeded": "La pago estis sukcese procesita",
+        "PaymentProcessing.": "Via pago estas procesita",
+        "FailTryAgain": "Via pago ne sukcesis. Bonvolu provi denove.",
+        "SomethingWrong": "Io misfunkciis",
+        "PaymentStatus": "Paga stato",
+        "PayTo": "Pagu {{displayName}}",
+        "ChooseCurrency": "Elektu valuton",
+        "YouCanSendUpTo": "Vi povas sendi ĝis {{amount}} {{symbol}}",
+        "Send": "Sendu",
+        "EnterAmount": "enigu kvanton"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Invito akceptita de {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} plenigis {{FilledStreamTitle}}",
+        "ForFillingStream": "Por plenigi {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Vi havas {{amount}} kreditojn por komenci",
+        "PaymentFor": "Pago por &quot; {{1}} &quot;",
+        "PaymentTo": "Pago al {{1}}",
+        "PaymentToUser": "Transdonu al {{toUserName}}",
+        "CreatePrivateChat": "por privata babilado kun {{toUserName}}",
+        "CreatePaidStream": "por krei {{toStreamName}}",
+        "JoinedPaidStream": "por rezervado en &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "por krei komunumon &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "kiel rezerva repago en &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Aĉetis {{amount}} kreditojn",
+        "BonusCredits": "Gratifiko {{amount}} kreditoj",
+        "BuyAmountCredits": "Aĉetu {{amount}} kreditojn",
+        "WatchClip": "por rigardi {{fromStreamTitle}}",
+        "MissingCredits": "Mankas Kreditoj",
+        "YouMissingCredits": "Vi bezonas pliajn {{amount}} kreditojn por daŭrigi.",
+        "BuyCredits": "Aĉetu kreditojn",
+        "BuyBonus": "Aĉeti {{amount}} kreditojn samtempe rezultigos gratifikon de {{bonus}} kreditoj.",
+        "Buy": "Aĉeti",
+        "PurchaseCredits": "Aĉetu Kreditojn",
+        "Credits": "Kreditoj",
+        "ErrorInvalidAmount": "Kvanto nevalida",
+        "ErrorInvalidCurrency": "Bedaŭrinde, ni ankoraŭ ne subtenas la valuton {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kreditoj",
+            "BonusCredits": "{{amount}} kreditoj"
+        }
+    },
+    "history": {
+        "Date": "Dato",
+        "Amount": "Kvanto",
+        "Description": "Priskribo",
+        "Client": "Kliento",
+        "User": "Uzanto",
+        "To": "al",
+        "From": "de",
+        "SeeHistory": "Vidu paghistorion por {{1}}",
+        "HistoryEmpty": "Ankoraŭ neniuj transakcioj",
+        "PaymentFor": "Sendis {{amount}} kreditojn",
+        "PaymentTo": "Sendis {{amount}} kreditojn",
+        "PaymentToUser": "Sendis {{amount}} kreditojn",
+        "CreatePaidStream": "Elspezis {{amount}} kreditojn",
+        "WatchClip": {
+            "+": "Gajnis {{amount}} kreditojn",
+            "-": "Elspezis {{amount}} kreditojn"
+        },
+        "JoinedPaidStream": {
+            "+": "Gajnis {{amount}} kreditojn",
+            "-": "Elspezis {{amount}} kreditojn"
+        },
+        "LeftPaidStream": {
+            "+": "Ricevis {{amount}} kreditojn",
+            "-": "Sendis {{amount}} kreditojn"
+        },
+        "CreatedCommunity": "Elspezis {{amount}} kreditojn",
+        "BoughtCredits": "Aĉetis {{amount}} kreditojn",
+        "BonusCredits": "Ricevis gratifikon {{amount}} kreditojn",
+        "InviteAcceptedBy": "Gajnis {{amount}} kreditojn",
+        "Streams_user_firstname": "Gajnis {{amount}} kreditojn",
+        "Streams_user_lastname": "Gajnis {{amount}} kreditojn",
+        "Streams_user_icon": "Gajnis {{amount}} kreditojn",
+        "Places_user_location": "Gajnis {{amount}} kreditojn",
+        "Streams_greeting": "Gajnis {{amount}} kreditojn",
+        "YouHaveCreditsToStart": "Gajnis {{amount}} kreditojn",
+        "InvitedUserFilledStream": "Gajnis {{amount}} kreditojn",
+        "ForFillingStream": "Gajnis {{amount}} kreditojn",
+        "CreatePrivateChat": "Elspezis {{amount}} kreditojn"
+    },
+    "subscriptions": {
+        "infoTitle": "Provizu la Pagajn Informojn",
+        "confirm": {
+            "title": "Komencu Abono",
+            "message": "Ĉu komenci ripetiĝantan abonon al &quot; {{title}} &quot;?",
+            "ok": "Bone",
+            "cancel": "Nuligi"
+        },
+        "CreditOrDebitCard": "Kredit- aŭ debetkarto",
+        "SubscribePayment": "Abonu Pago",
+        "ImmediatePayment": "Tuja Pago",
+        "ProcessingPayment": "Pretigo de Pago",
+        "SubscriptionAlreadyPaid": "Ĉi tiu abono jam pagis",
+        "SubscriptionNotActive": "La abono estas nuntempe neaktiva",
+        "Subscribed": "Abonita",
+        "Unsubscribed": "Malabonita",
+        "Unsubscribe": "Malaboniĝi",
+        "Subscribe": "Abonu",
+        "Started": "Komenciĝis",
+        "EndsIn": "Finiĝas en",
+        "NextPay": "Sekva pago",
+        "Period": "Periodo",
+        "Price": "Prezo",
+        "AreYouSureUnsubscribe": "Ĉu vi certas, ke vi volas malaboni ĉi tiun planon?",
+        "YouUnsubscribedFromPlan": "Vi malabonis de la plano &quot; {{planTitle}} &quot;. Vi ne estos ŝargita venontfoje, sed via abono daŭros ĝis {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "plano titolo",
+            "PricePlaceholder": "prezo",
+            "SubscriptionTitle": "Abonplanoj",
+            "DescriptionPlaceholder": "priskribo de abonplano",
+            "AreYouSureDeletePlan": "Ĉu vi certas, ke vi volas forigi ĉi tiun planon?",
+            "Duration": "Daŭro",
+            "Discount": "Rabato",
+            "SavePlan": "Konservu",
+            "Interrupt": "Interrompi",
+            "Continue": "Daŭrigu",
+            "NewPlan": "Nova Plano",
+            "SelectDisplayType": "Elektu {{displayType}}",
+            "EndDate": "findato",
+            "Available": "Disponebla",
+            "Hidden": "Kaŝita",
+            "InviteOnly": "Invito-nur",
+            "CantSubscribeUnlessInvited": "Vi ne povas aboni ĉi tiun planon krom se vi estas invitita"
+        }
+    },
+    "payments": {
+        "infoTitle": "Agordu Pagajn Informojn",
+        "BuyAmountCredits": "Aĉetu {{amount}} kreditojn",
+        "confirm": {
+            "title": "Faru Pagon",
+            "message": "Ĉu vi konsentas pagi {{symbol}} {{amount}} ?",
+            "ok": "Bone",
+            "cancel": "Nuligi"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Kreditoj",
+            "description": "kontrolas kreditojn kaj pagojn"
+        },
+        "Assets\/plan": {
+            "displayType": "Abonplano",
+            "description": "abonplano"
+        },
+        "Assets\/subscription": {
+            "displayType": "Abono",
+            "description": "abono"
+        },
+        "Assets\/product": {
+            "displayType": "Produkto",
+            "description": "produkto vendata"
+        },
+        "Assets\/service": {
+            "displayType": "Servo",
+            "description": "servo ofertita"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Gajnis {{amount}} kreditojn"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Aĉetis {{amount}} kreditojn"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Gratifiko {{amount}} kreditoj"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Elspezis {{amount}} kreditojn"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Sendis {{amount}} kreditojn al {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Ricevis {{amount}} kreditojn de {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Vi havas nesufiĉajn kreditojn en via konto. Bonvolu viziti la sekvan <a href='<i translate='no'>999 &#39;&gt;ligilon<\/a> por aĉeti pli da kreditoj."
+        }
+    },
+    "billing": {
+        "Title": "Aktivoj fakturado",
+        "CreditsMinimum": "Minimumaj kreditoj",
+        "CreditsToAdd": "Kreditoj por aldoni",
+        "Save": "Konservu",
+        "ThisLink": "ĉi tiu ligo",
+        "errors": {
+            "CreditsMinimumNegative": "La minimumaj kreditoj ne povas esti negativaj",
+            "CreditsToAddNegative": "La aldonindaj kreditoj ne povas esti negativaj"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Nova Servo",
+            "TitlePlaceholder": "Servotitolo",
+            "PricePlaceholder": "Fiksu prezon",
+            "LinkPlaceholder": "agordu aldonan ligilon de informoj",
+            "DescriptionPlaceholder": "Servopriskribo",
+            "SaveService": "Savu Servon",
+            "SelectRequiredParticipants": "Bezonataj rilataj partoprenantoj",
+            "RequiredParticipantsDesc": "Bonvolu elekti rilatajn partoprenantojn, kiuj estas bezonataj por uzi ĉi tiun servon (ekzemple dorlotbestoj por &quot;Hundo-spektaklo&quot;, aŭ infanoj por &quot;Infana feriado&quot; ktp). Se servo estas pagita, uzanto devos pagi ankaŭ por ĉiu rilata partoprenanto."
+        },
+        "EditServiceTemplate": {
+            "Title": "Redakti Servon"
+        },
+        "ManageServiceTemplates": "Administri Servaj Ŝablonoj",
+        "ManageServices": "Administri Servojn",
+        "Free": "Senpaga",
+        "OptionalContribution": "Laŭvola kontribuo",
+        "RequiredPayment": "Bezonata pago",
+        "AreYouSureDelete": "Ĉu vi certas, ke vi volas forigi ĉi tiun servon?",
+        "AmountServicesRelated": "Estas {{amount}} disponeblaj rilate al ĉi tiu servo. Ili ankaŭ estos forigitaj."
+    },
+    "transfer": {
+        "SelectRecipient": "Elektu ricevanton",
+        "TransactionSuccess": "Transakcia Sukceso",
+        "OrTypeWalletAddress": "AŬ tajpu adreson de la monujo de la ricevanto",
+        "AppCredits": "Aplikaj Kreditoj"
+    },
+    "NFT": {
+        "Title": "Titolo",
+        "Name": "Nomo",
+        "EnterName": "Enigu nomon",
+        "EnterAuthorWallet": "Enigu aŭtoran monujon",
+        "InformationAboutTitle": "Informoj pri {{title}} NFT",
+        "Description": "Priskribo",
+        "DetailedInformationAboutNFT": "Detalaj informoj pri NFT",
+        "PresaleStarts": "Antaŭvendo komenciĝas la 23-an de decembro",
+        "OwnerUserNotFound": "Posedanto de ĉi tiu NFT ne estas registrita en nia aplikaĵo.",
+        "BuyNow": "Aĉetu nun",
+        "Buy": "Aĉeti",
+        "Add": "Aldoni",
+        "Remove": "Forigi",
+        "NoNFTyet": "Neniuj NFT-oj ankoraŭ",
+        "Conversation": "Konversacio",
+        "Create": "Krei",
+        "CurrentBid": "Nuna oferto",
+        "StartingIn": "Komencante en",
+        "EndingIn": "Finiĝante en",
+        "CreateNFT": "Kreu NFT",
+        "TitlePlaceholder": "Donu al via NFT titolon",
+        "DescriptionPlaceholder": "Donu al via NFT priskribon",
+        "CreateYourNFT": "Kreu vian NFT",
+        "Royalties": "Moĝecoj",
+        "RoyaltyPlaceholder": "Laŭvola. Sumo pagita al kreinto antaŭ translokigo.",
+        "ExpirationDate": "Limdato",
+        "StartingDate": "Komenca Dato",
+        "BidsBelowThisAmount": "Ofertoj sub ĉi tiu kvanto ne estos permesitaj",
+        "MinimumBid": "Minimuma oferto",
+        "Author": "Aŭtoro",
+        "Price": "Prezo",
+        "Commission": "Komisiono",
+        "EnterCommission": "Eniru komisionon",
+        "Owner": "Posedanto",
+        "SelectCategory": "Elektu kategorion",
+        "Day": "Tago",
+        "Days": "Tagoj",
+        "Hour": "Horo",
+        "Hours": "Horoj",
+        "Minute": "Minuto",
+        "Minutes": "Minutoj",
+        "Second": "Due",
+        "Seconds": "Sekundoj",
+        "SalesCreator": "de vendo iros al kreinto",
+        "Details": "Detaloj",
+        "Bids": "Ofertoj",
+        "History": "Historio",
+        "LoremIpsum": "Lorem Ipsum estas simple imita teksto de la presanta kaj kompostada industrio.",
+        "PutOnSale": "Metu sur vendon",
+        "PutOffSale": "Retiriĝi de vendo",
+        "Transfer": "Translokigo",
+        "Actions": "Agoj",
+        "Claim": "Aserto",
+        "ClaimNFT": "Asertu NFT",
+        "Unlocking": "Malŝlosado",
+        "Unlock": "Malŝlosu",
+        "Update": "Ĝisdatigo",
+        "UpdateToken": "Ĝisdatigi Tokenon",
+        "UpdateNFT": "Ĝisdatigu NFT",
+        "CreateToken": "Krei Tokenon",
+        "PlaceBid": "Metu Oferton",
+        "SoldOut": "Vendita",
+        "NotOnSale": "Ne Vendas",
+        "NftName": "NFT-nomo",
+        "DescribeYourNFT": "Bonvolu priskribi vian NFT",
+        "NFTImage": "Bildo por NFT",
+        "NFTVideo": "Video por NFT, se ekzistas",
+        "GenerateDescription": "aŭ aŭtomate generi",
+        "UploadMovie": "Alŝutu filmon",
+        "MovieSource": "Filmfonto",
+        "MovieURL": "Filma URL",
+        "UploadFile": "Alŝutu dosieron",
+        "PutOnMarketplace": "Surmetu vendoplacon",
+        "InstantPurchase": "Enigu prezon por permesi uzantojn tuj aĉeti vian NFT",
+        "FixedPrice": "Fiksa prezo",
+        "TimedAuction": "Tempigita aŭkcio",
+        "OpenForBids": "Malfermita por ofertoj",
+        "PriceOnePiece": "Enigu prezon por unu peco",
+        "EnterPrice": "Enigu prezon",
+        "EnterMinimumBid": "Enigu Minimuman oferton",
+        "SelectChain": "Elektu ĉenon",
+        "Currency": "Monero",
+        "AreYouSureDeleteImage": "Ĉu vi certas, ke vi volas forigi bildon?",
+        "AreYouSureDeleteVideo": "Ĉu vi certas, ke vi volas forigi filmeton?",
+        "series": {
+            "Name": "Nomo",
+            "Icon": "Ikono",
+            "Description": "Priskribo",
+            "Author": "Aŭtoro",
+            "SelectSeries": "Elektu serion",
+            "Value": "Valoro",
+            "AreYouSure": "Ĉu vi certas?",
+            "AuthorInvalid": "Aŭtora adreso nevalida!",
+            "Address": "Adreso",
+            "CoverImage": "Kovrilo bildo",
+            "UploadCoverImage": "Alŝutu kovrilbildon",
+            "CommissionAddressInvalid": "Komisionadreso nevalida",
+            "OnSale": "je vendo",
+            "OffSale": "ekster vendo",
+            "CreateSeries": "Krei Seriojn",
+            "UpdateSeries": "Ĝisdatigi Serio",
+            "SeriesInfo": "Serio Info",
+            "SelectAuthor": "Elektu aŭtoron",
+            "NewItem": "Nova NFT-serio",
+            "NamePlaceholder": "Enigu serionomon",
+            "DescPlaceholder": "Enigu seriopriskribon",
+            "EndingIn": "Finiĝanta En"
+        },
+        "contract": {
+            "CreateContract": "Krei kontrakton",
+            "SelectContract": "Elektu kontrakton",
+            "CreateContractFor": "Kreu kontrakton por {{userName}}",
+            "ContractFor": "Kontrakto por {{userName}}",
+            "UpdateContract": "Ĝisdatigi Kontrakto",
+            "TransferOwnership": "Transdono de Proprieto",
+            "SetBaseURI": "Agordu Bazan URI",
+            "SetSuffix": "Agordu Sufikson",
+            "CurrentOwner": "Nuna Posedanto",
+            "CurrentBaseURL": "Nuna BaseURL",
+            "ContractAddressAbsent": "Kontrakta adreso forestas",
+            "FactoryAddressAbsent": "Fabriko adreso forestas",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Titolo bezonata",
+            "SymbolRequired": "Simbolo bezonata",
+            "TypeContractName": "kontraktonomo",
+            "TypeContractSymbol": "kontrakto-simbolo (maksimume 10 signoj)"
+        },
+        "contests": {
+            "Title": "Konkursoj",
+            "NewContest": "Nova Konkurso"
+        },
+        "collections": {
+            "Title": "Kolektoj",
+            "EnterTitle": "enigu titolon",
+            "EnterDescription": "enigu priskribon",
+            "NewCollection": "Nova Kolekto",
+            "Name": "Nomo",
+            "Icon": "Ikono",
+            "Description": "Priskribo",
+            "Author": "Aŭtoro",
+            "SelectCollection": "Elektu kolekton",
+            "Value": "Valoro",
+            "AreYouSure": "Ĉu vi certas?",
+            "AuthorInvalid": "Aŭtora adreso nevalida!",
+            "Address": "Adreso",
+            "CoverImage": "Kovrilo bildo",
+            "UploadIcon": "Alŝutu ikono",
+            "CommissionAddressInvalid": "Komisionadreso nevalida",
+            "OnSale": "je vendo",
+            "OffSale": "ekster vendo",
+            "CreateCollection": "Krei Kolekton",
+            "UpdateCollection": "Ĝisdatigi Kolekton",
+            "CollectionInfo": "Kolekto Informoj",
+            "SelectAuthor": "Elektu aŭtoron",
+            "NewItem": "Nova NFT-Kolekto",
+            "NamePlaceholder": "Enigu kolektonomon",
+            "DescPlaceholder": "Enigu kolektopriskribon",
+            "EndingIn": "Finiĝanta En",
+            "SubmitSeries": "Sendu serion"
+        },
+        "import": {
+            "importNFT": "Importado de NFT-oj",
+            "importAttributes": "Importi NFT-atributojn",
+            "fileNotFound": "Pardonu, CSV-dosiero ne trovita.",
+            "fileEmpty": "Pardonu, CSV-dosiero estas malplena.",
+            "userIdNotFound": "uzanto ekzistas sed id malplena",
+            "errorLine": "linio {{1}}",
+            "fieldNotFound": "Bezonata kampo &quot; {{1}} &quot; ne trovita",
+            "displayTypeEmpty": "Montra tipo por &quot; {{1}} &quot; ne trovita",
+            "taskStreamInvalid": "taskofluo nevalida",
+            "instructionsEmpty": "taskstream instrukcioj malplenaj",
+            "complete": "Kompleta",
+            "activateUsers": "sendi aktivigan mesaĝon al uzantoj?",
+            "importProgress": "Progreso",
+            "importOptions": "Opcioj",
+            "sampleCSV": "Elŝutu Specimen CSV",
+            "fileLabel": "Alŝutu Tabelfolion:",
+            "errorsTitle": "Eraroj okazis"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filtrilo per NFT-Kolektoj",
+                "ShowNFTCollection": "Montri NFT-kolekton en...",
+                "AllCollections": "Ĉiuj Kolektoj"
+            },
+            "ByUser": {
+                "AllAuthors": "Ĉiuj Aŭtoroj",
+                "AllUsers": "Ĉiuj",
+                "FilterByAuthors": "Filtrilo laŭ Aŭtoroj"
+            }
+        },
+        "Back": "Reen al Kolekto",
+        "attributes": {
+            "Title": "Administri Atributojn",
+            "Attributes": "Atributoj",
+            "DisplayTitle": "Montra Tipo",
+            "AddDisplayType": "Aldonu novan ekrantipon",
+            "NewDisplay": "Nova Ekrano",
+            "TraitTitle": "Trajta Tipo",
+            "AddTraitTitle": "Aldonu novan trajton",
+            "NewTrait": "Nova Trajta Tipo",
+            "ValueTitle": "Valoro",
+            "AddValueTitle": "Aldonu novan valoron",
+            "NewValue": "Nova Valoro",
+            "NewAttribute": "Nova Atributo",
+            "UpdateAttributes": "Ĝisdatigi Atributojn",
+            "SaveAttributes": "Konservu Atributojn"
+        },
+        "profile": {
+            "LogOut": "Elsaluti",
+            "Title": "Profilo por {{userName}}",
+            "Description": "Detaloj de la uzanto",
+            "aboutPlaceholder": "Redaktu Bio",
+            "UploadCoverPhoto": "Alŝutu Kovran Foton",
+            "SureLogOut": "Ĉu vi certas, ke vi volas elsaluti?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTKontrakto",
+                        "seriesId": "serio Id",
+                        "owner": "Posedanto",
+                        "currency": "Monero",
+                        "price": "Prezo",
+                        "beneficiary": "Beneficianto",
+                        "autoindex": "Aŭtomata indekso",
+                        "duration": "Daŭro",
+                        "rateInterval": "Intervalo de imposto",
+                        "rateAmount": "Kvanto sumo"
+                    },
+                    "small": {
+                        "NFTContract": "NFTKontrakto",
+                        "seriesId": "ĵetonoj estos monfaritaj en ĉi tiu serio",
+                        "owner": "posedanto de ekzemplo, alie estos sendinto",
+                        "currency": "Valuto por aĉetitaj ĵetonoj, se nulo - por indiĝenaj moneroj",
+                        "price": "Prezo",
+                        "beneficiary": "Proficulo de vendado de ĵetonoj, alie estos sendinto",
+                        "autoindex": "Aŭtomata indekso",
+                        "duration": "Ŝlosu post monfarado. Nulo signifas akiri ĝin tuj.",
+                        "rateInterval": "sitelo intervalo por speciala aĉeto",
+                        "rateAmount": "sitelo kvanto por speciala aĉeto"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(laŭvola)",
+                    "number": "nombro",
+                    "address": "adreso",
+                    "fraction": "frakcio",
+                    "integer": "entjero",
+                    "seconds": "sekundoj",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Produkti",
+                "viewInstancesList": "Refreŝigi Listo"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Serio ID",
+                        "account": "Konto",
+                        "amount": "Kvanto"
+                    },
+                    "small": {
+                        "seriesId": "nova ĵetono apartenos en serio kun tia ID",
+                        "account": "posedanto de lastatempe kreita NFT. se ne fiksita - uzos nunan monujon",
+                        "amount": "kvanto NFT al mento"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(laŭvola)",
+                    "seriesId": "id",
+                    "account": "konto",
+                    "amount": "kvanto",
+                    "integer": "entjero"
+                },
+                "btn": {
+                    "Purchase": "Aĉeto",
+                    "SpecialPurchase": "Speciala aĉeto"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adreso"
+                    },
+                    "small": {
+                        "account": "Adreso"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Nevalida Adreso"
+                },
+                "placeholders": {
+                    "account": "Adreso"
+                },
+                "addToWhitelist": "Aldoni al Blanka Listo",
+                "removeFromWhitelist": "Forigi el Blanka Listo"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Gardisto",
+                    "recipient": "Ricevanto"
+                },
+                "small": {
+                    "tokenId": "ĵetono id kio bezonas ŝlosi aŭ malŝlosi",
+                    "custodian": "adreso kiu povas povi malŝlosi",
+                    "recipient": "adreso kiu ricevos la ĵetonojn"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Nevalida tokenId",
+                "invalidCustodian": "Nevalida Gardanto",
+                "invalidRecipient": "Nevalida Ricevanto"
+            },
+            "placeholders": {
+                "optional": "(laŭvola)",
+                "tokenId": "id",
+                "custodian": "adreso"
+            },
+            "Lock": "Ŝlosu",
+            "Unlock": "Malŝlosu",
+            "Locked": "Ŝlosita",
+            "CustodianAddress": "Adreso de la gardisto",
+            "TokenWasClaimed": "Ĵetono &quot; {{title}} &quot; estis postulita",
+            "TokenWasLocked": "La ĵetono &quot; {{title}} &quot; estis ŝlosita",
+            "TokenWasUnlocked": "Ĵetono &quot; {{title}} &quot; estis malŝlosita"
+        }
+    },
+    "fundrise": {
+        "placeholder": "tajpu ion pri ĉi tiu kontribuo..."
+    },
+    "currencies": {
+        "choose": "Elektu valuton"
+    }
+}

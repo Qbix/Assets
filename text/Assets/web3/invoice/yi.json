@@ -1,0 +1,27 @@
+{
+    "title": "באַצאָלן",
+    "steps": {
+        "sending_native_coins": "שיקט געבוירן קאָינס",
+        "sending_tokens": "שיקט טאָקענס",
+        "swap": "ויסבייַטן",
+        "approve": "אַפּרווו",
+        "one_tx": "איר זאָל שיקן איין טראַנסאַקטיאָן",
+        "two_tx": "איר זאָל שיקן צוויי טראַנזאַקשאַנז"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "געלט צו באַצאָלן"
+            }
+        },
+        "btns": {
+            "pay": "באַצאָלן"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "דאַרפֿן צו באַצאָלן &quot; {{amountOut}} &quot; טאָקענס"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "אַזאַ קייט מיט שייַן &quot; {{chainId}} &quot; איז נישט געשטיצט"
+    }
+}

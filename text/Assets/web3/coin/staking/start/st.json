@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Nako",
+                        "amount": "Chelete"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Nako",
+                        "amount": "Chelete"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Nako",
+                    "amount": "chelete"
+                },
+                "btns": {
+                    "stake": "Stake"
+                },
+                "stake": "Stake",
+                "loading": "Loading"
+            }
+        }
+    }
+}

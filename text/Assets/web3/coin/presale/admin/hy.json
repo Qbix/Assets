@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Token-ի վաճառք",
+                        "timestamps": "Ժամանակներ",
+                        "prices": "Գները",
+                        "endTime": "Ավարտի ժամանակը",
+                        "thresholds": "Շեմեր",
+                        "bonuses": "Բոնուսներ"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Սեփականատերը չի կարող դուրս գալ",
+                            "option1": "Սեփականատերը կարող է հանել նշանները միայն endTime-ի ավարտից հետո",
+                            "option2": "Սեփականատերը կարող է ցանկացած ժամանակ հանել նշանները"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Համայնքի հասցեն",
+                    "methodkeccack": "Keccak256 հեշ ֆունկցիան",
+                    "roleId": "Դերի ID",
+                    "sellingToken": "Վաճառք Token հասցե",
+                    "prices": "ETH, գին",
+                    "thresholds": "# նշաններ",
+                    "bonuses": "Բոնուս %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Միջոցներ չկան"
+                },
+                "btns": {
+                    "createFund": "Ստեղծել հիմնադրամ",
+                    "createFundInForm": "Ստեղծել"
+                },
+                "fundAddress": "Հիմնադրամի հասցեն",
+                "createFund": "Ստեղծել հիմնադրամ",
+                "fundInfo": "Ինֆո",
+                "produce": "Արտադրել",
+                "loading": "Բեռնվում է",
+                "viewInstancesList": "Թարմացնել ցանկը"
+            }
+        }
+    }
+}

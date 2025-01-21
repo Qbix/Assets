@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Давомнокӣ",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "машҳур Токен",
+                    "donations": "хайрияхо",
+                    "rewardsRateFraction": "мукофотҳоиRateFraction",
+                    "numerator": "ҳисобкунанда",
+                    "denominator": "махращ"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Давомнокӣ дар рӯзҳо",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "машҳур Токен",
+                    "donations": "хайрияхо",
+                    "rewardsRateFraction": "мукофотҳоиRateFraction",
+                    "numerator": "ҳисобкунанда",
+                    "denominator": "махращ"
+                }
+            },
+            "placeholders": {
+                "optional": "(ихтиёрӣ)",
+                "tuple": "tuple[]",
+                "number": "рақам",
+                "address": "суроға",
+                "fraction": "каср",
+                "integer": "бутун",
+                "seconds": "сония",
+                "days": "рӯз",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Ҳавзҳо вуҷуд надоранд"
+            },
+            "btns": {
+                "createPool": "Эҷоди ҳавз",
+                "createPoolInForm": "Эҷод кунед"
+            },
+            "createPool": "Эҷоди ҳавз",
+            "produce": "Офаридан",
+            "loading": "Бор карда мешавад",
+            "viewInstancesList": "Рӯйхати навсозӣ"
+        }
+    }
+}

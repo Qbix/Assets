@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Dire",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "don",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "nimeratè",
+                    "denominator": "denominatè"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Dire an jou",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "don",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "nimeratè",
+                    "denominator": "denominatè"
+                }
+            },
+            "placeholders": {
+                "optional": "(opsyonèl)",
+                "tuple": "tuple[]",
+                "number": "nimewo",
+                "address": "adrès",
+                "fraction": "fraksyon",
+                "integer": "nonb antye relatif",
+                "seconds": "segonn",
+                "days": "jou",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Pa gen pisin"
+            },
+            "btns": {
+                "createPool": "Kreye pisin",
+                "createPoolInForm": "Kreye"
+            },
+            "createPool": "Kreye pisin",
+            "produce": "Pwodui",
+            "loading": "Chaje",
+            "viewInstancesList": "Rafrechi lis"
+        }
+    }
+}

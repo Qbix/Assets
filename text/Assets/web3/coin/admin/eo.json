@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Daŭro",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularaToken",
+                    "donations": "donacoj",
+                    "rewardsRateFraction": "rekompencojTaksoFrakcio",
+                    "numerator": "numeratoro",
+                    "denominator": "denominatoro"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Daŭro en tagoj",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularaToken",
+                    "donations": "donacoj",
+                    "rewardsRateFraction": "rekompencojTaksoFrakcio",
+                    "numerator": "numeratoro",
+                    "denominator": "denominatoro"
+                }
+            },
+            "placeholders": {
+                "optional": "(laŭvola)",
+                "tuple": "opo[]",
+                "number": "nombro",
+                "address": "adreso",
+                "fraction": "frakcio",
+                "integer": "entjero",
+                "seconds": "sekundoj",
+                "days": "tagoj",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Ne estas naĝejoj"
+            },
+            "btns": {
+                "createPool": "Krei Naĝejon",
+                "createPoolInForm": "Krei"
+            },
+            "createPool": "Krei Naĝejon",
+            "produce": "Produkti",
+            "loading": "Ŝarĝante",
+            "viewInstancesList": "Refreŝigi Listo"
+        }
+    }
+}

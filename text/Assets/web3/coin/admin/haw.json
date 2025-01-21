@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Ka lōʻihi",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "hāʻawi kālā",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "mea helu",
+                    "denominator": "denominator"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Ka lōʻihi i nā lā",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "hāʻawi kālā",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "mea helu",
+                    "denominator": "denominator"
+                }
+            },
+            "placeholders": {
+                "optional": "(koho)",
+                "tuple": "tuple []",
+                "number": "helu",
+                "address": "helu wahi",
+                "fraction": "hakina",
+                "integer": "integer",
+                "seconds": "kekona",
+                "days": "lā",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "ʻAʻohe loko"
+            },
+            "btns": {
+                "createPool": "Hana i ka Pool",
+                "createPoolInForm": "Hana"
+            },
+            "createPool": "Hana i ka Pool",
+            "produce": "Hoʻohua",
+            "loading": "Ke hoʻouka nei",
+            "viewInstancesList": "Hōʻano hou i ka papa inoa"
+        }
+    }
+}

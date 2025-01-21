@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Muag Token",
+                        "timestamps": "Sijhawm",
+                        "prices": "Nqe",
+                        "endTime": "Thaum kawg",
+                        "thresholds": "Cov pib",
+                        "bonuses": "Nyiaj tshwj xeeb"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Tus tswv yuav rho tsis tau",
+                            "option1": "Tus tswv tuaj yeem thim cov tokens tsuas yog tom qab lub sijhawm kawg",
+                            "option2": "Tus tswv tuaj yeem thim cov tokens txhua lub sijhawm"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Chaw nyob hauv zej zog",
+                    "methodkeccack": "Keccak256 hash muaj nuj nqi",
+                    "roleId": "Lub luag haujlwm ID",
+                    "sellingToken": "Muag Token chaw nyob",
+                    "prices": "ETH, Nqe",
+                    "thresholds": "# ntawm tokens",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Tsis muaj nyiaj txiag"
+                },
+                "btns": {
+                    "createFund": "Tsim Nyiaj",
+                    "createFundInForm": "Tsim"
+                },
+                "fundAddress": "Nyiaj qhov chaw nyob",
+                "createFund": "Tsim Nyiaj",
+                "fundInfo": "Cov ntaub ntawv",
+                "produce": "Tsim tawm",
+                "loading": "Chaw thau khoom",
+                "viewInstancesList": "Refresh List"
+            }
+        }
+    }
+}

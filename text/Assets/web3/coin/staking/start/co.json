@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "riserva Token",
+                        "duration": "Durata",
+                        "amount": "A quantità"
+                    },
+                    "small": {
+                        "reserveToken": "riserva Token",
+                        "duration": "Durata",
+                        "amount": "A quantità"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Durata",
+                    "amount": "quantità"
+                },
+                "btns": {
+                    "stake": "Palu"
+                },
+                "stake": "Palu",
+                "loading": "Carica"
+            }
+        }
+    }
+}

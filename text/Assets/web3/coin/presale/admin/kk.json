@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Токен сатылады",
+                        "timestamps": "Уақыт",
+                        "prices": "Бағалар",
+                        "endTime": "Аяқталу уақыты",
+                        "thresholds": "Табалдырықтар",
+                        "bonuses": "Бонустар"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Иесі бас тарта алмайды",
+                            "option1": "Иесі таңбалауыштарды endTime өткеннен кейін ғана алып тастай алады",
+                            "option2": "Иесі токендерді кез келген уақытта алып тастай алады"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Қауымдастық мекенжайы",
+                    "methodkeccack": "Keccak256 хэш функциясы",
+                    "roleId": "Рөл идентификаторы",
+                    "sellingToken": "Токенді сату мекенжайы",
+                    "prices": "ETH, бағасы",
+                    "thresholds": "# токен",
+                    "bonuses": "Бонус %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Қаражат жоқ"
+                },
+                "btns": {
+                    "createFund": "Қор құру",
+                    "createFundInForm": "Жасау"
+                },
+                "fundAddress": "Қордың мекенжайы",
+                "createFund": "Қор құру",
+                "fundInfo": "Ақпарат",
+                "produce": "Шығару",
+                "loading": "Жүктелуде",
+                "viewInstancesList": "Тізімді жаңарту"
+            }
+        }
+    }
+}

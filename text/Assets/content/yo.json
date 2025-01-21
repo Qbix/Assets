@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Asise",
+        "WalletAbsent": "Apamọwọ ko ni asopọ.",
+        "Rendering": "Awọn aṣiṣe wa lakoko ṣiṣe <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Iye owo ti a beere!",
+        "NameRequired": "Orukọ beere!",
+        "PriceInvalid": "Iye owo ti ko wulo!",
+        "AmountInvalid": "Iye ti ko wulo!",
+        "TransactionFailed": "Iṣowo naa ti kuna",
+        "ChainNotSupported": "Ti yan pq ko ni atilẹyin. Ẹwọn atilẹyin: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Nilo MetaMask ti sopọ lati ṣiṣẹ pẹlu ohun elo",
+        "UserNotLoggedInMetaMask": "Olumulo ko wọle si MetaMask",
+        "CurrencyNotFound": "Owo ko ri",
+        "WrongChain": "NFT yii ṣẹda labẹ &quot; {{chain}} &quot;. Jọwọ lo ẹwọn yii.",
+        "NoRecipientSelected": "Ko si olugba ti a yan",
+        "CantManageFrozenSeries": "O ko le ṣakoso awọn aotoju jara",
+        "SubscriptionStreamNotPaid": "O ko sanwo lati wo akoonu yii. Jọwọ tẹ {{subscriptionUrl}} ki o ṣe alabapin si ero ti o yẹ."
+    },
+    "admin": {
+        "Title": "Isakoso dukia",
+        "SubscriptionTitle": "Awọn eto ṣiṣe alabapin"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Fọwọ ba lati sanwo"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : idiyele ti ni ilọsiwaju fun {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "O ṣeun fun sisanwo rẹ si {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} ṣe alabapin si {{plan.title}}",
+        "YouSubscribedTo": "O ti ṣe alabapin si {{plan.title}}",
+        "Assets\/credits\/alert": "O ni itaniji ti o ni ibatan si akọọlẹ rẹ"
+    },
+    "charge": {
+        "Subject": "O gba owo sisan ti {{displayAmount}} lati {{call 'publisher.displayName'}} fun &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, eyi jẹ lati jẹ ki o mọ {{1}} ti gba owo {{2}} fun {{3}} nipasẹ {{4}}"
+    },
+    "charged": {
+        "Subject": "O ṣeun fun sisanwo rẹ fun &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , eyi jẹ ijẹrisi iyara kan pe o ti sanwo ni aṣeyọri {{2}} si {{3}} fun {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Sopọ iroyin",
+        "Success": "Aseyori",
+        "YourAccountCreated": "A ti ṣẹda akọọlẹ rẹ ni aṣeyọri!",
+        "YourAccountAlreadyCreated": "A ti ṣẹda akọọlẹ rẹ tẹlẹ o ti ṣetan lati lo"
+    },
+    "payment": {
+        "AboutOrder": "Alaye nipa aṣẹ",
+        "PaymentMethod": "Eto isanwo",
+        "ContactInfo": "Alaye olubasọrọ",
+        "Pay": "Sanwo",
+        "PaymentSucceeded": "Owo sisan naa ti ni ilọsiwaju ni aṣeyọri",
+        "PaymentProcessing.": "Owo sisan rẹ ti wa ni ilọsiwaju",
+        "FailTryAgain": "Owo sisan rẹ ko ṣaṣeyọri. Jọwọ gbiyanju lẹẹkansi.",
+        "SomethingWrong": "Nkankan ti ko tọ",
+        "PaymentStatus": "Ipo sisan",
+        "PayTo": "san {{displayName}}",
+        "ChooseCurrency": "Yan owo kan",
+        "YouCanSendUpTo": "O le firanṣẹ si {{amount}} {{symbol}}",
+        "Send": "Firanṣẹ",
+        "EnterAmount": "tẹ iye"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Ipe ti gba nipasẹ {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} kun {{FilledStreamTitle}}",
+        "ForFillingStream": "Fun kikun {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "O ni awọn kirẹditi {{amount}} lati bẹrẹ",
+        "PaymentFor": "Owo sisan fun &quot; {{1}} &quot;",
+        "PaymentTo": "Owo sisan si {{1}}",
+        "PaymentToUser": "Gbigbe lọ si {{toUserName}}",
+        "CreatePrivateChat": "fun iwiregbe ikọkọ pẹlu {{toUserName}}",
+        "CreatePaidStream": "fun ṣiṣẹda {{toStreamName}}",
+        "JoinedPaidStream": "fun ifiṣura ni &quot; <a data-publisherId='<i translate='no'>999 &#39;data-streamName=&#39; {{toStreamName}} &#39;&#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "fun ṣiṣẹda awujo &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "bi agbapada ifiṣura ni &quot; <a data-publisherId='<i translate='no'>999 &#39;data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "ra {{amount}} kirediti",
+        "BonusCredits": "ajeseku {{amount}} kirediti",
+        "BuyAmountCredits": "Ra {{amount}} kirediti",
+        "WatchClip": "fun wiwo {{fromStreamTitle}}",
+        "MissingCredits": "Awọn kirediti ti o padanu",
+        "YouMissingCredits": "O nilo afikun awọn kirẹditi {{amount}} lati tẹsiwaju.",
+        "BuyCredits": "Ra kirediti",
+        "BuyBonus": "Rira awọn kirẹditi {{amount}} ni ẹẹkan yoo ja si ẹbun ti awọn kirediti {{bonus}} .",
+        "Buy": "Ra",
+        "PurchaseCredits": "Awọn Kirẹditi rira",
+        "Credits": "Awọn kirediti",
+        "ErrorInvalidAmount": "Iye ti ko wulo",
+        "ErrorInvalidCurrency": "Laanu, a ko tii ṣe atilẹyin owo {{currency}} naa",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kirediti",
+            "BonusCredits": "{{amount}} kirediti"
+        }
+    },
+    "history": {
+        "Date": "Ọjọ",
+        "Amount": "Iye",
+        "Description": "Apejuwe",
+        "Client": "Onibara",
+        "User": "Olumulo",
+        "To": "si",
+        "From": "lati",
+        "SeeHistory": "Wo itan isanwo fun {{1}}",
+        "HistoryEmpty": "Ko si awọn iṣowo sibẹsibẹ",
+        "PaymentFor": "rán {{amount}} kirediti",
+        "PaymentTo": "rán {{amount}} kirediti",
+        "PaymentToUser": "rán {{amount}} kirediti",
+        "CreatePaidStream": "Na {{amount}} kirediti",
+        "WatchClip": {
+            "+": "mina {{amount}} kirediti",
+            "-": "Na {{amount}} kirediti"
+        },
+        "JoinedPaidStream": {
+            "+": "mina {{amount}} kirediti",
+            "-": "Na {{amount}} kirediti"
+        },
+        "LeftPaidStream": {
+            "+": "ti gba {{amount}} kirediti",
+            "-": "rán {{amount}} kirediti"
+        },
+        "CreatedCommunity": "Na {{amount}} kirediti",
+        "BoughtCredits": "ra {{amount}} kirediti",
+        "BonusCredits": "Ni ajeseku {{amount}} kirediti",
+        "InviteAcceptedBy": "mina {{amount}} kirediti",
+        "Streams_user_firstname": "mina {{amount}} kirediti",
+        "Streams_user_lastname": "mina {{amount}} kirediti",
+        "Streams_user_icon": "mina {{amount}} kirediti",
+        "Places_user_location": "mina {{amount}} kirediti",
+        "Streams_greeting": "mina {{amount}} kirediti",
+        "YouHaveCreditsToStart": "mina {{amount}} kirediti",
+        "InvitedUserFilledStream": "mina {{amount}} kirediti",
+        "ForFillingStream": "mina {{amount}} kirediti",
+        "CreatePrivateChat": "Na {{amount}} kirediti"
+    },
+    "subscriptions": {
+        "infoTitle": "Pese Alaye Isanwo naa",
+        "confirm": {
+            "title": "Bẹrẹ Ṣiṣe alabapin",
+            "message": "Bẹrẹ ṣiṣe alabapin loorekoore si &quot; {{title}} &quot;?",
+            "ok": "O DARA",
+            "cancel": "Fagilee"
+        },
+        "CreditOrDebitCard": "Kirẹditi tabi debiti kaadi",
+        "SubscribePayment": "Alabapin owo sisan",
+        "ImmediatePayment": "Isanwo Lẹsẹkẹsẹ",
+        "ProcessingPayment": "Owo sisan Processing",
+        "SubscriptionAlreadyPaid": "Ṣiṣe alabapin yii ti san tẹlẹ",
+        "SubscriptionNotActive": "Ṣiṣe alabapin ko ṣiṣẹ lọwọlọwọ",
+        "Subscribed": "Alabapin",
+        "Unsubscribed": "Ko ṣe alabapin",
+        "Unsubscribe": "Yọọ alabapin",
+        "Subscribe": "Alabapin",
+        "Started": "Bibẹrẹ",
+        "EndsIn": "O pari",
+        "NextPay": "Isanwo atẹle",
+        "Period": "Akoko",
+        "Price": "Iye owo",
+        "AreYouSureUnsubscribe": "Ṣe o da ọ loju pe o fẹ yọkuro kuro ninu eto yii?",
+        "YouUnsubscribedFromPlan": "O ti yọ orukọ kuro ninu ero &quot; {{planTitle}} &quot;. Iwọ kii yoo gba owo lọwọ nigbamii, ṣugbọn ṣiṣe alabapin rẹ yoo tẹsiwaju titi di {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "akọle ètò",
+            "PricePlaceholder": "owo",
+            "SubscriptionTitle": "Awọn eto ṣiṣe alabapin",
+            "DescriptionPlaceholder": "alabapin ètò apejuwe",
+            "AreYouSureDeletePlan": "Ṣe o da ọ loju pe o fẹ pa eto yii rẹ bi?",
+            "Duration": "Iye akoko",
+            "Discount": "Eni owo",
+            "SavePlan": "Fipamọ",
+            "Interrupt": "Idilọwọ",
+            "Continue": "Tesiwaju",
+            "NewPlan": "Eto Tuntun",
+            "SelectDisplayType": "Yan {{displayType}}",
+            "EndDate": "ipari ọjọ",
+            "Available": "Wa",
+            "Hidden": "Farasin",
+            "InviteOnly": "Ipe-nikan",
+            "CantSubscribeUnlessInvited": "O ko le ṣe alabapin si ero yii ayafi ti o ba pe"
+        }
+    },
+    "payments": {
+        "infoTitle": "Ṣeto Alaye Isanwo",
+        "BuyAmountCredits": "Ra {{amount}} kirediti",
+        "confirm": {
+            "title": "Ṣe Owo sisan",
+            "message": "Ṣe o gba lati san {{symbol}} {{amount}} ?",
+            "ok": "O DARA",
+            "cancel": "Fagilee"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Awọn kirediti",
+            "description": "ntọju orin ti kirediti ati owo sisan"
+        },
+        "Assets\/plan": {
+            "displayType": "Eto alabapin",
+            "description": "alabapin ètò"
+        },
+        "Assets\/subscription": {
+            "displayType": "Ṣiṣe alabapin",
+            "description": "ṣiṣe alabapin"
+        },
+        "Assets\/product": {
+            "displayType": "Ọja",
+            "description": "ọja tita"
+        },
+        "Assets\/service": {
+            "displayType": "Iṣẹ",
+            "description": "iṣẹ ti a nṣe"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "mina {{amount}} kirediti"
+        },
+        "Assets\/credits\/bought": {
+            "content": "ra {{amount}} kirediti"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "ajeseku {{amount}} kirediti"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Na {{amount}} kirediti"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Ti firanṣẹ awọn kirẹditi {{amount}} si {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Ti gba awọn kirẹditi {{amount}} lati {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "O ko ni awọn kirẹditi to ni akọọlẹ rẹ. Jọwọ ṣabẹwo si <a href='<i translate='no'>ọna asopọ 999<\/a> atẹle yii lati ra awọn kirẹditi diẹ sii."
+        }
+    },
+    "billing": {
+        "Title": "Idiyele dukia",
+        "CreditsMinimum": "Kere kirediti",
+        "CreditsToAdd": "Awọn kirediti lati ṣafikun",
+        "Save": "Fipamọ",
+        "ThisLink": "yi ọna asopọ",
+        "errors": {
+            "CreditsMinimumNegative": "Awọn kirẹditi to kere julọ ko le jẹ odi",
+            "CreditsToAddNegative": "Awọn kirediti lati ṣafikun ko le jẹ odi"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Iṣẹ Tuntun",
+            "TitlePlaceholder": "Akọle iṣẹ",
+            "PricePlaceholder": "Ṣeto idiyele",
+            "LinkPlaceholder": "ṣeto ọna asopọ alaye afikun",
+            "DescriptionPlaceholder": "Apejuwe iṣẹ",
+            "SaveService": "Fi Iṣẹ pamọ",
+            "SelectRequiredParticipants": "Awọn olukopa ti o ni ibatan ti a beere",
+            "RequiredParticipantsDesc": "Jọwọ yan awọn alabaṣe ti o jọmọ eyiti o nilo lati lo iṣẹ yii (fun apẹẹrẹ awọn ohun ọsin fun “fifihan Awọn aja”, tabi awọn ọmọde fun “isinmi awọn ọmọde” ati bẹbẹ lọ). Ti iṣẹ ba san, olumulo yoo nilo lati sanwo paapaa fun awọn olukopa kọọkan ti o ni ibatan."
+        },
+        "EditServiceTemplate": {
+            "Title": "Ṣatunkọ Service"
+        },
+        "ManageServiceTemplates": "Ṣakoso awọn awoṣe Iṣẹ",
+        "ManageServices": "Ṣakoso awọn iṣẹ",
+        "Free": "Ọfẹ",
+        "OptionalContribution": "Ilowosi iyan",
+        "RequiredPayment": "Ti beere owo sisan",
+        "AreYouSureDelete": "Ṣe o da ọ loju pe o fẹ pa iṣẹ yii rẹ bi?",
+        "AmountServicesRelated": "Awọn aye {{amount}} wa ti o ni ibatan si iṣẹ yii. Wọn yoo tun yọ kuro."
+    },
+    "transfer": {
+        "SelectRecipient": "Yan olugba",
+        "TransactionSuccess": "Aseyori Iṣowo",
+        "OrTypeWalletAddress": "TABI tẹ adirẹsi apamọwọ olugba",
+        "AppCredits": "App kirediti"
+    },
+    "NFT": {
+        "Title": "Akọle",
+        "Name": "Oruko",
+        "EnterName": "Tẹ orukọ sii",
+        "EnterAuthorWallet": "Tẹ apamọwọ onkowe",
+        "InformationAboutTitle": "Alaye nipa {{title}} NFT",
+        "Description": "Apejuwe",
+        "DetailedInformationAboutNFT": "Alaye nipa NFT",
+        "PresaleStarts": "Presale Bẹrẹ Oṣu kejila ọjọ 23",
+        "OwnerUserNotFound": "Eni ti NFT yii ko forukọsilẹ ninu ohun elo wa.",
+        "BuyNow": "Ra Bayibayi",
+        "Buy": "Ra",
+        "Add": "Fi kun",
+        "Remove": "Yọ kuro",
+        "NoNFTyet": "Ko si awọn NFT sibẹsibẹ",
+        "Conversation": "Ifọrọwanilẹnuwo",
+        "Create": "Ṣẹda",
+        "CurrentBid": "Idu lọwọlọwọ",
+        "StartingIn": "Bibẹrẹ ni",
+        "EndingIn": "Ipari ni",
+        "CreateNFT": "Ṣẹda NFT kan",
+        "TitlePlaceholder": "Fun NFT rẹ akọle",
+        "DescriptionPlaceholder": "Fun NFT rẹ apejuwe kan",
+        "CreateYourNFT": "Ṣẹda NFT rẹ",
+        "Royalties": "Awọn owo-ọba",
+        "RoyaltyPlaceholder": "iyan. Iye ti a san si Eleda ṣaaju gbigbe.",
+        "ExpirationDate": "Ojo ipari",
+        "StartingDate": "Ọjọ Ibẹrẹ",
+        "BidsBelowThisAmount": "Awọn idu labẹ iye yii kii yoo gba laaye",
+        "MinimumBid": "Idiyele to kere julọ",
+        "Author": "Onkọwe",
+        "Price": "Iye owo",
+        "Commission": "Igbimọ",
+        "EnterCommission": "Wọle igbimọ",
+        "Owner": "Eni",
+        "SelectCategory": "Yan ẹka",
+        "Day": "Ojo",
+        "Days": "Awọn ọjọ",
+        "Hour": "Wakati",
+        "Hours": "Awọn wakati",
+        "Minute": "Iṣẹju",
+        "Minutes": "Iṣẹju",
+        "Second": "Keji",
+        "Seconds": "Aaya",
+        "SalesCreator": "ti tita yoo lọ si Eleda",
+        "Details": "Awọn alaye",
+        "Bids": "Awọn idu",
+        "History": "Itan",
+        "LoremIpsum": "Lorem Ipsum jẹ ọrọ idalẹnu nirọrun ti ile-iṣẹ titẹ ati titẹ.",
+        "PutOnSale": "Fi lori tita",
+        "PutOffSale": "Yiyọ kuro lati tita",
+        "Transfer": "Gbigbe",
+        "Actions": "Awọn iṣe",
+        "Claim": "Beere",
+        "ClaimNFT": "Beere NFT",
+        "Unlocking": "Ṣii silẹ",
+        "Unlock": "Ṣii silẹ",
+        "Update": "Imudojuiwọn",
+        "UpdateToken": "Àmi imudojuiwọn",
+        "UpdateNFT": "Ṣe imudojuiwọn NFT",
+        "CreateToken": "Ṣẹda Tokini",
+        "PlaceBid": "Ibi Bid",
+        "SoldOut": "Ti ta",
+        "NotOnSale": "Ko Lori Tita",
+        "NftName": "Orukọ NFT",
+        "DescribeYourNFT": "Jọwọ ṣe apejuwe NFT rẹ",
+        "NFTImage": "Aworan fun NFT",
+        "NFTVideo": "Fidio fun NFT, ti eyikeyi",
+        "GenerateDescription": "tabi laifọwọyi ina",
+        "UploadMovie": "Ṣe igbasilẹ fiimu",
+        "MovieSource": "Orisun fiimu",
+        "MovieURL": "URL fiimu",
+        "UploadFile": "Po si faili kan",
+        "PutOnMarketplace": "Fi lori ọjà",
+        "InstantPurchase": "Tẹ idiyele sii lati gba awọn olumulo laaye lẹsẹkẹsẹ ra NFT rẹ",
+        "FixedPrice": "Iye owo ti o wa titi",
+        "TimedAuction": "Ti akoko auction",
+        "OpenForBids": "Ṣii fun awọn idu",
+        "PriceOnePiece": "Tẹ idiyele fun nkan kan",
+        "EnterPrice": "Tẹ idiyele sii",
+        "EnterMinimumBid": "Tẹ idu Kere",
+        "SelectChain": "Yan pq",
+        "Currency": "Owo owo",
+        "AreYouSureDeleteImage": "Ṣe o da ọ loju pe o fẹ yọ aworan kuro?",
+        "AreYouSureDeleteVideo": "Ṣe o da ọ loju pe o fẹ yọ fidio kuro?",
+        "series": {
+            "Name": "Oruko",
+            "Icon": "Aami",
+            "Description": "Apejuwe",
+            "Author": "Onkọwe",
+            "SelectSeries": "Yan jara",
+            "Value": "Iye",
+            "AreYouSure": "Ṣe o da ọ loju?",
+            "AuthorInvalid": "Adirẹsi onkọwe ko wulo!",
+            "Address": "Adirẹsi",
+            "CoverImage": "Aworan ideri",
+            "UploadCoverImage": "Po si aworan ideri",
+            "CommissionAddressInvalid": "Adirẹsi igbimọ ko wulo",
+            "OnSale": "lori tita",
+            "OffSale": "pa sale",
+            "CreateSeries": "Ṣẹda Series",
+            "UpdateSeries": "Update Series",
+            "SeriesInfo": "Alaye jara",
+            "SelectAuthor": "Yan onkọwe",
+            "NewItem": "New NFT jara",
+            "NamePlaceholder": "Tẹ orukọ jara",
+            "DescPlaceholder": "Tẹ apejuwe jara",
+            "EndingIn": "Ipari Ni"
+        },
+        "contract": {
+            "CreateContract": "Ṣẹda adehun",
+            "SelectContract": "Yan adehun",
+            "CreateContractFor": "Ṣẹda adehun fun {{userName}}",
+            "ContractFor": "Adehun fun {{userName}}",
+            "UpdateContract": "Adehun imudojuiwọn",
+            "TransferOwnership": "Gbigbe nini",
+            "SetBaseURI": "Ṣeto Ipilẹ URI",
+            "SetSuffix": "Ṣeto Suffix",
+            "CurrentOwner": "Olohun lọwọlọwọ",
+            "CurrentBaseURL": "BaseURL lọwọlọwọ",
+            "ContractAddressAbsent": "Adirẹsi adehun ko si",
+            "FactoryAddressAbsent": "Factory adirẹsi nílé",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Akọle nilo",
+            "SymbolRequired": "Aami beere",
+            "TypeContractName": "orukọ adehun",
+            "TypeContractSymbol": "aami adehun (awọn chars 10 ti o pọju)"
+        },
+        "contests": {
+            "Title": "Awọn idije",
+            "NewContest": "Idije Tuntun"
+        },
+        "collections": {
+            "Title": "Awọn akojọpọ",
+            "EnterTitle": "tẹ akọle",
+            "EnterDescription": "tẹ apejuwe",
+            "NewCollection": "Titun Gbigba",
+            "Name": "Oruko",
+            "Icon": "Aami",
+            "Description": "Apejuwe",
+            "Author": "Onkọwe",
+            "SelectCollection": "Yan gbigba",
+            "Value": "Iye",
+            "AreYouSure": "Ṣe o da ọ loju?",
+            "AuthorInvalid": "Adirẹsi onkọwe ko wulo!",
+            "Address": "Adirẹsi",
+            "CoverImage": "Aworan ideri",
+            "UploadIcon": "Aami ikojọpọ",
+            "CommissionAddressInvalid": "Adirẹsi Commission ko tọ",
+            "OnSale": "lori tita",
+            "OffSale": "pa sale",
+            "CreateCollection": "Ṣẹda Gbigba",
+            "UpdateCollection": "Update Gbigba",
+            "CollectionInfo": "Alaye gbigba",
+            "SelectAuthor": "Yan onkọwe",
+            "NewItem": "New NFT Gbigba",
+            "NamePlaceholder": "Tẹ orukọ gbigba sii",
+            "DescPlaceholder": "Tẹ apejuwe gbigba sii",
+            "EndingIn": "Ipari Ni",
+            "SubmitSeries": "Fi kan Series"
+        },
+        "import": {
+            "importNFT": "Gbigbe NFT&#39;s",
+            "importAttributes": "Gbe wọle NFT abuda",
+            "fileNotFound": "Ma binu, faili CSV ko ri.",
+            "fileEmpty": "Ma binu, faili CSV sofo.",
+            "userIdNotFound": "olumulo wa sugbon id sofo",
+            "errorLine": "ila {{1}}",
+            "fieldNotFound": "Aaye ti a beere &quot; {{1}} &quot; ko ri",
+            "displayTypeEmpty": "Iru ifihan fun &quot; {{1}} &quot; ko ri",
+            "taskStreamInvalid": "ṣiṣan iṣẹ ko wulo",
+            "instructionsEmpty": "awọn ilana ṣiṣan iṣẹ ofo",
+            "complete": "Pari",
+            "activateUsers": "fi ibere ise ifiranṣẹ si awọn olumulo?",
+            "importProgress": "Ilọsiwaju",
+            "importOptions": "Awọn aṣayan",
+            "sampleCSV": "Ṣe igbasilẹ Ayẹwo CSV",
+            "fileLabel": "Ṣe agbejade iwe kaakiri:",
+            "errorsTitle": "Awọn aṣiṣe ṣẹlẹ"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Àlẹmọ nipa NFT Collections",
+                "ShowNFTCollection": "Ṣe afihan gbigba NFT ni ...",
+                "AllCollections": "Gbogbo Awọn akojọpọ"
+            },
+            "ByUser": {
+                "AllAuthors": "Gbogbo Awọn onkọwe",
+                "AllUsers": "Gbogbo eniyan",
+                "FilterByAuthors": "Àlẹmọ nipa onkọwe"
+            }
+        },
+        "Back": "Pada si Gbigba",
+        "attributes": {
+            "Title": "Ṣakoso awọn eroja",
+            "Attributes": "Awọn eroja",
+            "DisplayTitle": "Ifihan Iru",
+            "AddDisplayType": "Fi titun àpapọ iru",
+            "NewDisplay": "Ifihan Tuntun",
+            "TraitTitle": "Iru iwa",
+            "AddTraitTitle": "Ṣafikun iru iwa tuntun",
+            "NewTrait": "New Trait Type",
+            "ValueTitle": "Iye",
+            "AddValueTitle": "Fi titun iye",
+            "NewValue": "Iye Tuntun",
+            "NewAttribute": "Iwa Titun",
+            "UpdateAttributes": "Imudojuiwọn Awọn eroja",
+            "SaveAttributes": "Fipamọ Awọn abuda"
+        },
+        "profile": {
+            "LogOut": "Jade jade",
+            "Title": "Profaili fun {{userName}}",
+            "Description": "Awọn alaye olumulo",
+            "aboutPlaceholder": "Ṣatunkọ Bio",
+            "UploadCoverPhoto": "Po si Ideri Fọto",
+            "SureLogOut": "Ṣe o da ọ loju pe o fẹ jade bi?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "jara id",
+                        "owner": "Eni",
+                        "currency": "Iye owo",
+                        "price": "Iye owo",
+                        "beneficiary": "Alanfani",
+                        "autoindex": "Autoindex",
+                        "duration": "Iye akoko",
+                        "rateInterval": "Aarin oṣuwọn",
+                        "rateAmount": "Iwọn oṣuwọn"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "àmi yoo wa ni minted ni yi jara",
+                        "owner": "eni ti apẹẹrẹ, bibẹẹkọ yoo jẹ olufiranṣẹ",
+                        "currency": "Owo fun awọn ami ti o ra, ti o ba jẹ odo - fun awọn owó abinibi",
+                        "price": "Iye owo",
+                        "beneficiary": "Oluṣeto ti tita awọn ami, bibẹẹkọ yoo jẹ olufiranṣẹ",
+                        "autoindex": "Autoindex",
+                        "duration": "Titiipa lẹhin mining. Odo tumo si gba lẹsẹkẹsẹ.",
+                        "rateInterval": "garawa aarin fun pataki ra",
+                        "rateAmount": "garawa iye fun pataki ra"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(aṣayan)",
+                    "number": "nọmba",
+                    "address": "adirẹsi",
+                    "fraction": "ida",
+                    "integer": "odidi",
+                    "seconds": "iṣẹju-aaya",
+                    "uint256": "uint256",
+                    "uint192": "oju192",
+                    "uint64": "oju64",
+                    "uint32": "oju32",
+                    "uint16": "inu16"
+                },
+                "produce": "Mu jade",
+                "viewInstancesList": "Atokọ sọtun"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID jara",
+                        "account": "Iroyin",
+                        "amount": "Iye"
+                    },
+                    "small": {
+                        "seriesId": "titun àmi yoo jẹ ninu jara pẹlu iru ID",
+                        "account": "eni ti titun da NFT. ti ko ba ṣeto - yoo lo apamọwọ lọwọlọwọ",
+                        "amount": "iye NFT to Mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(aṣayan)",
+                    "seriesId": "id",
+                    "account": "iroyin",
+                    "amount": "iye",
+                    "integer": "odidi"
+                },
+                "btn": {
+                    "Purchase": "rira",
+                    "SpecialPurchase": "Pataki rira"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adirẹsi"
+                    },
+                    "small": {
+                        "account": "Adirẹsi"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Adirẹsi ti ko tọ"
+                },
+                "placeholders": {
+                    "account": "Adirẹsi"
+                },
+                "addToWhitelist": "Fi kun si Whitelist",
+                "removeFromWhitelist": "Yọ kuro lati Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ID àmi",
+                    "custodian": "Olutọju",
+                    "recipient": "olugba"
+                },
+                "small": {
+                    "tokenId": "id token kini o nilo lati tii tabi ṣii",
+                    "custodian": "adirẹsi ti o le ni anfani lati ṣii",
+                    "recipient": "adirẹsi ti yoo gba awọn àmi"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId ti ko tọ",
+                "invalidCustodian": "Alabojuto ti ko wulo",
+                "invalidRecipient": "Olugba ti ko tọ"
+            },
+            "placeholders": {
+                "optional": "(aṣayan)",
+                "tokenId": "id",
+                "custodian": "adirẹsi"
+            },
+            "Lock": "Titiipa",
+            "Unlock": "Ṣii silẹ",
+            "Locked": "Titiipa",
+            "CustodianAddress": "Adirẹsi olutọju",
+            "TokenWasClaimed": "Tokini &quot; {{title}} &quot; ni ẹtọ",
+            "TokenWasLocked": "Tokini &quot; {{title}} &quot; ti wa ni titiipa",
+            "TokenWasUnlocked": "Tokini &quot; {{title}} &quot; ti wa ni ṣiṣi silẹ"
+        }
+    },
+    "fundrise": {
+        "placeholder": "tẹ nkankan nipa ilowosi yii..."
+    },
+    "currencies": {
+        "choose": "Yan owo kan"
+    }
+}

@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Cholakwika",
+        "WalletAbsent": "Chikwamachi sichimalumikizidwa.",
+        "Rendering": "Panali zolakwika popereka <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Mtengo wofunikira!",
+        "NameRequired": "Dzina likufunika!",
+        "PriceInvalid": "Mtengo ndi wolakwika!",
+        "AmountInvalid": "Ndalama ndizosavomerezeka!",
+        "TransactionFailed": "Ntchitoyi yalephera",
+        "ChainNotSupported": "Unyolo wosankhidwa sunagwiritsidwe ntchito. Unyolo wothandizira: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Mufunika MetaMask yolumikizidwa kuti mugwiritse ntchito",
+        "UserNotLoggedInMetaMask": "Wogwiritsa sanalowe mu MetaMask",
+        "CurrencyNotFound": "Ndalama sizinapezeke",
+        "WrongChain": "NFT iyi idapangidwa pansi pa &quot; {{chain}} &quot;. Chonde gwiritsani ntchito unyolowu.",
+        "NoRecipientSelected": "Palibe wolandira yemwe wasankhidwa",
+        "CantManageFrozenSeries": "Simungathe kuyang&#39;anira mndandanda wachisanu",
+        "SubscriptionStreamNotPaid": "Simunalipira kuti muwone izi. Chonde dinani {{subscriptionUrl}} ndikulembetsa ku pulani yoyenera."
+    },
+    "admin": {
+        "Title": "Kasamalidwe ka katundu",
+        "SubscriptionTitle": "Mapulani olembetsa"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Dinani kuti mulipire"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : ndalamazo zakonzedwa kwa {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Zikomo chifukwa cholipira ku {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} adalembetsa ku {{plan.title}}",
+        "YouSubscribedTo": "Mwalembetsa ku {{plan.title}}",
+        "Assets\/credits\/alert": "Muli ndi chenjezo lokhudzana ndi akaunti yanu"
+    },
+    "charge": {
+        "Subject": "Munalandira malipiro a {{displayAmount}} kuchokera ku {{call 'publisher.displayName'}} pa &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hei, uku ndikudziwitsani kuti {{1}} yaimbidwa {{2}} pa {{3}} ndi {{4}}"
+    },
+    "charged": {
+        "Subject": "Zikomo chifukwa cholipira &quot; {{description}} &quot;",
+        "HavePaid": "Hei {{1}} , uku ndikutsimikizira mwachangu kuti mwalipira {{2}} mpaka {{3}} pa {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Lumikizani akaunti",
+        "Success": "Kupambana",
+        "YourAccountCreated": "Akaunti yanu idapangidwa bwino!",
+        "YourAccountAlreadyCreated": "Akaunti yanu idapangidwa kale ndipo ndiyokonzeka kugwiritsidwa ntchito"
+    },
+    "payment": {
+        "AboutOrder": "Zambiri za dongosolo",
+        "PaymentMethod": "Njira yolipirira",
+        "ContactInfo": "Contact zambiri",
+        "Pay": "Lipirani",
+        "PaymentSucceeded": "Malipiro asinthidwa bwino",
+        "PaymentProcessing.": "Malipiro anu akukonzedwa",
+        "FailTryAgain": "Malipiro anu sanapambane. Chonde yesaninso.",
+        "SomethingWrong": "Chinachake chalakwika",
+        "PaymentStatus": "Malipiro",
+        "PayTo": "{{displayName}}",
+        "ChooseCurrency": "Sankhani ndalama",
+        "YouCanSendUpTo": "Mutha kutumiza mpaka {{amount}} {{symbol}}",
+        "Send": "Tumizani",
+        "EnterAmount": "lowetsani ndalama"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Kuitana kwavomerezedwa ndi {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} adadzaza {{FilledStreamTitle}}",
+        "ForFillingStream": "Kuti mudzaze {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Muli ndi ma kirediti {{amount}} oti muyambe",
+        "PaymentFor": "Malipiro a &quot; {{1}} &quot;",
+        "PaymentTo": "Malipiro ku {{1}}",
+        "PaymentToUser": "Pitani ku {{toUserName}}",
+        "CreatePrivateChat": "pa macheza achinsinsi ndi {{toUserName}}",
+        "CreatePaidStream": "kupanga {{toStreamName}}",
+        "JoinedPaidStream": "posungitsa mu &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "pakupanga gulu &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "monga kubweza ndalama mu &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Anagula {{amount}} credits",
+        "BonusCredits": "Bonasi {{amount}} ngongole",
+        "BuyAmountCredits": "Gulani {{amount}} credits",
+        "WatchClip": "kuti muwone {{fromStreamTitle}}",
+        "MissingCredits": "Ngongole Zosowa",
+        "YouMissingCredits": "Mufunika ma kirediti {{amount}} owonjezera kuti mupitirize.",
+        "BuyCredits": "Gulani ngongole",
+        "BuyBonus": "Kugula ma kirediti {{amount}} nthawi imodzi kumabweretsa bonasi ya {{bonus}} .",
+        "Buy": "Gulani",
+        "PurchaseCredits": "Gulani Ngongole",
+        "Credits": "Ngongole",
+        "ErrorInvalidAmount": "Ndalama ndizosavomerezeka",
+        "ErrorInvalidCurrency": "Tsoka ilo, sitikuthandizirabe ndalama za {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} mbiri",
+            "BonusCredits": "{{amount}} mbiri"
+        }
+    },
+    "history": {
+        "Date": "Tsiku",
+        "Amount": "Ndalama",
+        "Description": "Kufotokozera",
+        "Client": "Wothandizira",
+        "User": "Wogwiritsa",
+        "To": "ku",
+        "From": "kuchokera",
+        "SeeHistory": "Onani mbiri ya malipiro a {{1}}",
+        "HistoryEmpty": "Palibe zotuluka pano",
+        "PaymentFor": "Anatumiza {{amount}} credits",
+        "PaymentTo": "Anatumiza {{amount}} credits",
+        "PaymentToUser": "Anatumiza {{amount}} credits",
+        "CreatePaidStream": "Analipira ngongole {{amount}}",
+        "WatchClip": {
+            "+": "Adapeza ngongole {{amount}}",
+            "-": "Analipira ngongole {{amount}}"
+        },
+        "JoinedPaidStream": {
+            "+": "Adapeza ngongole {{amount}}",
+            "-": "Analipira ngongole {{amount}}"
+        },
+        "LeftPaidStream": {
+            "+": "Analandira {{amount}} credits",
+            "-": "Anatumiza {{amount}} credits"
+        },
+        "CreatedCommunity": "Analipira ngongole {{amount}}",
+        "BoughtCredits": "Anagula {{amount}} credits",
+        "BonusCredits": "Muli ndi mabhonasi {{amount}}",
+        "InviteAcceptedBy": "Adapeza ngongole {{amount}}",
+        "Streams_user_firstname": "Adapeza ngongole {{amount}}",
+        "Streams_user_lastname": "Adapeza ngongole {{amount}}",
+        "Streams_user_icon": "Adapeza ngongole {{amount}}",
+        "Places_user_location": "Adapeza ngongole {{amount}}",
+        "Streams_greeting": "Adapeza ngongole {{amount}}",
+        "YouHaveCreditsToStart": "Adapeza ngongole {{amount}}",
+        "InvitedUserFilledStream": "Adapeza ngongole {{amount}}",
+        "ForFillingStream": "Adapeza ngongole {{amount}}",
+        "CreatePrivateChat": "Analipira ngongole {{amount}}"
+    },
+    "subscriptions": {
+        "infoTitle": "Perekani Zambiri Zolipira",
+        "confirm": {
+            "title": "Yambitsani Kulembetsa",
+            "message": "Yambitsani kulembetsa kobwerezabwereza kwa &quot; {{title}} &quot;?",
+            "ok": "Chabwino",
+            "cancel": "Letsani"
+        },
+        "CreditOrDebitCard": "Kirediti kadi kapena kirediti kadi",
+        "SubscribePayment": "Lembani Malipiro",
+        "ImmediatePayment": "Kulipira Nthawi yomweyo",
+        "ProcessingPayment": "Kukonza Malipiro",
+        "SubscriptionAlreadyPaid": "Kulembetsaku kulipiridwa kale",
+        "SubscriptionNotActive": "Kulembetsa sikukugwira ntchito pakadali pano",
+        "Subscribed": "Olembetsa",
+        "Unsubscribed": "Osalembetsa",
+        "Unsubscribe": "Chotsani kulembetsa",
+        "Subscribe": "Lembetsani",
+        "Started": "Anayamba",
+        "EndsIn": "Kumaliza mkati",
+        "NextPay": "Malipiro otsatira",
+        "Period": "Nthawi",
+        "Price": "Mtengo",
+        "AreYouSureUnsubscribe": "Kodi mukutsimikiza kuti mukufuna kusiya kutsatira dongosololi?",
+        "YouUnsubscribedFromPlan": "Mwadzipatula ku dongosolo &quot; {{planTitle}} &quot;. Simudzakulipiritsidwa nthawi ina, koma kulembetsa kwanu kupitilira mpaka {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "mutu wa dongosolo",
+            "PricePlaceholder": "mtengo",
+            "SubscriptionTitle": "Mapulani olembetsa",
+            "DescriptionPlaceholder": "Kufotokozera za dongosolo lolembetsa",
+            "AreYouSureDeletePlan": "Kodi mukutsimikiza kuti mukufuna kuchotsa dongosololi?",
+            "Duration": "Kutalika",
+            "Discount": "Kuchotsera",
+            "SavePlan": "Sungani",
+            "Interrupt": "Dumitsani",
+            "Continue": "Pitirizani",
+            "NewPlan": "Dongosolo Latsopano",
+            "SelectDisplayType": "Sankhani {{displayType}}",
+            "EndDate": "tsiku lomaliza",
+            "Available": "Likupezeka",
+            "Hidden": "Zobisika",
+            "InviteOnly": "Oyitanira-okha",
+            "CantSubscribeUnlessInvited": "Simungalembetse ku pulani iyi pokhapokha mutaitanidwa"
+        }
+    },
+    "payments": {
+        "infoTitle": "Khazikitsani Chidziwitso cha Malipiro",
+        "BuyAmountCredits": "Gulani {{amount}} credits",
+        "confirm": {
+            "title": "Perekani Malipiro",
+            "message": "Kodi mumavomereza kulipira {{symbol}} {{amount}} ?",
+            "ok": "Chabwino",
+            "cancel": "Letsani"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Ngongole",
+            "description": "amasunga mbiri ya ngongole ndi malipiro"
+        },
+        "Assets\/plan": {
+            "displayType": "Mapulani olembetsa",
+            "description": "dongosolo lolembetsa"
+        },
+        "Assets\/subscription": {
+            "displayType": "Kulembetsa",
+            "description": "kulembetsa"
+        },
+        "Assets\/product": {
+            "displayType": "Zogulitsa",
+            "description": "katundu akugulitsidwa"
+        },
+        "Assets\/service": {
+            "displayType": "Utumiki",
+            "description": "utumiki ukuperekedwa"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Adapeza ngongole {{amount}}"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Anagula {{amount}} credits"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonasi {{amount}} ngongole"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Analipira ngongole {{amount}}"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Adatumiza ma credits {{amount}} ku {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Analandira ma credits {{amount}} kuchokera ku {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Muli ndi ma kirediti osakwanira mu akaunti yanu. Chonde pitani <a href='<i translate='no'>ulalo wotsatirawu wa 999 &#39;&gt;<\/a> kuti mugule ma credits ambiri."
+        }
+    },
+    "billing": {
+        "Title": "Kulipira katundu",
+        "CreditsMinimum": "Ndalama zochepa",
+        "CreditsToAdd": "Credits kuwonjezera",
+        "Save": "Sungani",
+        "ThisLink": "izi link",
+        "errors": {
+            "CreditsMinimumNegative": "Malipiro ochepa sangakhale opanda pake",
+            "CreditsToAddNegative": "Zowonjezera zomwe mungawonjezere sizingakhale zoipa"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Utumiki Watsopano",
+            "TitlePlaceholder": "Mutu wautumiki",
+            "PricePlaceholder": "Khazikitsani mtengo",
+            "LinkPlaceholder": "khazikitsa ulalo wowonjezera",
+            "DescriptionPlaceholder": "Kufotokozera zautumiki",
+            "SaveService": "Sungani Service",
+            "SelectRequiredParticipants": "Ofunikanso ogwirizana nawo",
+            "RequiredParticipantsDesc": "Chonde sankhani ogwirizana omwe akufunika kugwiritsa ntchito ntchitoyi (mwachitsanzo ziweto za &quot;Galu show&quot;, kapena ana pa &quot;tchuthi cha Ana&quot; ndi zina). Ngati ntchitoyo ilipiridwa, wogwiritsa ntchito ayenera kulipiranso aliyense wogwirizana nawo."
+        },
+        "EditServiceTemplate": {
+            "Title": "Sinthani Service"
+        },
+        "ManageServiceTemplates": "Sinthani Zitsanzo za Utumiki",
+        "ManageServices": "Sinthani Ntchito",
+        "Free": "Kwaulere",
+        "OptionalContribution": "Zopereka mwakufuna kwanu",
+        "RequiredPayment": "Malipiro ofunikira",
+        "AreYouSureDelete": "Kodi mukutsimikiza kuti mukufuna kuchotsa ntchitoyi?",
+        "AmountServicesRelated": "Pali {{amount}} zopezeka zokhudzana ndi ntchitoyi. Iwonso adzachotsedwa."
+    },
+    "transfer": {
+        "SelectRecipient": "Sankhani wolandira",
+        "TransactionSuccess": "Kusinthana Kupambana",
+        "OrTypeWalletAddress": "KAPENA lembani adilesi yachikwama ya wolandira",
+        "AppCredits": "Makadi a App"
+    },
+    "NFT": {
+        "Title": "Mutu",
+        "Name": "Dzina",
+        "EnterName": "Lowetsani dzina",
+        "EnterAuthorWallet": "Lowetsani chikwama cha wolemba",
+        "InformationAboutTitle": "Zambiri za {{title}} NFT",
+        "Description": "Kufotokozera",
+        "DetailedInformationAboutNFT": "Zambiri za NFT",
+        "PresaleStarts": "Kugulitsa Kuyamba pa Dec 23",
+        "OwnerUserNotFound": "Mwini wa NFT iyi sanalembetsedwe mu pulogalamu yathu.",
+        "BuyNow": "Gulani pompano",
+        "Buy": "Gulani",
+        "Add": "Onjezani",
+        "Remove": "Chotsani",
+        "NoNFTyet": "Palibe NFTs pano",
+        "Conversation": "Kukambirana",
+        "Create": "Pangani",
+        "CurrentBid": "Zotsatsa zapano",
+        "StartingIn": "Kuyambira mkati",
+        "EndingIn": "Pomaliza",
+        "CreateNFT": "Pangani NFT",
+        "TitlePlaceholder": "Perekani NFT yanu mutu",
+        "DescriptionPlaceholder": "Perekani NFT yanu kufotokozera",
+        "CreateYourNFT": "Pangani NFT yanu",
+        "Royalties": "Malipiro",
+        "RoyaltyPlaceholder": "Zosankha. Ndalama zomwe zidaperekedwa kwa wopanga zisanasamutsidwe.",
+        "ExpirationDate": "Tsiku lothera ntchito",
+        "StartingDate": "Tsiku loyambira",
+        "BidsBelowThisAmount": "Kutsatsa kocheperako sikuloledwa",
+        "MinimumBid": "Ndalama zochepa",
+        "Author": "Wolemba",
+        "Price": "Mtengo",
+        "Commission": "Commission",
+        "EnterCommission": "Lowani ntchito",
+        "Owner": "Mwini",
+        "SelectCategory": "Sankhani gulu",
+        "Day": "Tsiku",
+        "Days": "Masiku",
+        "Hour": "Ola",
+        "Hours": "Maola",
+        "Minute": "Mphindi",
+        "Minutes": "Mphindi",
+        "Second": "Chachiwiri",
+        "Seconds": "Masekondi",
+        "SalesCreator": "malonda adzapita kwa Mlengi",
+        "Details": "Tsatanetsatane",
+        "Bids": "Zotsatsa",
+        "History": "Mbiri",
+        "LoremIpsum": "Lorem Ipsum ndizolemba chabe zamakampani osindikiza ndi kupanga makina.",
+        "PutOnSale": "Ikani pa malonda",
+        "PutOffSale": "Chokani pakugulitsa",
+        "Transfer": "Kusamutsa",
+        "Actions": "Zochita",
+        "Claim": "Funsani",
+        "ClaimNFT": "Funsani NFT",
+        "Unlocking": "Kutsegula",
+        "Unlock": "Tsegulani",
+        "Update": "Kusintha",
+        "UpdateToken": "Kusintha Chizindikiro",
+        "UpdateNFT": "Kusintha kwa NFT",
+        "CreateToken": "Pangani Chizindikiro",
+        "PlaceBid": "Bid ya malo",
+        "SoldOut": "Zogulitsidwa",
+        "NotOnSale": "Osagulitsa",
+        "NftName": "Dzina la NFT",
+        "DescribeYourNFT": "Chonde fotokozani NFT yanu",
+        "NFTImage": "Chithunzi cha NFT",
+        "NFTVideo": "Kanema wa NFT, ngati alipo",
+        "GenerateDescription": "kapena kupanga zokha",
+        "UploadMovie": "Kwezani kanema",
+        "MovieSource": "Movie Source",
+        "MovieURL": "Ulalo wamakanema",
+        "UploadFile": "Kwezani fayilo",
+        "PutOnMarketplace": "Ikani pamsika",
+        "InstantPurchase": "Lowetsani mtengo kuti mulole ogwiritsa ntchito kugula NFT yanu nthawi yomweyo",
+        "FixedPrice": "Mtengo wokhazikika",
+        "TimedAuction": "Kugulitsa kwanthawi yake",
+        "OpenForBids": "Tsegulani zotsatsa",
+        "PriceOnePiece": "Lowetsani mtengo wa chidutswa chimodzi",
+        "EnterPrice": "Lowetsani mtengo",
+        "EnterMinimumBid": "Lowetsani Minimum bid",
+        "SelectChain": "Sankhani unyolo",
+        "Currency": "Ndalama",
+        "AreYouSureDeleteImage": "Mukutsimikiza kuti mukufuna kuchotsa chithunzi?",
+        "AreYouSureDeleteVideo": "Mukutsimikiza kuti mukufuna kuchotsa kanema?",
+        "series": {
+            "Name": "Dzina",
+            "Icon": "Chizindikiro",
+            "Description": "Kufotokozera",
+            "Author": "Wolemba",
+            "SelectSeries": "Sankhani mndandanda",
+            "Value": "Mtengo",
+            "AreYouSure": "Mukutsimikiza?",
+            "AuthorInvalid": "Adilesi ya wolemba ndiyolakwika!",
+            "Address": "Adilesi",
+            "CoverImage": "Chithunzi choyambirira",
+            "UploadCoverImage": "Kwezani chithunzi choyambirira",
+            "CommissionAddressInvalid": "Adilesi ya Commission ndiyolakwika",
+            "OnSale": "zogulitsa",
+            "OffSale": "osagulitsidwa",
+            "CreateSeries": "Pangani Series",
+            "UpdateSeries": "Update Series",
+            "SeriesInfo": "Series Information",
+            "SelectAuthor": "Sankhani wolemba",
+            "NewItem": "Mndandanda watsopano wa NFT",
+            "NamePlaceholder": "Lowetsani dzina la mndandanda",
+            "DescPlaceholder": "Lowetsani kufotokozera mndandanda",
+            "EndingIn": "Pomaliza"
+        },
+        "contract": {
+            "CreateContract": "Pangani mgwirizano",
+            "SelectContract": "Sankhani mgwirizano",
+            "CreateContractFor": "Pangani mgwirizano wa {{userName}}",
+            "ContractFor": "Mgwirizano wa {{userName}}",
+            "UpdateContract": "Update Contract",
+            "TransferOwnership": "Kusamutsa Mwini",
+            "SetBaseURI": "Khazikitsani Base URI",
+            "SetSuffix": "Khazikitsani Suffix",
+            "CurrentOwner": "Mwini Watsopano",
+            "CurrentBaseURL": "BaseURL yapano",
+            "ContractAddressAbsent": "Adilesi ya mgwirizano palibe",
+            "FactoryAddressAbsent": "Adilesi yakufakitale palibe",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Mutu wofunikira",
+            "SymbolRequired": "Chizindikiro chofunika",
+            "TypeContractName": "dzina la mgwirizano",
+            "TypeContractSymbol": "chizindikiro cha mgwirizano (zoposa ma chars 10)"
+        },
+        "contests": {
+            "Title": "Mipikisano",
+            "NewContest": "Mpikisano Watsopano"
+        },
+        "collections": {
+            "Title": "Zosonkhanitsidwa",
+            "EnterTitle": "lowetsani mutu",
+            "EnterDescription": "lowetsani kufotokozera",
+            "NewCollection": "Zatsopano Zosonkhanitsidwa",
+            "Name": "Dzina",
+            "Icon": "Chizindikiro",
+            "Description": "Kufotokozera",
+            "Author": "Wolemba",
+            "SelectCollection": "Sankhani zosonkhanitsira",
+            "Value": "Mtengo",
+            "AreYouSure": "Mukutsimikiza?",
+            "AuthorInvalid": "Adilesi ya wolemba ndiyolakwika!",
+            "Address": "Adilesi",
+            "CoverImage": "Chithunzi choyambirira",
+            "UploadIcon": "Lowetsani chizindikiro",
+            "CommissionAddressInvalid": "Adilesi ya Commission ndiyolakwika",
+            "OnSale": "zogulitsa",
+            "OffSale": "osagulitsidwa",
+            "CreateCollection": "Pangani Zosonkhanitsa",
+            "UpdateCollection": "Zosonkhanitsa Zosintha",
+            "CollectionInfo": "Zosonkhanitsa Zambiri",
+            "SelectAuthor": "Sankhani wolemba",
+            "NewItem": "Zosonkhanitsa Zatsopano za NFT",
+            "NamePlaceholder": "Lowetsani dzina lazosonkhanitsa",
+            "DescPlaceholder": "Lowetsani malongosoledwe a zosonkhanitsa",
+            "EndingIn": "Pomaliza",
+            "SubmitSeries": "Tumizani Mndandanda"
+        },
+        "import": {
+            "importNFT": "Kulowetsa NFT&#39;s",
+            "importAttributes": "Lowetsani mawonekedwe a NFT",
+            "fileNotFound": "Pepani, fayilo ya CSV sinapezeke.",
+            "fileEmpty": "Pepani, fayilo ya CSV ilibe.",
+            "userIdNotFound": "wosuta alipo koma id ilibe",
+            "errorLine": "mzere {{1}}",
+            "fieldNotFound": "Munda wofunikira &quot; {{1}} &quot; sunapezeke",
+            "displayTypeEmpty": "Mtundu wowonetsera &quot; {{1}} &quot; sunapezeke",
+            "taskStreamInvalid": "ntchito stream ndi yolakwika",
+            "instructionsEmpty": "ntchito mtsinje malangizo alibe",
+            "complete": "Malizitsani",
+            "activateUsers": "kutumiza uthenga kutsegula kwa ogwiritsa?",
+            "importProgress": "Kupita patsogolo",
+            "importOptions": "Zosankha",
+            "sampleCSV": "Tsitsani Chitsanzo cha CSV",
+            "fileLabel": "Kwezani Spreadsheet:",
+            "errorsTitle": "Zolakwika zidachitika"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Sefa ndi NFT Collections",
+                "ShowNFTCollection": "Onetsani zosonkhanitsira za NFT mu ...",
+                "AllCollections": "Zosonkhanitsa Zonse"
+            },
+            "ByUser": {
+                "AllAuthors": "Olemba Onse",
+                "AllUsers": "Aliyense",
+                "FilterByAuthors": "Sefa ndi Olemba"
+            }
+        },
+        "Back": "Bwererani ku Zosonkhanitsa",
+        "attributes": {
+            "Title": "Sinthani Makhalidwe",
+            "Attributes": "Makhalidwe",
+            "DisplayTitle": "Mtundu Wowonetsera",
+            "AddDisplayType": "Onjezani mtundu watsopano wowonetsera",
+            "NewDisplay": "Chiwonetsero Chatsopano",
+            "TraitTitle": "Mtundu wa Makhalidwe",
+            "AddTraitTitle": "Onjezani mtundu watsopano wamakhalidwe",
+            "NewTrait": "Mtundu Watsopano wa Makhalidwe",
+            "ValueTitle": "Mtengo",
+            "AddValueTitle": "Onjezani mtengo watsopano",
+            "NewValue": "Mtengo Watsopano",
+            "NewAttribute": "Makhalidwe Atsopano",
+            "UpdateAttributes": "Sinthani Makhalidwe",
+            "SaveAttributes": "Sungani Makhalidwe"
+        },
+        "profile": {
+            "LogOut": "Tulukani",
+            "Title": "Mbiri ya {{userName}}",
+            "Description": "Zambiri za ogwiritsa ntchito",
+            "aboutPlaceholder": "Sinthani Bio",
+            "UploadCoverPhoto": "Kwezani Chithunzi Chachikuto",
+            "SureLogOut": "Mukutsimikiza kuti mukufuna kutuluka?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "mndandanda Id",
+                        "owner": "Mwini",
+                        "currency": "Ndalama",
+                        "price": "Mtengo",
+                        "beneficiary": "Wopindula",
+                        "autoindex": "Autoindex",
+                        "duration": "Kutalika",
+                        "rateInterval": "Mulingo wapakati",
+                        "rateAmount": "Mtengo wamtengo"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "zizindikiro zidzapangidwa mu mndandanda uwu",
+                        "owner": "mwiniwake wa chitsanzo, mwinamwake adzakhala wotumiza",
+                        "currency": "Ndalama zama tokeni ogulidwa, ngati ziro - zandalama zakubadwa",
+                        "price": "Mtengo",
+                        "beneficiary": "Wopindula pogulitsa zizindikiro, mwinamwake adzakhala wotumiza",
+                        "autoindex": "Autoindex",
+                        "duration": "Tsekani pambuyo minting. Zero amatanthauza kuti mutenge nthawi yomweyo.",
+                        "rateInterval": "nthawi ya chidebe pogula mwapadera",
+                        "rateAmount": "chidebe chogulira mwapadera"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(posankha)",
+                    "number": "nambala",
+                    "address": "adilesi",
+                    "fraction": "gawo",
+                    "integer": "chiwerengero",
+                    "seconds": "masekondi",
+                    "uint256": "mawu256",
+                    "uint192": "ku192",
+                    "uint64": "mawu 64",
+                    "uint32": "mawu32",
+                    "uint16": "uti16"
+                },
+                "produce": "Panga",
+                "viewInstancesList": "Refresh List"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Series ID",
+                        "account": "Akaunti",
+                        "amount": "Ndalama"
+                    },
+                    "small": {
+                        "seriesId": "chizindikiro chatsopano chikhala mndandanda wokhala ndi ID yotere",
+                        "account": "mwini wa NFT yopangidwa kumene. ngati sichinakhazikitsidwe - idzagwiritsa ntchito chikwama chamakono",
+                        "amount": "kuchuluka kwa NFT mpaka mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(posankha)",
+                    "seriesId": "id",
+                    "account": "akaunti",
+                    "amount": "kuchuluka",
+                    "integer": "chiwerengero"
+                },
+                "btn": {
+                    "Purchase": "Gulani",
+                    "SpecialPurchase": "Kugula kwapadera"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adilesi"
+                    },
+                    "small": {
+                        "account": "Adilesi"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Adilesi Yolakwika"
+                },
+                "placeholders": {
+                    "account": "Adilesi"
+                },
+                "addToWhitelist": "Onjezani ku Whitelist",
+                "removeFromWhitelist": "Chotsani ku Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Chizindikiro ID",
+                    "custodian": "Woyang&#39;anira",
+                    "recipient": "Wolandira"
+                },
+                "small": {
+                    "tokenId": "chizindikiro cha id chomwe chiyenera kutseka kapena kutsegula",
+                    "custodian": "adilesi yomwe imatha kutsegulidwa",
+                    "recipient": "adilesi yomwe idzalandira zizindikiro"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Chizindikiro chosavomerezeka",
+                "invalidCustodian": "Woyang&#39;anira Wosavomerezeka",
+                "invalidRecipient": "Wolandila Wosalondola"
+            },
+            "placeholders": {
+                "optional": "(posankha)",
+                "tokenId": "id",
+                "custodian": "adilesi"
+            },
+            "Lock": "Loko",
+            "Unlock": "Tsegulani",
+            "Locked": "Zokhoma",
+            "CustodianAddress": "Adilesi ya woyang&#39;anira",
+            "TokenWasClaimed": "Chizindikiro &quot; {{title}} &quot; chinatengedwa",
+            "TokenWasLocked": "Chizindikiro &quot; {{title}} &quot; chinali chotsekedwa",
+            "TokenWasUnlocked": "Chizindikiro &quot; {{title}} &quot; chinatsegulidwa"
+        }
+    },
+    "fundrise": {
+        "placeholder": "lembani china chake chokhudza zoperekazi..."
+    },
+    "currencies": {
+        "choose": "Sankhani ndalama"
+    }
+}

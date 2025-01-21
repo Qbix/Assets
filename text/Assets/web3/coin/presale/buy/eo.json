@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Kiom investi?"
+                    },
+                    "placeholders": {
+                        "amount": "Kvanto de {{nativeCoin}}",
+                        "max": "Maksimumo: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Aĉeti",
+                    "execute": "Ekzekuti"
+                }
+            }
+        }
+    }
+}

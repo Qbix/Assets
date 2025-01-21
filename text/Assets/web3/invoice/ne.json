@@ -1,0 +1,27 @@
+{
+    "title": "तिर्नुहोस्",
+    "steps": {
+        "sending_native_coins": "स्वदेशी सिक्का पठाउँदै",
+        "sending_tokens": "टोकनहरू पठाउँदै",
+        "swap": "स्वैप",
+        "approve": "अनुमोदन गर्नुहोस्",
+        "one_tx": "तपाईंले एउटा लेनदेन पठाउनुपर्छ",
+        "two_tx": "तपाईंले दुई लेनदेन पठाउनु पर्छ"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "तिर्न कोष"
+            }
+        },
+        "btns": {
+            "pay": "तिर्नुहोस्"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "&quot; {{amountOut}} &quot; टोकनहरू तिर्न आवश्यक छ"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "आईडी &quot; {{chainId}} &quot; भएको यस्तो चेन समर्थित छैन"
+    }
+}

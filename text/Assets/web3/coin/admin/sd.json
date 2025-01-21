@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "عرصو",
+                    "bonusTokenFraction": "بونس ٽوڪن فريڪشن",
+                    "popularToken": "مشهور ٽوڪن",
+                    "donations": "عطيو",
+                    "rewardsRateFraction": "انعامن جي شرح",
+                    "numerator": "عدد ڪندڙ",
+                    "denominator": "فرق ڪندڙ"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "ڏينهن ۾ مدت",
+                    "bonusTokenFraction": "بونس ٽوڪن فريڪشن",
+                    "popularToken": "مشهور ٽوڪن",
+                    "donations": "عطيو",
+                    "rewardsRateFraction": "انعامن جي شرح",
+                    "numerator": "عدد ڪندڙ",
+                    "denominator": "فرق ڪندڙ"
+                }
+            },
+            "placeholders": {
+                "optional": "(اختياري)",
+                "tuple": "ٽوپل[]",
+                "number": "نمبر",
+                "address": "پتو",
+                "fraction": "حصو",
+                "integer": "عدد",
+                "seconds": "سيڪنڊ",
+                "days": "ڏينهن",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "ڪي به تلاءُ نه آهن"
+            },
+            "btns": {
+                "createPool": "پول ٺاهيو",
+                "createPoolInForm": "ٺاهيو"
+            },
+            "createPool": "پول ٺاهيو",
+            "produce": "پيدا ڪرڻ",
+            "loading": "لوڊشيڊنگ",
+            "viewInstancesList": "ريفريش لسٽ"
+        }
+    }
+}

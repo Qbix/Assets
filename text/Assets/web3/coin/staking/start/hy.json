@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "rezervToken",
+                        "duration": "Տևողությունը",
+                        "amount": "Գումարը"
+                    },
+                    "small": {
+                        "reserveToken": "rezervToken",
+                        "duration": "Տևողությունը",
+                        "amount": "Գումարը"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Տևողությունը",
+                    "amount": "գումարը"
+                },
+                "btns": {
+                    "stake": "Ցից"
+                },
+                "stake": "Ցից",
+                "loading": "Բեռնվում է"
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "alamarErc20",
+                    "duration": "Tsawon lokaci",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "PopularToken",
+                    "donations": "gudummawa",
+                    "rewardsRateFraction": "ladaRateFraction",
+                    "numerator": "mai lamba",
+                    "denominator": "ƙididdiga"
+                },
+                "small": {
+                    "tokenErc20": "alamarErc20",
+                    "duration": "Tsawon kwanaki",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "PopularToken",
+                    "donations": "gudummawa",
+                    "rewardsRateFraction": "ladaRateFraction",
+                    "numerator": "mai lamba",
+                    "denominator": "ƙididdiga"
+                }
+            },
+            "placeholders": {
+                "optional": "(na zaɓi)",
+                "tuple": "tuple[]",
+                "number": "lamba",
+                "address": "adireshin",
+                "fraction": "juzu&#39;i",
+                "integer": "lamba",
+                "seconds": "seconds",
+                "days": "kwanaki",
+                "uint256": "ciki256",
+                "uint192": "zuwa 192",
+                "uint64": "ruwa 64",
+                "uint32": "ciki32",
+                "uint16": "ciki 16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Babu wuraren waha"
+            },
+            "btns": {
+                "createPool": "Ƙirƙiri Pool",
+                "createPoolInForm": "Ƙirƙiri"
+            },
+            "createPool": "Ƙirƙiri Pool",
+            "produce": "Kera",
+            "loading": "Ana lodawa",
+            "viewInstancesList": "Sabunta Lissafi"
+        }
+    }
+}

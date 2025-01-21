@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Errore",
+        "WalletAbsent": "U wallet ùn hè micca cunnessu.",
+        "Rendering": "Ci sò stati errori durante u rendering <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Prezzu necessariu!",
+        "NameRequired": "Nome necessariu!",
+        "PriceInvalid": "Prezzo invalidu!",
+        "AmountInvalid": "A quantità invalida!",
+        "TransactionFailed": "A transazzione hà fiascatu",
+        "ChainNotSupported": "A catena scelta ùn hè micca supportata. Catena supportata: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Avete bisognu di MetaMask cunnessu per travaglià cù l&#39;applicazione",
+        "UserNotLoggedInMetaMask": "L&#39;utente ùn hè micca logatu in MetaMask",
+        "CurrencyNotFound": "A valuta ùn hè micca truvata",
+        "WrongChain": "Stu NFT creatu sottu &quot; {{chain}} &quot;. Per piacè aduprà sta catena.",
+        "NoRecipientSelected": "Nisun destinatariu hè statu sceltu",
+        "CantManageFrozenSeries": "Ùn pudete micca gestisce a serie congelata",
+        "SubscriptionStreamNotPaid": "Ùn avete micca pagatu per vede stu cuntenutu. Per piacè cliccate {{subscriptionUrl}} è abbonate à u pianu adattatu."
+    },
+    "admin": {
+        "Title": "Assi amministrativi",
+        "SubscriptionTitle": "Piani di abbonamentu"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Toccate per pagà"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : a carica hè stata trattata per {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Grazie per u vostru pagamentu à {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} abbonatu à {{plan.title}}",
+        "YouSubscribedTo": "Avete statu abbonatu à {{plan.title}}",
+        "Assets\/credits\/alert": "Avete una alerta in relazione à u vostru contu"
+    },
+    "charge": {
+        "Subject": "Avete ricevutu un pagamentu di {{displayAmount}} da {{call 'publisher.displayName'}} per u &quot; {{description}} &quot;",
+        "HasBeenCharged": "Ehi, questu hè solu per fà sapè chì {{1}} hè statu caricatu {{2}} per {{3}} da {{4}}"
+    },
+    "charged": {
+        "Subject": "Grazie per u vostru pagamentu per u &quot; {{description}} &quot;",
+        "HavePaid": "Ehi {{1}} , questu hè solu una rapida cunferma chì avete pagatu bè {{2}} à {{3}} per {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Cunnette vi cunnetta",
+        "Success": "Successu",
+        "YourAccountCreated": "U vostru contu hè statu creatu bè!",
+        "YourAccountAlreadyCreated": "U vostru contu hè digià statu creatu è hè prontu à aduprà"
+    },
+    "payment": {
+        "AboutOrder": "Info nantu à l&#39;ordine",
+        "PaymentMethod": "Metudu di pagamentu",
+        "ContactInfo": "Info di cuntattu",
+        "Pay": "Paga",
+        "PaymentSucceeded": "U pagamentu hè statu trattatu bè",
+        "PaymentProcessing.": "U vostru pagamentu hè trattatu",
+        "FailTryAgain": "U vostru pagamentu ùn hè micca successu. Per piacè pruvate di novu.",
+        "SomethingWrong": "Qualcosa hè andatu male",
+        "PaymentStatus": "Status di pagamentu",
+        "PayTo": "Paga {{displayName}}",
+        "ChooseCurrency": "Sceglite una valuta",
+        "YouCanSendUpTo": "Pudete mandà finu à {{amount}} {{symbol}}",
+        "Send": "Mandate",
+        "EnterAmount": "entre in quantità"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Invitu accettatu da {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} pienu {{FilledStreamTitle}}",
+        "ForFillingStream": "Per riempie {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Avete {{amount}} crediti per inizià",
+        "PaymentFor": "Pagamentu per &quot; {{1}} &quot;",
+        "PaymentTo": "Pagamentu à {{1}}",
+        "PaymentToUser": "Trasferite à {{toUserName}}",
+        "CreatePrivateChat": "per chat privatu cù {{toUserName}}",
+        "CreatePaidStream": "per creà {{toStreamName}}",
+        "JoinedPaidStream": "per a riservazione in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName =&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "per creà a cumunità &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "cum&#39;è un rimborsu di riservazione in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName =&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Cumpratu {{amount}} crediti",
+        "BonusCredits": "Bonus {{amount}} crediti",
+        "BuyAmountCredits": "Cumprate {{amount}} crediti",
+        "WatchClip": "per vede {{fromStreamTitle}}",
+        "MissingCredits": "Crediti mancanti",
+        "YouMissingCredits": "Avete bisognu di {{amount}} crediti supplementari per procederà.",
+        "BuyCredits": "Cumprate crediti",
+        "BuyBonus": "L&#39;acquistu {{amount}} crediti à una volta hà da risultatu in un bonus di {{bonus}} crediti.",
+        "Buy": "Cumprà",
+        "PurchaseCredits": "Acquistu Crediti",
+        "Credits": "Crediti",
+        "ErrorInvalidAmount": "A quantità invalida",
+        "ErrorInvalidCurrency": "Sfortunatamente, ùn sustenemu micca a valuta {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} crediti",
+            "BonusCredits": "{{amount}} crediti"
+        }
+    },
+    "history": {
+        "Date": "Data",
+        "Amount": "A quantità",
+        "Description": "Descrizzione",
+        "Client": "Cliente",
+        "User": "User",
+        "To": "à",
+        "From": "da",
+        "SeeHistory": "Vede a storia di pagamentu per {{1}}",
+        "HistoryEmpty": "Nisuna transazzione ancora",
+        "PaymentFor": "Mandatu {{amount}} crediti",
+        "PaymentTo": "Mandatu {{amount}} crediti",
+        "PaymentToUser": "Mandatu {{amount}} crediti",
+        "CreatePaidStream": "Passatu {{amount}} crediti",
+        "WatchClip": {
+            "+": "Guadagnatu {{amount}} crediti",
+            "-": "Passatu {{amount}} crediti"
+        },
+        "JoinedPaidStream": {
+            "+": "Guadagnatu {{amount}} crediti",
+            "-": "Passatu {{amount}} crediti"
+        },
+        "LeftPaidStream": {
+            "+": "Ricevutu {{amount}} crediti",
+            "-": "Mandatu {{amount}} crediti"
+        },
+        "CreatedCommunity": "Passatu {{amount}} crediti",
+        "BoughtCredits": "Cumpratu {{amount}} crediti",
+        "BonusCredits": "Avete un bonus {{amount}} crediti",
+        "InviteAcceptedBy": "Guadagnatu {{amount}} crediti",
+        "Streams_user_firstname": "Guadagnatu {{amount}} crediti",
+        "Streams_user_lastname": "Guadagnatu {{amount}} crediti",
+        "Streams_user_icon": "Guadagnatu {{amount}} crediti",
+        "Places_user_location": "Guadagnatu {{amount}} crediti",
+        "Streams_greeting": "Guadagnatu {{amount}} crediti",
+        "YouHaveCreditsToStart": "Guadagnatu {{amount}} crediti",
+        "InvitedUserFilledStream": "Guadagnatu {{amount}} crediti",
+        "ForFillingStream": "Guadagnatu {{amount}} crediti",
+        "CreatePrivateChat": "Passatu {{amount}} crediti"
+    },
+    "subscriptions": {
+        "infoTitle": "Fornite l&#39;infurmazione di pagamentu",
+        "confirm": {
+            "title": "Cumincià l&#39;abbonamentu",
+            "message": "Cumincià un abbonamentu recurrente à &quot; {{title}} &quot; ?",
+            "ok": "OK",
+            "cancel": "Cancella"
+        },
+        "CreditOrDebitCard": "Carta di creditu o debitu",
+        "SubscribePayment": "Abbonate Pagamentu",
+        "ImmediatePayment": "Pagamentu Immediatu",
+        "ProcessingPayment": "Trattamentu di Pagamentu",
+        "SubscriptionAlreadyPaid": "Stu abbonamentu hè digià pagatu",
+        "SubscriptionNotActive": "L&#39;abbonamentu hè attualmente inattivu",
+        "Subscribed": "Abbonatu",
+        "Unsubscribed": "Unsubscribed",
+        "Unsubscribe": "Unsubscribe",
+        "Subscribe": "Abbonate",
+        "Started": "Cuminciò",
+        "EndsIn": "Finisce in",
+        "NextPay": "U prossimu pagamentu",
+        "Period": "Periodu",
+        "Price": "prezzu",
+        "AreYouSureUnsubscribe": "Sò sicuru chì vulete annullà l&#39;abbonamentu di stu pianu?",
+        "YouUnsubscribedFromPlan": "Avete annullatu u pianu &quot; {{planTitle}} &quot;. Ùn vi sarà micca caricatu a prossima volta, ma u vostru abbonamentu continuerà finu à {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "Titulu di u pianu",
+            "PricePlaceholder": "prezzu",
+            "SubscriptionTitle": "Piani di abbonamentu",
+            "DescriptionPlaceholder": "descrizzione di u pianu di abbunamentu",
+            "AreYouSureDeletePlan": "Sò sicuru chì vulete sguassà stu pianu?",
+            "Duration": "Durata",
+            "Discount": "Scontu",
+            "SavePlan": "Salvà",
+            "Interrupt": "Interruzzione",
+            "Continue": "Cuntinuà",
+            "NewPlan": "Pianu novu",
+            "SelectDisplayType": "Sceglite {{displayType}}",
+            "EndDate": "data di fine",
+            "Available": "Disponibile",
+            "Hidden": "Ammucciatu",
+            "InviteOnly": "Invitatu solu",
+            "CantSubscribeUnlessInvited": "Ùn pudete micca abbunà à stu pianu, salvu chì site invitatu"
+        }
+    },
+    "payments": {
+        "infoTitle": "Imposta l&#39;infurmazione di pagamentu",
+        "BuyAmountCredits": "Cumprate {{amount}} crediti",
+        "confirm": {
+            "title": "Fate un Pagamentu",
+            "message": "Accettate à pagà {{symbol}} {{amount}} ?",
+            "ok": "OK",
+            "cancel": "Cancella"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Crediti",
+            "description": "mantene a traccia di crediti è pagamenti"
+        },
+        "Assets\/plan": {
+            "displayType": "Pianu di Abbonamentu",
+            "description": "pianu di abbonamentu"
+        },
+        "Assets\/subscription": {
+            "displayType": "Abbonamentu",
+            "description": "abbonamentu"
+        },
+        "Assets\/product": {
+            "displayType": "Pruduttu",
+            "description": "pruduttu chì hè vendutu"
+        },
+        "Assets\/service": {
+            "displayType": "serviziu",
+            "description": "serviziu esse prupostu"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Guadagnatu {{amount}} crediti"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Cumpratu {{amount}} crediti"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} crediti"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Passatu {{amount}} crediti"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Mandatu {{amount}} crediti à {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Ricevutu {{amount}} crediti da {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Avete creditu insufficiente in u vostru contu. Per piacè visitate u seguente <a href='<i translate='no'>999 &#39;&gt;ligame<\/a> per cumprà più crediti."
+        }
+    },
+    "billing": {
+        "Title": "A fattura di l&#39;assi",
+        "CreditsMinimum": "Crediti minimi",
+        "CreditsToAdd": "Crediti à aghjunghje",
+        "Save": "Salvà",
+        "ThisLink": "stu ligame",
+        "errors": {
+            "CreditsMinimumNegative": "I crediti minimi ùn ponu esse negativi",
+            "CreditsToAddNegative": "I crediti per aghjunghje ùn ponu esse negativi"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Novu serviziu",
+            "TitlePlaceholder": "Titulu di serviziu",
+            "PricePlaceholder": "Fighjate u prezzu",
+            "LinkPlaceholder": "stabilisce un ligame d&#39;infurmazioni supplementari",
+            "DescriptionPlaceholder": "Descrizzione di serviziu",
+            "SaveService": "Salvà u serviziu",
+            "SelectRequiredParticipants": "I participanti ligati richiesti",
+            "RequiredParticipantsDesc": "Per piacè selezziunate i participanti cunnessi chì hè necessariu per aduprà stu serviziu (per esempiu, animali domestici per &quot;Spettacolo di cani&quot;, o zitelli per &quot;Vacanze di i zitelli&quot;, etc.). Se u serviziu hè pagatu, l&#39;utilizatore hà da pagà ancu per ogni participante cunnessu."
+        },
+        "EditServiceTemplate": {
+            "Title": "Edit Service"
+        },
+        "ManageServiceTemplates": "Gestisce i mudelli di serviziu",
+        "ManageServices": "Gestisce i servizii",
+        "Free": "Gratuitu",
+        "OptionalContribution": "Cuntribuzione facultativa",
+        "RequiredPayment": "Pagamentu necessariu",
+        "AreYouSureDelete": "Sò sicuru chì vulete sguassà stu serviziu ?",
+        "AmountServicesRelated": "Ci sò {{amount}} dispunibilità ligati à stu serviziu. Seranu ancu eliminati."
+    },
+    "transfer": {
+        "SelectRecipient": "Sceglie u destinatariu",
+        "TransactionSuccess": "Successu di a transazzione",
+        "OrTypeWalletAddress": "O scrivite l&#39;indirizzu di u portafoglio di u destinatariu",
+        "AppCredits": "Crediti di l&#39;app"
+    },
+    "NFT": {
+        "Title": "Titulu",
+        "Name": "Nome",
+        "EnterName": "Entre u nome",
+        "EnterAuthorWallet": "Inserite u wallet di l&#39;autore",
+        "InformationAboutTitle": "L&#39;infurmazione nantu à {{title}} NFT",
+        "Description": "Descrizzione",
+        "DetailedInformationAboutNFT": "L&#39;infurmazione nantu à a cumpagnia NFT",
+        "PresaleStarts": "A prevendita principia u 23 di dicembre",
+        "OwnerUserNotFound": "U pruprietariu di questa NFT ùn hè micca registratu in a nostra applicazione.",
+        "BuyNow": "Cumprà avà",
+        "Buy": "Cumprà",
+        "Add": "Add",
+        "Remove": "Eliminate",
+        "NoNFTyet": "Nisun NFT ancora",
+        "Conversation": "Cunversazione",
+        "Create": "Crià",
+        "CurrentBid": "Offerta attuale",
+        "StartingIn": "Partendu in",
+        "EndingIn": "Finisce in",
+        "CreateNFT": "Crea un NFT",
+        "TitlePlaceholder": "Dà u vostru NFT un titulu",
+        "DescriptionPlaceholder": "Dà a vostra NFT una descrizzione",
+        "CreateYourNFT": "Crea u vostru NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Opcional. A quantità pagata à u creatore prima di u trasferimentu.",
+        "ExpirationDate": "Data di perenzione",
+        "StartingDate": "Data di iniziu",
+        "BidsBelowThisAmount": "L&#39;offerte sottu à questu ammontu ùn saranu micca permesse",
+        "MinimumBid": "Offerta minima",
+        "Author": "Autore",
+        "Price": "prezzu",
+        "Commission": "Cummissione",
+        "EnterCommission": "Entre in cumissioni",
+        "Owner": "Pruprietariu",
+        "SelectCategory": "Selezziunà categuria",
+        "Day": "Ghjornu",
+        "Days": "Ghjorni",
+        "Hour": "Ora",
+        "Hours": "Ore",
+        "Minute": "Minutu",
+        "Minutes": "Minuti",
+        "Second": "Sicondu",
+        "Seconds": "Sicondi",
+        "SalesCreator": "di vendite andarà à u creatore",
+        "Details": "Dettagli",
+        "Bids": "Offerte",
+        "History": "Storia",
+        "LoremIpsum": "Lorem Ipsum hè solu un testu simulatu di l&#39;industria di stampa è di stampa.",
+        "PutOnSale": "Metti in vendita",
+        "PutOffSale": "Ritirate da a vendita",
+        "Transfer": "Trasferimentu",
+        "Actions": "Azzioni",
+        "Claim": "Riclamà",
+        "ClaimNFT": "Riclamà NFT",
+        "Unlocking": "Unlocking",
+        "Unlock": "Sbloccare",
+        "Update": "Actualizazione",
+        "UpdateToken": "Update Token",
+        "UpdateNFT": "Aghjurnate NFT",
+        "CreateToken": "Crea Token",
+        "PlaceBid": "Pone l&#39;offerta",
+        "SoldOut": "Vendu",
+        "NotOnSale": "Ùn hè in vendita",
+        "NftName": "nome NFT",
+        "DescribeYourNFT": "Per piacè descrivi a vostra NFT",
+        "NFTImage": "Immagine per NFT",
+        "NFTVideo": "Video per NFT, s&#39;ellu ci hè",
+        "GenerateDescription": "o autogenerate",
+        "UploadMovie": "Caricate filmu",
+        "MovieSource": "Fonte di filmu",
+        "MovieURL": "URL di u filmu",
+        "UploadFile": "Caricà un schedariu",
+        "PutOnMarketplace": "Mettite nantu à u mercatu",
+        "InstantPurchase": "Inserite u prezzu per permette à l&#39;utilizatori di cumprà immediatamente u vostru NFT",
+        "FixedPrice": "Prezzu fissu",
+        "TimedAuction": "Asta cronometrata",
+        "OpenForBids": "Apertu per offerte",
+        "PriceOnePiece": "Inserite u prezzu per un pezzu",
+        "EnterPrice": "Inserite u prezzu",
+        "EnterMinimumBid": "Inserite l&#39;offerta minima",
+        "SelectChain": "Selezziunà a catena",
+        "Currency": "valuta",
+        "AreYouSureDeleteImage": "Sò sicuru chì vulete sguassà l&#39;imaghjini?",
+        "AreYouSureDeleteVideo": "Sò sicuru chì vulete sguassà u video?",
+        "series": {
+            "Name": "Nome",
+            "Icon": "Icona",
+            "Description": "Descrizzione",
+            "Author": "Autore",
+            "SelectSeries": "Selezziunà a serie",
+            "Value": "Valore",
+            "AreYouSure": "Sì sicuru?",
+            "AuthorInvalid": "L&#39;indirizzu di l&#39;autore ùn hè micca validu!",
+            "Address": "Indirizzu",
+            "CoverImage": "Immagine di copertina",
+            "UploadCoverImage": "Caricate l&#39;immagine di copertina",
+            "CommissionAddressInvalid": "Indirizzu di a Cummissione invalidu",
+            "OnSale": "in vendita",
+            "OffSale": "fora di vendita",
+            "CreateSeries": "Crea una serie",
+            "UpdateSeries": "Update Series",
+            "SeriesInfo": "Serie Info",
+            "SelectAuthor": "Scegli l&#39;autore",
+            "NewItem": "A nova serie NFT",
+            "NamePlaceholder": "Inserite u nome di a serie",
+            "DescPlaceholder": "Inserite a descrizzione di a serie",
+            "EndingIn": "Finisce in"
+        },
+        "contract": {
+            "CreateContract": "Crea un cuntrattu",
+            "SelectContract": "Selezziunà u cuntrattu",
+            "CreateContractFor": "Crea un cuntrattu per {{userName}}",
+            "ContractFor": "Cuntrattu per {{userName}}",
+            "UpdateContract": "Cuntrattu d&#39;aghjurnamentu",
+            "TransferOwnership": "Trasferimentu di a pruprietà",
+            "SetBaseURI": "Imposta l&#39;URI di basa",
+            "SetSuffix": "Set Suffissu",
+            "CurrentOwner": "Pruprietariu attuale",
+            "CurrentBaseURL": "BaseURL attuale",
+            "ContractAddressAbsent": "Indirizzu di u cuntrattu assente",
+            "FactoryAddressAbsent": "Indirizzu di fabbrica assente",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Titulu necessariu",
+            "SymbolRequired": "Simbulu necessariu",
+            "TypeContractName": "nomu di u cuntrattu",
+            "TypeContractSymbol": "simbulu di u cuntrattu (max 10 caratteri)"
+        },
+        "contests": {
+            "Title": "Cuncorsi",
+            "NewContest": "Novu cuncorsu"
+        },
+        "collections": {
+            "Title": "Cullizzioni",
+            "EnterTitle": "entre u titulu",
+            "EnterDescription": "entre a descrizzione",
+            "NewCollection": "Nova cullizzioni",
+            "Name": "Nome",
+            "Icon": "Icona",
+            "Description": "Descrizzione",
+            "Author": "Autore",
+            "SelectCollection": "Sceglite a cullezzione",
+            "Value": "Valore",
+            "AreYouSure": "Sì sicuru?",
+            "AuthorInvalid": "L&#39;indirizzu di l&#39;autore ùn hè micca validu!",
+            "Address": "Indirizzu",
+            "CoverImage": "Immagine di copertina",
+            "UploadIcon": "Caricà l&#39;icona",
+            "CommissionAddressInvalid": "Indirizzu di a Cummissione invalidu",
+            "OnSale": "in vendita",
+            "OffSale": "fora di vendita",
+            "CreateCollection": "Crea una cullizzioni",
+            "UpdateCollection": "Aghjurnà a cullezzione",
+            "CollectionInfo": "Info cullizzioni",
+            "SelectAuthor": "Scegli l&#39;autore",
+            "NewItem": "Nova cullizzioni NFT",
+            "NamePlaceholder": "Inserite u nome di a cullezzione",
+            "DescPlaceholder": "Inserite a descrizzione di a cullezzione",
+            "EndingIn": "Finisce in",
+            "SubmitSeries": "Invia una seria"
+        },
+        "import": {
+            "importNFT": "Importazione di NFT",
+            "importAttributes": "Importa l&#39;attributi NFT",
+            "fileNotFound": "Scusate, u schedariu CSV ùn hè micca truvatu.",
+            "fileEmpty": "Scusate, u schedariu CSV hè viotu.",
+            "userIdNotFound": "utilizatore esiste ma id viotu",
+            "errorLine": "linea {{1}}",
+            "fieldNotFound": "U campu obligatoriu &quot; {{1}} &quot; ùn hè micca truvatu",
+            "displayTypeEmpty": "Tipu di visualizazione per &quot; {{1}} &quot; ùn hè micca truvatu",
+            "taskStreamInvalid": "flussu di attività invalidu",
+            "instructionsEmpty": "Istruzzioni di u flussu di attività vacanti",
+            "complete": "Cumpleta",
+            "activateUsers": "mandà un missaghju di attivazione à l&#39;utilizatori?",
+            "importProgress": "Prugressu",
+            "importOptions": "Opzioni",
+            "sampleCSV": "Scaricate Sample CSV",
+            "fileLabel": "Caricate un fogliu di calculu:",
+            "errorsTitle": "Errori accaduti"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filtra per e cullezzione NFT",
+                "ShowNFTCollection": "Mostra a cullezzione NFT in ...",
+                "AllCollections": "Tutte e cullezzione"
+            },
+            "ByUser": {
+                "AllAuthors": "Tutti l&#39;autori",
+                "AllUsers": "Tutti",
+                "FilterByAuthors": "Filtra per Autori"
+            }
+        },
+        "Back": "Torna à a cullezzione",
+        "attributes": {
+            "Title": "Gestisce l&#39;attributi",
+            "Attributes": "Attributi",
+            "DisplayTitle": "Tipu di visualizazione",
+            "AddDisplayType": "Aghjunghjite un novu tipu di visualizazione",
+            "NewDisplay": "New Display",
+            "TraitTitle": "Tipu di trattu",
+            "AddTraitTitle": "Aghjunghjite un novu tipu di trattu",
+            "NewTrait": "Novu tipu di trattu",
+            "ValueTitle": "Valore",
+            "AddValueTitle": "Aghjunghjite un novu valore",
+            "NewValue": "New Value",
+            "NewAttribute": "Novu Attributu",
+            "UpdateAttributes": "Aghjurnà Attributi",
+            "SaveAttributes": "Salvà Attributi"
+        },
+        "profile": {
+            "LogOut": "Scunnettà si",
+            "Title": "Profilu per {{userName}}",
+            "Description": "Detaglii di l&#39;utilizatori",
+            "aboutPlaceholder": "Edita Bio",
+            "UploadCoverPhoto": "Caricate una foto di copertina",
+            "SureLogOut": "Sò sicuru chì vulete log out ?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "Cuntrattu NFT",
+                        "seriesId": "serie Id",
+                        "owner": "Pruprietariu",
+                        "currency": "valuta",
+                        "price": "prezzu",
+                        "beneficiary": "Beneficiariu",
+                        "autoindex": "Autoindex",
+                        "duration": "Durata",
+                        "rateInterval": "Intervallu di tarifa",
+                        "rateAmount": "A quantità di tarifa"
+                    },
+                    "small": {
+                        "NFTContract": "Cuntrattu NFT",
+                        "seriesId": "i tokens seranu cuniati in questa serie",
+                        "owner": "pruprietariu di esempiu, altrimenti serà u mittente",
+                        "currency": "Valuta per i tokens acquistati, se zero - per muniti nativu",
+                        "price": "prezzu",
+                        "beneficiary": "Beneficiariu di vende tokens, altrimenti serà u mittente",
+                        "autoindex": "Autoindex",
+                        "duration": "Lock dopu à minting. Zero significa uttene immediatamente.",
+                        "rateInterval": "intervallu di bucket per compra speciale",
+                        "rateAmount": "quantità di bucket per compra speciale"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opcional)",
+                    "number": "numeru",
+                    "address": "indirizzu",
+                    "fraction": "frazzioni",
+                    "integer": "interu",
+                    "seconds": "seconde",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Pruduzzione",
+                "viewInstancesList": "Refresh List"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID di serie",
+                        "account": "contu",
+                        "amount": "A quantità"
+                    },
+                    "small": {
+                        "seriesId": "novu token appartene à a serie cù tali ID",
+                        "account": "pruprietariu di a nova creazione di NFT. s&#39;ellu ùn hè micca stabilitu - aduprà a billetera attuale",
+                        "amount": "quantità NFT à mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opcional)",
+                    "seriesId": "id",
+                    "account": "contu",
+                    "amount": "quantità",
+                    "integer": "interu"
+                },
+                "btn": {
+                    "Purchase": "Compra",
+                    "SpecialPurchase": "Acquistu speciale"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Indirizzu"
+                    },
+                    "small": {
+                        "account": "Indirizzu"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Indirizzu invalidu"
+                },
+                "placeholders": {
+                    "account": "Indirizzu"
+                },
+                "addToWhitelist": "Add To Whitelist",
+                "removeFromWhitelist": "Eliminate da a lista bianca"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ID token",
+                    "custodian": "Custode",
+                    "recipient": "Recipiente"
+                },
+                "small": {
+                    "tokenId": "token id ciò chì ci vole à chjude o sblocca",
+                    "custodian": "indirizzu chì pò esse capaci di sbloccare",
+                    "recipient": "indirizzu chì riceverà i tokens"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId invalidu",
+                "invalidCustodian": "Custode invalidu",
+                "invalidRecipient": "Destinataire invalide"
+            },
+            "placeholders": {
+                "optional": "(opcional)",
+                "tokenId": "id",
+                "custodian": "indirizzu"
+            },
+            "Lock": "Lock",
+            "Unlock": "Sbloccare",
+            "Locked": "Chjosu",
+            "CustodianAddress": "Indirizzu di u custodiu",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; hè statu riclamatu",
+            "TokenWasLocked": "U token &quot; {{title}} &quot; hè statu chjusu",
+            "TokenWasUnlocked": "U token &quot; {{title}} &quot; hè statu sbloccatu"
+        }
+    },
+    "fundrise": {
+        "placeholder": "scrive qualcosa nantu à sta cuntribuzione ..."
+    },
+    "currencies": {
+        "choose": "Sceglite una valuta"
+    }
+}

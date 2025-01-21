@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Узактыгы",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "кайрымдуулук",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "сан",
+                    "denominator": "бөлүүчү"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Күн менен узактыгы",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "кайрымдуулук",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "сан",
+                    "denominator": "бөлүүчү"
+                }
+            },
+            "placeholders": {
+                "optional": "(милдеттүү эмес)",
+                "tuple": "кортеж[]",
+                "number": "саны",
+                "address": "дареги",
+                "fraction": "бөлчөк",
+                "integer": "бүтүн сан",
+                "seconds": "секунд",
+                "days": "күн",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "бассейндер жок"
+            },
+            "btns": {
+                "createPool": "Бассейн түзүү",
+                "createPoolInForm": "Түзүү"
+            },
+            "createPool": "Бассейн түзүү",
+            "produce": "Өндүрүш",
+            "loading": "Жүктөө",
+            "viewInstancesList": "Тизмени жаңыртуу"
+        }
+    }
+}

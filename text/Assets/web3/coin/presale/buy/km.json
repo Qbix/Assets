@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "តើត្រូវវិនិយោគប៉ុន្មាន?"
+                    },
+                    "placeholders": {
+                        "amount": "ចំនួនទឹកប្រាក់ {{nativeCoin}}",
+                        "max": "អតិបរមា៖ {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "ទិញ",
+                    "execute": "ប្រតិបត្តិ"
+                }
+            }
+        }
+    }
+}

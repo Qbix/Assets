@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "E hia nga moni hei haumi?"
+                    },
+                    "placeholders": {
+                        "amount": "Te rahi o te {{nativeCoin}}",
+                        "max": "Mōrahi: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Hoko",
+                    "execute": "Whakamatea"
+                }
+            }
+        }
+    }
+}

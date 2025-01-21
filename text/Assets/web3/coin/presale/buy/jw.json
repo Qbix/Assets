@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Pira kanggo nandur modal?"
+                    },
+                    "placeholders": {
+                        "amount": "Jumlah {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "tuku",
+                    "execute": "eksekusi"
+                }
+            }
+        }
+    }
+}

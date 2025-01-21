@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Ego ole ka itinye ego?"
+                    },
+                    "placeholders": {
+                        "amount": "Ọnụ ego nke {{nativeCoin}}",
+                        "max": "Oke: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Zụrụ",
+                    "execute": "Gbuo"
+                }
+            }
+        }
+    }
+}

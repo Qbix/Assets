@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ұзақтығы",
+                        "amount": "Сома"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ұзақтығы",
+                        "amount": "Сома"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Ұзақтығы",
+                    "amount": "сомасы"
+                },
+                "btns": {
+                    "stake": "Үлес"
+                },
+                "stake": "Үлес",
+                "loading": "Жүктелуде"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "ReserveTokini",
+                        "duration": "Iye akoko",
+                        "amount": "Iye"
+                    },
+                    "small": {
+                        "reserveToken": "ReserveTokini",
+                        "duration": "Iye akoko",
+                        "amount": "Iye"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Iye akoko",
+                    "amount": "iye"
+                },
+                "btns": {
+                    "stake": "Igi"
+                },
+                "stake": "Igi",
+                "loading": "Ikojọpọ"
+            }
+        }
+    }
+}

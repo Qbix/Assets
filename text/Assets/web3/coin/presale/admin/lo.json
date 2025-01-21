@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "ຂາຍໂທເຄັນ",
+                        "timestamps": "ເວລາ",
+                        "prices": "ລາຄາ",
+                        "endTime": "ເວລາສິ້ນສຸດ",
+                        "thresholds": "ເກນ",
+                        "bonuses": "ໂບນັດ"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "ເຈົ້າຂອງບໍ່ສາມາດຖອນໄດ້",
+                            "option1": "ເຈົ້າຂອງສາມາດຖອນ tokens ພຽງແຕ່ຫຼັງຈາກ endTime ຜ່ານໄປ",
+                            "option2": "ເຈົ້າຂອງສາມາດຖອນ tokens ໄດ້ທຸກເວລາ"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "ທີ່ຢູ່ຊຸມຊົນ",
+                    "methodkeccack": "ຟັງຊັນ Keccak256 hash",
+                    "roleId": "ID ບົດບາດ",
+                    "sellingToken": "ຂາຍທີ່ຢູ່ Token",
+                    "prices": "ETH, ລາຄາ",
+                    "thresholds": "# ຂອງໂທເຄັນ",
+                    "bonuses": "ໂບນັດ %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "ບໍ່ມີເງິນທຶນ"
+                },
+                "btns": {
+                    "createFund": "ສ້າງກອງທຶນ",
+                    "createFundInForm": "ສ້າງ"
+                },
+                "fundAddress": "ທີ່ຢູ່ກອງທຶນ",
+                "createFund": "ສ້າງກອງທຶນ",
+                "fundInfo": "ຂໍ້ມູນ",
+                "produce": "ຜະລິດ",
+                "loading": "ກຳລັງໂຫຼດ",
+                "viewInstancesList": "ໂຫຼດລາຍຊື່ຄືນໃໝ່"
+            }
+        }
+    }
+}

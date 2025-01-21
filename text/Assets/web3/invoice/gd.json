@@ -1,0 +1,27 @@
+{
+    "title": "Pàigh",
+    "steps": {
+        "sending_native_coins": "A &#39;cur bhuinn dùthchasach",
+        "sending_tokens": "A &#39;cur comharran",
+        "swap": "Suaip",
+        "approve": "Aontaich",
+        "one_tx": "Bu chòir dhut aon ghnothach a chuir",
+        "two_tx": "Bu chòir dhut dà ghnothach a chuir"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Airgead ri phàigheadh"
+            }
+        },
+        "btns": {
+            "pay": "Pàigh"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Feum air comharran &quot; {{amountOut}} &quot; a phàigheadh"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Chan eil taic ri slabhraidh mar seo le id &quot; {{chainId}} &quot;"
+    }
+}

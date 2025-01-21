@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Алдаа",
+        "WalletAbsent": "Түрийвч холбогдоогүй байна.",
+        "Rendering": "<span class='url'>{{1}}<\/span> буулгах явцад алдаа гарсан",
+        "PriceRequired": "Үнэ шаардлагатай!",
+        "NameRequired": "Нэр шаардлагатай!",
+        "PriceInvalid": "Үнэ хүчингүй!",
+        "AmountInvalid": "Дүн буруу!",
+        "TransactionFailed": "Гүйлгээ амжилтгүй боллоо",
+        "ChainNotSupported": "Сонгосон хэлхээг дэмждэггүй. Дэмжигдсэн хэлхээ: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Програмтай ажиллахын тулд MetaMask холбогдсон байх шаардлагатай",
+        "UserNotLoggedInMetaMask": "Хэрэглэгч MetaMask-д нэвтрээгүй байна",
+        "CurrencyNotFound": "Валют олдсонгүй",
+        "WrongChain": "Энэхүү NFT нь &quot; {{chain}} &quot;-ийн дагуу үүсгэгдсэн. Энэ гинжийг ашиглана уу.",
+        "NoRecipientSelected": "Хүлээн авагч сонгогдоогүй байна",
+        "CantManageFrozenSeries": "Та хөлдөөсөн цувралуудыг удирдах боломжгүй",
+        "SubscriptionStreamNotPaid": "Та энэ агуулгыг үзэхийн тулд төлбөр төлөөгүй байна. {{subscriptionUrl}} дээр дараад тохирох төлөвлөгөөнд бүртгүүлнэ үү."
+    },
+    "admin": {
+        "Title": "Хөрөнгийн захиргааны",
+        "SubscriptionTitle": "Захиалгын төлөвлөгөө"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Төлбөрийн тулд товшино уу"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : төлбөрийг {{call 'user.displayName'}} -д тооцсон",
+        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} дугаарт төлбөр хийсэнд баярлалаа",
+        "SubscribedTo": "{{call 'user.displayName'}} {{plan.title}} -д бүртгүүлсэн",
+        "YouSubscribedTo": "Та {{plan.title}} дугаарт бүртгүүлсэн байна",
+        "Assets\/credits\/alert": "Танд бүртгэлтэй холбоотой анхааруулга байна"
+    },
+    "charge": {
+        "Subject": "Та &quot; {{description}} &quot;-ийн төлөө {{call 'publisher.displayName'}} аас {{displayAmount}} ийн төлбөр хүлээн авсан.",
+        "HasBeenCharged": "Хөөе, энэ нь {{4}} гэхэд {{3}} д {{1}} -ыг {{2}} тооцсоныг танд мэдэгдэх гэсэн юм."
+    },
+    "charged": {
+        "Subject": "&quot; {{description}} &quot;-ийг төлсөнд баярлалаа.",
+        "HavePaid": "Хөөе {{1}} , энэ бол та {{4}} ын төлөө {{2}} аас {{3}} амжилттай төлсөн гэсэн хурдан баталгаа юм."
+    },
+    "connectedAccount": {
+        "Title": "Бүртгэлийг холбоно уу",
+        "Success": "Амжилт",
+        "YourAccountCreated": "Таны бүртгэл амжилттай үүсгэгдсэн!",
+        "YourAccountAlreadyCreated": "Таны бүртгэл аль хэдийн үүсгэгдсэн бөгөөд ашиглахад бэлэн байна"
+    },
+    "payment": {
+        "AboutOrder": "Захиалгын талаарх мэдээлэл",
+        "PaymentMethod": "Төлбөрийн арга",
+        "ContactInfo": "Холбоо барих мэдээлэл",
+        "Pay": "Төл",
+        "PaymentSucceeded": "Төлбөрийг амжилттай боловсрууллаа",
+        "PaymentProcessing.": "Таны төлбөрийг боловсруулж байна",
+        "FailTryAgain": "Таны төлбөр амжилтгүй боллоо. Дахин оролдоно уу.",
+        "SomethingWrong": "Ямар нэг алдаа гарлаа",
+        "PaymentStatus": "Төлбөрийн төлөв",
+        "PayTo": "{{displayName}} төлнө",
+        "ChooseCurrency": "Валют сонгоно уу",
+        "YouCanSendUpTo": "Та {{amount}} {{symbol}} хүртэл илгээх боломжтой",
+        "Send": "Илгээх",
+        "EnterAmount": "дүнг оруулна уу"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Урилгыг {{invitedUserName}} хүлээн авсан",
+        "InvitedUserFilledStream": "{{invitedUserName}} {{FilledStreamTitle}} дүүргэсэн",
+        "ForFillingStream": "{{FilledStreamTitle}} бөглөхөд зориулагдсан",
+        "YouHaveCreditsToStart": "Танд эхлэх {{amount}} кредит байна",
+        "PaymentFor": "&quot; {{1}} &quot;-ын төлбөр",
+        "PaymentTo": "Төлбөрийг {{1}}",
+        "PaymentToUser": "{{toUserName}} руу шилжүүлнэ",
+        "CreatePrivateChat": "{{toUserName}} тэй хувийн чатлах боломжтой",
+        "CreatePaidStream": "{{toStreamName}} бүтээхэд зориулагдсан",
+        "JoinedPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;-д захиалга хийх",
+        "CreatedCommunity": "&quot; {{communityId}} &quot; нийгэмлэгийг бий болгосны төлөө",
+        "LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot; дахь захиалгын төлбөрийг буцаан олгох",
+        "BoughtCredits": "{{amount}} кредит худалдаж авсан",
+        "BonusCredits": "Бонус {{amount}} кредит",
+        "BuyAmountCredits": "{{amount}} кредит худалдаж аваарай",
+        "WatchClip": "{{fromStreamTitle}} үзэхийн тулд",
+        "MissingCredits": "Алга болсон кредитүүд",
+        "YouMissingCredits": "Үргэлжлүүлэхийн тулд танд нэмэлт {{amount}} кредит шаардлагатай.",
+        "BuyCredits": "Зээл худалдаж авах",
+        "BuyBonus": "Нэг дор {{amount}} кредит худалдаж авбал {{bonus}} кредитийн урамшуулал авах болно.",
+        "Buy": "Худалдан авах",
+        "PurchaseCredits": "Зээл худалдаж авах",
+        "Credits": "Зээл",
+        "ErrorInvalidAmount": "Дүн буруу байна",
+        "ErrorInvalidCurrency": "Харамсалтай нь бид {{currency}} валютыг дэмжихгүй байна",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} кредит",
+            "BonusCredits": "{{amount}} кредит"
+        }
+    },
+    "history": {
+        "Date": "Огноо",
+        "Amount": "Дүн",
+        "Description": "Тодорхойлолт",
+        "Client": "Үйлчлүүлэгч",
+        "User": "Хэрэглэгч",
+        "To": "руу",
+        "From": "-аас",
+        "SeeHistory": "{{1}} ийн төлбөрийн түүхийг харна уу",
+        "HistoryEmpty": "Одоогоор гүйлгээ байхгүй байна",
+        "PaymentFor": "{{amount}} кредит илгээсэн",
+        "PaymentTo": "{{amount}} кредит илгээсэн",
+        "PaymentToUser": "{{amount}} кредит илгээсэн",
+        "CreatePaidStream": "{{amount}} кредит зарцуулсан",
+        "WatchClip": {
+            "+": "{{amount}} кредит авсан",
+            "-": "{{amount}} кредит зарцуулсан"
+        },
+        "JoinedPaidStream": {
+            "+": "{{amount}} кредит авсан",
+            "-": "{{amount}} кредит зарцуулсан"
+        },
+        "LeftPaidStream": {
+            "+": "{{amount}} кредит хүлээн авсан",
+            "-": "{{amount}} кредит илгээсэн"
+        },
+        "CreatedCommunity": "{{amount}} кредит зарцуулсан",
+        "BoughtCredits": "{{amount}} кредит худалдаж авсан",
+        "BonusCredits": "Бонус {{amount}} кредит авсан",
+        "InviteAcceptedBy": "{{amount}} кредит авсан",
+        "Streams_user_firstname": "{{amount}} кредит авсан",
+        "Streams_user_lastname": "{{amount}} кредит авсан",
+        "Streams_user_icon": "{{amount}} кредит авсан",
+        "Places_user_location": "{{amount}} кредит авсан",
+        "Streams_greeting": "{{amount}} кредит авсан",
+        "YouHaveCreditsToStart": "{{amount}} кредит авсан",
+        "InvitedUserFilledStream": "{{amount}} кредит авсан",
+        "ForFillingStream": "{{amount}} кредит авсан",
+        "CreatePrivateChat": "{{amount}} кредит зарцуулсан"
+    },
+    "subscriptions": {
+        "infoTitle": "Төлбөрийн мэдээллийг өгнө үү",
+        "confirm": {
+            "title": "Захиалга эхлүүлэх",
+            "message": "&quot; {{title}} &quot;-ын давтагдах захиалга эхлэх үү?",
+            "ok": "OK",
+            "cancel": "Цуцлах"
+        },
+        "CreditOrDebitCard": "Кредит эсвэл дебит карт",
+        "SubscribePayment": "Төлбөрийг захиалах",
+        "ImmediatePayment": "Шууд төлбөр",
+        "ProcessingPayment": "Төлбөрийг боловсруулж байна",
+        "SubscriptionAlreadyPaid": "Энэ захиалга аль хэдийн төлсөн",
+        "SubscriptionNotActive": "Захиалга одоогоор идэвхгүй байна",
+        "Subscribed": "Бүртгүүлсэн",
+        "Unsubscribed": "Бүртгэлээ цуцалсан",
+        "Unsubscribe": "Бүртгэлээ цуцлах",
+        "Subscribe": "Бүртгүүлэх",
+        "Started": "Эхэлсэн",
+        "EndsIn": "Төгсгөл",
+        "NextPay": "Дараагийн төлбөр",
+        "Period": "Хугацаа",
+        "Price": "Үнэ",
+        "AreYouSureUnsubscribe": "Та энэ багцаас бүртгэлээ цуцлахыг хүсэж байна уу?",
+        "YouUnsubscribedFromPlan": "Та &quot; {{planTitle}} &quot; төлөвлөгөөг цуцалсан байна. Дараагийн удаа танаас төлбөр авахгүй, гэхдээ таны захиалга {{endsIn}} хүртэл үргэлжилнэ",
+        "plan": {
+            "TitlePlaceholder": "төлөвлөгөөний гарчиг",
+            "PricePlaceholder": "үнэ",
+            "SubscriptionTitle": "Захиалгын төлөвлөгөө",
+            "DescriptionPlaceholder": "захиалгын төлөвлөгөөний тайлбар",
+            "AreYouSureDeletePlan": "Та энэ төлөвлөгөөг устгахдаа итгэлтэй байна уу?",
+            "Duration": "Үргэлжлэх хугацаа",
+            "Discount": "Хөнгөлөлт",
+            "SavePlan": "Хадгалах",
+            "Interrupt": "Тасал",
+            "Continue": "Үргэлжлүүлэх",
+            "NewPlan": "Шинэ төлөвлөгөө",
+            "SelectDisplayType": "{{displayType}} сонгоно уу",
+            "EndDate": "дуусах огноо",
+            "Available": "Боломжтой",
+            "Hidden": "Нуугдсан",
+            "InviteOnly": "Зөвхөн урилгатай",
+            "CantSubscribeUnlessInvited": "Та уригдаагүй л бол энэ багцад бүртгүүлэх боломжгүй"
+        }
+    },
+    "payments": {
+        "infoTitle": "Төлбөрийн мэдээллийг тохируулах",
+        "BuyAmountCredits": "{{amount}} кредит худалдаж аваарай",
+        "confirm": {
+            "title": "Төлбөр хийх",
+            "message": "Та {{symbol}} {{amount}} төлөхийг зөвшөөрч байна уу?",
+            "ok": "OK",
+            "cancel": "Цуцлах"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Зээл",
+            "description": "зээл, төлбөр тооцоог хөтөлдөг"
+        },
+        "Assets\/plan": {
+            "displayType": "Захиалгын төлөвлөгөө",
+            "description": "захиалгын төлөвлөгөө"
+        },
+        "Assets\/subscription": {
+            "displayType": "Захиалга",
+            "description": "захиалга"
+        },
+        "Assets\/product": {
+            "displayType": "Бүтээгдэхүүн",
+            "description": "бүтээгдэхүүн зарагдаж байна"
+        },
+        "Assets\/service": {
+            "displayType": "Үйлчилгээ",
+            "description": "үйлчилгээг санал болгож байна"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "{{amount}} кредит авсан"
+        },
+        "Assets\/credits\/bought": {
+            "content": "{{amount}} кредит худалдаж авсан"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Бонус {{amount}} кредит"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} кредит зарцуулсан"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{amount}} кредитийг {{toUserName}} руу илгээсэн"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} аас {{amount}} кредит авсан"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Таны дансанд кредит хангалтгүй байна. Дараах <a href='<i translate='no'>999 &#39;&gt;линкээр<\/a> орж нэмэлт кредит худалдаж авна уу."
+        }
+    },
+    "billing": {
+        "Title": "Хөрөнгийн тооцоо",
+        "CreditsMinimum": "Хамгийн бага кредит",
+        "CreditsToAdd": "Нэмэх кредит",
+        "Save": "Хадгалах",
+        "ThisLink": "энэ холбоос",
+        "errors": {
+            "CreditsMinimumNegative": "Хамгийн бага кредит нь сөрөг байж болохгүй",
+            "CreditsToAddNegative": "Нэмэх кредит нь сөрөг байж болохгүй"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Шинэ үйлчилгээ",
+            "TitlePlaceholder": "Үйлчилгээний нэр",
+            "PricePlaceholder": "Үнэ тогтоох",
+            "LinkPlaceholder": "нэмэлт мэдээллийн холбоосыг тохируулах",
+            "DescriptionPlaceholder": "Үйлчилгээний тодорхойлолт",
+            "SaveService": "Үйлчилгээг хадгалах",
+            "SelectRequiredParticipants": "Холбогдох оролцогчид шаардлагатай",
+            "RequiredParticipantsDesc": "Энэ үйлчилгээг ашиглахад шаардлагатай холбогдох оролцогчдыг сонгоно уу (жишээлбэл, &quot;Нохойн шоу&quot;-нд тэжээвэр амьтад эсвэл &quot;Хүүхдийн баяр&quot;-т хүүхдүүд гэх мэт). Үйлчилгээний төлбөртэй бол хэрэглэгч холбогдох оролцогч бүрт мөн төлбөр төлөх шаардлагатай болно."
+        },
+        "EditServiceTemplate": {
+            "Title": "Үйлчилгээг засах"
+        },
+        "ManageServiceTemplates": "Үйлчилгээний загваруудыг удирдах",
+        "ManageServices": "Үйлчилгээг удирдах",
+        "Free": "Үнэгүй",
+        "OptionalContribution": "Нэмэлт хувь нэмэр",
+        "RequiredPayment": "Шаардлагатай төлбөр",
+        "AreYouSureDelete": "Та энэ үйлчилгээг устгахдаа итгэлтэй байна уу?",
+        "AmountServicesRelated": "Энэ үйлчилгээтэй холбоотой {{amount}} боломж байна. Тэд бас хасагдах болно."
+    },
+    "transfer": {
+        "SelectRecipient": "Хүлээн авагчийг сонгоно уу",
+        "TransactionSuccess": "Гүйлгээ амжилттай",
+        "OrTypeWalletAddress": "ЭСВЭЛ хүлээн авагчийн түрийвчний хаягийг бичнэ үү",
+        "AppCredits": "Апп кредит"
+    },
+    "NFT": {
+        "Title": "Гарчиг",
+        "Name": "Нэр",
+        "EnterName": "Нэрийг оруулна уу",
+        "EnterAuthorWallet": "Зохиогчийн түрийвчээ оруулна уу",
+        "InformationAboutTitle": "{{title}} NFT-ийн тухай мэдээлэл",
+        "Description": "Тодорхойлолт",
+        "DetailedInformationAboutNFT": "NFT-ийн талаарх дэлгэрэнгүй мэдээлэл",
+        "PresaleStarts": "Урьдчилсан худалдаа 12-р сарын 23-нд эхэлнэ",
+        "OwnerUserNotFound": "Энэхүү NFT-ийн эзэмшигч нь манай өргөдөлд бүртгэгдээгүй байна.",
+        "BuyNow": "Одоо худалдаж аваарай",
+        "Buy": "Худалдан авах",
+        "Add": "Нэмэх",
+        "Remove": "Устгах",
+        "NoNFTyet": "Одоогоор NFT байхгүй",
+        "Conversation": "Яриа",
+        "Create": "Үүсгэх",
+        "CurrentBid": "Одоогийн тендер",
+        "StartingIn": "Орж эхэлж байна",
+        "EndingIn": "Төгсгөл",
+        "CreateNFT": "NFT үүсгэх",
+        "TitlePlaceholder": "NFT-дээ гарчиг өг",
+        "DescriptionPlaceholder": "NFT-дээ тайлбар өгнө үү",
+        "CreateYourNFT": "NFT-ээ үүсгэ",
+        "Royalties": "Роялти",
+        "RoyaltyPlaceholder": "Нэмэлт. Шилжүүлэхээс өмнө бүтээгчид төлсөн дүн.",
+        "ExpirationDate": "Дуусах огноо",
+        "StartingDate": "Эхлэх огноо",
+        "BidsBelowThisAmount": "Энэ хэмжээнээс доогуур үнийн санал өгөхийг зөвшөөрөхгүй",
+        "MinimumBid": "Хамгийн бага үнийн санал",
+        "Author": "Зохиогч",
+        "Price": "Үнэ",
+        "Commission": "Комисс",
+        "EnterCommission": "Комисс оруулна уу",
+        "Owner": "Эзэмшигч",
+        "SelectCategory": "Ангилал сонгоно уу",
+        "Day": "Өдөр",
+        "Days": "Өдөр",
+        "Hour": "Цаг",
+        "Hours": "Цаг",
+        "Minute": "Минут",
+        "Minutes": "Минут",
+        "Second": "Хоёрдугаарт",
+        "Seconds": "Секунд",
+        "SalesCreator": "борлуулалтын орлого бүтээгчид очно",
+        "Details": "Дэлгэрэнгүй мэдээлэл",
+        "Bids": "Тендер",
+        "History": "Түүх",
+        "LoremIpsum": "Lorem Ipsum бол хэвлэх, хэвлэх үйлдвэрийн хуурамч текст юм.",
+        "PutOnSale": "Хямдралд оруулах",
+        "PutOffSale": "Борлуулалтаас татах",
+        "Transfer": "Дамжуулах",
+        "Actions": "Үйлдлүүд",
+        "Claim": "Нэхэмжлэл",
+        "ClaimNFT": "NFT нэхэмжлэх",
+        "Unlocking": "Түгжээг тайлж байна",
+        "Unlock": "Түгжээг тайлах",
+        "Update": "Шинэчлэх",
+        "UpdateToken": "Токеныг шинэчлэх",
+        "UpdateNFT": "NFT-г шинэчлэх",
+        "CreateToken": "Токен үүсгэх",
+        "PlaceBid": "Тендер байршуулах",
+        "SoldOut": "Борлуулсан",
+        "NotOnSale": "Борлуулалтгүй",
+        "NftName": "NFT нэр",
+        "DescribeYourNFT": "NFT-ээ тайлбарлана уу",
+        "NFTImage": "NFT-д зориулсан зураг",
+        "NFTVideo": "Хэрэв байгаа бол NFT-д зориулсан видео",
+        "GenerateDescription": "эсвэл автоматаар үүсгэх",
+        "UploadMovie": "Кино байршуулах",
+        "MovieSource": "Киноны эх сурвалж",
+        "MovieURL": "Киноны URL",
+        "UploadFile": "Файл байршуулах",
+        "PutOnMarketplace": "Зах зээл дээр тавь",
+        "InstantPurchase": "Хэрэглэгчид таны NFT-г шууд худалдан авах боломжийг олгохын тулд үнийг оруулна уу",
+        "FixedPrice": "Тогтмол үнэ",
+        "TimedAuction": "Хугацаатай дуудлага худалдаа",
+        "OpenForBids": "Тендерт нээлттэй",
+        "PriceOnePiece": "Нэг ширхэгийн үнийг оруулна уу",
+        "EnterPrice": "Үнэ оруулна уу",
+        "EnterMinimumBid": "Хамгийн бага үнийн саналыг оруулна уу",
+        "SelectChain": "Гинжийг сонгоно уу",
+        "Currency": "Валют",
+        "AreYouSureDeleteImage": "Та зургийг устгахдаа итгэлтэй байна уу?",
+        "AreYouSureDeleteVideo": "Та видеог устгахдаа итгэлтэй байна уу?",
+        "series": {
+            "Name": "Нэр",
+            "Icon": "Дүрс",
+            "Description": "Тодорхойлолт",
+            "Author": "Зохиогч",
+            "SelectSeries": "Цуврал сонгох",
+            "Value": "Үнэ цэнэ",
+            "AreYouSure": "Та итгэлтэй байна уу?",
+            "AuthorInvalid": "Зохиогчийн хаяг буруу байна!",
+            "Address": "Хаяг",
+            "CoverImage": "Хавтасны зураг",
+            "UploadCoverImage": "Хавтасны зургийг байршуулах",
+            "CommissionAddressInvalid": "Комиссын хаяг хүчингүй",
+            "OnSale": "худалдаанд гарлаа",
+            "OffSale": "хямдралтай",
+            "CreateSeries": "Цуврал үүсгэх",
+            "UpdateSeries": "Цувралыг шинэчлэх",
+            "SeriesInfo": "Цуврал мэдээлэл",
+            "SelectAuthor": "Зохиогчийг сонгоно уу",
+            "NewItem": "Шинэ NFT цуврал",
+            "NamePlaceholder": "Цувралын нэрийг оруулна уу",
+            "DescPlaceholder": "Цувралын тайлбарыг оруулна уу",
+            "EndingIn": "Төгсгөл"
+        },
+        "contract": {
+            "CreateContract": "Гэрээ байгуулах",
+            "SelectContract": "Гэрээ сонгоно уу",
+            "CreateContractFor": "{{userName}} ийн гэрээ байгуулах",
+            "ContractFor": "{{userName}} -ийн гэрээ",
+            "UpdateContract": "Гэрээг шинэчлэх",
+            "TransferOwnership": "Өмчлөлийг шилжүүлэх",
+            "SetBaseURI": "Үндсэн URI тохируулах",
+            "SetSuffix": "Суффикс тохируулах",
+            "CurrentOwner": "Одоогийн эзэмшигч",
+            "CurrentBaseURL": "Одоогийн BaseURL",
+            "ContractAddressAbsent": "Гэрээний хаяг байхгүй",
+            "FactoryAddressAbsent": "Үйлдвэрийн хаяг байхгүй",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Гарчиг шаардлагатай",
+            "SymbolRequired": "Шаардлагатай тэмдэг",
+            "TypeContractName": "гэрээний нэр",
+            "TypeContractSymbol": "гэрээний тэмдэг (хамгийн ихдээ 10 тэмдэгт)"
+        },
+        "contests": {
+            "Title": "Тэмцээн",
+            "NewContest": "Шинэ тэмцээн"
+        },
+        "collections": {
+            "Title": "Цуглуулга",
+            "EnterTitle": "гарчиг оруулна уу",
+            "EnterDescription": "тайлбар оруулна уу",
+            "NewCollection": "Шинэ цуглуулга",
+            "Name": "Нэр",
+            "Icon": "Дүрс",
+            "Description": "Тодорхойлолт",
+            "Author": "Зохиогч",
+            "SelectCollection": "Цуглуулга сонгох",
+            "Value": "Үнэ цэнэ",
+            "AreYouSure": "Та итгэлтэй байна уу?",
+            "AuthorInvalid": "Зохиогчийн хаяг буруу байна!",
+            "Address": "Хаяг",
+            "CoverImage": "Хавтасны зураг",
+            "UploadIcon": "Байршуулах дүрс",
+            "CommissionAddressInvalid": "Комиссын хаяг хүчингүй",
+            "OnSale": "худалдаанд гарлаа",
+            "OffSale": "хямдралтай",
+            "CreateCollection": "Цуглуулга үүсгэх",
+            "UpdateCollection": "Цуглуулгыг шинэчлэх",
+            "CollectionInfo": "Цуглуулгын мэдээлэл",
+            "SelectAuthor": "Зохиогчийг сонгоно уу",
+            "NewItem": "Шинэ NFT цуглуулга",
+            "NamePlaceholder": "Цуглуулгын нэрийг оруулна уу",
+            "DescPlaceholder": "Цуглуулгын тайлбарыг оруулна уу",
+            "EndingIn": "Төгсгөл",
+            "SubmitSeries": "Цуврал оруулах"
+        },
+        "import": {
+            "importNFT": "NFT импортлох",
+            "importAttributes": "NFT шинж чанаруудыг импортлох",
+            "fileNotFound": "Уучлаарай, CSV файл олдсонгүй.",
+            "fileEmpty": "Уучлаарай, CSV файл хоосон байна.",
+            "userIdNotFound": "хэрэглэгч байгаа боловч id хоосон байна",
+            "errorLine": "{{1}} мөр",
+            "fieldNotFound": "Шаардлагатай талбар &quot; {{1}} &quot; олдсонгүй",
+            "displayTypeEmpty": "&quot; {{1}} &quot;-ын дэлгэцийн төрөл олдсонгүй",
+            "taskStreamInvalid": "ажлын урсгал буруу байна",
+            "instructionsEmpty": "ажлын урсгалын заавар хоосон",
+            "complete": "Бүрэн",
+            "activateUsers": "хэрэглэгчдэд идэвхжүүлэх мессеж илгээх үү?",
+            "importProgress": "Ахиц дэвшил",
+            "importOptions": "Сонголтууд",
+            "sampleCSV": "Жишээ CSV татаж авах",
+            "fileLabel": "Хүснэгт байршуулах:",
+            "errorsTitle": "Алдаа гарсан"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "NFT цуглуулгаар шүүх",
+                "ShowNFTCollection": "NFT цуглуулгыг ...-д харуулах",
+                "AllCollections": "Бүх цуглуулгууд"
+            },
+            "ByUser": {
+                "AllAuthors": "Бүх Зохиогчид",
+                "AllUsers": "Бүгд",
+                "FilterByAuthors": "Зохиогчидоор шүүх"
+            }
+        },
+        "Back": "Цуглуулга руу буцах",
+        "attributes": {
+            "Title": "Атрибутуудыг удирдах",
+            "Attributes": "Атрибутууд",
+            "DisplayTitle": "Дэлгэцийн төрөл",
+            "AddDisplayType": "Шинэ дэлгэцийн төрлийг нэмнэ үү",
+            "NewDisplay": "Шинэ дэлгэц",
+            "TraitTitle": "Зан чанарын төрөл",
+            "AddTraitTitle": "Шинэ зан чанарын төрлийг нэмнэ үү",
+            "NewTrait": "Шинэ зан чанарын төрөл",
+            "ValueTitle": "Үнэ цэнэ",
+            "AddValueTitle": "Шинэ үнэ цэнэ нэмнэ",
+            "NewValue": "Шинэ үнэ цэнэ",
+            "NewAttribute": "Шинэ атрибут",
+            "UpdateAttributes": "Шинж чанаруудыг шинэчлэх",
+            "SaveAttributes": "Атрибутуудыг хадгалах"
+        },
+        "profile": {
+            "LogOut": "Гарах",
+            "Title": "{{userName}} профайл",
+            "Description": "Хэрэглэгчийн мэдээлэл",
+            "aboutPlaceholder": "Био засах",
+            "UploadCoverPhoto": "Хавтасны зураг байршуулах",
+            "SureLogOut": "Та гарахдаа итгэлтэй байна уу?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFT гэрээ",
+                        "seriesId": "цувралын дугаар",
+                        "owner": "Эзэмшигч",
+                        "currency": "Валют",
+                        "price": "Үнэ",
+                        "beneficiary": "Ашиг хүртэгч",
+                        "autoindex": "Автоиндекс",
+                        "duration": "Үргэлжлэх хугацаа",
+                        "rateInterval": "Тарифын интервал",
+                        "rateAmount": "Үнийн дүн"
+                    },
+                    "small": {
+                        "NFTContract": "NFT гэрээ",
+                        "seriesId": "жетоныг энэ цувралд цутгах болно",
+                        "owner": "жишээ эзэмшигч, эс бөгөөс илгээгч байх болно",
+                        "currency": "Худалдан авсан токенуудын валют, хэрэв тэг бол - уугуул зоосны хувьд",
+                        "price": "Үнэ",
+                        "beneficiary": "Токен борлуулах ашиг хүртэгч, эс тэгвээс илгээгч болно",
+                        "autoindex": "Автоиндекс",
+                        "duration": "Цутгасны дараа түгжих. Тэг гэдэг нь шууд авах гэсэн үг.",
+                        "rateInterval": "тусгай худалдан авалт хийх хувин интервал",
+                        "rateAmount": "тусгай худалдан авалтын хувингийн хэмжээ"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(заавал биш)",
+                    "number": "тоо",
+                    "address": "хаяг",
+                    "fraction": "бутархай",
+                    "integer": "бүхэл тоо",
+                    "seconds": "секунд",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Үйлдвэрлэх",
+                "viewInstancesList": "Жагсаалтыг шинэчлэх"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Цуврал ID",
+                        "account": "Данс",
+                        "amount": "Дүн"
+                    },
+                    "small": {
+                        "seriesId": "шинэ токен ийм ID-тай цувралд хамаарах болно",
+                        "account": "шинээр бий болсон NFT-ийн эзэн. тохируулаагүй бол - одоогийн түрийвч ашиглах болно",
+                        "amount": "NFT-н хэмжээг гаа"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(заавал биш)",
+                    "seriesId": "ID",
+                    "account": "данс",
+                    "amount": "хэмжээ",
+                    "integer": "бүхэл тоо"
+                },
+                "btn": {
+                    "Purchase": "Худалдан авалт",
+                    "SpecialPurchase": "Тусгай худалдан авалт"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Хаяг"
+                    },
+                    "small": {
+                        "account": "Хаяг"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Буруу хаяг"
+                },
+                "placeholders": {
+                    "account": "Хаяг"
+                },
+                "addToWhitelist": "Цагаан жагсаалтад нэмэх",
+                "removeFromWhitelist": "Цагаан жагсаалтаас хасах"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Токен ID",
+                    "custodian": "Асран хамгаалагч",
+                    "recipient": "Хүлээн авагч"
+                },
+                "small": {
+                    "tokenId": "түгжих эсвэл нээхэд хэрэгтэй токен id",
+                    "custodian": "түгжээг тайлах боломжтой хаяг",
+                    "recipient": "жетон хүлээн авах хаяг"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Токены дугаар буруу байна",
+                "invalidCustodian": "Хүчингүй асран хамгаалагч",
+                "invalidRecipient": "Хүлээн авагч хүчингүй"
+            },
+            "placeholders": {
+                "optional": "(заавал биш)",
+                "tokenId": "ID",
+                "custodian": "хаяг"
+            },
+            "Lock": "Түгжих",
+            "Unlock": "Түгжээг тайлах",
+            "Locked": "Түгжигдсэн",
+            "CustodianAddress": "Асран хамгаалагчийн хаяг",
+            "TokenWasClaimed": "&quot; {{title}} &quot; токеныг нэхэмжилсэн",
+            "TokenWasLocked": "&quot; {{title}} &quot; токен түгжигдсэн байна",
+            "TokenWasUnlocked": "&quot; {{title}} &quot; токен нээгдэв"
+        }
+    },
+    "fundrise": {
+        "placeholder": "энэ хувь нэмрийн талаар ямар нэг зүйл бичнэ үү..."
+    },
+    "currencies": {
+        "choose": "Валют сонгоно уу"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Gidugayon",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "sikat ngaToken",
+                    "donations": "mga donasyon",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominador"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Gidugayon sa mga adlaw",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "sikat ngaToken",
+                    "donations": "mga donasyon",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominador"
+                }
+            },
+            "placeholders": {
+                "optional": "(opsyonal)",
+                "tuple": "tuple []",
+                "number": "numero",
+                "address": "adres",
+                "fraction": "tipik",
+                "integer": "integer",
+                "seconds": "segundos",
+                "days": "mga adlaw",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Walay mga pool"
+            },
+            "btns": {
+                "createPool": "Paghimo Pool",
+                "createPoolInForm": "Paghimo"
+            },
+            "createPool": "Paghimo Pool",
+            "produce": "Pagprodyus",
+            "loading": "Nagkarga",
+            "viewInstancesList": "I-refresh ang Listahan"
+        }
+    }
+}

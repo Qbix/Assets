@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "E fia tupe e teu fa&#39;afaigaluega?"
+                    },
+                    "placeholders": {
+                        "amount": "Aofaiga e {{nativeCoin}}",
+                        "max": "Avanoa: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Fa&#39;atau",
+                    "execute": "Fa&#39;atino"
+                }
+            }
+        }
+    }
+}

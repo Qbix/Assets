@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "ໄລຍະເວລາ",
+                        "amount": "ຈໍານວນ"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "ໄລຍະເວລາ",
+                        "amount": "ຈໍານວນ"
+                    }
+                },
+                "placeholders": {
+                    "duration": "ໄລຍະເວລາ",
+                    "amount": "ຈຳນວນ"
+                },
+                "btns": {
+                    "stake": "ສະເຕກ"
+                },
+                "stake": "ສະເຕກ",
+                "loading": "ກຳລັງໂຫຼດ"
+            }
+        }
+    }
+}

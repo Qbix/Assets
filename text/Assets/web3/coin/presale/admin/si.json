@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "ටෝකනය විකිණීම",
+                        "timestamps": "ටයිම්ස්",
+                        "prices": "මිල ගණන්",
+                        "endTime": "අවසන් කාලය",
+                        "thresholds": "එළිපත්ත",
+                        "bonuses": "බෝනස්"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "හිමිකරුට ආපසු ගත නොහැක",
+                            "option1": "හිමිකරුට ටෝකන ආපසු ලබා ගත හැක්කේ අවසාන කාලය ගත වූ පසුව පමණි",
+                            "option2": "අයිතිකරුට ඕනෑම වේලාවක ටෝකන ආපසු ලබාගත හැක"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "ප්‍රජා ලිපිනය",
+                    "methodkeccack": "Keccak256 හැෂ් ශ්‍රිතය",
+                    "roleId": "භූමිකාව හැඳුනුම්පත",
+                    "sellingToken": "ටෝකන් ලිපිනය විකිණීම",
+                    "prices": "ETH, මිල",
+                    "thresholds": "ටෝකන #",
+                    "bonuses": "බෝනස් %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "අරමුදල් නොමැත"
+                },
+                "btns": {
+                    "createFund": "අරමුදලක් සාදන්න",
+                    "createFundInForm": "නිර්මාණය කරන්න"
+                },
+                "fundAddress": "අරමුදල් ලිපිනය",
+                "createFund": "අරමුදලක් සාදන්න",
+                "fundInfo": "තොරතුරු",
+                "produce": "නිපැයුම",
+                "loading": "පූරණය වෙමින් පවතී",
+                "viewInstancesList": "ලැයිස්තුව නැවුම් කරන්න"
+            }
+        }
+    }
+}

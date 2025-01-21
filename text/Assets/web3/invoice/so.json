@@ -1,0 +1,27 @@
+{
+    "title": "Bixi",
+    "steps": {
+        "sending_native_coins": "Diraya qadaadiicda waddaniga ah",
+        "sending_tokens": "diraya calaamado",
+        "swap": "Isbeddel",
+        "approve": "Ogow",
+        "one_tx": "Waa inaad dirtaa hal macaamil ganacsi",
+        "two_tx": "Waa inaad soo dirtaa laba xawaalad"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Lacagaha lagu bixiyo"
+            }
+        },
+        "btns": {
+            "pay": "Bixi"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Waxaan u baahanahay inaad bixiso &quot; {{amountOut}} &quot; calaamado"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Silsilad noocaas ah oo leh id &quot; {{chainId}} &quot; lama taageero"
+    }
+}

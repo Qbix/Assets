@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "ReserveToken",
+                        "duration": "Ogologo oge",
+                        "amount": "Ọnụ ego"
+                    },
+                    "small": {
+                        "reserveToken": "ReserveToken",
+                        "duration": "Ogologo oge",
+                        "amount": "Ọnụ ego"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Ogologo oge",
+                    "amount": "ego"
+                },
+                "btns": {
+                    "stake": "Stake"
+                },
+                "stake": "Stake",
+                "loading": "Na-ebugo"
+            }
+        }
+    }
+}

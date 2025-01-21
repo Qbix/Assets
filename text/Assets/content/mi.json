@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Hapa",
+        "WalletAbsent": "Kaore i te hono te putea.",
+        "Rendering": "He hapa i te whakaputanga <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Utu e hiahiatia ana!",
+        "NameRequired": "Kei te hiahiatia te ingoa!",
+        "PriceInvalid": "He muhu te utu!",
+        "AmountInvalid": "He muhu te rahi!",
+        "TransactionFailed": "Kua rahua te tauwhitinga",
+        "ChainNotSupported": "Kaore i te tautokohia te mekameka kua tohua. Te mekameka tautoko: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Me hono MetaMask ki te mahi me te tono",
+        "UserNotLoggedInMetaMask": "Kaore te Kaiwhakamahi i takiuru ki MetaMask",
+        "CurrencyNotFound": "Kaore i kitea te moni",
+        "WrongChain": "I hangaia tenei NFT i raro i te &quot; {{chain}} &quot;. Tena koa whakamahia tenei mekameka.",
+        "NoRecipientSelected": "Kaore he kaiwhiwhi i tohua",
+        "CantManageFrozenSeries": "Kaore e taea e koe te whakahaere i nga raupapa tio",
+        "SubscriptionStreamNotPaid": "Kaore koe i utu ki te tiro i tenei ihirangi. Paatohia {{subscriptionUrl}} ka ohauru ki te mahere e tika ana."
+    },
+    "admin": {
+        "Title": "Whakahaerenga rawa",
+        "SubscriptionTitle": "Mahere ohaurunga"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Pato hei utu"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : kua whakahaeretia te utu mo {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Mauruuru koe mo to utu ki {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} i ohauru ki te {{plan.title}}",
+        "YouSubscribedTo": "Kua ohauru koe ki {{plan.title}}",
+        "Assets\/credits\/alert": "Kei a koe he matohi e pa ana ki to putea"
+    },
+    "charge": {
+        "Subject": "I whiwhi koe i te utu {{displayAmount}} mai i {{call 'publisher.displayName'}} mo te &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, he korero noa tenei ki a koe kua {{1}} te utu {{2}} mo {{3}} ma te {{4}}"
+    },
+    "charged": {
+        "Subject": "Mauruuru koe mo to utu mo te &quot; {{description}} &quot;",
+        "HavePaid": "Kia ora {{1}} , he whakapumautanga tere noa tenei kua utua e koe {{2}} ki {{3}} mo {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Tūhono pūkete",
+        "Success": "Angitu",
+        "YourAccountCreated": "Kua tutuki pai to putea!",
+        "YourAccountAlreadyCreated": "Kua hanga kē tō pūkete, kua reri ki te whakamahi"
+    },
+    "payment": {
+        "AboutOrder": "Nga korero mo te ota",
+        "PaymentMethod": "Tikanga utu",
+        "ContactInfo": "Nga korero whakapā",
+        "Pay": "Utu",
+        "PaymentSucceeded": "Kua tutuki pai te utu",
+        "PaymentProcessing.": "Kei te tukatukahia to utu",
+        "FailTryAgain": "Kaore i angitu to utu. Me ngana ano.",
+        "SomethingWrong": "Kua he tetahi",
+        "PaymentStatus": "Te mana utu",
+        "PayTo": "Utu {{displayName}}",
+        "ChooseCurrency": "Kōwhiria he moni",
+        "YouCanSendUpTo": "Ka taea e koe te tuku atu ki {{amount}} {{symbol}}",
+        "Send": "Tukua",
+        "EnterAmount": "tomo nui"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Ka whakaaetia e {{invitedUserName}} te powhiri",
+        "InvitedUserFilledStream": "{{invitedUserName}} kua whakakiia {{FilledStreamTitle}}",
+        "ForFillingStream": "Mo te whakakii {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "E {{amount}} nga whiwhinga hei timata",
+        "PaymentFor": "Utu mo &quot; {{1}} &quot;",
+        "PaymentTo": "Utu ki {{1}}",
+        "PaymentToUser": "Whakawhiti ki {{toUserName}}",
+        "CreatePrivateChat": "mo te korerorero motuhake me {{toUserName}}",
+        "CreatePaidStream": "mo te hanga {{toStreamName}}",
+        "JoinedPaidStream": "mo te rahui i &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "mo te hanga hapori &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "hei utu rahui i roto i te &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "I hokona {{amount}} whiwhinga",
+        "BonusCredits": "Takoha {{amount}} whiwhinga",
+        "BuyAmountCredits": "Hokona nga nama {{amount}}",
+        "WatchClip": "mo te matakitaki {{fromStreamTitle}}",
+        "MissingCredits": "Nga Whiwhinga Ngaro",
+        "YouMissingCredits": "Ka hiahia koe ki etahi atu whiwhinga {{amount}} hei haere tonu.",
+        "BuyCredits": "Hokona nga nama",
+        "BuyBonus": "Ko te hoko i nga whiwhinga {{amount}} i te wa kotahi ka puta he bonus o nga whiwhinga {{bonus}} .",
+        "Buy": "Hoko",
+        "PurchaseCredits": "Hoko Whiwhinga",
+        "Credits": "Whiwhinga",
+        "ErrorInvalidAmount": "He muhu te rahi",
+        "ErrorInvalidCurrency": "Kia aroha mai, kaore ano matou i te tautoko i te moni {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} whiwhinga",
+            "BonusCredits": "{{amount}} whiwhinga"
+        }
+    },
+    "history": {
+        "Date": "Rā",
+        "Amount": "Te nui",
+        "Description": "Whakaahuatanga",
+        "Client": "Kiritaki",
+        "User": "Kaiwhakamahi",
+        "To": "ki",
+        "From": "mai",
+        "SeeHistory": "Tirohia te hitori utu mo {{1}}",
+        "HistoryEmpty": "Kaore ano he whakawhitinga",
+        "PaymentFor": "I tukuna nga nama {{amount}}",
+        "PaymentTo": "I tukuna nga nama {{amount}}",
+        "PaymentToUser": "I tukuna nga nama {{amount}}",
+        "CreatePaidStream": "I whakapaua {{amount}} nga whiwhinga",
+        "WatchClip": {
+            "+": "I whiwhi {{amount}} whiwhinga",
+            "-": "I whakapaua {{amount}} nga whiwhinga"
+        },
+        "JoinedPaidStream": {
+            "+": "I whiwhi {{amount}} whiwhinga",
+            "-": "I whakapaua {{amount}} nga whiwhinga"
+        },
+        "LeftPaidStream": {
+            "+": "I whiwhi {{amount}} whiwhinga",
+            "-": "I tukuna nga nama {{amount}}"
+        },
+        "CreatedCommunity": "I whakapaua {{amount}} nga whiwhinga",
+        "BoughtCredits": "I hokona {{amount}} whiwhinga",
+        "BonusCredits": "Ka whiwhi bonus {{amount}} whiwhinga",
+        "InviteAcceptedBy": "I whiwhi {{amount}} whiwhinga",
+        "Streams_user_firstname": "I whiwhi {{amount}} whiwhinga",
+        "Streams_user_lastname": "I whiwhi {{amount}} whiwhinga",
+        "Streams_user_icon": "I whiwhi {{amount}} whiwhinga",
+        "Places_user_location": "I whiwhi {{amount}} whiwhinga",
+        "Streams_greeting": "I whiwhi {{amount}} whiwhinga",
+        "YouHaveCreditsToStart": "I whiwhi {{amount}} whiwhinga",
+        "InvitedUserFilledStream": "I whiwhi {{amount}} whiwhinga",
+        "ForFillingStream": "I whiwhi {{amount}} whiwhinga",
+        "CreatePrivateChat": "I whakapaua {{amount}} nga whiwhinga"
+    },
+    "subscriptions": {
+        "infoTitle": "Whakaratohia nga korero utu",
+        "confirm": {
+            "title": "Tīmata ohaurunga",
+            "message": "Tīmatahia he ohaurunga auau ki &quot; {{title}} &quot;?",
+            "ok": "pai",
+            "cancel": "Whakakore"
+        },
+        "CreditOrDebitCard": "Kaari nama, nama nama ranei",
+        "SubscribePayment": "Utu ohauru",
+        "ImmediatePayment": "Utu Tonu",
+        "ProcessingPayment": "Tukatuka Utu",
+        "SubscriptionAlreadyPaid": "Kua utua tenei ohaurunga",
+        "SubscriptionNotActive": "Ko te ohaurunga kei te hohe i tenei wa",
+        "Subscribed": "Kua ohauru",
+        "Unsubscribed": "Kore ohaurunga",
+        "Unsubscribe": "Wete haina",
+        "Subscribe": "Ohauru",
+        "Started": "I timata",
+        "EndsIn": "Ka mutu ki roto",
+        "NextPay": "Utu muri",
+        "Period": "Wā",
+        "Price": "Utu",
+        "AreYouSureUnsubscribe": "Kei te tino hiahia koe ki te wete ohauru mai i tenei mahere?",
+        "YouUnsubscribedFromPlan": "Kua whakakorehia e koe te mahere &quot; {{planTitle}} &quot;. E kore koe e utu i muri mai, engari ka haere tonu to ohaurunga tae noa ki {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "taitara mahere",
+            "PricePlaceholder": "utu",
+            "SubscriptionTitle": "Mahere ohaurunga",
+            "DescriptionPlaceholder": "Whakaahuatanga mahere ohaurunga",
+            "AreYouSureDeletePlan": "Kei te tino hiahia koe ki te muku i tenei mahere?",
+            "Duration": "Roanga",
+            "Discount": "Te utu",
+            "SavePlan": "Tiaki",
+            "Interrupt": "Whakakore",
+            "Continue": "Haere tonu",
+            "NewPlan": "Mahere Hou",
+            "SelectDisplayType": "Tohua {{displayType}}",
+            "EndDate": "rā mutunga",
+            "Available": "Kei te waatea",
+            "Hidden": "Hunahuna",
+            "InviteOnly": "Powhiri-anake",
+            "CantSubscribeUnlessInvited": "Kaore e taea e koe te ohauru ki tenei mahere mena kaore koe i powhiri"
+        }
+    },
+    "payments": {
+        "infoTitle": "Whakaritehia nga korero utu",
+        "BuyAmountCredits": "Hokona nga nama {{amount}}",
+        "confirm": {
+            "title": "Hanga he Utu",
+            "message": "E whakaae ana koe ki te utu {{symbol}} {{amount}} ?",
+            "ok": "pai",
+            "cancel": "Whakakore"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Whiwhinga",
+            "description": "ka aroturuki i nga whiwhinga me nga utu"
+        },
+        "Assets\/plan": {
+            "displayType": "Mahere Tohahanga",
+            "description": "mahere ohaurunga"
+        },
+        "Assets\/subscription": {
+            "displayType": "Ohaurunga",
+            "description": "ohaurunga"
+        },
+        "Assets\/product": {
+            "displayType": "Hua",
+            "description": "hua e hokona ana"
+        },
+        "Assets\/service": {
+            "displayType": "Ratonga",
+            "description": "ratonga e tukuna ana"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "I whiwhi {{amount}} whiwhinga"
+        },
+        "Assets\/credits\/bought": {
+            "content": "I hokona {{amount}} whiwhinga"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Takoha {{amount}} whiwhinga"
+        },
+        "Assets\/credits\/spent": {
+            "content": "I whakapaua {{amount}} nga whiwhinga"
+        },
+        "Assets\/credits\/sent": {
+            "content": "I tukuna nga nama {{amount}} ki te {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "I whiwhi {{amount}} whiwhinga mai i {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "He iti rawa nga nama kei roto i to putea. Tena koa tirohia te <a href='<i translate='no'>hononga 999<\/a> e whai ake nei ki te hoko nama ake."
+        }
+    },
+    "billing": {
+        "Title": "Te nama nama rawa",
+        "CreditsMinimum": "Nga whiwhinga iti rawa",
+        "CreditsToAdd": "Nga nama hei taapiri",
+        "Save": "Tiaki",
+        "ThisLink": "tenei hono",
+        "errors": {
+            "CreditsMinimumNegative": "Ko nga whiwhinga iti kaore e taea te toraro",
+            "CreditsToAddNegative": "Ko nga whiwhinga hei taapiri kaore e taea te kino"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Ratonga Hou",
+            "TitlePlaceholder": "taitara ratonga",
+            "PricePlaceholder": "Whakaritea te utu",
+            "LinkPlaceholder": "whakaturia he hononga korero taapiri",
+            "DescriptionPlaceholder": "Whakaahuatanga ratonga",
+            "SaveService": "Tiaki Ratonga",
+            "SelectRequiredParticipants": "Ko nga kaiuru whai paanga e hiahiatia ana",
+            "RequiredParticipantsDesc": "Tohua koa nga kaiuru e tika ana hei whakamahi i tenei ratonga (hei tauira mo nga mokai mo te &quot;Whakakitenga kuri&quot;, mo nga tamariki ranei mo te &quot;Haerenga Tamariki&quot; aha atu). Mena ka utua te ratonga, me utu ano te kaiwhakamahi mo ia kaiuru e pa ana."
+        },
+        "EditServiceTemplate": {
+            "Title": "Whakatikatika Ratonga"
+        },
+        "ManageServiceTemplates": "Whakahaerehia nga Tauira Ratonga",
+        "ManageServices": "Whakahaere Ratonga",
+        "Free": "Kore utu",
+        "OptionalContribution": "Te takoha whiriwhiri",
+        "RequiredPayment": "Utu e hiahiatia ana",
+        "AreYouSureDelete": "Kei te tino hiahia koe ki te muku i tenei ratonga?",
+        "AmountServicesRelated": "E {{amount}} nga waatea e pa ana ki tenei ratonga. Ka tangohia hoki."
+    },
+    "transfer": {
+        "SelectRecipient": "Tīpakohia te kaiwhiwhi",
+        "TransactionSuccess": "Angitu te tauwhitinga",
+        "OrTypeWalletAddress": "RĀNEI Patohia te wāhitau putea kaiwhiwhi",
+        "AppCredits": "Whiwhinga Taupānga"
+    },
+    "NFT": {
+        "Title": "Taitara",
+        "Name": "Ingoa",
+        "EnterName": "Whakauru ingoa",
+        "EnterAuthorWallet": "Whakauruhia te putea kaituhi",
+        "InformationAboutTitle": "Nga korero mo {{title}} NFT",
+        "Description": "Whakaahuatanga",
+        "DetailedInformationAboutNFT": "Nga korero taipitopito mo te NFT",
+        "PresaleStarts": "Ka timata te hoko i te Hakihea 23",
+        "OwnerUserNotFound": "Ko te rangatira o tenei NFT kaore i rehitatia ki ta maatau tono.",
+        "BuyNow": "Hokona inaianei",
+        "Buy": "Hoko",
+        "Add": "Tāpiri",
+        "Remove": "Tango",
+        "NoNFTyet": "Kaore ano he NFT",
+        "Conversation": "Kōrerorero",
+        "Create": "Waihanga",
+        "CurrentBid": "Tono o nāianei",
+        "StartingIn": "Ka timata i roto",
+        "EndingIn": "Ka mutu",
+        "CreateNFT": "Waihangahia he NFT",
+        "TitlePlaceholder": "Homai he taitara ki to NFT",
+        "DescriptionPlaceholder": "Homai he whakaahuatanga mo to NFT",
+        "CreateYourNFT": "Waihangahia to NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Kōwhiringa. Te nui i utua ki te kaihanga i mua i te whakawhiti.",
+        "ExpirationDate": "Te Ra Whakamutunga",
+        "StartingDate": "Rā Tīmata",
+        "BidsBelowThisAmount": "Ko nga tono kei raro iho i tenei moni kaore e whakaaetia",
+        "MinimumBid": "Tono iti",
+        "Author": "Kaituhi",
+        "Price": "Utu",
+        "Commission": "Komihana",
+        "EnterCommission": "Whakauruhia te komihana",
+        "Owner": "Rangatira",
+        "SelectCategory": "Tīpako kāwai",
+        "Day": "Ra",
+        "Days": "Nga ra",
+        "Hour": "Haora",
+        "Hours": "Nga haora",
+        "Minute": "Te meneti",
+        "Minutes": "Nga meneti",
+        "Second": "Tuarua",
+        "Seconds": "Hekona",
+        "SalesCreator": "o nga hoko ka haere ki te kaihanga",
+        "Details": "Nga korero",
+        "Bids": "Nga tono",
+        "History": "Hītori",
+        "LoremIpsum": "Ko te Lorem Ipsum he kupu hangarua noa o te ahumahi ta me te whakatakoto momotuhi.",
+        "PutOnSale": "Hoatu ki te hoko",
+        "PutOffSale": "Tango mai i te hoko",
+        "Transfer": "Whakawhiti",
+        "Actions": "Nga Mahi",
+        "Claim": "Kereme",
+        "ClaimNFT": "Kereme NFT",
+        "Unlocking": "Wewete",
+        "Unlock": "Wewete",
+        "Update": "Whakahou",
+        "UpdateToken": "Whakahou Tohu",
+        "UpdateNFT": "Whakahoutia te NFT",
+        "CreateToken": "Waihanga Tohu",
+        "PlaceBid": "Tukua Wahi",
+        "SoldOut": "Kua hokona",
+        "NotOnSale": "Kaore i te Hoko",
+        "NftName": "ingoa NFT",
+        "DescribeYourNFT": "Whakaahuahia to NFT",
+        "NFTImage": "Whakaahua mo NFT",
+        "NFTVideo": "Ataata mo NFT, mena he",
+        "GenerateDescription": "hanga-aunoa ranei",
+        "UploadMovie": "Tukuake kiriata",
+        "MovieSource": "Puna Kiriata",
+        "MovieURL": "URL Kiriata",
+        "UploadFile": "Tukuna he kōnae",
+        "PutOnMarketplace": "Whakanohoia ki te maakete",
+        "InstantPurchase": "Whakauruhia te utu hei tuku i nga kaiwhakamahi ki te hoko tonu i to NFT",
+        "FixedPrice": "Utu pumau",
+        "TimedAuction": "Te wā hokohoko",
+        "OpenForBids": "Tuwhera mo nga tono",
+        "PriceOnePiece": "Whakauruhia te utu mo te waahanga kotahi",
+        "EnterPrice": "Whakauruhia te utu",
+        "EnterMinimumBid": "Whakauruhia te utu iti",
+        "SelectChain": "Tīpakohia te mekameka",
+        "Currency": "Moni",
+        "AreYouSureDeleteImage": "Me tango atahanga?",
+        "AreYouSureDeleteVideo": "Kei te tino hiahia koe ki te tango ataata?",
+        "series": {
+            "Name": "Ingoa",
+            "Icon": "Tohu",
+            "Description": "Whakaahuatanga",
+            "Author": "Kaituhi",
+            "SelectSeries": "Tīpakohia te raupapa",
+            "Value": "Uara",
+            "AreYouSure": "Kei te tino mohio koe?",
+            "AuthorInvalid": "He muhu te wahitau kaituhi!",
+            "Address": "Wāhitau",
+            "CoverImage": "Whakaahua hipoki",
+            "UploadCoverImage": "Tukua ake te whakaahua uhi",
+            "CommissionAddressInvalid": "He muhu te wahitau o te Komihana",
+            "OnSale": "i runga i te hoko",
+            "OffSale": "atu hoko",
+            "CreateSeries": "Waihanga Rangatū",
+            "UpdateSeries": "Whakahou Rangatū",
+            "SeriesInfo": "Nga korero raupapa",
+            "SelectAuthor": "Tīpakohia te kaituhi",
+            "NewItem": "He raupapa NFT hou",
+            "NamePlaceholder": "Whakauruhia te ingoa raupapa",
+            "DescPlaceholder": "Whakauruhia te whakaahuatanga raupapa",
+            "EndingIn": "Mutunga ki roto"
+        },
+        "contract": {
+            "CreateContract": "Waihanga kirimana",
+            "SelectContract": "Tīpako kirimana",
+            "CreateContractFor": "Waihanga kirimana mo {{userName}}",
+            "ContractFor": "He kirimana mo {{userName}}",
+            "UpdateContract": "Whakahou Kiriata",
+            "TransferOwnership": "Whakawhiti Manatanga",
+            "SetBaseURI": "Tautuhia te URI turanga",
+            "SetSuffix": "Tautuhi Humuri",
+            "CurrentOwner": "Rangatira o naianei",
+            "CurrentBaseURL": "BaseURL o nāianei",
+            "ContractAddressAbsent": "Kei te ngaro te wahitau kirimana",
+            "FactoryAddressAbsent": "Kei te ngaro te wahitau wheketere",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Taitara e hiahiatia ana",
+            "SymbolRequired": "Tohu e hiahiatia ana",
+            "TypeContractName": "ingoa kirimana",
+            "TypeContractSymbol": "tohu kirimana (mōrahi 10 pūāhua)"
+        },
+        "contests": {
+            "Title": "Nga whakataetae",
+            "NewContest": "Whakataetae Hou"
+        },
+        "collections": {
+            "Title": "Kohinga",
+            "EnterTitle": "tomo taitara",
+            "EnterDescription": "tomo whakaahuatanga",
+            "NewCollection": "Kohinga Hou",
+            "Name": "Ingoa",
+            "Icon": "Tohu",
+            "Description": "Whakaahuatanga",
+            "Author": "Kaituhi",
+            "SelectCollection": "Tīpakohia te kohinga",
+            "Value": "Uara",
+            "AreYouSure": "Kei te tino mohio koe?",
+            "AuthorInvalid": "He muhu te wahitau kaituhi!",
+            "Address": "Wāhitau",
+            "CoverImage": "Whakaahua hipoki",
+            "UploadIcon": "Tukuake te ata",
+            "CommissionAddressInvalid": "He muhu te wahitau o te Komihana",
+            "OnSale": "i runga i te hoko",
+            "OffSale": "atu hoko",
+            "CreateCollection": "Waihanga Kohinga",
+            "UpdateCollection": "Whakahou Kohinga",
+            "CollectionInfo": "Kohinga Korero",
+            "SelectAuthor": "Tīpakohia te kaituhi",
+            "NewItem": "Kohinga NFT Hou",
+            "NamePlaceholder": "Whakauruhia te ingoa kohinga",
+            "DescPlaceholder": "Whakauruhia te whakaahuatanga kohinga",
+            "EndingIn": "Mutunga ki roto",
+            "SubmitSeries": "Tukua he Rangatū"
+        },
+        "import": {
+            "importNFT": "Te kawemai i nga NFT",
+            "importAttributes": "Kawemai i nga huanga NFT",
+            "fileNotFound": "Aroha mai, kaore i kitea te konae CSV.",
+            "fileEmpty": "Aroha mai, kei te putua te kōnae CSV.",
+            "userIdNotFound": "kei te noho te kaiwhakamahi engari id kau",
+            "errorLine": "raina {{1}}",
+            "fieldNotFound": "Ko te mara e hiahiatia ana &quot; {{1}} &quot; kaore i kitea",
+            "displayTypeEmpty": "Momo whakaatu mo &quot; {{1}} &quot; kaore i kitea",
+            "taskStreamInvalid": "he muhu te rerenga mahi",
+            "instructionsEmpty": "Putua nga tohutohu rerenga mahi",
+            "complete": "Kua oti",
+            "activateUsers": "tuku karere whakahohenga ki nga kaiwhakamahi?",
+            "importProgress": "Te ahunga whakamua",
+            "importOptions": "Kōwhiringa",
+            "sampleCSV": "Tikiake Tauira CSV",
+            "fileLabel": "Tukuake Ripanga:",
+            "errorsTitle": "I puta nga hapa"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Tātari mā ngā Kohinga NFT",
+                "ShowNFTCollection": "Whakaatuhia te kohinga NFT ki...",
+                "AllCollections": "Kohinga Katoa"
+            },
+            "ByUser": {
+                "AllAuthors": "Kaituhi Katoa",
+                "AllUsers": "Katoa",
+                "FilterByAuthors": "Tātari mā ngā Kaituhi"
+            }
+        },
+        "Back": "Hoki ki te Kohinga",
+        "attributes": {
+            "Title": "Whakahaere Huanga",
+            "Attributes": "Huanga",
+            "DisplayTitle": "Momo Whakaatu",
+            "AddDisplayType": "Tāpiri momo whakaaturanga hōu",
+            "NewDisplay": "Whakaaturanga Hou",
+            "TraitTitle": "Momo Hua",
+            "AddTraitTitle": "Tāpirihia te momo āhuatanga hou",
+            "NewTrait": "Momo Tikanga Hou",
+            "ValueTitle": "Uara",
+            "AddValueTitle": "Tāpiri uara hōu",
+            "NewValue": "Uara Hou",
+            "NewAttribute": "Huanga Hou",
+            "UpdateAttributes": "Whakahou Huanga",
+            "SaveAttributes": "Tiakina Huanga"
+        },
+        "profile": {
+            "LogOut": "Takiputa atu",
+            "Title": "Kōtaha mo {{userName}}",
+            "Description": "Nga korero mo te kaiwhakamahi",
+            "aboutPlaceholder": "Whakatika Bio",
+            "UploadCoverPhoto": "Tukuake te Whakaahua Uhi",
+            "SureLogOut": "Kei te tino hiahia koe ki te takiputa?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "raupapa Id",
+                        "owner": "Rangatira",
+                        "currency": "Moni",
+                        "price": "Utu",
+                        "beneficiary": "Kaiwhiwhi",
+                        "autoindex": "TaupūAunoa",
+                        "duration": "Roanga",
+                        "rateInterval": "Wawa reiti",
+                        "rateAmount": "Reiti moni"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "Ka mahia nga tohu i tenei raupapa",
+                        "owner": "te rangatira o te tauira, ki te kore ka tukuna",
+                        "currency": "Moni mo nga tohu kua hokona, ki te kore - mo nga moni taketake",
+                        "price": "Utu",
+                        "beneficiary": "Ka whai hua ki te hoko tohu, ki te kore ka tukuna",
+                        "autoindex": "TaupūAunoa",
+                        "duration": "Maukati i muri i te miring. Kore te tikanga kia whiwhi tonu.",
+                        "rateInterval": "wā peere mo te hoko motuhake",
+                        "rateAmount": "te nui o te peere mo te hoko motuhake"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(kōwhiringa)",
+                    "number": "tau",
+                    "address": "wāhi noho",
+                    "fraction": "hautau",
+                    "integer": "tauoti",
+                    "seconds": "hēkona",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Hua",
+                "viewInstancesList": "Tāmata Rārangi"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID raupapa",
+                        "account": "Pūkete",
+                        "amount": "Te nui"
+                    },
+                    "small": {
+                        "seriesId": "ka uru te tohu hou ki te raupapa me taua ID",
+                        "account": "rangatira o NFT hou i hanga. ki te kore e tautuhi - ka whakamahi i te putea o naianei",
+                        "amount": "nui NFT ki te miniti"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(kōwhiringa)",
+                    "seriesId": "id",
+                    "account": "pūkete",
+                    "amount": "nui",
+                    "integer": "tauoti"
+                },
+                "btn": {
+                    "Purchase": "Hokonga",
+                    "SpecialPurchase": "Te hoko motuhake"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Wāhitau"
+                    },
+                    "small": {
+                        "account": "Wāhitau"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Wāhitau Muhu"
+                },
+                "placeholders": {
+                    "account": "Wāhitau"
+                },
+                "addToWhitelist": "Tāpiri ki te Rārangi Mā",
+                "removeFromWhitelist": "Tango Mai i te Rarangi Ma"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Kaitiaki",
+                    "recipient": "Kaiwhiwhi"
+                },
+                "small": {
+                    "tokenId": "token id he aha te mea hei maukati, hei iriti ranei",
+                    "custodian": "wāhitau ka taea te iriti",
+                    "recipient": "wāhitau ka whiwhi tohu"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId muhu",
+                "invalidCustodian": "Kaitiaki Muhu",
+                "invalidRecipient": "Kaiwhiwhi Muhu"
+            },
+            "placeholders": {
+                "optional": "(kōwhiringa)",
+                "tokenId": "id",
+                "custodian": "wāhi noho"
+            },
+            "Lock": "Maukati",
+            "Unlock": "Wewete",
+            "Locked": "Kua maukati",
+            "CustodianAddress": "Wāhitau kaitiaki",
+            "TokenWasClaimed": "Ko te tohu &quot; {{title}} &quot; i kiihia",
+            "TokenWasLocked": "I maukati te tohu &quot; {{title}} &quot;.",
+            "TokenWasUnlocked": "I wetekina te tohu &quot; {{title}} &quot;."
+        }
+    },
+    "fundrise": {
+        "placeholder": "patohia tetahi mea mo tenei takoha..."
+    },
+    "currencies": {
+        "choose": "Kōwhiria he moni"
+    }
+}

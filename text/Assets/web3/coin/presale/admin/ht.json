@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Vann Token",
+                        "timestamps": "Fwa",
+                        "prices": "Pri",
+                        "endTime": "Tan Fen",
+                        "thresholds": "Papòt",
+                        "bonuses": "Bonis"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Pwopriyetè a pa ka retire li",
+                            "option1": "Pwopriyetè a ka retire marqueur sèlman apre finTime pase",
+                            "option2": "Pwopriyetè a ka retire marqueur nenpòt lè"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Adrès kominote a",
+                    "methodkeccack": "Keccak256 fonksyon hash",
+                    "roleId": "ID wòl",
+                    "sellingToken": "Vann adrès jeton",
+                    "prices": "ETH, Pri",
+                    "thresholds": "# nan siy",
+                    "bonuses": "% bonis"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Pa gen lajan"
+                },
+                "btns": {
+                    "createFund": "Kreye Fon",
+                    "createFundInForm": "Kreye"
+                },
+                "fundAddress": "Adrès fon",
+                "createFund": "Kreye Fon",
+                "fundInfo": "Info",
+                "produce": "Pwodui",
+                "loading": "Chaje",
+                "viewInstancesList": "Rafrechi lis"
+            }
+        }
+    }
+}

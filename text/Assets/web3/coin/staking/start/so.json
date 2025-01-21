@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Muddada",
+                        "amount": "Qadarka"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Muddada",
+                        "amount": "Qadarka"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Muddada",
+                    "amount": "qaddarka"
+                },
+                "btns": {
+                    "stake": "Saami"
+                },
+                "stake": "Saami",
+                "loading": "Soodejinaya"
+            }
+        }
+    }
+}

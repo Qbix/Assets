@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Token verkafen",
+                        "timestamps": "Zäiten",
+                        "prices": "Präisser",
+                        "endTime": "Enn Zäit",
+                        "thresholds": "Schwellen",
+                        "bonuses": "Bonus"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Besëtzer kann net zréckzéien",
+                            "option1": "Besëtzer kann Tokens zréckzéien nëmmen nodeems d&#39;EndTime passéiert ass",
+                            "option2": "Besëtzer kann Tokens zu all Moment zréckzéien"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Communautéit Adress",
+                    "methodkeccack": "Keccak256 Hash Funktioun",
+                    "roleId": "Roll ID",
+                    "sellingToken": "Verkafen Token Adress",
+                    "prices": "Präis ETH",
+                    "thresholds": "# vun Tokens",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Et gi keng Fongen"
+                },
+                "btns": {
+                    "createFund": "Fonds schafen",
+                    "createFundInForm": "Schafen"
+                },
+                "fundAddress": "Fonds Adress",
+                "createFund": "Fonds schafen",
+                "fundInfo": "Info",
+                "produce": "produzéieren",
+                "loading": "Lueden",
+                "viewInstancesList": "Lëscht opfrëschen"
+            }
+        }
+    }
+}

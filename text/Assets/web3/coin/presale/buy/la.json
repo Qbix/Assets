@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Quam multa placerat?"
+                    },
+                    "placeholders": {
+                        "amount": "Moles {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Buy",
+                    "execute": "Executio"
+                }
+            }
+        }
+    }
+}

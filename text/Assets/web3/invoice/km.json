@@ -1,0 +1,27 @@
+{
+    "title": "បង់",
+    "steps": {
+        "sending_native_coins": "ការផ្ញើកាក់ដើម",
+        "sending_tokens": "ការផ្ញើសញ្ញាសម្ងាត់",
+        "swap": "ប្តូរ",
+        "approve": "យល់ព្រម",
+        "one_tx": "អ្នកគួរតែផ្ញើប្រតិបត្តិការមួយ។",
+        "two_tx": "អ្នកគួរតែផ្ញើប្រតិបត្តិការពីរ"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "មូលនិធិដែលត្រូវបង់"
+            }
+        },
+        "btns": {
+            "pay": "បង់"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "ត្រូវការបង់ប្រាក់ &quot; {{amountOut}} &quot; ថូខឹន"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "ខ្សែសង្វាក់បែបនេះដែលមានលេខសម្គាល់ &quot; {{chainId}} &quot; មិនត្រូវបានគាំទ្រទេ។"
+    }
+}

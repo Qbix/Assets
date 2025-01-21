@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ka lōʻihi",
+                        "amount": "Ka nui"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ka lōʻihi",
+                        "amount": "Ka nui"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Ka lōʻihi",
+                    "amount": "nui"
+                },
+                "btns": {
+                    "stake": "Pākuʻi"
+                },
+                "stake": "Pākuʻi",
+                "loading": "Ke hoʻouka nei"
+            }
+        }
+    }
+}

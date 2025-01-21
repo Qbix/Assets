@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "uphawuErc20",
+                    "duration": "Ubude besikhathi",
+                    "bonusTokenFraction": "ibhonasiTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "iminikelo",
+                    "rewardsRateFraction": "imivuzoRateFraction",
+                    "numerator": "inombolo",
+                    "denominator": "idinominethi"
+                },
+                "small": {
+                    "tokenErc20": "uphawuErc20",
+                    "duration": "Ubude bezinsuku",
+                    "bonusTokenFraction": "ibhonasiTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "iminikelo",
+                    "rewardsRateFraction": "imivuzoRateFraction",
+                    "numerator": "inombolo",
+                    "denominator": "idinominethi"
+                }
+            },
+            "placeholders": {
+                "optional": "(uyazikhethela)",
+                "tuple": "i-tuple[]",
+                "number": "inombolo",
+                "address": "ikheli",
+                "fraction": "ingxenyenamba",
+                "integer": "inombolo ephelele",
+                "seconds": "imizuzwana",
+                "days": "izinsuku",
+                "uint256": "ibe 256",
+                "uint192": "othi192",
+                "uint64": "ibe 64",
+                "uint32": "othi32",
+                "uint16": "unje16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Awekho amachibi"
+            },
+            "btns": {
+                "createPool": "Dala Iphuli",
+                "createPoolInForm": "Dala"
+            },
+            "createPool": "Dala Iphuli",
+            "produce": "Khiqiza",
+            "loading": "Iyalayisha",
+            "viewInstancesList": "Vuselela Uhlu"
+        }
+    }
+}

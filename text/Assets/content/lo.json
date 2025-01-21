@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "ຜິດພາດ",
+        "WalletAbsent": "ກະເປົາເງິນບໍ່ໄດ້ເຊື່ອມຕໍ່.",
+        "Rendering": "ມີຂໍ້ຜິດພາດໃນຂະນະທີ່ສະແດງ <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "ລາຄາຕ້ອງການ!",
+        "NameRequired": "ຕ້ອງການຊື່!",
+        "PriceInvalid": "ລາຄາບໍ່ຖືກຕ້ອງ!",
+        "AmountInvalid": "ຈຳນວນບໍ່ຖືກຕ້ອງ!",
+        "TransactionFailed": "ທຸລະກຳລົ້ມເຫລວ",
+        "ChainNotSupported": "ລະບົບຕ່ອງໂສ້ທີ່ເລືອກບໍ່ຖືກຮອງຮັບ. ລະບົບຕ່ອງໂສ້ທີ່ສະຫນັບສະຫນູນ: {{supportedChain}}",
+        "NeedMetaMaskConnected": "ຕ້ອງການ MetaMask ເຊື່ອມຕໍ່ເພື່ອເຮັດວຽກກັບແອັບພລິເຄຊັນ",
+        "UserNotLoggedInMetaMask": "ຜູ້ໃຊ້ບໍ່ໄດ້ເຂົ້າສູ່ລະບົບ MetaMask",
+        "CurrencyNotFound": "ບໍ່ພົບສະກຸນເງິນ",
+        "WrongChain": "NFT ນີ້ສ້າງຂຶ້ນພາຍໃຕ້ &quot; {{chain}} &quot;. ກະລຸນາໃຊ້ຕ່ອງໂສ້ນີ້.",
+        "NoRecipientSelected": "ບໍ່ມີຜູ້ຮັບໃດຖືກເລືອກ",
+        "CantManageFrozenSeries": "ທ່ານບໍ່ສາມາດຈັດການຊຸດທີ່ຈຶ້ງໄດ້",
+        "SubscriptionStreamNotPaid": "ທ່ານຍັງບໍ່ໄດ້ຈ່າຍເງິນເພື່ອເບິ່ງເນື້ອຫານີ້. ກະລຸນາກົດ {{subscriptionUrl}} ແລະຈອງກັບແຜນການທີ່ເຫມາະສົມ."
+    },
+    "admin": {
+        "Title": "ບໍລິຫານຊັບສິນ",
+        "SubscriptionTitle": "ແຜນການຈອງ"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "ແຕະເພື່ອຈ່າຍເງິນ"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} ​: ຄ່າ​ບໍ​ລິ​ການ​ໄດ້​ຮັບ​ການ​ປະ​ຕິ​ບັດ​ສໍາ​ລັບ {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "ຂໍ​ຂອບ​ໃຈ​ທ່ານ​ສໍາ​ລັບ​ການ​ຈ່າຍ​ເງິນ​ຂອງ​ທ່ານ​ເປັນ {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} ຈອງ {{plan.title}}",
+        "YouSubscribedTo": "ເຈົ້າໄດ້ສະໝັກໃຊ້ {{plan.title}} ແລ້ວ",
+        "Assets\/credits\/alert": "ທ່ານມີການແຈ້ງເຕືອນທີ່ກ່ຽວຂ້ອງກັບບັນຊີຂອງທ່ານ"
+    },
+    "charge": {
+        "Subject": "ທ່ານໄດ້ຮັບການຈ່າຍເງິນ {{displayAmount}} ຈາກ {{call 'publisher.displayName'}} ສໍາລັບ &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, ນີ້ແມ່ນພຽງແຕ່ແຈ້ງໃຫ້ທ່ານຮູ້ວ່າ {{1}} ຖືກຄິດຄ່າທໍານຽມ {{2}} ສໍາລັບ {{3}} ໂດຍ {{4}}"
+    },
+    "charged": {
+        "Subject": "ຂອບໃຈສໍາລັບການຈ່າຍເງິນຂອງທ່ານສໍາລັບ &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , ນີ້ແມ່ນພຽງແຕ່ການຢືນຢັນຢ່າງໄວວາວ່າທ່ານໄດ້ຈ່າຍເງິນ {{2}} ຫາ {{3}} ສໍາລັບ {{4}} ສໍາເລັດແລ້ວ."
+    },
+    "connectedAccount": {
+        "Title": "ເຊື່ອມຕໍ່ບັນຊີ",
+        "Success": "ສຳເລັດ",
+        "YourAccountCreated": "ບັນ​ຊີ​ຂອງ​ທ່ານ​ໄດ້​ຮັບ​ການ​ສ້າງ​ສໍາ​ເລັດ​!",
+        "YourAccountAlreadyCreated": "ບັນ​ຊີ​ຂອງ​ທ່ານ​ໄດ້​ຖືກ​ສ້າງ​ຂຶ້ນ​ແລ້ວ​ແລະ​ພ້ອມ​ທີ່​ຈະ​ນໍາ​ໃຊ້​"
+    },
+    "payment": {
+        "AboutOrder": "ຂໍ້​ມູນ​ກ່ຽວ​ກັບ​ຄໍາ​ສັ່ງ​",
+        "PaymentMethod": "ວິທີການຈ່າຍເງິນ",
+        "ContactInfo": "ຂໍ້ມູນຕິດຕໍ່",
+        "Pay": "ຈ່າຍ",
+        "PaymentSucceeded": "ການຈ່າຍເງິນໄດ້ຖືກປະມວນຜົນສຳເລັດແລ້ວ",
+        "PaymentProcessing.": "ການຈ່າຍເງິນຂອງທ່ານກຳລັງຖືກປະມວນຜົນ",
+        "FailTryAgain": "ການຈ່າຍເງິນຂອງທ່ານບໍ່ສຳເລັດ. ກະລຸນາລອງອີກຄັ້ງ.",
+        "SomethingWrong": "ມີບາງຢ່າງຜິດພາດ",
+        "PaymentStatus": "ສະຖານະການຈ່າຍເງິນ",
+        "PayTo": "ຈ່າຍ {{displayName}}",
+        "ChooseCurrency": "ເລືອກສະກຸນເງິນ",
+        "YouCanSendUpTo": "ທ່ານສາມາດສົ່ງໄດ້ເຖິງ {{amount}} {{symbol}}",
+        "Send": "ສົ່ງ",
+        "EnterAmount": "ໃສ່ຈໍານວນ"
+    },
+    "credits": {
+        "InviteAcceptedBy": "ຮັບເຊີນໂດຍ {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} ເຕັມ {{FilledStreamTitle}}",
+        "ForFillingStream": "ສໍາລັບການຕື່ມ {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "ທ່ານມີ {{amount}} ເຄຣດິດເພື່ອເລີ່ມຕົ້ນ",
+        "PaymentFor": "ການຈ່າຍເງິນສໍາລັບ &quot; {{1}} &quot;",
+        "PaymentTo": "ຈ່າຍເປັນ {{1}}",
+        "PaymentToUser": "ໂອນເປັນ {{toUserName}}",
+        "CreatePrivateChat": "ສໍາລັບການສົນທະນາສ່ວນຕົວກັບ {{toUserName}}",
+        "CreatePaidStream": "ສໍາ​ລັບ​ການ​ສ້າງ {{toStreamName}}",
+        "JoinedPaidStream": "ສໍາລັບການຈອງໃນ &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "ເພື່ອສ້າງຊຸມຊົນ &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "ເປັນເງິນຄືນການຈອງໃນ &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "ຊື້ {{amount}} ເຄຣດິດ",
+        "BonusCredits": "ໂບນັດ {{amount}} ເຄຣດິດ",
+        "BuyAmountCredits": "ຊື້ {{amount}} ເຄຣດິດ",
+        "WatchClip": "ສໍາລັບການເບິ່ງ {{fromStreamTitle}}",
+        "MissingCredits": "ສິນເຊື່ອທີ່ຂາດຫາຍໄປ",
+        "YouMissingCredits": "ທ່ານຕ້ອງການ {{amount}} ເຄຣດິດເພີ່ມເຕີມເພື່ອດໍາເນີນການ.",
+        "BuyCredits": "ຊື້ສິນເຊື່ອ",
+        "BuyBonus": "ການຊື້ {{amount}} ເຄຣດິດໃນຄັ້ງດຽວຈະເຮັດໃຫ້ມີໂບນັດ {{bonus}} ເຄຣດິດ.",
+        "Buy": "ຊື້",
+        "PurchaseCredits": "ຊື້ສິນເຊື່ອ",
+        "Credits": "ສິນເຊື່ອ",
+        "ErrorInvalidAmount": "ຈຳນວນບໍ່ຖືກຕ້ອງ",
+        "ErrorInvalidCurrency": "ແຕ່ຫນ້າເສຍດາຍ, ພວກເຮົາຍັງບໍ່ທັນສະຫນັບສະຫນູນສະກຸນເງິນ {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} ໜ່ວຍກິດ",
+            "BonusCredits": "{{amount}} ໜ່ວຍກິດ"
+        }
+    },
+    "history": {
+        "Date": "ວັນທີ",
+        "Amount": "ຈໍານວນ",
+        "Description": "ລາຍລະອຽດ",
+        "Client": "ລູກຄ້າ",
+        "User": "ຜູ້ໃຊ້",
+        "To": "ກັບ",
+        "From": "ຈາກ",
+        "SeeHistory": "ເບິ່ງປະຫວັດການຈ່າຍເງິນສໍາລັບ {{1}}",
+        "HistoryEmpty": "ບໍ່ມີທຸລະກຳເທື່ອ",
+        "PaymentFor": "ສົ່ງ {{amount}} ເຄຣດິດ",
+        "PaymentTo": "ສົ່ງ {{amount}} ເຄຣດິດ",
+        "PaymentToUser": "ສົ່ງ {{amount}} ເຄຣດິດ",
+        "CreatePaidStream": "ໃຊ້ {{amount}} ໜ່ວຍກິດ",
+        "WatchClip": {
+            "+": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+            "-": "ໃຊ້ {{amount}} ໜ່ວຍກິດ"
+        },
+        "JoinedPaidStream": {
+            "+": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+            "-": "ໃຊ້ {{amount}} ໜ່ວຍກິດ"
+        },
+        "LeftPaidStream": {
+            "+": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+            "-": "ສົ່ງ {{amount}} ເຄຣດິດ"
+        },
+        "CreatedCommunity": "ໃຊ້ {{amount}} ໜ່ວຍກິດ",
+        "BoughtCredits": "ຊື້ {{amount}} ເຄຣດິດ",
+        "BonusCredits": "ໄດ້ຮັບໂບນັດ {{amount}} ເຄຣດິດ",
+        "InviteAcceptedBy": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "Streams_user_firstname": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "Streams_user_lastname": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "Streams_user_icon": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "Places_user_location": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "Streams_greeting": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "YouHaveCreditsToStart": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "InvitedUserFilledStream": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "ForFillingStream": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ",
+        "CreatePrivateChat": "ໃຊ້ {{amount}} ໜ່ວຍກິດ"
+    },
+    "subscriptions": {
+        "infoTitle": "ໃຫ້ຂໍ້ມູນການຈ່າຍເງິນ",
+        "confirm": {
+            "title": "ເລີ່ມການສະໝັກສະມາຊິກ",
+            "message": "ເລີ່ມການສະໝັກສະມາຊິກ &quot; {{title}} &quot; ຊ້ຳໆບໍ?",
+            "ok": "ຕົກລົງ",
+            "cancel": "ຍົກເລີກ"
+        },
+        "CreditOrDebitCard": "ບັດເຄຣດິດ ຫຼືບັດເດບິດ",
+        "SubscribePayment": "ຈອງການຈ່າຍເງິນ",
+        "ImmediatePayment": "ການຈ່າຍເງິນທັນທີ",
+        "ProcessingPayment": "ກຳລັງປະມວນຜົນການຈ່າຍເງິນ",
+        "SubscriptionAlreadyPaid": "ການສະໝັກໃຊ້ນີ້ຈ່າຍເງິນແລ້ວ",
+        "SubscriptionNotActive": "ການສະໝັກໃຊ້ບໍ່ເຄື່ອນໄຫວໃນຂະນະນີ້",
+        "Subscribed": "ສະໝັກແລ້ວ",
+        "Unsubscribed": "ເຊົາຕິດຕາມແລ້ວ",
+        "Unsubscribe": "ເຊົາຕິດຕາມ",
+        "Subscribe": "ຈອງ",
+        "Started": "ເລີ່ມແລ້ວ",
+        "EndsIn": "ສິ້ນສຸດໃນ",
+        "NextPay": "ການຈ່າຍເງິນຄັ້ງຕໍ່ໄປ",
+        "Period": "ໄລຍະເວລາ",
+        "Price": "ລາຄາ",
+        "AreYouSureUnsubscribe": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການຍົກເລີກການສະໝັກສະມາຊິກຈາກແຜນນີ້?",
+        "YouUnsubscribedFromPlan": "ທ່ານ​ໄດ້​ຍົກ​ເລີກ​ການ​ສະ​ຫມັກ​ຈາກ​ແຜນ &quot; {{planTitle}} ​&quot;​. ທ່ານຈະບໍ່ຖືກຮຽກເກັບເງິນເທື່ອຕໍ່ໄປ, ແຕ່ການສະໝັກໃຊ້ຂອງທ່ານຈະດຳເນີນຕໍ່ໄປຈົນຮອດ {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "ຫົວຂໍ້ແຜນການ",
+            "PricePlaceholder": "ລາຄາ",
+            "SubscriptionTitle": "ແຜນການຈອງ",
+            "DescriptionPlaceholder": "ລາຍ​ລະ​ອຽດ​ແຜນ​ການ​ສະ​ຫມັກ​",
+            "AreYouSureDeletePlan": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບແຜນການນີ້?",
+            "Duration": "ໄລຍະເວລາ",
+            "Discount": "ສ່ວນຫຼຸດ",
+            "SavePlan": "ບັນທຶກ",
+            "Interrupt": "ຂັດຂວາງ",
+            "Continue": "ສືບຕໍ່",
+            "NewPlan": "ແຜນໃໝ່",
+            "SelectDisplayType": "ເລືອກ {{displayType}}",
+            "EndDate": "ວັນທີສິ້ນສຸດ",
+            "Available": "ມີໃຫ້",
+            "Hidden": "ເຊື່ອງໄວ້",
+            "InviteOnly": "ເຊີນເທົ່ານັ້ນ",
+            "CantSubscribeUnlessInvited": "ທ່ານບໍ່ສາມາດສະໝັກໃຊ້ແຜນນີ້ໄດ້ເວັ້ນເສຍແຕ່ວ່າທ່ານໄດ້ຮັບເຊີນ"
+        }
+    },
+    "payments": {
+        "infoTitle": "ກໍານົດຂໍ້ມູນການຈ່າຍເງິນ",
+        "BuyAmountCredits": "ຊື້ {{amount}} ເຄຣດິດ",
+        "confirm": {
+            "title": "ຊໍາລະເງິນ",
+            "message": "ເຈົ້າຕົກລົງຈ່າຍເງິນ {{symbol}} {{amount}} ບໍ?",
+            "ok": "ຕົກລົງ",
+            "cancel": "ຍົກເລີກ"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "ສິນເຊື່ອ",
+            "description": "ຕິດຕາມສິນເຊື່ອ ແລະການຈ່າຍເງິນ"
+        },
+        "Assets\/plan": {
+            "displayType": "ແຜນການຈອງ",
+            "description": "ແຜນການສະໝັກໃຊ້"
+        },
+        "Assets\/subscription": {
+            "displayType": "ການສະໝັກໃຊ້",
+            "description": "ການສະໝັກໃຊ້"
+        },
+        "Assets\/product": {
+            "displayType": "ຜະລິດຕະພັນ",
+            "description": "ຜະ​ລິດ​ຕະ​ພັນ​ທີ່​ຖືກ​ຂາຍ​"
+        },
+        "Assets\/service": {
+            "displayType": "ການບໍລິການ",
+            "description": "ການ​ບໍ​ລິ​ການ​ທີ່​ຖືກ​ສະ​ຫນອງ​ໃຫ້​"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "ໄດ້ຮັບ {{amount}} ໜ່ວຍກິດ"
+        },
+        "Assets\/credits\/bought": {
+            "content": "ຊື້ {{amount}} ເຄຣດິດ"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "ໂບນັດ {{amount}} ເຄຣດິດ"
+        },
+        "Assets\/credits\/spent": {
+            "content": "ໃຊ້ {{amount}} ໜ່ວຍກິດ"
+        },
+        "Assets\/credits\/sent": {
+            "content": "ສົ່ງ {{amount}} ເຄຣດິດເປັນ {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "ໄດ້ຮັບ {{amount}} ເຄຣດິດຈາກ {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "ທ່ານມີສິນເຊື່ອບໍ່ພຽງພໍໃນບັນຊີຂອງທ່ານ. ກະລຸນາເຂົ້າໄປ <a href='<i translate='no'>ທີ່ລິ້ງຕໍ່ໄປນີ້ 999 &#39;&gt;<\/a> ເພື່ອຊື້ເຄຣດິດເພີ່ມເຕີມ."
+        }
+    },
+    "billing": {
+        "Title": "ໃບບິນຊັບສິນ",
+        "CreditsMinimum": "ສິນເຊື່ອຕໍາ່ສຸດທີ່",
+        "CreditsToAdd": "ສິນເຊື່ອທີ່ຈະເພີ່ມ",
+        "Save": "ບັນທຶກ",
+        "ThisLink": "ລິ້ງນີ້",
+        "errors": {
+            "CreditsMinimumNegative": "ສິນເຊື່ອຂັ້ນຕໍ່າບໍ່ສາມາດເປັນລົບໄດ້",
+            "CreditsToAddNegative": "ສິນເຊື່ອທີ່ຈະເພີ່ມບໍ່ສາມາດເປັນລົບໄດ້"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "ບໍລິການໃໝ່",
+            "TitlePlaceholder": "ຊື່ການບໍລິການ",
+            "PricePlaceholder": "ກໍານົດລາຄາ",
+            "LinkPlaceholder": "ກໍານົດການເຊື່ອມຕໍ່ຂໍ້ມູນເພີ່ມເຕີມ",
+            "DescriptionPlaceholder": "ລາຍລະອຽດການບໍລິການ",
+            "SaveService": "ບັນທຶກການບໍລິການ",
+            "SelectRequiredParticipants": "ຕ້ອງການຜູ້ເຂົ້າຮ່ວມທີ່ກ່ຽວຂ້ອງ",
+            "RequiredParticipantsDesc": "ກະລຸນາເລືອກຜູ້ເຂົ້າຮ່ວມທີ່ກ່ຽວຂ້ອງທີ່ຈໍາເປັນເພື່ອໃຊ້ບໍລິການນີ້ (ຕົວຢ່າງເຊັ່ນສັດລ້ຽງສໍາລັບ &quot;ຫມາສະແດງ&quot;, ຫຼືເດັກນ້ອຍສໍາລັບ &quot;ວັນພັກຂອງເດັກນ້ອຍ&quot; ແລະອື່ນໆ). ຖ້າການບໍລິການຖືກຈ່າຍ, ຜູ້ໃຊ້ຈະຕ້ອງຈ່າຍຄ່າສໍາລັບຜູ້ເຂົ້າຮ່ວມທີ່ກ່ຽວຂ້ອງແຕ່ລະຄົນ."
+        },
+        "EditServiceTemplate": {
+            "Title": "ບໍລິການແກ້ໄຂ"
+        },
+        "ManageServiceTemplates": "ຈັດການແມ່ແບບການບໍລິການ",
+        "ManageServices": "ຄຸ້ມຄອງການບໍລິການ",
+        "Free": "ຟຣີ",
+        "OptionalContribution": "ການປະກອບສ່ວນທາງເລືອກ",
+        "RequiredPayment": "ການຈ່າຍເງິນທີ່ຕ້ອງການ",
+        "AreYouSureDelete": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບການບໍລິການນີ້?",
+        "AmountServicesRelated": "ມີຄວາມພ້ອມ {{amount}} ທີ່ກ່ຽວຂ້ອງກັບການບໍລິການນີ້. ພວກເຂົາຍັງຈະຖືກໂຍກຍ້າຍ."
+    },
+    "transfer": {
+        "SelectRecipient": "ເລືອກຜູ້ຮັບ",
+        "TransactionSuccess": "ສຳເລັດທຸລະກຳ",
+        "OrTypeWalletAddress": "ຫຼືພິມທີ່ຢູ່ wallet ຜູ້ຮັບ",
+        "AppCredits": "ສິນເຊື່ອແອັບ"
+    },
+    "NFT": {
+        "Title": "ຫົວຂໍ້",
+        "Name": "ຊື່",
+        "EnterName": "ໃສ່ຊື່",
+        "EnterAuthorWallet": "ໃສ່ກະເປົາເງິນຜູ້ຂຽນ",
+        "InformationAboutTitle": "ຂໍ້ມູນກ່ຽວກັບ {{title}} NFT",
+        "Description": "ລາຍລະອຽດ",
+        "DetailedInformationAboutNFT": "ຂໍ້ມູນລະອຽດກ່ຽວກັບ NFT",
+        "PresaleStarts": "Presale ເລີ່ມ 23 ທັນວາ",
+        "OwnerUserNotFound": "ເຈົ້າຂອງ NFT ນີ້ບໍ່ໄດ້ລົງທະບຽນຢູ່ໃນຄໍາຮ້ອງສະຫມັກຂອງພວກເຮົາ.",
+        "BuyNow": "ຊື້ດຽວນີ້",
+        "Buy": "ຊື້",
+        "Add": "ຕື່ມ",
+        "Remove": "ເອົາອອກ",
+        "NoNFTyet": "ບໍ່ມີ NFTs ເທື່ອ",
+        "Conversation": "ການສົນທະນາ",
+        "Create": "ສ້າງ",
+        "CurrentBid": "ການສະເຫນີລາຄາໃນປະຈຸບັນ",
+        "StartingIn": "ເລີ່ມຕົ້ນໃນ",
+        "EndingIn": "ສິ້ນສຸດໃນ",
+        "CreateNFT": "ສ້າງ NFT",
+        "TitlePlaceholder": "ໃຫ້ຊື່ NFT ຂອງທ່ານ",
+        "DescriptionPlaceholder": "ໃຫ້ NFT ຂອງທ່ານເປັນຄໍາອະທິບາຍ",
+        "CreateYourNFT": "ສ້າງ NFT ຂອງທ່ານ",
+        "Royalties": "ຄ່າພາກຫຼວງ",
+        "RoyaltyPlaceholder": "ທາງເລືອກ. ຈໍານວນເງິນທີ່ຈ່າຍໃຫ້ຜູ້ສ້າງກ່ອນການໂອນ.",
+        "ExpirationDate": "ວັນໝົດອາຍຸ",
+        "StartingDate": "ວັນທີເລີ່ມຕົ້ນ",
+        "BidsBelowThisAmount": "ການສະເຫນີລາຄາຕ່ໍາກວ່າຈໍານວນນີ້ຈະບໍ່ອະນຸຍາດໃຫ້",
+        "MinimumBid": "ການສະເຫນີລາຄາຂັ້ນຕ່ໍາ",
+        "Author": "ຜູ້ຂຽນ",
+        "Price": "ລາຄາ",
+        "Commission": "ຄະນະກໍາມະການ",
+        "EnterCommission": "ໃສ່ຄະນະກໍາມະ",
+        "Owner": "ເຈົ້າຂອງ",
+        "SelectCategory": "ເລືອກປະເພດ",
+        "Day": "ມື້",
+        "Days": "ມື້",
+        "Hour": "ຊົ່ວໂມງ",
+        "Hours": "ຊົ່ວໂມງ",
+        "Minute": "ນາທີ",
+        "Minutes": "ນາທີ",
+        "Second": "ທີສອງ",
+        "Seconds": "ວິນາທີ",
+        "SalesCreator": "ການຂາຍຈະໄປຫາຜູ້ສ້າງ",
+        "Details": "ລາຍລະອຽດ",
+        "Bids": "ການປະມູນ",
+        "History": "ປະຫວັດສາດ",
+        "LoremIpsum": "Lorem Ipsum ແມ່ນພຽງແຕ່ຂໍ້ຄວາມ dummy ຂອງອຸດສາຫະກໍາການພິມແລະການພິມ.",
+        "PutOnSale": "ວາງຂາຍ",
+        "PutOffSale": "ຖອນອອກຈາກການຂາຍ",
+        "Transfer": "ໂອນ",
+        "Actions": "ການກະທໍາ",
+        "Claim": "ຮຽກຮ້ອງ",
+        "ClaimNFT": "ອ້າງສິດ NFT",
+        "Unlocking": "ປົດລັອກ",
+        "Unlock": "ປົດລັອກ",
+        "Update": "ອັບເດດ",
+        "UpdateToken": "ອັບເດດ Token",
+        "UpdateNFT": "ອັບເດດ NFT",
+        "CreateToken": "ສ້າງໂທເຄັນ",
+        "PlaceBid": "ວາງ Bid",
+        "SoldOut": "ຂາຍແລ້ວ",
+        "NotOnSale": "ບໍ່ມີຂາຍ",
+        "NftName": "ຊື່ NFT",
+        "DescribeYourNFT": "ກະລຸນາອະທິບາຍ NFT ຂອງທ່ານ",
+        "NFTImage": "ຮູບພາບສໍາລັບ NFT",
+        "NFTVideo": "ວິດີໂອສໍາລັບ NFT, ຖ້າມີ",
+        "GenerateDescription": "ຫຼືສ້າງອັດຕະໂນມັດ",
+        "UploadMovie": "ອັບໂຫຼດຮູບເງົາ",
+        "MovieSource": "ແຫຼ່ງຮູບເງົາ",
+        "MovieURL": "URL ຮູບເງົາ",
+        "UploadFile": "ອັບໂຫຼດໄຟລ໌",
+        "PutOnMarketplace": "ໃສ່ຕະຫຼາດ",
+        "InstantPurchase": "ໃສ່ລາຄາເພື່ອໃຫ້ຜູ້ໃຊ້ຊື້ NFT ຂອງທ່ານທັນທີ",
+        "FixedPrice": "ລາຄາຄົງທີ່",
+        "TimedAuction": "ເວລາປະມູນ",
+        "OpenForBids": "ເປີດສໍາລັບການປະມູນ",
+        "PriceOnePiece": "ໃສ່ລາຄາສຳລັບໜຶ່ງຊິ້ນ",
+        "EnterPrice": "ໃສ່ລາຄາ",
+        "EnterMinimumBid": "ໃສ່ການປະມູນຂັ້ນຕ່ຳ",
+        "SelectChain": "ເລືອກຕ່ອງໂສ້",
+        "Currency": "ສະກຸນເງິນ",
+        "AreYouSureDeleteImage": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຮູບອອກ?",
+        "AreYouSureDeleteVideo": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບວິດີໂອອອກ?",
+        "series": {
+            "Name": "ຊື່",
+            "Icon": "ໄອຄອນ",
+            "Description": "ລາຍລະອຽດ",
+            "Author": "ຜູ້ຂຽນ",
+            "SelectSeries": "ເລືອກຊຸດ",
+            "Value": "ມູນຄ່າ",
+            "AreYouSure": "ເຈົ້າແນ່ໃຈບໍ?",
+            "AuthorInvalid": "ທີ່ຢູ່ຜູ້ຂຽນບໍ່ຖືກຕ້ອງ!",
+            "Address": "ທີ່ຢູ່",
+            "CoverImage": "ຮູບໜ້າປົກ",
+            "UploadCoverImage": "ອັບໂຫຼດຮູບໜ້າປົກ",
+            "CommissionAddressInvalid": "ທີ່ຢູ່ຄະນະກໍາມະບໍ່ຖືກຕ້ອງ",
+            "OnSale": "ຂາຍ",
+            "OffSale": "ປິດການຂາຍ",
+            "CreateSeries": "ສ້າງຊຸດ",
+            "UpdateSeries": "ອັບເດດຊຸດ",
+            "SeriesInfo": "ຂໍ້ມູນຊຸດ",
+            "SelectAuthor": "ເລືອກຜູ້ຂຽນ",
+            "NewItem": "ຊຸດ NFT ໃໝ່",
+            "NamePlaceholder": "ໃສ່ຊື່ຊຸດ",
+            "DescPlaceholder": "ໃສ່ຄຳອະທິບາຍຊຸດ",
+            "EndingIn": "ສິ້ນສຸດໃນ"
+        },
+        "contract": {
+            "CreateContract": "ສ້າງສັນຍາ",
+            "SelectContract": "ເລືອກສັນຍາ",
+            "CreateContractFor": "ສ້າງສັນຍາສໍາລັບ {{userName}}",
+            "ContractFor": "ສັນຍາ {{userName}}",
+            "UpdateContract": "ປັບປຸງສັນຍາ",
+            "TransferOwnership": "ໂອນກຳມະສິດ",
+            "SetBaseURI": "ຕັ້ງ URI ພື້ນຖານ",
+            "SetSuffix": "ກໍານົດ Suffix",
+            "CurrentOwner": "ເຈົ້າຂອງປະຈຸບັນ",
+            "CurrentBaseURL": "BaseURL ປະຈຸບັນ",
+            "ContractAddressAbsent": "ບໍ່ມີທີ່ຢູ່ສັນຍາ",
+            "FactoryAddressAbsent": "ບໍ່ມີທີ່ຢູ່ໂຮງງານ",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "ຕ້ອງການຫົວຂໍ້",
+            "SymbolRequired": "ຕ້ອງການສັນຍາລັກ",
+            "TypeContractName": "ຊື່ສັນຍາ",
+            "TypeContractSymbol": "ສັນຍາລັກສັນຍາ (ສູງສຸດ 10 ຕົວອັກສອນ)"
+        },
+        "contests": {
+            "Title": "ການແຂ່ງຂັນ",
+            "NewContest": "ການແຂ່ງຂັນໃຫມ່"
+        },
+        "collections": {
+            "Title": "ຄໍເລັກຊັນ",
+            "EnterTitle": "ໃສ່ຊື່",
+            "EnterDescription": "ໃສ່ຄໍາອະທິບາຍ",
+            "NewCollection": "ຄໍເລັກຊັນໃໝ່",
+            "Name": "ຊື່",
+            "Icon": "ໄອຄອນ",
+            "Description": "ລາຍລະອຽດ",
+            "Author": "ຜູ້ຂຽນ",
+            "SelectCollection": "ເລືອກຄໍເລັກຊັນ",
+            "Value": "ມູນຄ່າ",
+            "AreYouSure": "ເຈົ້າແນ່ໃຈບໍ?",
+            "AuthorInvalid": "ທີ່ຢູ່ຜູ້ຂຽນບໍ່ຖືກຕ້ອງ!",
+            "Address": "ທີ່ຢູ່",
+            "CoverImage": "ຮູບໜ້າປົກ",
+            "UploadIcon": "ອັບໂຫຼດໄອຄອນ",
+            "CommissionAddressInvalid": "ທີ່ຢູ່ຄະນະກໍາມະບໍ່ຖືກຕ້ອງ",
+            "OnSale": "ຂາຍ",
+            "OffSale": "ປິດການຂາຍ",
+            "CreateCollection": "ສ້າງຄໍເລັກຊັນ",
+            "UpdateCollection": "ອັບເດດຄໍເລັກຊັນ",
+            "CollectionInfo": "ຂໍ້ມູນການເກັບກໍາ",
+            "SelectAuthor": "ເລືອກຜູ້ຂຽນ",
+            "NewItem": "ຄໍເລັກຊັນ NFT ໃໝ່",
+            "NamePlaceholder": "ໃສ່ຊື່ຄໍເລັກຊັນ",
+            "DescPlaceholder": "ໃສ່ຄຳອະທິບາຍຄໍເລັກຊັນ",
+            "EndingIn": "ສິ້ນສຸດໃນ",
+            "SubmitSeries": "ສົ່ງຊຸດ"
+        },
+        "import": {
+            "importNFT": "ການ​ນໍາ​ເຂົ້າ NFTs",
+            "importAttributes": "ນໍາເຂົ້າຄຸນສົມບັດ NFT",
+            "fileNotFound": "ຂໍອະໄພ, ບໍ່ພົບໄຟລ໌ CSV.",
+            "fileEmpty": "ຂໍອະໄພ, ໄຟລ໌ CSV ຫວ່າງເປົ່າ.",
+            "userIdNotFound": "ຜູ້ໃຊ້ມີຢູ່ແຕ່ id ຫວ່າງເປົ່າ",
+            "errorLine": "ເສັ້ນ {{1}}",
+            "fieldNotFound": "ຊ່ອງຂໍ້ມູນທີ່ຕ້ອງການ &quot; {{1}} &quot; ບໍ່ພົບ",
+            "displayTypeEmpty": "ປະເພດການສະແດງຜົນສໍາລັບ &quot; {{1}} &quot; ບໍ່ພົບ",
+            "taskStreamInvalid": "ກະແສວຽກບໍ່ຖືກຕ້ອງ",
+            "instructionsEmpty": "ຄຳແນະນຳການຖ່າຍທອດໜ້າວຽກຫວ່າງເປົ່າ",
+            "complete": "ສໍາເລັດ",
+            "activateUsers": "ສົ່ງຂໍ້ຄວາມເປີດໃຊ້ກັບຜູ້ໃຊ້ບໍ?",
+            "importProgress": "ຄວາມຄືບໜ້າ",
+            "importOptions": "ທາງເລືອກ",
+            "sampleCSV": "ດາວໂຫລດຕົວຢ່າງ CSV",
+            "fileLabel": "ອັບໂຫລດສະເປຣດຊີດ:",
+            "errorsTitle": "ຂໍ້ຜິດພາດເກີດຂຶ້ນ"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "ການກັ່ນຕອງໂດຍ NFT Collections",
+                "ShowNFTCollection": "ສະແດງຄໍເລັກຊັນ NFT ໃນ...",
+                "AllCollections": "ຄໍເລັກຊັນທັງໝົດ"
+            },
+            "ByUser": {
+                "AllAuthors": "ຜູ້ຂຽນທັງໝົດ",
+                "AllUsers": "ທຸກຄົນ",
+                "FilterByAuthors": "ການກັ່ນຕອງໂດຍຜູ້ຂຽນ"
+            }
+        },
+        "Back": "ກັບໄປທີ່ຄໍເລັກຊັນ",
+        "attributes": {
+            "Title": "ຈັດການຄຸນລັກສະນະ",
+            "Attributes": "ຄຸນສົມບັດ",
+            "DisplayTitle": "ປະເພດການສະແດງ",
+            "AddDisplayType": "ເພີ່ມປະເພດການສະແດງຜົນໃຫມ່",
+            "NewDisplay": "ຈໍສະແດງຜົນໃໝ່",
+            "TraitTitle": "ປະເພດລັກສະນະ",
+            "AddTraitTitle": "ເພີ່ມປະເພດລັກສະນະໃຫມ່",
+            "NewTrait": "ປະເພດລັກສະນະໃໝ່",
+            "ValueTitle": "ມູນຄ່າ",
+            "AddValueTitle": "ເພີ່ມມູນຄ່າໃຫມ່",
+            "NewValue": "ຄ່າໃໝ່",
+            "NewAttribute": "ຄຸນສົມບັດໃໝ່",
+            "UpdateAttributes": "ອັບເດດຄຸນລັກສະນະ",
+            "SaveAttributes": "ບັນທຶກຄຸນລັກສະນະ"
+        },
+        "profile": {
+            "LogOut": "ອອກຈາກລະບົບ",
+            "Title": "ໂປຣໄຟລ໌ {{userName}}",
+            "Description": "ລາຍລະອຽດຜູ້ໃຊ້",
+            "aboutPlaceholder": "ແກ້ໄຂຊີວະ",
+            "UploadCoverPhoto": "ອັບໂຫຼດຮູບໜ້າປົກ",
+            "SureLogOut": "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການອອກຈາກລະບົບ?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "ສັນຍາ NFT",
+                        "seriesId": "ID ຊຸດ",
+                        "owner": "ເຈົ້າຂອງ",
+                        "currency": "ເງິນຕາ",
+                        "price": "ລາຄາ",
+                        "beneficiary": "ຜູ້ໄດ້ຮັບຜົນປະໂຫຍດ",
+                        "autoindex": "ດັດສະນີອັດຕະໂນມັດ",
+                        "duration": "ໄລຍະເວລາ",
+                        "rateInterval": "ອັດຕາໄລຍະຫ່າງ",
+                        "rateAmount": "ອັດ​ຕາ​ຈໍາ​ນວນ​ເງິນ​"
+                    },
+                    "small": {
+                        "NFTContract": "ສັນຍາ NFT",
+                        "seriesId": "tokens ຈະຖືກ minted ໃນຊຸດນີ້",
+                        "owner": "ເຈົ້າຂອງຕົວຢ່າງ, ຖ້າບໍ່ດັ່ງນັ້ນຈະເປັນຜູ້ສົ່ງ",
+                        "currency": "ສະກຸນເງິນສໍາລັບການຊື້ tokens, ຖ້າສູນ - ສໍາລັບຫຼຽນພື້ນເມືອງ",
+                        "price": "ລາຄາ",
+                        "beneficiary": "ຜູ້ໄດ້ຮັບຜົນປະໂຫຍດຂອງການຂາຍ tokens, ຖ້າບໍ່ດັ່ງນັ້ນຈະເປັນຜູ້ສົ່ງ",
+                        "autoindex": "ດັດສະນີອັດຕະໂນມັດ",
+                        "duration": "Lock ຫຼັງຈາກ minting. ສູນຫມາຍຄວາມວ່າໄດ້ຮັບມັນທັນທີ.",
+                        "rateInterval": "bucket interval ສໍາລັບການຊື້ພິເສດ",
+                        "rateAmount": "ຈໍານວນຖັງສໍາລັບການຊື້ພິເສດ"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ທາງເລືອກ)",
+                    "number": "ເລກ",
+                    "address": "ທີ່ຢູ່",
+                    "fraction": "ເສດສ່ວນ",
+                    "integer": "ຈຳນວນເຕັມ",
+                    "seconds": "ວິນາທີ",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "ຜະລິດ",
+                "viewInstancesList": "ໂຫຼດລາຍຊື່ຄືນໃໝ່"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID ຊຸດ",
+                        "account": "ບັນຊີ",
+                        "amount": "ຈໍານວນ"
+                    },
+                    "small": {
+                        "seriesId": "ໂທເຄັນໃໝ່ຈະເປັນຊຸດທີ່ມີ ID ດັ່ງກ່າວ",
+                        "account": "ເຈົ້າຂອງ NFT ທີ່ສ້າງໃຫມ່. ຖ້າບໍ່ໄດ້ຕັ້ງ - ຈະໃຊ້ກະເປົາເງິນປະຈຸບັນ",
+                        "amount": "ຈໍານວນ NFT ກັບ mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ທາງເລືອກ)",
+                    "seriesId": "ID",
+                    "account": "ບັນຊີ",
+                    "amount": "ຈຳນວນ",
+                    "integer": "ຈຳນວນເຕັມ"
+                },
+                "btn": {
+                    "Purchase": "ຊື້",
+                    "SpecialPurchase": "ຊື້ພິເສດ"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "ທີ່ຢູ່"
+                    },
+                    "small": {
+                        "account": "ທີ່ຢູ່"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "ທີ່ຢູ່ບໍ່ຖືກຕ້ອງ"
+                },
+                "placeholders": {
+                    "account": "ທີ່ຢູ່"
+                },
+                "addToWhitelist": "ເພີ່ມໃສ່ບັນຊີຂາວ",
+                "removeFromWhitelist": "ເອົາອອກຈາກບັນຊີຂາວ"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ລະຫັດໂທເຄັນ",
+                    "custodian": "ຜູ້ຮັກສາ",
+                    "recipient": "ຜູ້ຮັບ"
+                },
+                "small": {
+                    "tokenId": "token id ສິ່ງທີ່ຕ້ອງການລັອກຫຼືປົດລັອກ",
+                    "custodian": "ທີ່ຢູ່ທີ່ສາມາດປົດລັອກໄດ້",
+                    "recipient": "ທີ່ຢູ່ທີ່ຈະໄດ້ຮັບ tokens"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "tokenId ບໍ່ຖືກຕ້ອງ",
+                "invalidCustodian": "ຜູ້ປົກຄອງບໍ່ຖືກຕ້ອງ",
+                "invalidRecipient": "ຜູ້ຮັບບໍ່ຖືກຕ້ອງ"
+            },
+            "placeholders": {
+                "optional": "(ທາງເລືອກ)",
+                "tokenId": "ID",
+                "custodian": "ທີ່ຢູ່"
+            },
+            "Lock": "ລັອກ",
+            "Unlock": "ປົດລັອກ",
+            "Locked": "ລັອກ",
+            "CustodianAddress": "ທີ່ຢູ່ຜູ້ດູແລ",
+            "TokenWasClaimed": "ໂທເຄັນ &quot; {{title}} &quot; ຖືກອ້າງສິດ",
+            "TokenWasLocked": "ໂທເຄັນ &quot; {{title}} &quot; ຖືກລັອກ",
+            "TokenWasUnlocked": "ໂທເຄັນ &quot; {{title}} &quot; ຖືກປົດລັອກແລ້ວ"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ພິມບາງສິ່ງບາງຢ່າງກ່ຽວກັບການປະກອບສ່ວນນີ້..."
+    },
+    "currencies": {
+        "choose": "ເລືອກສະກຸນເງິນ"
+    }
+}

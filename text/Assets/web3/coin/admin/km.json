@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "និមិត្តសញ្ញាErc20",
+                    "duration": "រយៈពេល",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "តូខិនពេញនិយម",
+                    "donations": "ការបរិច្ចាគ",
+                    "rewardsRateFraction": "រង្វាន់ អត្រាប្រភាគ",
+                    "numerator": "លេខភាគ",
+                    "denominator": "ភាគបែង"
+                },
+                "small": {
+                    "tokenErc20": "និមិត្តសញ្ញាErc20",
+                    "duration": "រយៈពេលជាថ្ងៃ",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "តូខិនពេញនិយម",
+                    "donations": "ការបរិច្ចាគ",
+                    "rewardsRateFraction": "រង្វាន់ អត្រាប្រភាគ",
+                    "numerator": "លេខភាគ",
+                    "denominator": "ភាគបែង"
+                }
+            },
+            "placeholders": {
+                "optional": "(ស្រេចចិត្ត)",
+                "tuple": "tuple[]",
+                "number": "លេខ",
+                "address": "អាសយដ្ឋាន",
+                "fraction": "ប្រភាគ",
+                "integer": "ចំនួនគត់",
+                "seconds": "វិនាទី",
+                "days": "ថ្ងៃ",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "មិនមានអាងហែលទឹកទេ។"
+            },
+            "btns": {
+                "createPool": "បង្កើតអាង",
+                "createPoolInForm": "បង្កើត"
+            },
+            "createPool": "បង្កើតអាង",
+            "produce": "ផលិត",
+            "loading": "កំពុងផ្ទុក",
+            "viewInstancesList": "ធ្វើឱ្យបញ្ជីឡើងវិញ"
+        }
+    }
+}

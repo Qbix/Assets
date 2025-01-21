@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "တိုကင်Erc20",
+                    "duration": "သင်တန်းကာလ",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "နာမည်ကြီးToken",
+                    "donations": "အလှူငွေ",
+                    "rewardsRateFraction": "ဆုပေးနှုန်းအပိုင်း",
+                    "numerator": "ပိုင်းဝေ",
+                    "denominator": "ပိုင်းခြေ"
+                },
+                "small": {
+                    "tokenErc20": "တိုကင်Erc20",
+                    "duration": "ကြာချိန် ရက်ပိုင်း",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "နာမည်ကြီးToken",
+                    "donations": "အလှူငွေ",
+                    "rewardsRateFraction": "ဆုပေးနှုန်းအပိုင်း",
+                    "numerator": "ပိုင်းဝေ",
+                    "denominator": "ပိုင်းခြေ"
+                }
+            },
+            "placeholders": {
+                "optional": "(ချန်လှပ်ထားနိုင်သည်)",
+                "tuple": "tuple[]",
+                "number": "နံပါတ်",
+                "address": "လိပ်စာ",
+                "fraction": "အပိုင်း",
+                "integer": "ကိန်းပြည့်",
+                "seconds": "စက္ကန့်",
+                "days": "နေ့ရက်များ",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "ရေကန်များ မရှိပါ။"
+            },
+            "btns": {
+                "createPool": "ရေကူးကန်ဖန်တီးပါ။",
+                "createPoolInForm": "ဖန်တီးပါ။"
+            },
+            "createPool": "ရေကူးကန်ဖန်တီးပါ။",
+            "produce": "ဟင်းသီးဟင်းရွက်",
+            "loading": "ဒိန်း",
+            "viewInstancesList": "စာရင်းကို ပြန်လည်စတင်ပါ။"
+        }
+    }
+}

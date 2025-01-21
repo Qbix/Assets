@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "calaamadErc20",
+                    "duration": "Muddada",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "caan Token",
+                    "donations": "deeqaha",
+                    "rewardsRateFraction": "AbaalmarintaRateFraction",
+                    "numerator": "tireeye",
+                    "denominator": "hooseeyo"
+                },
+                "small": {
+                    "tokenErc20": "calaamadErc20",
+                    "duration": "Muddada maalmo gudahood",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "caan Token",
+                    "donations": "deeqaha",
+                    "rewardsRateFraction": "AbaalmarintaRateFraction",
+                    "numerator": "tireeye",
+                    "denominator": "hooseeyo"
+                }
+            },
+            "placeholders": {
+                "optional": "(ikhtiyaar)",
+                "tuple": "tuple[]",
+                "number": "lambarka",
+                "address": "ciwaanka",
+                "fraction": "jajab",
+                "integer": "iskudarka",
+                "seconds": "ilbiriqsi",
+                "days": "maalmo",
+                "uint256": "mid256",
+                "uint192": "un192",
+                "uint64": "mid64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Ma jiraan barkado"
+            },
+            "btns": {
+                "createPool": "Samee barkada",
+                "createPoolInForm": "Abuur"
+            },
+            "createPool": "Samee barkada",
+            "produce": "Soo saar",
+            "loading": "Soodejinaya",
+            "viewInstancesList": "Liiska Cusbooneysii"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "title": "Пардохт",
+    "steps": {
+        "sending_native_coins": "Интиқоли тангаҳои ватанӣ",
+        "sending_tokens": "Фиристодани токенҳо",
+        "swap": "Иваз кардан",
+        "approve": "Тасдиқ кунед",
+        "one_tx": "Шумо бояд як транзаксия фиристед",
+        "two_tx": "Шумо бояд ду транзаксия фиристед"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Маблағҳо барои пардохт"
+            }
+        },
+        "btns": {
+            "pay": "Пардохт"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Токенҳои &quot; {{amountOut}} &quot; пардохт кардан лозим аст"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Чунин занҷир бо ID &quot; {{chainId}} &quot; дастгирӣ намешавад"
+    }
+}

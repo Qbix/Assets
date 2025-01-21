@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "အမှား",
+        "WalletAbsent": "ပိုက်ဆံအိတ်ကို ချိတ်ဆက်မထားပါ။",
+        "Rendering": "<span class='url'>{{1}}<\/span> တင်ဆက်ရာတွင် အမှားအယွင်းများ ရှိခဲ့သည်။",
+        "PriceRequired": "စျေးနှုန်း လိုအပ်ပါသည်။",
+        "NameRequired": "အမည် လိုအပ်ပါသည်။",
+        "PriceInvalid": "စျေးနှုန်း မမှန်ပါ။",
+        "AmountInvalid": "ပမာဏ မမှန်ပါ။",
+        "TransactionFailed": "အရောင်းအဝယ် မအောင်မြင်ပါ။",
+        "ChainNotSupported": "ရွေးချယ်ထားသော ကွင်းဆက်ကို ပံ့ပိုးမထားပါ။ ပံ့ပိုးထားသော ကွင်းဆက်- {{supportedChain}}",
+        "NeedMetaMaskConnected": "အပလီကေးရှင်းနှင့်အလုပ်လုပ်ရန် MetaMask ချိတ်ဆက်ထားရန် လိုအပ်ပါသည်။",
+        "UserNotLoggedInMetaMask": "အသုံးပြုသူသည် MetaMask သို့ လော့ဂ်အင်မဝင်ပါ။",
+        "CurrencyNotFound": "ငွေကြေးကို ရှာမတွေ့ပါ။",
+        "WrongChain": "ဤ NFT ကို &quot; {{chain}} &quot; အောက်တွင် ဖန်တီးထားသည်။ ကျေးဇူးပြု၍ ဤကွင်းဆက်ကို အသုံးပြုပါ။",
+        "NoRecipientSelected": "လက်ခံသူအား ရွေးချယ်မထားပါ။",
+        "CantManageFrozenSeries": "အေးခဲထားသော စီးရီးများကို သင် မစီမံနိုင်ပါ။",
+        "SubscriptionStreamNotPaid": "ဤအကြောင်းအရာကို ကြည့်ရှုရန် သင် ငွေမပေးခဲ့ပါ။ ကျေးဇူးပြု၍ {{subscriptionUrl}} ကိုနှိပ်ပြီး သင့်လျော်သော အစီအစဉ်ကို စာရင်းသွင်းပါ။"
+    },
+    "admin": {
+        "Title": "ပိုင်ဆိုင်မှု အုပ်ချုပ်ရေး",
+        "SubscriptionTitle": "စာရင်းသွင်းမှုအစီအစဉ်များ"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "ပေးချေရန် တို့ပါ။"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : {{call 'user.displayName'}} ကောက်ခံပြီးပါပြီ။",
+        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} သို့ သင့်ငွေပေးချေမှုအတွက် ကျေးဇူးတင်ပါသည်။",
+        "SubscribedTo": "{{call 'user.displayName'}} မှ {{plan.title}} စာရင်းသွင်းထားသည်။",
+        "YouSubscribedTo": "သင်သည် {{plan.title}} သို့ စာရင်းသွင်းထားသည်။",
+        "Assets\/credits\/alert": "သင့်အကောင့်နှင့် ပတ်သက်သည့် သတိပေးချက်တစ်ခုရှိသည်။"
+    },
+    "charge": {
+        "Subject": "&quot; {{description}} &quot; အတွက် {{call 'publisher.displayName'}} ထံမှ {{displayAmount}} ပေးချေမှုကို သင်ရရှိခဲ့သည်",
+        "HasBeenCharged": "ဟေး၊ ဒါက {{1}} {{3}} က {{4}} က {{2}} ကောက်ခံထားတာကို အသိပေးရုံပါပဲ။"
+    },
+    "charged": {
+        "Subject": "&quot; {{description}} &quot; အတွက် သင့်ငွေပေးချေမှုအတွက် ကျေးဇူးတင်ပါသည်။",
+        "HavePaid": "ဟေး {{1}} ဤသည်မှာ သင်သည် 1000 မှ 1001 {{4}} အတွက် {{2}} မှ {{3}} ကို အောင်မြင်စွာပေးချေကြောင်း အမြန်အတည်ပြုချက်တစ်ခုသာဖြစ်သည်"
+    },
+    "connectedAccount": {
+        "Title": "အကောင့်ချိတ်ဆက်ပါ။",
+        "Success": "အောင်မြင်မှု",
+        "YourAccountCreated": "သင့်အကောင့်ကို အောင်မြင်စွာ ဖန်တီးပြီးပါပြီ။",
+        "YourAccountAlreadyCreated": "သင့်အကောင့်ကို ဖန်တီးပြီးဖြစ်၍ အသုံးပြုရန် အသင့်ဖြစ်နေပါပြီ။"
+    },
+    "payment": {
+        "AboutOrder": "မှာယူမှုဆိုင်ရာ အချက်အလက်",
+        "PaymentMethod": "ငွေပေးချေစနစ်",
+        "ContactInfo": "ဆက်သွယ်ရန်အချက်အလက်",
+        "Pay": "ပေးဆပ်ပါ။",
+        "PaymentSucceeded": "ငွေပေးချေမှုကို အောင်မြင်စွာ လုပ်ဆောင်ပြီးပါပြီ။",
+        "PaymentProcessing.": "သင့်ငွေပေးချေမှုကို လုပ်ဆောင်နေပါသည်။",
+        "FailTryAgain": "သင့်ငွေပေးချေမှု မအောင်မြင်ပါ။ ထပ်စမ်းကြည့်ပါ။",
+        "SomethingWrong": "တစ်ခုခုမှားသွားသည်။",
+        "PaymentStatus": "ငွေပေးချေမှုအခြေအနေ",
+        "PayTo": "{{displayName}} ပေးဆောင်ပါ။",
+        "ChooseCurrency": "ငွေကြေးကို ရွေးချယ်ပါ။",
+        "YouCanSendUpTo": "{{amount}} {{symbol}} အထိ ပေးပို့နိုင်ပါတယ်။",
+        "Send": "ပို့ပါ။",
+        "EnterAmount": "ပမာဏကိုထည့်ပါ။"
+    },
+    "credits": {
+        "InviteAcceptedBy": "{{invitedUserName}} က လက်ခံတယ်။",
+        "InvitedUserFilledStream": "{{invitedUserName}} {{FilledStreamTitle}} ပြည့်",
+        "ForFillingStream": "{{FilledStreamTitle}} ဖြည့်ရန်",
+        "YouHaveCreditsToStart": "စတင်ရန် သင့်တွင် ခရက်ဒစ် {{amount}} ရှိသည်။",
+        "PaymentFor": "&quot; {{1}} &quot; အတွက် ငွေပေးချေမှု",
+        "PaymentTo": "{{1}} သို့ ငွေပေးချေပါ။",
+        "PaymentToUser": "{{toUserName}} သို့ လွှဲပြောင်းပါ။",
+        "CreatePrivateChat": "{{toUserName}} နှင့် သီးသန့်စကားပြောရန်",
+        "CreatePaidStream": "{{toStreamName}} ဖန်တီးရန်",
+        "JoinedPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{toStreamName}} &#39; &gt; {{toStreamTitle}}<\/a> &quot; တွင် မှာယူရန်",
+        "CreatedCommunity": "အသိုင်းအဝိုင်း &quot; {{communityId}} &quot; ဖန်တီးရန်အတွက်",
+        "LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{fromStreamName}} &#39; &gt; {{fromStreamTitle}}<\/a> &quot; တွင် မှာယူထားသည့် ပြန်အမ်းငွေအဖြစ်",
+        "BoughtCredits": "{{amount}} ခရက်ဒစ်ကို ဝယ်သည်။",
+        "BonusCredits": "အပိုဆု {{amount}} ခရက်ဒစ်",
+        "BuyAmountCredits": "{{amount}} ခရက်ဒစ်ကို ဝယ်ပါ။",
+        "WatchClip": "{{fromStreamTitle}} ကြည့်ရှုရန်",
+        "MissingCredits": "ပျောက်ဆုံးနေသော ခရက်ဒစ်များ",
+        "YouMissingCredits": "ရှေ့ဆက်ရန်အတွက် သင်သည် နောက်ထပ် {{amount}} ခရက်ဒစ်များ လိုအပ်ပါသည်။",
+        "BuyCredits": "အကြွေးဝယ်ပါ။",
+        "BuyBonus": "{{amount}} ခရက်ဒစ်ကို တစ်ပြိုင်နက် ဝယ်ယူခြင်းဖြင့် ခရက်ဒစ် {{bonus}} ဘောနပ်စ် ရရှိပါမည်။",
+        "Buy": "ဝယ်ပါ။",
+        "PurchaseCredits": "ခရက်ဒစ်များဝယ်ယူပါ။",
+        "Credits": "ခရက်ဒစ်",
+        "ErrorInvalidAmount": "ပမာဏ မမှန်ကန်ပါ။",
+        "ErrorInvalidCurrency": "ကံမကောင်းစွာဖြင့်၊ ကျွန်ုပ်တို့သည် ငွေကြေး {{currency}} ကို မပံ့ပိုးရသေးပါ။",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} ခရက်ဒစ်",
+            "BonusCredits": "{{amount}} ခရက်ဒစ်"
+        }
+    },
+    "history": {
+        "Date": "ရက်စွဲ",
+        "Amount": "ပမာဏ",
+        "Description": "ဖော်ပြချက်",
+        "Client": "ဖောက်သည်",
+        "User": "အသုံးပြုသူ",
+        "To": "ရန်",
+        "From": "ထံမှ",
+        "SeeHistory": "{{1}} အတွက် ငွေပေးချေမှုမှတ်တမ်းကို ကြည့်ပါ။",
+        "HistoryEmpty": "အရောင်းအဝယ် မရှိသေးပါ။",
+        "PaymentFor": "{{amount}} ခရက်ဒစ် ပေးပို့ခဲ့သည်။",
+        "PaymentTo": "{{amount}} ခရက်ဒစ် ပေးပို့ခဲ့သည်။",
+        "PaymentToUser": "{{amount}} ခရက်ဒစ် ပေးပို့ခဲ့သည်။",
+        "CreatePaidStream": "{{amount}} ခရက်ဒစ်ကို သုံးစွဲခဲ့သည်။",
+        "WatchClip": {
+            "+": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+            "-": "{{amount}} ခရက်ဒစ်ကို သုံးစွဲခဲ့သည်။"
+        },
+        "JoinedPaidStream": {
+            "+": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+            "-": "{{amount}} ခရက်ဒစ်ကို သုံးစွဲခဲ့သည်။"
+        },
+        "LeftPaidStream": {
+            "+": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+            "-": "{{amount}} ခရက်ဒစ် ပေးပို့ခဲ့သည်။"
+        },
+        "CreatedCommunity": "{{amount}} ခရက်ဒစ်ကို သုံးစွဲခဲ့သည်။",
+        "BoughtCredits": "{{amount}} ခရက်ဒစ်ကို ဝယ်သည်။",
+        "BonusCredits": "ဘောနပ်စ် {{amount}} ခရက်ဒစ်များ ရရှိပါသည်။",
+        "InviteAcceptedBy": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "Streams_user_firstname": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "Streams_user_lastname": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "Streams_user_icon": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "Places_user_location": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "Streams_greeting": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "YouHaveCreditsToStart": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "InvitedUserFilledStream": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "ForFillingStream": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။",
+        "CreatePrivateChat": "{{amount}} ခရက်ဒစ်ကို သုံးစွဲခဲ့သည်။"
+    },
+    "subscriptions": {
+        "infoTitle": "ငွေပေးချေမှု အချက်အလက်ကို ပေးပါ။",
+        "confirm": {
+            "title": "စာရင်းသွင်းမှုကို စတင်ပါ။",
+            "message": "&quot; {{title}} &quot; သို့ ထပ်တလဲလဲ စာရင်းသွင်းမှုကို စတင်မလား။",
+            "ok": "အိုကေ",
+            "cancel": "မလုပ်တော့"
+        },
+        "CreditOrDebitCard": "ခရက်ဒစ် သို့မဟုတ် ဒက်ဘစ်ကတ်",
+        "SubscribePayment": "ငွေပေးချေမှုစာရင်းသွင်းပါ။",
+        "ImmediatePayment": "ချက်ချင်းငွေပေးချေမှု",
+        "ProcessingPayment": "ငွေပေးချေမှုကို လုပ်ဆောင်နေသည်။",
+        "SubscriptionAlreadyPaid": "ဤစာရင်းသွင်းမှုမှာ ငွေပေးချေပြီးဖြစ်သည်။",
+        "SubscriptionNotActive": "စာရင်းသွင်းမှုသည် လောလောဆယ်တွင် အသုံးမပြုတော့ပါ။",
+        "Subscribed": "စာရင်းသွင်းထားသည်။",
+        "Unsubscribed": "စာရင်းမသွင်းထားဘဲ",
+        "Unsubscribe": "စာရင်းမှဖြုတ်ပါ။",
+        "Subscribe": "စာရင်းသွင်းပါ။",
+        "Started": "စတင်ခဲ့သည်။",
+        "EndsIn": "တွင် အဆုံးသတ်သည်။",
+        "NextPay": "နောက်ငွေပေးချေမှု",
+        "Period": "ကာလ",
+        "Price": "စျေးနှုန်း",
+        "AreYouSureUnsubscribe": "ဤအစီအစဉ်မှ စာရင်းသွင်းမှုကို ရပ်ဆိုင်းလိုသည်မှာ သေချာပါသလား။",
+        "YouUnsubscribedFromPlan": "သင်သည် &quot; {{planTitle}} &quot; အစီအစဉ်မှ စာရင်းသွင်းမှုကို ရပ်ဆိုင်းလိုက်ပါပြီ။ သင့်အား နောက်တစ်ကြိမ် ကောက်ခံမည်မဟုတ်သော်လည်း သင်၏စာရင်းသွင်းမှုသည် {{endsIn}} အထိ ဆက်လက်ရှိနေမည်ဖြစ်သည်။",
+        "plan": {
+            "TitlePlaceholder": "အစီအစဉ်ခေါင်းစဉ်",
+            "PricePlaceholder": "စျေးနှုန်း",
+            "SubscriptionTitle": "စာရင်းသွင်းမှုအစီအစဉ်များ",
+            "DescriptionPlaceholder": "စာရင်းသွင်းမှု အစီအစဉ်ဖော်ပြချက်",
+            "AreYouSureDeletePlan": "ဤအစီအစဉ်ကို ဖျက်လိုသည်မှာ သေချာပါသလား။",
+            "Duration": "သင်တန်းကာလ",
+            "Discount": "လျှော့စျေး",
+            "SavePlan": "သိမ်းဆည်းပါ။",
+            "Interrupt": "နှောက်ယှက်သည်။",
+            "Continue": "ဆက်ရန်",
+            "NewPlan": "Plan အသစ်",
+            "SelectDisplayType": "{{displayType}} ရွေးပါ။",
+            "EndDate": "ကုန်ဆုံးရက်",
+            "Available": "ရရှိနိုင်ပါသည်။",
+            "Hidden": "ဝှက်ထားသည်။",
+            "InviteOnly": "ဖိတ်ကြားခြင်းသာ",
+            "CantSubscribeUnlessInvited": "ဖိတ်ကြားထားခြင်းမရှိပါက ဤအစီအစဥ်ကို စာရင်းသွင်း၍မရပါ။"
+        }
+    },
+    "payments": {
+        "infoTitle": "ငွေပေးချေမှုအချက်အလက်ကို သတ်မှတ်ပါ။",
+        "BuyAmountCredits": "{{amount}} ခရက်ဒစ်ကို ဝယ်ပါ။",
+        "confirm": {
+            "title": "ငွေပေးချေမှုတစ်ခုလုပ်ပါ။",
+            "message": "{{symbol}} {{amount}} ပေးဆောင်ရန် သဘောတူပါသလား။",
+            "ok": "အိုကေ",
+            "cancel": "မလုပ်တော့"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "ခရက်ဒစ်",
+            "description": "ခရက်ဒစ်များနှင့် ငွေပေးချေမှုများကို ခြေရာခံသည်။"
+        },
+        "Assets\/plan": {
+            "displayType": "စာရင်းသွင်းမှု အစီအစဉ်",
+            "description": "စာရင်းသွင်းမှုအစီအစဉ်"
+        },
+        "Assets\/subscription": {
+            "displayType": "စာရင်းသွင်းပါ။",
+            "description": "စာရင်းသွင်းခြင်း။"
+        },
+        "Assets\/product": {
+            "displayType": "ထုတ်ကုန်",
+            "description": "ထုတ်ကုန်ရောင်းချလျက်ရှိသည်။"
+        },
+        "Assets\/service": {
+            "displayType": "ဝန်ဆောင်မှု",
+            "description": "ဝန်ဆောင်မှုပေးလျက်ရှိသည်။"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "ခရက်ဒစ် {{amount}} ရရှိခဲ့သည်။"
+        },
+        "Assets\/credits\/bought": {
+            "content": "{{amount}} ခရက်ဒစ်ကို ဝယ်သည်။"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "အပိုဆု {{amount}} ခရက်ဒစ်"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} ခရက်ဒစ်ကို သုံးစွဲခဲ့သည်။"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{toUserName}} သို့ {{amount}} ခရက်ဒစ် ပေးပို့ခဲ့သည်။"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} မှ {{amount}} ခရက်ဒစ်များ ရရှိခဲ့သည်။"
+        },
+        "Assets\/credits\/alert": {
+            "content": "သင့်အကောင့်တွင် ခရက်ဒစ်မလုံလောက်ပါ။ နောက်ထပ် ခရက်ဒစ်များဝယ်ယူရန် အောက်ပါ <a href='<i translate='no'>999 &#39;&gt;လင့်ခ်ကို<\/a> ဝင်ရောက်ကြည့်ရှုပါ။"
+        }
+    },
+    "billing": {
+        "Title": "ပိုင်ဆိုင်မှုငွေတောင်းခံခြင်း။",
+        "CreditsMinimum": "အနည်းဆုံး ခရက်ဒစ်များ",
+        "CreditsToAdd": "ထည့်သွင်းရန် ခရက်ဒစ်များ",
+        "Save": "သိမ်းဆည်းပါ။",
+        "ThisLink": "ဒီလင့်ခ်",
+        "errors": {
+            "CreditsMinimumNegative": "အနိမ့်ဆုံးခရက်ဒစ်များသည် အနုတ်လက္ခဏာမဖြစ်နိုင်ပါ။",
+            "CreditsToAddNegative": "ထည့်ရမည့် ခရက်ဒစ်များသည် အနုတ်လက္ခဏာမဖြစ်နိုင်ပါ။"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "ဝန်ဆောင်မှုအသစ်",
+            "TitlePlaceholder": "ဝန်ဆောင်မှုခေါင်းစဉ်",
+            "PricePlaceholder": "သတ်မှတ်စျေးနှုန်း",
+            "LinkPlaceholder": "အပိုဆောင်းအချက်အလက်လင့်ခ်ကို သတ်မှတ်ပါ။",
+            "DescriptionPlaceholder": "ဝန်ဆောင်မှုဖော်ပြချက်",
+            "SaveService": "ဝန်ဆောင်မှုကို သိမ်းဆည်းပါ။",
+            "SelectRequiredParticipants": "ဆက်စပ်ပါဝင်သူများ လိုအပ်ပါသည်။",
+            "RequiredParticipantsDesc": "ဤဝန်ဆောင်မှုကိုအသုံးပြုရန် လိုအပ်သည့် ဆက်စပ်ပါဝင်သူများကို ရွေးပါ (ဥပမာ &quot;ခွေးရှိုး&quot; အတွက် အိမ်မွေးတိရစ္ဆာန်များ သို့မဟုတ် &quot;ကလေးများ အားလပ်ရက်&quot; စသည်ဖြင့်)။ ဝန်ဆောင်မှုကို ပေးဆောင်ပါက၊ အသုံးပြုသူသည် သက်ဆိုင်ရာ ပါဝင်သူတိုင်းအတွက် ပေးချေရမည်ဖြစ်သည်။"
+        },
+        "EditServiceTemplate": {
+            "Title": "တည်းဖြတ်ခြင်းဝန်ဆောင်မှု"
+        },
+        "ManageServiceTemplates": "ဝန်ဆောင်မှုပုံစံများကို စီမံပါ။",
+        "ManageServices": "ဝန်ဆောင်မှုများကို စီမံခန့်ခွဲပါ။",
+        "Free": "အခမဲ့",
+        "OptionalContribution": "ရွေးချယ်နိုင်သောအလှူငွေ",
+        "RequiredPayment": "လိုအပ်သောငွေပေးချေမှု",
+        "AreYouSureDelete": "ဤဝန်ဆောင်မှုကို ဖျက်လိုသည်မှာ သေချာပါသလား။",
+        "AmountServicesRelated": "ဤဝန်ဆောင်မှုနှင့် ပတ်သက်သည့် ရနိုင်မှု {{amount}} ရှိပါသည်။ သူတို့ကိုလည်း ဖယ်ရှားပစ်မယ်။"
+    },
+    "transfer": {
+        "SelectRecipient": "လက်ခံသူကို ရွေးပါ။",
+        "TransactionSuccess": "အရောင်းအဝယ်အောင်မြင်",
+        "OrTypeWalletAddress": "သို့မဟုတ် လက်ခံသူ ပိုက်ဆံအိတ်လိပ်စာကို ရိုက်ထည့်ပါ။",
+        "AppCredits": "အက်ပ်ခရက်ဒစ်များ"
+    },
+    "NFT": {
+        "Title": "ခေါင်းစဉ်",
+        "Name": "နာမည်",
+        "EnterName": "နာမည်ထည့်ပါ။",
+        "EnterAuthorWallet": "စာရေးသူ ပိုက်ဆံအိတ်ကို ထည့်ပါ။",
+        "InformationAboutTitle": "{{title}} NFT အကြောင်း အချက်အလက်",
+        "Description": "ဖော်ပြချက်",
+        "DetailedInformationAboutNFT": "NFT အကြောင်းအသေးစိတ်အချက်အလက်",
+        "PresaleStarts": "ဒီဇင်ဘာလ 23 ရက်နေ့တွင် စတင်ရောင်းချပါမည်။",
+        "OwnerUserNotFound": "ဤ NFT ၏ပိုင်ရှင်သည် ကျွန်ုပ်တို့၏လျှောက်လွှာတွင် မှတ်ပုံတင်ထားခြင်းမရှိပါ။",
+        "BuyNow": "အခုဝယ်ပါ",
+        "Buy": "ဝယ်ပါ။",
+        "Add": "ထည့်ပါ။",
+        "Remove": "ဖယ်ရှားပါ။",
+        "NoNFTyet": "NFTs မရှိသေးပါ။",
+        "Conversation": "စကားဝိုင်း",
+        "Create": "ဖန်တီးပါ။",
+        "CurrentBid": "လက်ရှိလေလံ",
+        "StartingIn": "စတင်သည်။",
+        "EndingIn": "အဆုံးသတ်သည်။",
+        "CreateNFT": "NFT တစ်ခုဖန်တီးပါ။",
+        "TitlePlaceholder": "သင်၏ NFT ခေါင်းစဉ်တစ်ခုပေးပါ။",
+        "DescriptionPlaceholder": "သင်၏ NFT ဖော်ပြချက်တစ်ခုပေးပါ။",
+        "CreateYourNFT": "သင်၏ NFT ကိုဖန်တီးပါ။",
+        "Royalties": "မူပိုင်ခွင့်များ",
+        "RoyaltyPlaceholder": "ရွေးချယ်ခွင့် လွှဲပြောင်းခြင်းမပြုမီ ဖန်တီးရှင်ထံ ပေးဆောင်ရမည့် ပမာဏ။",
+        "ExpirationDate": "သက်တမ်းကုန်ဆုံးရက်",
+        "StartingDate": "စတင်သည့်ရက်စွဲ",
+        "BidsBelowThisAmount": "ဤပမာဏအောက် လျှော့စျေးများကို ခွင့်မပြုပါ။",
+        "MinimumBid": "အနိမ့်ဆုံးလေလံ",
+        "Author": "စာရေးသူ",
+        "Price": "စျေးနှုန်း",
+        "Commission": "ကော်မရှင်",
+        "EnterCommission": "ကော်မရှင်ဝင်ပါ။",
+        "Owner": "ပိုင်ရှင်",
+        "SelectCategory": "အမျိုးအစားကို ရွေးပါ။",
+        "Day": "နေ့",
+        "Days": "နေ့ရက်များ",
+        "Hour": "နာရီ",
+        "Hours": "နာရီ",
+        "Minute": "မိနစ်",
+        "Minutes": "မိနစ်",
+        "Second": "ဒုတိယ",
+        "Seconds": "စက္ကန့်",
+        "SalesCreator": "ရောင်းအားသည် ဖန်တီးသူထံ ရောက်သွားလိမ့်မည်။",
+        "Details": "အသေးစိတ်",
+        "Bids": "လေလံ",
+        "History": "သမိုင်း",
+        "LoremIpsum": "Lorem Ipsum သည် ပုံနှိပ်စက်နှင့် စာစီစာရိုက်လုပ်ငန်း၏ ရိုးရိုးရှင်းရှင်း စာလုံးသေးသေးလေးဖြစ်သည်။",
+        "PutOnSale": "ရောင်းချပေးပါသည်။",
+        "PutOffSale": "ရောင်းချခြင်းမှထုတ်ယူ",
+        "Transfer": "အပြောင်းအရွှေ့",
+        "Actions": "လုပ်ဆောင်ချက်များ",
+        "Claim": "တောင်းဆိုမှု",
+        "ClaimNFT": "NFT ကို တောင်းဆိုပါ။",
+        "Unlocking": "သော့ဖွင့်ခြင်း။",
+        "Unlock": "သော့ဖွင့်ပါ။",
+        "Update": "အပ်ဒိတ်",
+        "UpdateToken": "တိုကင်ကို အပ်ဒိတ်လုပ်ပါ။",
+        "UpdateNFT": "NFT ကို အပ်ဒိတ်လုပ်ပါ။",
+        "CreateToken": "တိုကင်ဖန်တီးပါ။",
+        "PlaceBid": "လေလံနေရာ",
+        "SoldOut": "ရောင်းတယ်။",
+        "NotOnSale": "ရောင်းရန်မရှိပါ။",
+        "NftName": "NFT အမည်",
+        "DescribeYourNFT": "သင်၏ NFT ကိုဖော်ပြပါ။",
+        "NFTImage": "NFT အတွက် ပုံ",
+        "NFTVideo": "NFT အတွက် ဗီဒီယို၊ ရှိလျှင်",
+        "GenerateDescription": "သို့မဟုတ် အလိုအလျောက် ထုတ်ပေးသည်။",
+        "UploadMovie": "ရုပ်ရှင်ကို တင်ပါ။",
+        "MovieSource": "ရုပ်ရှင်အရင်းအမြစ်",
+        "MovieURL": "ရုပ်ရှင် URL",
+        "UploadFile": "ဖိုင်တစ်ခုကို အပ်လုဒ်လုပ်ပါ။",
+        "PutOnMarketplace": "စျေးကိုတင်ပါ။",
+        "InstantPurchase": "သင်၏ NFT ကို သုံးစွဲသူများ ချက်ချင်းဝယ်ယူခွင့်ပြုရန် စျေးနှုန်းကို ထည့်သွင်းပါ။",
+        "FixedPrice": "ပုံသေစျေးနှုန်း",
+        "TimedAuction": "အချိန်ကိုက်လေလံ",
+        "OpenForBids": "လေလံများအတွက်ဖွင့်လှစ်",
+        "PriceOnePiece": "တစ်ထည်အတွက် စျေးနှုန်းထည့်ပါ။",
+        "EnterPrice": "စျေးနှုန်းထည့်ပါ။",
+        "EnterMinimumBid": "အနိမ့်ဆုံးလေလံကို ထည့်ပါ။",
+        "SelectChain": "ကွင်းဆက်ကို ရွေးပါ။",
+        "Currency": "ငွေကြေး",
+        "AreYouSureDeleteImage": "ပုံကို ဖယ်ရှားလိုသည်မှာ သေချာပါသလား။",
+        "AreYouSureDeleteVideo": "ဗီဒီယိုကို ဖယ်ရှားလိုသည်မှာ သေချာပါသလား။",
+        "series": {
+            "Name": "နာမည်",
+            "Icon": "အိုင်ကွန်",
+            "Description": "ဖော်ပြချက်",
+            "Author": "စာရေးသူ",
+            "SelectSeries": "စီးရီးကို ရွေးပါ။",
+            "Value": "တန်ဖိုး",
+            "AreYouSure": "သေချာလား?",
+            "AuthorInvalid": "စာရေးသူလိပ်စာ မမှန်ကန်ပါ။",
+            "Address": "လိပ်စာ",
+            "CoverImage": "မျက်နှာဖုံးပုံ",
+            "UploadCoverImage": "မျက်နှာဖုံးပုံကို အပ်လုဒ်လုပ်ပါ။",
+            "CommissionAddressInvalid": "ကော်မရှင်လိပ်စာ မမှန်ကန်ပါ။",
+            "OnSale": "ရောင်းရန်",
+            "OffSale": "ရောင်းရန်",
+            "CreateSeries": "စီးရီးဖန်တီးပါ။",
+            "UpdateSeries": "စီးရီးများကို အပ်ဒိတ်လုပ်ပါ။",
+            "SeriesInfo": "စီးရီးအချက်အလက်",
+            "SelectAuthor": "စာရေးသူကို ရွေးပါ။",
+            "NewItem": "NFT စီးရီးအသစ်",
+            "NamePlaceholder": "စီးရီးအမည်ကို ထည့်သွင်းပါ။",
+            "DescPlaceholder": "စီးရီးဖော်ပြချက်ကို ထည့်ပါ။",
+            "EndingIn": "အဆုံးသတ်"
+        },
+        "contract": {
+            "CreateContract": "စာချုပ်ဖန်တီးပါ။",
+            "SelectContract": "စာချုပ်ကိုရွေးချယ်ပါ။",
+            "CreateContractFor": "{{userName}} အတွက် စာချုပ်ဖန်တီးပါ။",
+            "ContractFor": "{{userName}} စာချုပ်",
+            "UpdateContract": "စာချုပ်ကို အပ်ဒိတ်လုပ်ပါ။",
+            "TransferOwnership": "ပိုင်ဆိုင်မှုလွှဲပြောင်း",
+            "SetBaseURI": "Base URI သတ်မှတ်ပါ။",
+            "SetSuffix": "Suffix သတ်မှတ်ပါ။",
+            "CurrentOwner": "လက်ရှိပိုင်ရှင်",
+            "CurrentBaseURL": "လက်ရှိ BaseURL",
+            "ContractAddressAbsent": "စာချုပ်လိပ်စာ မရှိပါ။",
+            "FactoryAddressAbsent": "စက်ရုံလိပ်စာ မရှိပါ။",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "ခေါင်းစဉ် လိုအပ်သည်။",
+            "SymbolRequired": "သင်္ကေတ လိုအပ်သည်။",
+            "TypeContractName": "စာချုပ်အမည်",
+            "TypeContractSymbol": "စာချုပ်သင်္ကေတ (အများဆုံး 10 စာလုံး)"
+        },
+        "contests": {
+            "Title": "ပြိုင်ပွဲများ",
+            "NewContest": "ပြိုင်ပွဲအသစ်"
+        },
+        "collections": {
+            "Title": "စုစည်းမှုများ",
+            "EnterTitle": "ခေါင်းစဉ်ထည့်ပါ။",
+            "EnterDescription": "ဖော်ပြချက်ကို ရိုက်ထည့်ပါ။",
+            "NewCollection": "စုစည်းမှုအသစ်",
+            "Name": "နာမည်",
+            "Icon": "အိုင်ကွန်",
+            "Description": "ဖော်ပြချက်",
+            "Author": "စာရေးသူ",
+            "SelectCollection": "စုစည်းမှုကို ရွေးချယ်ပါ။",
+            "Value": "တန်ဖိုး",
+            "AreYouSure": "သေချာလား?",
+            "AuthorInvalid": "စာရေးသူလိပ်စာ မမှန်ကန်ပါ။",
+            "Address": "လိပ်စာ",
+            "CoverImage": "မျက်နှာဖုံးပုံ",
+            "UploadIcon": "အိုင်ကွန်ကို အပ်လုဒ်လုပ်ပါ။",
+            "CommissionAddressInvalid": "ကော်မရှင်လိပ်စာ မမှန်ကန်ပါ။",
+            "OnSale": "ရောင်းရန်",
+            "OffSale": "ရောင်းရန်",
+            "CreateCollection": "စုစည်းမှုကို ဖန်တီးပါ။",
+            "UpdateCollection": "အပ်ဒိတ်စုစည်းမှု",
+            "CollectionInfo": "စုစည်းမှုအချက်အလက်",
+            "SelectAuthor": "စာရေးသူကို ရွေးပါ။",
+            "NewItem": "NFT စုဆောင်းမှုအသစ်",
+            "NamePlaceholder": "စုစည်းမှုအမည်ကို ထည့်သွင်းပါ။",
+            "DescPlaceholder": "စုစည်းမှုဖော်ပြချက်ကို ထည့်သွင်းပါ။",
+            "EndingIn": "အဆုံးသတ်",
+            "SubmitSeries": "စီးရီးတစ်ခုတင်ပြပါ။"
+        },
+        "import": {
+            "importNFT": "NFT များကို တင်သွင်းခြင်း။",
+            "importAttributes": "NFT ရည်ညွှန်းချက်များကို ထည့်သွင်းပါ။",
+            "fileNotFound": "ဝမ်းနည်းပါတယ်၊ CSV ဖိုင်ကို ရှာမတွေ့ပါ။",
+            "fileEmpty": "ဝမ်းနည်းပါသည်၊ CSV ဖိုင်သည် ဗလာဖြစ်နေသည်။",
+            "userIdNotFound": "အသုံးပြုသူရှိသော်လည်း id ဗလာဖြစ်နေသည်။",
+            "errorLine": "လိုင်း {{1}}",
+            "fieldNotFound": "လိုအပ်သောအကွက် &quot; {{1}} &quot; မတွေ့ပါ။",
+            "displayTypeEmpty": "&quot; {{1}} &quot; အတွက် ပြကွက်အမျိုးအစားကို ရှာမတွေ့ပါ။",
+            "taskStreamInvalid": "လုပ်ဆောင်စရာစီးကြောင်း မမှန်ကန်ပါ။",
+            "instructionsEmpty": "လုပ်ငန်းဆောင်တာ ညွှန်ကြားချက်များ ဗလာ",
+            "complete": "ပြီးအောင်",
+            "activateUsers": "အသုံးပြုသူများထံ activation message ပို့မလား။",
+            "importProgress": "တိုးတက်မှု",
+            "importOptions": "ရွေးချယ်စရာများ",
+            "sampleCSV": "နမူနာ CSV ကို ဒေါင်းလုဒ်လုပ်ပါ။",
+            "fileLabel": "စာရင်းဇယားကို အပ်လုဒ်လုပ်ပါ-",
+            "errorsTitle": "အမှားအယွင်းများ ဖြစ်ပေါ်ခဲ့သည်။"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "NFT စုဆောင်းမှုများဖြင့် စစ်ထုတ်ပါ။",
+                "ShowNFTCollection": "NFT စုစည်းမှုကို ပြပါ...",
+                "AllCollections": "စုစည်းမှုအားလုံး"
+            },
+            "ByUser": {
+                "AllAuthors": "စာရေးသူများအားလုံး",
+                "AllUsers": "လူတိုင်း",
+                "FilterByAuthors": "ရေးသားသူများမှ စစ်ထုတ်ပါ။"
+            }
+        },
+        "Back": "Collection သို့ ပြန်သွားရန်",
+        "attributes": {
+            "Title": "အရည်အချင်းများကို စီမံပါ။",
+            "Attributes": "ဂုဏ်တော်",
+            "DisplayTitle": "Display အမျိုးအစား",
+            "AddDisplayType": "ပြသမှုအမျိုးအစားအသစ်ကို ထည့်ပါ။",
+            "NewDisplay": "ရုပ်ထွက်အသစ်",
+            "TraitTitle": "စရိုက်အမျိုးအစား",
+            "AddTraitTitle": "စရိုက်အမျိုးအစားအသစ်ကို ထည့်ပါ။",
+            "NewTrait": "စရိုက်အမျိုးအစားအသစ်",
+            "ValueTitle": "တန်ဖိုး",
+            "AddValueTitle": "တန်ဖိုးအသစ်ထည့်ပါ။",
+            "NewValue": "တန်ဖိုးအသစ်",
+            "NewAttribute": "အရည်အချင်းအသစ်",
+            "UpdateAttributes": "အရည်အချင်းများကို အပ်ဒိတ်လုပ်ပါ။",
+            "SaveAttributes": "အရည်အချင်းများကို သိမ်းဆည်းပါ။"
+        },
+        "profile": {
+            "LogOut": "ထွက်လိုက်ပါ။",
+            "Title": "{{userName}} အတွက် ပရိုဖိုင်",
+            "Description": "အသုံးပြုသူအသေးစိတ်",
+            "aboutPlaceholder": "Bio ကို တည်းဖြတ်ပါ။",
+            "UploadCoverPhoto": "မျက်နှာဖုံးဓာတ်ပုံကို တင်ပါ။",
+            "SureLogOut": "ထွက်လိုသည်မှာ သေချာပါသလား။"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "စီးရီး ID",
+                        "owner": "ပိုင်ရှင်",
+                        "currency": "ငွေကြေး",
+                        "price": "စျေးနှုန်း",
+                        "beneficiary": "အကျိုးခံစားခွင့်",
+                        "autoindex": "အော်တိုညွှန်းကိန်း",
+                        "duration": "သင်တန်းကာလ",
+                        "rateInterval": "ကြားကာလကို အဆင့်သတ်မှတ်ပါ။",
+                        "rateAmount": "ပမာဏနှုန်းထား"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "တိုကင်များကို ဤစီးရီးတွင် ထည့်သွင်းပါမည်။",
+                        "owner": "ဥပမာ ပိုင်ရှင်မဟုတ်ရင် ပေးပို့သူဖြစ်လိမ့်မယ်။",
+                        "currency": "မူရင်းဒင်္ဂါးများအတွက် သုညဖြစ်လျှင် ဝယ်ယူထားသော တိုကင်များအတွက် ငွေကြေး",
+                        "price": "စျေးနှုန်း",
+                        "beneficiary": "တိုကင်များရောင်းချခြင်း၏အကျိုးခံစားခွင့်သည် မဟုတ်ပါက ပေးပို့သူဖြစ်လိမ့်မည်။",
+                        "autoindex": "အော်တိုညွှန်းကိန်း",
+                        "duration": "သတ္တုတူးဖော်ပြီးနောက် လော့ခ်ချပါ။ Zero ဆိုသည်မှာ ချက်ချင်းရယူပါ။",
+                        "rateInterval": "အထူးဝယ်ယူမှုအတွက် ပုံးကြားကာလ",
+                        "rateAmount": "အထူးဝယ်ယူမှုအတွက် ပုံးပမာဏ"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ချန်လှပ်ထားနိုင်သည်)",
+                    "number": "နံပါတ်",
+                    "address": "လိပ်စာ",
+                    "fraction": "အပိုင်း",
+                    "integer": "ကိန်းပြည့်",
+                    "seconds": "စက္ကန့်",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "ဟင်းသီးဟင်းရွက်",
+                "viewInstancesList": "စာရင်းကို ပြန်လည်စတင်ပါ။"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "စီးရီး ID",
+                        "account": "အကောင့်",
+                        "amount": "ပမာဏ"
+                    },
+                    "small": {
+                        "seriesId": "တိုကင်အသစ်သည် ထိုသို့သော ID ဖြင့် အတွဲလိုက်ဖြစ်ပါမည်။",
+                        "account": "အသစ်ဖန်တီးထားသော NFT ပိုင်ရှင်။ သတ်မှတ်မထားပါက - လက်ရှိပိုက်ဆံအိတ်ကို အသုံးပြုပါမည်။",
+                        "amount": "Mint သို့ NFT ပမာဏ"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ချန်လှပ်ထားနိုင်သည်)",
+                    "seriesId": "အိုင်ဒီ",
+                    "account": "အကောင့်",
+                    "amount": "ပမာဏ",
+                    "integer": "ကိန်းပြည့်"
+                },
+                "btn": {
+                    "Purchase": "ဝယ်ယူပါ။",
+                    "SpecialPurchase": "အထူးဝယ်ယူမှု"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "လိပ်စာ"
+                    },
+                    "small": {
+                        "account": "လိပ်စာ"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "မမှန်ကန်သောလိပ်စာ"
+                },
+                "placeholders": {
+                    "account": "လိပ်စာ"
+                },
+                "addToWhitelist": "Whitelist သို့ ထည့်ပါ။",
+                "removeFromWhitelist": "Whitelist မှ ဖယ်ရှားပါ။"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "တိုကင် ID",
+                    "custodian": "စောင့်မျော်ပါ။",
+                    "recipient": "လက်ခံသူ"
+                },
+                "small": {
+                    "tokenId": "လော့ခ်ချရန် သို့မဟုတ် လော့ခ်ဖွင့်ရန် လိုအပ်သည့် တိုကင်အိုင်ဒီ",
+                    "custodian": "သော့ဖွင့်နိုင်သောလိပ်စာ",
+                    "recipient": "တိုကင်များလက်ခံရရှိမည့်လိပ်စာ"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "မမှန်ကန်သော တိုကင်အိုင်ဒီ",
+                "invalidCustodian": "မမှန်ကန်သော စောင့်ထိန်းသူ",
+                "invalidRecipient": "မမှန်ကန်သော လက်ခံသူ"
+            },
+            "placeholders": {
+                "optional": "(ချန်လှပ်ထားနိုင်သည်)",
+                "tokenId": "အိုင်ဒီ",
+                "custodian": "လိပ်စာ"
+            },
+            "Lock": "သော့ခတ်",
+            "Unlock": "သော့ဖွင့်ပါ။",
+            "Locked": "သော့ခတ်ထားသည်။",
+            "CustodianAddress": "စောင့်ထိန်းလိပ်စာ",
+            "TokenWasClaimed": "တိုကင် &quot; {{title}} &quot; ကို တောင်းဆိုထားသည်။",
+            "TokenWasLocked": "တိုကင် &quot; {{title}} &quot; သော့ခတ်ထားသည်။",
+            "TokenWasUnlocked": "တိုကင် &quot; {{title}} &quot; ကို လော့ခ်ဖွင့်ထားသည်။"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ဤပံ့ပိုးကူညီမှုအကြောင်း တစ်ခုခုကို ရိုက်ထည့်ပါ..."
+    },
+    "currencies": {
+        "choose": "ငွေကြေးကို ရွေးချယ်ပါ။"
+    }
+}

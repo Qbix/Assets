@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Ukuthengisa uMqondiso",
+                        "timestamps": "Amaxesha",
+                        "prices": "Amaxabiso",
+                        "endTime": "Ixesha lokuphela",
+                        "thresholds": "Imibundu",
+                        "bonuses": "Iibhonasi"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Umnini akanakurhoxa",
+                            "option1": "Umnini unokurhoxisa iithokheni kuphela emva kokuphela kwexesha",
+                            "option2": "Umnini unokurhoxisa iithokheni nangaliphi na ixesha"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Idilesi yoluntu",
+                    "methodkeccack": "Keccak256 hash umsebenzi",
+                    "roleId": "Isazisi sendima",
+                    "sellingToken": "Ukuthengisa idilesi yeToken",
+                    "prices": "ETH, Ixabiso",
+                    "thresholds": "# yeempawu",
+                    "bonuses": "Ibhonasi %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Akukho mali"
+                },
+                "btns": {
+                    "createFund": "Yenza iNgxowa-mali",
+                    "createFundInForm": "Yenza"
+                },
+                "fundAddress": "Idilesi yengxowa-mali",
+                "createFund": "Yenza iNgxowa-mali",
+                "fundInfo": "Ulwazi",
+                "produce": "Velisa",
+                "loading": "Iyalayisha",
+                "viewInstancesList": "Uluhlu Lokuhlaziya"
+            }
+        }
+    }
+}

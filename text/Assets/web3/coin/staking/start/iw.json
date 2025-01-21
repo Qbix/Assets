@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "מֶשֶׁך",
+                        "amount": "סְכוּם"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "מֶשֶׁך",
+                        "amount": "סְכוּם"
+                    }
+                },
+                "placeholders": {
+                    "duration": "מֶשֶׁך",
+                    "amount": "סְכוּם"
+                },
+                "btns": {
+                    "stake": "לְהַמֵר"
+                },
+                "stake": "לְהַמֵר",
+                "loading": "טְעִינָה"
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "title": "Biya",
+    "steps": {
+        "sending_native_coins": "Aika tsabar kudi na asali",
+        "sending_tokens": "Aika alamu",
+        "swap": "Musanya",
+        "approve": "Amincewa",
+        "one_tx": "Ya kamata ku aika ma&#39;amala guda ɗaya",
+        "two_tx": "Ya kamata ku aika ma&#39;amaloli biyu"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Kudaden da za a biya"
+            }
+        },
+        "btns": {
+            "pay": "Biya"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Bukatar biya &quot; {{amountOut}} &quot; alamun"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Irin wannan sarkar mai id &quot; {{chainId}} &quot; ba ta da tallafi"
+    }
+}

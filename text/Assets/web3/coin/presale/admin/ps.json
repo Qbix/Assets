@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "د ټوکن پلورل",
+                        "timestamps": "وختونه",
+                        "prices": "قیمتونه",
+                        "endTime": "د پای وخت",
+                        "thresholds": "تختې",
+                        "bonuses": "بونس"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "مالک نشي کولی بیرته واخلي",
+                            "option1": "مالک کولی شي یوازې د پای وخت تیریدو وروسته ټیکونه بیرته واخلي",
+                            "option2": "مالک کولی شي هر وخت ټیکونه بیرته واخلي"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "د ټولنې پته",
+                    "methodkeccack": "Keccak256 هش فعالیت",
+                    "roleId": "د رول ID",
+                    "sellingToken": "د ټوکن پته پلورل",
+                    "prices": "ETH، قیمت",
+                    "thresholds": "# د ټکنونو",
+                    "bonuses": "بونس٪"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "هیڅ فنډ شتون نلري"
+                },
+                "btns": {
+                    "createFund": "فنډ جوړ کړئ",
+                    "createFundInForm": "جوړ کړئ"
+                },
+                "fundAddress": "د فنډ پته",
+                "createFund": "فنډ جوړ کړئ",
+                "fundInfo": "معلومات",
+                "produce": "تولیدوي",
+                "loading": "بار کول",
+                "viewInstancesList": "لیست تازه کړئ"
+            }
+        }
+    }
+}

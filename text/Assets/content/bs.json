@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Greška",
+        "WalletAbsent": "Novčanik nije povezan.",
+        "Rendering": "Bilo je grešaka prilikom prikazivanja <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Cijena obavezna!",
+        "NameRequired": "Ime je obavezno!",
+        "PriceInvalid": "Cijena nevažeća!",
+        "AmountInvalid": "Iznos je nevažeći!",
+        "TransactionFailed": "Transakcija nije uspjela",
+        "ChainNotSupported": "Odabrani lanac nije podržan. Podržani lanac: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Potreban je MetaMask povezan za rad sa aplikacijom",
+        "UserNotLoggedInMetaMask": "Korisnik nije prijavljen na MetaMask",
+        "CurrencyNotFound": "Valuta nije pronađena",
+        "WrongChain": "Ovaj NFT kreiran pod &quot; {{chain}} &quot;. Molimo koristite ovaj lanac.",
+        "NoRecipientSelected": "Nijedan primalac nije odabran",
+        "CantManageFrozenSeries": "Ne možete upravljati zamrznutim serijama",
+        "SubscriptionStreamNotPaid": "Niste platili za gledanje ovog sadržaja. Kliknite na {{subscriptionUrl}} i pretplatite se na odgovarajući plan."
+    },
+    "admin": {
+        "Title": "Imovina administrativna",
+        "SubscriptionTitle": "Planovi pretplate"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Dodirnite za plaćanje"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : naplata je obrađena za {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Hvala vam na uplati na {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} pretplaćeno na {{plan.title}}",
+        "YouSubscribedTo": "Pretplaćeni ste na {{plan.title}}",
+        "Assets\/credits\/alert": "Imate upozorenje vezano za vaš račun"
+    },
+    "charge": {
+        "Subject": "Primili ste uplatu od {{displayAmount}} od {{call 'publisher.displayName'}} za &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hej, ovo je samo da vas obavijestim da je {{1}} naplaćeno {{2}} za {{3}} od {{4}}"
+    },
+    "charged": {
+        "Subject": "Hvala vam na uplati za &quot; {{description}} &quot;",
+        "HavePaid": "Hej {{1}} , ovo je samo brza potvrda da ste uspješno platili {{2}} do {{3}} za {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Povežite račun",
+        "Success": "Uspjeh",
+        "YourAccountCreated": "Vaš račun je uspješno kreiran!",
+        "YourAccountAlreadyCreated": "Vaš račun je već kreiran i spreman je za korištenje"
+    },
+    "payment": {
+        "AboutOrder": "Informacije o narudžbi",
+        "PaymentMethod": "Način plaćanja",
+        "ContactInfo": "Kontakt informacije",
+        "Pay": "Plati",
+        "PaymentSucceeded": "Plaćanje je uspješno obrađeno",
+        "PaymentProcessing.": "Vaša uplata se obrađuje",
+        "FailTryAgain": "Vaša uplata nije uspjela. Molimo pokušajte ponovo.",
+        "SomethingWrong": "Nešto je pošlo po zlu",
+        "PaymentStatus": "Status plaćanja",
+        "PayTo": "Plati {{displayName}}",
+        "ChooseCurrency": "Odaberite valutu",
+        "YouCanSendUpTo": "Možete poslati do {{amount}} {{symbol}}",
+        "Send": "Pošalji",
+        "EnterAmount": "unesite iznos"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Pozivnicu prihvatio {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} popunjeno {{FilledStreamTitle}}",
+        "ForFillingStream": "Za punjenje {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Za početak imate {{amount}} kredita",
+        "PaymentFor": "Plaćanje za &quot; {{1}} &quot;",
+        "PaymentTo": "Plaćanje na {{1}}",
+        "PaymentToUser": "Prebacite na {{toUserName}}",
+        "CreatePrivateChat": "za privatni razgovor sa {{toUserName}}",
+        "CreatePaidStream": "za stvaranje {{toStreamName}}",
+        "JoinedPaidStream": "za rezervaciju u &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "za stvaranje zajednice &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "kao povrat novca za rezervaciju u &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Kupljeno {{amount}} kredita",
+        "BonusCredits": "Bonus {{amount}} kredita",
+        "BuyAmountCredits": "Kupite {{amount}} kredita",
+        "WatchClip": "za gledanje {{fromStreamTitle}}",
+        "MissingCredits": "Nedostaju krediti",
+        "YouMissingCredits": "Potrebno vam je dodatnih {{amount}} kredita da nastavite.",
+        "BuyCredits": "Kupite kredite",
+        "BuyBonus": "Kupovina {{amount}} kredita odjednom će rezultirati bonusom od {{bonus}} kredita.",
+        "Buy": "Kupi",
+        "PurchaseCredits": "Kupovina kredita",
+        "Credits": "Zasluge",
+        "ErrorInvalidAmount": "Iznos nevažeći",
+        "ErrorInvalidCurrency": "Nažalost, još uvijek ne podržavamo valutu {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kredita",
+            "BonusCredits": "{{amount}} kredita"
+        }
+    },
+    "history": {
+        "Date": "Datum",
+        "Amount": "Iznos",
+        "Description": "Opis",
+        "Client": "Klijent",
+        "User": "Korisnik",
+        "To": "to",
+        "From": "od",
+        "SeeHistory": "Pogledajte historiju plaćanja za {{1}}",
+        "HistoryEmpty": "Još nema transakcija",
+        "PaymentFor": "Poslano {{amount}} kredita",
+        "PaymentTo": "Poslano {{amount}} kredita",
+        "PaymentToUser": "Poslano {{amount}} kredita",
+        "CreatePaidStream": "Potrošeno {{amount}} kredita",
+        "WatchClip": {
+            "+": "Zaradio {{amount}} kredita",
+            "-": "Potrošeno {{amount}} kredita"
+        },
+        "JoinedPaidStream": {
+            "+": "Zaradio {{amount}} kredita",
+            "-": "Potrošeno {{amount}} kredita"
+        },
+        "LeftPaidStream": {
+            "+": "Primljeno {{amount}} kredita",
+            "-": "Poslano {{amount}} kredita"
+        },
+        "CreatedCommunity": "Potrošeno {{amount}} kredita",
+        "BoughtCredits": "Kupljeno {{amount}} kredita",
+        "BonusCredits": "Dobio bonus {{amount}} kredita",
+        "InviteAcceptedBy": "Zaradio {{amount}} kredita",
+        "Streams_user_firstname": "Zaradio {{amount}} kredita",
+        "Streams_user_lastname": "Zaradio {{amount}} kredita",
+        "Streams_user_icon": "Zaradio {{amount}} kredita",
+        "Places_user_location": "Zaradio {{amount}} kredita",
+        "Streams_greeting": "Zaradio {{amount}} kredita",
+        "YouHaveCreditsToStart": "Zaradio {{amount}} kredita",
+        "InvitedUserFilledStream": "Zaradio {{amount}} kredita",
+        "ForFillingStream": "Zaradio {{amount}} kredita",
+        "CreatePrivateChat": "Potrošeno {{amount}} kredita"
+    },
+    "subscriptions": {
+        "infoTitle": "Navedite informacije o plaćanju",
+        "confirm": {
+            "title": "Pokreni pretplatu",
+            "message": "Pokrenuti ponavljajuću pretplatu na &quot; {{title}} &quot;?",
+            "ok": "OK",
+            "cancel": "Otkaži"
+        },
+        "CreditOrDebitCard": "Kreditna ili debitna kartica",
+        "SubscribePayment": "Plaćanje pretplate",
+        "ImmediatePayment": "Odmah plaćanje",
+        "ProcessingPayment": "Obrada plaćanja",
+        "SubscriptionAlreadyPaid": "Ova pretplata je već plaćena",
+        "SubscriptionNotActive": "Pretplata je trenutno neaktivna",
+        "Subscribed": "Pretplaćeni",
+        "Unsubscribed": "Otkazano",
+        "Unsubscribe": "Otkaži pretplatu",
+        "Subscribe": "Pretplatite se",
+        "Started": "Poceo",
+        "EndsIn": "Završava u",
+        "NextPay": "Sljedeća uplata",
+        "Period": "Period",
+        "Price": "Cijena",
+        "AreYouSureUnsubscribe": "Jeste li sigurni da želite otkazati pretplatu na ovaj plan?",
+        "YouUnsubscribedFromPlan": "Odjavili ste se sa plana &quot; {{planTitle}} &quot;. Sljedeći put vam neće biti naplaćeno, ali vaša pretplata će se nastaviti do {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "naslov plana",
+            "PricePlaceholder": "cijena",
+            "SubscriptionTitle": "Planovi pretplate",
+            "DescriptionPlaceholder": "opis pretplatničkog plana",
+            "AreYouSureDeletePlan": "Jeste li sigurni da želite izbrisati ovaj plan?",
+            "Duration": "Trajanje",
+            "Discount": "Popust",
+            "SavePlan": "Sačuvaj",
+            "Interrupt": "Prekini",
+            "Continue": "Nastavi",
+            "NewPlan": "Novi plan",
+            "SelectDisplayType": "Odaberite {{displayType}}",
+            "EndDate": "datum završetka",
+            "Available": "Dostupan",
+            "Hidden": "Skriveno",
+            "InviteOnly": "Samo po pozivu",
+            "CantSubscribeUnlessInvited": "Ne možete se pretplatiti na ovaj plan osim ako niste pozvani"
+        }
+    },
+    "payments": {
+        "infoTitle": "Postavite informacije o plaćanju",
+        "BuyAmountCredits": "Kupite {{amount}} kredita",
+        "confirm": {
+            "title": "Izvršite plaćanje",
+            "message": "Da li se slažete da platite {{symbol}} {{amount}} ?",
+            "ok": "OK",
+            "cancel": "Otkaži"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Zasluge",
+            "description": "prati kredite i plaćanja"
+        },
+        "Assets\/plan": {
+            "displayType": "Plan pretplate",
+            "description": "pretplatnički plan"
+        },
+        "Assets\/subscription": {
+            "displayType": "Pretplata",
+            "description": "pretplata"
+        },
+        "Assets\/product": {
+            "displayType": "Proizvod",
+            "description": "proizvod koji se prodaje"
+        },
+        "Assets\/service": {
+            "displayType": "Servis",
+            "description": "usluga koja se nudi"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Zaradio {{amount}} kredita"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Kupljeno {{amount}} kredita"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} kredita"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Potrošeno {{amount}} kredita"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Poslano {{amount}} kredita na {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Primio {{amount}} kredita od {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Nemate dovoljno kredita na vašem računu. Molimo posjetite sljedeći <a href='<i translate='no'>999 &#39;&gt;link<\/a> za kupovinu dodatnih kredita."
+        }
+    },
+    "billing": {
+        "Title": "Naplata imovine",
+        "CreditsMinimum": "Minimalni krediti",
+        "CreditsToAdd": "Krediti za dodavanje",
+        "Save": "Sačuvaj",
+        "ThisLink": "ovaj link",
+        "errors": {
+            "CreditsMinimumNegative": "Minimalni krediti ne mogu biti negativni",
+            "CreditsToAddNegative": "Krediti za dodavanje ne mogu biti negativni"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Nova usluga",
+            "TitlePlaceholder": "Naziv usluge",
+            "PricePlaceholder": "Postavite cijenu",
+            "LinkPlaceholder": "postavite link za dodatne informacije",
+            "DescriptionPlaceholder": "Opis usluge",
+            "SaveService": "Save Service",
+            "SelectRequiredParticipants": "Potrebni povezani učesnici",
+            "RequiredParticipantsDesc": "Molimo odaberite povezane učesnike koji su obavezni za korištenje ove usluge (na primjer kućni ljubimci za &quot;Izložbu pasa&quot;, ili djeca za &quot;Dječji odmor&quot; itd.). Ako je usluga plaćena, korisnik će morati platiti i za svakog povezanog učesnika."
+        },
+        "EditServiceTemplate": {
+            "Title": "Uredi uslugu"
+        },
+        "ManageServiceTemplates": "Upravljajte predlošcima usluga",
+        "ManageServices": "Upravljajte uslugama",
+        "Free": "Besplatno",
+        "OptionalContribution": "Fakultativni doprinos",
+        "RequiredPayment": "Obavezna uplata",
+        "AreYouSureDelete": "Jeste li sigurni da želite izbrisati ovu uslugu?",
+        "AmountServicesRelated": "Postoji {{amount}} dostupnosti u vezi sa ovom uslugom. Oni će također biti uklonjeni."
+    },
+    "transfer": {
+        "SelectRecipient": "Odaberite primaoca",
+        "TransactionSuccess": "Transaction Success",
+        "OrTypeWalletAddress": "ILI upišite adresu novčanika primaoca",
+        "AppCredits": "App Credits"
+    },
+    "NFT": {
+        "Title": "Naslov",
+        "Name": "Ime",
+        "EnterName": "Unesite ime",
+        "EnterAuthorWallet": "Unesite autorski novčanik",
+        "InformationAboutTitle": "Informacije o {{title}} NFT",
+        "Description": "Opis",
+        "DetailedInformationAboutNFT": "Detaljne informacije o NFT-u",
+        "PresaleStarts": "Pretprodaja počinje 23. decembra",
+        "OwnerUserNotFound": "Vlasnik ovog NFT-a nije registrovan u našoj aplikaciji.",
+        "BuyNow": "Kupite sada",
+        "Buy": "Kupi",
+        "Add": "Dodaj",
+        "Remove": "Ukloni",
+        "NoNFTyet": "Još nema NFT-a",
+        "Conversation": "Razgovor",
+        "Create": "Kreiraj",
+        "CurrentBid": "Trenutna ponuda",
+        "StartingIn": "Počinje u",
+        "EndingIn": "Završava u",
+        "CreateNFT": "Kreirajte NFT",
+        "TitlePlaceholder": "Dajte svom NFT-u naslov",
+        "DescriptionPlaceholder": "Dajte svoj NFT opis",
+        "CreateYourNFT": "Kreirajte svoj NFT",
+        "Royalties": "Autorske naknade",
+        "RoyaltyPlaceholder": "Opciono. Iznos plaćen kreatoru prije prijenosa.",
+        "ExpirationDate": "Datum isteka",
+        "StartingDate": "Datum početka",
+        "BidsBelowThisAmount": "Ponude ispod ovog iznosa neće biti dozvoljene",
+        "MinimumBid": "Minimalna ponuda",
+        "Author": "Autor",
+        "Price": "Cijena",
+        "Commission": "Komisija",
+        "EnterCommission": "Unesite proviziju",
+        "Owner": "Vlasnik",
+        "SelectCategory": "Odaberite kategoriju",
+        "Day": "Dan",
+        "Days": "Dani",
+        "Hour": "Sat",
+        "Hours": "Sati",
+        "Minute": "Minuta",
+        "Minutes": "Minute",
+        "Second": "Drugo",
+        "Seconds": "Sekunde",
+        "SalesCreator": "od prodaje će ići kreatoru",
+        "Details": "Detalji",
+        "Bids": "Ponude",
+        "History": "Istorija",
+        "LoremIpsum": "Lorem Ipsum je jednostavno lažni tekst u industriji štampe i pisanja teksta.",
+        "PutOnSale": "Stavite na prodaju",
+        "PutOffSale": "Povući iz prodaje",
+        "Transfer": "Transfer",
+        "Actions": "Akcije",
+        "Claim": "Zahtev",
+        "ClaimNFT": "Zahtevaj NFT",
+        "Unlocking": "Otključavanje",
+        "Unlock": "Otključaj",
+        "Update": "Ažuriraj",
+        "UpdateToken": "Update Token",
+        "UpdateNFT": "Ažurirajte NFT",
+        "CreateToken": "Kreirajte token",
+        "PlaceBid": "Place Bid",
+        "SoldOut": "Prodano",
+        "NotOnSale": "Nije na prodaju",
+        "NftName": "NFT ime",
+        "DescribeYourNFT": "Molimo opišite svoj NFT",
+        "NFTImage": "Slika za NFT",
+        "NFTVideo": "Video za NFT, ako postoji",
+        "GenerateDescription": "ili automatski generirati",
+        "UploadMovie": "Otpremite film",
+        "MovieSource": "Movie Source",
+        "MovieURL": "URL filma",
+        "UploadFile": "Otpremite fajl",
+        "PutOnMarketplace": "Stavite na tržište",
+        "InstantPurchase": "Unesite cijenu da omogućite korisnicima da odmah kupe vaš NFT",
+        "FixedPrice": "Fiksna cijena",
+        "TimedAuction": "Vremenska aukcija",
+        "OpenForBids": "Otvoreno za ponude",
+        "PriceOnePiece": "Unesite cijenu za jedan komad",
+        "EnterPrice": "Unesite cijenu",
+        "EnterMinimumBid": "Unesite minimalnu ponudu",
+        "SelectChain": "Odaberite lanac",
+        "Currency": "Valuta",
+        "AreYouSureDeleteImage": "Jeste li sigurni da želite ukloniti sliku?",
+        "AreYouSureDeleteVideo": "Jeste li sigurni da želite ukloniti videozapis?",
+        "series": {
+            "Name": "Ime",
+            "Icon": "Ikona",
+            "Description": "Opis",
+            "Author": "Autor",
+            "SelectSeries": "Odaberite seriju",
+            "Value": "Vrijednost",
+            "AreYouSure": "Jeste li sigurni?",
+            "AuthorInvalid": "Nevažeća adresa autora!",
+            "Address": "Adresa",
+            "CoverImage": "Naslovna slika",
+            "UploadCoverImage": "Otpremite naslovnu sliku",
+            "CommissionAddressInvalid": "Adresa komisije nevažeća",
+            "OnSale": "na rasprodaji",
+            "OffSale": "off sale",
+            "CreateSeries": "Kreiraj seriju",
+            "UpdateSeries": "Update Series",
+            "SeriesInfo": "Informacije o seriji",
+            "SelectAuthor": "Odaberite autora",
+            "NewItem": "Nova NFT serija",
+            "NamePlaceholder": "Unesite naziv serije",
+            "DescPlaceholder": "Unesite opis serije",
+            "EndingIn": "Ending In"
+        },
+        "contract": {
+            "CreateContract": "Napravite ugovor",
+            "SelectContract": "Odaberite ugovor",
+            "CreateContractFor": "Napravite ugovor za {{userName}}",
+            "ContractFor": "Ugovor za {{userName}}",
+            "UpdateContract": "Ažuriraj ugovor",
+            "TransferOwnership": "Transfer Ownership",
+            "SetBaseURI": "Postavite osnovni URI",
+            "SetSuffix": "Postavite sufiks",
+            "CurrentOwner": "Trenutni vlasnik",
+            "CurrentBaseURL": "Trenutni BaseURL",
+            "ContractAddressAbsent": "Adresa ugovora odsutna",
+            "FactoryAddressAbsent": "Adresa fabrike odsutna",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Naslov je obavezan",
+            "SymbolRequired": "Simbol je obavezan",
+            "TypeContractName": "naziv ugovora",
+            "TypeContractSymbol": "simbol ugovora (maks. 10 znakova)"
+        },
+        "contests": {
+            "Title": "Konkursi",
+            "NewContest": "New Contest"
+        },
+        "collections": {
+            "Title": "Zbirke",
+            "EnterTitle": "unesite naslov",
+            "EnterDescription": "unesite opis",
+            "NewCollection": "Nova kolekcija",
+            "Name": "Ime",
+            "Icon": "Ikona",
+            "Description": "Opis",
+            "Author": "Autor",
+            "SelectCollection": "Odaberite kolekciju",
+            "Value": "Vrijednost",
+            "AreYouSure": "Jeste li sigurni?",
+            "AuthorInvalid": "Nevažeća adresa autora!",
+            "Address": "Adresa",
+            "CoverImage": "Naslovna slika",
+            "UploadIcon": "Ikona za otpremanje",
+            "CommissionAddressInvalid": "Adresa komisije nevažeća",
+            "OnSale": "na rasprodaji",
+            "OffSale": "off sale",
+            "CreateCollection": "Kreiraj kolekciju",
+            "UpdateCollection": "Update Collection",
+            "CollectionInfo": "Informacije o kolekciji",
+            "SelectAuthor": "Odaberite autora",
+            "NewItem": "Nova NFT kolekcija",
+            "NamePlaceholder": "Unesite naziv kolekcije",
+            "DescPlaceholder": "Unesite opis kolekcije",
+            "EndingIn": "Ending In",
+            "SubmitSeries": "Pošaljite seriju"
+        },
+        "import": {
+            "importNFT": "Uvoz NFT-a",
+            "importAttributes": "Uvezite NFT atribute",
+            "fileNotFound": "Žao nam je, CSV fajl nije pronađen.",
+            "fileEmpty": "Žao nam je, CSV datoteka je prazna.",
+            "userIdNotFound": "korisnik postoji, ali je id prazan",
+            "errorLine": "linija {{1}}",
+            "fieldNotFound": "Obavezno polje &quot; {{1}} &quot; nije pronađeno",
+            "displayTypeEmpty": "Tip prikaza za &quot; {{1}} &quot; nije pronađen",
+            "taskStreamInvalid": "tok zadataka nevažeći",
+            "instructionsEmpty": "instrukcije toka zadataka su prazne",
+            "complete": "Završeno",
+            "activateUsers": "poslati aktivacijsku poruku korisnicima?",
+            "importProgress": "Napredak",
+            "importOptions": "Opcije",
+            "sampleCSV": "Preuzmite uzorak CSV-a",
+            "fileLabel": "Prenesi tabelu:",
+            "errorsTitle": "Došlo je do grešaka"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filtriraj prema NFT kolekcijama",
+                "ShowNFTCollection": "Prikaži NFT kolekciju u...",
+                "AllCollections": "Sve kolekcije"
+            },
+            "ByUser": {
+                "AllAuthors": "Svi autori",
+                "AllUsers": "Svi",
+                "FilterByAuthors": "Filtriraj po autorima"
+            }
+        },
+        "Back": "Povratak na kolekciju",
+        "attributes": {
+            "Title": "Manage Attributes",
+            "Attributes": "Atributi",
+            "DisplayTitle": "Display Type",
+            "AddDisplayType": "Dodajte novu vrstu prikaza",
+            "NewDisplay": "Novi ekran",
+            "TraitTitle": "Vrsta osobine",
+            "AddTraitTitle": "Dodajte novu vrstu osobine",
+            "NewTrait": "Nova vrsta osobine",
+            "ValueTitle": "Vrijednost",
+            "AddValueTitle": "Dodajte novu vrijednost",
+            "NewValue": "Nova vrijednost",
+            "NewAttribute": "New Attribute",
+            "UpdateAttributes": "Update Attributes",
+            "SaveAttributes": "Sačuvaj atribute"
+        },
+        "profile": {
+            "LogOut": "Odjavite se",
+            "Title": "Profil za {{userName}}",
+            "Description": "Podaci o korisniku",
+            "aboutPlaceholder": "Uredi biografiju",
+            "UploadCoverPhoto": "Otpremite naslovnu fotografiju",
+            "SureLogOut": "Jeste li sigurni da se želite odjaviti?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "serija Id",
+                        "owner": "Vlasnik",
+                        "currency": "Valuta",
+                        "price": "Cijena",
+                        "beneficiary": "Korisnik",
+                        "autoindex": "Autoindex",
+                        "duration": "Trajanje",
+                        "rateInterval": "Interval stope",
+                        "rateAmount": "Ocijenite iznos"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "tokeni će se kovati u ovoj seriji",
+                        "owner": "vlasnik instance, inače će biti pošiljalac",
+                        "currency": "Valuta za kupljene tokene, ako je nula - za izvorne novčiće",
+                        "price": "Cijena",
+                        "beneficiary": "Korisnik prodaje tokena, inače će biti pošiljalac",
+                        "autoindex": "Autoindex",
+                        "duration": "Zaključavanje nakon kovanja. Nula znači odmah dobiti.",
+                        "rateInterval": "interval kašike za posebnu kupovinu",
+                        "rateAmount": "iznos kante za posebnu kupovinu"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opciono)",
+                    "number": "broj",
+                    "address": "adresa",
+                    "fraction": "frakcija",
+                    "integer": "cijeli broj",
+                    "seconds": "sekundi",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Proizvodi",
+                "viewInstancesList": "Osvježi listu"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID serije",
+                        "account": "Račun",
+                        "amount": "Iznos"
+                    },
+                    "small": {
+                        "seriesId": "novi token će pripadati u seriju sa takvim ID-om",
+                        "account": "vlasnik novostvorenog NFT-a. ako nije podešeno - koristiće trenutni novčanik",
+                        "amount": "iznos NFT na kovanje"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opciono)",
+                    "seriesId": "id",
+                    "account": "račun",
+                    "amount": "iznos",
+                    "integer": "cijeli broj"
+                },
+                "btn": {
+                    "Purchase": "Kupovina",
+                    "SpecialPurchase": "Posebna kupovina"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adresa"
+                    },
+                    "small": {
+                        "account": "Adresa"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Nevažeća adresa"
+                },
+                "placeholders": {
+                    "account": "Adresa"
+                },
+                "addToWhitelist": "Dodaj na bijelu listu",
+                "removeFromWhitelist": "Ukloni sa bijele liste"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ID tokena",
+                    "custodian": "Custodian",
+                    "recipient": "Primalac"
+                },
+                "small": {
+                    "tokenId": "token id šta treba zaključati ili otključati",
+                    "custodian": "adresu koja se može otključati",
+                    "recipient": "adresu koja će primiti tokene"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Nevažeći tokenId",
+                "invalidCustodian": "Nevažeći staratelj",
+                "invalidRecipient": "Nevažeći primalac"
+            },
+            "placeholders": {
+                "optional": "(opciono)",
+                "tokenId": "id",
+                "custodian": "adresa"
+            },
+            "Lock": "Zaključaj",
+            "Unlock": "Otključaj",
+            "Locked": "Zaključano",
+            "CustodianAddress": "Adresa staratelja",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; je zatražen",
+            "TokenWasLocked": "Token &quot; {{title}} &quot; je zaključan",
+            "TokenWasUnlocked": "Token &quot; {{title}} &quot; je otključan"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ukucaj nesto o ovom doprinosu..."
+    },
+    "currencies": {
+        "choose": "Odaberite valutu"
+    }
+}

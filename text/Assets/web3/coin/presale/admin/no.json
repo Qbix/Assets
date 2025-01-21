@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Selger token",
+                        "timestamps": "Tider",
+                        "prices": "Priser",
+                        "endTime": "Slutttid",
+                        "thresholds": "Terskler",
+                        "bonuses": "Bonuser"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Eier kan ikke trekke seg",
+                            "option1": "Eieren kan bare trekke ut tokens etter at slutttiden har gått",
+                            "option2": "Eieren kan trekke ut tokens når som helst"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Fellesskapsadresse",
+                    "methodkeccack": "Keccak256 hash-funksjon",
+                    "roleId": "Rolle-ID",
+                    "sellingToken": "Selger Token-adresse",
+                    "prices": "ETH, Pris",
+                    "thresholds": "antall tokens",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Det er ingen midler"
+                },
+                "btns": {
+                    "createFund": "Opprett fond",
+                    "createFundInForm": "Skape"
+                },
+                "fundAddress": "Fondets adresse",
+                "createFund": "Opprett fond",
+                "fundInfo": "Info",
+                "produce": "Produsere",
+                "loading": "Laster",
+                "viewInstancesList": "Oppdater liste"
+            }
+        }
+    }
+}

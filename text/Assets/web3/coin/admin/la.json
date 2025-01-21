@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duratio",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "donations",
+                    "rewardsRateFraction": "rewardRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duratio in diebus",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "donations",
+                    "rewardsRateFraction": "rewardRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                }
+            },
+            "placeholders": {
+                "optional": "(optional) back",
+                "tuple": "tuple[]",
+                "number": "numerus",
+                "address": "oratio",
+                "fraction": "fractio",
+                "integer": "integer",
+                "seconds": "seconds",
+                "days": "diebus",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Nulla lacus"
+            },
+            "btns": {
+                "createPool": "Create piscinam",
+                "createPoolInForm": "Create"
+            },
+            "createPool": "Create piscinam",
+            "produce": "Profer",
+            "loading": "Loading",
+            "viewInstancesList": "Renovare List"
+        }
+    }
+}

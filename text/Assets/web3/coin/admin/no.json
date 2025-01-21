@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Varighet",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populær Token",
+                    "donations": "donasjoner",
+                    "rewardsRateFraction": "belønningerRateFraction",
+                    "numerator": "teller",
+                    "denominator": "nevner"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Varighet i dager",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populær Token",
+                    "donations": "donasjoner",
+                    "rewardsRateFraction": "belønningerRateFraction",
+                    "numerator": "teller",
+                    "denominator": "nevner"
+                }
+            },
+            "placeholders": {
+                "optional": "(valgfri)",
+                "tuple": "tuppel[]",
+                "number": "tall",
+                "address": "adresse",
+                "fraction": "brøkdel",
+                "integer": "heltall",
+                "seconds": "sekunder",
+                "days": "dager",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Det er ingen bassenger"
+            },
+            "btns": {
+                "createPool": "Opprett basseng",
+                "createPoolInForm": "Skape"
+            },
+            "createPool": "Opprett basseng",
+            "produce": "Produsere",
+            "loading": "Laster",
+            "viewInstancesList": "Oppdater liste"
+        }
+    }
+}

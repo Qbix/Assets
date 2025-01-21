@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "تېروتنه",
+        "WalletAbsent": "بټوه تړلې نه ده.",
+        "Rendering": "د <span class='url'>{{1}}<\/span> وړاندې کولو په وخت کې تېروتنې وې",
+        "PriceRequired": "قیمت اړین دی!",
+        "NameRequired": "نوم اړین دی!",
+        "PriceInvalid": "بیه باطله ده!",
+        "AmountInvalid": "مقدار ناباوره!",
+        "TransactionFailed": "معامله ناکامه شوه",
+        "ChainNotSupported": "ټاکل شوی سلسله ملاتړ نه کوي. ملاتړ شوی سلسله: {{supportedChain}}",
+        "NeedMetaMaskConnected": "د غوښتنلیک سره کار کولو لپاره میټاماسک ته اړتیا ده",
+        "UserNotLoggedInMetaMask": "کارن په میټاماسک کې لاګ ان شوی نه دی",
+        "CurrencyNotFound": "اسعارو ونه موندل شو",
+        "WrongChain": "دا NFT د &quot; {{chain}} &quot; لاندې رامینځته شوی. مهرباني وکړئ دا سلسله وکاروئ.",
+        "NoRecipientSelected": "هیڅ ترلاسه کوونکی نه دی ټاکل شوی",
+        "CantManageFrozenSeries": "تاسو نشئ کولی منجمد لړۍ اداره کړئ",
+        "SubscriptionStreamNotPaid": "تاسو د دې مینځپانګې لیدو لپاره پیسې نه دي ورکړې. مهرباني وکړئ {{subscriptionUrl}} کلیک وکړئ او مناسب پلان کې ګډون وکړئ."
+    },
+    "admin": {
+        "Title": "د شتمنیو اداري",
+        "SubscriptionTitle": "د ګډون پلانونه"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "د پیسو ورکولو لپاره ټایپ کړئ"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : چارج د {{call 'user.displayName'}} لپاره پروسس شوی",
+        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} ته ستاسو د تادیې لپاره مننه",
+        "SubscribedTo": "{{call 'user.displayName'}} په {{plan.title}} کې ګډون وکړ",
+        "YouSubscribedTo": "تاسو په {{plan.title}} کې ګډون کړی",
+        "Assets\/credits\/alert": "تاسو د خپل حساب اړوند خبرتیا لرئ"
+    },
+    "charge": {
+        "Subject": "تاسو د &quot; {{description}} &quot; لپاره د {{call 'publisher.displayName'}} څخه {{displayAmount}} تادیه ترلاسه کړه",
+        "HasBeenCharged": "اې، دا یوازې تاسو ته درکوي چې {{1}} {{4}} لخوا {{3}} لپاره {{2}} چارج شوي"
+    },
+    "charged": {
+        "Subject": "د &quot; {{description}} &quot; لپاره ستاسو د تادیې لپاره مننه",
+        "HavePaid": "سلام {{1}} ، دا یوازې یو چټک تایید دی چې تاسو په بریالیتوب سره {{4}} لپاره {{3}} ته {{2}} تادیه کړې"
+    },
+    "connectedAccount": {
+        "Title": "حساب سره وصل کړئ",
+        "Success": "بریالیتوب",
+        "YourAccountCreated": "ستاسو حساب په بریالیتوب سره جوړ شو!",
+        "YourAccountAlreadyCreated": "ستاسو حساب لا دمخه جوړ شوی او کارولو ته چمتو دی"
+    },
+    "payment": {
+        "AboutOrder": "د امر په اړه معلومات",
+        "PaymentMethod": "د تادیاتو طریقه",
+        "ContactInfo": "د اړیکو معلومات",
+        "Pay": "تادیه",
+        "PaymentSucceeded": "تادیه په بریالیتوب سره پروسس شوې",
+        "PaymentProcessing.": "ستاسو تادیه پروسس کیږي",
+        "FailTryAgain": "ستاسو تادیه بریالۍ نه وه. مهرباني وکړئ بیا هڅه وکړئ.",
+        "SomethingWrong": "یو څه غلط شو",
+        "PaymentStatus": "د تادیاتو حالت",
+        "PayTo": "{{displayName}} تادیه کړئ",
+        "ChooseCurrency": "یو اسعارو غوره کړئ",
+        "YouCanSendUpTo": "تاسو کولی شئ تر {{amount}} {{symbol}} پورې واستوئ",
+        "Send": "لیږل",
+        "EnterAmount": "مقدار داخل کړئ"
+    },
+    "credits": {
+        "InviteAcceptedBy": "بلنه د {{invitedUserName}} لخوا ومنل شوه",
+        "InvitedUserFilledStream": "{{invitedUserName}} ډک شوي {{FilledStreamTitle}}",
+        "ForFillingStream": "د {{FilledStreamTitle}} ډکولو لپاره",
+        "YouHaveCreditsToStart": "تاسو د پیل کولو لپاره {{amount}} کریډیټ لرئ",
+        "PaymentFor": "د &quot; {{1}} &quot; لپاره تادیه",
+        "PaymentTo": "{{1}} ته تادیه کول",
+        "PaymentToUser": "{{toUserName}} ته لیږدول",
+        "CreatePrivateChat": "{{toUserName}} سره د شخصي خبرو اترو لپاره",
+        "CreatePaidStream": "{{toStreamName}} جوړولو لپاره",
+        "JoinedPaidStream": "په &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot; کې د ریزرویشن لپاره",
+        "CreatedCommunity": "د ټولنې د جوړولو لپاره &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "په &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot; کې د ریزرویشن بیرته ورکولو په توګه",
+        "BoughtCredits": "{{amount}} کریډیټ اخیستي",
+        "BonusCredits": "د بونس {{amount}} کریډیټ",
+        "BuyAmountCredits": "{{amount}} کریډیټ واخلئ",
+        "WatchClip": "{{fromStreamTitle}} لیدو لپاره",
+        "MissingCredits": "ورک شوي کریډیټ",
+        "YouMissingCredits": "تاسو د پرمخ وړلو لپاره اضافي {{amount}} کریډیټ ته اړتیا لرئ.",
+        "BuyCredits": "کریډیټ واخلئ",
+        "BuyBonus": "په یوځل کې {{amount}} کریډیټ پیرود کول به د {{bonus}} کریډیټ بونس پایله ولري.",
+        "Buy": "پېرود",
+        "PurchaseCredits": "د پیرود کریډیټ",
+        "Credits": "کریډیټ",
+        "ErrorInvalidAmount": "مقدار ناباوره",
+        "ErrorInvalidCurrency": "له بده مرغه، موږ لاهم د اسعارو {{currency}} ملاتړ نه کوو",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} کریډیټ",
+            "BonusCredits": "{{amount}} کریډیټ"
+        }
+    },
+    "history": {
+        "Date": "نیټه",
+        "Amount": "مقدار",
+        "Description": "تفصیل",
+        "Client": "پیرودونکي",
+        "User": "کارن",
+        "To": "ته",
+        "From": "څخه",
+        "SeeHistory": "{{1}} لپاره د تادیې تاریخ وګورئ",
+        "HistoryEmpty": "تراوسه هیڅ معامله نشته",
+        "PaymentFor": "{{amount}} کریډیټ لیږل شوي",
+        "PaymentTo": "{{amount}} کریډیټ لیږل شوي",
+        "PaymentToUser": "{{amount}} کریډیټ لیږل شوي",
+        "CreatePaidStream": "{{amount}} کریډیټ مصرف کړل",
+        "WatchClip": {
+            "+": "{{amount}} کریډیټ ترلاسه کړل",
+            "-": "{{amount}} کریډیټ مصرف کړل"
+        },
+        "JoinedPaidStream": {
+            "+": "{{amount}} کریډیټ ترلاسه کړل",
+            "-": "{{amount}} کریډیټ مصرف کړل"
+        },
+        "LeftPaidStream": {
+            "+": "{{amount}} کریډیټ ترلاسه کړل",
+            "-": "{{amount}} کریډیټ لیږل شوي"
+        },
+        "CreatedCommunity": "{{amount}} کریډیټ مصرف کړل",
+        "BoughtCredits": "{{amount}} کریډیټ اخیستي",
+        "BonusCredits": "بونس {{amount}} کریډیټ ترلاسه کړل",
+        "InviteAcceptedBy": "{{amount}} کریډیټ ترلاسه کړل",
+        "Streams_user_firstname": "{{amount}} کریډیټ ترلاسه کړل",
+        "Streams_user_lastname": "{{amount}} کریډیټ ترلاسه کړل",
+        "Streams_user_icon": "{{amount}} کریډیټ ترلاسه کړل",
+        "Places_user_location": "{{amount}} کریډیټ ترلاسه کړل",
+        "Streams_greeting": "{{amount}} کریډیټ ترلاسه کړل",
+        "YouHaveCreditsToStart": "{{amount}} کریډیټ ترلاسه کړل",
+        "InvitedUserFilledStream": "{{amount}} کریډیټ ترلاسه کړل",
+        "ForFillingStream": "{{amount}} کریډیټ ترلاسه کړل",
+        "CreatePrivateChat": "{{amount}} کریډیټ مصرف کړل"
+    },
+    "subscriptions": {
+        "infoTitle": "د تادیاتو معلومات چمتو کړئ",
+        "confirm": {
+            "title": "ګډون پیل کړئ",
+            "message": "د &quot; {{title}} &quot; لپاره تکراري ګډون پیل کړئ؟",
+            "ok": "سمه ده",
+            "cancel": "لغوه کړئ"
+        },
+        "CreditOrDebitCard": "کریډیټ یا ډیبیټ کارت",
+        "SubscribePayment": "تادیه کې ګډون وکړئ",
+        "ImmediatePayment": "سمدستي تادیه",
+        "ProcessingPayment": "د تادیاتو پروسس کول",
+        "SubscriptionAlreadyPaid": "دا ګډون لا دمخه تادیه شوی",
+        "SubscriptionNotActive": "ګډون اوس مهال غیر فعال دی",
+        "Subscribed": "ګډون وکړ",
+        "Unsubscribed": "غیر غړیتوب",
+        "Unsubscribe": "ګډون نه کول",
+        "Subscribe": "ګډون وکړئ",
+        "Started": "پیل شو",
+        "EndsIn": "کې پای ته رسیږي",
+        "NextPay": "راتلونکی تادیه",
+        "Period": "دوره",
+        "Price": "قیمت",
+        "AreYouSureUnsubscribe": "ایا تاسو ډاډه یاست چې تاسو د دې پلان څخه ګډون کول غواړئ؟",
+        "YouUnsubscribedFromPlan": "تاسو د پلان &quot; {{planTitle}} &quot; څخه غړیتوب ختم کړی دی. تاسو به بل ځل چارج نه کوئ، مګر ستاسو ګډون به تر {{endsIn}} پورې دوام وکړي",
+        "plan": {
+            "TitlePlaceholder": "د پلان عنوان",
+            "PricePlaceholder": "قیمت",
+            "SubscriptionTitle": "د ګډون پلانونه",
+            "DescriptionPlaceholder": "د ګډون پلان توضیحات",
+            "AreYouSureDeletePlan": "ایا تاسو ډاډه یاست چې دا پلان حذف کول غواړئ؟",
+            "Duration": "موده",
+            "Discount": "تخفیف",
+            "SavePlan": "خوندي کړئ",
+            "Interrupt": "مداخله",
+            "Continue": "ادامه ورکړئ",
+            "NewPlan": "نوی پلان",
+            "SelectDisplayType": "{{displayType}} غوره کړئ",
+            "EndDate": "د پای نیټه",
+            "Available": "شته",
+            "Hidden": "پټ",
+            "InviteOnly": "یوازې بلنه",
+            "CantSubscribeUnlessInvited": "تاسو نشئ کولی پدې پلان کې ګډون وکړئ پرته لدې چې تاسو ته بلنه ورکړل شوې وي"
+        }
+    },
+    "payments": {
+        "infoTitle": "د تادیاتو معلومات تنظیم کړئ",
+        "BuyAmountCredits": "{{amount}} کریډیټ واخلئ",
+        "confirm": {
+            "title": "تادیه وکړئ",
+            "message": "ایا تاسو موافق یاست چې {{symbol}} {{amount}} تادیه کړئ؟",
+            "ok": "سمه ده",
+            "cancel": "لغوه کړئ"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "کریډیټ",
+            "description": "د کریډیټ او تادیاتو تعقیب ساتي"
+        },
+        "Assets\/plan": {
+            "displayType": "د ګډون پلان",
+            "description": "د ګډون پلان"
+        },
+        "Assets\/subscription": {
+            "displayType": "ګډون",
+            "description": "ګډون"
+        },
+        "Assets\/product": {
+            "displayType": "محصول",
+            "description": "محصول پلورل کیږي"
+        },
+        "Assets\/service": {
+            "displayType": "خدمت",
+            "description": "خدمت وړاندې کیږي"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "{{amount}} کریډیټ ترلاسه کړل"
+        },
+        "Assets\/credits\/bought": {
+            "content": "{{amount}} کریډیټ اخیستي"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "د بونس {{amount}} کریډیټ"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} کریډیټ مصرف کړل"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{amount}} کریډیټ {{toUserName}} ته واستول"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} څخه {{amount}} کریډیټ ترلاسه کړل"
+        },
+        "Assets\/credits\/alert": {
+            "content": "تاسو په خپل حساب کې کافي کریډیټ نه لرئ. مهرباني وکړئ د لا زیاتو کریډیټ اخیستلو لپاره لاندې <a href='<i translate='no'>999&#39;&gt; لینک<\/a> ته لاړ شئ."
+        }
+    },
+    "billing": {
+        "Title": "د شتمنیو بیل کول",
+        "CreditsMinimum": "لږترلږه کریډیټ",
+        "CreditsToAdd": "د اضافه کولو لپاره کریډیټ",
+        "Save": "خوندي کړئ",
+        "ThisLink": "دا لینک",
+        "errors": {
+            "CreditsMinimumNegative": "لږترلږه کریډیټ منفي نه وي",
+            "CreditsToAddNegative": "د اضافه کولو لپاره کریډیټ منفي نه وي"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "نوی خدمت",
+            "TitlePlaceholder": "د خدمت سرلیک",
+            "PricePlaceholder": "نرخ ټاکل",
+            "LinkPlaceholder": "د اضافي معلوماتو لینک ترتیب کړئ",
+            "DescriptionPlaceholder": "د خدمت توضیحات",
+            "SaveService": "خدمت خوندي کړئ",
+            "SelectRequiredParticipants": "اړین اړونده برخه اخیستونکي",
+            "RequiredParticipantsDesc": "مهرباني وکړئ اړونده برخه اخیستونکي وټاکئ کوم چې د دې خدمت کارولو لپاره اړین دي (د مثال په توګه د &quot;سپي نندارې&quot; لپاره څاروي، یا ماشومان د &quot;ماشومانو رخصتۍ&quot; او داسې نور). که خدمت تادیه شي، کارونکي به د هر اړوند ګډون کونکو لپاره هم پیسې ورکړي."
+        },
+        "EditServiceTemplate": {
+            "Title": "د ترمیم خدمت"
+        },
+        "ManageServiceTemplates": "د خدماتو ټیمپلیټونه اداره کړئ",
+        "ManageServices": "د خدماتو اداره کول",
+        "Free": "وړيا",
+        "OptionalContribution": "اختیاري مرسته",
+        "RequiredPayment": "د اړتیا وړ تادیه",
+        "AreYouSureDelete": "ایا تاسو ډاډه یاست چې دا خدمت حذف کول غواړئ؟",
+        "AmountServicesRelated": "د دې خدمت پورې اړوند {{amount}} موجودیتونه شتون لري. دوی به هم لیرې شي."
+    },
+    "transfer": {
+        "SelectRecipient": "ترلاسه کوونکی وټاکئ",
+        "TransactionSuccess": "د لیږد بریالیتوب",
+        "OrTypeWalletAddress": "یا د ترلاسه کونکي بټوې پته ولیکئ",
+        "AppCredits": "د اپلیکیشن کریډیټ"
+    },
+    "NFT": {
+        "Title": "عنوان",
+        "Name": "نوم",
+        "EnterName": "نوم دننه کړئ",
+        "EnterAuthorWallet": "د لیکوال بټوه دننه کړئ",
+        "InformationAboutTitle": "{{title}} NFT په اړه معلومات",
+        "Description": "تفصیل",
+        "DetailedInformationAboutNFT": "د NFT په اړه تفصيلي معلومات",
+        "PresaleStarts": "پلورل د دسمبر په 23 پیل کیږي",
+        "OwnerUserNotFound": "د دې NFT مالک زموږ په غوښتنلیک کې راجستر شوی نه دی.",
+        "BuyNow": "همدا اوس پیرل",
+        "Buy": "پېرود",
+        "Add": "اضافه کړئ",
+        "Remove": "لرې کړئ",
+        "NoNFTyet": "تراوسه هیڅ NFTs نشته",
+        "Conversation": "خبرې اترې",
+        "Create": "جوړ کړئ",
+        "CurrentBid": "اوسنۍ داوطلبۍ",
+        "StartingIn": "په پیل کې",
+        "EndingIn": "په پای کې",
+        "CreateNFT": "یو NFT جوړ کړئ",
+        "TitlePlaceholder": "خپل NFT ته سرلیک ورکړئ",
+        "DescriptionPlaceholder": "خپل NFT توضیحات ورکړئ",
+        "CreateYourNFT": "خپل NFT جوړ کړئ",
+        "Royalties": "شاهيتونه",
+        "RoyaltyPlaceholder": "اختیاري. د لیږد دمخه جوړونکي ته تادیه شوي مقدار.",
+        "ExpirationDate": "د ختمیدو نیټه",
+        "StartingDate": "د پیل نیټه",
+        "BidsBelowThisAmount": "د دې مقدار څخه ښکته داوطلبۍ ته اجازه نه ورکول کیږي",
+        "MinimumBid": "لږ تر لږه داوطلبۍ",
+        "Author": "لیکوال",
+        "Price": "قیمت",
+        "Commission": "کمیسیون",
+        "EnterCommission": "کمیسیون داخل کړئ",
+        "Owner": "خاوند",
+        "SelectCategory": "کټګورۍ غوره کړئ",
+        "Day": "ورځ",
+        "Days": "ورځې",
+        "Hour": "ساعت",
+        "Hours": "ساعتونه",
+        "Minute": "دقیقه",
+        "Minutes": "دقیقې",
+        "Second": "دوهم",
+        "Seconds": "ثانیې",
+        "SalesCreator": "خرڅلاو به خالق ته ځي",
+        "Details": "جزیات",
+        "Bids": "داوطلبۍ",
+        "History": "تاریخ",
+        "LoremIpsum": "Lorem Ipsum په ساده ډول د چاپ او ټایپ سیټینګ صنعت ډمي متن دی.",
+        "PutOnSale": "په خرڅلاو واچوئ",
+        "PutOffSale": "له پلور څخه وتل",
+        "Transfer": "لیږد",
+        "Actions": "کړنې",
+        "Claim": "دعوه",
+        "ClaimNFT": "د NFT ادعا وکړئ",
+        "Unlocking": "خلاصول",
+        "Unlock": "خلاصول",
+        "Update": "تازه کول",
+        "UpdateToken": "ټوکن تازه کړئ",
+        "UpdateNFT": "NFT تازه کړئ",
+        "CreateToken": "ټوکن جوړ کړئ",
+        "PlaceBid": "داوطلبۍ ځای",
+        "SoldOut": "پلورل شوي",
+        "NotOnSale": "نه په خرڅلاو",
+        "NftName": "د NFT نوم",
+        "DescribeYourNFT": "مهرباني وکړئ خپل NFT تشریح کړئ",
+        "NFTImage": "د NFT لپاره انځور",
+        "NFTVideo": "د NFT لپاره ویډیو، که کوم وي",
+        "GenerateDescription": "یا په اتوماتيک ډول تولید کړئ",
+        "UploadMovie": "فلم پورته کړئ",
+        "MovieSource": "د فلم سرچینه",
+        "MovieURL": "د فلم URL",
+        "UploadFile": "یو فایل پورته کړئ",
+        "PutOnMarketplace": "په بازار کې واچوئ",
+        "InstantPurchase": "نرخ دننه کړئ ترڅو کاروونکو ته اجازه ورکړي چې سمدلاسه ستاسو NFT پیرود کړي",
+        "FixedPrice": "ثابت قیمت",
+        "TimedAuction": "ټاکل شوی لیلام",
+        "OpenForBids": "د داوطلبۍ لپاره خلاص کړئ",
+        "PriceOnePiece": "د یوې ټوټې لپاره قیمت دننه کړئ",
+        "EnterPrice": "نرخ دننه کړئ",
+        "EnterMinimumBid": "لږترلږه داوطلبي داخل کړئ",
+        "SelectChain": "زنځیر غوره کړئ",
+        "Currency": "اسعارو",
+        "AreYouSureDeleteImage": "ایا تاسو واقعیا غواړئ عکس لرې کړئ؟",
+        "AreYouSureDeleteVideo": "ایا تاسو ډاډه یاست چې ویډیو لرې کول غواړئ؟",
+        "series": {
+            "Name": "نوم",
+            "Icon": "عکس",
+            "Description": "تفصیل",
+            "Author": "لیکوال",
+            "SelectSeries": "لړۍ غوره کړئ",
+            "Value": "ارزښت",
+            "AreYouSure": "ایا تاسو ډاډه یاست؟",
+            "AuthorInvalid": "د لیکوال پته ناسمه ده!",
+            "Address": "پته",
+            "CoverImage": "د پوښ انځور",
+            "UploadCoverImage": "د پوښ عکس پورته کړئ",
+            "CommissionAddressInvalid": "د کمیسیون پته ناسمه ده",
+            "OnSale": "په خرڅلاو",
+            "OffSale": "د خرڅلاو نه",
+            "CreateSeries": "لړۍ جوړه کړئ",
+            "UpdateSeries": "تازه لړۍ",
+            "SeriesInfo": "د لړۍ معلومات",
+            "SelectAuthor": "لیکوال وټاکئ",
+            "NewItem": "د نوي NFT لړۍ",
+            "NamePlaceholder": "د لړۍ نوم دننه کړئ",
+            "DescPlaceholder": "د لړۍ توضیحات دننه کړئ",
+            "EndingIn": "په پای کې"
+        },
+        "contract": {
+            "CreateContract": "تړون جوړ کړئ",
+            "SelectContract": "تړون غوره کړئ",
+            "CreateContractFor": "د {{userName}} لپاره قرارداد جوړ کړئ",
+            "ContractFor": "د {{userName}} لپاره قرارداد",
+            "UpdateContract": "د تړون تازه کول",
+            "TransferOwnership": "د ملکیت لیږد",
+            "SetBaseURI": "د URI اساس تنظیم کړئ",
+            "SetSuffix": "مخفف ترتیب کړئ",
+            "CurrentOwner": "اوسنی مالک",
+            "CurrentBaseURL": "اوسنی BaseURL",
+            "ContractAddressAbsent": "د تړون پته غیر حاضر",
+            "FactoryAddressAbsent": "د فابریکې پته غیر حاضر",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "سرلیک اړین دی",
+            "SymbolRequired": "سمبول اړین دی",
+            "TypeContractName": "د تړون نوم",
+            "TypeContractSymbol": "د تړون سمبول (زیاته 10 حروف)"
+        },
+        "contests": {
+            "Title": "سیالۍ",
+            "NewContest": "نوې سیالۍ"
+        },
+        "collections": {
+            "Title": "راټولونه",
+            "EnterTitle": "سرلیک داخل کړئ",
+            "EnterDescription": "تشریح داخل کړئ",
+            "NewCollection": "نوی ټولګه",
+            "Name": "نوم",
+            "Icon": "عکس",
+            "Description": "تفصیل",
+            "Author": "لیکوال",
+            "SelectCollection": "ټولګه غوره کړئ",
+            "Value": "ارزښت",
+            "AreYouSure": "ایا تاسو ډاډه یاست؟",
+            "AuthorInvalid": "د لیکوال پته ناسمه ده!",
+            "Address": "پته",
+            "CoverImage": "د پوښ انځور",
+            "UploadIcon": "د اپلوډ آیکون",
+            "CommissionAddressInvalid": "د کمیسیون پته ناسمه ده",
+            "OnSale": "په خرڅلاو",
+            "OffSale": "د خرڅلاو نه",
+            "CreateCollection": "ټولګه جوړه کړئ",
+            "UpdateCollection": "ټولګه تازه کول",
+            "CollectionInfo": "د معلوماتو راټولول",
+            "SelectAuthor": "لیکوال وټاکئ",
+            "NewItem": "د NFT نوی ټولګه",
+            "NamePlaceholder": "د راټولولو نوم دننه کړئ",
+            "DescPlaceholder": "د راټولولو توضیحات دننه کړئ",
+            "EndingIn": "په پای کې",
+            "SubmitSeries": "یوه لړۍ وړاندې کړئ"
+        },
+        "import": {
+            "importNFT": "د NFT واردول",
+            "importAttributes": "د NFT ځانګړتیاوې وارد کړئ",
+            "fileNotFound": "بخښنه غواړم، CSV فایل ونه موندل شو.",
+            "fileEmpty": "بښنه غواړم، د CSV فایل خالي دی.",
+            "userIdNotFound": "کارن شتون لري مګر ID خالي دی",
+            "errorLine": "کرښه {{1}}",
+            "fieldNotFound": "اړین ساحه &quot; {{1}} &quot; ونه موندل شوه",
+            "displayTypeEmpty": "د &quot; {{1}} &quot; لپاره د ښودلو ډول ونه موندل شو",
+            "taskStreamInvalid": "کاري جریان ناسم",
+            "instructionsEmpty": "د کاري جریان لارښوونې خالي",
+            "complete": "بشپړ",
+            "activateUsers": "کاروونکو ته د فعالولو پیغام واستوئ؟",
+            "importProgress": "پرمختګ",
+            "importOptions": "اختیارونه",
+            "sampleCSV": "نمونه CSV ډاونلوډ کړئ",
+            "fileLabel": "سپریډ شیټ پورته کړئ:",
+            "errorsTitle": "تېروتنې وشوې"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "د NFT راټولولو لخوا فلټر کړئ",
+                "ShowNFTCollection": "د NFT ټولګه په کې ښکاره کړئ ...",
+                "AllCollections": "ټول ټولګه"
+            },
+            "ByUser": {
+                "AllAuthors": "ټول لیکوالان",
+                "AllUsers": "هرڅوک",
+                "FilterByAuthors": "د لیکوالانو لخوا فلټر کړئ"
+            }
+        },
+        "Back": "بیرته راټولولو ته",
+        "attributes": {
+            "Title": "د ځانګړتیاوو اداره کول",
+            "Attributes": "صفتونه",
+            "DisplayTitle": "د ښودلو ډول",
+            "AddDisplayType": "د نوي نندارې ډول اضافه کړئ",
+            "NewDisplay": "نوی نندارتون",
+            "TraitTitle": "د ځانګړتیا ډول",
+            "AddTraitTitle": "د نوي ځانګړتیا ډول اضافه کړئ",
+            "NewTrait": "د نوي ځانګړتیا ډول",
+            "ValueTitle": "ارزښت",
+            "AddValueTitle": "نوی ارزښت اضافه کړئ",
+            "NewValue": "نوی ارزښت",
+            "NewAttribute": "نوی صفت",
+            "UpdateAttributes": "د ځانګړتیاوو تازه کول",
+            "SaveAttributes": "ځانګړتیاوې خوندي کړئ"
+        },
+        "profile": {
+            "LogOut": "وتل",
+            "Title": "د {{userName}} لپاره پروفایل",
+            "Description": "د کارونکي توضیحات",
+            "aboutPlaceholder": "بایو ایډیټ کړئ",
+            "UploadCoverPhoto": "د پوښ عکس پورته کړئ",
+            "SureLogOut": "ایا تاسو ډاډه یاست چې لاګ آوټ یاست؟"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "د NFTC تړون",
+                        "seriesId": "د لړۍ ID",
+                        "owner": "خاوند",
+                        "currency": "اسعارو",
+                        "price": "قیمت",
+                        "beneficiary": "ګټه اخیستونکی",
+                        "autoindex": "Autoindex",
+                        "duration": "موده",
+                        "rateInterval": "د نرخ وقفه",
+                        "rateAmount": "د نرخ اندازه"
+                    },
+                    "small": {
+                        "NFTContract": "د NFTC تړون",
+                        "seriesId": "نښې به په دې لړۍ کې راښکاره شي",
+                        "owner": "د مثال مالک، که نه نو لیږونکی به وي",
+                        "currency": "د پیرود شوي توکیو لپاره اسعار، که صفر وي - د اصلي سکې لپاره",
+                        "price": "قیمت",
+                        "beneficiary": "د ټوکن پلورلو ګټه اخیستونکي، که نه نو لیږونکی به وي",
+                        "autoindex": "Autoindex",
+                        "duration": "د کان کیندنې وروسته بند کړئ. صفر معنی دا سمدلاسه ترلاسه کړئ.",
+                        "rateInterval": "د ځانګړي پیرود لپاره د بالټ وقفه",
+                        "rateAmount": "د ځانګړي پیرود لپاره د بالټ مقدار"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(اختیاری)",
+                    "number": "شمیره",
+                    "address": "پته",
+                    "fraction": "برخه",
+                    "integer": "عدد",
+                    "seconds": "ثانیې",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "تولیدوي",
+                "viewInstancesList": "لیست تازه کړئ"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "د لړۍ ID",
+                        "account": "حساب",
+                        "amount": "مقدار"
+                    },
+                    "small": {
+                        "seriesId": "نوې نښه به د ورته ID سره لړۍ پورې اړه ولري",
+                        "account": "د نوي جوړ شوي NFT مالک. که ټاکل شوی نه وي - اوسنی والټ به وکاروي",
+                        "amount": "د NFT اندازه د پودینې لپاره"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(اختیاری)",
+                    "seriesId": "id",
+                    "account": "حساب",
+                    "amount": "مقدار",
+                    "integer": "عدد"
+                },
+                "btn": {
+                    "Purchase": "پیرود",
+                    "SpecialPurchase": "ځانګړې پیرود"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "پته"
+                    },
+                    "small": {
+                        "account": "پته"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "ناسم پته"
+                },
+                "placeholders": {
+                    "account": "پته"
+                },
+                "addToWhitelist": "په سپین لیست کې اضافه کړئ",
+                "removeFromWhitelist": "له سپین لیست څخه لرې کړئ"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "د نښه ID",
+                    "custodian": "ساتونکی",
+                    "recipient": "ترلاسه کوونکی"
+                },
+                "small": {
+                    "tokenId": "د نښه پیژندنه هغه څه ته اړتیا لري چې لاک یا خلاص کړئ",
+                    "custodian": "پته چې کولی شي خلاص کړي",
+                    "recipient": "پته چې ټکنونه ترلاسه کوي"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "ناباوره tokenId",
+                "invalidCustodian": "ناسم ساتونکی",
+                "invalidRecipient": "ناسم ترلاسه کوونکی"
+            },
+            "placeholders": {
+                "optional": "(اختیاری)",
+                "tokenId": "id",
+                "custodian": "پته"
+            },
+            "Lock": "تالاشي",
+            "Unlock": "خلاصول",
+            "Locked": "تړل شوی",
+            "CustodianAddress": "د ساتونکي پته",
+            "TokenWasClaimed": "نښه &quot; {{title}} &quot; ادعا شوې",
+            "TokenWasLocked": "نښه &quot; {{title}} &quot; تړل شوې وه",
+            "TokenWasUnlocked": "ټوکن &quot; {{title}} &quot; خلاص شو"
+        }
+    },
+    "fundrise": {
+        "placeholder": "د دې مرستې په اړه یو څه ولیکئ ..."
+    },
+    "currencies": {
+        "choose": "یو اسعارو غوره کړئ"
+    }
+}

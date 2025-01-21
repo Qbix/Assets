@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Feeler",
+        "WalletAbsent": "De Portemonnaie ass net ugeschloss.",
+        "Rendering": "Et goufe Feeler beim Rendering <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Präis néideg!",
+        "NameRequired": "Numm néideg!",
+        "PriceInvalid": "Präis ongëlteg!",
+        "AmountInvalid": "Betrag ongëlteg!",
+        "TransactionFailed": "D&#39;Transaktioun ass gescheitert",
+        "ChainNotSupported": "Déi gewielte Kette gëtt net ënnerstëtzt. Ënnerstëtzt Kette: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Braucht MetaMask verbonne fir mat der Applikatioun ze schaffen",
+        "UserNotLoggedInMetaMask": "De Benotzer ass net op MetaMask ageloggt",
+        "CurrencyNotFound": "Währung net fonnt",
+        "WrongChain": "Dësen NFT erstallt ënner &quot; {{chain}} &quot;. Benotzt w.e.g. dës Kette.",
+        "NoRecipientSelected": "Keen Empfänger gouf ausgewielt",
+        "CantManageFrozenSeries": "Dir kënnt net gefruer Serie verwalten",
+        "SubscriptionStreamNotPaid": "Dir hutt net bezuelt fir dësen Inhalt ze gesinn. Klickt w.e.g. {{subscriptionUrl}} an abonnéiert Iech op de passende Plang."
+    },
+    "admin": {
+        "Title": "Verméigen administrativ",
+        "SubscriptionTitle": "Abonnement Pläng"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Tap fir ze bezuelen"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : d&#39;Käschte gouf fir {{call 'user.displayName'}} veraarbecht",
+        "ThankYouForYourPayment": "Merci fir Är Bezuelung op {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} abonnéiert op {{plan.title}}",
+        "YouSubscribedTo": "Dir sidd op {{plan.title}} abonnéiert",
+        "Assets\/credits\/alert": "Dir hutt eng Alarm am Zesummenhang mat Ärem Kont"
+    },
+    "charge": {
+        "Subject": "Dir krut eng Bezuelung vun {{displayAmount}} vun {{call 'publisher.displayName'}} fir den &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, dëst ass just fir Iech ze wëssen datt {{1}} {{2}} fir {{3}} vun {{4}} verrechent gouf"
+    },
+    "charged": {
+        "Subject": "Merci fir Är Bezuelung fir den &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , dëst ass just eng séier Bestätegung datt Dir erfollegräich {{2}} op {{3}} fir {{4}} bezuelt hutt"
+    },
+    "connectedAccount": {
+        "Title": "Connect Kont",
+        "Success": "Erfolleg",
+        "YourAccountCreated": "Äre Kont gouf erfollegräich erstallt!",
+        "YourAccountAlreadyCreated": "Äre Kont ass scho geschaf an ass prett fir ze benotzen"
+    },
+    "payment": {
+        "AboutOrder": "Info iwwer Bestellung",
+        "PaymentMethod": "Bezuelen Method",
+        "ContactInfo": "Kontakt info",
+        "Pay": "Bezuelen",
+        "PaymentSucceeded": "D&#39;Bezuelung gouf erfollegräich veraarbecht",
+        "PaymentProcessing.": "Är Bezuelung gëtt veraarbecht",
+        "FailTryAgain": "Är Bezuelung war net erfollegräich. Probéiert w.e.g. nach eng Kéier.",
+        "SomethingWrong": "Eppes ass falsch gaangen",
+        "PaymentStatus": "Bezuelen Status",
+        "PayTo": "{{displayName}} bezuelen",
+        "ChooseCurrency": "Wielt eng Währung",
+        "YouCanSendUpTo": "Dir kënnt bis zu {{amount}} {{symbol}} schécken",
+        "Send": "Schécken",
+        "EnterAmount": "gitt Betrag"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Invitatioun ugeholl vum {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} gefëllt {{FilledStreamTitle}}",
+        "ForFillingStream": "Fir {{FilledStreamTitle}} ze fëllen",
+        "YouHaveCreditsToStart": "Dir hutt {{amount}} Credits fir unzefänken",
+        "PaymentFor": "Bezuelung fir &quot; {{1}} &quot;",
+        "PaymentTo": "Bezuelung op {{1}}",
+        "PaymentToUser": "Transfert op {{toUserName}}",
+        "CreatePrivateChat": "fir privat Chat mat {{toUserName}}",
+        "CreatePaidStream": "fir {{toStreamName}} ze kreéieren",
+        "JoinedPaidStream": "fir Reservatioun an &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "fir Gemeinschaft ze kreéieren &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "als Reservatioun Remboursement an &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Kaaft {{amount}} Credits",
+        "BonusCredits": "Bonus {{amount}} Krediter",
+        "BuyAmountCredits": "Kafen {{amount}} Credits",
+        "WatchClip": "{{fromStreamTitle}} ze kucken",
+        "MissingCredits": "Vermësst Credits",
+        "YouMissingCredits": "Dir braucht zousätzlech {{amount}} Credits fir weiderzekommen.",
+        "BuyCredits": "Kafen Credits",
+        "BuyBonus": "Kaaft {{amount}} Credits op eemol wäert zu engem Bonus Resultat vun {{bonus}} Credits.",
+        "Buy": "Kafen",
+        "PurchaseCredits": "Kafen Credits",
+        "Credits": "Credits",
+        "ErrorInvalidAmount": "Betrag ongëlteg",
+        "ErrorInvalidCurrency": "Leider ënnerstëtzen mir d&#39;Währung {{currency}} nach net",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} Krediter",
+            "BonusCredits": "{{amount}} Krediter"
+        }
+    },
+    "history": {
+        "Date": "Datum",
+        "Amount": "Betrag",
+        "Description": "Beschreiwung",
+        "Client": "Client",
+        "User": "Benotzer",
+        "To": "zu",
+        "From": "vun",
+        "SeeHistory": "Kuckt d&#39;Bezuelungsgeschicht fir {{1}}",
+        "HistoryEmpty": "Nach keng Transaktiounen",
+        "PaymentFor": "Geschéckt {{amount}} Credits",
+        "PaymentTo": "Geschéckt {{amount}} Credits",
+        "PaymentToUser": "Geschéckt {{amount}} Credits",
+        "CreatePaidStream": "{{amount}} Credits ausginn",
+        "WatchClip": {
+            "+": "Verdéngt {{amount}} Credits",
+            "-": "{{amount}} Credits ausginn"
+        },
+        "JoinedPaidStream": {
+            "+": "Verdéngt {{amount}} Credits",
+            "-": "{{amount}} Credits ausginn"
+        },
+        "LeftPaidStream": {
+            "+": "Kritt {{amount}} Credits",
+            "-": "Geschéckt {{amount}} Credits"
+        },
+        "CreatedCommunity": "{{amount}} Credits ausginn",
+        "BoughtCredits": "Kaaft {{amount}} Credits",
+        "BonusCredits": "Huet Bonus {{amount}} Credits",
+        "InviteAcceptedBy": "Verdéngt {{amount}} Credits",
+        "Streams_user_firstname": "Verdéngt {{amount}} Credits",
+        "Streams_user_lastname": "Verdéngt {{amount}} Credits",
+        "Streams_user_icon": "Verdéngt {{amount}} Credits",
+        "Places_user_location": "Verdéngt {{amount}} Credits",
+        "Streams_greeting": "Verdéngt {{amount}} Credits",
+        "YouHaveCreditsToStart": "Verdéngt {{amount}} Credits",
+        "InvitedUserFilledStream": "Verdéngt {{amount}} Credits",
+        "ForFillingStream": "Verdéngt {{amount}} Credits",
+        "CreatePrivateChat": "{{amount}} Credits ausginn"
+    },
+    "subscriptions": {
+        "infoTitle": "Gitt d&#39;Bezuelungsinformatioun",
+        "confirm": {
+            "title": "Start Abonnement",
+            "message": "E widderhuelend Abonnement op &quot; {{title}} &quot; starten?",
+            "ok": "OK",
+            "cancel": "Ofbriechen"
+        },
+        "CreditOrDebitCard": "Kreditt oder Bankkaart",
+        "SubscribePayment": "Abonnéieren Bezuelen",
+        "ImmediatePayment": "Direkt Bezuelung",
+        "ProcessingPayment": "Veraarbechtung Bezuelen",
+        "SubscriptionAlreadyPaid": "Dëst Abonnement scho bezuelt",
+        "SubscriptionNotActive": "Den Abonnement ass momentan inaktiv",
+        "Subscribed": "Abonnement",
+        "Unsubscribed": "Abonnéiert",
+        "Unsubscribe": "Abonnéieren",
+        "Subscribe": "Abonnéieren",
+        "Started": "Ugefaangen",
+        "EndsIn": "Enn an",
+        "NextPay": "Nächst Bezuelung",
+        "Period": "Period",
+        "Price": "Präis",
+        "AreYouSureUnsubscribe": "Sidd Dir sécher datt Dir vun dësem Plang wëllt ofsoen?",
+        "YouUnsubscribedFromPlan": "Dir hutt de Plang &quot; {{planTitle}} &quot; ofgeschloss. Dir wäert d&#39;nächst Kéier net berechent ginn, awer Ären Abonnement leeft bis {{endsIn}} weider",
+        "plan": {
+            "TitlePlaceholder": "plangen Titel",
+            "PricePlaceholder": "Präis",
+            "SubscriptionTitle": "Abonnement Pläng",
+            "DescriptionPlaceholder": "Abonnement plangen Beschreiwung",
+            "AreYouSureDeletePlan": "Sidd Dir sécher datt Dir dëse Plang läsche wëllt?",
+            "Duration": "Dauer",
+            "Discount": "Remise",
+            "SavePlan": "Späicheren",
+            "Interrupt": "Ënnerbriechung",
+            "Continue": "Fuert weider",
+            "NewPlan": "Neie Plang",
+            "SelectDisplayType": "Wielt {{displayType}}",
+            "EndDate": "Enn Datum",
+            "Available": "Verfügbar",
+            "Hidden": "Verstoppt",
+            "InviteOnly": "Invitéiert nëmmen",
+            "CantSubscribeUnlessInvited": "Dir kënnt net op dëse Plang abonnéieren ausser Dir sidd invitéiert"
+        }
+    },
+    "payments": {
+        "infoTitle": "Set Bezuelen Informatiounen",
+        "BuyAmountCredits": "Kafen {{amount}} Credits",
+        "confirm": {
+            "title": "Maacht eng Bezuelung",
+            "message": "Sidd Dir averstanen {{symbol}} {{amount}} ze bezuelen?",
+            "ok": "OK",
+            "cancel": "Ofbriechen"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Credits",
+            "description": "hält Streck vun Kreditter a Bezuelen"
+        },
+        "Assets\/plan": {
+            "displayType": "Abonnement Plang",
+            "description": "Abonnement plangen"
+        },
+        "Assets\/subscription": {
+            "displayType": "Abonnement",
+            "description": "Abonnement"
+        },
+        "Assets\/product": {
+            "displayType": "Produit",
+            "description": "Produit verkaf"
+        },
+        "Assets\/service": {
+            "displayType": "Service",
+            "description": "Service ugebueden"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Verdéngt {{amount}} Credits"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Kaaft {{amount}} Credits"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} Krediter"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} Credits ausginn"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Geschéckt {{amount}} Credits op {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Kritt {{amount}} Credits vun {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Dir hutt net genuch Kreditter op Ärem Kont. Besicht w.e.g. de folgende <a href='<i translate='no'>999&#39;&gt;Link<\/a> fir méi Kreditter ze kafen."
+        }
+    },
+    "billing": {
+        "Title": "Verméigen Rechnung",
+        "CreditsMinimum": "Minimum Kreditter",
+        "CreditsToAdd": "Credits ze addéieren",
+        "Save": "Späicheren",
+        "ThisLink": "dëse Link",
+        "errors": {
+            "CreditsMinimumNegative": "De Minimum Credits kann net negativ ginn",
+            "CreditsToAddNegative": "D&#39;Kreditter fir ze addéieren kënnen net negativ sinn"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Neie Service",
+            "TitlePlaceholder": "Service Titel",
+            "PricePlaceholder": "Set Präis",
+            "LinkPlaceholder": "zousätzlech Infolink setzen",
+            "DescriptionPlaceholder": "Service Beschreiwung",
+            "SaveService": "Retten Service",
+            "SelectRequiredParticipants": "Néideg Zesummenhang Participanten",
+            "RequiredParticipantsDesc": "Wielt w.e.g. verbonne Participanten déi néideg sinn fir dëse Service ze benotzen (zum Beispill Hausdéieren fir &quot;Hënnshow&quot;, oder Kanner fir &quot;Kannervakanz&quot; etc). Wann de Service bezuelt ass, muss de Benotzer och fir all verbonne Participanten bezuelen."
+        },
+        "EditServiceTemplate": {
+            "Title": "Edit Service"
+        },
+        "ManageServiceTemplates": "Managen Service Schablounen",
+        "ManageServices": "Verwalte Servicer",
+        "Free": "fräi",
+        "OptionalContribution": "Optional Bäitrag",
+        "RequiredPayment": "Néideg Bezuelen",
+        "AreYouSureDelete": "Sidd Dir sécher, datt Dir dëse Service läschen wëllt?",
+        "AmountServicesRelated": "Et gi {{amount}} Disponibilitéiten am Zesummenhang mat dësem Service. Si ginn och ewechgeholl."
+    },
+    "transfer": {
+        "SelectRecipient": "Wielt Empfänger",
+        "TransactionSuccess": "Transaktioun Erfolleg",
+        "OrTypeWalletAddress": "ODER Typ Empfänger Portemonnaie Adress",
+        "AppCredits": "App Credits"
+    },
+    "NFT": {
+        "Title": "Titel",
+        "Name": "Numm",
+        "EnterName": "Gitt Numm",
+        "EnterAuthorWallet": "Gitt Auteur Portemonnaie",
+        "InformationAboutTitle": "Informatiounen iwwert {{title}} NFT",
+        "Description": "Beschreiwung",
+        "DetailedInformationAboutNFT": "Detailléiert Informatiounen iwwer NFT",
+        "PresaleStarts": "Virverkaf fänkt den 23. Dezember un",
+        "OwnerUserNotFound": "Besëtzer vun dësem NFT ass net an eiser Applikatioun registréiert.",
+        "BuyNow": "Kafen elo",
+        "Buy": "Kafen",
+        "Add": "Addéieren",
+        "Remove": "Ewechzehuelen",
+        "NoNFTyet": "Nach keng NFTs",
+        "Conversation": "Gespréich",
+        "Create": "Schafen",
+        "CurrentBid": "Aktuell Offer",
+        "StartingIn": "Start an",
+        "EndingIn": "Enn an",
+        "CreateNFT": "Erstellt en NFT",
+        "TitlePlaceholder": "Gitt Ären NFT en Titel",
+        "DescriptionPlaceholder": "Gitt Är NFT eng Beschreiwung",
+        "CreateYourNFT": "Erstellt Ären NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Fakultativ. Betrag un den Ersteller bezuelt virum Transfert.",
+        "ExpirationDate": "Auslafdatum",
+        "StartingDate": "Start Datum",
+        "BidsBelowThisAmount": "Offeren ënner dësem Betrag ginn net erlaabt",
+        "MinimumBid": "Minimum Offer",
+        "Author": "Auteur",
+        "Price": "Präis",
+        "Commission": "Kommissioun",
+        "EnterCommission": "Gitt Kommissioun",
+        "Owner": "Besëtzer",
+        "SelectCategory": "Wielt Kategorie",
+        "Day": "Dag",
+        "Days": "Deeg",
+        "Hour": "Stonn",
+        "Hours": "Stonnen",
+        "Minute": "Minutt",
+        "Minutes": "Minutt",
+        "Second": "Zweeten",
+        "Seconds": "Sekonnen",
+        "SalesCreator": "vum Verkaf wäert un de Schëpfer goen",
+        "Details": "Detailer",
+        "Bids": "Offeren",
+        "History": "Geschicht",
+        "LoremIpsum": "Lorem Ipsum ass einfach Dummy Text vun der Dréckerei an der Zettenindustrie.",
+        "PutOnSale": "Op Verkaf setzen",
+        "PutOffSale": "Aus Verkaf zréckzéien",
+        "Transfer": "Transfert",
+        "Actions": "Aktiounen",
+        "Claim": "Fuerderung",
+        "ClaimNFT": "Fuerderung NFT",
+        "Unlocking": "Spären",
+        "Unlock": "Spär op",
+        "Update": "Update",
+        "UpdateToken": "Update Token",
+        "UpdateNFT": "Update NFT",
+        "CreateToken": "Erstellt Token",
+        "PlaceBid": "Plaz Offer",
+        "SoldOut": "Verkaaft",
+        "NotOnSale": "Net Am Verkaf",
+        "NftName": "Numm NFT",
+        "DescribeYourNFT": "Beschreift w.e.g. Är NFT",
+        "NFTImage": "Bild fir NFT",
+        "NFTVideo": "Video fir NFT, wann iwwerhaapt",
+        "GenerateDescription": "oder automatesch generéieren",
+        "UploadMovie": "Eroplueden Film",
+        "MovieSource": "Film Quell",
+        "MovieURL": "Film URL",
+        "UploadFile": "Eroplueden eng Datei",
+        "PutOnMarketplace": "Setzt op Maartplaz",
+        "InstantPurchase": "Gitt Präis un fir datt d&#39;Benotzer direkt Ären NFT kafen",
+        "FixedPrice": "Fixe Präis",
+        "TimedAuction": "Timed Auktioun",
+        "OpenForBids": "Op fir Offeren",
+        "PriceOnePiece": "Gitt Präis fir ee Stéck",
+        "EnterPrice": "Gitt Präis",
+        "EnterMinimumBid": "Gitt Minimum Offer",
+        "SelectChain": "Wielt Kette",
+        "Currency": "Währung",
+        "AreYouSureDeleteImage": "Sidd Dir sécher datt Dir d&#39;Bild ewechhuele wëllt?",
+        "AreYouSureDeleteVideo": "Sidd Dir sécher datt Dir de Video läschen wëllt?",
+        "series": {
+            "Name": "Numm",
+            "Icon": "Ikon",
+            "Description": "Beschreiwung",
+            "Author": "Auteur",
+            "SelectSeries": "Wielt Serie",
+            "Value": "Wäert",
+            "AreYouSure": "Bass du secher?",
+            "AuthorInvalid": "Auteur Adress ongëlteg!",
+            "Address": "Adress",
+            "CoverImage": "Cover Bild",
+            "UploadCoverImage": "Eroplueden Cover Bild",
+            "CommissionAddressInvalid": "Kommissioun Adress ongëlteg",
+            "OnSale": "op Verkaf",
+            "OffSale": "aus Verkaf",
+            "CreateSeries": "Serie erstellen",
+            "UpdateSeries": "Update Serie",
+            "SeriesInfo": "Serie Info",
+            "SelectAuthor": "Wielt Auteur",
+            "NewItem": "Nei NFT Serie",
+            "NamePlaceholder": "Gitt Serie Numm",
+            "DescPlaceholder": "Gitt Serie Beschreiwung",
+            "EndingIn": "Enn an"
+        },
+        "contract": {
+            "CreateContract": "Schafen Kontrakt",
+            "SelectContract": "Wielt Kontrakt",
+            "CreateContractFor": "Erstellt Kontrakt fir {{userName}}",
+            "ContractFor": "Kontrakt fir {{userName}}",
+            "UpdateContract": "Update Kontrakt",
+            "TransferOwnership": "Transfert Proprietairen",
+            "SetBaseURI": "Set Base URI",
+            "SetSuffix": "Set Suffix",
+            "CurrentOwner": "Aktuelle Besëtzer",
+            "CurrentBaseURL": "Aktuelle BaseURL",
+            "ContractAddressAbsent": "Kontrakt Adress fehlen",
+            "FactoryAddressAbsent": "Fabréck Adress fehlen",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Titel néideg",
+            "SymbolRequired": "Symbol néideg",
+            "TypeContractName": "Kontrakt Numm",
+            "TypeContractSymbol": "Kontrakt Symbol (max 10 Zeechen)"
+        },
+        "contests": {
+            "Title": "Concoursen",
+            "NewContest": "Neie Concours"
+        },
+        "collections": {
+            "Title": "Kollektiounen",
+            "EnterTitle": "gitt Titel",
+            "EnterDescription": "anzeginn Beschreiwung",
+            "NewCollection": "Nei Kollektioun",
+            "Name": "Numm",
+            "Icon": "Ikon",
+            "Description": "Beschreiwung",
+            "Author": "Auteur",
+            "SelectCollection": "Wielt Kollektioun",
+            "Value": "Wäert",
+            "AreYouSure": "Bass du secher?",
+            "AuthorInvalid": "Auteur Adress ongëlteg!",
+            "Address": "Adress",
+            "CoverImage": "Cover Bild",
+            "UploadIcon": "Eroplueden icon",
+            "CommissionAddressInvalid": "Kommissioun Adress ongëlteg",
+            "OnSale": "op Verkaf",
+            "OffSale": "aus Verkaf",
+            "CreateCollection": "Schafen Kollektioun",
+            "UpdateCollection": "Update Kollektioun",
+            "CollectionInfo": "Kollektioun Info",
+            "SelectAuthor": "Wielt Auteur",
+            "NewItem": "Nei NFT Kollektioun",
+            "NamePlaceholder": "Gitt Sammlung Numm",
+            "DescPlaceholder": "Gitt Kollektioun Beschreiwung",
+            "EndingIn": "Enn an",
+            "SubmitSeries": "Gitt eng Serie of"
+        },
+        "import": {
+            "importNFT": "Import vun NFT&#39;s",
+            "importAttributes": "Import NFT Attributer",
+            "fileNotFound": "Entschëllegt, CSV Datei net fonnt.",
+            "fileEmpty": "Entschëllegt, CSV Datei ass eidel.",
+            "userIdNotFound": "Benotzer existéieren awer ID eidel",
+            "errorLine": "Linn {{1}}",
+            "fieldNotFound": "Néideg Feld &quot; {{1}} &quot; net fonnt",
+            "displayTypeEmpty": "Displaytyp fir &quot; {{1}} &quot; net fonnt",
+            "taskStreamInvalid": "Task Stream ongëlteg",
+            "instructionsEmpty": "Task Stream Instruktioune eidel",
+            "complete": "Komplett",
+            "activateUsers": "schéckt Aktivéierungsmeldung un Benotzer?",
+            "importProgress": "Fortschrëtt",
+            "importOptions": "Optiounen",
+            "sampleCSV": "Download Beispill CSV",
+            "fileLabel": "Eroplueden Spreadsheet:",
+            "errorsTitle": "Feeler geschitt"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filter no NFT Collections",
+                "ShowNFTCollection": "Show NFT Kollektioun an ...",
+                "AllCollections": "All Kollektiounen"
+            },
+            "ByUser": {
+                "AllAuthors": "All Auteuren",
+                "AllUsers": "Jiddereen",
+                "FilterByAuthors": "Filter no Auteuren"
+            }
+        },
+        "Back": "Zréck op Kollektioun",
+        "attributes": {
+            "Title": "Managen Attributer",
+            "Attributes": "Attributer",
+            "DisplayTitle": "Display Typ",
+            "AddDisplayType": "Füügt neien Displaytyp",
+            "NewDisplay": "Neien Display",
+            "TraitTitle": "Typ vun Charakter",
+            "AddTraitTitle": "Füügt en neien Charaktertyp",
+            "NewTrait": "Neie Charaktertyp",
+            "ValueTitle": "Wäert",
+            "AddValueTitle": "Füügt neie Wäert",
+            "NewValue": "Neie Wäert",
+            "NewAttribute": "Neien Attribut",
+            "UpdateAttributes": "Update Attributer",
+            "SaveAttributes": "Späicheren Attributer"
+        },
+        "profile": {
+            "LogOut": "Ausloggen",
+            "Title": "Profil fir {{userName}}",
+            "Description": "Benotzer Detailer",
+            "aboutPlaceholder": "Edit Bio",
+            "UploadCoverPhoto": "Eroplueden Cover Foto",
+            "SureLogOut": "Sidd Dir sécher datt Dir Iech ausloggen wëllt?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFT Kontrakt",
+                        "seriesId": "Serie Id",
+                        "owner": "Besëtzer",
+                        "currency": "Währung",
+                        "price": "Präis",
+                        "beneficiary": "Beneficer",
+                        "autoindex": "Autoindex",
+                        "duration": "Dauer",
+                        "rateInterval": "Taux Intervall",
+                        "rateAmount": "Taux Betrag"
+                    },
+                    "small": {
+                        "NFTContract": "NFT Kontrakt",
+                        "seriesId": "Tokens ginn an dëser Serie geprägt",
+                        "owner": "Besëtzer vun Instanz, soss wäert Sender ginn",
+                        "currency": "Währung fir kaaft Stongen, wann null - fir gebierteg Mënzen",
+                        "price": "Präis",
+                        "beneficiary": "Beneficer vun Tokens verkafen, soss wäert Sender sinn",
+                        "autoindex": "Autoindex",
+                        "duration": "Sperrung nom Mint. Null heescht kréien et direkt.",
+                        "rateInterval": "Eemer Intervall fir speziell Akaf",
+                        "rateAmount": "Eemer Betrag fir speziell Akaf"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(optional)",
+                    "number": "Zuel",
+                    "address": "Adress",
+                    "fraction": "Fraktioun",
+                    "integer": "ganz Zuel",
+                    "seconds": "Sekonnen",
+                    "uint256": "eng 256",
+                    "uint192": "eng 192",
+                    "uint64": "eent 64",
+                    "uint32": "eent 32",
+                    "uint16": "eent 16"
+                },
+                "produce": "produzéieren",
+                "viewInstancesList": "Lëscht opfrëschen"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Serie ID",
+                        "account": "Kont",
+                        "amount": "Betrag"
+                    },
+                    "small": {
+                        "seriesId": "nei Token wäert zu Serie mat esou ID gehéieren",
+                        "account": "Besëtzer vun nei geschaf NFT. wann net gesat - wäert aktuell Portemonnaie benotzen",
+                        "amount": "Betrag NFT Ze Mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(optional)",
+                    "seriesId": "id",
+                    "account": "Kont",
+                    "amount": "Betrag",
+                    "integer": "ganz Zuel"
+                },
+                "btn": {
+                    "Purchase": "Kafen",
+                    "SpecialPurchase": "Special Akaf"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adress"
+                    },
+                    "small": {
+                        "account": "Adress"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Invalid Adress"
+                },
+                "placeholders": {
+                    "account": "Adress"
+                },
+                "addToWhitelist": "Add To Whitelist",
+                "removeFromWhitelist": "Ewechzehuelen Vun der Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Depot",
+                    "recipient": "Empfänger"
+                },
+                "small": {
+                    "tokenId": "Token ID wat muss spären oder spären",
+                    "custodian": "Adress déi fäeg ass ze spären",
+                    "recipient": "Adress déi d&#39;Tokens kritt"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Invalid TokenId",
+                "invalidCustodian": "Invalid Depot",
+                "invalidRecipient": "Invalid Empfänger"
+            },
+            "placeholders": {
+                "optional": "(optional)",
+                "tokenId": "id",
+                "custodian": "Adress"
+            },
+            "Lock": "Spär",
+            "Unlock": "Spär op",
+            "Locked": "Spär",
+            "CustodianAddress": "Depot Adress",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; gouf behaapt",
+            "TokenWasLocked": "Token &quot; {{title}} &quot; war gespaart",
+            "TokenWasUnlocked": "Token &quot; {{title}} &quot; gouf opgespaart"
+        }
+    },
+    "fundrise": {
+        "placeholder": "schreiwen eppes iwwer dëse Bäitrag ..."
+    },
+    "currencies": {
+        "choose": "Wielt eng Währung"
+    }
+}

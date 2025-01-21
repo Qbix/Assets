@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Nawa ne za a saka hannun jari?"
+                    },
+                    "placeholders": {
+                        "amount": "Adadin {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Saya",
+                    "execute": "Kashe"
+                }
+            }
+        }
+    }
+}

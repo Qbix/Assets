@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "chizindikiroErc20",
+                    "duration": "Kutalika",
+                    "bonusTokenFraction": "bonasiTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "zopereka",
+                    "rewardsRateFraction": "mphothoRateFraction",
+                    "numerator": "manambala",
+                    "denominator": "chipembedzo"
+                },
+                "small": {
+                    "tokenErc20": "chizindikiroErc20",
+                    "duration": "Kutalika kwa masiku",
+                    "bonusTokenFraction": "bonasiTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "zopereka",
+                    "rewardsRateFraction": "mphothoRateFraction",
+                    "numerator": "manambala",
+                    "denominator": "chipembedzo"
+                }
+            },
+            "placeholders": {
+                "optional": "(posankha)",
+                "tuple": "gulu[]",
+                "number": "nambala",
+                "address": "adilesi",
+                "fraction": "gawo",
+                "integer": "chiwerengero",
+                "seconds": "masekondi",
+                "days": "masiku",
+                "uint256": "mawu256",
+                "uint192": "ku192",
+                "uint64": "mawu 64",
+                "uint32": "mawu32",
+                "uint16": "uti16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Kulibe maiwe"
+            },
+            "btns": {
+                "createPool": "Pangani Dziwe",
+                "createPoolInForm": "Pangani"
+            },
+            "createPool": "Pangani Dziwe",
+            "produce": "Panga",
+            "loading": "Kutsegula",
+            "viewInstancesList": "Refresh List"
+        }
+    }
+}

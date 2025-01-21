@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Үргэлжлэх хугацаа",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "алдартай Токен",
+                    "donations": "хандив",
+                    "rewardsRateFraction": "шагналын хувь хэмжээ",
+                    "numerator": "тоологч",
+                    "denominator": "хуваагч"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Өдөрт үргэлжлэх хугацаа",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "алдартай Токен",
+                    "donations": "хандив",
+                    "rewardsRateFraction": "шагналын хувь хэмжээ",
+                    "numerator": "тоологч",
+                    "denominator": "хуваагч"
+                }
+            },
+            "placeholders": {
+                "optional": "(заавал биш)",
+                "tuple": "багц[]",
+                "number": "тоо",
+                "address": "хаяг",
+                "fraction": "бутархай",
+                "integer": "бүхэл тоо",
+                "seconds": "секунд",
+                "days": "өдрүүд",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Усан сан байхгүй"
+            },
+            "btns": {
+                "createPool": "Усан сан үүсгэх",
+                "createPoolInForm": "Үүсгэх"
+            },
+            "createPool": "Усан сан үүсгэх",
+            "produce": "Үйлдвэрлэх",
+            "loading": "Ачааж байна",
+            "viewInstancesList": "Жагсаалтыг шинэчлэх"
+        }
+    }
+}

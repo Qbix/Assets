@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "ٽوڪن وڪرو ڪرڻ",
+                        "timestamps": "ٽائمز",
+                        "prices": "قيمتون",
+                        "endTime": "ختم ٿيڻ جو وقت",
+                        "thresholds": "حدون",
+                        "bonuses": "بونس"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "مالڪ واپس نه ٿو ڪري سگهي",
+                            "option1": "مالڪ ٽوڪن واپس وٺي سگھي ٿو صرف ختم ٿيڻ کان پوءِ",
+                            "option2": "مالڪ ڪنهن به وقت ٽوڪن واپس وٺي سگهي ٿو"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "ڪميونٽي ايڊريس",
+                    "methodkeccack": "Keccak256 hash فنڪشن",
+                    "roleId": "ڪردار جي سڃاڻپ",
+                    "sellingToken": "وڪرو ٽوڪن ايڊريس",
+                    "prices": "ETH، قيمت",
+                    "thresholds": "# ٽوڪن جو",
+                    "bonuses": "بونس٪"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "ڪي به فنڊ نه آهن"
+                },
+                "btns": {
+                    "createFund": "فنڊ ٺاهيو",
+                    "createFundInForm": "ٺاهيو"
+                },
+                "fundAddress": "فنڊ جو پتو",
+                "createFund": "فنڊ ٺاهيو",
+                "fundInfo": "ڄاڻ",
+                "produce": "پيدا ڪرڻ",
+                "loading": "لوڊشيڊنگ",
+                "viewInstancesList": "ريفريش لسٽ"
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "title": "Totogi",
+    "steps": {
+        "sending_native_coins": "Auina atu tupe moni",
+        "sending_tokens": "Tuuina atu o faailoga",
+        "swap": "Fesuia&#39;i",
+        "approve": "Faamaonia",
+        "one_tx": "E tatau ona e auina atu se fefaʻatauaiga se tasi",
+        "two_tx": "E tatau ona e lafoina ni fefaʻatauaiga se lua"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Tupe e totogi"
+            }
+        },
+        "btns": {
+            "pay": "Totogi"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Manaomia le totogiina o &quot; {{amountOut}} &quot; faailoga"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "O ia filifili ma id &quot; {{chainId}} &quot; e le lagolagoina"
+    }
+}

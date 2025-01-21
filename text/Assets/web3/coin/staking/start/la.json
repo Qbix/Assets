@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duratio",
+                        "amount": "Moles"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duratio",
+                        "amount": "Moles"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Duratio",
+                    "amount": "moles"
+                },
+                "btns": {
+                    "stake": "Pignus"
+                },
+                "stake": "Pignus",
+                "loading": "Loading"
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Faharetana",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "FANOMEZANA",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Ny faharetan&#39;ny andro",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "FANOMEZANA",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                }
+            },
+            "placeholders": {
+                "optional": "(tsy voatery)",
+                "tuple": "tuple []",
+                "number": "isa",
+                "address": "adiresy",
+                "fraction": "ampahany",
+                "integer": "integer",
+                "seconds": "segondra",
+                "days": "andro",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Tsy misy dobo"
+            },
+            "btns": {
+                "createPool": "Mamorona dobo",
+                "createPoolInForm": "MANANGANA"
+            },
+            "createPool": "Mamorona dobo",
+            "produce": "Voka-pambolena sy fiompiana",
+            "loading": "Loading",
+            "viewInstancesList": "Havaozina ny lisitra"
+        }
+    }
+}

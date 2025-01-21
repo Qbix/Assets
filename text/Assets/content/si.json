@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "දෝෂයකි",
+        "WalletAbsent": "මුදල් පසුම්බිය සම්බන්ධ නොවේ.",
+        "Rendering": "<span class='url'>{{1}}<\/span> විදැහුම් කිරීමේදී දෝෂ ඇති විය",
+        "PriceRequired": "මිල අවශ්යයි!",
+        "NameRequired": "නම අවශ්‍යයි!",
+        "PriceInvalid": "මිල වලංගු නැත!",
+        "AmountInvalid": "මුදල වලංගු නැත!",
+        "TransactionFailed": "ගනුදෙනුව අසාර්ථක වී ඇත",
+        "ChainNotSupported": "තෝරාගත් දාමය සහාය නොදක්වයි. සහාය දක්වන දාමය: {{supportedChain}}",
+        "NeedMetaMaskConnected": "යෙදුම සමඟ වැඩ කිරීමට සම්බන්ධ වූ MetaMask අවශ්‍ය වේ",
+        "UserNotLoggedInMetaMask": "පරිශීලකයා MetaMask වෙත පුරනය වී නොමැත",
+        "CurrencyNotFound": "මුදල් හමු නොවීය",
+        "WrongChain": "මෙම NFT නිර්මාණය කර ඇත්තේ &quot; {{chain}} &quot; යටතේය. කරුණාකර මෙම දාමය භාවිතා කරන්න.",
+        "NoRecipientSelected": "ලබන්නෙකු තෝරාගෙන නොමැත",
+        "CantManageFrozenSeries": "ඔබට ශීත කළ ශ්‍රේණි කළමනාකරණය කළ නොහැක",
+        "SubscriptionStreamNotPaid": "මෙම අන්තර්ගතය බැලීමට ඔබ ගෙවා නැත. කරුණාකර {{subscriptionUrl}} ක්ලික් කර සුදුසු සැලැස්මට දායක වන්න."
+    },
+    "admin": {
+        "Title": "වත්කම් පරිපාලනය",
+        "SubscriptionTitle": "දායකත්ව සැලසුම්"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "ගෙවීමට තට්ටු කරන්න"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : ගාස්තුව {{call 'user.displayName'}} සඳහා සකස් කර ඇත",
+        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} ට ඔබේ ගෙවීමට ස්තූතියි",
+        "SubscribedTo": "{{call 'user.displayName'}} {{plan.title}} ට දායක විය",
+        "YouSubscribedTo": "ඔබ {{plan.title}} වෙත දායක වී ඇත",
+        "Assets\/credits\/alert": "ඔබට ඔබගේ ගිණුමට අදාළ ඇඟවීමක් ඇත"
+    },
+    "charge": {
+        "Subject": "ඔබට &quot; {{description}} &quot; සඳහා {{call 'publisher.displayName'}} න් {{displayAmount}} ක ගෙවීමක් ලැබිණි.",
+        "HasBeenCharged": "හේයි, මෙය {{4}} න් {{3}} ට {{1}} ට {{2}} අය කර ඇති බව ඔබට දැන ගැනීමට පමණි"
+    },
+    "charged": {
+        "Subject": "&quot; {{description}} &quot; සඳහා ඔබේ ගෙවීමට ස්තූතියි",
+        "HavePaid": "හේයි {{1}} , මෙය ඔබ {{4}} සඳහා {{2}} සිට {{3}} දක්වා සාර්ථකව ගෙවා ඇති බවට ඉක්මන් තහවුරු කිරීමක් පමණි."
+    },
+    "connectedAccount": {
+        "Title": "ගිණුම සම්බන්ධ කරන්න",
+        "Success": "සාර්ථකත්වය",
+        "YourAccountCreated": "ඔබගේ ගිණුම සාර්ථකව නිර්මාණය කර ඇත!",
+        "YourAccountAlreadyCreated": "ඔබගේ ගිණුම දැනටමත් නිර්මාණය කර ඇති අතර භාවිතයට සූදානම්ය"
+    },
+    "payment": {
+        "AboutOrder": "ඇණවුම පිළිබඳ තොරතුරු",
+        "PaymentMethod": "ගෙවීම් ක්රමය",
+        "ContactInfo": "සම්බන්ධතා තොරතුරු",
+        "Pay": "ගෙවන්න",
+        "PaymentSucceeded": "ගෙවීම සාර්ථකව සකස් කර ඇත",
+        "PaymentProcessing.": "ඔබේ ගෙවීම සකසමින් පවතී",
+        "FailTryAgain": "ඔබේ ගෙවීම සාර්ථක වූයේ නැත. කරුණාකර නැවත උත්සාහ කරන්න.",
+        "SomethingWrong": "යම් දෙයක් වැරදී ඇත",
+        "PaymentStatus": "ගෙවීම් තත්ත්වය",
+        "PayTo": "{{displayName}} ගෙවන්න",
+        "ChooseCurrency": "මුදල් වර්ගයක් තෝරන්න",
+        "YouCanSendUpTo": "ඔබට {{amount}} {{symbol}} දක්වා යැවිය හැක",
+        "Send": "යවන්න",
+        "EnterAmount": "මුදල ඇතුල් කරන්න"
+    },
+    "credits": {
+        "InviteAcceptedBy": "{{invitedUserName}} විසින් ආරාධනය පිළිගන්නා ලදී",
+        "InvitedUserFilledStream": "{{invitedUserName}} පුරවන ලද {{FilledStreamTitle}}",
+        "ForFillingStream": "{{FilledStreamTitle}} පිරවීම සඳහා",
+        "YouHaveCreditsToStart": "ඔබට ආරම්භ කිරීමට ණය {{amount}} ඇත",
+        "PaymentFor": "&quot; {{1}} &quot; සඳහා ගෙවීම",
+        "PaymentTo": "{{1}} ට ගෙවීම",
+        "PaymentToUser": "{{toUserName}} වෙත මාරු කරන්න",
+        "CreatePrivateChat": "{{toUserName}} සමඟ පුද්ගලික කතාබස් සඳහා",
+        "CreatePaidStream": "{{toStreamName}} නිර්මාණය කිරීම සඳහා",
+        "JoinedPaidStream": "වෙන් කිරීම සඳහා &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "&quot; {{communityId}} &quot; ප්රජාව නිර්මාණය කිරීම සඳහා",
+        "LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot; හි වෙන්කිරීම් ආපසු ගෙවීමක් ලෙස",
+        "BoughtCredits": "ණය {{amount}} මිලදී ගත්තා",
+        "BonusCredits": "බෝනස් {{amount}} බැර",
+        "BuyAmountCredits": "ණය {{amount}} මිලදී ගන්න",
+        "WatchClip": "{{fromStreamTitle}} නැරඹීම සඳහා",
+        "MissingCredits": "අස්ථානගත වූ ණය",
+        "YouMissingCredits": "ඉදිරියට යාමට ඔබට අමතර ණය {{amount}} ක් අවශ්‍ය වේ.",
+        "BuyCredits": "ණය මිලදී ගන්න",
+        "BuyBonus": "එකවර ණය {{amount}} මිලදී ගැනීමෙන් බැර {{bonus}} ක ප්‍රසාද දීමනාවක් ලැබේ.",
+        "Buy": "මිලදී ගන්න",
+        "PurchaseCredits": "මිලදී ගැනීම් ණය",
+        "Credits": "ණය",
+        "ErrorInvalidAmount": "මුදල වලංගු නැත",
+        "ErrorInvalidCurrency": "අවාසනාවකට, අපි තවමත් {{currency}} මුදල් ඒකකයට සහය නොදක්වමු",
+        "forMessages": {
+            "BoughtCredits": "බැර {{amount}}",
+            "BonusCredits": "බැර {{amount}}"
+        }
+    },
+    "history": {
+        "Date": "දිනය",
+        "Amount": "මුදල",
+        "Description": "විස්තරය",
+        "Client": "සේවාදායකයා",
+        "User": "පරිශීලක",
+        "To": "දක්වා",
+        "From": "සිට",
+        "SeeHistory": "{{1}} සඳහා ගෙවීම් ඉතිහාසය බලන්න",
+        "HistoryEmpty": "තවම ගනුදෙනු නැත",
+        "PaymentFor": "ණය {{amount}} යවා ඇත",
+        "PaymentTo": "ණය {{amount}} යවා ඇත",
+        "PaymentToUser": "ණය {{amount}} යවා ඇත",
+        "CreatePaidStream": "බැර {{amount}} වියදම් කළා",
+        "WatchClip": {
+            "+": "ණය {{amount}} උපයා ඇත",
+            "-": "බැර {{amount}} වියදම් කළා"
+        },
+        "JoinedPaidStream": {
+            "+": "ණය {{amount}} උපයා ඇත",
+            "-": "බැර {{amount}} වියදම් කළා"
+        },
+        "LeftPaidStream": {
+            "+": "බැර {{amount}} ලැබිණි",
+            "-": "ණය {{amount}} යවා ඇත"
+        },
+        "CreatedCommunity": "බැර {{amount}} වියදම් කළා",
+        "BoughtCredits": "ණය {{amount}} මිලදී ගත්තා",
+        "BonusCredits": "බෝනස් බැර {{amount}} ලැබුණා",
+        "InviteAcceptedBy": "ණය {{amount}} උපයා ඇත",
+        "Streams_user_firstname": "ණය {{amount}} උපයා ඇත",
+        "Streams_user_lastname": "ණය {{amount}} උපයා ඇත",
+        "Streams_user_icon": "ණය {{amount}} උපයා ඇත",
+        "Places_user_location": "ණය {{amount}} උපයා ඇත",
+        "Streams_greeting": "ණය {{amount}} උපයා ඇත",
+        "YouHaveCreditsToStart": "ණය {{amount}} උපයා ඇත",
+        "InvitedUserFilledStream": "ණය {{amount}} උපයා ඇත",
+        "ForFillingStream": "ණය {{amount}} උපයා ඇත",
+        "CreatePrivateChat": "බැර {{amount}} වියදම් කළා"
+    },
+    "subscriptions": {
+        "infoTitle": "ගෙවීම් තොරතුරු සපයන්න",
+        "confirm": {
+            "title": "දායකත්වය ආරම්භ කරන්න",
+            "message": "&quot; {{title}} &quot; වෙත පුනරාවර්තන දායකත්වයක් ආරම්භ කරන්නද?",
+            "ok": "හරි",
+            "cancel": "අවලංගු කරන්න"
+        },
+        "CreditOrDebitCard": "ක්‍රෙඩිට් හෝ ඩෙබිට් කාඩ්",
+        "SubscribePayment": "දායක ගෙවීම",
+        "ImmediatePayment": "ක්ෂණික ගෙවීම",
+        "ProcessingPayment": "ගෙවීම් සැකසීම",
+        "SubscriptionAlreadyPaid": "මෙම දායකත්වය දැනටමත් ගෙවා ඇත",
+        "SubscriptionNotActive": "දායකත්වය දැනට අක්‍රියයි",
+        "Subscribed": "දායක විය",
+        "Unsubscribed": "දායක නොවීය",
+        "Unsubscribe": "දායක නොවන්න",
+        "Subscribe": "දායක වන්න",
+        "Started": "පටන් ගත්තා",
+        "EndsIn": "අවසන් වේ",
+        "NextPay": "ඊළඟ ගෙවීම",
+        "Period": "කාලසීමාව",
+        "Price": "මිල",
+        "AreYouSureUnsubscribe": "ඔබට මෙම සැලසුමෙන් දායක නොවීමට අවශ්‍ය බව විශ්වාසද?",
+        "YouUnsubscribedFromPlan": "ඔබ &quot; {{planTitle}} &quot; සැලැස්මෙන් දායක වී නැත. ඊළඟ වතාවේ ඔබෙන් අය නොකෙරේ, නමුත් ඔබේ දායකත්වය {{endsIn}} දක්වා පවතිනු ඇත",
+        "plan": {
+            "TitlePlaceholder": "සැලැස්ම මාතෘකාව",
+            "PricePlaceholder": "මිල",
+            "SubscriptionTitle": "දායකත්ව සැලසුම්",
+            "DescriptionPlaceholder": "දායකත්ව සැලැස්ම විස්තරය",
+            "AreYouSureDeletePlan": "ඔබට මෙම සැලසුම මැකීමට අවශ්‍ය බව විශ්වාසද?",
+            "Duration": "කාලසීමාව",
+            "Discount": "වට්ටම්",
+            "SavePlan": "සුරකින්න",
+            "Interrupt": "බාධා කරන්න",
+            "Continue": "දිගටම කරගෙන යන්න",
+            "NewPlan": "නව සැලැස්ම",
+            "SelectDisplayType": "{{displayType}} තෝරන්න",
+            "EndDate": "අවසන් දිනය",
+            "Available": "ලබා ගත හැක",
+            "Hidden": "සැඟවී ඇත",
+            "InviteOnly": "ආරාධනා-පමණි",
+            "CantSubscribeUnlessInvited": "ඔබට ආරාධනා කර ඇත්නම් මිස ඔබට මෙම සැලසුමට දායක විය නොහැක"
+        }
+    },
+    "payments": {
+        "infoTitle": "ගෙවීම් තොරතුරු සකසන්න",
+        "BuyAmountCredits": "ණය {{amount}} මිලදී ගන්න",
+        "confirm": {
+            "title": "ගෙවීමක් කරන්න",
+            "message": "{{symbol}} {{amount}} ගෙවීමට ඔබ එකඟද?",
+            "ok": "හරි",
+            "cancel": "අවලංගු කරන්න"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "ණය",
+            "description": "ණය සහ ගෙවීම් පිළිබඳ වාර්තාවක් තබා ගනී"
+        },
+        "Assets\/plan": {
+            "displayType": "දායක සැලැස්ම",
+            "description": "දායක සැලැස්ම"
+        },
+        "Assets\/subscription": {
+            "displayType": "දායකත්වය",
+            "description": "දායකත්වය"
+        },
+        "Assets\/product": {
+            "displayType": "නිෂ්පාදනය",
+            "description": "භාණ්ඩය විකුණනු ලැබේ"
+        },
+        "Assets\/service": {
+            "displayType": "සේවාව",
+            "description": "සේවාව පිරිනමනු ලැබේ"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "ණය {{amount}} උපයා ඇත"
+        },
+        "Assets\/credits\/bought": {
+            "content": "ණය {{amount}} මිලදී ගත්තා"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "බෝනස් {{amount}} බැර"
+        },
+        "Assets\/credits\/spent": {
+            "content": "බැර {{amount}} වියදම් කළා"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{toUserName}} ට බැර {{amount}} යැව්වා"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} සිට බැර {{amount}} ලැබිණි"
+        },
+        "Assets\/credits\/alert": {
+            "content": "ඔබගේ ගිණුමේ ප්‍රමාණවත් ණය නොමැත. තවත් බැර මිලදී ගැනීමට කරුණාකර පහත <a href='<i translate='no'>999 &#39;&gt; සබැඳියට<\/a> පිවිසෙන්න."
+        }
+    },
+    "billing": {
+        "Title": "වත්කම් බිල්පත් කිරීම",
+        "CreditsMinimum": "අවම ණය",
+        "CreditsToAdd": "එකතු කිරීමට ණය",
+        "Save": "සුරකින්න",
+        "ThisLink": "මෙම සබැඳිය",
+        "errors": {
+            "CreditsMinimumNegative": "අවම ණය ඍණ විය නොහැක",
+            "CreditsToAddNegative": "එකතු කළ යුතු ණය සෘණ විය නොහැක"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "නව සේවාව",
+            "TitlePlaceholder": "සේවා මාතෘකාව",
+            "PricePlaceholder": "මිල නියම කරන්න",
+            "LinkPlaceholder": "අමතර තොරතුරු සබැඳිය සකසන්න",
+            "DescriptionPlaceholder": "සේවා විස්තරය",
+            "SaveService": "සේවාව සුරකින්න",
+            "SelectRequiredParticipants": "අවශ්‍ය සම්බන්ධ සහභාගිවන්නන්",
+            "RequiredParticipantsDesc": "කරුණාකර මෙම සේවාව භාවිතා කිරීමට අවශ්‍ය අදාළ සහභාගිවන්නන් තෝරන්න (උදාහරණයක් ලෙස &quot;සුනඛ සංදර්ශන&quot; සඳහා සුරතල් සතුන්, හෝ &quot;ළමා නිවාඩු&quot; ආදිය සඳහා ළමුන්). සේවාව ගෙවනු ලබන්නේ නම්, එක් එක් අදාළ සහභාගිවන්නන් සඳහා පරිශීලකයාට ගෙවීමට සිදුවේ."
+        },
+        "EditServiceTemplate": {
+            "Title": "සංස්කරණ සේවාව"
+        },
+        "ManageServiceTemplates": "සේවා සැකිලි කළමනාකරණය කරන්න",
+        "ManageServices": "සේවා කළමනාකරණය කරන්න",
+        "Free": "නොමිලේ",
+        "OptionalContribution": "විකල්ප දායකත්වය",
+        "RequiredPayment": "අවශ්ය ගෙවීම",
+        "AreYouSureDelete": "ඔබට මෙම සේවාව මැකීමට අවශ්‍ය බව විශ්වාසද?",
+        "AmountServicesRelated": "මෙම සේවාවට අදාළව ලබා ගත හැකි {{amount}} ඇත. ඒවා ද ඉවත් කරනු ලැබේ."
+    },
+    "transfer": {
+        "SelectRecipient": "ලබන්නා තෝරන්න",
+        "TransactionSuccess": "ගනුදෙනු සාර්ථකත්වය",
+        "OrTypeWalletAddress": "නැතහොත් ලබන්නාගේ පසුම්බි ලිපිනය ටයිප් කරන්න",
+        "AppCredits": "යෙදුම් ණය"
+    },
+    "NFT": {
+        "Title": "මාතෘකාව",
+        "Name": "නම",
+        "EnterName": "නම ඇතුලත් කරන්න",
+        "EnterAuthorWallet": "කර්තෘ පසුම්බිය ඇතුල් කරන්න",
+        "InformationAboutTitle": "{{title}} NFT පිළිබඳ තොරතුරු",
+        "Description": "විස්තරය",
+        "DetailedInformationAboutNFT": "NFT පිළිබඳ සවිස්තරාත්මක තොරතුරු",
+        "PresaleStarts": "පෙර විකිණීම දෙසැම්බර් 23 ආරම්භ වේ",
+        "OwnerUserNotFound": "මෙම NFT හි හිමිකරු අපගේ අයදුම්පතෙහි ලියාපදිංචි වී නොමැත.",
+        "BuyNow": "දැන් මිලදී ගන්න",
+        "Buy": "මිලදී ගන්න",
+        "Add": "එකතු කරන්න",
+        "Remove": "ඉවත් කරන්න",
+        "NoNFTyet": "තවම NFT නැත",
+        "Conversation": "සංවාදය",
+        "Create": "නිර්මාණය කරන්න",
+        "CurrentBid": "වත්මන් ලංසුව",
+        "StartingIn": "ආරම්භ වේ",
+        "EndingIn": "අවසන් වේ",
+        "CreateNFT": "NFT එකක් සාදන්න",
+        "TitlePlaceholder": "ඔබේ NFT ට මාතෘකාවක් දෙන්න",
+        "DescriptionPlaceholder": "ඔබේ NFT විස්තරයක් දෙන්න",
+        "CreateYourNFT": "ඔබේ NFT සාදන්න",
+        "Royalties": "රාජකීයයන්",
+        "RoyaltyPlaceholder": "විකල්ප. මාරු කිරීමට පෙර නිර්මාණකරුට ගෙවන ලද මුදල.",
+        "ExpirationDate": "කල්පිරෙන දිනය",
+        "StartingDate": "ආරම්භක දිනය",
+        "BidsBelowThisAmount": "මෙම මුදලට අඩු ලංසු වලට ඉඩ නොදේ",
+        "MinimumBid": "අවම ලංසුව",
+        "Author": "කර්තෘ",
+        "Price": "මිල",
+        "Commission": "කොමිෂන් සභාව",
+        "EnterCommission": "කොමිෂන් සභාව ඇතුල් කරන්න",
+        "Owner": "හිමිකරු",
+        "SelectCategory": "කාණ්ඩය තෝරන්න",
+        "Day": "දවස",
+        "Days": "දින",
+        "Hour": "පැය",
+        "Hours": "පැය",
+        "Minute": "මිනිත්තුව",
+        "Minutes": "මිනිත්තු",
+        "Second": "දෙවනුව",
+        "Seconds": "තත්පර",
+        "SalesCreator": "විකුණුම්වල ප්‍රමාණය නිර්මාණකරු වෙත යයි",
+        "Details": "විස්තර",
+        "Bids": "ලංසු",
+        "History": "ඉතිහාසය",
+        "LoremIpsum": "Lorem Ipsum යනු මුද්‍රණ සහ අකුරු සැකසුම් කර්මාන්තයේ ව්‍යාජ පෙළකි.",
+        "PutOnSale": "විකිණීමට ඇත",
+        "PutOffSale": "විකිණීමෙන් ඉවත් වන්න",
+        "Transfer": "මාරු කරන්න",
+        "Actions": "ක්රියාවන්",
+        "Claim": "හිමිකම",
+        "ClaimNFT": "NFT හිමිකම් කියන්න",
+        "Unlocking": "අගුලු හැරීම",
+        "Unlock": "අගුළු හරින්න",
+        "Update": "යාවත්කාලීන කරන්න",
+        "UpdateToken": "ටෝකනය යාවත්කාලීන කරන්න",
+        "UpdateNFT": "NFT යාවත්කාලීන කරන්න",
+        "CreateToken": "ටෝකනය සාදන්න",
+        "PlaceBid": "ලංසු තබන්න",
+        "SoldOut": "විකුණුවා",
+        "NotOnSale": "විකිණීමට නැත",
+        "NftName": "NFT නම",
+        "DescribeYourNFT": "කරුණාකර ඔබේ NFT විස්තර කරන්න",
+        "NFTImage": "NFT සඳහා රූපය",
+        "NFTVideo": "NFT සඳහා වීඩියෝව, තිබේ නම්",
+        "GenerateDescription": "හෝ ස්වයංක්‍රීයව උත්පාදනය කරන්න",
+        "UploadMovie": "චිත්‍රපටිය උඩුගත කරන්න",
+        "MovieSource": "චිත්රපට මූලාශ්රය",
+        "MovieURL": "චිත්‍රපට URL",
+        "UploadFile": "ගොනුවක් උඩුගත කරන්න",
+        "PutOnMarketplace": "වෙළඳපොලේ තබන්න",
+        "InstantPurchase": "පරිශීලකයින්ට ක්ෂණිකව ඔබේ NFT මිලදී ගැනීමට ඉඩ දීමට මිල ඇතුළත් කරන්න",
+        "FixedPrice": "ස්ථාවර මිල",
+        "TimedAuction": "කාලානුරූපී වෙන්දේසිය",
+        "OpenForBids": "ලංසු සඳහා විවෘතයි",
+        "PriceOnePiece": "එක් කෑල්ලක් සඳහා මිල ඇතුළත් කරන්න",
+        "EnterPrice": "මිල ඇතුළත් කරන්න",
+        "EnterMinimumBid": "අවම ලංසුව ඇතුලත් කරන්න",
+        "SelectChain": "දාමය තෝරන්න",
+        "Currency": "මුදල්",
+        "AreYouSureDeleteImage": "ඔබට රූපය ඉවත් කිරීමට අවශ්‍ය බව විශ්වාසද?",
+        "AreYouSureDeleteVideo": "ඔබට වීඩියෝව ඉවත් කිරීමට අවශ්‍ය බව විශ්වාසද?",
+        "series": {
+            "Name": "නම",
+            "Icon": "නිරූපකය",
+            "Description": "විස්තරය",
+            "Author": "කර්තෘ",
+            "SelectSeries": "මාලාවක් තෝරන්න",
+            "Value": "වටිනාකම",
+            "AreYouSure": "ඔයාට විශ්වාස ද?",
+            "AuthorInvalid": "කර්තෘ ලිපිනය වලංගු නැත!",
+            "Address": "ලිපිනය",
+            "CoverImage": "ආවරණ රූපය",
+            "UploadCoverImage": "ආවරණ රූපය උඩුගත කරන්න",
+            "CommissionAddressInvalid": "කොමිසමේ ලිපිනය වලංගු නැත",
+            "OnSale": "විකිණීමට ඇත",
+            "OffSale": "විකිණීමට නැත",
+            "CreateSeries": "මාලාවක් සාදන්න",
+            "UpdateSeries": "යාවත්කාලීන මාලාව",
+            "SeriesInfo": "මාලාවේ තොරතුරු",
+            "SelectAuthor": "කතෘ තෝරන්න",
+            "NewItem": "නව NFT මාලාව",
+            "NamePlaceholder": "මාලාවේ නම ඇතුළත් කරන්න",
+            "DescPlaceholder": "මාලාවේ විස්තරය ඇතුළත් කරන්න",
+            "EndingIn": "අවසන් වීම"
+        },
+        "contract": {
+            "CreateContract": "ගිවිසුමක් සාදන්න",
+            "SelectContract": "කොන්ත්රාත්තුව තෝරන්න",
+            "CreateContractFor": "{{userName}} සඳහා ගිවිසුමක් සාදන්න",
+            "ContractFor": "{{userName}} සඳහා කොන්ත්රාත්තුව",
+            "UpdateContract": "කොන්ත්රාත්තුව යාවත්කාලීන කරන්න",
+            "TransferOwnership": "අයිතිය පැවරීම",
+            "SetBaseURI": "මූලික URI සකසන්න",
+            "SetSuffix": "උපසර්ගය සකසන්න",
+            "CurrentOwner": "වත්මන් හිමිකරු",
+            "CurrentBaseURL": "වත්මන් BaseURL",
+            "ContractAddressAbsent": "කොන්ත්රාත් ලිපිනය නොමැත",
+            "FactoryAddressAbsent": "කර්මාන්තශාලා ලිපිනය නොමැත",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "මාතෘකාව අවශ්‍යයි",
+            "SymbolRequired": "සංකේතය අවශ්‍යයි",
+            "TypeContractName": "කොන්ත්රාත්තුවේ නම",
+            "TypeContractSymbol": "ගිවිසුම් සංකේතය (උපරිම අක්ෂර 10)"
+        },
+        "contests": {
+            "Title": "තරඟ",
+            "NewContest": "නව තරඟය"
+        },
+        "collections": {
+            "Title": "එකතු කිරීම්",
+            "EnterTitle": "මාතෘකාව ඇතුලත් කරන්න",
+            "EnterDescription": "විස්තර ඇතුලත් කරන්න",
+            "NewCollection": "නව එකතුව",
+            "Name": "නම",
+            "Icon": "නිරූපකය",
+            "Description": "විස්තරය",
+            "Author": "කර්තෘ",
+            "SelectCollection": "එකතුව තෝරන්න",
+            "Value": "වටිනාකම",
+            "AreYouSure": "ඔයාට විශ්වාස ද?",
+            "AuthorInvalid": "කර්තෘ ලිපිනය වලංගු නැත!",
+            "Address": "ලිපිනය",
+            "CoverImage": "ආවරණ රූපය",
+            "UploadIcon": "උඩුගත කිරීමේ නිරූපකය",
+            "CommissionAddressInvalid": "කොමිසමේ ලිපිනය වලංගු නැත",
+            "OnSale": "විකිණීමට ඇත",
+            "OffSale": "විකිණීමට නැත",
+            "CreateCollection": "එකතුවක් සාදන්න",
+            "UpdateCollection": "යාවත්කාලීන එකතුව",
+            "CollectionInfo": "එකතු කිරීමේ තොරතුරු",
+            "SelectAuthor": "කතෘ තෝරන්න",
+            "NewItem": "නව NFT එකතුව",
+            "NamePlaceholder": "එකතු කිරීමේ නම ඇතුළත් කරන්න",
+            "DescPlaceholder": "එකතු කිරීමේ විස්තරය ඇතුළත් කරන්න",
+            "EndingIn": "අවසන් වීම",
+            "SubmitSeries": "මාලාවක් ඉදිරිපත් කරන්න"
+        },
+        "import": {
+            "importNFT": "NFT ආනයනය කිරීම",
+            "importAttributes": "NFT ගුණාංග ආයාත කරන්න",
+            "fileNotFound": "සමාවන්න, CSV ගොනුව හමු නොවීය.",
+            "fileEmpty": "සමාවන්න, CSV ගොනුව හිස්ය.",
+            "userIdNotFound": "පරිශීලක පවතී නමුත් හැඳුනුම්පත හිස්",
+            "errorLine": "පේළිය {{1}}",
+            "fieldNotFound": "අවශ්‍ය ක්ෂේත්‍රය &quot; {{1}} &quot; සොයාගත නොහැක",
+            "displayTypeEmpty": "&quot; {{1}} &quot; සඳහා සංදර්ශක වර්ගය හමු නොවීය",
+            "taskStreamInvalid": "කාර්ය ප්‍රවාහය වලංගු නැත",
+            "instructionsEmpty": "කාර්ය ප්‍රවාහ උපදෙස් හිස්",
+            "complete": "සම්පූර්ණයි",
+            "activateUsers": "පරිශීලකයින්ට සක්රිය කිරීමේ පණිවිඩයක් යවන්නද?",
+            "importProgress": "ප්‍රගතිය",
+            "importOptions": "විකල්ප",
+            "sampleCSV": "සාම්පල CSV බාගන්න",
+            "fileLabel": "පැතුරුම්පත උඩුගත කරන්න:",
+            "errorsTitle": "දෝෂ ඇති විය"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "NFT එකතුවෙන් පෙරන්න",
+                "ShowNFTCollection": "NFT එකතුව පෙන්වන්න ...",
+                "AllCollections": "සියලුම එකතු කිරීම්"
+            },
+            "ByUser": {
+                "AllAuthors": "සියලුම කතුවරුන්",
+                "AllUsers": "හැමෝම",
+                "FilterByAuthors": "කතුවරුන් විසින් පෙරහන් කරන්න"
+            }
+        },
+        "Back": "නැවත එකතුව වෙත",
+        "attributes": {
+            "Title": "ගුණාංග කළමනාකරණය කරන්න",
+            "Attributes": "ගුණාංග",
+            "DisplayTitle": "සංදර්ශක වර්ගය",
+            "AddDisplayType": "නව දර්ශන වර්ගය එක් කරන්න",
+            "NewDisplay": "නව සංදර්ශකය",
+            "TraitTitle": "ගතිලක්ෂණ වර්ගය",
+            "AddTraitTitle": "නව ගතිලක්ෂණ වර්ගයක් එක් කරන්න",
+            "NewTrait": "නව ගතිලක්ෂණ වර්ගය",
+            "ValueTitle": "වටිනාකම",
+            "AddValueTitle": "නව අගයක් එකතු කරන්න",
+            "NewValue": "නව අගය",
+            "NewAttribute": "නව ගුණාංගය",
+            "UpdateAttributes": "ගුණාංග යාවත්කාලීන කරන්න",
+            "SaveAttributes": "ගුණාංග සුරකින්න"
+        },
+        "profile": {
+            "LogOut": "ලොග් අවුට් වෙන්න",
+            "Title": "{{userName}} සඳහා පැතිකඩ",
+            "Description": "පරිශීලක විස්තර",
+            "aboutPlaceholder": "Bio සංස්කරණය කරන්න",
+            "UploadCoverPhoto": "කවරයේ ඡායාරූපය උඩුගත කරන්න",
+            "SureLogOut": "ඔබට පිටවීමට අවශ්‍ය බව විශ්වාසද?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTC කොන්ත්රාත්තුව",
+                        "seriesId": "මාලාවේ Id",
+                        "owner": "හිමිකරු",
+                        "currency": "මුදල්",
+                        "price": "මිල",
+                        "beneficiary": "ප්රතිලාභියා",
+                        "autoindex": "ස්වයං දර්ශක",
+                        "duration": "කාලසීමාව",
+                        "rateInterval": "අනුපාත පරතරය",
+                        "rateAmount": "අනුපාත මුදල"
+                    },
+                    "small": {
+                        "NFTContract": "NFTC කොන්ත්රාත්තුව",
+                        "seriesId": "මෙම මාලාවේ ටෝකන සකස් කරනු ලැබේ",
+                        "owner": "උදාහරණයේ හිමිකරු, එසේ නොමැතිනම් යවන්නා වනු ඇත",
+                        "currency": "මිලදී ගත් ටෝකන සඳහා මුදල්, ශුන්ය නම් - දේශීය කාසි සඳහා",
+                        "price": "මිල",
+                        "beneficiary": "ටෝකන විකිණීමේ ප්‍රතිලාභියා, එසේ නොමැති නම් යවන්නා වනු ඇත",
+                        "autoindex": "ස්වයං දර්ශක",
+                        "duration": "මින්ට් කිරීමෙන් පසු අගුළු දමන්න. ශුන්‍යය යනු එය වහාම ලබා ගන්න.",
+                        "rateInterval": "විශේෂ මිලදී ගැනීම සඳහා බාල්දි පරතරය",
+                        "rateAmount": "විශේෂ මිලදී ගැනීම සඳහා බාල්දි මුදල"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(විකල්ප)",
+                    "number": "අංකය",
+                    "address": "ලිපිනය",
+                    "fraction": "භාගය",
+                    "integer": "පූර්ණ සංඛ්යාව",
+                    "seconds": "තත්පර",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "නිපැයුම",
+                "viewInstancesList": "ලැයිස්තුව නැවුම් කරන්න"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "මාලාවේ ID",
+                        "account": "ගිණුම",
+                        "amount": "මුදල"
+                    },
+                    "small": {
+                        "seriesId": "නව ටෝකනය එවැනි හැඳුනුම්පතක් සහිත මාලාවකට අයත් වේ",
+                        "account": "අලුතින් නිර්මාණය කරන ලද NFT හි හිමිකරු. සකසා නොමැති නම් - වත්මන් මුදල් පසුම්බිය භාවිතා කරනු ඇත",
+                        "amount": "මින්ට් සිට NFT මුදල"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(විකල්ප)",
+                    "seriesId": "id",
+                    "account": "ගිණුම",
+                    "amount": "මුදල",
+                    "integer": "පූර්ණ සංඛ්යාව"
+                },
+                "btn": {
+                    "Purchase": "මිලදී ගැනීම",
+                    "SpecialPurchase": "විශේෂ මිලදී ගැනීම"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "ලිපිනය"
+                    },
+                    "small": {
+                        "account": "ලිපිනය"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "වලංගු නොවන ලිපිනයක්"
+                },
+                "placeholders": {
+                    "account": "ලිපිනය"
+                },
+                "addToWhitelist": "සුදු ලැයිස්තුවට එක් කරන්න",
+                "removeFromWhitelist": "සුදු ලැයිස්තුවෙන් ඉවත් කරන්න"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ටෝකන් හැඳුනුම්පත",
+                    "custodian": "භාරකරු",
+                    "recipient": "ලබන්නා"
+                },
+                "small": {
+                    "tokenId": "ටෝකන් හැඳුනුම්පත අගුලු දැමීමට හෝ අගුළු ඇරීමට අවශ්‍ය දේ",
+                    "custodian": "අගුළු ඇරීමට හැකි ලිපිනය",
+                    "recipient": "ටෝකන ලැබෙන ලිපිනය"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "වලංගු නොවන tokenId",
+                "invalidCustodian": "වලංගු නොවන භාරකරු",
+                "invalidRecipient": "වලංගු නොවන ලබන්නා"
+            },
+            "placeholders": {
+                "optional": "(විකල්ප)",
+                "tokenId": "id",
+                "custodian": "ලිපිනය"
+            },
+            "Lock": "අගුළු දමන්න",
+            "Unlock": "අගුළු හරින්න",
+            "Locked": "අගුලු දමා ඇත",
+            "CustodianAddress": "භාරකරු ලිපිනය",
+            "TokenWasClaimed": "ටෝකනය &quot; {{title}} &quot; හිමි විය",
+            "TokenWasLocked": "ටෝකනය &quot; {{title}} &quot; අගුලු දමා ඇත",
+            "TokenWasUnlocked": "ටෝකනය &quot; {{title}} &quot; අගුලු හරින ලදී"
+        }
+    },
+    "fundrise": {
+        "placeholder": "මෙම දායකත්වය ගැන යමක් ටයිප් කරන්න..."
+    },
+    "currencies": {
+        "choose": "මුදල් වර්ගයක් තෝරන්න"
+    }
+}

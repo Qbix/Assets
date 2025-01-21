@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Error",
+        "WalletAbsent": "vidulus non connexus.",
+        "Rendering": "Errores fuerunt dum <span class='url'>{{1}}<\/span> dantes",
+        "PriceRequired": "Pretium requiritur!",
+        "NameRequired": "Nomen requiri!",
+        "PriceInvalid": "Pretium irritum!",
+        "AmountInvalid": "Quantum irritum!",
+        "TransactionFailed": "Rei quae defecit",
+        "ChainNotSupported": "Electus catena non sustinetur. Catena subnixa: {{supportedChain}}",
+        "NeedMetaMaskConnected": "MetaMask opus cum applicatione adnexa opus",
+        "UserNotLoggedInMetaMask": "User non initium ad MetaMask",
+        "CurrencyNotFound": "Currency non inveni",
+        "WrongChain": "Hoc NFT sub &quot; {{chain}} &quot; creatum est. Quaeso utere hac catena.",
+        "NoRecipientSelected": "Non recipiens est electus",
+        "CantManageFrozenSeries": "Te non poteris serie congelata",
+        "SubscriptionStreamNotPaid": "Hoc contentum videre non dedisti. Preme {{subscriptionUrl}} et subscribo congruo consilio."
+    },
+    "admin": {
+        "Title": "bonorum administrativi",
+        "SubscriptionTitle": "Subscription consilia"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "ICTUS ut stipendium"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : the charge has been processioned for {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Gratias ago tibi pro mercedem tuam {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} subscripserunt {{plan.title}}",
+        "YouSubscribedTo": "Subscriptum es {{plan.title}}",
+        "Assets\/credits\/alert": "Habes acris ad rationem vestram"
+    },
+    "charge": {
+        "Subject": "Receptas solutionem {{displayAmount}} ab {{call 'publisher.displayName'}} pro &quot; {{description}} &quot;.",
+        "HasBeenCharged": "Heus, hoc solum est ut scias {{1}} accusatum {{2}} pro {{3}} a {{4}}"
+    },
+    "charged": {
+        "Subject": "Gratias tibi ago pro solutione tua pro &quot; {{description}} &quot;",
+        "HavePaid": "Heus {{1}} , haec confirmatio celeris est quam feliciter persolvisti {{2}} pro {{3}} pro {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Connect rationem",
+        "Success": "Success",
+        "YourAccountCreated": "Ratio tua feliciter creata est!",
+        "YourAccountAlreadyCreated": "Ratio tua iam creata et parata ad usum"
+    },
+    "payment": {
+        "AboutOrder": "Info about order",
+        "PaymentMethod": "Solucionis methodo",
+        "ContactInfo": "Contactus info",
+        "Pay": "Stipendium",
+        "PaymentSucceeded": "In solucionis est bene processionaliter",
+        "PaymentProcessing.": "Tua mercedem est processionaliter",
+        "FailTryAgain": "Mercedem tuam non obtinuit. Quaeso, iterum conare.",
+        "SomethingWrong": "Aliquid abiit iniuriam",
+        "PaymentStatus": "Mercedem status",
+        "PayTo": "Redde {{displayName}}",
+        "ChooseCurrency": "Elige monetæ",
+        "YouCanSendUpTo": "Potes mittere ad {{amount}} {{symbol}}",
+        "Send": "Mitte",
+        "EnterAmount": "intra moles"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Invitare accepit ab {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} repleti {{FilledStreamTitle}}",
+        "ForFillingStream": "Ad implendum {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Habes {{amount}} credit incipere",
+        "PaymentFor": "Payment for &quot; {{1}} &quot;",
+        "PaymentTo": "Mercedem {{1}}",
+        "PaymentToUser": "Transferre ad {{toUserName}}",
+        "CreatePrivateChat": "privata chat cum {{toUserName}}",
+        "CreatePaidStream": "ad partum {{toStreamName}}",
+        "JoinedPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "{{communityId}} ad creandam communitatem",
+        "LeftPaidStream": "sicut refugium in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Emit {{amount}} creditorum",
+        "BonusCredits": "Bonus {{amount}} credit",
+        "BuyAmountCredits": "Buy {{amount}} creditorum",
+        "WatchClip": "nam vigilantes {{fromStreamTitle}}",
+        "MissingCredits": "Absentis Credits",
+        "YouMissingCredits": "Indigetis additis {{amount}} creditorum procedere.",
+        "BuyCredits": "Buy credit",
+        "BuyBonus": "Emendo {{amount}} creditorum statim proveniet in bono de {{bonus}} credit.",
+        "Buy": "Buy",
+        "PurchaseCredits": "Purchase Credits",
+        "Credits": "Credits",
+        "ErrorInvalidAmount": "Quantum invalidum",
+        "ErrorInvalidCurrency": "Infeliciter, monetam {{currency}} nondum sustinemus",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} credit",
+            "BonusCredits": "{{amount}} credit"
+        }
+    },
+    "history": {
+        "Date": "Date",
+        "Amount": "Moles",
+        "Description": "Descriptio",
+        "Client": "Client",
+        "User": "User",
+        "To": "to",
+        "From": "e*",
+        "SeeHistory": "Vide mercedem historiae pro {{1}}",
+        "HistoryEmpty": "Non tamen transactions",
+        "PaymentFor": "Missus {{amount}} credit",
+        "PaymentTo": "Missus {{amount}} credit",
+        "PaymentToUser": "Missus {{amount}} credit",
+        "CreatePaidStream": "Spent {{amount}} credita",
+        "WatchClip": {
+            "+": "Meruit {{amount}} credita",
+            "-": "Spent {{amount}} credita"
+        },
+        "JoinedPaidStream": {
+            "+": "Meruit {{amount}} credita",
+            "-": "Spent {{amount}} credita"
+        },
+        "LeftPaidStream": {
+            "+": "Accepimus {{amount}} credit",
+            "-": "Missus {{amount}} credit"
+        },
+        "CreatedCommunity": "Spent {{amount}} credita",
+        "BoughtCredits": "Emit {{amount}} creditorum",
+        "BonusCredits": "Surrexit {{amount}} bonus credit",
+        "InviteAcceptedBy": "Meruit {{amount}} credita",
+        "Streams_user_firstname": "Meruit {{amount}} credita",
+        "Streams_user_lastname": "Meruit {{amount}} credita",
+        "Streams_user_icon": "Meruit {{amount}} credita",
+        "Places_user_location": "Meruit {{amount}} credita",
+        "Streams_greeting": "Meruit {{amount}} credita",
+        "YouHaveCreditsToStart": "Meruit {{amount}} credita",
+        "InvitedUserFilledStream": "Meruit {{amount}} credita",
+        "ForFillingStream": "Meruit {{amount}} credita",
+        "CreatePrivateChat": "Spent {{amount}} credita"
+    },
+    "subscriptions": {
+        "infoTitle": "Praebere Payment Information",
+        "confirm": {
+            "title": "Satus Subscription",
+            "message": "Subscriptio frequentissima incipere &quot; {{title}} &quot;?",
+            "ok": "OK",
+            "cancel": "Cancel"
+        },
+        "CreditOrDebitCard": "Credit vel debitum card",
+        "SubscribePayment": "Subscribe Payment",
+        "ImmediatePayment": "Immediata Payment",
+        "ProcessingPayment": "Processus Payment",
+        "SubscriptionAlreadyPaid": "Haec subscriptione iam solvit",
+        "SubscriptionNotActive": "Subscriptio est currently iners",
+        "Subscribed": "Subscriptum",
+        "Unsubscribed": "unsubscribed",
+        "Unsubscribe": "Subscribe",
+        "Subscribe": "Subscribe",
+        "Started": "Coepi",
+        "EndsIn": "desinit in",
+        "NextPay": "Proximam mercedem",
+        "Period": "Tempus",
+        "Price": "Pretium",
+        "AreYouSureUnsubscribe": "Visne unsubscribe ex hoc consilio?",
+        "YouUnsubscribedFromPlan": "Unsubscriptum ex consilio &quot; {{planTitle}} &quot; habes. Non oneris proximo tempore, sed subscriptione tua perseverabit usque ad {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "consilium titulum",
+            "PricePlaceholder": "pretium",
+            "SubscriptionTitle": "Subscription consilia",
+            "DescriptionPlaceholder": "subscriptio consilium descriptionem",
+            "AreYouSureDeletePlan": "Visne vero consilium hoc delere?",
+            "Duration": "Duratio",
+            "Discount": "Discount",
+            "SavePlan": "Servare",
+            "Interrupt": "Interrumpere",
+            "Continue": "continue",
+            "NewPlan": "Novum Planum",
+            "SelectDisplayType": "{{displayType}}",
+            "EndDate": "finem date",
+            "Available": "Praesto",
+            "Hidden": "Occultus",
+            "InviteOnly": "Invitare solum",
+            "CantSubscribeUnlessInvited": "Huic consilio subscribere non potes nisi invitatus sis"
+        }
+    },
+    "payments": {
+        "infoTitle": "Set Payment Information",
+        "BuyAmountCredits": "Buy {{amount}} creditorum",
+        "confirm": {
+            "title": "Mercedem facere",
+            "message": "Adsentiris {{symbol}} {{amount}} reddere?",
+            "ok": "OK",
+            "cancel": "Cancel"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Credits",
+            "description": "servat track creditorum et solutionum"
+        },
+        "Assets\/plan": {
+            "displayType": "Subsription Plan",
+            "description": "subscriptione consilium"
+        },
+        "Assets\/subscription": {
+            "displayType": "Subscription",
+            "description": "subscriptione"
+        },
+        "Assets\/product": {
+            "displayType": "Productum",
+            "description": "productum quod vendidit"
+        },
+        "Assets\/service": {
+            "displayType": "Service",
+            "description": "munus oblatum"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Meruit {{amount}} credita"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Emit {{amount}} creditorum"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} credit"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Spent {{amount}} credita"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Missus {{amount}} credit in {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Accepit {{amount}} credita ex {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Satis credita habes in ratione vestra. Quaeso visita sequenti <a href='<i translate='no'>999 &#39;&gt; nexum<\/a> ad plura credita redimendum."
+        }
+    },
+    "billing": {
+        "Title": "bonorum osculantem",
+        "CreditsMinimum": "Minimum credit",
+        "CreditsToAdd": "Promeritum addere",
+        "Save": "Servare",
+        "ThisLink": "hoc link",
+        "errors": {
+            "CreditsMinimumNegative": "Quod minimum promeritum non potest esse negans",
+            "CreditsToAddNegative": "Promeritum addere non potest esse negans"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Nova Service",
+            "TitlePlaceholder": "Servitium titulum",
+            "PricePlaceholder": "Pretium",
+            "LinkPlaceholder": "pone additional info link",
+            "DescriptionPlaceholder": "Servitium descriptio",
+            "SaveService": "Servare Service",
+            "SelectRequiredParticipants": "Requiritur related participantium",
+            "RequiredParticipantsDesc": "Participes cognatos elige quaeso qui requiritur ad hoc officium utendum (exempli gratia cura &quot;Canes ostendunt&quot;, vel infantes pro &quot;festa Liberorum&quot; etc. Si servitus solvitur, user etiam pro singulis participibus relatis solvere debebit."
+        },
+        "EditServiceTemplate": {
+            "Title": "Edit Service"
+        },
+        "ManageServiceTemplates": "Administrare Service Templates",
+        "ManageServices": "Curo Services",
+        "Free": "Free",
+        "OptionalContribution": "Ad libitum conlationem",
+        "RequiredPayment": "Requiritur solucionis",
+        "AreYouSureDelete": "Visne vero hoc officium delere?",
+        "AmountServicesRelated": "There are {{amount}} availabilities related to this service. Ipsi etiam removebuntur."
+    },
+    "transfer": {
+        "SelectRecipient": "Lego recipiens",
+        "TransactionSuccess": "Res gestae",
+        "OrTypeWalletAddress": "VEL typus recipiens pera inscriptio",
+        "AppCredits": "App Credits"
+    },
+    "NFT": {
+        "Title": "Titulus",
+        "Name": "Nomen",
+        "EnterName": "Intra nomen",
+        "EnterAuthorWallet": "Intra auctor vidulum",
+        "InformationAboutTitle": "Information about {{title}} NFT",
+        "Description": "Descriptio",
+        "DetailedInformationAboutNFT": "Detailed notitia de NFT",
+        "PresaleStarts": "Presale incipit Dec 23",
+        "OwnerUserNotFound": "Dominus huius NFT in applicatione nostra non relatus est.",
+        "BuyNow": "Buy nunc",
+        "Buy": "Buy",
+        "Add": "Add",
+        "Remove": "Aufer",
+        "NoNFTyet": "Non NFTs adhuc",
+        "Conversation": "Colloquium",
+        "Create": "Create",
+        "CurrentBid": "Current bid",
+        "StartingIn": "Satus in",
+        "EndingIn": "ending in",
+        "CreateNFT": "Create an NFT",
+        "TitlePlaceholder": "Da tuum NFT titulum",
+        "DescriptionPlaceholder": "Da tuum NFT descriptionem",
+        "CreateYourNFT": "Creata NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Libitum. Pretium auctor ante translationem.",
+        "ExpirationDate": "Expirata Date",
+        "StartingDate": "Satus Date",
+        "BidsBelowThisAmount": "Iubet hoc quantum infra non licere",
+        "MinimumBid": "Minimum bid",
+        "Author": "Author",
+        "Price": "Pretium",
+        "Commission": "Commissio",
+        "EnterCommission": "Intra commissionem",
+        "Owner": "dominus",
+        "SelectCategory": "Genus eligere",
+        "Day": "dies",
+        "Days": "diebus",
+        "Hour": "Hora",
+        "Hours": "Horae",
+        "Minute": "Minutum",
+        "Minutes": "Minuta",
+        "Second": "Secundus",
+        "Seconds": "Secundis",
+        "SalesCreator": "de Sales ibo ad creatorem",
+        "Details": "Singula",
+        "Bids": "Iubet",
+        "History": "Historia",
+        "LoremIpsum": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "PutOnSale": "Venditionis posuit",
+        "PutOffSale": "Recede venditionis",
+        "Transfer": "TRANSFERENDIS",
+        "Actions": "Actiones",
+        "Claim": "Dictum",
+        "ClaimNFT": "Dictum NFT",
+        "Unlocking": "reserans",
+        "Unlock": "Basem",
+        "Update": "Renovatio",
+        "UpdateToken": "Update Thochen",
+        "UpdateNFT": "Update NFT",
+        "CreateToken": "Create Thochen",
+        "PlaceBid": "Place iube",
+        "SoldOut": "venundatus",
+        "NotOnSale": "Non de Sale",
+        "NftName": "NFT name",
+        "DescribeYourNFT": "Placere describere tuum NFT",
+        "NFTImage": "Imago NFT",
+        "NFTVideo": "Video for NFT, si quis",
+        "GenerateDescription": "aut auto-generate",
+        "UploadMovie": "Upload movie",
+        "MovieSource": "Movie Source",
+        "MovieURL": "Pellicula URL",
+        "UploadFile": "Upload lima",
+        "PutOnMarketplace": "Pone in foro",
+        "InstantPurchase": "Intra pretium ut users statim mercari tuum NFT",
+        "FixedPrice": "Certo pretio",
+        "TimedAuction": "Intempestivo auction",
+        "OpenForBids": "Aperi iubet",
+        "PriceOnePiece": "Intra pretium pro una",
+        "EnterPrice": "Intra pretium",
+        "EnterMinimumBid": "Intra bid Minimum",
+        "SelectChain": "Lego catenae",
+        "Currency": "Currency",
+        "AreYouSureDeleteImage": "Visne vero imaginem removere?",
+        "AreYouSureDeleteVideo": "Certus esne videre vis tollere?",
+        "series": {
+            "Name": "Nomen",
+            "Icon": "Icon",
+            "Description": "Descriptio",
+            "Author": "Author",
+            "SelectSeries": "Lego series",
+            "Value": "Precium",
+            "AreYouSure": "Certus es?",
+            "AuthorInvalid": "Auctor inscriptio irritum!",
+            "Address": "Oratio",
+            "CoverImage": "Cover image",
+            "UploadCoverImage": "Index operimentum imaginem",
+            "CommissionAddressInvalid": "Commissio inscriptio invalida",
+            "OnSale": "de sale",
+            "OffSale": "off sale",
+            "CreateSeries": "Create Series",
+            "UpdateSeries": "Renovatio Series",
+            "SeriesInfo": "Series Info",
+            "SelectAuthor": "Lego auctor",
+            "NewItem": "Nova series NFT",
+            "NamePlaceholder": "Intra seriem nominis",
+            "DescPlaceholder": "Intra seriem descriptionem",
+            "EndingIn": "ending in"
+        },
+        "contract": {
+            "CreateContract": "Partum contractus",
+            "SelectContract": "Lego contractus",
+            "CreateContractFor": "Create contractus pro {{userName}}",
+            "ContractFor": "Contractus pro {{userName}}",
+            "UpdateContract": "Update Contractus",
+            "TransferOwnership": "Transfer Occupatio",
+            "SetBaseURI": "Set Base URI",
+            "SetSuffix": "Set Suffix",
+            "CurrentOwner": "Current Possessor",
+            "CurrentBaseURL": "Current BaseURL",
+            "ContractAddressAbsent": "Oratio contractus absentis",
+            "FactoryAddressAbsent": "Factory oratio absente",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Titulus requiritur",
+            "SymbolRequired": "Signum requiri",
+            "TypeContractName": "contractus nomen",
+            "TypeContractSymbol": "contractus signum (max X chars)"
+        },
+        "contests": {
+            "Title": "Certamina",
+            "NewContest": "Novum Contest"
+        },
+        "collections": {
+            "Title": "Collectiones",
+            "EnterTitle": "intrare titulum",
+            "EnterDescription": "intrare descriptionem",
+            "NewCollection": "Nova Collectio",
+            "Name": "Nomen",
+            "Icon": "Icon",
+            "Description": "Descriptio",
+            "Author": "Author",
+            "SelectCollection": "Select collection",
+            "Value": "Precium",
+            "AreYouSure": "Certus es?",
+            "AuthorInvalid": "Auctor inscriptio irritum!",
+            "Address": "Oratio",
+            "CoverImage": "Cover image",
+            "UploadIcon": "Index icon",
+            "CommissionAddressInvalid": "Commissio inscriptio invalida",
+            "OnSale": "de sale",
+            "OffSale": "off sale",
+            "CreateCollection": "Create Collection",
+            "UpdateCollection": "Update Collectionis",
+            "CollectionInfo": "Collectio Info",
+            "SelectAuthor": "Lego auctor",
+            "NewItem": "New NFT Collection",
+            "NamePlaceholder": "Intra collectio nomen",
+            "DescPlaceholder": "Intra descriptionem collectio",
+            "EndingIn": "ending in",
+            "SubmitSeries": "Submittere a Series"
+        },
+        "import": {
+            "importNFT": "Inferentes NFT&#39;s",
+            "importAttributes": "Import NFT attributa",
+            "fileNotFound": "Nos paenitet, CSV fasciculus non inventus est.",
+            "fileEmpty": "Nos paenitet, CSV fasciculus inanis est.",
+            "userIdNotFound": "user est sed id inanis",
+            "errorLine": "line {{1}}",
+            "fieldNotFound": "Required field &quot; {{1}} &quot; not found",
+            "displayTypeEmpty": "Propono genus pro &quot; {{1}} &quot; non inventum",
+            "taskStreamInvalid": "negotium amnis invalidum",
+            "instructionsEmpty": "negotium amnis instructiones inanes",
+            "complete": "Complete",
+            "activateUsers": "mitte activation ad users?",
+            "importProgress": "Progressus",
+            "importOptions": "Optiones",
+            "sampleCSV": "Sample CSV",
+            "fileLabel": "Upload Spreadsheet:",
+            "errorsTitle": "Errores occurrit"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filter by NFT Collections",
+                "ShowNFTCollection": "Show NFT collection in ...",
+                "AllCollections": "All Collections"
+            },
+            "ByUser": {
+                "AllAuthors": "Omnes Auctores",
+                "AllUsers": "omnes",
+                "FilterByAuthors": "Filtrum ab Authoribus"
+            }
+        },
+        "Back": "Ad Collection",
+        "attributes": {
+            "Title": "Curo attributa",
+            "Attributes": "Attributes",
+            "DisplayTitle": "Display Type",
+            "AddDisplayType": "Addere novam ostentationem generis",
+            "NewDisplay": "Nova Propono",
+            "TraitTitle": "Type quivis",
+            "AddTraitTitle": "Adde novum genus lineamentum",
+            "NewTrait": "Novum Trait Type",
+            "ValueTitle": "Precium",
+            "AddValueTitle": "Adde novum valorem",
+            "NewValue": "Novum Valorem",
+            "NewAttribute": "Novum attributum",
+            "UpdateAttributes": "Update attributa",
+            "SaveAttributes": "Servare attributa"
+        },
+        "profile": {
+            "LogOut": "Log sicco",
+            "Title": "Profile for {{userName}}",
+            "Description": "User details",
+            "aboutPlaceholder": "Edit Bio",
+            "UploadCoverPhoto": "Index Cover Image",
+            "SureLogOut": "Visne vero e log?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "series Id",
+                        "owner": "dominus",
+                        "currency": "urrency",
+                        "price": "Pretium",
+                        "beneficiary": "Beneficiarius",
+                        "autoindex": "Autoindex",
+                        "duration": "Duratio",
+                        "rateInterval": "Rate intervallum",
+                        "rateAmount": "Rate moles"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "signa in hac serie signabuntur",
+                        "owner": "dominus exempli, aliter mittentis erit",
+                        "currency": "Currency signa empta, si nulla - pro numismatis indigenis",
+                        "price": "Pretium",
+                        "beneficiary": "Beneficiarius signa venditionis, alioquin mittentis",
+                        "autoindex": "Autoindex",
+                        "duration": "Obfirmo cum minting. Nulla est statim adepto.",
+                        "rateInterval": "situla interuallum speciale emptio",
+                        "rateAmount": "situla quantum ad specialem emptio"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(optional) back",
+                    "number": "numerus",
+                    "address": "oratio",
+                    "fraction": "fractio",
+                    "integer": "integer",
+                    "seconds": "seconds",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Profer",
+                "viewInstancesList": "Renovare List"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Series ID",
+                        "account": "Ratio",
+                        "amount": "Moles"
+                    },
+                    "small": {
+                        "seriesId": "novum signum erit in serie tali ID",
+                        "account": "dominus de novo creatus NFT. si non - utar vena pera",
+                        "amount": "quantum NFT ad monetariam"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(optional) back",
+                    "seriesId": "id",
+                    "account": "propter",
+                    "amount": "moles",
+                    "integer": "integer"
+                },
+                "btn": {
+                    "Purchase": "Purchase",
+                    "SpecialPurchase": "Specialis emptio"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Oratio"
+                    },
+                    "small": {
+                        "account": "Oratio"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Aliquam Oratio"
+                },
+                "placeholders": {
+                    "account": "Oratio"
+                },
+                "addToWhitelist": "Add To Whitelist",
+                "removeFromWhitelist": "Remove a Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Thochen ID",
+                    "custodian": "Custos",
+                    "recipient": "Recipient"
+                },
+                "small": {
+                    "tokenId": "indicium id quod opus est cohibere vel unlock?",
+                    "custodian": "oratio potest recludam",
+                    "recipient": "electronica signa accipere"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Aliquam tokenId",
+                "invalidCustodian": "Aliquam Custodian",
+                "invalidRecipient": "Aliquam Recipient"
+            },
+            "placeholders": {
+                "optional": "(optional) back",
+                "tokenId": "id",
+                "custodian": "oratio"
+            },
+            "Lock": "cincinno",
+            "Unlock": "Basem",
+            "Locked": "clausa",
+            "CustodianAddress": "Custodi oratio",
+            "TokenWasClaimed": "Thochen &quot; {{title}} &quot; asseruit",
+            "TokenWasLocked": "Vestigium &quot; {{title}} &quot; clausum est",
+            "TokenWasUnlocked": "Thochen &quot; {{title}} &quot; reserata erat"
+        }
+    },
+    "fundrise": {
+        "placeholder": "typus aliquid de hac conlatione ..."
+    },
+    "currencies": {
+        "choose": "Elige monetæ"
+    }
+}

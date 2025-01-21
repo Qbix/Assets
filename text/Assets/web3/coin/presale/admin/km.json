@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "លក់ថូខឹន",
+                        "timestamps": "ដង",
+                        "prices": "តម្លៃ",
+                        "endTime": "ពេលវេលាបញ្ចប់",
+                        "thresholds": "កម្រិត",
+                        "bonuses": "ប្រាក់រង្វាន់"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "ម្ចាស់មិនអាចដកបានទេ។",
+                            "option1": "ម្ចាស់​អាច​ដក​ថូខឹន​បាន​លុះត្រាតែ​ពេល​បញ្ចប់​បាន​កន្លង​ផុត​ទៅ",
+                            "option2": "ម្ចាស់អាចដកថូខឹនបានគ្រប់ពេល"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "អាសយដ្ឋានសហគមន៍",
+                    "methodkeccack": "Keccak256 មុខងារសញ្ញា",
+                    "roleId": "លេខសម្គាល់តួនាទី",
+                    "sellingToken": "លក់អាសយដ្ឋាន Token",
+                    "prices": "ETH, តម្លៃ",
+                    "thresholds": "# នៃនិមិត្តសញ្ញា",
+                    "bonuses": "ប្រាក់រង្វាន់%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "មិនមានមូលនិធិទេ។"
+                },
+                "btns": {
+                    "createFund": "បង្កើតមូលនិធិ",
+                    "createFundInForm": "បង្កើត"
+                },
+                "fundAddress": "អាសយដ្ឋានមូលនិធិ",
+                "createFund": "បង្កើតមូលនិធិ",
+                "fundInfo": "ព័ត៌មាន",
+                "produce": "ផលិត",
+                "loading": "កំពុងផ្ទុក",
+                "viewInstancesList": "ធ្វើឱ្យបញ្ជីឡើងវិញ"
+            }
+        }
+    }
+}

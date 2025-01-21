@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Sabaraha pikeun investasi?"
+                    },
+                    "placeholders": {
+                        "amount": "Jumlahna {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Meuli",
+                    "execute": "Laksanakeun"
+                }
+            }
+        }
+    }
+}

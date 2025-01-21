@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Ho tsetela bokae?"
+                    },
+                    "placeholders": {
+                        "amount": "Chelete ea {{nativeCoin}}",
+                        "max": "Boholo: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Reka",
+                    "execute": "Phetha"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Doer",
+                        "amount": "Tal"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Doer",
+                        "amount": "Tal"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Doer",
+                    "amount": "tal"
+                },
+                "btns": {
+                    "stake": "Stake"
+                },
+                "stake": "Stake",
+                "loading": "Loading"
+            }
+        }
+    }
+}

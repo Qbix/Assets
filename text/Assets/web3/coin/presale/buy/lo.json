@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "ລົງທຶນເທົ່າໃດ?"
+                    },
+                    "placeholders": {
+                        "amount": "ຈຳນວນ {{nativeCoin}}",
+                        "max": "ສູງສຸດ: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "ຊື້",
+                    "execute": "ປະຕິບັດ"
+                }
+            }
+        }
+    }
+}

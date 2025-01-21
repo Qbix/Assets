@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Çiqas veberhênanê?"
+                    },
+                    "placeholders": {
+                        "amount": "Hejmara {{nativeCoin}}",
+                        "max": "Herî zêde: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Kirrîn",
+                    "execute": "Dardekirin"
+                }
+            }
+        }
+    }
+}

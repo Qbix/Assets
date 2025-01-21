@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Konbyen pou envesti?"
+                    },
+                    "placeholders": {
+                        "amount": "Kantite {{nativeCoin}}",
+                        "max": "Maksimòm: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Achte",
+                    "execute": "Egzekite"
+                }
+            }
+        }
+    }
+}

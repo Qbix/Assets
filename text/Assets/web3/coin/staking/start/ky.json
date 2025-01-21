@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Узактыгы",
+                        "amount": "Суммасы"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Узактыгы",
+                        "amount": "Суммасы"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Узактыгы",
+                    "amount": "сумма"
+                },
+                "btns": {
+                    "stake": "Коюм"
+                },
+                "stake": "Коюм",
+                "loading": "Жүктөө"
+            }
+        }
+    }
+}

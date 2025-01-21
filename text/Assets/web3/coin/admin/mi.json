@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tohuErc20",
+                    "duration": "Roanga",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "rongonuiToken",
+                    "donations": "koha",
+                    "rewardsRateFraction": "utuHauinga",
+                    "numerator": "kaitātai",
+                    "denominator": "taurite"
+                },
+                "small": {
+                    "tokenErc20": "tohuErc20",
+                    "duration": "Te roanga i nga ra",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "rongonuiToken",
+                    "donations": "koha",
+                    "rewardsRateFraction": "utuHauinga",
+                    "numerator": "kaitātai",
+                    "denominator": "taurite"
+                }
+            },
+            "placeholders": {
+                "optional": "(kōwhiringa)",
+                "tuple": "tuple []",
+                "number": "tau",
+                "address": "wāhi noho",
+                "fraction": "hautau",
+                "integer": "tauoti",
+                "seconds": "hēkona",
+                "days": "nga ra",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Karekau he puna"
+            },
+            "btns": {
+                "createPool": "Waihanga Puna",
+                "createPoolInForm": "Waihanga"
+            },
+            "createPool": "Waihanga Puna",
+            "produce": "Hua",
+            "loading": "Uta ana",
+            "viewInstancesList": "Tāmata Rārangi"
+        }
+    }
+}

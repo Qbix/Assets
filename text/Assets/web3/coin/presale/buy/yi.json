@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "ווי פיל צו ינוועסטירן?"
+                    },
+                    "placeholders": {
+                        "amount": "סכום פון {{nativeCoin}}",
+                        "max": "מאַקסימום: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "קויפן",
+                    "execute": "ויספירן"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Durata",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "donazioni",
+                    "rewardsRateFraction": "ricompenseRateFraction",
+                    "numerator": "numeratore",
+                    "denominator": "denominatore"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Durata in ghjorni",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "donazioni",
+                    "rewardsRateFraction": "ricompenseRateFraction",
+                    "numerator": "numeratore",
+                    "denominator": "denominatore"
+                }
+            },
+            "placeholders": {
+                "optional": "(opcional)",
+                "tuple": "tupla[]",
+                "number": "numeru",
+                "address": "indirizzu",
+                "fraction": "frazzioni",
+                "integer": "interu",
+                "seconds": "seconde",
+                "days": "ghjorni",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Ùn ci hè micca piscine"
+            },
+            "btns": {
+                "createPool": "Crea piscina",
+                "createPoolInForm": "Crià"
+            },
+            "createPool": "Crea piscina",
+            "produce": "Pruduzzione",
+            "loading": "Carica",
+            "viewInstancesList": "Refresh List"
+        }
+    }
+}

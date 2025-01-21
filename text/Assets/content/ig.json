@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Njehie",
+        "WalletAbsent": "Ejikọtaghị obere akpa ahụ.",
+        "Rendering": "Enwere mperi mgbe ị na-eme <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Ọnụ ahịa achọrọ!",
+        "NameRequired": "Achọrọ aha!",
+        "PriceInvalid": "Ọnụ ahịa ezighi ezi!",
+        "AmountInvalid": "Ọnụ ego ezighi ezi!",
+        "TransactionFailed": "Azụmahịa ahụ adaala",
+        "ChainNotSupported": "Anaghị akwado yinye ahọpụtara. Yinye akwadoro: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Achọrọ MetaMask jikọọ na ngwa",
+        "UserNotLoggedInMetaMask": "Onye ọrụ abanyeghị na MetaMask",
+        "CurrencyNotFound": "Ahụghị ego",
+        "WrongChain": "Nke a NFT kere n&#39;okpuru &quot; {{chain}} &quot;. Biko jiri yinye a.",
+        "NoRecipientSelected": "Ọnweghị onye nnata ahọpụtara",
+        "CantManageFrozenSeries": "Ị nweghị ike ijikwa usoro oyi kpọnwụrụ",
+        "SubscriptionStreamNotPaid": "Ị naghị akwụ ụgwọ ka ịlele ọdịnaya a. Biko pịa {{subscriptionUrl}} wee denye aha na atụmatụ kwesịrị ekwesị."
+    },
+    "admin": {
+        "Title": "Nhazi akụrụngwa",
+        "SubscriptionTitle": "Atụmatụ ndenye aha"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Pịa iji kwụọ ụgwọ"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : A na-ahazi ụgwọ ahụ maka {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Daalụ maka ịkwụ ụgwọ gị na {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} debanyere aha na {{plan.title}}",
+        "YouSubscribedTo": "Edebanyela gị aha na {{plan.title}}",
+        "Assets\/credits\/alert": "Ị nwere njikere metụtara akaụntụ gị"
+    },
+    "charge": {
+        "Subject": "Ị nwetara ugwo nke {{displayAmount}} site na {{call 'publisher.displayName'}} maka &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, nke a bụ naanị ime ka ị mata {{1}} agbagoro {{2}} maka {{3}} site na {{4}}"
+    },
+    "charged": {
+        "Subject": "Daalụ maka ịkwụ ụgwọ gị maka &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , nke a bụ naanị nkwenye ngwa ngwa na ị kwụgoro {{2}} ruo {{3}} maka {{4}} nke ọma."
+    },
+    "connectedAccount": {
+        "Title": "Jikọọ akaụntụ",
+        "Success": "Ihe ịga nke ọma",
+        "YourAccountCreated": "Emepụtala akaụntụ gị nke ọma!",
+        "YourAccountAlreadyCreated": "Emepụtala akaụntụ gị ma dị njikere iji"
+    },
+    "payment": {
+        "AboutOrder": "Ozi gbasara usoro",
+        "PaymentMethod": "Ụzọ nkwụnye ụgwọ",
+        "ContactInfo": "Ozi kọntaktị",
+        "Pay": "Kwụọ",
+        "PaymentSucceeded": "Ahaziri ịkwụ ụgwọ ahụ nke ọma",
+        "PaymentProcessing.": "A na-ahazi ịkwụ ụgwọ gị",
+        "FailTryAgain": "Ụgwọ gị agaghị aga nke ọma. Biko nwaa ọzọ.",
+        "SomethingWrong": "Ọ nwere ihe adịghị mma",
+        "PaymentStatus": "Ọkwa ịkwụ ụgwọ",
+        "PayTo": "kwụọ {{displayName}}",
+        "ChooseCurrency": "Họrọ ego",
+        "YouCanSendUpTo": "Ị nwere ike izipu ruo {{amount}} {{symbol}}",
+        "Send": "Ziga",
+        "EnterAmount": "tinye ego"
+    },
+    "credits": {
+        "InviteAcceptedBy": "{{invitedUserName}} nabatara òkù a",
+        "InvitedUserFilledStream": "{{invitedUserName}} jupụtara {{FilledStreamTitle}}",
+        "ForFillingStream": "Maka njuputa {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Ị nwere kredit {{amount}} ịmalite",
+        "PaymentFor": "Ụgwọ maka &quot; {{1}} &quot;",
+        "PaymentTo": "Ịkwụ ụgwọ na {{1}}",
+        "PaymentToUser": "Nyefee na {{toUserName}}",
+        "CreatePrivateChat": "maka nkata nzuzo na {{toUserName}}",
+        "CreatePaidStream": "maka ịmepụta {{toStreamName}}",
+        "JoinedPaidStream": "maka ndoputa na &quot; <a data-publisherId='<i translate='no'>999&#39; data-streamAha=&#39; {{toStreamName}} &quot;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "maka ịmepụta obodo &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "dị ka nkwụghachi ndoputa na &quot; <a data-publisherId='<i translate='no'>999&#39; data-streamAha=&#39; {{fromStreamName}} &quot;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Zụrụ kredit {{amount}}",
+        "BonusCredits": "kredit {{amount}} daashi",
+        "BuyAmountCredits": "Zụrụ kredit {{amount}}",
+        "WatchClip": "maka ikiri {{fromStreamTitle}}",
+        "MissingCredits": "Ebe kredit na-efu efu",
+        "YouMissingCredits": "Ị ga-achọ kredit {{amount}} ọzọ iji gaa n&#39;ihu.",
+        "BuyCredits": "Zụrụ kredit",
+        "BuyBonus": "Ịzụta kredit {{amount}} n&#39;otu oge ga-eweta ego nke kredit {{bonus}} .",
+        "Buy": "Zụrụ",
+        "PurchaseCredits": "Ịzụta Ebe E Si Nweta",
+        "Credits": "Ebe e si nweta",
+        "ErrorInvalidAmount": "Ọnụ ego ezighi ezi",
+        "ErrorInvalidCurrency": "Ọ dị nwute, anyị akwadobeghị ego {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kredit",
+            "BonusCredits": "{{amount}} kredit"
+        }
+    },
+    "history": {
+        "Date": "Ụbọchị",
+        "Amount": "Ọnụ ego",
+        "Description": "Nkọwa",
+        "Client": "Onye ahịa",
+        "User": "Onye ọrụ",
+        "To": "ka",
+        "From": "si",
+        "SeeHistory": "Hụ akụkọ ịkwụ ụgwọ maka {{1}}",
+        "HistoryEmpty": "Enweghị azụmahịa ma",
+        "PaymentFor": "Ezitere kredit {{amount}}",
+        "PaymentTo": "Ezitere kredit {{amount}}",
+        "PaymentToUser": "Ezitere kredit {{amount}}",
+        "CreatePaidStream": "Ejila kredit {{amount}}",
+        "WatchClip": {
+            "+": "Nweta kredit {{amount}}",
+            "-": "Ejila kredit {{amount}}"
+        },
+        "JoinedPaidStream": {
+            "+": "Nweta kredit {{amount}}",
+            "-": "Ejila kredit {{amount}}"
+        },
+        "LeftPaidStream": {
+            "+": "Anatara kredit {{amount}}",
+            "-": "Ezitere kredit {{amount}}"
+        },
+        "CreatedCommunity": "Ejila kredit {{amount}}",
+        "BoughtCredits": "Zụrụ kredit {{amount}}",
+        "BonusCredits": "Nweta kredit {{amount}} bonus",
+        "InviteAcceptedBy": "Nweta kredit {{amount}}",
+        "Streams_user_firstname": "Nweta kredit {{amount}}",
+        "Streams_user_lastname": "Nweta kredit {{amount}}",
+        "Streams_user_icon": "Nweta kredit {{amount}}",
+        "Places_user_location": "Nweta kredit {{amount}}",
+        "Streams_greeting": "Nweta kredit {{amount}}",
+        "YouHaveCreditsToStart": "Nweta kredit {{amount}}",
+        "InvitedUserFilledStream": "Nweta kredit {{amount}}",
+        "ForFillingStream": "Nweta kredit {{amount}}",
+        "CreatePrivateChat": "Ejila kredit {{amount}}"
+    },
+    "subscriptions": {
+        "infoTitle": "Nye Ozi Ịkwụ Ụgwọ",
+        "confirm": {
+            "title": "Bido ndenye aha",
+            "message": "Bido ndenye aha ugboro ugboro na &quot; {{title}} &quot;?",
+            "ok": "Ọ DỊ MMA",
+            "cancel": "Kagbuo"
+        },
+        "CreditOrDebitCard": "Kaadị kredit ma ọ bụ debit",
+        "SubscribePayment": "Ịdenye aha ịkwụ ụgwọ",
+        "ImmediatePayment": "Ịkwụ Ụgwọ ozugbo",
+        "ProcessingPayment": "Ịkwụ ụgwọ nhazi",
+        "SubscriptionAlreadyPaid": "Ndenye aha a akwụgogoro",
+        "SubscriptionNotActive": "Ndebanye aha anaghị arụ ọrụ ugbu a",
+        "Subscribed": "Edebanyere aha",
+        "Unsubscribed": "Edebanyeghị aha",
+        "Unsubscribe": "Wepụ aha",
+        "Subscribe": "Debanye aha",
+        "Started": "Malitere",
+        "EndsIn": "Akwụsị na",
+        "NextPay": "Ụgwọ na-esote",
+        "Period": "Oge",
+        "Price": "Ọnụ ahịa",
+        "AreYouSureUnsubscribe": "Ị ji n&#39;aka na ịchọrọ iwepụ aha na atụmatụ a?",
+        "YouUnsubscribedFromPlan": "Ịhapụla aha na atụmatụ &quot; {{planTitle}} &quot;. Agaghị akwụ gị ụgwọ oge ọzọ, mana ndenye aha gị ga-aga n&#39;ihu ruo {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "aha atụmatụ",
+            "PricePlaceholder": "ọnụ ahịa",
+            "SubscriptionTitle": "Atụmatụ ndenye aha",
+            "DescriptionPlaceholder": "nkọwa atụmatụ ndenye aha",
+            "AreYouSureDeletePlan": "Ị ji n&#39;aka na ịchọrọ ihichapụ atụmatụ a?",
+            "Duration": "Ogologo oge",
+            "Discount": "Mbelata",
+            "SavePlan": "Chekwa",
+            "Interrupt": "Kwụsị",
+            "Continue": "Gaa n&#39;ihu",
+            "NewPlan": "Atụmatụ ọhụrụ",
+            "SelectDisplayType": "Họrọ {{displayType}}",
+            "EndDate": "ụbọchị ngwụcha",
+            "Available": "Dị",
+            "Hidden": "Zoro ezo",
+            "InviteOnly": "Naanị ịkpọ òkù",
+            "CantSubscribeUnlessInvited": "Ị nweghị ike ịdenye aha na atụmatụ a ma ọ bụrụ na akpọghị gị òkù"
+        }
+    },
+    "payments": {
+        "infoTitle": "Tọọ ozi ịkwụ ụgwọ",
+        "BuyAmountCredits": "Zụrụ kredit {{amount}}",
+        "confirm": {
+            "title": "Kwuo ugwo",
+            "message": "Ị kwenyere ịkwụ {{symbol}} {{amount}} ?",
+            "ok": "Ọ DỊ MMA",
+            "cancel": "Kagbuo"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Ebe e si nweta",
+            "description": "na-echekwa kredit na ịkwụ ụgwọ"
+        },
+        "Assets\/plan": {
+            "displayType": "Atụmatụ ndenye aha",
+            "description": "atụmatụ ndenye aha"
+        },
+        "Assets\/subscription": {
+            "displayType": "Ndebanye aha",
+            "description": "ndenye aha"
+        },
+        "Assets\/product": {
+            "displayType": "Ngwaahịa",
+            "description": "ngwaahịa a na-ere"
+        },
+        "Assets\/service": {
+            "displayType": "Ọrụ",
+            "description": "a na-enye ọrụ"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Nweta kredit {{amount}}"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Zụrụ kredit {{amount}}"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "kredit {{amount}} daashi"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Ejila kredit {{amount}}"
+        },
+        "Assets\/credits\/sent": {
+            "content": "E zigara kredit {{amount}} na {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Nweta kredit {{amount}} site na {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Ị nwere kredit ezughi oke na akaụntụ gị. Biko gaa na <a href='<i translate='no'>njikọ 999 &#39;&gt;<\/a> na-esote ịzụta kredit ọzọ."
+        }
+    },
+    "billing": {
+        "Title": "Ịgba ụgwọ akụrụngwa",
+        "CreditsMinimum": "Kredit kacha nta",
+        "CreditsToAdd": "Ekele ịgbakwunye",
+        "Save": "Chekwa",
+        "ThisLink": "njikọ a",
+        "errors": {
+            "CreditsMinimumNegative": "Opekempe kredit enweghị ike ịdị njọ",
+            "CreditsToAddNegative": "Ebe kredit iji gbakwunye enweghị ike ịbụ nke na-adịghị mma"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Ọrụ Ọhụrụ",
+            "TitlePlaceholder": "Aha ọrụ",
+            "PricePlaceholder": "Tọọ ọnụ ahịa",
+            "LinkPlaceholder": "tọọ njikọ ozi agbakwunyere",
+            "DescriptionPlaceholder": "Nkọwa ọrụ",
+            "SaveService": "Chekwa Ọrụ",
+            "SelectRequiredParticipants": "Ndị so na ya metụtara chọrọ",
+            "RequiredParticipantsDesc": "Biko họrọ ndị so na ha nwere njikọ nke achọrọ ka ha jiri ọrụ a (dịka ọmụmaatụ anụ ụlọ maka &quot;Nkịta ihe ngosi&quot;, ma ọ bụ ụmụaka maka &quot;ezumike ụmụaka&quot; wdg). Ọ bụrụ na akwụ ụgwọ ọrụ, onye ọrụ ga-akwụkwa ụgwọ maka ndị sonyere ọ bụla metụtara ya."
+        },
+        "EditServiceTemplate": {
+            "Title": "Dezie Ọrụ"
+        },
+        "ManageServiceTemplates": "Jikwaa ndebiri ọrụ",
+        "ManageServices": "Jikwaa ọrụ",
+        "Free": "N&#39;efu",
+        "OptionalContribution": "Onyinye nhọrọ",
+        "RequiredPayment": "Ịkwụ ụgwọ achọrọ",
+        "AreYouSureDelete": "Ị ji n&#39;aka na ịchọrọ ihichapụ ọrụ a?",
+        "AmountServicesRelated": "Enwere ohere {{amount}} metụtara ọrụ a. A ga-ewepụkwa ha."
+    },
+    "transfer": {
+        "SelectRecipient": "Họrọ onye nnata",
+        "TransactionSuccess": "Ihe ịga nke ọma azụmahịa",
+        "OrTypeWalletAddress": "MA ọ bụ pịnye adreesị obere akpa nnata",
+        "AppCredits": "Ebe e si nweta ngwa"
+    },
+    "NFT": {
+        "Title": "Aha",
+        "Name": "Aha",
+        "EnterName": "Tinye aha",
+        "EnterAuthorWallet": "Tinye obere akpa odee",
+        "InformationAboutTitle": "Ozi gbasara {{title}} NFT",
+        "Description": "Nkọwa",
+        "DetailedInformationAboutNFT": "Ozi zuru ezu gbasara NFT",
+        "PresaleStarts": "Presale na-amalite Dec 23",
+        "OwnerUserNotFound": "Edebanyeghị aha onye nwe NFT a na ngwa anyị.",
+        "BuyNow": "Zụta ugbu a",
+        "Buy": "Zụrụ",
+        "Add": "Tinye",
+        "Remove": "Wepu",
+        "NoNFTyet": "Enweghị NFT ma",
+        "Conversation": "Mkparịta ụka",
+        "Create": "Mepụta",
+        "CurrentBid": "Ahịa ugbu a",
+        "StartingIn": "Malite na",
+        "EndingIn": "Na-agwụ agwụ",
+        "CreateNFT": "Mepụta NFT",
+        "TitlePlaceholder": "Nye NFT gị aha",
+        "DescriptionPlaceholder": "Nye nkọwa NFT gị",
+        "CreateYourNFT": "Mepụta NFT gị",
+        "Royalties": "Ụgwọ eze",
+        "RoyaltyPlaceholder": "Nhọrọ. Ego akwụgoro nye onye okike tupu ebufee ya.",
+        "ExpirationDate": "Ụbọchị mmebi",
+        "StartingDate": "Ụbọchị mmalite",
+        "BidsBelowThisAmount": "Agaghị anabata ntinye ego n&#39;okpuru ego a",
+        "MinimumBid": "Ọnụ ahịa kacha nta",
+        "Author": "Odee",
+        "Price": "Ọnụ ahịa",
+        "Commission": "Commission",
+        "EnterCommission": "Tinye ọrụ",
+        "Owner": "Onye nwe",
+        "SelectCategory": "Họrọ udi",
+        "Day": "Ụbọchị",
+        "Days": "Ụbọchị",
+        "Hour": "Oge awa",
+        "Hours": "Oge awa",
+        "Minute": "Nkeji",
+        "Minutes": "Nkeji",
+        "Second": "Nke abụọ",
+        "Seconds": "Sekọnd",
+        "SalesCreator": "nke ire ga-aga onye kere",
+        "Details": "Nkọwa",
+        "Bids": "Ahịa",
+        "History": "Akụkọ ihe mere eme",
+        "LoremIpsum": "Lorem Ipsum bụ naanị ederede nke ụlọ ọrụ mbipụta na ụdị mbipụta.",
+        "PutOnSale": "Tinye na ire ere",
+        "PutOffSale": "Wepụ na ire ere",
+        "Transfer": "Nyefee",
+        "Actions": "Omume",
+        "Claim": "Mgbarakwa",
+        "ClaimNFT": "Kwuo NFT",
+        "Unlocking": "Imeghe",
+        "Unlock": "Mepee",
+        "Update": "Mmelite",
+        "UpdateToken": "Melite Token",
+        "UpdateNFT": "Melite NFT",
+        "CreateToken": "Mepụta Token",
+        "PlaceBid": "Ebe Bid",
+        "SoldOut": "rere",
+        "NotOnSale": "Ọ bụghị Ọrịre",
+        "NftName": "NFT aha",
+        "DescribeYourNFT": "Biko kọwaa NFT gị",
+        "NFTImage": "Foto maka NFT",
+        "NFTVideo": "Vidiyo maka NFT, ọ bụrụ na ọ bụla",
+        "GenerateDescription": "ma ọ bụ mepụta onwe ya",
+        "UploadMovie": "Bulite ihe nkiri",
+        "MovieSource": "Isi mmalite ihe nkiri",
+        "MovieURL": "URL ihe nkiri",
+        "UploadFile": "Bulite faịlụ",
+        "PutOnMarketplace": "Tinye n&#39;ahịa",
+        "InstantPurchase": "Tinye ọnụ ahịa iji nye ndị ọrụ ohere ịzụta NFT gị ozugbo",
+        "FixedPrice": "Ọnụ ego edobere",
+        "TimedAuction": "Mgbara ahịa oge",
+        "OpenForBids": "Mepee maka ọnụahịa",
+        "PriceOnePiece": "Tinye ọnụ ahịa maka otu ibe",
+        "EnterPrice": "Tinye ọnụ ahịa",
+        "EnterMinimumBid": "Tinye ọnụ ahịa kacha nta",
+        "SelectChain": "Họrọ yinye",
+        "Currency": "Ego",
+        "AreYouSureDeleteImage": "Ị ji n&#39;aka na ịchọrọ iwepụ foto?",
+        "AreYouSureDeleteVideo": "Ị ji n&#39;aka na ịchọrọ iwepụ vidiyo?",
+        "series": {
+            "Name": "Aha",
+            "Icon": "Akara ngosi",
+            "Description": "Nkọwa",
+            "Author": "Odee",
+            "SelectSeries": "Họrọ usoro",
+            "Value": "Uru",
+            "AreYouSure": "O doro gị anya?",
+            "AuthorInvalid": "Adreesị odee ezighi ezi!",
+            "Address": "adreesị",
+            "CoverImage": "Onyonyo mkpuchi",
+            "UploadCoverImage": "Bulite onyonyo mkpuchi",
+            "CommissionAddressInvalid": "Adreesị kọmitii ezighi ezi",
+            "OnSale": "na ire ere",
+            "OffSale": "kwụsịrị ire ere",
+            "CreateSeries": "Mepụta usoro",
+            "UpdateSeries": "Mmelite usoro",
+            "SeriesInfo": "Usoro Ozi",
+            "SelectAuthor": "Họrọ onye edemede",
+            "NewItem": "Usoro NFT ọhụrụ",
+            "NamePlaceholder": "Tinye aha usoro",
+            "DescPlaceholder": "Tinye nkọwa usoro",
+            "EndingIn": "Na-agwụ na"
+        },
+        "contract": {
+            "CreateContract": "Mepụta nkwekọrịta",
+            "SelectContract": "Họrọ nkwekọrịta",
+            "CreateContractFor": "Mepụta nkwekọrịta maka {{userName}}",
+            "ContractFor": "Nkwekọrịta maka {{userName}}",
+            "UpdateContract": "Mmelite nkwekọrịta",
+            "TransferOwnership": "Nyefee Nwe",
+            "SetBaseURI": "Tọọ ntọala URI",
+            "SetSuffix": "Tọọ Suffix",
+            "CurrentOwner": "Onye nwe ugbu a",
+            "CurrentBaseURL": "BaseURL dị ugbu a",
+            "ContractAddressAbsent": "Adreesị nkwekọrịta anọghị",
+            "FactoryAddressAbsent": "Adreesị ụlọ ọrụ anọghị",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Achọrọ aha",
+            "SymbolRequired": "Achọrọ akara",
+            "TypeContractName": "aha nkwekọrịta",
+            "TypeContractSymbol": "akara nkwekọrịta (max 10 chars)"
+        },
+        "contests": {
+            "Title": "Asọmpi",
+            "NewContest": "Asọmpi Ọhụrụ"
+        },
+        "collections": {
+            "Title": "Nchịkọta",
+            "EnterTitle": "tinye aha",
+            "EnterDescription": "tinye nkọwa",
+            "NewCollection": "Nchịkọta ọhụrụ",
+            "Name": "Aha",
+            "Icon": "Akara ngosi",
+            "Description": "Nkọwa",
+            "Author": "Odee",
+            "SelectCollection": "Họrọ mkpokọta",
+            "Value": "Uru",
+            "AreYouSure": "O doro gị anya?",
+            "AuthorInvalid": "Adreesị odee ezighi ezi!",
+            "Address": "adreesị",
+            "CoverImage": "Onyonyo mkpuchi",
+            "UploadIcon": "Bulite akara ngosi",
+            "CommissionAddressInvalid": "Adreesị kọmitii ezighi ezi",
+            "OnSale": "na ire ere",
+            "OffSale": "kwụsịrị ire ere",
+            "CreateCollection": "Mepụta mkpokọta",
+            "UpdateCollection": "Melite mkpokọta",
+            "CollectionInfo": "Ozi mkpokọta",
+            "SelectAuthor": "Họrọ onye edemede",
+            "NewItem": "Nchịkọta NFT ọhụrụ",
+            "NamePlaceholder": "Tinye aha nchịkọta",
+            "DescPlaceholder": "Tinye nkọwa mkpokọta",
+            "EndingIn": "Na-agwụ na",
+            "SubmitSeries": "Nyefee usoro"
+        },
+        "import": {
+            "importNFT": "Na-ebubata NFT",
+            "importAttributes": "Bubata njirimara NFT",
+            "fileNotFound": "Ndo, ahụghị faịlụ CSV.",
+            "fileEmpty": "Ndo, faịlụ CSV efu.",
+            "userIdNotFound": "onye ọrụ dị mana id efu",
+            "errorLine": "ahịrị {{1}}",
+            "fieldNotFound": "Achọtaghị ogige achọrọ &quot; {{1}} &quot;.",
+            "displayTypeEmpty": "Ụdị ngosi maka &quot; {{1}} &quot; ahụghị",
+            "taskStreamInvalid": "iyi ọrụ ezighi ezi",
+            "instructionsEmpty": "ọrụ iyi ntụziaka efu",
+            "complete": "Zuru oke",
+            "activateUsers": "zigara ndị ọrụ ozi mmalite?",
+            "importProgress": "Ọganihu",
+            "importOptions": "Nhọrọ",
+            "sampleCSV": "Budata ihe atụ CSV",
+            "fileLabel": "Bulite akwụkwọ akụkọ:",
+            "errorsTitle": "Njehie mere"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Nyocha site na mkpokọta NFT",
+                "ShowNFTCollection": "Gosi mkpokọta NFT na...",
+                "AllCollections": "Nchịkọta niile"
+            },
+            "ByUser": {
+                "AllAuthors": "Ndị ode akwụkwọ niile",
+                "AllUsers": "Onye ọ bụla",
+                "FilterByAuthors": "Nyocha site n&#39;aka ndị ode akwụkwọ"
+            }
+        },
+        "Back": "Laghachi na mkpokọta",
+        "attributes": {
+            "Title": "Jikwaa Àgwà",
+            "Attributes": "Àgwà",
+            "DisplayTitle": "Ụdị ngosi",
+            "AddDisplayType": "Tinye ụdị ngosi ọhụrụ",
+            "NewDisplay": "Ngosipụta ọhụrụ",
+            "TraitTitle": "Ụdị àgwà",
+            "AddTraitTitle": "Tinye ụdị njirimara ọhụrụ",
+            "NewTrait": "Ụdị Àgwà Ọhụrụ",
+            "ValueTitle": "Uru",
+            "AddValueTitle": "Tinye uru ọhụrụ",
+            "NewValue": "Uru Ọhụrụ",
+            "NewAttribute": "Àgwà ọhụrụ",
+            "UpdateAttributes": "Melite àgwà",
+            "SaveAttributes": "Chekwa àgwà"
+        },
+        "profile": {
+            "LogOut": "Wepụ",
+            "Title": "Profaịlụ maka {{userName}}",
+            "Description": "Nkọwa onye ọrụ",
+            "aboutPlaceholder": "Dezie Bio",
+            "UploadCoverPhoto": "Bulite Foto mkpuchi",
+            "SureLogOut": "Ị ji n&#39;aka na ị chọrọ ịpụ?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFT nkwekọrịta",
+                        "seriesId": "usoro Id",
+                        "owner": "Onye nwe",
+                        "currency": "Ego",
+                        "price": "Ọnụ ahịa",
+                        "beneficiary": "Onye na-erite uru",
+                        "autoindex": "Autoindex",
+                        "duration": "Ogologo oge",
+                        "rateInterval": "Ogologo oge",
+                        "rateAmount": "Ọnụ ego ole"
+                    },
+                    "small": {
+                        "NFTContract": "NFT nkwekọrịta",
+                        "seriesId": "A ga-ewepụta akara ngosi n&#39;usoro isiokwu a",
+                        "owner": "onye nwe ihe atụ, ma ọ bụghị a ga-ezitere",
+                        "currency": "Ego maka akara ngosi zụrụ, ma ọ bụrụ na efu - maka mkpụrụ ego ala",
+                        "price": "Ọnụ ahịa",
+                        "beneficiary": "Ndị na-erite uru na-ere tokens, ma ọ bụghị ya ga-ezigara ya",
+                        "autoindex": "Autoindex",
+                        "duration": "Mkpọchi mgbe emechara. Zero pụtara nweta ya ozugbo.",
+                        "rateInterval": "nkeji ịwụ maka ịzụrụ pụrụ iche",
+                        "rateAmount": "ego ịwụ maka ịzụrụ pụrụ iche"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(nhọrọ)",
+                    "number": "nọmba",
+                    "address": "adreesị",
+                    "fraction": "ntakiri",
+                    "integer": "ọnụọgụgụ",
+                    "seconds": "sekọnd",
+                    "uint256": "ihe 256",
+                    "uint192": "afọ192",
+                    "uint64": "ihe 64",
+                    "uint32": "ihe 32",
+                    "uint16": "otu16"
+                },
+                "produce": "Mepụta",
+                "viewInstancesList": "Ndepụta ume ọhụrụ"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "NJ usoro",
+                        "account": "Akaụntụ",
+                        "amount": "Ọnụ ego"
+                    },
+                    "small": {
+                        "seriesId": "ọhụrụ token ga-abụ n&#39;usoro nwere ụdị ID",
+                        "account": "onye nwe NFT emebere ohuru. ma ọ bụrụ na edoghị ya - ga-eji obere akpa ugbu a",
+                        "amount": "Ọnụ ego NFT ka mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(nhọrọ)",
+                    "seriesId": "id",
+                    "account": "akaụntụ",
+                    "amount": "ego",
+                    "integer": "ọnụọgụgụ"
+                },
+                "btn": {
+                    "Purchase": "Ịzụta",
+                    "SpecialPurchase": "Ịzụta pụrụ iche"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "adreesị"
+                    },
+                    "small": {
+                        "account": "adreesị"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Adreesị ezighi ezi"
+                },
+                "placeholders": {
+                    "account": "adreesị"
+                },
+                "addToWhitelist": "Tinye na listi ọcha",
+                "removeFromWhitelist": "Wepu na listi ọcha"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "NJ akara ngosi",
+                    "custodian": "Onye nlekọta",
+                    "recipient": "onye nnata"
+                },
+                "small": {
+                    "tokenId": "token id ihe kwesịrị igbachi ma ọ bụ kpọghee",
+                    "custodian": "adreesị nke nwere ike imeghe",
+                    "recipient": "adreesị nke ga-enweta akara ngosi"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId ezighi ezi",
+                "invalidCustodian": "Onye nlekọta na-ezighi ezi",
+                "invalidRecipient": "Nnata ezighi ezi"
+            },
+            "placeholders": {
+                "optional": "(nhọrọ)",
+                "tokenId": "id",
+                "custodian": "adreesị"
+            },
+            "Lock": "Mkpọchi",
+            "Unlock": "Mepee",
+            "Locked": "Akpọchiri",
+            "CustodianAddress": "Adreesị onye nlekọta",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; kwuru",
+            "TokenWasLocked": "Akpọchiri akara &quot; {{title}} &quot;.",
+            "TokenWasUnlocked": "A kpọchiri akara &quot; {{title}} &quot;."
+        }
+    },
+    "fundrise": {
+        "placeholder": "dee ihe gbasara onyinye a..."
+    },
+    "currencies": {
+        "choose": "Họrọ ego"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Hoefolle te ynvestearjen?"
+                    },
+                    "placeholders": {
+                        "amount": "It bedrach fan {{nativeCoin}}",
+                        "max": "Maksimum: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Keapje",
+                    "execute": "Útfiere"
+                }
+            }
+        }
+    }
+}

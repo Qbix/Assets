@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "A &#39;reic Token",
+                        "timestamps": "Amannan",
+                        "prices": "Prìsean",
+                        "endTime": "Àm Crìochnachaidh",
+                        "thresholds": "Slatan-tomhais",
+                        "bonuses": "Bònasan"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Chan urrainn don neach-seilbh tarraing air ais",
+                            "option1": "Faodaidh sealbhadair comharran a tharraing air ais dìreach às deidh deireadh-ùine seachad",
+                            "option2": "Faodaidh sealbhadair comharran a tharraing air ais uair sam bith"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Seòladh coimhearsnachd",
+                    "methodkeccack": "Gnìomh hash Keccak256",
+                    "roleId": "ID dreuchd",
+                    "sellingToken": "Seòladh reic Token",
+                    "prices": "ETH, prìs",
+                    "thresholds": "# de chomharran",
+                    "bonuses": "Bònas %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Chan eil airgead ann"
+                },
+                "btns": {
+                    "createFund": "Cruthaich Maoin",
+                    "createFundInForm": "Cruthaich"
+                },
+                "fundAddress": "Seòladh maoineachaidh",
+                "createFund": "Cruthaich Maoin",
+                "fundInfo": "Fiosrachadh",
+                "produce": "Toradh",
+                "loading": "A&#39; luchdachadh",
+                "viewInstancesList": "Liosta Ùrnaigh"
+            }
+        }
+    }
+}

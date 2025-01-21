@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Token di vendita",
+                        "timestamps": "Tempi",
+                        "prices": "Prezzi",
+                        "endTime": "Tempu di a fine",
+                        "thresholds": "Soglie",
+                        "bonuses": "Bonus"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "U pruprietariu ùn pò micca ritirassi",
+                            "option1": "U pruprietariu pò ritirare i tokens solu dopu a fine di u tempu passatu",
+                            "option2": "U pruprietariu pò ritirare i tokens in ogni momentu"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Indirizzu di a cumunità",
+                    "methodkeccack": "Funzione hash Keccak256",
+                    "roleId": "ID di rolu",
+                    "sellingToken": "Indirizzu di vendita di Token",
+                    "prices": "ETH, u prezzu",
+                    "thresholds": "# di tokens",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Ùn ci hè micca fondi"
+                },
+                "btns": {
+                    "createFund": "Crià u Fondu",
+                    "createFundInForm": "Crià"
+                },
+                "fundAddress": "Indirizzu di u fondu",
+                "createFund": "Crià u Fondu",
+                "fundInfo": "Info",
+                "produce": "Pruduzzione",
+                "loading": "Carica",
+                "viewInstancesList": "Refresh List"
+            }
+        }
+    }
+}

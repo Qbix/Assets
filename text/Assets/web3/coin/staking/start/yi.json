@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "רעזערוו טאָקען",
+                        "duration": "געדויער",
+                        "amount": "סומע"
+                    },
+                    "small": {
+                        "reserveToken": "רעזערוו טאָקען",
+                        "duration": "געדויער",
+                        "amount": "סומע"
+                    }
+                },
+                "placeholders": {
+                    "duration": "געדויער",
+                    "amount": "סומע"
+                },
+                "btns": {
+                    "stake": "פלעקל"
+                },
+                "stake": "פלעקל",
+                "loading": "Loading"
+            }
+        }
+    }
+}

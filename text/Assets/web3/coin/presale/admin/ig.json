@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Token ere",
+                        "timestamps": "Oge",
+                        "prices": "Ọnụ ahịa",
+                        "endTime": "Oge ngwụcha",
+                        "thresholds": "Ọnụ ụzọ",
+                        "bonuses": "Ego ego"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Onye nwe ya enweghị ike ịwepụ",
+                            "option1": "Onye nwe ya nwere ike ịwepụ akara ngosi naanị mgbe njedebe oge gafere",
+                            "option2": "Onye nwe ya nwere ike wepu akara oge ọ bụla"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Adreesị obodo",
+                    "methodkeccack": "Keccak256 hash ọrụ",
+                    "roleId": "NJ ọrụ",
+                    "sellingToken": "Adreesị Token ere",
+                    "prices": "ETH, ọnụ ahịa",
+                    "thresholds": "# nke akara",
+                    "bonuses": "ego %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Enweghị ego"
+                },
+                "btns": {
+                    "createFund": "Mepụta Ego",
+                    "createFundInForm": "Mepụta"
+                },
+                "fundAddress": "Adreesị ego",
+                "createFund": "Mepụta Ego",
+                "fundInfo": "Ozi",
+                "produce": "Mepụta",
+                "loading": "Na-ebugo",
+                "viewInstancesList": "Ndepụta ume ọhụrụ"
+            }
+        }
+    }
+}

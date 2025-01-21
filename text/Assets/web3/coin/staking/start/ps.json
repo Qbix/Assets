@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "موده",
+                        "amount": "مقدار"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "موده",
+                        "amount": "مقدار"
+                    }
+                },
+                "placeholders": {
+                    "duration": "موده",
+                    "amount": "مقدار"
+                },
+                "btns": {
+                    "stake": "داغ"
+                },
+                "stake": "داغ",
+                "loading": "بار کول"
+            }
+        }
+    }
+}

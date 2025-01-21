@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Alamar Siyar",
+                        "timestamps": "Lokaci",
+                        "prices": "Farashin",
+                        "endTime": "Karshen Lokaci",
+                        "thresholds": "Matsakaicin",
+                        "bonuses": "kari"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Mai shi ba zai iya janyewa ba",
+                            "option1": "Mai shi zai iya janye alamun kawai bayan ƙarshen lokaci ya wuce",
+                            "option2": "Mai shi na iya janye alamun kowane lokaci"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Adireshin al&#39;umma",
+                    "methodkeccack": "Keccak256 aikin hash",
+                    "roleId": "Matsayin ID",
+                    "sellingToken": "Adireshin Siyar da Token",
+                    "prices": "ETH, Farashin",
+                    "thresholds": "# Alamu",
+                    "bonuses": "Bonus%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Babu kudi"
+                },
+                "btns": {
+                    "createFund": "Ƙirƙiri Asusun",
+                    "createFundInForm": "Ƙirƙiri"
+                },
+                "fundAddress": "Adireshin kuɗi",
+                "createFund": "Ƙirƙiri Asusun",
+                "fundInfo": "Bayani",
+                "produce": "Kera",
+                "loading": "Ana lodawa",
+                "viewInstancesList": "Sabunta Lissafi"
+            }
+        }
+    }
+}

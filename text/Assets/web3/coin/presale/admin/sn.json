@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Kutengesa Chiratidzo",
+                        "timestamps": "Nguva",
+                        "prices": "Mitengo",
+                        "endTime": "Nguva Yekupera",
+                        "thresholds": "Zvikumbaridzo",
+                        "bonuses": "Mabhonasi"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Muridzi haakwanisi kubvisa",
+                            "option1": "Muridzi anogona kubvisa tokeni chete mushure mekupera kweTime",
+                            "option2": "Muridzi anogona kubvisa tokeni chero nguva"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Kero yenharaunda",
+                    "methodkeccack": "Keccak256 hash basa",
+                    "roleId": "Basa ID",
+                    "sellingToken": "Kutengesa Token kero",
+                    "prices": "ETH, Mutengo",
+                    "thresholds": "# yezviratidzo",
+                    "bonuses": "bhonasi %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Hakuna mari"
+                },
+                "btns": {
+                    "createFund": "Gadzira Fund",
+                    "createFundInForm": "Create"
+                },
+                "fundAddress": "Fund address",
+                "createFund": "Gadzira Fund",
+                "fundInfo": "Info",
+                "produce": "Produce",
+                "loading": "Loading",
+                "viewInstancesList": "Refresh List"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "عرصو",
+                        "amount": "رقم"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "عرصو",
+                        "amount": "رقم"
+                    }
+                },
+                "placeholders": {
+                    "duration": "عرصو",
+                    "amount": "رقم"
+                },
+                "btns": {
+                    "stake": "داغ"
+                },
+                "stake": "داغ",
+                "loading": "لوڊشيڊنگ"
+            }
+        }
+    }
+}

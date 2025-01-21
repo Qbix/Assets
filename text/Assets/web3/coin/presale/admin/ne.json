@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "टोकन बेच्दै",
+                        "timestamps": "समय",
+                        "prices": "मूल्यहरू",
+                        "endTime": "अन्त्य समय",
+                        "thresholds": "थ्रेसहोल्डहरू",
+                        "bonuses": "बोनसहरू"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "मालिकले फिर्ता लिन सक्दैन",
+                            "option1": "मालिकले अन्तिम समय बितिसक्दा मात्र टोकनहरू फिर्ता लिन सक्छ",
+                            "option2": "मालिकले कुनै पनि समयमा टोकनहरू फिर्ता लिन सक्छ"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "सामुदायिक ठेगाना",
+                    "methodkeccack": "Keccak256 ह्यास प्रकार्य",
+                    "roleId": "भूमिका ID",
+                    "sellingToken": "टोकन ठेगाना बेच्दै",
+                    "prices": "ETH, मूल्य",
+                    "thresholds": "# टोकनहरू",
+                    "bonuses": "बोनस %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "त्यहाँ कुनै कोष छैन"
+                },
+                "btns": {
+                    "createFund": "कोष सिर्जना गर्नुहोस्",
+                    "createFundInForm": "सिर्जना गर्नुहोस्"
+                },
+                "fundAddress": "कोष ठेगाना",
+                "createFund": "कोष सिर्जना गर्नुहोस्",
+                "fundInfo": "जानकारी",
+                "produce": "उत्पादन गर्नुहोस्",
+                "loading": "लोड गर्दै",
+                "viewInstancesList": "सूची ताजा गर्नुहोस्"
+            }
+        }
+    }
+}

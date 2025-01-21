@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Feil",
+        "WalletAbsent": "Lommeboken er ikke tilkoblet.",
+        "Rendering": "Det var feil under gjengivelsen av <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Pris kreves!",
+        "NameRequired": "Navn kreves!",
+        "PriceInvalid": "Pris ugyldig!",
+        "AmountInvalid": "Beløp ugyldig!",
+        "TransactionFailed": "Transaksjonen mislyktes",
+        "ChainNotSupported": "Den valgte kjeden støttes ikke. Støttet kjede: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Trenger MetaMask koblet til for å jobbe med applikasjonen",
+        "UserNotLoggedInMetaMask": "Brukeren er ikke logget inn på MetaMask",
+        "CurrencyNotFound": "Finner ikke valuta",
+        "WrongChain": "Denne NFT opprettet under &quot; {{chain}} &quot;. Vennligst bruk denne kjeden.",
+        "NoRecipientSelected": "Ingen mottaker er valgt",
+        "CantManageFrozenSeries": "Du kan ikke administrere frosne serier",
+        "SubscriptionStreamNotPaid": "Du har ikke betalt for å se dette innholdet. Klikk {{subscriptionUrl}} og abonner på den aktuelle planen."
+    },
+    "admin": {
+        "Title": "Administrative eiendeler",
+        "SubscriptionTitle": "Abonnementsplaner"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Trykk for å betale"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : belastningen er behandlet for {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Takk for betalingen til {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} abonnerer på {{plan.title}}",
+        "YouSubscribedTo": "Du har blitt abonnert på {{plan.title}}",
+        "Assets\/credits\/alert": "Du har et varsel knyttet til kontoen din"
+    },
+    "charge": {
+        "Subject": "Du mottok en betaling på {{displayAmount}} fra {{call 'publisher.displayName'}} for &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hei, dette er bare for å fortelle deg {{1}} har blitt belastet {{2}} for {{3}} av {{4}}"
+    },
+    "charged": {
+        "Subject": "Takk for betalingen for &quot; {{description}} &quot;",
+        "HavePaid": "Hei {{1}} , dette er bare en rask bekreftelse på at du har betalt {{2}} til {{3}} for {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Koble til konto",
+        "Success": "Suksess",
+        "YourAccountCreated": "Kontoen din er opprettet!",
+        "YourAccountAlreadyCreated": "Kontoen din er allerede opprettet og er klar til bruk"
+    },
+    "payment": {
+        "AboutOrder": "Info om bestilling",
+        "PaymentMethod": "Betalingsmåte",
+        "ContactInfo": "Kontaktinformasjon",
+        "Pay": "Betale",
+        "PaymentSucceeded": "Betalingen er behandlet",
+        "PaymentProcessing.": "Betalingen din blir behandlet",
+        "FailTryAgain": "Betalingen din var ikke vellykket. Vennligst prøv igjen.",
+        "SomethingWrong": "Noe gikk galt",
+        "PaymentStatus": "Betalingsstatus",
+        "PayTo": "Betal {{displayName}}",
+        "ChooseCurrency": "Velg en valuta",
+        "YouCanSendUpTo": "Du kan sende opptil {{amount}} {{symbol}}",
+        "Send": "Sende",
+        "EnterAmount": "angi beløp"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Invitasjon akseptert av {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} fylte {{FilledStreamTitle}}",
+        "ForFillingStream": "For å fylle {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Du har {{amount}} studiepoeng å starte",
+        "PaymentFor": "Betaling for &quot; {{1}} &quot;",
+        "PaymentTo": "Betaling til {{1}}",
+        "PaymentToUser": "Overfør til {{toUserName}}",
+        "CreatePrivateChat": "for privat chat med {{toUserName}}",
+        "CreatePaidStream": "for å lage {{toStreamName}}",
+        "JoinedPaidStream": "for reservasjon i &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "for å lage fellesskap &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "som en reservasjonsrefusjon i &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Kjøpte {{amount}} studiepoeng",
+        "BonusCredits": "Bonus {{amount}} kreditter",
+        "BuyAmountCredits": "Kjøp {{amount}} kreditter",
+        "WatchClip": "for å se {{fromStreamTitle}}",
+        "MissingCredits": "Manglende studiepoeng",
+        "YouMissingCredits": "Du trenger ytterligere {{amount}} studiepoeng for å fortsette.",
+        "BuyCredits": "Kjøp kreditter",
+        "BuyBonus": "Å kjøpe {{amount}} kreditter på en gang vil resultere i en bonus på {{bonus}} kreditter.",
+        "Buy": "Kjøpe",
+        "PurchaseCredits": "Kjøp kreditter",
+        "Credits": "Studiepoeng",
+        "ErrorInvalidAmount": "Beløp ugyldig",
+        "ErrorInvalidCurrency": "Dessverre støtter vi ikke valutaen {{currency}} ennå",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} studiepoeng",
+            "BonusCredits": "{{amount}} studiepoeng"
+        }
+    },
+    "history": {
+        "Date": "Dato",
+        "Amount": "Beløp",
+        "Description": "Beskrivelse",
+        "Client": "Klient",
+        "User": "Bruker",
+        "To": "til",
+        "From": "fra",
+        "SeeHistory": "Se betalingshistorikk for {{1}}",
+        "HistoryEmpty": "Ingen transaksjoner ennå",
+        "PaymentFor": "Sendte {{amount}} studiepoeng",
+        "PaymentTo": "Sendte {{amount}} studiepoeng",
+        "PaymentToUser": "Sendte {{amount}} studiepoeng",
+        "CreatePaidStream": "Brukte {{amount}} studiepoeng",
+        "WatchClip": {
+            "+": "Opptjent {{amount}} studiepoeng",
+            "-": "Brukte {{amount}} studiepoeng"
+        },
+        "JoinedPaidStream": {
+            "+": "Opptjent {{amount}} studiepoeng",
+            "-": "Brukte {{amount}} studiepoeng"
+        },
+        "LeftPaidStream": {
+            "+": "Fikk {{amount}} studiepoeng",
+            "-": "Sendte {{amount}} studiepoeng"
+        },
+        "CreatedCommunity": "Brukte {{amount}} studiepoeng",
+        "BoughtCredits": "Kjøpte {{amount}} studiepoeng",
+        "BonusCredits": "Fikk bonus {{amount}} kreditter",
+        "InviteAcceptedBy": "Opptjent {{amount}} studiepoeng",
+        "Streams_user_firstname": "Opptjent {{amount}} studiepoeng",
+        "Streams_user_lastname": "Opptjent {{amount}} studiepoeng",
+        "Streams_user_icon": "Opptjent {{amount}} studiepoeng",
+        "Places_user_location": "Opptjent {{amount}} studiepoeng",
+        "Streams_greeting": "Opptjent {{amount}} studiepoeng",
+        "YouHaveCreditsToStart": "Opptjent {{amount}} studiepoeng",
+        "InvitedUserFilledStream": "Opptjent {{amount}} studiepoeng",
+        "ForFillingStream": "Opptjent {{amount}} studiepoeng",
+        "CreatePrivateChat": "Brukte {{amount}} studiepoeng"
+    },
+    "subscriptions": {
+        "infoTitle": "Oppgi betalingsinformasjonen",
+        "confirm": {
+            "title": "Start abonnement",
+            "message": "Vil du starte et tilbakevendende abonnement på &quot; {{title}} &quot;?",
+            "ok": "OK",
+            "cancel": "Kansellere"
+        },
+        "CreditOrDebitCard": "Kreditt- eller debetkort",
+        "SubscribePayment": "Abonner Betaling",
+        "ImmediatePayment": "Umiddelbar betaling",
+        "ProcessingPayment": "Behandler betaling",
+        "SubscriptionAlreadyPaid": "Dette abonnementet er allerede betalt",
+        "SubscriptionNotActive": "Abonnementet er for øyeblikket inaktivt",
+        "Subscribed": "Abonner",
+        "Unsubscribed": "Avmeldt",
+        "Unsubscribe": "Avslutt abonnementet",
+        "Subscribe": "Abonner",
+        "Started": "Startet",
+        "EndsIn": "Ender i",
+        "NextPay": "Neste betaling",
+        "Period": "Periode",
+        "Price": "Pris",
+        "AreYouSureUnsubscribe": "Er du sikker på at du vil avslutte abonnementet på denne planen?",
+        "YouUnsubscribedFromPlan": "Du har sagt opp abonnementet &quot; {{planTitle}} &quot;. Du blir ikke belastet neste gang, men abonnementet ditt fortsetter til {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "plantittel",
+            "PricePlaceholder": "pris",
+            "SubscriptionTitle": "Abonnementsplaner",
+            "DescriptionPlaceholder": "beskrivelse av abonnementsplanen",
+            "AreYouSureDeletePlan": "Er du sikker på at du vil slette denne planen?",
+            "Duration": "Varighet",
+            "Discount": "Rabatt",
+            "SavePlan": "Spare",
+            "Interrupt": "Avbryte",
+            "Continue": "Fortsette",
+            "NewPlan": "Ny plan",
+            "SelectDisplayType": "Velg {{displayType}}",
+            "EndDate": "sluttdato",
+            "Available": "Tilgjengelig",
+            "Hidden": "Skjult",
+            "InviteOnly": "Kun for invitasjoner",
+            "CantSubscribeUnlessInvited": "Du kan ikke abonnere på denne planen med mindre du ble invitert"
+        }
+    },
+    "payments": {
+        "infoTitle": "Angi betalingsinformasjon",
+        "BuyAmountCredits": "Kjøp {{amount}} kreditter",
+        "confirm": {
+            "title": "Foreta en betaling",
+            "message": "Godtar du å betale {{symbol}} {{amount}} ?",
+            "ok": "OK",
+            "cancel": "Kansellere"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Studiepoeng",
+            "description": "holder styr på kreditter og betalinger"
+        },
+        "Assets\/plan": {
+            "displayType": "Abonnementsplan",
+            "description": "abonnementsplan"
+        },
+        "Assets\/subscription": {
+            "displayType": "Abonnement",
+            "description": "abonnement"
+        },
+        "Assets\/product": {
+            "displayType": "Produkt",
+            "description": "produkt som selges"
+        },
+        "Assets\/service": {
+            "displayType": "Service",
+            "description": "tjeneste som tilbys"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Opptjent {{amount}} studiepoeng"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Kjøpte {{amount}} studiepoeng"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} kreditter"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Brukte {{amount}} studiepoeng"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Sendte {{amount}} studiepoeng til {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Fikk {{amount}} studiepoeng fra {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Du har ikke nok kreditt på kontoen din. Vennligst besøk følgende <a href='<i translate='no'>999 &#39;&gt;link<\/a> for å kjøpe flere kreditter."
+        }
+    },
+    "billing": {
+        "Title": "Eiendeler fakturering",
+        "CreditsMinimum": "Minimum studiepoeng",
+        "CreditsToAdd": "Kreditter å legge til",
+        "Save": "Spare",
+        "ThisLink": "denne lenken",
+        "errors": {
+            "CreditsMinimumNegative": "Minimumskredittene kan ikke være negative",
+            "CreditsToAddNegative": "Kredittene som skal legges til kan ikke være negative"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Ny tjeneste",
+            "TitlePlaceholder": "Tjenestetittel",
+            "PricePlaceholder": "Sett pris",
+            "LinkPlaceholder": "angi tilleggsinformasjonslink",
+            "DescriptionPlaceholder": "Tjenestebeskrivelse",
+            "SaveService": "Lagre tjeneste",
+            "SelectRequiredParticipants": "Nødvendige relaterte deltakere",
+            "RequiredParticipantsDesc": "Vennligst velg relaterte deltakere som kreves for å bruke denne tjenesten (for eksempel kjæledyr for &quot;Hundeshow&quot;, eller barn for &quot;Barnes ferie&quot; osv.). Hvis tjenesten er betalt, må brukeren også betale for hver relaterte deltaker."
+        },
+        "EditServiceTemplate": {
+            "Title": "Rediger tjeneste"
+        },
+        "ManageServiceTemplates": "Administrer tjenestemaler",
+        "ManageServices": "Administrer tjenester",
+        "Free": "Gratis",
+        "OptionalContribution": "Valgfritt bidrag",
+        "RequiredPayment": "Påkrevd betaling",
+        "AreYouSureDelete": "Er du sikker på at du vil slette denne tjenesten?",
+        "AmountServicesRelated": "Det er {{amount}} tilgjengeligheter knyttet til denne tjenesten. De vil også bli fjernet."
+    },
+    "transfer": {
+        "SelectRecipient": "Velg mottaker",
+        "TransactionSuccess": "Transaksjonssuksess",
+        "OrTypeWalletAddress": "ELLER skriv inn mottakerens lommebokadresse",
+        "AppCredits": "App-kreditter"
+    },
+    "NFT": {
+        "Title": "Tittel",
+        "Name": "Navn",
+        "EnterName": "Skriv inn navn",
+        "EnterAuthorWallet": "Skriv inn forfatterlommebok",
+        "InformationAboutTitle": "Informasjon om {{title}} NFT",
+        "Description": "Beskrivelse",
+        "DetailedInformationAboutNFT": "Detaljert informasjon om NFT",
+        "PresaleStarts": "Forhåndssalg starter 23. desember",
+        "OwnerUserNotFound": "Eier av denne NFT er ikke registrert i vår applikasjon.",
+        "BuyNow": "Kjøp nå",
+        "Buy": "Kjøpe",
+        "Add": "Legge til",
+        "Remove": "Fjerne",
+        "NoNFTyet": "Ingen NFT-er ennå",
+        "Conversation": "Samtale",
+        "Create": "Skape",
+        "CurrentBid": "Nåværende bud",
+        "StartingIn": "Starter i",
+        "EndingIn": "Ender på",
+        "CreateNFT": "Lag en NFT",
+        "TitlePlaceholder": "Gi din NFT en tittel",
+        "DescriptionPlaceholder": "Gi din NFT en beskrivelse",
+        "CreateYourNFT": "Lag din NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Valgfri. Beløp betalt til skaperen før overføring.",
+        "ExpirationDate": "Utløpsdato",
+        "StartingDate": "Startdato",
+        "BidsBelowThisAmount": "Bud under dette beløpet er ikke tillatt",
+        "MinimumBid": "Minimumsbud",
+        "Author": "Forfatter",
+        "Price": "Pris",
+        "Commission": "Kommisjon",
+        "EnterCommission": "Angi provisjon",
+        "Owner": "Eier",
+        "SelectCategory": "Velg kategori",
+        "Day": "Dag",
+        "Days": "Dager",
+        "Hour": "Time",
+        "Hours": "Timer",
+        "Minute": "Minutt",
+        "Minutes": "Minutter",
+        "Second": "Sekund",
+        "Seconds": "Sekunder",
+        "SalesCreator": "av salget vil gå til skaperen",
+        "Details": "Detaljer",
+        "Bids": "Bud",
+        "History": "Historie",
+        "LoremIpsum": "Lorem Ipsum er rett og slett en dummy tekst fra trykkeri- og setteindustrien.",
+        "PutOnSale": "Sett på salg",
+        "PutOffSale": "Trekk fra salg",
+        "Transfer": "Overføre",
+        "Actions": "Handlinger",
+        "Claim": "Krav",
+        "ClaimNFT": "Gjør krav på NFT",
+        "Unlocking": "Låser opp",
+        "Unlock": "Låse opp",
+        "Update": "Oppdater",
+        "UpdateToken": "Oppdater token",
+        "UpdateNFT": "Oppdater NFT",
+        "CreateToken": "Opprett token",
+        "PlaceBid": "Legg inn bud",
+        "SoldOut": "Solgt",
+        "NotOnSale": "Ikke på salg",
+        "NftName": "NFT navn",
+        "DescribeYourNFT": "Vennligst beskriv din NFT",
+        "NFTImage": "Bilde for NFT",
+        "NFTVideo": "Video for NFT, hvis noen",
+        "GenerateDescription": "eller autogenerer",
+        "UploadMovie": "Last opp film",
+        "MovieSource": "Filmkilde",
+        "MovieURL": "Filmens URL",
+        "UploadFile": "Last opp en fil",
+        "PutOnMarketplace": "Sett på markedsplassen",
+        "InstantPurchase": "Angi pris for å la brukere kjøpe din NFT umiddelbart",
+        "FixedPrice": "Fast pris",
+        "TimedAuction": "Tidsbestemt auksjon",
+        "OpenForBids": "Åpen for bud",
+        "PriceOnePiece": "Oppgi pris for ett stykke",
+        "EnterPrice": "Skriv inn pris",
+        "EnterMinimumBid": "Angi minimumsbud",
+        "SelectChain": "Velg kjede",
+        "Currency": "Valuta",
+        "AreYouSureDeleteImage": "Er du sikker på at du vil fjerne bildet?",
+        "AreYouSureDeleteVideo": "Er du sikker på at du vil fjerne videoen?",
+        "series": {
+            "Name": "Navn",
+            "Icon": "Ikon",
+            "Description": "Beskrivelse",
+            "Author": "Forfatter",
+            "SelectSeries": "Velg serie",
+            "Value": "Verdi",
+            "AreYouSure": "Er du sikker?",
+            "AuthorInvalid": "Forfatteradressen er ugyldig!",
+            "Address": "Adresse",
+            "CoverImage": "Forsidebilde",
+            "UploadCoverImage": "Last opp forsidebilde",
+            "CommissionAddressInvalid": "Kommisjonsadressen er ugyldig",
+            "OnSale": "på salg",
+            "OffSale": "utsalg",
+            "CreateSeries": "Lag serier",
+            "UpdateSeries": "Oppdater serien",
+            "SeriesInfo": "Serie info",
+            "SelectAuthor": "Velg forfatter",
+            "NewItem": "Ny NFT-serie",
+            "NamePlaceholder": "Skriv inn serienavn",
+            "DescPlaceholder": "Angi seriebeskrivelse",
+            "EndingIn": "Ender på"
+        },
+        "contract": {
+            "CreateContract": "Opprett kontrakt",
+            "SelectContract": "Velg kontrakt",
+            "CreateContractFor": "Opprett kontrakt for {{userName}}",
+            "ContractFor": "Kontrakt for {{userName}}",
+            "UpdateContract": "Oppdater kontrakt",
+            "TransferOwnership": "Overføre eierskap",
+            "SetBaseURI": "Angi base-URI",
+            "SetSuffix": "Sett suffiks",
+            "CurrentOwner": "Nåværende eier",
+            "CurrentBaseURL": "Gjeldende BaseURL",
+            "ContractAddressAbsent": "Kontraktsadresse mangler",
+            "FactoryAddressAbsent": "Fabrikkadresse mangler",
+            "ContractName": "{{contractName}} ( {{contractSymbol}} {{chainNetwork}}",
+            "TitleRequired": "Tittel kreves",
+            "SymbolRequired": "Symbol kreves",
+            "TypeContractName": "kontraktsnavn",
+            "TypeContractSymbol": "kontraktsymbol (maks 10 tegn)"
+        },
+        "contests": {
+            "Title": "Konkurranser",
+            "NewContest": "Ny konkurranse"
+        },
+        "collections": {
+            "Title": "Samlinger",
+            "EnterTitle": "skriv inn tittel",
+            "EnterDescription": "skriv inn beskrivelse",
+            "NewCollection": "Ny samling",
+            "Name": "Navn",
+            "Icon": "Ikon",
+            "Description": "Beskrivelse",
+            "Author": "Forfatter",
+            "SelectCollection": "Velg samling",
+            "Value": "Verdi",
+            "AreYouSure": "Er du sikker?",
+            "AuthorInvalid": "Forfatteradressen er ugyldig!",
+            "Address": "Adresse",
+            "CoverImage": "Forsidebilde",
+            "UploadIcon": "Last opp ikon",
+            "CommissionAddressInvalid": "Kommisjonsadressen er ugyldig",
+            "OnSale": "på salg",
+            "OffSale": "utsalg",
+            "CreateCollection": "Opprett samling",
+            "UpdateCollection": "Oppdater samlingen",
+            "CollectionInfo": "Samling info",
+            "SelectAuthor": "Velg forfatter",
+            "NewItem": "Ny NFT-kolleksjon",
+            "NamePlaceholder": "Skriv inn samlingens navn",
+            "DescPlaceholder": "Skriv inn samlingsbeskrivelse",
+            "EndingIn": "Ender på",
+            "SubmitSeries": "Send inn en serie"
+        },
+        "import": {
+            "importNFT": "Importerer NFT-er",
+            "importAttributes": "Importer NFT-attributter",
+            "fileNotFound": "Beklager, CSV-filen ble ikke funnet.",
+            "fileEmpty": "Beklager, CSV-filen er tom.",
+            "userIdNotFound": "brukeren eksisterer, men ID-en er tom",
+            "errorLine": "linje {{1}}",
+            "fieldNotFound": "Obligatorisk felt &quot; {{1}} &quot; ikke funnet",
+            "displayTypeEmpty": "Visningstype for &quot; {{1}} &quot; ikke funnet",
+            "taskStreamInvalid": "oppgavestrømmen er ugyldig",
+            "instructionsEmpty": "oppgavestrøminstruksjonene er tomme",
+            "complete": "Fullstendig",
+            "activateUsers": "sende aktiveringsmelding til brukere?",
+            "importProgress": "Framgang",
+            "importOptions": "Alternativer",
+            "sampleCSV": "Last ned eksempel CSV",
+            "fileLabel": "Last opp regneark:",
+            "errorsTitle": "Det oppsto feil"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filtrer etter NFT-samlinger",
+                "ShowNFTCollection": "Vis NFT-samling i ...",
+                "AllCollections": "Alle samlinger"
+            },
+            "ByUser": {
+                "AllAuthors": "Alle forfattere",
+                "AllUsers": "Alle sammen",
+                "FilterByAuthors": "Filtrer etter forfattere"
+            }
+        },
+        "Back": "Tilbake til samlingen",
+        "attributes": {
+            "Title": "Administrer attributter",
+            "Attributes": "Attributter",
+            "DisplayTitle": "Visningstype",
+            "AddDisplayType": "Legg til ny visningstype",
+            "NewDisplay": "Ny skjerm",
+            "TraitTitle": "Egenskapstype",
+            "AddTraitTitle": "Legg til ny egenskapstype",
+            "NewTrait": "Ny egenskapstype",
+            "ValueTitle": "Verdi",
+            "AddValueTitle": "Legg til ny verdi",
+            "NewValue": "Ny verdi",
+            "NewAttribute": "Nytt attributt",
+            "UpdateAttributes": "Oppdater attributter",
+            "SaveAttributes": "Lagre attributter"
+        },
+        "profile": {
+            "LogOut": "Logg ut",
+            "Title": "Profil for {{userName}}",
+            "Description": "Brukerdetaljer",
+            "aboutPlaceholder": "Rediger biografi",
+            "UploadCoverPhoto": "Last opp forsidebilde",
+            "SureLogOut": "Er du sikker på at du vil logge ut?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFT-kontrakt",
+                        "seriesId": "serie-ID",
+                        "owner": "Eier",
+                        "currency": "Valuta",
+                        "price": "Pris",
+                        "beneficiary": "Mottaker",
+                        "autoindex": "Autoindeks",
+                        "duration": "Varighet",
+                        "rateInterval": "Vurder intervall",
+                        "rateAmount": "Satsbeløp"
+                    },
+                    "small": {
+                        "NFTContract": "NFT-kontrakt",
+                        "seriesId": "tokens vil bli preget i denne serien",
+                        "owner": "eier av forekomst, ellers vil være avsender",
+                        "currency": "Valuta for kjøpte tokens, hvis null - for innfødte mynter",
+                        "price": "Pris",
+                        "beneficiary": "Mottaker av å selge tokens, ellers vil være avsender",
+                        "autoindex": "Autoindeks",
+                        "duration": "Lås etter preging. Null betyr å få det umiddelbart.",
+                        "rateInterval": "bøtteintervall for spesialkjøp",
+                        "rateAmount": "bøttebeløp for spesialkjøp"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(valgfri)",
+                    "number": "tall",
+                    "address": "adresse",
+                    "fraction": "brøkdel",
+                    "integer": "heltall",
+                    "seconds": "sekunder",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Produsere",
+                "viewInstancesList": "Oppdater liste"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Serie-ID",
+                        "account": "Konto",
+                        "amount": "Beløp"
+                    },
+                    "small": {
+                        "seriesId": "nytt token vil høre til i serie med slik ID",
+                        "account": "eier av nyopprettet NFT. hvis ikke angitt - vil bruke gjeldende lommebok",
+                        "amount": "mengde NFT til mynte"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(valgfri)",
+                    "seriesId": "id",
+                    "account": "konto",
+                    "amount": "beløp",
+                    "integer": "heltall"
+                },
+                "btn": {
+                    "Purchase": "Kjøpe",
+                    "SpecialPurchase": "Spesialkjøp"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adresse"
+                    },
+                    "small": {
+                        "account": "Adresse"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Ugyldig adresse"
+                },
+                "placeholders": {
+                    "account": "Adresse"
+                },
+                "addToWhitelist": "Legg til hviteliste",
+                "removeFromWhitelist": "Fjern fra hviteliste"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token-ID",
+                    "custodian": "Depotmottaker",
+                    "recipient": "Mottaker"
+                },
+                "small": {
+                    "tokenId": "token-ID som må låses eller låses opp",
+                    "custodian": "adresse som kan låses opp",
+                    "recipient": "adresse som vil motta tokens"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Ugyldig token-ID",
+                "invalidCustodian": "Ugyldig depotmottaker",
+                "invalidRecipient": "Ugyldig mottaker"
+            },
+            "placeholders": {
+                "optional": "(valgfri)",
+                "tokenId": "id",
+                "custodian": "adresse"
+            },
+            "Lock": "Låse",
+            "Unlock": "Låse opp",
+            "Locked": "Låst",
+            "CustodianAddress": "Depotadresse",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; ble gjort krav på",
+            "TokenWasLocked": "Token &quot; {{title}} &quot; ble låst",
+            "TokenWasUnlocked": "Token &quot; {{title}} &quot; ble låst opp"
+        }
+    },
+    "fundrise": {
+        "placeholder": "skriv noe om dette bidraget..."
+    },
+    "currencies": {
+        "choose": "Velg en valuta"
+    }
+}

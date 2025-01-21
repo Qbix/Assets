@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Mearachd",
+        "WalletAbsent": "Chan eil am wallet ceangailte.",
+        "Rendering": "Bha mearachdan ann fhad &#39;s a bha sinn a&#39; toirt seachad <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Prìs a dhìth!",
+        "NameRequired": "Ainm a dhìth!",
+        "PriceInvalid": "Prìs neo-dhligheach!",
+        "AmountInvalid": "An t-suim neo-dhligheach!",
+        "TransactionFailed": "Tha an gnothach air fàiligeadh",
+        "ChainNotSupported": "Chan eil taic ris an t-sreath taghte. Sreath le taic: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Feum air MetaMask ceangailte gus obrachadh leis an tagradh",
+        "UserNotLoggedInMetaMask": "Chan eil an cleachdaiche air logadh a-steach gu MetaMask",
+        "CurrencyNotFound": "Cha deach airgead a lorg",
+        "WrongChain": "Chruthaich an NFT seo fo &quot; {{chain}} &quot;. Feuch an cleachd thu an t-sreath seo.",
+        "NoRecipientSelected": "Cha deach neach-gabhail a thaghadh",
+        "CantManageFrozenSeries": "Chan urrainn dhut sreath reòta a riaghladh",
+        "SubscriptionStreamNotPaid": "Cha do phàigh thu airson an t-susbaint seo fhaicinn. Cliog air {{subscriptionUrl}} agus fo-sgrìobh don phlana iomchaidh."
+    },
+    "admin": {
+        "Title": "Rianachd maoin",
+        "SubscriptionTitle": "Planaichean ballrachd"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Tap air gus pàigheadh"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : chaidh a’ chosgais a ghiullachd airson {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Tapadh leibh airson ur pàigheadh gu {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} fo-sgrìobhadh gu {{plan.title}}",
+        "YouSubscribedTo": "Tha thu air fo-sgrìobhadh gu {{plan.title}}",
+        "Assets\/credits\/alert": "Tha rabhadh agad co-cheangailte ris a’ chunntas agad"
+    },
+    "charge": {
+        "Subject": "Fhuair thu pàigheadh de {{displayAmount}} bho {{call 'publisher.displayName'}} airson an &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, tha seo dìreach airson innse dhut gu bheil {{1}} air a bhith fo chasaid {{2}} airson {{3}} ro {{4}}"
+    },
+    "charged": {
+        "Subject": "Tapadh leibh airson ur pàigheadh airson an &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , chan eil an seo ach dearbhadh sgiobalta gu bheil thu air {{2}} gu {{3}} a phàigheadh airson {{4}} gu soirbheachail"
+    },
+    "connectedAccount": {
+        "Title": "Ceangail cunntas",
+        "Success": "Soirbheachas",
+        "YourAccountCreated": "Chaidh do chunntas a chruthachadh gu soirbheachail!",
+        "YourAccountAlreadyCreated": "Chaidh do chunntas a chruthachadh mu thràth agus tha e deiseil airson a chleachdadh"
+    },
+    "payment": {
+        "AboutOrder": "Fiosrachadh mu òrdugh",
+        "PaymentMethod": "Modh pàighidh",
+        "ContactInfo": "Fiosrachadh conaltraidh",
+        "Pay": "Pàigh",
+        "PaymentSucceeded": "Chaidh am pàigheadh a phròiseasadh gu soirbheachail",
+        "PaymentProcessing.": "Tha do phàigheadh ga phròiseas",
+        "FailTryAgain": "Cha do shoirbhich le do phàigheadh. Feuch ris a-rithist.",
+        "SomethingWrong": "Chaidh rudeigin ceàrr",
+        "PaymentStatus": "Inbhe pàighidh",
+        "PayTo": "Pàigh {{displayName}}",
+        "ChooseCurrency": "Tagh airgead-crìche",
+        "YouCanSendUpTo": "Faodaidh tu suas gu {{amount}} {{symbol}} a chuir",
+        "Send": "Seol",
+        "EnterAmount": "cuir a-steach an t-suim"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Chaidh gabhail ri cuireadh ro {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} lìon {{FilledStreamTitle}}",
+        "ForFillingStream": "Airson lìonadh {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Tha creideasan {{amount}} agad airson tòiseachadh",
+        "PaymentFor": "Pàigheadh airson &quot; {{1}} &quot;",
+        "PaymentTo": "Pàigheadh gu {{1}}",
+        "PaymentToUser": "Gluasad gu {{toUserName}}",
+        "CreatePrivateChat": "airson còmhradh prìobhaideach le {{toUserName}}",
+        "CreatePaidStream": "Airson {{toStreamName}} a chruthachadh",
+        "JoinedPaidStream": "airson glèidheadh ann an &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{toStreamName}} &quot;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "airson coimhearsnachd &quot; {{communityId}} &quot; a chruthachadh",
+        "LeftPaidStream": "mar ath-dhìoladh ann an &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{fromStreamName}} &quot;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Ceannaich {{amount}} creideas",
+        "BonusCredits": "Bònas {{amount}} creideas",
+        "BuyAmountCredits": "Ceannaich {{amount}} creideas",
+        "WatchClip": "Airson coimhead air {{fromStreamTitle}}",
+        "MissingCredits": "Creideasan air chall",
+        "YouMissingCredits": "Feumaidh tu {{amount}} creideas a bharrachd airson a dhol air adhart.",
+        "BuyCredits": "Ceannaich creideasan",
+        "BuyBonus": "Ma cheannaicheas tu {{amount}} creideas aig an aon àm gheibh thu bònas de {{bonus}} creideas.",
+        "Buy": "Ceannaich",
+        "PurchaseCredits": "Creideasan Ceannach",
+        "Credits": "Creideasan",
+        "ErrorInvalidAmount": "An t-suim neo-dhligheach",
+        "ErrorInvalidCurrency": "Gu mì-fhortanach, chan eil sinn fhathast a’ toirt taic don airgead {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} creideas",
+            "BonusCredits": "{{amount}} creideas"
+        }
+    },
+    "history": {
+        "Date": "Ceann-latha",
+        "Amount": "Suim",
+        "Description": "Tuairisgeul",
+        "Client": "Cliant",
+        "User": "Cleachdaiche",
+        "To": "gu",
+        "From": "bho",
+        "SeeHistory": "Faic eachdraidh pàighidh {{1}}",
+        "HistoryEmpty": "Chan eil gnothaichean ann fhathast",
+        "PaymentFor": "Chaidh {{amount}} creideas a chuir",
+        "PaymentTo": "Chaidh {{amount}} creideas a chuir",
+        "PaymentToUser": "Chaidh {{amount}} creideas a chuir",
+        "CreatePaidStream": "Chaidh {{amount}} creideas a chosg",
+        "WatchClip": {
+            "+": "Choisinn e {{amount}} creideas",
+            "-": "Chaidh {{amount}} creideas a chosg"
+        },
+        "JoinedPaidStream": {
+            "+": "Choisinn e {{amount}} creideas",
+            "-": "Chaidh {{amount}} creideas a chosg"
+        },
+        "LeftPaidStream": {
+            "+": "Fhuair sinn {{amount}} creideas",
+            "-": "Chaidh {{amount}} creideas a chuir"
+        },
+        "CreatedCommunity": "Chaidh {{amount}} creideas a chosg",
+        "BoughtCredits": "Ceannaich {{amount}} creideas",
+        "BonusCredits": "Fhuair mi bònas {{amount}} creideas",
+        "InviteAcceptedBy": "Choisinn e {{amount}} creideas",
+        "Streams_user_firstname": "Choisinn e {{amount}} creideas",
+        "Streams_user_lastname": "Choisinn e {{amount}} creideas",
+        "Streams_user_icon": "Choisinn e {{amount}} creideas",
+        "Places_user_location": "Choisinn e {{amount}} creideas",
+        "Streams_greeting": "Choisinn e {{amount}} creideas",
+        "YouHaveCreditsToStart": "Choisinn e {{amount}} creideas",
+        "InvitedUserFilledStream": "Choisinn e {{amount}} creideas",
+        "ForFillingStream": "Choisinn e {{amount}} creideas",
+        "CreatePrivateChat": "Chaidh {{amount}} creideas a chosg"
+    },
+    "subscriptions": {
+        "infoTitle": "Thoir seachad am fiosrachadh pàighidh",
+        "confirm": {
+            "title": "Tòisich fo-sgrìobhadh",
+            "message": "Tòisich fo-sgrìobhadh ath-chuairteachaidh gu &quot; {{title}} &quot;?",
+            "ok": "ceart gu leòr",
+            "cancel": "Sguir dheth"
+        },
+        "CreditOrDebitCard": "Cairt creideis no cunntais",
+        "SubscribePayment": "Subscribe Pàigheadh",
+        "ImmediatePayment": "Pàigheadh sa bhad",
+        "ProcessingPayment": "Pàighidh giollachd",
+        "SubscriptionAlreadyPaid": "Phàigh an fho-sgrìobhadh seo mu thràth",
+        "SubscriptionNotActive": "Tha an fho-sgrìobhadh neo-ghnìomhach an-dràsta",
+        "Subscribed": "Fo-sgrìobhadh",
+        "Unsubscribed": "Gun fho-sgrìobhadh",
+        "Unsubscribe": "Na dì-chlàradh",
+        "Subscribe": "Subscribe",
+        "Started": "Thòisich",
+        "EndsIn": "A’ crìochnachadh ann an",
+        "NextPay": "An ath phàigheadh",
+        "Period": "Ùine",
+        "Price": "Prìs",
+        "AreYouSureUnsubscribe": "A bheil thu cinnteach gu bheil thu airson crìoch a chur air an fho-sgrìobhadh bhon phlana seo?",
+        "YouUnsubscribedFromPlan": "Tha thu air crìoch a chuir air an fho-sgrìobhadh agad sa phlana &quot; {{planTitle}} &quot;. Cha tèid cosgais a chuir ort an ath thuras, ach leanaidh an fho-sgrìobhadh agad gu {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "tiotal a’ phlana",
+            "PricePlaceholder": "prìs",
+            "SubscriptionTitle": "Planaichean ballrachd",
+            "DescriptionPlaceholder": "tuairisgeul plana ballrachd",
+            "AreYouSureDeletePlan": "A bheil thu cinnteach gu bheil thu airson am plana seo a sguabadh às?",
+            "Duration": "Fad",
+            "Discount": "Lasachadh",
+            "SavePlan": "Sàbhail",
+            "Interrupt": "Briseadh",
+            "Continue": "Lean air adhart",
+            "NewPlan": "Plana Ùr",
+            "SelectDisplayType": "Tagh {{displayType}}",
+            "EndDate": "ceann-latha crìochnachaidh",
+            "Available": "Ri fhaighinn",
+            "Hidden": "Falaichte",
+            "InviteOnly": "Cuireadh a-mhàin",
+            "CantSubscribeUnlessInvited": "Chan urrainn dhut fo-sgrìobhadh dhan phlana seo mura d&#39; fhuair thu cuireadh"
+        }
+    },
+    "payments": {
+        "infoTitle": "Suidhich Fiosrachadh Pàighidh",
+        "BuyAmountCredits": "Ceannaich {{amount}} creideas",
+        "confirm": {
+            "title": "Dèan Pàigheadh",
+            "message": "A bheil thu ag aontachadh {{symbol}} {{amount}} a phàigheadh?",
+            "ok": "ceart gu leòr",
+            "cancel": "Sguir dheth"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Creideasan",
+            "description": "a’ cumail sùil air creideasan agus pàighidhean"
+        },
+        "Assets\/plan": {
+            "displayType": "Plana subsadaidh",
+            "description": "plana ballrachd"
+        },
+        "Assets\/subscription": {
+            "displayType": "Fo-sgrìobhadh",
+            "description": "fo-sgrìobhadh"
+        },
+        "Assets\/product": {
+            "displayType": "Bathar",
+            "description": "toradh ga reic"
+        },
+        "Assets\/service": {
+            "displayType": "Seirbheis",
+            "description": "seirbheis air a thabhann"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Choisinn e {{amount}} creideas"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Ceannaich {{amount}} creideas"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bònas {{amount}} creideas"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Chaidh {{amount}} creideas a chosg"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Chuir sinn creideasan {{amount}} gu {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Fhuair sinn {{amount}} creideas bho {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Chan eil creideasan gu leòr agad sa chunntas agad. Tadhail air a’ <a href='<i translate='no'>cheangal 999’&gt;<\/a> a leanas gus barrachd chreideasan a cheannach."
+        }
+    },
+    "billing": {
+        "Title": "Cunntasachd maoin",
+        "CreditsMinimum": "Creideasan as ìsle",
+        "CreditsToAdd": "Creideasan ri chur ris",
+        "Save": "Sàbhail",
+        "ThisLink": "an ceangal seo",
+        "errors": {
+            "CreditsMinimumNegative": "Chan fhaod na creideasan as ìsle a bhith àicheil",
+            "CreditsToAddNegative": "Chan fhaod na creideasan airson cur ris a bhith àicheil"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Seirbheis Ùr",
+            "TitlePlaceholder": "Tiotal na seirbheis",
+            "PricePlaceholder": "Suidhich prìs",
+            "LinkPlaceholder": "suidhich ceangal fiosrachaidh a bharrachd",
+            "DescriptionPlaceholder": "Tuairisgeul seirbheis",
+            "SaveService": "Sàbhail Seirbheis",
+            "SelectRequiredParticipants": "Com-pàirtichean co-cheangailte a dhìth",
+            "RequiredParticipantsDesc": "Feuch an tagh thu com-pàirtichean co-cheangailte ris a dh’ fheumas an t-seirbheis seo a chleachdadh (mar eisimpleir peataichean airson “Taisbeanadh coin”, no clann airson “saor-làithean chloinne” msaa). Ma thèid seirbheis a phàigheadh, feumaidh an neach-cleachdaidh pàigheadh cuideachd airson gach com-pàirtiche co-cheangailte."
+        },
+        "EditServiceTemplate": {
+            "Title": "Deasaich Seirbheis"
+        },
+        "ManageServiceTemplates": "Stiùirich templates seirbheis",
+        "ManageServices": "Stiùirich Seirbheisean",
+        "Free": "Saor",
+        "OptionalContribution": "Tabhartas roghainneil",
+        "RequiredPayment": "Pàigheadh a dhìth",
+        "AreYouSureDelete": "A bheil thu cinnteach gu bheil thu airson an t-seirbheis seo a sguabadh às?",
+        "AmountServicesRelated": "Tha {{amount}} ri fhaotainn co-cheangailte ris an t-seirbheis seo. Thèid an toirt air falbh cuideachd."
+    },
+    "transfer": {
+        "SelectRecipient": "Tagh neach-gabhail",
+        "TransactionSuccess": "Soirbheachas Gnìomh",
+        "OrTypeWalletAddress": "NO cuir a-steach seòladh wallet neach-faighinn",
+        "AppCredits": "Creideasan App"
+    },
+    "NFT": {
+        "Title": "Tiotal",
+        "Name": "Ainm",
+        "EnterName": "Cuir a-steach ainm",
+        "EnterAuthorWallet": "Cuir a-steach wallet ùghdar",
+        "InformationAboutTitle": "Fiosrachadh mun chompanaidh {{title}} NFT",
+        "Description": "Tuairisgeul",
+        "DetailedInformationAboutNFT": "Fiosrachadh mun chompanaidh NFT",
+        "PresaleStarts": "Presale a’ tòiseachadh 23 Dùbhlachd",
+        "OwnerUserNotFound": "Chan eil sealbhadair an NFT seo clàraichte san tagradh againn.",
+        "BuyNow": "Ceannaich a-nis",
+        "Buy": "Ceannaich",
+        "Add": "Cuir ris",
+        "Remove": "Thoir air falbh",
+        "NoNFTyet": "Chan eil NFTs ann fhathast",
+        "Conversation": "Còmhradh",
+        "Create": "Cruthaich",
+        "CurrentBid": "Tagradh làithreach",
+        "StartingIn": "A’ tòiseachadh a-staigh",
+        "EndingIn": "A’ crìochnachadh ann an",
+        "CreateNFT": "Cruthaich NFT",
+        "TitlePlaceholder": "Thoir tiotal don NFT agad",
+        "DescriptionPlaceholder": "Thoir cunntas air an NFT agad",
+        "CreateYourNFT": "Cruthaich do NFT",
+        "Royalties": "Dìoghaltas",
+        "RoyaltyPlaceholder": "Roghainneil. An t-suim a chaidh a phàigheadh don neach-cruthachaidh mus deach a ghluasad.",
+        "ExpirationDate": "Ceann-latha crìche",
+        "StartingDate": "Ceann-latha tòiseachaidh",
+        "BidsBelowThisAmount": "Cha cheadaichear tagraidhean nas ìsle na an t-suim seo",
+        "MinimumBid": "Tairgse as ìsle",
+        "Author": "Ughdar",
+        "Price": "Prìs",
+        "Commission": "Coimisean",
+        "EnterCommission": "Cuir a-steach coimisean",
+        "Owner": "Sealbhadair",
+        "SelectCategory": "Tagh roinn-seòrsa",
+        "Day": "Latha",
+        "Days": "Làithean",
+        "Hour": "Uair",
+        "Hours": "Uairean",
+        "Minute": "Mionaid",
+        "Minutes": "Mionaidean",
+        "Second": "An dàrna",
+        "Seconds": "Diogan",
+        "SalesCreator": "thèid an reic chun neach-cruthachaidh",
+        "Details": "Mion-fhiosrachadh",
+        "Bids": "Tagraidhean",
+        "History": "Eachdraidh",
+        "LoremIpsum": "Is e dìreach teacsa meallta den ghnìomhachas clò-bhualaidh is clò-bhualaidh a th’ ann an Lorem Ipsum.",
+        "PutOnSale": "Air a reic",
+        "PutOffSale": "Tarraing a-mach à reic",
+        "Transfer": "Gluasad",
+        "Actions": "Gnìomhan",
+        "Claim": "Tagradh",
+        "ClaimNFT": "Dèan tagradh airson NFT",
+        "Unlocking": "Fuasgladh",
+        "Unlock": "Fuasgail",
+        "Update": "Ùraich",
+        "UpdateToken": "Luchdaich a-nuas an t-suaicheantas",
+        "UpdateNFT": "Luchdaich a-nuas an t-òran NFT",
+        "CreateToken": "Cruthaich Token",
+        "PlaceBid": "Àite Bid",
+        "SoldOut": "Reic",
+        "NotOnSale": "Gun a reic",
+        "NftName": "Ainm NFT",
+        "DescribeYourNFT": "Feuch an toir thu cunntas air an NFT agad",
+        "NFTImage": "Dealbh airson NFT saor an asgaidh",
+        "NFTVideo": "Bhidio airson NFT, ma tha gin ann",
+        "GenerateDescription": "no gineadh fèin-ghluasadach",
+        "UploadMovie": "Film a luchdadh a-nuas",
+        "MovieSource": "Stòr film",
+        "MovieURL": "URL film",
+        "UploadFile": "Luchdaich suas faidhle",
+        "PutOnMarketplace": "Cuir air a’ mhargaidh",
+        "InstantPurchase": "Cuir a-steach prìs gus leigeil le luchd-cleachdaidh an NFT agad a cheannach sa bhad",
+        "FixedPrice": "Prìs stèidhichte",
+        "TimedAuction": "Rop le ùine",
+        "OpenForBids": "Fosgailte airson tagraidhean",
+        "PriceOnePiece": "Cuir a-steach prìs airson aon phìos",
+        "EnterPrice": "Cuir a-steach prìs",
+        "EnterMinimumBid": "Cuir a-steach an tairgse as ìsle",
+        "SelectChain": "Tagh slabhraidh",
+        "Currency": "Airgeadra",
+        "AreYouSureDeleteImage": "A bheil thu cinnteach gu bheil thu airson an dealbh a thoirt air falbh?",
+        "AreYouSureDeleteVideo": "A bheil thu cinnteach gu bheil thu airson bhidio a thoirt air falbh?",
+        "series": {
+            "Name": "Ainm",
+            "Icon": "An ìomhaigheag",
+            "Description": "Tuairisgeul",
+            "Author": "Ughdar",
+            "SelectSeries": "Tagh sreath",
+            "Value": "Luach",
+            "AreYouSure": "A bheil thu cinnteach?",
+            "AuthorInvalid": "Seòladh an ùghdair mì-dhligheach!",
+            "Address": "Seòladh",
+            "CoverImage": "Dealbh còmhdaich",
+            "UploadCoverImage": "Luchdaich a-nuas dealbh cover",
+            "CommissionAddressInvalid": "Seòladh a&#39; Choimisein mì-dhligheach",
+            "OnSale": "air reic",
+            "OffSale": "dheth reic",
+            "CreateSeries": "Cruthaich sreath",
+            "UpdateSeries": "Sreath ùrachadh a",
+            "SeriesInfo": "Fiosrachadh sreath",
+            "SelectAuthor": "Tagh ùghdar",
+            "NewItem": "An t-sreath ùr NFT saor an asgaidh",
+            "NamePlaceholder": "Cuir a-steach ainm an t-sreath",
+            "DescPlaceholder": "Cuir a-steach tuairisgeul an t-sreath",
+            "EndingIn": "A&#39; crìochnachadh ann an"
+        },
+        "contract": {
+            "CreateContract": "Cruthaich cùmhnant",
+            "SelectContract": "Tagh cùmhnant",
+            "CreateContractFor": "Luchdaich a-nuas cùmhnant airson {{userName}}",
+            "ContractFor": "Cùmhnant {{userName}} saor an asgaidh",
+            "UpdateContract": "Cùmhnant a luchdadh a-nuas",
+            "TransferOwnership": "Gluasad seilbh",
+            "SetBaseURI": "Suidhich Base URI",
+            "SetSuffix": "Suidhich Iar-leas",
+            "CurrentOwner": "Sealbhadair gnàthach",
+            "CurrentBaseURL": "BaseURL làithreach",
+            "ContractAddressAbsent": "Seòladh cùmhnant neo-làthaireach",
+            "FactoryAddressAbsent": "Seòladh factaraidh neo-làthaireach",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Feumaidh tiotal",
+            "SymbolRequired": "Tha feum air suaicheantas",
+            "TypeContractName": "ainm cùmhnant",
+            "TypeContractSymbol": "samhla cùmhnant (10 char as àirde)"
+        },
+        "contests": {
+            "Title": "Co-fharpaisean",
+            "NewContest": "Co-fharpais Ùr"
+        },
+        "collections": {
+            "Title": "Cruinneachaidhean",
+            "EnterTitle": "cuir a-steach tiotal",
+            "EnterDescription": "cuir a-steach tuairisgeul",
+            "NewCollection": "Cruinneachadh Ùr",
+            "Name": "Ainm",
+            "Icon": "An ìomhaigheag",
+            "Description": "Tuairisgeul",
+            "Author": "Ughdar",
+            "SelectCollection": "Tagh cruinneachadh",
+            "Value": "Luach",
+            "AreYouSure": "A bheil thu cinnteach?",
+            "AuthorInvalid": "Seòladh an ùghdair mì-dhligheach!",
+            "Address": "Seòladh",
+            "CoverImage": "Dealbh còmhdaich",
+            "UploadIcon": "Luchdaich suas ìomhaigh",
+            "CommissionAddressInvalid": "Seòladh a&#39; Choimisein mì-dhligheach",
+            "OnSale": "air reic",
+            "OffSale": "dheth reic",
+            "CreateCollection": "Cruthaich Cruinneachadh",
+            "UpdateCollection": "Cruinneachadh ùrachadh",
+            "CollectionInfo": "Fiosrachadh cruinneachadh",
+            "SelectAuthor": "Tagh ùghdar",
+            "NewItem": "Cruinneachadh ùr de NFT",
+            "NamePlaceholder": "Cuir a-steach ainm cruinneachaidh",
+            "DescPlaceholder": "Cuir a-steach tuairisgeul cruinneachadh",
+            "EndingIn": "A&#39; crìochnachadh ann an",
+            "SubmitSeries": "Cuir a-steach Sreath"
+        },
+        "import": {
+            "importNFT": "A &#39;toirt a-steach NFTan",
+            "importAttributes": "Cuir a-steach buadhan NFT",
+            "fileNotFound": "Duilich, cha deach am faidhle CSV a lorg.",
+            "fileEmpty": "Duilich, tha am faidhle CSV falamh.",
+            "userIdNotFound": "cleachdaiche ann ach id falamh",
+            "errorLine": "loidhne {{1}}",
+            "fieldNotFound": "Raon a tha a dhìth &quot; {{1}} &quot; Cha deach a lorg",
+            "displayTypeEmpty": "Seòrsa taisbeanaidh airson &quot; {{1}} &quot;Cha deach a lorg",
+            "taskStreamInvalid": "sruth-obrach neo-dhligheach",
+            "instructionsEmpty": "stiùireadh sruth-obrach falamh",
+            "complete": "Crìochnaich",
+            "activateUsers": "cuir teachdaireachd gnìomhachaidh gu luchd-cleachdaidh?",
+            "importProgress": "Adhartas",
+            "importOptions": "Roghainnean",
+            "sampleCSV": "Luchdaich a-nuas CSV airson samp",
+            "fileLabel": "Luchdaich suas spreadsheet:",
+            "errorsTitle": "Thachair mearachdan"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Criathraich a rèir NFT Collections",
+                "ShowNFTCollection": "Seall cruinneachadh NFT ann an ...",
+                "AllCollections": "A h-uile Cruinneachaidhean"
+            },
+            "ByUser": {
+                "AllAuthors": "A h-uile Ùghdar",
+                "AllUsers": "A h-uile duine",
+                "FilterByAuthors": "Criathraich a-rèir Ùghdaran"
+            }
+        },
+        "Back": "Air ais dhan Chruinneachadh",
+        "attributes": {
+            "Title": "Stiùirich Feartan",
+            "Attributes": "Feartan",
+            "DisplayTitle": "Seòrsa Taisbeanaidh",
+            "AddDisplayType": "Cuir a-steach seòrsa taisbeanaidh ùr",
+            "NewDisplay": "Taisbeanadh Ùr",
+            "TraitTitle": "Seòrsa Trait",
+            "AddTraitTitle": "Cuir a-steach seòrsa caractar ùr",
+            "NewTrait": "Seòrsa de charactar ùr",
+            "ValueTitle": "Luach",
+            "AddValueTitle": "Cuir luach ùr ris",
+            "NewValue": "Luach ùr",
+            "NewAttribute": "Feart Ùr",
+            "UpdateAttributes": "Feartan ùrachadh",
+            "SaveAttributes": "Sàbhail Feartan"
+        },
+        "profile": {
+            "LogOut": "Log a-mach",
+            "Title": "Pròifil airson {{userName}}",
+            "Description": "Mion-fhiosrachadh cleachdaiche",
+            "aboutPlaceholder": "Deasaich Bio",
+            "UploadCoverPhoto": "Luchdaich a-nuas dealbh cover.",
+            "SureLogOut": "A bheil thu cinnteach gu bheil thu airson logadh a-mach?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "Cùmhnant NFFT",
+                        "seriesId": "sreath id",
+                        "owner": "Sealbhadair",
+                        "currency": "uireasbhuidh",
+                        "price": "Prìs",
+                        "beneficiary": "Fear-tairbhe",
+                        "autoindex": "Autoindex",
+                        "duration": "Fad",
+                        "rateInterval": "Ìre eadar-amail",
+                        "rateAmount": "Meud ìre"
+                    },
+                    "small": {
+                        "NFTContract": "Cùmhnant NFFT",
+                        "seriesId": "bidh comharran air an comharrachadh san t-sreath seo",
+                        "owner": "sealbhadair mar eisimpleir, air dhòigh eile bidh e na neach-cuiridh",
+                        "currency": "Airgead airson comharran a chaidh a cheannach, ma tha neoni - airson buinn dùthchasach",
+                        "price": "Prìs",
+                        "beneficiary": "Neach a gheibh buannachd bho bhith a’ reic chomharran, air neo bidh e na neach-cuiridh",
+                        "autoindex": "Autoindex",
+                        "duration": "Glasadh às deidh minting. Tha neoni a’ ciallachadh gum faigh thu e sa bhad.",
+                        "rateInterval": "eadar-ama bucaid airson ceannach sònraichte",
+                        "rateAmount": "suim bucaid airson ceannach sònraichte"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(roghainneil)",
+                    "number": "àireamh",
+                    "address": "seòladh",
+                    "fraction": "bloigh",
+                    "integer": "iomlanachd",
+                    "seconds": "diogan",
+                    "uint256": "aont256",
+                    "uint192": "aont192",
+                    "uint64": "aont 64",
+                    "uint32": "uint32",
+                    "uint16": "aont16"
+                },
+                "produce": "Toradh",
+                "viewInstancesList": "Clàr Ath-nuadhachadh"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID sreath",
+                        "account": "Cunntas",
+                        "amount": "Suim"
+                    },
+                    "small": {
+                        "seriesId": "buinidh tòcan ùr ann an sreath le ID mar sin",
+                        "account": "sealbhadair an NFT a chaidh a chruthachadh às ùr. mura tèid a shuidheachadh - cleachdaidh e wallet gnàthach",
+                        "amount": "an suim NFT gu mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(roghainneil)",
+                    "seriesId": "id",
+                    "account": "cunntas",
+                    "amount": "suim",
+                    "integer": "iomlanachd"
+                },
+                "btn": {
+                    "Purchase": "Ceannach",
+                    "SpecialPurchase": "Ceannach sònraichte"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Seòladh"
+                    },
+                    "small": {
+                        "account": "Seòladh"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Seòladh mì-dhligheach"
+                },
+                "placeholders": {
+                    "account": "Seòladh"
+                },
+                "addToWhitelist": "Cuir ri Whitelist",
+                "removeFromWhitelist": "Thoir air falbh bhon Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ID tòcan",
+                    "custodian": "Neach-gleidhidh",
+                    "recipient": "Neach-faighinn"
+                },
+                "small": {
+                    "tokenId": "token id dè dh&#39;fheumas a ghlasadh no fhuasgladh",
+                    "custodian": "seòladh a tha comasach air fhuasgladh",
+                    "recipient": "seòladh a gheibh na comharran"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Id tòcan mì-dhligheach",
+                "invalidCustodian": "Neach-gleidhidh mì-dhligheach",
+                "invalidRecipient": "Neach-faighinn mì-dhligheach"
+            },
+            "placeholders": {
+                "optional": "(roghainneil)",
+                "tokenId": "id",
+                "custodian": "seòladh"
+            },
+            "Lock": "Glasadh",
+            "Unlock": "Fuasgail",
+            "Locked": "Air a ghlasadh",
+            "CustodianAddress": "Seòladh neach-gleidhidh",
+            "TokenWasClaimed": "Chaidh Token &quot; {{title}} &quot; a thagradh",
+            "TokenWasLocked": "Chaidh Token &quot; {{title}} &quot; a ghlasadh",
+            "TokenWasUnlocked": "Chaidh Token &quot; {{title}} &quot; fhosgladh"
+        }
+    },
+    "fundrise": {
+        "placeholder": "sgrìobh rudeigin mun tabhartas seo..."
+    },
+    "currencies": {
+        "choose": "Tagh airgead-crìche"
+    }
+}

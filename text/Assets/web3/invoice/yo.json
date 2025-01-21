@@ -1,0 +1,27 @@
+{
+    "title": "Sanwo",
+    "steps": {
+        "sending_native_coins": "Fifiranṣẹ abinibi eyo",
+        "sending_tokens": "Fifiranṣẹ awọn ami",
+        "swap": "Yipada",
+        "approve": "fọwọsi",
+        "one_tx": "O yẹ ki o firanṣẹ idunadura kan",
+        "two_tx": "O yẹ ki o firanṣẹ awọn iṣowo meji"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Awọn owo lati san"
+            }
+        },
+        "btns": {
+            "pay": "Sanwo"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Nilo lati san &quot; {{amountOut}} &quot; àmi"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Iru pq pẹlu id &quot; {{chainId}} &quot; ko ni atilẹyin"
+    }
+}

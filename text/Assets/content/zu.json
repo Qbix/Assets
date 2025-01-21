@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Iphutha",
+        "WalletAbsent": "Isikhwama asixhunyiwe.",
+        "Rendering": "Kube namaphutha ngenkathi kunikezwa <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Intengo iyadingeka!",
+        "NameRequired": "Igama liyadingeka!",
+        "PriceInvalid": "Intengo ayivumelekile!",
+        "AmountInvalid": "Inani alivumelekile!",
+        "TransactionFailed": "Umsebenzi wehlulekile",
+        "ChainNotSupported": "Iketango elikhethiwe alisekelwe. Iketango elisekelwe: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Udinga i-MetaMask exhunywe ukusebenza nohlelo lokusebenza",
+        "UserNotLoggedInMetaMask": "Umsebenzisi akangenile ku-MetaMask",
+        "CurrencyNotFound": "Imali ayitholakali",
+        "WrongChain": "Le NFT idalwe ngaphansi kokuthi &quot; {{chain}} &quot;. Sicela usebenzise leli ketanga.",
+        "NoRecipientSelected": "Akekho umamukeli okhethiwe",
+        "CantManageFrozenSeries": "Awukwazi ukuphatha uchungechunge oluqandisiwe",
+        "SubscriptionStreamNotPaid": "Awukakakhokhi ukubuka lokhu okuqukethwe. Sicela uchofoze {{subscriptionUrl}} bese ubhalisela uhlelo olufanele."
+    },
+    "admin": {
+        "Title": "Ukuphatha amafa",
+        "SubscriptionTitle": "Izinhlelo zokubhalisa"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Thepha ukuze ukhokhe"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : inkokhiso isicutshungulwe ku {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Siyabonga ngenkokhelo yakho eya ku {{call 'publisher.displayName'}}",
+        "SubscribedTo": "Abangu {{call 'user.displayName'}} babhalisele i- {{plan.title}}",
+        "YouSubscribedTo": "Ubhalisele i- {{plan.title}}",
+        "Assets\/credits\/alert": "Unesexwayiso esihlobene ne-akhawunti yakho"
+    },
+    "charge": {
+        "Subject": "Uthole inkokhelo engu {{displayAmount}} esuka ku {{call 'publisher.displayName'}} ye-&quot; {{description}} &quot;",
+        "HasBeenCharged": "Sawubona, lokhu nje ukukwazisa ukuthi {{1}} ukhokhiswe {{2}} ngo {{3}} ngo {{4}}"
+    },
+    "charged": {
+        "Subject": "Siyabonga ngenkokhelo yakho ye-&quot; {{description}} &quot;",
+        "HavePaid": "Sawubona {{1}} , lesi isiqinisekiso esisheshayo sokuthi ukhokhe ngempumelelo {{2}} kuya ku {{3}} ngo {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Xhuma i-akhawunti",
+        "Success": "Impumelelo",
+        "YourAccountCreated": "I-akhawunti yakho idalwe ngempumelelo!",
+        "YourAccountAlreadyCreated": "I-akhawunti yakho isivele idaliwe futhi isilungele ukusetshenziswa"
+    },
+    "payment": {
+        "AboutOrder": "Ulwazi mayelana ne-oda",
+        "PaymentMethod": "Indlela yokukhokha",
+        "ContactInfo": "Ulwazi lokuxhumana",
+        "Pay": "Khokha",
+        "PaymentSucceeded": "Inkokhelo icutshungulwe ngempumelelo",
+        "PaymentProcessing.": "Inkokhelo yakho iyacutshungulwa",
+        "FailTryAgain": "Inkokhelo yakho ayiphumelelanga. Sicela uzame futhi.",
+        "SomethingWrong": "Kukhona into engahambanga kahle",
+        "PaymentStatus": "Isimo sokukhokha",
+        "PayTo": "Khokha {{displayName}}",
+        "ChooseCurrency": "Khetha uhlobo lwemali",
+        "YouCanSendUpTo": "Ungathumela kufikela ku- {{amount}} {{symbol}}",
+        "Send": "Thumela",
+        "EnterAmount": "faka inani"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Isimemo samukelwe ngabangu {{invitedUserName}}",
+        "InvitedUserFilledStream": "Abangu {{invitedUserName}} bagcwalise {{FilledStreamTitle}}",
+        "ForFillingStream": "Ukugcwalisa {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Unamakhredithi {{amount}} okufanele uwaqale",
+        "PaymentFor": "Inkokhelo ye-&quot; {{1}} &quot;",
+        "PaymentTo": "Inkokhelo ku- {{1}}",
+        "PaymentToUser": "Dlulisela ku {{toUserName}}",
+        "CreatePrivateChat": "ngengxoxo yangasese no- {{toUserName}}",
+        "CreatePaidStream": "ngokudala {{toStreamName}}",
+        "JoinedPaidStream": "ngokubhukha &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "ngokudala umphakathi &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "njengembuyiselo yokubhuka kokuthi &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Uthenge amakhredithi {{amount}}",
+        "BonusCredits": "Ibhonasi {{amount}} amakhredithi",
+        "BuyAmountCredits": "Thenga amakhredithi angama {{amount}}",
+        "WatchClip": "ngokubuka {{fromStreamTitle}}",
+        "MissingCredits": "Amakhredithi angekho",
+        "YouMissingCredits": "Udinga amakhredithi engeziwe {{amount}} ukuze uqhubeke.",
+        "BuyCredits": "Thenga amakhredithi",
+        "BuyBonus": "Ukuthenga amakhredithi {{amount}} ngesikhathi esisodwa kuzoholela ebhonasini yamakhredithi {{bonus}} .",
+        "Buy": "Thenga",
+        "PurchaseCredits": "Thenga Izikweletu",
+        "Credits": "Amakhredithi",
+        "ErrorInvalidAmount": "Inani alivumelekile",
+        "ErrorInvalidCurrency": "Ngeshwa, okwamanje asikasekeli uhlobo lwemali lwe {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} amakhredithi",
+            "BonusCredits": "{{amount}} amakhredithi"
+        }
+    },
+    "history": {
+        "Date": "Usuku",
+        "Amount": "Inani",
+        "Description": "Incazelo",
+        "Client": "Iklayenti",
+        "User": "Umsebenzisi",
+        "To": "ku",
+        "From": "kusuka",
+        "SeeHistory": "Bona umlando wokukhokha we- {{1}}",
+        "HistoryEmpty": "Akukho okwenziwayo okwamanje",
+        "PaymentFor": "Uthumele amakhredithi {{amount}}",
+        "PaymentTo": "Uthumele amakhredithi {{amount}}",
+        "PaymentToUser": "Uthumele amakhredithi {{amount}}",
+        "CreatePaidStream": "Usebenzise amakhredithi {{amount}}",
+        "WatchClip": {
+            "+": "Uzuze amakhredithi {{amount}}",
+            "-": "Usebenzise amakhredithi {{amount}}"
+        },
+        "JoinedPaidStream": {
+            "+": "Uzuze amakhredithi {{amount}}",
+            "-": "Usebenzise amakhredithi {{amount}}"
+        },
+        "LeftPaidStream": {
+            "+": "Uthole amakhredithi angama {{amount}}",
+            "-": "Uthumele amakhredithi {{amount}}"
+        },
+        "CreatedCommunity": "Usebenzise amakhredithi {{amount}}",
+        "BoughtCredits": "Uthenge amakhredithi {{amount}}",
+        "BonusCredits": "Uthole amakhredithi angama {{amount}}",
+        "InviteAcceptedBy": "Uzuze amakhredithi {{amount}}",
+        "Streams_user_firstname": "Uzuze amakhredithi {{amount}}",
+        "Streams_user_lastname": "Uzuze amakhredithi {{amount}}",
+        "Streams_user_icon": "Uzuze amakhredithi {{amount}}",
+        "Places_user_location": "Uzuze amakhredithi {{amount}}",
+        "Streams_greeting": "Uzuze amakhredithi {{amount}}",
+        "YouHaveCreditsToStart": "Uzuze amakhredithi {{amount}}",
+        "InvitedUserFilledStream": "Uzuze amakhredithi {{amount}}",
+        "ForFillingStream": "Uzuze amakhredithi {{amount}}",
+        "CreatePrivateChat": "Usebenzise amakhredithi {{amount}}"
+    },
+    "subscriptions": {
+        "infoTitle": "Nikeza Ulwazi Lokukhokha",
+        "confirm": {
+            "title": "Qala Ukubhalisa",
+            "message": "Qala ukubhalisa okuphindelelayo ku-&quot; {{title}} &quot;?",
+            "ok": "KULUNGILE",
+            "cancel": "Khansela"
+        },
+        "CreditOrDebitCard": "Ikhadi lesikweletu noma lasebhange",
+        "SubscribePayment": "Bhalisela Inkokhelo",
+        "ImmediatePayment": "Inkokhelo Esheshayo",
+        "ProcessingPayment": "Icubungula Inkokhelo",
+        "SubscriptionAlreadyPaid": "Lokhu kubhalisa sekukhokhelwe",
+        "SubscriptionNotActive": "Okubhalisile akusebenzi okwamanje",
+        "Subscribed": "Ubhalisile",
+        "Unsubscribed": "Uzikhiphe ohlwini",
+        "Unsubscribe": "Zikhiphe ohlwini",
+        "Subscribe": "Bhalisa",
+        "Started": "Iqalile",
+        "EndsIn": "Igcina ngo",
+        "NextPay": "Inkokhelo elandelayo",
+        "Period": "Isikhathi",
+        "Price": "Inani",
+        "AreYouSureUnsubscribe": "Uqinisekile ukuthi ufuna ukuzikhipha ohlwini lwalolu hlelo?",
+        "YouUnsubscribedFromPlan": "Uzikhiphile ohlelweni &quot; {{planTitle}} &quot;. Ngeke ukhokhiswe ngokuzayo, kodwa ukubhalisa kwakho kuzoqhubeka kuze kube {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "isihloko sepulani",
+            "PricePlaceholder": "intengo",
+            "SubscriptionTitle": "Izinhlelo zokubhalisa",
+            "DescriptionPlaceholder": "incazelo yohlelo lokubhalisa",
+            "AreYouSureDeletePlan": "Uqinisekile ukuthi ufuna ukususa lolu hlelo?",
+            "Duration": "Ubude besikhathi",
+            "Discount": "Isaphulelo",
+            "SavePlan": "Londoloza",
+            "Interrupt": "Phakamisa",
+            "Continue": "Qhubeka",
+            "NewPlan": "Uhlelo Olusha",
+            "SelectDisplayType": "Khetha {{displayType}}",
+            "EndDate": "usuku lokugcina",
+            "Available": "Iyatholakala",
+            "Hidden": "Kufihliwe",
+            "InviteOnly": "Isimemo kuphela",
+            "CantSubscribeUnlessInvited": "Awukwazi ukubhalisa kulolu hlelo ngaphandle kokuthi umenyiwe"
+        }
+    },
+    "payments": {
+        "infoTitle": "Setha Ulwazi Lokukhokha",
+        "BuyAmountCredits": "Thenga amakhredithi angama {{amount}}",
+        "confirm": {
+            "title": "Yenza Inkokhelo",
+            "message": "Ingabe uyavuma ukukhokha {{symbol}} {{amount}} ?",
+            "ok": "KULUNGILE",
+            "cancel": "Khansela"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Amakhredithi",
+            "description": "igcina umkhondo wezikweletu nezinkokhelo"
+        },
+        "Assets\/plan": {
+            "displayType": "Uhlelo Lokubhalisa",
+            "description": "uhlelo lokubhalisa"
+        },
+        "Assets\/subscription": {
+            "displayType": "Ukubhalisa",
+            "description": "ukubhalisa"
+        },
+        "Assets\/product": {
+            "displayType": "Umkhiqizo",
+            "description": "umkhiqizo uyathengiswa"
+        },
+        "Assets\/service": {
+            "displayType": "Isevisi",
+            "description": "isevisi enikezwayo"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Uzuze amakhredithi {{amount}}"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Uthenge amakhredithi {{amount}}"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Ibhonasi {{amount}} amakhredithi"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Usebenzise amakhredithi {{amount}}"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Ithumele amakhredithi {{amount}} kwabangu- {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Uthole amakhredithi angama {{amount}} ku- {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Unamakhredithi anganele ku-akhawunti yakho. Sicela uvakashele <a href='<i translate='no'>999 &#39;&gt;isixhumanisi<\/a> esilandelayo ukuze uthenge amanye amakhredithi."
+        }
+    },
+    "billing": {
+        "Title": "Ukukhokhiswa kwempahla",
+        "CreditsMinimum": "Amakhredithi amancane",
+        "CreditsToAdd": "Amakhredithi ongawengeza",
+        "Save": "Londoloza",
+        "ThisLink": "lesi sixhumanisi",
+        "errors": {
+            "CreditsMinimumNegative": "Amakhredithi amancane awakwazi ukuba negethivu",
+            "CreditsToAddNegative": "Amakhredithi ongangezwa awakwazi ukuba negethivu"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Isevisi entsha",
+            "TitlePlaceholder": "Isihloko sesevisi",
+            "PricePlaceholder": "Setha intengo",
+            "LinkPlaceholder": "setha isixhumanisi solwazi olwengeziwe",
+            "DescriptionPlaceholder": "Incazelo yesevisi",
+            "SaveService": "Londoloza Isevisi",
+            "SelectRequiredParticipants": "Abahlanganyeli abahlobene abadingekayo",
+            "RequiredParticipantsDesc": "Sicela ukhethe ababambiqhaza abahlobene okudingeka ukuba basebenzise le sevisi (ngokwesibonelo izilwane ezifuywayo &quot;Zombukiso Wezinja&quot;, noma izingane &quot;Ngeholide Lezingane&quot; njll). Uma isevisi ikhokhiwe, umsebenzisi uzodinga ukukhokhela ababambiqhaza ngamunye abahlobene."
+        },
+        "EditServiceTemplate": {
+            "Title": "Hlela Isevisi"
+        },
+        "ManageServiceTemplates": "Phatha Izifanekiso Zesevisi",
+        "ManageServices": "Phatha Amasevisi",
+        "Free": "Mahhala",
+        "OptionalContribution": "Umnikelo ozikhethela wona",
+        "RequiredPayment": "Inkokhelo edingekayo",
+        "AreYouSureDelete": "Uqinisekile ukuthi ufuna ukususa le sevisi?",
+        "AmountServicesRelated": "Kukhona ukutholakala okungu {{amount}} okuhlobene nale sevisi. Nabo bazosuswa."
+    },
+    "transfer": {
+        "SelectRecipient": "Khetha umamukeli",
+        "TransactionSuccess": "Impumelelo Yokwenziwayo",
+        "OrTypeWalletAddress": "NOMA thayipha ikheli lesikhwama somamukeli",
+        "AppCredits": "Amakhredithi ohlelo lokusebenza"
+    },
+    "NFT": {
+        "Title": "Isihloko",
+        "Name": "Igama",
+        "EnterName": "Faka igama",
+        "EnterAuthorWallet": "Faka isikhwama sombhali",
+        "InformationAboutTitle": "Ulwazi mayelana {{title}} NFT",
+        "Description": "Incazelo",
+        "DetailedInformationAboutNFT": "Ulwazi oluningiliziwe mayelana ne-NFT",
+        "PresaleStarts": "I-Presale Iqala ngo-Dec 23",
+        "OwnerUserNotFound": "Umnikazi wale NFT akabhalisiwe esicelweni sethu.",
+        "BuyNow": "Thenga Manje",
+        "Buy": "Thenga",
+        "Add": "Engeza",
+        "Remove": "Susa",
+        "NoNFTyet": "Awekho ama-NFT okwamanje",
+        "Conversation": "Ingxoxo",
+        "Create": "Dala",
+        "CurrentBid": "Ibhidi yamanje",
+        "StartingIn": "Iqala ngo",
+        "EndingIn": "Igcina ngo",
+        "CreateNFT": "Dala i-NFT",
+        "TitlePlaceholder": "Nikeza i-NFT yakho isihloko",
+        "DescriptionPlaceholder": "Nikeza i-NFT yakho incazelo",
+        "CreateYourNFT": "Dala i-NFT yakho",
+        "Royalties": "Imiklomelo",
+        "RoyaltyPlaceholder": "Ongakukhetha. Inani elikhokhelwe umdali ngaphambi kokudluliselwa.",
+        "ExpirationDate": "Usuku lokuphelelwa isikhathi",
+        "StartingDate": "Usuku okuqalwa ngalo",
+        "BidsBelowThisAmount": "Amabhidi angaphansi kwaleli nani ngeke avunyelwe",
+        "MinimumBid": "Ibhidi elincane",
+        "Author": "Umbhali",
+        "Price": "Inani",
+        "Commission": "Ikhomishini",
+        "EnterCommission": "Faka ikhomishini",
+        "Owner": "Umnikazi",
+        "SelectCategory": "Khetha isigaba",
+        "Day": "Usuku",
+        "Days": "Izinsuku",
+        "Hour": "Ihora",
+        "Hours": "Amahora",
+        "Minute": "Iminithi",
+        "Minutes": "Amaminithi",
+        "Second": "Okwesibili",
+        "Seconds": "Imizuzwana",
+        "SalesCreator": "yokuthengisa izoya kumdali",
+        "Details": "Imininingwane",
+        "Bids": "Amabhidi",
+        "History": "Umlando",
+        "LoremIpsum": "I-Lorem Ipsum imane iwumbhalo oyindida wemboni yokunyathelisa nokuhlela izinhlobo.",
+        "PutOnSale": "Ithengiswa",
+        "PutOffSale": "Hoxisa ekuthengisweni",
+        "Transfer": "Dlulisa",
+        "Actions": "Izenzo",
+        "Claim": "Faka isicelo",
+        "ClaimNFT": "Funa i-NFT",
+        "Unlocking": "Iyavula",
+        "Unlock": "Vula",
+        "Update": "Buyekeza",
+        "UpdateToken": "Buyekeza Ithokheni",
+        "UpdateNFT": "Buyekeza i-NFT",
+        "CreateToken": "Dala Ithokheni",
+        "PlaceBid": "Ibhidi yendawo",
+        "SoldOut": "Kuthengisiwe",
+        "NotOnSale": "Ayithengiswa",
+        "NftName": "Igama le-NFT",
+        "DescribeYourNFT": "Sicela uchaze i-NFT yakho",
+        "NFTImage": "Isithombe se-NFT",
+        "NFTVideo": "Ividiyo ye-NFT, uma ikhona",
+        "GenerateDescription": "noma yenza ngokuzenzakalelayo",
+        "UploadMovie": "Layisha imuvi",
+        "MovieSource": "Umthombo wefilimu",
+        "MovieURL": "I-URL yefilimu",
+        "UploadFile": "Layisha ifayela",
+        "PutOnMarketplace": "Beka esigcawini",
+        "InstantPurchase": "Faka intengo ukuze uvumele abasebenzisi ukuthi bathenge i-NFT yakho ngokushesha",
+        "FixedPrice": "Intengo engashintshi",
+        "TimedAuction": "Indali enesikhathi",
+        "OpenForBids": "Vula amabhidi",
+        "PriceOnePiece": "Faka intengo yesiqephu esisodwa",
+        "EnterPrice": "Faka intengo",
+        "EnterMinimumBid": "Faka Ibhidi elincane",
+        "SelectChain": "Khetha iketango",
+        "Currency": "Imali",
+        "AreYouSureDeleteImage": "Uqinisekile ukuthi ufuna ukususa isithombe?",
+        "AreYouSureDeleteVideo": "Uqinisekile ukuthi ufuna ukususa ividiyo?",
+        "series": {
+            "Name": "Igama",
+            "Icon": "Isithonjana",
+            "Description": "Incazelo",
+            "Author": "Umbhali",
+            "SelectSeries": "Khetha uchungechunge",
+            "Value": "Inani",
+            "AreYouSure": "Uqinisekile?",
+            "AuthorInvalid": "Ikheli lombhali alivumelekile!",
+            "Address": "Ikheli",
+            "CoverImage": "Isithombe sekhava",
+            "UploadCoverImage": "Layisha isithombe sekhava",
+            "CommissionAddressInvalid": "Ikheli lekhomishini alivumelekile",
+            "OnSale": "ezithengiswayo",
+            "OffSale": "ayithengiswa",
+            "CreateSeries": "Dala uchungechunge",
+            "UpdateSeries": "Buyekeza uchungechunge",
+            "SeriesInfo": "Ulwazi Lwechungechunge",
+            "SelectAuthor": "Khetha umbhali",
+            "NewItem": "Uchungechunge olusha lwe-NFT",
+            "NamePlaceholder": "Faka igama lochungechunge",
+            "DescPlaceholder": "Faka incazelo yochungechunge",
+            "EndingIn": "Igcina ngo"
+        },
+        "contract": {
+            "CreateContract": "Dala inkontileka",
+            "SelectContract": "Khetha inkontileka",
+            "CreateContractFor": "Dala inkontileka ka- {{userName}}",
+            "ContractFor": "Inkontileka ye {{userName}}",
+            "UpdateContract": "Buyekeza Inkontileka",
+            "TransferOwnership": "Dlulisa Ubunikazi",
+            "SetBaseURI": "Setha i-URI yesisekelo",
+            "SetSuffix": "Setha Isijobelelo",
+            "CurrentOwner": "Umnikazi Wamanje",
+            "CurrentBaseURL": "I-BaseURL yamanje",
+            "ContractAddressAbsent": "Ikheli lenkontileka alikho",
+            "FactoryAddressAbsent": "Ikheli lemboni alikho",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Kudingeka isihloko",
+            "SymbolRequired": "Kudingeka uphawu",
+            "TypeContractName": "igama lenkontileka",
+            "TypeContractSymbol": "uphawu lwenkontileka (ubuningi bezinhlamvu eziyi-10)"
+        },
+        "contests": {
+            "Title": "Imiqhudelwano",
+            "NewContest": "Umncintiswano Omusha"
+        },
+        "collections": {
+            "Title": "Amaqoqo",
+            "EnterTitle": "faka isihloko",
+            "EnterDescription": "faka incazelo",
+            "NewCollection": "Iqoqo Elisha",
+            "Name": "Igama",
+            "Icon": "Isithonjana",
+            "Description": "Incazelo",
+            "Author": "Umbhali",
+            "SelectCollection": "Khetha iqoqo",
+            "Value": "Inani",
+            "AreYouSure": "Uqinisekile?",
+            "AuthorInvalid": "Ikheli lombhali alivumelekile!",
+            "Address": "Ikheli",
+            "CoverImage": "Isithombe sekhava",
+            "UploadIcon": "Layisha isithonjana",
+            "CommissionAddressInvalid": "Ikheli lekhomishini alivumelekile",
+            "OnSale": "ezithengiswayo",
+            "OffSale": "ayithengiswa",
+            "CreateCollection": "Dala Iqoqo",
+            "UpdateCollection": "Buyekeza Iqoqo",
+            "CollectionInfo": "Ulwazi Lweqoqo",
+            "SelectAuthor": "Khetha umbhali",
+            "NewItem": "Iqoqo elisha le-NFT",
+            "NamePlaceholder": "Faka igama leqoqo",
+            "DescPlaceholder": "Faka incazelo yeqoqo",
+            "EndingIn": "Igcina ngo",
+            "SubmitSeries": "Thumela Uchungechunge"
+        },
+        "import": {
+            "importNFT": "Ingenisa ama-NFT",
+            "importAttributes": "Ngenisa izibaluli ze-NFT",
+            "fileNotFound": "Uxolo, ifayela le-CSV alitholakali.",
+            "fileEmpty": "Uxolo, ifayela le-CSV alinalutho.",
+            "userIdNotFound": "umsebenzisi ukhona kodwa i-id ayinalutho",
+            "errorLine": "umugqa {{1}}",
+            "fieldNotFound": "Inkambu edingekayo &quot; {{1}} &quot; ayitholakali",
+            "displayTypeEmpty": "Uhlobo lokubonisa lwe-&quot; {{1}} &quot; alutholakali",
+            "taskStreamInvalid": "ukusakaza komsebenzi akuvumelekile",
+            "instructionsEmpty": "imiyalelo yokusakaza umsebenzi ayinalutho",
+            "complete": "Qedela",
+            "activateUsers": "thumela umlayezo wokwenza kusebenze kubasebenzisi?",
+            "importProgress": "Inqubekelaphambili",
+            "importOptions": "Izinketho",
+            "sampleCSV": "Landa isampuli ye-CSV",
+            "fileLabel": "Layisha Ispredishithi:",
+            "errorsTitle": "Kuvele amaphutha"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Hlunga ngamaqoqo e-NFT",
+                "ShowNFTCollection": "Bonisa iqoqo le-NFT ku...",
+                "AllCollections": "Wonke Amaqoqo"
+            },
+            "ByUser": {
+                "AllAuthors": "Bonke Ababhali",
+                "AllUsers": "Wonke umuntu",
+                "FilterByAuthors": "Hlunga ngababhali"
+            }
+        },
+        "Back": "Buyela Eqoqweni",
+        "attributes": {
+            "Title": "Phatha Izimfanelo",
+            "Attributes": "Izimfanelo",
+            "DisplayTitle": "Uhlobo lokubonisa",
+            "AddDisplayType": "Engeza uhlobo olusha lokubonisa",
+            "NewDisplay": "Isibonisi Esisha",
+            "TraitTitle": "Uhlobo Lwesici",
+            "AddTraitTitle": "Engeza uhlobo olusha lwesici",
+            "NewTrait": "Uhlobo Olusha Lwesici",
+            "ValueTitle": "Inani",
+            "AddValueTitle": "Engeza inani elisha",
+            "NewValue": "Inani Elisha",
+            "NewAttribute": "Isibaluli Esisha",
+            "UpdateAttributes": "Buyekeza Izimfanelo",
+            "SaveAttributes": "Londoloza Izimfanelo"
+        },
+        "profile": {
+            "LogOut": "Phuma",
+            "Title": "Iphrofayela ye {{userName}}",
+            "Description": "Imininingwane yomsebenzisi",
+            "aboutPlaceholder": "Hlela i-Bio",
+            "UploadCoverPhoto": "Layisha Isithombe Sekhava",
+            "SureLogOut": "Uqinisekile ukuthi ufuna ukuphuma?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "uchungechunge Id",
+                        "owner": "Umnikazi",
+                        "currency": "Imali",
+                        "price": "Inani",
+                        "beneficiary": "Ohlomulayo",
+                        "autoindex": "I-Autoindex",
+                        "duration": "Ubude besikhathi",
+                        "rateInterval": "Linganisa isikhawu",
+                        "rateAmount": "Linganisa inani"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "amathokheni azokwenziwa kulolu chungechunge",
+                        "owner": "umnikazi wesibonelo, uma kungenjalo kuzoba umthumeli",
+                        "currency": "Imali yamathokheni athengiwe, uma iqanda - yezinhlamvu zemali zomdabu",
+                        "price": "Inani",
+                        "beneficiary": "Ohlomula ngokuthengisa amathokheni, uma kungenjalo kuzoba umthumeli",
+                        "autoindex": "I-Autoindex",
+                        "duration": "Khiya ngemuva kokufakwa. Uziro usho ukuthi ukuthole ngokushesha.",
+                        "rateInterval": "isikhawu sebhakede lokuthenga okukhethekile",
+                        "rateAmount": "inani lebhakede lokuthenga okukhethekile"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(uyazikhethela)",
+                    "number": "inombolo",
+                    "address": "ikheli",
+                    "fraction": "ingxenyenamba",
+                    "integer": "inombolo ephelele",
+                    "seconds": "imizuzwana",
+                    "uint256": "ibe 256",
+                    "uint192": "othi192",
+                    "uint64": "ibe 64",
+                    "uint32": "othi32",
+                    "uint16": "unje16"
+                },
+                "produce": "Khiqiza",
+                "viewInstancesList": "Vuselela Uhlu"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "I-ID yochungechunge",
+                        "account": "I-akhawunti",
+                        "amount": "Inani"
+                    },
+                    "small": {
+                        "seriesId": "ithokheni entsha izoba ngochungechunge olunaleyo ID",
+                        "account": "umnikazi we-NFT esanda kwakhiwa. uma ingasethiwe - izosebenzisa isikhwama samanje",
+                        "amount": "inani le-NFT ku-mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(uyazikhethela)",
+                    "seriesId": "id",
+                    "account": "i-akhawunti",
+                    "amount": "inani",
+                    "integer": "inombolo ephelele"
+                },
+                "btn": {
+                    "Purchase": "Thenga",
+                    "SpecialPurchase": "Ukuthenga okukhethekile"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Ikheli"
+                    },
+                    "small": {
+                        "account": "Ikheli"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Ikheli Elingavumelekile"
+                },
+                "placeholders": {
+                    "account": "Ikheli"
+                },
+                "addToWhitelist": "Engeza Kuhlu Olumhlophe",
+                "removeFromWhitelist": "Susa ohlwini olugunyaziwe"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "I-ID yethokheni",
+                    "custodian": "Umgcini",
+                    "recipient": "Umamukeli"
+                },
+                "small": {
+                    "tokenId": "i-id yethokheni okudingeka uyikhiye noma uyivule",
+                    "custodian": "ikheli elingakwazi ukulivula",
+                    "recipient": "ikheli elizothola amathokheni"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "I-ID yethokheni engavumelekile",
+                "invalidCustodian": "Umgcini ongavumelekile",
+                "invalidRecipient": "Umamukeli Ongavumelekile"
+            },
+            "placeholders": {
+                "optional": "(uyazikhethela)",
+                "tokenId": "id",
+                "custodian": "ikheli"
+            },
+            "Lock": "Khiya",
+            "Unlock": "Vula",
+            "Locked": "Kukhiyiwe",
+            "CustodianAddress": "Ikheli lomgcini",
+            "TokenWasClaimed": "Ithokheni ethi &quot; {{title}} &quot; yafunwa",
+            "TokenWasLocked": "Ithokheni ethi &quot; {{title}} &quot; ibikhiyiwe",
+            "TokenWasUnlocked": "Ithokheni ethi &quot; {{title}} &quot; ivuliwe"
+        }
+    },
+    "fundrise": {
+        "placeholder": "bhala okuthile ngalo mnikelo..."
+    },
+    "currencies": {
+        "choose": "Khetha uhlobo lwemali"
+    }
+}

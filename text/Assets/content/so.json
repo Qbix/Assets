@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Khalad",
+        "WalletAbsent": "Shandadu kuma xidhna",
+        "Rendering": "Waxa jiray khaladaad markii la samaynayey <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Qiimaha loo baahan yahay!",
+        "NameRequired": "Magaca ayaa loo baahan yahay!",
+        "PriceInvalid": "Qiimaha ma ansaxayo!",
+        "AmountInvalid": "Qadarka aan shaqaynayn!",
+        "TransactionFailed": "Wax kala iibsigu wuu fashilmay",
+        "ChainNotSupported": "Silsiladda la doortay lama taageero. Silsilad la taageeray: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Waxaan u baahanahay MetaMask oo ku xidhan codsiga",
+        "UserNotLoggedInMetaMask": "Isticmaaluhu ma galo MetaMask",
+        "CurrencyNotFound": "Lacagta lama helin",
+        "WrongChain": "NFT-kan wuxuu ku hoos sameeyay &quot; {{chain}} &quot;. Fadlan isticmaal silsiladan",
+        "NoRecipientSelected": "Ma jiro qaataha la doortay",
+        "CantManageFrozenSeries": "Ma maamuli kartid taxanaha la qaboojiyey",
+        "SubscriptionStreamNotPaid": "Wax lacag ah ma aadan bixin si aad u aragto macluumaadkan. Fadlan guji {{subscriptionUrl}} oo rukumayso qorshaha ku habboon."
+    },
+    "admin": {
+        "Title": "Hantida maamulka",
+        "SubscriptionTitle": "Qorshayaasha isdiiwaangelinta"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Taabo si aad u bixiso"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : Kharashka waxaa laga shaqeeyay {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Waad ku mahadsan tahay bixintaada {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} ayaa ku biiray {{plan.title}}",
+        "YouSubscribedTo": "Waxaad ku biirtay {{plan.title}}",
+        "Assets\/credits\/alert": "Waxaad haysaa digniin la xidhiidha akoonkaaga"
+    },
+    "charge": {
+        "Subject": "Waxaad ka heshay lacag {{displayAmount}} ah {{call 'publisher.displayName'}} &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, tani waa in lagu ogeysiiyo in {{1}} lagu dalacay {{2}} {{3}} {{4}}"
+    },
+    "charged": {
+        "Subject": "Waad ku mahadsan tahay lacag bixinta &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , tani waa xaqiijin degdeg ah inaad si guul leh u bixisay {{2}} ilaa {{3}} {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Ku xidh akoon",
+        "Success": "Guul",
+        "YourAccountCreated": "Koontadaada si guul leh ayaa loo sameeyay!",
+        "YourAccountAlreadyCreated": "Koontadaada mar hore ayaa la sameeyay oo diyaar bay u tahay in la isticmaalo"
+    },
+    "payment": {
+        "AboutOrder": "Macluumaadka ku saabsan nidaamka",
+        "PaymentMethod": "Habka lacag bixinta",
+        "ContactInfo": "Macluumaadka xiriirka",
+        "Pay": "Bixi",
+        "PaymentSucceeded": "Lacag bixinta si guul leh ayaa loo habeeyey",
+        "PaymentProcessing.": "Lacag bixintaada waa la habaynayaa",
+        "FailTryAgain": "Lacag bixintaadu kuma guulaysan Fadlan isku day mar kale",
+        "SomethingWrong": "Wax baa khaldamay",
+        "PaymentStatus": "Heerka lacag bixinta",
+        "PayTo": "Bixi {{displayName}}",
+        "ChooseCurrency": "Dooro lacag",
+        "YouCanSendUpTo": "Waxaad soo diri kartaa ilaa {{amount}} {{symbol}}",
+        "Send": "Dir",
+        "EnterAmount": "geli qaddarka"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Casuumada waxaa aqbalay {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} ayaa buuxiyay {{FilledStreamTitle}}",
+        "ForFillingStream": "Buuxinta {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Waxaad haysataa {{amount}} dhibcood si aad u bilowdo",
+        "PaymentFor": "Lacag bixinta &quot; {{1}} &quot;",
+        "PaymentTo": "Lacag bixinta {{1}}",
+        "PaymentToUser": "U beddelo {{toUserName}}",
+        "CreatePrivateChat": "si gaar ah loola sheekeysto {{toUserName}}",
+        "CreatePaidStream": "abuurista {{toStreamName}}",
+        "JoinedPaidStream": "Boos sii qabsigu &quot; <a data-publisherId='<i translate='no'>999&#39; data-streamName=&#39; {{toStreamName}} &quot;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "abuurista bulshada &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "lacag celin boos celin ahaan ah &quot; <a data-publisherId='<i translate='no'>999&#39; data-streamName=&#39; {{fromStreamName}} &quot;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Iibsaday {{amount}} credits",
+        "BonusCredits": "Bonus {{amount}} credits",
+        "BuyAmountCredits": "Iibso {{amount}} dhibcood",
+        "WatchClip": "daawashada {{fromStreamTitle}}",
+        "MissingCredits": "Dhibcaha Maqan",
+        "YouMissingCredits": "Waxaad u baahan tahay {{amount}} dhibcood oo dheeri ah si aad u sii waddo.",
+        "BuyCredits": "Iibso credits",
+        "BuyBonus": "Iibsashada {{amount}} dhibcood hal mar waxay keenaysaa gunno {{bonus}} dhibcood ah.",
+        "Buy": "Iibso",
+        "PurchaseCredits": "Qiimaha Iibka",
+        "Credits": "credits",
+        "ErrorInvalidAmount": "Qadarka aan shaqayn",
+        "ErrorInvalidCurrency": "Nasiib darro, weli ma taageerno lacagta {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} dhibcood",
+            "BonusCredits": "{{amount}} dhibcood"
+        }
+    },
+    "history": {
+        "Date": "Taariikhda",
+        "Amount": "Qadarka",
+        "Description": "Sharaxaada",
+        "Client": "Macmiil",
+        "User": "Isticmaale",
+        "To": "ku",
+        "From": "ka",
+        "SeeHistory": "Eeg taariikhda lacag bixinta {{1}}",
+        "HistoryEmpty": "Wali wax kala iibsi ma jiro",
+        "PaymentFor": "diray {{amount}} credits",
+        "PaymentTo": "diray {{amount}} credits",
+        "PaymentToUser": "diray {{amount}} credits",
+        "CreatePaidStream": "Waxa la qaatay {{amount}} dhibcood",
+        "WatchClip": {
+            "+": "Waxa la kasbaday {{amount}} dhibcood",
+            "-": "Waxa la qaatay {{amount}} dhibcood"
+        },
+        "JoinedPaidStream": {
+            "+": "Waxa la kasbaday {{amount}} dhibcood",
+            "-": "Waxa la qaatay {{amount}} dhibcood"
+        },
+        "LeftPaidStream": {
+            "+": "Helay {{amount}} credits",
+            "-": "diray {{amount}} credits"
+        },
+        "CreatedCommunity": "Waxa la qaatay {{amount}} dhibcood",
+        "BoughtCredits": "Iibsaday {{amount}} credits",
+        "BonusCredits": "Waxa uu helay {{amount}} gunno",
+        "InviteAcceptedBy": "Waxa la kasbaday {{amount}} dhibcood",
+        "Streams_user_firstname": "Waxa la kasbaday {{amount}} dhibcood",
+        "Streams_user_lastname": "Waxa la kasbaday {{amount}} dhibcood",
+        "Streams_user_icon": "Waxa la kasbaday {{amount}} dhibcood",
+        "Places_user_location": "Waxa la kasbaday {{amount}} dhibcood",
+        "Streams_greeting": "Waxa la kasbaday {{amount}} dhibcood",
+        "YouHaveCreditsToStart": "Waxa la kasbaday {{amount}} dhibcood",
+        "InvitedUserFilledStream": "Waxa la kasbaday {{amount}} dhibcood",
+        "ForFillingStream": "Waxa la kasbaday {{amount}} dhibcood",
+        "CreatePrivateChat": "Waxa la qaatay {{amount}} dhibcood"
+    },
+    "subscriptions": {
+        "infoTitle": "Bixi Macluumaadka Lacag-bixinta",
+        "confirm": {
+            "title": "Bilow Is-diiwaangelinta",
+            "message": "Bilow ku biirista soo noqnoqda &quot; {{title}} &quot;?",
+            "ok": "OK",
+            "cancel": "Jooji"
+        },
+        "CreditOrDebitCard": "Kaarka deynta ama deynta",
+        "SubscribePayment": "Bixinta Rukunka",
+        "ImmediatePayment": "Lacag-bixinta degdega ah",
+        "ProcessingPayment": "Hagaajinta Lacag bixinta",
+        "SubscriptionAlreadyPaid": "Is-diiwaangelintan mar hore waa la bixiyay",
+        "SubscriptionNotActive": "Diiwaangelinta hadda ma shaqaynayso",
+        "Subscribed": "La diiwaan galiyay",
+        "Unsubscribed": "Iska-diiwaangelinta",
+        "Unsubscribe": "Is-diiwaangelinta",
+        "Subscribe": "Subscribe dheh",
+        "Started": "bilaabay",
+        "EndsIn": "Ku dhamaata",
+        "NextPay": "Lacagta xigta",
+        "Period": "Muddada",
+        "Price": "Qiimaha",
+        "AreYouSureUnsubscribe": "Ma hubtaa inaad doonayso inaad qorshahan ka baxdo?",
+        "YouUnsubscribedFromPlan": "Waad ka baxday qorshaha &quot; {{planTitle}} &quot;. Wax lacag ah laguguma dallaci doono marka xigta, laakiin ka-qaybgalkaagu wuxuu socon doonaa ilaa {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "cinwaanka qorshaha",
+            "PricePlaceholder": "qiimaha",
+            "SubscriptionTitle": "Qorshayaasha isdiiwaangelinta",
+            "DescriptionPlaceholder": "sharraxaadda qorshaha is-diiwaangelinta",
+            "AreYouSureDeletePlan": "Ma hubtaa inaad doonayso inaad tirtirto qorshahan?",
+            "Duration": "Muddada",
+            "Discount": "Qiimo dhimis",
+            "SavePlan": "Badbaadin",
+            "Interrupt": "Jooji",
+            "Continue": "Sii wad",
+            "NewPlan": "Qorshe Cusub",
+            "SelectDisplayType": "Dooro {{displayType}}",
+            "EndDate": "dhamaadka taariikhda",
+            "Available": "La heli karo",
+            "Hidden": "Qarsoon",
+            "InviteOnly": "Casuumad-kaliya",
+            "CantSubscribeUnlessInvited": "Ma iska qori kartid qorshahan ilaa lagugu martiqaado mooyee"
+        }
+    },
+    "payments": {
+        "infoTitle": "Deji Macluumaadka Lacag-bixinta",
+        "BuyAmountCredits": "Iibso {{amount}} dhibcood",
+        "confirm": {
+            "title": "Bixi Lacag",
+            "message": "Ma ogolaatay inaad bixiso {{symbol}} {{amount}} ?",
+            "ok": "OK",
+            "cancel": "Jooji"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "credits",
+            "description": "wuxuu la socdaa credits iyo lacag bixinta"
+        },
+        "Assets\/plan": {
+            "displayType": "Qorshaha Rukunka",
+            "description": "qorshaha is-diiwaangelinta"
+        },
+        "Assets\/subscription": {
+            "displayType": "Isdiiwaangelinta",
+            "description": "rukunid"
+        },
+        "Assets\/product": {
+            "displayType": "Alaabta",
+            "description": "alaabta la iibinayo"
+        },
+        "Assets\/service": {
+            "displayType": "Adeegga",
+            "description": "adeega la bixiyo"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Waxa la kasbaday {{amount}} dhibcood"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Iibsaday {{amount}} credits"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} credits"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Waxa la qaatay {{amount}} dhibcood"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Waxa loo diray {{amount}} dhibcood {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Waxa laga helay {{amount}} dhibcood {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Dhibco kugu filan ayaa kuugu jira akoonkaaga Fadlan booqo <a href='<i translate='no'>xidhiidhka soo socda 999 &#39;&gt;<\/a> si aad u iibsato credits dheeraad ah."
+        }
+    },
+    "billing": {
+        "Title": "Biilasha hantida",
+        "CreditsMinimum": "Dhibcaha ugu yar",
+        "CreditsToAdd": "credits in lagu daro",
+        "Save": "Badbaadin",
+        "ThisLink": "link this",
+        "errors": {
+            "CreditsMinimumNegative": "Dhibcaha ugu yar ma noqon karaan taban",
+            "CreditsToAddNegative": "Dhibcaha lagu daro ma noqon karaan taban"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Adeeg Cusub",
+            "TitlePlaceholder": "Magaca adeegga",
+            "PricePlaceholder": "Deji qiimaha",
+            "LinkPlaceholder": "dhig isku xidhka macluumaadka dheeraadka ah",
+            "DescriptionPlaceholder": "Sharaxaada adeegga",
+            "SaveService": "Adeegga Keydi",
+            "SelectRequiredParticipants": "Ka qaybgalayaasha la xidhiidha ee loo baahan yahay",
+            "RequiredParticipantsDesc": "Fadlan door ka-qaybgalayaasha la xidhiidha ee looga baahan yahay inay isticmaalaan adeeggan (tusaale xayawaanka rabaayada ah ee &quot; show Dogs&quot;, ama carruurta &quot;Fasaxa carruurta&quot; iwm). Haddii adeegga la bixiyo, isticmaaluhu wuxuu u baahan doonaa inuu sidoo kale bixiyo kaqeybgale kasta oo la xiriira."
+        },
+        "EditServiceTemplate": {
+            "Title": "Adeegga wax ka beddel"
+        },
+        "ManageServiceTemplates": "Maamul Qaababka Adeegga",
+        "ManageServices": "Maamul Adeegyada",
+        "Free": "Bilaash",
+        "OptionalContribution": "Wax ku biirinta ikhtiyaarka ah",
+        "RequiredPayment": "Lacag bixinta loo baahan yahay",
+        "AreYouSureDelete": "Ma hubtaa inaad doonayso inaad tirtirto adeegan?",
+        "AmountServicesRelated": "Waxa jira {{amount}} helitaan oo la xidhiidha adeegan. Iyaga waa laga saarayaa."
+    },
+    "transfer": {
+        "SelectRecipient": "Dooro qaataha",
+        "TransactionSuccess": "Guusha wax kala iibsiga",
+        "OrTypeWalletAddress": "AMA ku qor ciwaanka jeebka qaataha",
+        "AppCredits": "Qiimaha App-ka"
+    },
+    "NFT": {
+        "Title": "Ciwaanka",
+        "Name": "Magaca",
+        "EnterName": "Gali magaca",
+        "EnterAuthorWallet": "Geli jeebka qoraaga",
+        "InformationAboutTitle": "Macluumaadka ku saabsan {{title}} NFT",
+        "Description": "Sharaxaada",
+        "DetailedInformationAboutNFT": "Macluumaad faahfaahsan oo ku saabsan NFT",
+        "PresaleStarts": "Presale wuxuu bilaabmayaa Diseembar 23",
+        "OwnerUserNotFound": "Mulkiilaha NFT kama diwaan gashana codsigayaga.",
+        "BuyNow": "Hadda iibso",
+        "Buy": "Iibso",
+        "Add": "Kudar",
+        "Remove": "Ka saar",
+        "NoNFTyet": "Weli NFTs ma jiraan",
+        "Conversation": "Wada sheekeysi",
+        "Create": "Abuur",
+        "CurrentBid": "Dalabka hadda jira",
+        "StartingIn": "Laga bilaabo",
+        "EndingIn": "Ku dhamaanaya",
+        "CreateNFT": "Samee NFT",
+        "TitlePlaceholder": "Sii NFT-gaaga cinwaan",
+        "DescriptionPlaceholder": "Sii NFT-gaaga sharaxaad",
+        "CreateYourNFT": "Abuur NFT-gaaga",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Ikhtiyaari Qadarka la siiyay abuuraha ka hor inta aan la wareejin",
+        "ExpirationDate": "Taariikhda dhicitaanka",
+        "StartingDate": "Taariikhda Bilawga",
+        "BidsBelowThisAmount": "Qandaraasyada ka hooseeya lacagtan lama ogolaan doono",
+        "MinimumBid": "Dalabka ugu yar",
+        "Author": "Qore",
+        "Price": "Qiimaha",
+        "Commission": "Komishanka",
+        "EnterCommission": "Gali komishanka",
+        "Owner": "Mulkiilaha",
+        "SelectCategory": "Dooro qaybta",
+        "Day": "Maalinta",
+        "Days": "Maalmo",
+        "Hour": "Saacad",
+        "Hours": "Saacadaha",
+        "Minute": "Daqiiqado",
+        "Minutes": "Daqiiqado",
+        "Second": "Labaad",
+        "Seconds": "Ilbiriqsi",
+        "SalesCreator": "iibka wuxuu tagi doonaa abuuraha",
+        "Details": "Faahfaahin",
+        "Bids": "Qandaraasyada",
+        "History": "Taariikhda",
+        "LoremIpsum": "Lorem Ipsum waa qoraal fudud oo ka mid ah warshadaha daabacaadda iyo daabacaadda.",
+        "PutOnSale": "Iibka saar",
+        "PutOffSale": "Ka noqoshada iibka",
+        "Transfer": "Wareejin",
+        "Actions": "Ficilada",
+        "Claim": "Sheegasho",
+        "ClaimNFT": "Sheeg NFT",
+        "Unlocking": "Furitaanka",
+        "Unlock": "Fur",
+        "Update": "Cusbooneysii",
+        "UpdateToken": "Cusbooneysii Token",
+        "UpdateNFT": "Cusbooneysii NFT",
+        "CreateToken": "Abuur Token",
+        "PlaceBid": "Goobta Qandaraaska",
+        "SoldOut": "La iibiyay",
+        "NotOnSale": "Iib maaha",
+        "NftName": "Magaca NFT",
+        "DescribeYourNFT": "Fadlan sharax NFT kaaga",
+        "NFTImage": "Sawirka NFT",
+        "NFTVideo": "Fiidiyow loogu talagalay NFT, haddii ay jiraan",
+        "GenerateDescription": "ama si toos ah u soo saar",
+        "UploadMovie": "Soo rar filim",
+        "MovieSource": "Isha Filimka",
+        "MovieURL": "URL filimka",
+        "UploadFile": "Soo rar fayl",
+        "PutOnMarketplace": "Dhig suuqa",
+        "InstantPurchase": "Geli qiimaha si aad ugu oggolaato isticmaaleyaasha inay isla markiiba iibsadaan NFT-gaaga",
+        "FixedPrice": "Qiimaha go&#39;an",
+        "TimedAuction": "Xaraashka wakhtiga",
+        "OpenForBids": "U furan dalabyo",
+        "PriceOnePiece": "Geli qiimaha hal gabal",
+        "EnterPrice": "Geli qiimaha",
+        "EnterMinimumBid": "Geli dalabka ugu yar",
+        "SelectChain": "Dooro silsilad",
+        "Currency": "Lacagta",
+        "AreYouSureDeleteImage": "Ma hubtaa inaad doonayso inaad sawirka ka saarto?",
+        "AreYouSureDeleteVideo": "Ma hubtaa inaad doonayso inaad ka saarto muqaalka?",
+        "series": {
+            "Name": "Magaca",
+            "Icon": "Astaan",
+            "Description": "Sharaxaada",
+            "Author": "Qore",
+            "SelectSeries": "Xulo taxane",
+            "Value": "Qiimaha",
+            "AreYouSure": "Ma hubtaa?",
+            "AuthorInvalid": "Ciwaanka qoraagu waa sax!",
+            "Address": "Cinwaanka",
+            "CoverImage": "Sawirka daboolka",
+            "UploadCoverImage": "Soo rar sawirka daboolka",
+            "CommissionAddressInvalid": "Ciwaanka komishanku ma jiro",
+            "OnSale": "iib ah",
+            "OffSale": "iibka ka baxsan",
+            "CreateSeries": "Samee Taxane",
+            "UpdateSeries": "Cusbooneysii Taxanaha",
+            "SeriesInfo": "Xogta Taxanaha ah",
+            "SelectAuthor": "Dooro qoraaga",
+            "NewItem": "Taxanaha NFT cusub",
+            "NamePlaceholder": "Geli magaca taxanaha",
+            "DescPlaceholder": "Geli sharaxaad taxane ah",
+            "EndingIn": "Ku dhamaanaya"
+        },
+        "contract": {
+            "CreateContract": "Samee qandaraas",
+            "SelectContract": "Dooro qandaraas",
+            "CreateContractFor": "U samee qandaraas {{userName}} ah",
+            "ContractFor": "Qandaraaska {{userName}}",
+            "UpdateContract": "Cusbooneysii Heshiiska",
+            "TransferOwnership": "Lahaanshaha Wareejinta",
+            "SetBaseURI": "Deji Saldhiga URI",
+            "SetSuffix": "Dhig Suffix",
+            "CurrentOwner": "Mulkiilaha hadda",
+            "CurrentBaseURL": "BaseURL hadda",
+            "ContractAddressAbsent": "Ciwaanka heshiiska ayaa maqan",
+            "FactoryAddressAbsent": "Ciwaanka warshada ayaa maqan",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Cinwaanka ayaa loo baahan yahay",
+            "SymbolRequired": "Astaanta loo baahan yahay",
+            "TypeContractName": "magaca qandaraaska",
+            "TypeContractSymbol": "calaamada qandaraaska (ugu badnaan 10 xaraf)"
+        },
+        "contests": {
+            "Title": "Tartamada",
+            "NewContest": "Tartan Cusub"
+        },
+        "collections": {
+            "Title": "Ururinta",
+            "EnterTitle": "geli cinwaanka",
+            "EnterDescription": "geli sharaxaad",
+            "NewCollection": "Ururin Cusub",
+            "Name": "Magaca",
+            "Icon": "Astaan",
+            "Description": "Sharaxaada",
+            "Author": "Qore",
+            "SelectCollection": "Dooro ururinta",
+            "Value": "Qiimaha",
+            "AreYouSure": "Ma hubtaa?",
+            "AuthorInvalid": "Ciwaanka qoraagu waa sax!",
+            "Address": "Cinwaanka",
+            "CoverImage": "Sawirka daboolka",
+            "UploadIcon": "Soo rar sumadda",
+            "CommissionAddressInvalid": "Ciwaanka komishanku ma jiro",
+            "OnSale": "iib ah",
+            "OffSale": "iibka ka baxsan",
+            "CreateCollection": "Abuur Ururinta",
+            "UpdateCollection": "Cusbooneysii Ururinta",
+            "CollectionInfo": "Xog ururinta",
+            "SelectAuthor": "Dooro qoraaga",
+            "NewItem": "Ururinta NFT cusub",
+            "NamePlaceholder": "Geli magaca ururinta",
+            "DescPlaceholder": "Geli sharraxaadda ururinta",
+            "EndingIn": "Ku dhamaanaya",
+            "SubmitSeries": "Soo gudbi Taxane"
+        },
+        "import": {
+            "importNFT": "Soo dejinta NFT&#39;s",
+            "importAttributes": "Soo daji sifooyinka NFT",
+            "fileNotFound": "Waan ka xunahay, faylka CSV lama helin",
+            "fileEmpty": "Waan ka xunahay, faylka CSV waa faaruq.",
+            "userIdNotFound": "isticmaaluhu wuu jiraa laakiin id madhan",
+            "errorLine": "line {{1}}",
+            "fieldNotFound": "Goobta loo baahan yahay &quot; {{1}} &quot; lama helin",
+            "displayTypeEmpty": "Nooca muujinta ee &quot; {{1}} &quot; lama helin",
+            "taskStreamInvalid": "socodka hawsha aan ansax ahayn",
+            "instructionsEmpty": "durdurka hawsha tilmaamaha maran",
+            "complete": "Dhameystiran",
+            "activateUsers": "u dir fariin firfircooni isticmaalayaasha?",
+            "importProgress": "Horumarka",
+            "importOptions": "Ikhtiyaarada",
+            "sampleCSV": "Soo deji Tusaalaha CSV",
+            "fileLabel": "Soo rar xaashida faafinta:",
+            "errorsTitle": "Khaladaad ayaa dhacay"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Ku shaandhayn ururinta NFT",
+                "ShowNFTCollection": "Ku muuji ururinta NFT gudaha...",
+                "AllCollections": "Dhammaan Ururinta"
+            },
+            "ByUser": {
+                "AllAuthors": "Dhammaan Qorayaasha",
+                "AllUsers": "Qof walba",
+                "FilterByAuthors": "Shaandhee by Qorayaasha"
+            }
+        },
+        "Back": "Ku laabo Ururinta",
+        "attributes": {
+            "Title": "Maamul sifooyinka",
+            "Attributes": "Sifooyinka",
+            "DisplayTitle": "Nooca Muujinta",
+            "AddDisplayType": "Ku dar nooca bandhiga cusub",
+            "NewDisplay": "Bandhig Cusub",
+            "TraitTitle": "Nooca Sifada",
+            "AddTraitTitle": "Ku dar sifo cusub",
+            "NewTrait": "Nooca Sifada Cusub",
+            "ValueTitle": "Qiimaha",
+            "AddValueTitle": "Ku dar qiime cusub",
+            "NewValue": "Qiimaha Cusub",
+            "NewAttribute": "Sifada Cusub",
+            "UpdateAttributes": "Cusbooneysii sifooyinka",
+            "SaveAttributes": "Keydi sifooyinka"
+        },
+        "profile": {
+            "LogOut": "Ka bax",
+            "Title": "Profile ee {{userName}}",
+            "Description": "Faahfaahinta isticmaalaha",
+            "aboutPlaceholder": "Wax ka beddel Bio",
+            "UploadCoverPhoto": "Soo rar sawirka daboolka",
+            "SureLogOut": "Ma hubtaa inaad doonayso inaad ka baxdo?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "Qandaraaska NFT",
+                        "seriesId": "taxanaha Id",
+                        "owner": "Mulkiilaha",
+                        "currency": "Lacagta",
+                        "price": "Qiimaha",
+                        "beneficiary": "Ka faa&#39;iidaystaha",
+                        "autoindex": "Autoindex",
+                        "duration": "Muddada",
+                        "rateInterval": "Inta u dhaxaysa heerka",
+                        "rateAmount": "Qiyaasta qaddarka"
+                    },
+                    "small": {
+                        "NFTContract": "Qandaraaska NFT",
+                        "seriesId": "calaamado ayaa lagu qori doonaa taxanahan",
+                        "owner": "mulkiilaha tusaale ahaan, haddii kale waa la soo diri doonaa",
+                        "currency": "Lacagta calaamadaha la soo iibsaday, haddii eber - ee qadaadiicda asalka ah",
+                        "price": "Qiimaha",
+                        "beneficiary": "Ka faa&#39;iidaystaha iibinta calaamadaha, haddii kale waa la soo diri doonaa",
+                        "autoindex": "Autoindex",
+                        "duration": "Quful ka dib wax-ka-qabashada Eber macnaheedu waa isla markiiba u hel.",
+                        "rateInterval": "baaldi inta u dhaxaysa iibsashada gaarka ah",
+                        "rateAmount": "qadarka baaldiga iibka gaarka ah"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ikhtiyaar)",
+                    "number": "lambarka",
+                    "address": "ciwaanka",
+                    "fraction": "jajab",
+                    "integer": "iskudarka",
+                    "seconds": "ilbiriqsi",
+                    "uint256": "mid256",
+                    "uint192": "un192",
+                    "uint64": "mid64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Soo saar",
+                "viewInstancesList": "Liiska Cusbooneysii"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Aqoonsiga taxanaha ah",
+                        "account": "Xisaab",
+                        "amount": "Qadarka"
+                    },
+                    "small": {
+                        "seriesId": "calaamad cusub ayaa si taxane ah u leh aqoonsigaas",
+                        "account": "mulkiilaha NFT cusub ee la abuuray. haddii aan la dejin - waxay isticmaali doontaa boorsada hadda jirta",
+                        "amount": "qaddarka NFT ilaa reexaanta"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ikhtiyaar)",
+                    "seriesId": "id",
+                    "account": "xisaabta",
+                    "amount": "qaddarka",
+                    "integer": "iskudarka"
+                },
+                "btn": {
+                    "Purchase": "Iibsasho",
+                    "SpecialPurchase": "Iibsi gaar ah"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Cinwaanka"
+                    },
+                    "small": {
+                        "account": "Cinwaanka"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Cinwaanka aan ansax ahayn"
+                },
+                "placeholders": {
+                    "account": "Cinwaanka"
+                },
+                "addToWhitelist": "Kudar Liiska Cadaynta",
+                "removeFromWhitelist": "Ka saar liiska cad"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Aqoonsiga calaamada",
+                    "custodian": "ilaaliyaha",
+                    "recipient": "Qaataha"
+                },
+                "small": {
+                    "tokenId": "token id waxa loo baahan yahay in la xidho ama la furo",
+                    "custodian": "ciwaanka furi kara",
+                    "recipient": "cinwaanka heli doona calaamadaha"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Id aan sax ahayn",
+                "invalidCustodian": "Masuul aan sax ahayn",
+                "invalidRecipient": "Qaate aan sax ahayn"
+            },
+            "placeholders": {
+                "optional": "(ikhtiyaar)",
+                "tokenId": "id",
+                "custodian": "ciwaanka"
+            },
+            "Lock": "Quful",
+            "Unlock": "Fur",
+            "Locked": "Quful",
+            "CustodianAddress": "Cinwaanka masuulka",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; ayaa la sheegay",
+            "TokenWasLocked": "Calaamadda &quot; {{title}} &quot; waa la xiray",
+            "TokenWasUnlocked": "Calaamadda &quot; {{title}} &quot; waa la furay"
+        }
+    },
+    "fundrise": {
+        "placeholder": "wax ku qor wax ku darsigan..."
+    },
+    "currencies": {
+        "choose": "Dooro lacag"
+    }
+}

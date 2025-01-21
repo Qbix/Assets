@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Lilana",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "sumbangan",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "pangbagi"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Durasi dina poé",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "sumbangan",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "pangbagi"
+                }
+            },
+            "placeholders": {
+                "optional": "(opsional)",
+                "tuple": "tupel []",
+                "number": "angka",
+                "address": "alamat",
+                "fraction": "fraksi",
+                "integer": "integer",
+                "seconds": "detik",
+                "days": "poé",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Aya henteu pools"
+            },
+            "btns": {
+                "createPool": "Jieun Pool",
+                "createPoolInForm": "Nyiptakeun"
+            },
+            "createPool": "Jieun Pool",
+            "produce": "Ngahasilkeun",
+            "loading": "Ngamuat",
+            "viewInstancesList": "Refresh Daptar"
+        }
+    }
+}

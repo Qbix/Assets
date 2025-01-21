@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Selling Token",
+                        "timestamps": "Times",
+                        "prices": "Prices",
+                        "endTime": "Dema Dawî",
+                        "thresholds": "Thresholds",
+                        "bonuses": "Bonuses"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Xwedî nikare vekişe",
+                            "option1": "Xwedî tenê piştî ku dema dawî derbas bû dikare nîşanan vekişîne",
+                            "option2": "Xwedî dikare her dem nîşanan vekişîne"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Navnîşana civakê",
+                    "methodkeccack": "Fonksiyona hash Keccak256",
+                    "roleId": "Rola ID",
+                    "sellingToken": "Navnîşana Tokenê difiroşe",
+                    "prices": "ETH, Biha",
+                    "thresholds": "# nîşanekan",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Dirav tune"
+                },
+                "btns": {
+                    "createFund": "Fona çêbikin",
+                    "createFundInForm": "Xûliqandin"
+                },
+                "fundAddress": "Navnîşana fonê",
+                "createFund": "Fona çêbikin",
+                "fundInfo": "Info",
+                "produce": "Çêkirin",
+                "loading": "Barkirin",
+                "viewInstancesList": "Lîsteya nûvekirinê"
+            }
+        }
+    }
+}

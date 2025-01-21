@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "fahadisoana",
+        "WalletAbsent": "Tsy mifandray ny poketra.",
+        "Rendering": "Nisy lesoka teo am-pandikana <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Prix takina!",
+        "NameRequired": "Anarana ilaina!",
+        "PriceInvalid": "Tsy mety ny vidiny!",
+        "AmountInvalid": "Tsy manan-kery!",
+        "TransactionFailed": "Tsy nahomby ny fifampiraharahana",
+        "ChainNotSupported": "Tsy tohana ny rojo voafantina. Rojo tohanana: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Mila MetaMask mifandray hiasa amin&#39;ny fampiharana",
+        "UserNotLoggedInMetaMask": "Tsy tafiditra ao amin&#39;ny MetaMask ny mpampiasa",
+        "CurrencyNotFound": "Tsy hita ny vola",
+        "WrongChain": "Ity NFT ity dia noforonina teo ambanin&#39;ny &quot; {{chain}} &quot;. Ampiasao ity rojo ity azafady.",
+        "NoRecipientSelected": "Tsy misy mpandray voafantina",
+        "CantManageFrozenSeries": "Tsy afaka mitantana andian-dahatsoratra mangatsiaka ianao",
+        "SubscriptionStreamNotPaid": "Tsy nandoa vola hijerena ity atiny ity ianao. Tsindrio azafady {{subscriptionUrl}} ary misoratra anarana amin&#39;ny drafitra mety."
+    },
+    "admin": {
+        "Title": "Fitantanana ny fananana",
+        "SubscriptionTitle": "Drafitra famandrihana"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Tsindrio handoa"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : {{call 'user.displayName'}} no nokarakaraina ny fiampangana",
+        "ThankYouForYourPayment": "Misaotra anao tamin&#39;ny fandoavanao ny {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} no nisoratra anarana tamin&#39;ny {{plan.title}}",
+        "YouSubscribedTo": "Efa nisoratra anarana tamin&#39;ny {{plan.title}} ianao",
+        "Assets\/credits\/alert": "Manana fanairana mifandraika amin&#39;ny kaontinao ianao"
+    },
+    "charge": {
+        "Subject": "Nahazo karama {{displayAmount}} avy amin&#39;ny {{call 'publisher.displayName'}} ianao ho an&#39;ny &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, ity dia hampahafantatra anao fotsiny fa {{1}} dia voampanga {{2}} ho an&#39;ny {{3}} amin&#39;ny {{4}}"
+    },
+    "charged": {
+        "Subject": "Misaotra anao tamin&#39;ny fandoavanao ny &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , fanamafisam-peo haingana fotsiny ity fa nahavita nandoa {{2}} hatramin&#39;ny {{3}} ho an&#39;ny {{4}} ianao"
+    },
+    "connectedAccount": {
+        "Title": "Connect kaonty",
+        "Success": "FETY",
+        "YourAccountCreated": "Vita soa aman-tsara ny kaontinao!",
+        "YourAccountAlreadyCreated": "Efa noforonina ny kaontinao ary vonona hampiasaina"
+    },
+    "payment": {
+        "AboutOrder": "Info momba ny baiko",
+        "PaymentMethod": "Fomba fandoavam-bola",
+        "ContactInfo": "Fifandraisana",
+        "Pay": "KARAMANY",
+        "PaymentSucceeded": "Vita soa aman-tsara ny fandoavam-bola",
+        "PaymentProcessing.": "Eo am-panaovana ny fandoavanao",
+        "FailTryAgain": "Tsy nahomby ny fandoavanao. Andramo indray azafady.",
+        "SomethingWrong": "Nisy zavatra tsy nety",
+        "PaymentStatus": "Sata fandoavana",
+        "PayTo": "Mandoa {{displayName}}",
+        "ChooseCurrency": "Mifidiana vola",
+        "YouCanSendUpTo": "Afaka mandefa hatramin&#39;ny {{amount}} {{symbol}} ianao",
+        "Send": "Alefaso",
+        "EnterAmount": "ampidiro vola"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Neken&#39;ny {{invitedUserName}} ny fanasana",
+        "InvitedUserFilledStream": "{{invitedUserName}} nahafeno {{FilledStreamTitle}}",
+        "ForFillingStream": "Ho an&#39;ny famenoana {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Manana crédit {{amount}} ianao hanombohana",
+        "PaymentFor": "Fandoavana ny &quot; {{1}} &quot;",
+        "PaymentTo": "Ny fandoavam-bola dia {{1}}",
+        "PaymentToUser": "Hiverina any amin&#39;ny {{toUserName}}",
+        "CreatePrivateChat": "ho an&#39;ny chat manokana miaraka amin&#39;ny {{toUserName}}",
+        "CreatePaidStream": "ho an&#39;ny famoronana {{toStreamName}}",
+        "JoinedPaidStream": "ho famandrihana amin&#39;ny &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName =&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "amin&#39;ny famoronana vondrom-piarahamonina &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "ho famerenana famandrihana amin&#39;ny &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName =&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Nividy crédit {{amount}}",
+        "BonusCredits": "Bonus {{amount}} credits",
+        "BuyAmountCredits": "Vidio ny crédit {{amount}}",
+        "WatchClip": "raha mijery {{fromStreamTitle}}",
+        "MissingCredits": "Tsy misy Credits",
+        "YouMissingCredits": "Mila crédit {{amount}} fanampiny ianao raha te handroso.",
+        "BuyCredits": "Mividiana crédit",
+        "BuyBonus": "Ny fividianana crédit {{amount}} indray mandeha dia hahazo tombony amin&#39;ny crédit {{bonus}} .",
+        "Buy": "Buy",
+        "PurchaseCredits": "Mividiana Credits",
+        "Credits": "nahazoan-dalana",
+        "ErrorInvalidAmount": "Tsy mety ny vola",
+        "ErrorInvalidCurrency": "Indrisy anefa fa tsy mbola manohana ny vola {{currency}} izahay",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} credits",
+            "BonusCredits": "{{amount}} credits"
+        }
+    },
+    "history": {
+        "Date": "Daty",
+        "Amount": "vola",
+        "Description": "Description",
+        "Client": "mpanjifa",
+        "User": "mpampiasa",
+        "To": "ny",
+        "From": "From",
+        "SeeHistory": "Jereo ny tantaran&#39;ny fandoavana ny {{1}}",
+        "HistoryEmpty": "Tsy mbola misy fifampiraharahana",
+        "PaymentFor": "Nandefa crédit {{amount}}",
+        "PaymentTo": "Nandefa crédit {{amount}}",
+        "PaymentToUser": "Nandefa crédit {{amount}}",
+        "CreatePaidStream": "Nandany crédit {{amount}}",
+        "WatchClip": {
+            "+": "Nahazo crédit {{amount}}",
+            "-": "Nandany crédit {{amount}}"
+        },
+        "JoinedPaidStream": {
+            "+": "Nahazo crédit {{amount}}",
+            "-": "Nandany crédit {{amount}}"
+        },
+        "LeftPaidStream": {
+            "+": "Nahazo crédit {{amount}}",
+            "-": "Nandefa crédit {{amount}}"
+        },
+        "CreatedCommunity": "Nandany crédit {{amount}}",
+        "BoughtCredits": "Nividy crédit {{amount}}",
+        "BonusCredits": "Nahazo bonus {{amount}} credits",
+        "InviteAcceptedBy": "Nahazo crédit {{amount}}",
+        "Streams_user_firstname": "Nahazo crédit {{amount}}",
+        "Streams_user_lastname": "Nahazo crédit {{amount}}",
+        "Streams_user_icon": "Nahazo crédit {{amount}}",
+        "Places_user_location": "Nahazo crédit {{amount}}",
+        "Streams_greeting": "Nahazo crédit {{amount}}",
+        "YouHaveCreditsToStart": "Nahazo crédit {{amount}}",
+        "InvitedUserFilledStream": "Nahazo crédit {{amount}}",
+        "ForFillingStream": "Nahazo crédit {{amount}}",
+        "CreatePrivateChat": "Nandany crédit {{amount}}"
+    },
+    "subscriptions": {
+        "infoTitle": "Omeo ny fampahalalana momba ny fandoavam-bola",
+        "confirm": {
+            "title": "Manomboka famandrihana",
+            "message": "Manomboha famandrihana miverimberina amin&#39;ny &quot; {{title}} &quot;?",
+            "ok": "OK",
+            "cancel": "hanafoana"
+        },
+        "CreditOrDebitCard": "Carte de crédit na debit",
+        "SubscribePayment": "Misoratra anarana Payment",
+        "ImmediatePayment": "Fandoavana avy hatrany",
+        "ProcessingPayment": "Fanodinana ny fandoavam-bola",
+        "SubscriptionAlreadyPaid": "Efa voaloa io famandrihana io",
+        "SubscriptionNotActive": "Tsy miasa ny famandrihana amin&#39;izao fotoana izao",
+        "Subscribed": "famandrihana",
+        "Unsubscribed": "Tsy nisoratra anarana",
+        "Unsubscribe": "Tsy misoratra anarana",
+        "Subscribe": "Raiso amin ny",
+        "Started": "Nanomboka",
+        "EndsIn": "Miafara amin&#39;ny",
+        "NextPay": "Fandoavana manaraka",
+        "Period": "NANOMBOKA TEO",
+        "Price": "Vidiny",
+        "AreYouSureUnsubscribe": "Tena te hiala amin&#39;ity drafitra ity ve ianao?",
+        "YouUnsubscribedFromPlan": "Tsy nisoratra anarana tamin&#39;ny drafitra &quot; {{planTitle}} &quot; ianao. Tsy ho voaloa ianao amin&#39;ny manaraka, fa hitohy hatramin&#39;ny {{endsIn}} ny famandrihanao",
+        "plan": {
+            "TitlePlaceholder": "lohatenin&#39;ny drafitra",
+            "PricePlaceholder": "vidiny",
+            "SubscriptionTitle": "Drafitra famandrihana",
+            "DescriptionPlaceholder": "famaritana drafitra famandrihana",
+            "AreYouSureDeletePlan": "Tena te-hamafa ity drafitra ity ve ianao?",
+            "Duration": "Faharetana",
+            "Discount": "Discount",
+            "SavePlan": "afa-tsy",
+            "Interrupt": "manapaka",
+            "Continue": "FOANA",
+            "NewPlan": "Plan vaovao",
+            "SelectDisplayType": "Fidio {{displayType}}",
+            "EndDate": "daty farany",
+            "Available": "Available",
+            "Hidden": "Zavatra tsy",
+            "InviteOnly": "Fanasana ihany",
+            "CantSubscribeUnlessInvited": "Tsy afaka misoratra anarana amin&#39;ity drafitra ity ianao raha tsy nasaina"
+        }
+    },
+    "payments": {
+        "infoTitle": "Mametraha fampahalalana momba ny fandoavam-bola",
+        "BuyAmountCredits": "Vidio ny crédit {{amount}}",
+        "confirm": {
+            "title": "Manaova fandoavana",
+            "message": "Manaiky handoa {{symbol}} {{amount}} ve ianao?",
+            "ok": "OK",
+            "cancel": "hanafoana"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "nahazoan-dalana",
+            "description": "manara-maso ny crédit sy ny fandoavam-bola"
+        },
+        "Assets\/plan": {
+            "displayType": "Drafitra famandrihana",
+            "description": "drafitra famandrihana"
+        },
+        "Assets\/subscription": {
+            "displayType": "Famandrihana",
+            "description": "famandrihana"
+        },
+        "Assets\/product": {
+            "displayType": "vokatra",
+            "description": "vokatra amidy"
+        },
+        "Assets\/service": {
+            "displayType": "fanompoana",
+            "description": "serivisy atolotra"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Nahazo crédit {{amount}}"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Nividy crédit {{amount}}"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} credits"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Nandany crédit {{amount}}"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Nandefa crédit {{amount}} ho {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Nahazo crédit {{amount}} avy amin&#39;ny {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Tsy ampy ny trosanao ao amin&#39;ny kaontinao. Tsidiho <a href='<i translate='no'>azafady ity rohy 999<\/a> manaraka ity mba hividianana crédit bebe kokoa."
+        }
+    },
+    "billing": {
+        "Title": "Faktiora fananana",
+        "CreditsMinimum": "Credits kely indrindra",
+        "CreditsToAdd": "Credits ampiana",
+        "Save": "afa-tsy",
+        "ThisLink": "ity rohy ity",
+        "errors": {
+            "CreditsMinimumNegative": "Ny crédit farany ambany dia tsy mety ho ratsy",
+            "CreditsToAddNegative": "Ny crédit ampiana dia tsy mety ho ratsy"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Serivisy vaovao",
+            "TitlePlaceholder": "Lohatenin&#39;ny serivisy",
+            "PricePlaceholder": "Mametraha vidiny",
+            "LinkPlaceholder": "mametraka rohy fampahalalana fanampiny",
+            "DescriptionPlaceholder": "Famaritana momba ny serivisy",
+            "SaveService": "Save Service",
+            "SelectRequiredParticipants": "Mitaky mpandray anjara mifandraika",
+            "RequiredParticipantsDesc": "Mifidiana mpandray anjara mifandraika amin&#39;izany izay takiana amin&#39;ny fampiasana ity serivisy ity (ohatra ny biby fiompy ho an&#39;ny &quot;Fampisehoana alika&quot;, na ankizy ho an&#39;ny &quot;Fetin&#39;ny ankizy&quot; sns). Raha voaloa ny serivisy, ny mpampiasa dia mila mandoa ihany koa ny mpandray anjara tsirairay mifandraika amin&#39;izany."
+        },
+        "EditServiceTemplate": {
+            "Title": "Ahitsio Service"
+        },
+        "ManageServiceTemplates": "Tantano ny Templates Service",
+        "ManageServices": "Mitantana serivisy",
+        "Free": "maimaim-poana",
+        "OptionalContribution": "Fandraisan&#39;anjara azo atao",
+        "RequiredPayment": "Fandoavana takina",
+        "AreYouSureDelete": "Tena te-hamafa ity serivisy ity ve ianao?",
+        "AmountServicesRelated": "Misy {{amount}} azo ampiasaina mifandraika amin&#39;ity serivisy ity. Hesorina koa izy ireo."
+    },
+    "transfer": {
+        "SelectRecipient": "Mifidiana mpandray",
+        "TransactionSuccess": "Fahombiazan&#39;ny Transaction",
+        "OrTypeWalletAddress": "OR karazana adiresy kitapom-bolan&#39;ny mpandray",
+        "AppCredits": "App Credits"
+    },
+    "NFT": {
+        "Title": "Lohateny",
+        "Name": "Anarana",
+        "EnterName": "Ampidiro anarana",
+        "EnterAuthorWallet": "Ampidiro ny kitapom-bolan&#39;ny mpanoratra",
+        "InformationAboutTitle": "Vaovao mifandraika amin&#39;ny {{title}} NFT",
+        "Description": "Description",
+        "DetailedInformationAboutNFT": "Fampahafantarana amin&#39;ny antsipiriany momba ny NFT",
+        "PresaleStarts": "Manomboka ny 23 desambra ny presale",
+        "OwnerUserNotFound": "Ny tompon&#39;ity NFT ity dia tsy voasoratra ao amin&#39;ny fangatahanay.",
+        "BuyNow": "Hividy izao",
+        "Buy": "Buy",
+        "Add": "hametraka",
+        "Remove": "esory",
+        "NoNFTyet": "Tsy mbola misy NFTs",
+        "Conversation": "RESAKA",
+        "Create": "MANANGANA",
+        "CurrentBid": "Tolotra ankehitriny",
+        "StartingIn": "Manomboka amin&#39;ny",
+        "EndingIn": "Miafara amin&#39;ny",
+        "CreateNFT": "Mamorona NFT",
+        "TitlePlaceholder": "Omeo lohateny ny NFT anao",
+        "DescriptionPlaceholder": "Omeo famaritana ny NFT anao",
+        "CreateYourNFT": "Mamorona ny NFT anao",
+        "Royalties": "-pitrandrahana",
+        "RoyaltyPlaceholder": "Tsy voatery. Vola aloa amin&#39;ny mpamorona alohan&#39;ny famindrana.",
+        "ExpirationDate": "Daty farany",
+        "StartingDate": "Daty nanombohana",
+        "BidsBelowThisAmount": "Ny tolo-bidy ambany amin&#39;io vola io dia tsy azo ekena",
+        "MinimumBid": "Tolotra farany ambany",
+        "Author": "Mpanoratra",
+        "Price": "Vidiny",
+        "Commission": "Commission",
+        "EnterCommission": "Ampidiro komisiona",
+        "Owner": "TOMPON&#39;NY",
+        "SelectCategory": "Mifidiana sokajy",
+        "Day": "Andro",
+        "Days": "Andro",
+        "Hour": "Ora",
+        "Hours": "ORA",
+        "Minute": "minitra",
+        "Minutes": "minitra",
+        "Second": "FAHAROA",
+        "Seconds": "segondra",
+        "SalesCreator": "ny varotra dia ho any amin&#39;ny mpamorona",
+        "Details": "tsipiriany",
+        "Bids": "manao veloma",
+        "History": "FIAINANY TALOHA",
+        "LoremIpsum": "Lorem Ipsum dia lahatsoratra saro-takarina amin&#39;ny indostrian&#39;ny fanontana sy fanoratana.",
+        "PutOnSale": "Atao amidy",
+        "PutOffSale": "Mialà amin&#39;ny fivarotana",
+        "Transfer": "famindrana",
+        "Actions": "asa",
+        "Claim": "Fitarainana",
+        "ClaimNFT": "Mitaky NFT",
+        "Unlocking": "mamoha",
+        "Unlock": "hamaha",
+        "Update": "vaovao farany",
+        "UpdateToken": "Update Token",
+        "UpdateNFT": "Fanavaozana ny NFT",
+        "CreateToken": "Mamorona Token",
+        "PlaceBid": "Toerana Bid",
+        "SoldOut": "lafo",
+        "NotOnSale": "Tsy amidy",
+        "NftName": "Ny anarana NFT",
+        "DescribeYourNFT": "Farito azafady ny NFT anao",
+        "NFTImage": "Sary ho an&#39;ny NFT",
+        "NFTVideo": "Video ho an&#39;ny NFT, raha misy",
+        "GenerateDescription": "na auto-mamorona",
+        "UploadMovie": "Ampidiro sarimihetsika",
+        "MovieSource": "Loharanon&#39;ny sarimihetsika",
+        "MovieURL": "URL sarimihetsika",
+        "UploadFile": "Mampiakara rakitra",
+        "PutOnMarketplace": "Ataovy an-tsena",
+        "InstantPurchase": "Ampidiro ny vidiny ahafahan&#39;ny mpampiasa mividy avy hatrany ny NFT anao",
+        "FixedPrice": "Vidiny raikitra",
+        "TimedAuction": "Auction ara-potoana",
+        "OpenForBids": "Misokatra ho an&#39;ny tolo-bidy",
+        "PriceOnePiece": "Ampidiro ny vidin&#39;ny ampahany iray",
+        "EnterPrice": "Ampidiro ny vidiny",
+        "EnterMinimumBid": "Ampidiro ny tolo-bidy farany ambany",
+        "SelectChain": "Mifidiana rojo",
+        "Currency": "Sandam-bola",
+        "AreYouSureDeleteImage": "Tena te hanala sary ve ianao?",
+        "AreYouSureDeleteVideo": "Tena te hanala video ve ianao?",
+        "series": {
+            "Name": "Anarana",
+            "Icon": "matoanteny",
+            "Description": "Description",
+            "Author": "Mpanoratra",
+            "SelectSeries": "Mifidiana andian-dahatsoratra",
+            "Value": "sarobidy",
+            "AreYouSure": "Azonao antoka ve izany?",
+            "AuthorInvalid": "Tsy mety ny adiresin&#39;ny mpanoratra!",
+            "Address": "Adiresy",
+            "CoverImage": "Sary fonony",
+            "UploadCoverImage": "Ampidiro ny sarin&#39;ny fonony",
+            "CommissionAddressInvalid": "Tsy mety ny adiresin&#39;ny vaomiera",
+            "OnSale": "amidy",
+            "OffSale": "tsy amidy",
+            "CreateSeries": "Mamorona andiany",
+            "UpdateSeries": "Fanavaozana Series",
+            "SeriesInfo": "Fampahalalana andiany",
+            "SelectAuthor": "Mifidiana mpanoratra",
+            "NewItem": "Ny andiany NFT",
+            "NamePlaceholder": "Ampidiro anarana andian-dahatsoratra",
+            "DescPlaceholder": "Ampidiro famaritana andian-dahatsoratra",
+            "EndingIn": "Miafara amin&#39;ny"
+        },
+        "contract": {
+            "CreateContract": "Mamorona fifanarahana",
+            "SelectContract": "Mifidiana fifanarahana",
+            "CreateContractFor": "Mamorona fifanarahana ho an&#39;ny {{userName}}",
+            "ContractFor": "Contract ho an&#39;ny {{userName}}",
+            "UpdateContract": "Fanavaozana ny fifanarahana",
+            "TransferOwnership": "Famindrana tompony",
+            "SetBaseURI": "Set Base URI",
+            "SetSuffix": "Mametraha tovana",
+            "CurrentOwner": "Tompon&#39;izao fotoana izao",
+            "CurrentBaseURL": "BaseURL ankehitriny",
+            "ContractAddressAbsent": "Tsy misy adiresin&#39;ny fifanarahana",
+            "FactoryAddressAbsent": "Adiresin&#39;ny orinasa tsy hita",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Mila lohateny",
+            "SymbolRequired": "Symbol ilaina",
+            "TypeContractName": "anarana fifanarahana",
+            "TypeContractSymbol": "marika fifanarahana (karazana 10 ambony indrindra)"
+        },
+        "contests": {
+            "Title": "Fifaninanana",
+            "NewContest": "Fifaninanana vaovao"
+        },
+        "collections": {
+            "Title": "Collections",
+            "EnterTitle": "ampidiro lohateny",
+            "EnterDescription": "ampidiro famaritana",
+            "NewCollection": "Fanangonana vaovao",
+            "Name": "Anarana",
+            "Icon": "matoanteny",
+            "Description": "Description",
+            "Author": "Mpanoratra",
+            "SelectCollection": "Mifidiana fanangonana",
+            "Value": "sarobidy",
+            "AreYouSure": "Azonao antoka ve izany?",
+            "AuthorInvalid": "Tsy mety ny adiresin&#39;ny mpanoratra!",
+            "Address": "Adiresy",
+            "CoverImage": "Sary fonony",
+            "UploadIcon": "Mampiakatra kisary",
+            "CommissionAddressInvalid": "Tsy mety ny adiresin&#39;ny vaomiera",
+            "OnSale": "amidy",
+            "OffSale": "tsy amidy",
+            "CreateCollection": "Mamorona fanangonana",
+            "UpdateCollection": "Fanavaozana ny fanangonana",
+            "CollectionInfo": "Fampahalalana fanangonana",
+            "SelectAuthor": "Mifidiana mpanoratra",
+            "NewItem": "New NFT Collection",
+            "NamePlaceholder": "Ampidiro anarana fanangonana",
+            "DescPlaceholder": "Ampidiro ny famaritana fanangonana",
+            "EndingIn": "Miafara amin&#39;ny",
+            "SubmitSeries": "Alefaso andiany"
+        },
+        "import": {
+            "importNFT": "Manafatra ny NFT",
+            "importAttributes": "Ampidiro ny toetran&#39;ny NFT",
+            "fileNotFound": "Miala tsiny fa tsy hita ny rakitra CSV.",
+            "fileEmpty": "Miala tsiny, banga ny rakitra CSV.",
+            "userIdNotFound": "misy mpampiasa fa id foana",
+            "errorLine": "ny {{1}}",
+            "fieldNotFound": "Tsy hita ny saha takiana &quot; {{1}} &quot;.",
+            "displayTypeEmpty": "Karazana fampisehoana ho an&#39;ny &quot; {{1}} &quot; tsy hita",
+            "taskStreamInvalid": "tsy manan-kery ny rindranasa asa",
+            "instructionsEmpty": "banga ny torolalana amin&#39;ny stream",
+            "complete": "feno",
+            "activateUsers": "mandefa hafatra fampahavitrihana amin&#39;ny mpampiasa?",
+            "importProgress": "NANDROSO NY ASA",
+            "importOptions": "FANDIKANA",
+            "sampleCSV": "Misintona santionany CSV",
+            "fileLabel": "Alefaso ny takelaka:",
+            "errorsTitle": "Nisy lesoka"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Sivanina amin&#39;ny NFT Collections",
+                "ShowNFTCollection": "Asehoy ny fanangonana NFT amin&#39;ny...",
+                "AllCollections": "Collections rehetra"
+            },
+            "ByUser": {
+                "AllAuthors": "Mpanoratra rehetra",
+                "AllUsers": "Ny olon-drehetra",
+                "FilterByAuthors": "Sivanin&#39;ny Mpanoratra"
+            }
+        },
+        "Back": "Hiverina any amin&#39;ny Collection",
+        "attributes": {
+            "Title": "Tantano ny toetra",
+            "Attributes": "toetra",
+            "DisplayTitle": "Karazana fampisehoana",
+            "AddDisplayType": "Manampia karazana fampisehoana vaovao",
+            "NewDisplay": "Fampisehoana vaovao",
+            "TraitTitle": "Karazana toetra",
+            "AddTraitTitle": "Manampia karazana toetra vaovao",
+            "NewTrait": "Karazana toetra vaovao",
+            "ValueTitle": "sarobidy",
+            "AddValueTitle": "Manampia sanda vaovao",
+            "NewValue": "Sanda vaovao",
+            "NewAttribute": "Toetra vaovao",
+            "UpdateAttributes": "Fanavaozana ny toetra",
+            "SaveAttributes": "Save Attributes"
+        },
+        "profile": {
+            "LogOut": "Mivoaha",
+            "Title": "Takelaka data {{userName}}",
+            "Description": "Ny antsipirian&#39;ny mpampiasa",
+            "aboutPlaceholder": "Ahitsio Bio",
+            "UploadCoverPhoto": "Ampidiro ny sarin&#39;ny fonony",
+            "SureLogOut": "Tena te-hivoaka ve ianao?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "série id",
+                        "owner": "TOMPON&#39;NY",
+                        "currency": "Сurrency",
+                        "price": "Vidiny",
+                        "beneficiary": "tombontsoa",
+                        "autoindex": "Autoindex",
+                        "duration": "Faharetana",
+                        "rateInterval": "Elanelanelan&#39;ny sarany",
+                        "rateAmount": "sarany"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "marika no hamboarina amin&#39;ity andiany ity",
+                        "owner": "tompon&#39;ny ohatra, raha tsy izany dia ho mpandefa",
+                        "currency": "Vola ho an&#39;ny marika novidina, raha aotra - ho an&#39;ny vola madinika",
+                        "price": "Vidiny",
+                        "beneficiary": "Ny mpandray tombony amin&#39;ny fivarotana famantarana, raha tsy izany dia ho mpandefa",
+                        "autoindex": "Autoindex",
+                        "duration": "Hidio aorian&#39;ny fametahana. Zero midika hoe mahazo avy hatrany.",
+                        "rateInterval": "siny elanelam-potoana hividianana manokana",
+                        "rateAmount": "vola siny ho an&#39;ny fividianana manokana"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(tsy voatery)",
+                    "number": "isa",
+                    "address": "adiresy",
+                    "fraction": "ampahany",
+                    "integer": "integer",
+                    "seconds": "segondra",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Voka-pambolena sy fiompiana",
+                "viewInstancesList": "Havaozina ny lisitra"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Series ID",
+                        "account": "TANTARA",
+                        "amount": "vola"
+                    },
+                    "small": {
+                        "seriesId": "token vaovao dia ho an&#39;ny andiany misy ID toy izany",
+                        "account": "tompon&#39;ny NFT vao noforonina. raha tsy napetraka - dia hampiasa kitapom-bola ankehitriny",
+                        "amount": "NFT to mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(tsy voatery)",
+                    "seriesId": "id",
+                    "account": "TANTARA",
+                    "amount": "vola",
+                    "integer": "integer"
+                },
+                "btn": {
+                    "Purchase": "Purchase",
+                    "SpecialPurchase": "Fividianana manokana"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adiresy"
+                    },
+                    "small": {
+                        "account": "Adiresy"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Adiresy tsy mety"
+                },
+                "placeholders": {
+                    "account": "Adiresy"
+                },
+                "addToWhitelist": "Ampio amin&#39;ny lisitra fotsy",
+                "removeFromWhitelist": "Esory amin&#39;ny lisitra fotsy"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "mpitahiry",
+                    "recipient": "Mpandray"
+                },
+                "small": {
+                    "tokenId": "token id izay mila hidy na hamaha",
+                    "custodian": "adiresy afaka manokatra",
+                    "recipient": "adiresy izay handray ny famantarana"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId tsy mety",
+                "invalidCustodian": "Mpiambina tsy mety",
+                "invalidRecipient": "Mpandray tsy mety"
+            },
+            "placeholders": {
+                "optional": "(tsy voatery)",
+                "tokenId": "id",
+                "custodian": "adiresy"
+            },
+            "Lock": "Hidio",
+            "Unlock": "hamaha",
+            "Locked": "Mihidy",
+            "CustodianAddress": "Adiresy mpiambina",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; no voalaza",
+            "TokenWasLocked": "Ny marika &quot; {{title}} &quot; dia nihidy",
+            "TokenWasUnlocked": "Ny marika &quot; {{title}} &quot; dia nisokatra"
+        }
+    },
+    "fundrise": {
+        "placeholder": "manorata zavatra momba ity fandraisana anjara ity..."
+    },
+    "currencies": {
+        "choose": "Mifidiana vola"
+    }
+}

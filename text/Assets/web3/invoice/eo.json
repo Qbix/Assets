@@ -1,0 +1,27 @@
+{
+    "title": "Pagu",
+    "steps": {
+        "sending_native_coins": "Sendante indiĝenajn monerojn",
+        "sending_tokens": "Sendante ĵetonojn",
+        "swap": "Interŝanĝi",
+        "approve": "Aprobi",
+        "one_tx": "Vi devus sendi unu transakcion",
+        "two_tx": "Vi devus sendi du transakciojn"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Financoj por pagi"
+            }
+        },
+        "btns": {
+            "pay": "Pagu"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Necesas pagi &quot; {{amountOut}} &quot; ĵetonojn"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Tia ĉeno kun id &quot; {{chainId}} &quot; ne estas subtenata"
+    }
+}

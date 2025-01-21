@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Ke kūʻai aku nei i ka hōʻailona",
+                        "timestamps": "Manawa",
+                        "prices": "Na Kumukuai",
+                        "endTime": "Manawa Hoopau",
+                        "thresholds": "Nā paepae",
+                        "bonuses": "Nā bonus"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "ʻAʻole hiki i ka mea nona ke hoʻihoʻi",
+                            "option1": "Hiki i ka mea nona ke hoʻihoʻi i nā hōʻailona ma hope o ka hala ʻana o ka manawa pau",
+                            "option2": "Hiki i ka mea nona ke hoʻihoʻi i nā hōʻailona i kēlā me kēia manawa"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Helu kaiāulu",
+                    "methodkeccack": "Keccak256 hash hana",
+                    "roleId": "ID kuleana",
+                    "sellingToken": "Ke kūʻai aku nei i ka helu Token",
+                    "prices": "ETH, Kumukuai",
+                    "thresholds": "# o nā hōʻailona",
+                    "bonuses": "bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "ʻAʻohe kālā"
+                },
+                "btns": {
+                    "createFund": "Hana i ke kālā",
+                    "createFundInForm": "Hana"
+                },
+                "fundAddress": "Helu helu kālā",
+                "createFund": "Hana i ke kālā",
+                "fundInfo": "ʻIke",
+                "produce": "Hoʻohua",
+                "loading": "Ke hoʻouka nei",
+                "viewInstancesList": "Hōʻano hou i ka papa inoa"
+            }
+        }
+    }
+}

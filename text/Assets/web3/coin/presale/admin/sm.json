@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Fa&#39;atauina Fa&#39;ailoga",
+                        "timestamps": "Taimi",
+                        "prices": "Tau",
+                        "endTime": "Taimi Mulimuli",
+                        "thresholds": "Fa&#39;ailoga",
+                        "bonuses": "Ponesi"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "E le mafai ona faaui i tua le pule",
+                            "option1": "E mafai e lē ona fa&#39;aui i tua fa&#39;ailoga pe a mae&#39;a le Taimi fa&#39;ai&#39;uga",
+                            "option2": "E mafai e lē e ana ona aveese fa&#39;ailoga i so&#39;o se taimi"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Tulaga fa&#39;alapotopotoga",
+                    "methodkeccack": "Keccak256 hash function",
+                    "roleId": "ID matafaioi",
+                    "sellingToken": "Fa&#39;atau atu Token tuatusi",
+                    "prices": "ETH, Tau",
+                    "thresholds": "# o faailoga",
+                    "bonuses": "Ponesi%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "E leai ni tupe"
+                },
+                "btns": {
+                    "createFund": "Fausia Tupe",
+                    "createFundInForm": "Fausia"
+                },
+                "fundAddress": "tuatusi o tupe",
+                "createFund": "Fausia Tupe",
+                "fundInfo": "Fa&#39;amatalaga",
+                "produce": "Fausia",
+                "loading": "utaina",
+                "viewInstancesList": "Toe fa&#39;afouina Lisi"
+            }
+        }
+    }
+}

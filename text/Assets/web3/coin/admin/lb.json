@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Dauer",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populär Token",
+                    "donations": "Spenden",
+                    "rewardsRateFraction": "belountRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "Nenner"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Dauer an Deeg",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populär Token",
+                    "donations": "Spenden",
+                    "rewardsRateFraction": "belountRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "Nenner"
+                }
+            },
+            "placeholders": {
+                "optional": "(optional)",
+                "tuple": "tuppel []",
+                "number": "Zuel",
+                "address": "Adress",
+                "fraction": "Fraktioun",
+                "integer": "ganz Zuel",
+                "seconds": "Sekonnen",
+                "days": "Deeg",
+                "uint256": "eng 256",
+                "uint192": "eng 192",
+                "uint64": "eent 64",
+                "uint32": "eent 32",
+                "uint16": "eent 16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Et gi keng Pools"
+            },
+            "btns": {
+                "createPool": "Schafen Pool",
+                "createPoolInForm": "Schafen"
+            },
+            "createPool": "Schafen Pool",
+            "produce": "produzéieren",
+            "loading": "Lueden",
+            "viewInstancesList": "Lëscht opfrëschen"
+        }
+    }
+}

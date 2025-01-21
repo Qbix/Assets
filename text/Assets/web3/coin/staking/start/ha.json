@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "ReserveToken",
+                        "duration": "Tsawon lokaci",
+                        "amount": "Adadin"
+                    },
+                    "small": {
+                        "reserveToken": "ReserveToken",
+                        "duration": "Tsawon lokaci",
+                        "amount": "Adadin"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Tsawon lokaci",
+                    "amount": "adadin"
+                },
+                "btns": {
+                    "stake": "Rago"
+                },
+                "stake": "Ragowa",
+                "loading": "Ana lodawa"
+            }
+        }
+    }
+}

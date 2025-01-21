@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Te hoko Tohu",
+                        "timestamps": "Nga taima",
+                        "prices": "Utu",
+                        "endTime": "Te Wa Whakamutunga",
+                        "thresholds": "Paepae",
+                        "bonuses": "Nga putea"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Kaore e taea e te rangatira te tango",
+                            "option1": "Ka taea e te Kaipupuri te tango tohu i muri i te paahitanga o te wa mutunga",
+                            "option2": "Ka taea e te rangatira te tango tohu i nga wa katoa"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Wāhitau hapori",
+                    "methodkeccack": "Mahi Hash Keccak256",
+                    "roleId": "ID Tūnga",
+                    "sellingToken": "Te hoko wahitau Tohu",
+                    "prices": "ETH, Utu",
+                    "thresholds": "# o nga tohu",
+                    "bonuses": "Takoha %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Karekau he putea"
+                },
+                "btns": {
+                    "createFund": "Waihanga Putea",
+                    "createFundInForm": "Waihanga"
+                },
+                "fundAddress": "Wāhitau pūtea",
+                "createFund": "Waihanga Putea",
+                "fundInfo": "Nga korero",
+                "produce": "Hua",
+                "loading": "Uta ana",
+                "viewInstancesList": "Tāmata Rārangi"
+            }
+        }
+    }
+}

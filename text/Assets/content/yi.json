@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "טעות",
+        "WalletAbsent": "די בייַטל איז נישט פארבונדן.",
+        "Rendering": "עס זענען געווען ערראָרס בשעת רענדערינג <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "פּרייַז פארלאנגט!",
+        "NameRequired": "נאָמען פארלאנגט!",
+        "PriceInvalid": "פּרייז פאַרקריפּלט!",
+        "AmountInvalid": "סכום אומגילטיק!",
+        "TransactionFailed": "די טראַנסאַקטיאָן איז דורכפאַל",
+        "ChainNotSupported": "די אויסגעקליבן קייט איז נישט געשטיצט. שטיצט קייט: {{supportedChain}}",
+        "NeedMetaMaskConnected": "איר דאַרפֿן מעטאַמאַסק קאָננעקטעד צו אַרבעטן מיט די אַפּלאַקיישאַן",
+        "UserNotLoggedInMetaMask": "באַניצער איז נישט לאָגד אין MetaMask",
+        "CurrencyNotFound": "קראַנטקייַט ניט געפונען",
+        "WrongChain": "דעם NFT באשאפן אונטער &quot; {{chain}} &quot;. ביטע נוצן דעם קייט.",
+        "NoRecipientSelected": "קיין באַקומער איז אויסגעקליבן",
+        "CantManageFrozenSeries": "איר קענען נישט פירן פאַרפרוירן סעריע",
+        "SubscriptionStreamNotPaid": "איר האָט נישט באַצאָלט צו זען דעם אינהאַלט. ביטע גיט {{subscriptionUrl}} און אַבאָנירן צו די צונעמען פּלאַן."
+    },
+    "admin": {
+        "Title": "אַסעץ אַדמיניסטראַטיווע",
+        "SubscriptionTitle": "אַבאָנעמענט פּלאַנז"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "צאַפּן צו באַצאָלן"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : די אָפּצאָל איז פּראַסעסט פֿאַר {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "דאנק איר פֿאַר דיין צאָלונג צו {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} אַבאָנירן צו {{plan.title}}",
+        "YouSubscribedTo": "איר האָט שוין אַבאָנירן צו {{plan.title}}",
+        "Assets\/credits\/alert": "איר האָבן אַ פלינק פֿאַר דיין חשבון"
+    },
+    "charge": {
+        "Subject": "איר האָט באַקומען אַ צאָלונג פון {{displayAmount}} פון {{call 'publisher.displayName'}} פֿאַר די &quot; {{description}} &quot;",
+        "HasBeenCharged": "היי, דאָס איז נאָר צו לאָזן איר וויסן {{1}} איז באפוילן {{2}} פֿאַר {{3}} דורך {{4}}"
+    },
+    "charged": {
+        "Subject": "דאנק איר פֿאַר דיין צאָלונג פֿאַר די &quot; {{description}} &quot;",
+        "HavePaid": "היי {{1}} , דאָס איז נאָר אַ שנעל באַשטעטיקונג אַז איר האָט הצלחה באַצאָלט {{2}} צו {{3}} פֿאַר {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "פאַרבינדן חשבון",
+        "Success": "הצלחה",
+        "YourAccountCreated": "דיין חשבון איז באשאפן געווארן הצלחה!",
+        "YourAccountAlreadyCreated": "דיין חשבון איז שוין באשאפן און איז גרייט צו נוצן"
+    },
+    "payment": {
+        "AboutOrder": "אינפֿאָרמאַציע וועגן סדר",
+        "PaymentMethod": "צאָלונג אופֿן",
+        "ContactInfo": "קאָנטאַקט אינפֿאָרמאַציע",
+        "Pay": "באַצאָלן",
+        "PaymentSucceeded": "די צאָלונג איז הצלחה פּראַסעסט",
+        "PaymentProcessing.": "דיין צאָלונג איז פּראַסעסט",
+        "FailTryAgain": "דיין צאָלונג איז נישט געראָטן. ביטע פּרוּווט ווידער.",
+        "SomethingWrong": "עפּעס איז פאַלש",
+        "PaymentStatus": "צאָלונג סטאַטוס",
+        "PayTo": "באַצאָלן {{displayName}}",
+        "ChooseCurrency": "קלייַבן אַ קראַנטקייַט",
+        "YouCanSendUpTo": "איר קענען שיקן אַרויף צו {{amount}} {{symbol}}",
+        "Send": "שיקן",
+        "EnterAmount": "אַרייַן סומע"
+    },
+    "credits": {
+        "InviteAcceptedBy": "פאַרבעטן אנגענומען דורך {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} אָנגעפילט {{FilledStreamTitle}}",
+        "ForFillingStream": "פֿאַר פילונג {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "איר האָבן {{amount}} קרעדיץ צו אָנהייבן",
+        "PaymentFor": "צאָלונג פֿאַר &quot; {{1}} &quot;",
+        "PaymentTo": "צאָלונג צו {{1}}",
+        "PaymentToUser": "אַריבערפירן צו {{toUserName}}",
+        "CreatePrivateChat": "פֿאַר פּריוואַט שמועסן מיט {{toUserName}}",
+        "CreatePaidStream": "פֿאַר קריייטינג {{toStreamName}}",
+        "JoinedPaidStream": "פֿאַר רעזערוואַציע אין &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "פֿאַר קריייטינג קהל &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "ווי אַ רעזערוואַציע צוריקצאָל אין &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "געקויפט {{amount}} קרעדיץ",
+        "BonusCredits": "באָנוס {{amount}} קרעדיץ",
+        "BuyAmountCredits": "קויפן {{amount}} קרעדיץ",
+        "WatchClip": "פֿאַר וואַטשינג {{fromStreamTitle}}",
+        "MissingCredits": "פעלנדיק קרעדיץ",
+        "YouMissingCredits": "איר דאַרפֿן נאָך {{amount}} קרעדיץ צו פאָרזעצן.",
+        "BuyCredits": "קויפן קרעדיץ",
+        "BuyBonus": "פּערטשאַסינג {{amount}} קרעדיץ אין אַמאָל וועט רעזולטאַט אין אַ באָנוס פון {{bonus}} קרעדיץ.",
+        "Buy": "קויפן",
+        "PurchaseCredits": "קויפן קרעדיץ",
+        "Credits": "קרעדיץ",
+        "ErrorInvalidAmount": "סומע אומגילטיק",
+        "ErrorInvalidCurrency": "צום באַדויערן, מיר טאָן ניט נאָך שטיצן די קראַנטקייַט {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} קרעדיץ",
+            "BonusCredits": "{{amount}} קרעדיץ"
+        }
+    },
+    "history": {
+        "Date": "טאָג",
+        "Amount": "סומע",
+        "Description": "באַשרייַבונג",
+        "Client": "קליענט",
+        "User": "באַניצער",
+        "To": "צו",
+        "From": "פון",
+        "SeeHistory": "זען צאָלונג געשיכטע פֿאַר {{1}}",
+        "HistoryEmpty": "קיין טראַנזאַקשאַנז נאָך",
+        "PaymentFor": "געשיקט {{amount}} קרעדיץ",
+        "PaymentTo": "געשיקט {{amount}} קרעדיץ",
+        "PaymentToUser": "געשיקט {{amount}} קרעדיץ",
+        "CreatePaidStream": "פארבראכט {{amount}} קרעדיץ",
+        "WatchClip": {
+            "+": "ערנד {{amount}} קרעדיץ",
+            "-": "פארבראכט {{amount}} קרעדיץ"
+        },
+        "JoinedPaidStream": {
+            "+": "ערנד {{amount}} קרעדיץ",
+            "-": "פארבראכט {{amount}} קרעדיץ"
+        },
+        "LeftPaidStream": {
+            "+": "באקומען {{amount}} קרעדיץ",
+            "-": "געשיקט {{amount}} קרעדיץ"
+        },
+        "CreatedCommunity": "פארבראכט {{amount}} קרעדיץ",
+        "BoughtCredits": "געקויפט {{amount}} קרעדיץ",
+        "BonusCredits": "באַקומען באָנוס {{amount}} קרעדיץ",
+        "InviteAcceptedBy": "ערנד {{amount}} קרעדיץ",
+        "Streams_user_firstname": "ערנד {{amount}} קרעדיץ",
+        "Streams_user_lastname": "ערנד {{amount}} קרעדיץ",
+        "Streams_user_icon": "ערנד {{amount}} קרעדיץ",
+        "Places_user_location": "ערנד {{amount}} קרעדיץ",
+        "Streams_greeting": "ערנד {{amount}} קרעדיץ",
+        "YouHaveCreditsToStart": "ערנד {{amount}} קרעדיץ",
+        "InvitedUserFilledStream": "ערנד {{amount}} קרעדיץ",
+        "ForFillingStream": "ערנד {{amount}} קרעדיץ",
+        "CreatePrivateChat": "פארבראכט {{amount}} קרעדיץ"
+    },
+    "subscriptions": {
+        "infoTitle": "צושטעלן די צאָלונג אינפֿאָרמאַציע",
+        "confirm": {
+            "title": "אָנהייב אַבאָנעמענט",
+            "message": "אָנהייבן אַ ריקערינג אַבאָנעמענט צו &quot; {{title}} &quot;?",
+            "ok": "גוט",
+            "cancel": "באָטל מאַכן"
+        },
+        "CreditOrDebitCard": "קרעדיט אָדער דעביט קאַרטל",
+        "SubscribePayment": "אַבאָנירן צאָלונג",
+        "ImmediatePayment": "גלייך צאָלונג",
+        "ProcessingPayment": "פּראַסעסינג צאָלונג",
+        "SubscriptionAlreadyPaid": "דעם אַבאָנעמענט שוין באַצאָלט",
+        "SubscriptionNotActive": "דער אַבאָנעמענט איז דערווייַל ינאַקטיוו",
+        "Subscribed": "אַבאָנירן",
+        "Unsubscribed": "אַנסאַבסקרייבד",
+        "Unsubscribe": "אַנסאַבסקרייבד",
+        "Subscribe": "אַבאָנירן",
+        "Started": "אנגעהויבן",
+        "EndsIn": "ענדס אין",
+        "NextPay": "ווייַטער צאָלונג",
+        "Period": "פּעריאָד",
+        "Price": "פּרייַז",
+        "AreYouSureUnsubscribe": "זענט איר זיכער אַז איר ווילט אַבאָנירן פון דעם פּלאַן?",
+        "YouUnsubscribedFromPlan": "איר האָט אַנסאַבסקרייבד פון די פּלאַן &quot; {{planTitle}} &quot;. איר וועט ניט זיין באפוילן ווייַטער מאָל, אָבער דיין אַבאָנעמענט וועט פאָרזעצן ביז {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "פּלאַן טיטל",
+            "PricePlaceholder": "פּרייַז",
+            "SubscriptionTitle": "אַבאָנעמענט פּלאַנז",
+            "DescriptionPlaceholder": "אַבאָנעמענט פּלאַן באַשרייַבונג",
+            "AreYouSureDeletePlan": "זענט איר זיכער אַז איר ווילן צו ויסמעקן דעם פּלאַן?",
+            "Duration": "געדויער",
+            "Discount": "אַראָפּרעכענען",
+            "SavePlan": "היט",
+            "Interrupt": "יבעררייַסן",
+            "Continue": "פאָרזעצן",
+            "NewPlan": "ניו פּלאַן",
+            "SelectDisplayType": "אויסקלייַבן {{displayType}}",
+            "EndDate": "סוף טאָג",
+            "Available": "בנימצא",
+            "Hidden": "פאַרבאָרגן",
+            "InviteOnly": "בלויז פאַרבעטן",
+            "CantSubscribeUnlessInvited": "איר קענט נישט אַבאָנירן צו דעם פּלאַן סייַדן איר זענט פארבעטן"
+        }
+    },
+    "payments": {
+        "infoTitle": "שטעלן צאָלונג אינפֿאָרמאַציע",
+        "BuyAmountCredits": "קויפן {{amount}} קרעדיץ",
+        "confirm": {
+            "title": "מאַכן אַ צאָלונג",
+            "message": "צי איר שטימען צו צאָלן {{symbol}} {{amount}} ?",
+            "ok": "גוט",
+            "cancel": "באָטל מאַכן"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "קרעדיץ",
+            "description": "האלט שפּור פון קרעדיץ און פּיימאַנץ"
+        },
+        "Assets\/plan": {
+            "displayType": "אַבאָנעמענט פּלאַן",
+            "description": "אַבאָנעמענט פּלאַן"
+        },
+        "Assets\/subscription": {
+            "displayType": "אַבאָנעמענט",
+            "description": "אַבאָנעמענט"
+        },
+        "Assets\/product": {
+            "displayType": "פּראָדוקט",
+            "description": "פּראָדוקט איז סאָלד"
+        },
+        "Assets\/service": {
+            "displayType": "סערוויס",
+            "description": "דינסט זייַענדיק געפֿינט"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "ערנד {{amount}} קרעדיץ"
+        },
+        "Assets\/credits\/bought": {
+            "content": "געקויפט {{amount}} קרעדיץ"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "באָנוס {{amount}} קרעדיץ"
+        },
+        "Assets\/credits\/spent": {
+            "content": "פארבראכט {{amount}} קרעדיץ"
+        },
+        "Assets\/credits\/sent": {
+            "content": "געשיקט {{amount}} קרעדיץ צו {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "באקומען {{amount}} קרעדיץ פון {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "איר האָבן ניט גענוגיק קרעדיץ אין דיין חשבון. ביטע באַזוכן די פאלגענדע <a href='<i translate='no'>999 &#39;&gt;לינק<\/a> צו קויפן מער קרעדיץ."
+        }
+    },
+    "billing": {
+        "Title": "אַסעץ בילינג",
+        "CreditsMinimum": "מינימום קרעדיט",
+        "CreditsToAdd": "קרעדיץ צו לייגן",
+        "Save": "היט",
+        "ThisLink": "דעם לינק",
+        "errors": {
+            "CreditsMinimumNegative": "די מינימום קרעדיץ קענען נישט זיין נעגאַטיוו",
+            "CreditsToAddNegative": "די קרעדיץ צו לייגן קענען נישט זיין נעגאַטיוו"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "ניו סערוויס",
+            "TitlePlaceholder": "סערוויס טיטל",
+            "PricePlaceholder": "שטעלן פּרייַז",
+            "LinkPlaceholder": "שטעלן נאָך אינפֿאָרמאַציע לינק",
+            "DescriptionPlaceholder": "סערוויס באַשרייַבונג",
+            "SaveService": "היט סערוויס",
+            "SelectRequiredParticipants": "פארלאנגט שייַכות פּאַרטיסאַפּאַנץ",
+            "RequiredParticipantsDesc": "ביטע אויסקלייַבן פֿאַרבונדענע פּאַרטיסאַפּאַנץ וואָס זענען פארלאנגט צו נוצן דעם דינסט (למשל פּעץ פֿאַר &quot;הינט ווייַזן&quot;, אָדער קינדער פֿאַר &quot;קינדער יום טוּב&quot; עטק). אויב די סערוויס איז באַצאָלט, דער באַניצער דאַרף אויך באַצאָלן פֿאַר יעדער פֿאַרבונדענע פּאַרטיסאַפּאַנץ."
+        },
+        "EditServiceTemplate": {
+            "Title": "רעדאַגירן סערוויס"
+        },
+        "ManageServiceTemplates": "פירן סערוויס טעמפּלאַטעס",
+        "ManageServices": "פירן סערוויסעס",
+        "Free": "פריי",
+        "OptionalContribution": "אָפּטיאָנאַל צושטייַער",
+        "RequiredPayment": "פארלאנגט צאָלונג",
+        "AreYouSureDelete": "זענט איר זיכער אַז איר ווילן צו ויסמעקן דעם דינסט?",
+        "AmountServicesRelated": "עס זענען {{amount}} אַוויילאַבילאַטיז פֿאַר דעם דינסט. זיי וועלן אויך אַוועקגענומען ווערן."
+    },
+    "transfer": {
+        "SelectRecipient": "אויסקלייַבן באַקומער",
+        "TransactionSuccess": "טראַנסאַקטיאָן הצלחה",
+        "OrTypeWalletAddress": "אָדער טיפּ די באַקומער בייַטל אַדרעס",
+        "AppCredits": "אַפּ קרעדיץ"
+    },
+    "NFT": {
+        "Title": "טיטל",
+        "Name": "נאָמען",
+        "EnterName": "אַרייַן נאָמען",
+        "EnterAuthorWallet": "אַרייַן מחבר בייַטל",
+        "InformationAboutTitle": "אינפֿאָרמאַציע וועגן {{title}} NFT",
+        "Description": "באַשרייַבונג",
+        "DetailedInformationAboutNFT": "דיטיילד אינפֿאָרמאַציע וועגן NFT",
+        "PresaleStarts": "פּריסייל הייבט 23 דעצעמבער",
+        "OwnerUserNotFound": "די באַזיצער פון דעם NFT איז נישט רעגיסטרירט אין אונדזער אַפּלאַקיישאַן.",
+        "BuyNow": "קויפן איצט",
+        "Buy": "קויפן",
+        "Add": "לייג",
+        "Remove": "אַראָפּנעמען",
+        "NoNFTyet": "נאָך קיין NFTs",
+        "Conversation": "שמועס",
+        "Create": "שאַפֿן",
+        "CurrentBid": "איצטיקע באַפעלן",
+        "StartingIn": "סטאַרטינג אין",
+        "EndingIn": "סוף אין",
+        "CreateNFT": "שאַפֿן אַ NFT",
+        "TitlePlaceholder": "געבן דיין NFT אַ טיטל",
+        "DescriptionPlaceholder": "געבן דיין NFT אַ באַשרייַבונג",
+        "CreateYourNFT": "שאַפֿן דיין NFT",
+        "Royalties": "רויאַלטיעס",
+        "RoyaltyPlaceholder": "אָפּטיאָנאַל. סומע באַצאָלט צו באשעפער איידער אַריבערפירן.",
+        "ExpirationDate": "עקספּיראַטיאָן טאָג",
+        "StartingDate": "אָנהייב טאָג",
+        "BidsBelowThisAmount": "בידס אונטער דעם סומע וועט נישט זיין ערלויבט",
+        "MinimumBid": "מינימום באַפעלן",
+        "Author": "מחבר",
+        "Price": "פּרייַז",
+        "Commission": "קאָמיסיע",
+        "EnterCommission": "אַרייַן קאָמיסיע",
+        "Owner": "באַזיצער",
+        "SelectCategory": "אויסקלייַבן קאַטעגאָריע",
+        "Day": "טאָג",
+        "Days": "טעג",
+        "Hour": "שעה",
+        "Hours": "שעהן",
+        "Minute": "מינוט",
+        "Minutes": "מינוטן",
+        "Second": "רגע",
+        "Seconds": "סעקונדעס",
+        "SalesCreator": "פון פארקויפונג וועט גיין צו באשעפער",
+        "Details": "דעטאַילס",
+        "Bids": "בידס",
+        "History": "געשיכטע",
+        "LoremIpsum": "Lorem Ipsum איז פשוט אַ באָק טעקסט פון די דרוקן און טייפּסעטינג אינדוסטריע.",
+        "PutOnSale": "שטעלן אויף פאַרקויף",
+        "PutOffSale": "צוריקציען פון פאַרקויף",
+        "Transfer": "אַריבערפירן",
+        "Actions": "אַקשאַנז",
+        "Claim": "פאָדערן",
+        "ClaimNFT": "פאָדערן NFT",
+        "Unlocking": "אַנלאַקינג",
+        "Unlock": "ופשליסן",
+        "Update": "דערהייַנטיקן",
+        "UpdateToken": "דערהייַנטיקן טאָקען",
+        "UpdateNFT": "דערהייַנטיקן NFT",
+        "CreateToken": "שאַפֿן טאָקען",
+        "PlaceBid": "שטעלן באַפעלן",
+        "SoldOut": "סאָלד",
+        "NotOnSale": "ניט אויף פאַרקויף",
+        "NftName": "NFT נאָמען",
+        "DescribeYourNFT": "ביטע באַשרייַבן דיין NFT",
+        "NFTImage": "בילד פֿאַר NFT",
+        "NFTVideo": "ווידעא פֿאַר NFT, אויב קיין",
+        "GenerateDescription": "אָדער אַוטאָ דזשענערייט",
+        "UploadMovie": "צופֿעליקער פֿילם",
+        "MovieSource": "פֿילם מקור",
+        "MovieURL": "פֿילם URL",
+        "UploadFile": "צופֿעליקער אַ טעקע",
+        "PutOnMarketplace": "שטעלן אויף מאַרק",
+        "InstantPurchase": "אַרייַן די פּרייַז צו לאָזן ניצערס גלייך קויפן דיין NFT",
+        "FixedPrice": "פאַרפעסטיקט פּרייַז",
+        "TimedAuction": "טיימד ליציטאַציע",
+        "OpenForBids": "עפענען פֿאַר בידס",
+        "PriceOnePiece": "אַרייַן פּרייַז פֿאַר איין שטיק",
+        "EnterPrice": "אַרייַן פּרייַז",
+        "EnterMinimumBid": "אַרייַן די מינימום פאָרשלאָג",
+        "SelectChain": "אויסקלייַבן קייט",
+        "Currency": "קראַנטקייַט",
+        "AreYouSureDeleteImage": "זענט איר זיכער איר ווילן צו באַזייַטיקן בילד?",
+        "AreYouSureDeleteVideo": "זענט איר זיכער איר ווילן צו באַזייַטיקן ווידעא?",
+        "series": {
+            "Name": "נאָמען",
+            "Icon": "בילדל",
+            "Description": "באַשרייַבונג",
+            "Author": "מחבר",
+            "SelectSeries": "אויסקלייַבן סעריע",
+            "Value": "ווערט",
+            "AreYouSure": "ביסטו זיכער?",
+            "AuthorInvalid": "מחבר אַדרעס פאַרקריפּלט!",
+            "Address": "אַדרעס",
+            "CoverImage": "דעקל בילד",
+            "UploadCoverImage": "צופֿעליקער דעקל בילד",
+            "CommissionAddressInvalid": "קאָמיסיע אַדרעס פאַרקריפּלט",
+            "OnSale": "אויף פאַרקויף",
+            "OffSale": "אַוועק פאַרקויף",
+            "CreateSeries": "שאַפֿן סעריע",
+            "UpdateSeries": "דערהייַנטיקן סעריע",
+            "SeriesInfo": "סעריע אינפֿאָרמאַציע",
+            "SelectAuthor": "אויסקלייַבן מחבר",
+            "NewItem": "ניו NFT סעריע",
+            "NamePlaceholder": "אַרייַן סעריע נאָמען",
+            "DescPlaceholder": "אַרייַן סעריע באַשרייַבונג",
+            "EndingIn": "סוף אין"
+        },
+        "contract": {
+            "CreateContract": "שאַפֿן קאָנטראַקט",
+            "SelectContract": "אויסקלייַבן קאָנטראַקט",
+            "CreateContractFor": "שאַפֿן קאָנטראַקט פֿאַר {{userName}}",
+            "ContractFor": "קאָנטראַקט פֿאַר {{userName}}",
+            "UpdateContract": "דערהייַנטיקן קאָנטראַקט",
+            "TransferOwnership": "אַריבערפירן אָונערשיפּ",
+            "SetBaseURI": "שטעלן די באַזע URI",
+            "SetSuffix": "שטעלן סאַפיקס",
+            "CurrentOwner": "קראַנט באַזיצער",
+            "CurrentBaseURL": "קראַנט BaseURL",
+            "ContractAddressAbsent": "אָפּמאַך אַדרעס ניטאָ",
+            "FactoryAddressAbsent": "פֿאַבריק אַדרעס ניטאָ",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "טיטל פארלאנגט",
+            "SymbolRequired": "סימבאָל פארלאנגט",
+            "TypeContractName": "קאָנטראַקט נאָמען",
+            "TypeContractSymbol": "קאָנטראַקט סימבאָל (מאַקסימום 10 טשאַרס)"
+        },
+        "contests": {
+            "Title": "קאָנטעס",
+            "NewContest": "ניו קאָנקורס"
+        },
+        "collections": {
+            "Title": "זאַמלונגען",
+            "EnterTitle": "אַרייַן טיטל",
+            "EnterDescription": "אַרייַן באַשרייַבונג",
+            "NewCollection": "ניו זאַמלונג",
+            "Name": "נאָמען",
+            "Icon": "בילדל",
+            "Description": "באַשרייַבונג",
+            "Author": "מחבר",
+            "SelectCollection": "אויסקלייַבן זאַמלונג",
+            "Value": "ווערט",
+            "AreYouSure": "ביסטו זיכער?",
+            "AuthorInvalid": "מחבר אַדרעס איז פאַרקריפּלט!",
+            "Address": "אַדרעס",
+            "CoverImage": "דעקל בילד",
+            "UploadIcon": "צופֿעליקער בילדל",
+            "CommissionAddressInvalid": "קאָמיסיע אַדרעס פאַרקריפּלט",
+            "OnSale": "אויף פאַרקויף",
+            "OffSale": "אַוועק פאַרקויף",
+            "CreateCollection": "שאַפֿן זאַמלונג",
+            "UpdateCollection": "דערהייַנטיקן זאַמלונג",
+            "CollectionInfo": "זאַמלונג אינפֿאָרמאַציע",
+            "SelectAuthor": "אויסקלייַבן מחבר",
+            "NewItem": "ניו NFT זאַמלונג",
+            "NamePlaceholder": "אַרייַן זאַמלונג נאָמען",
+            "DescPlaceholder": "אַרייַן זאַמלונג באַשרייַבונג",
+            "EndingIn": "סוף אין",
+            "SubmitSeries": "פאָרלייגן אַ סעריע"
+        },
+        "import": {
+            "importNFT": "ימפּאָרטינג NFT ס",
+            "importAttributes": "אַרייַנפיר NFT אַטריביוץ",
+            "fileNotFound": "אנטשולדיגט, CSV טעקע ניט געפֿונען.",
+            "fileEmpty": "אנטשולדיגט, CSV טעקע איז ליידיק.",
+            "userIdNotFound": "באַניצער עקסיסטירן אָבער ID ליידיק",
+            "errorLine": "שורה {{1}}",
+            "fieldNotFound": "פארלאנגט פעלד &quot; {{1}} &quot; ניט געפֿונען",
+            "displayTypeEmpty": "ווייַז טיפּ פֿאַר &quot; {{1}} &quot; ניט געפֿונען",
+            "taskStreamInvalid": "אַרבעט סטרים פאַרקריפּלט",
+            "instructionsEmpty": "אַרבעט טייַך ינסטראַקשאַנז ליידיק",
+            "complete": "גאַנץ",
+            "activateUsers": "שיקן אַקטאַוויישאַן אָנזאָג צו וסערס?",
+            "importProgress": "פּראָגרעס",
+            "importOptions": "אָפּציעס",
+            "sampleCSV": "אראפקאפיע מוסטער קסוו",
+            "fileLabel": "צופֿעליקער ספּרעדשיט:",
+            "errorsTitle": "ערראָרס פארגעקומען"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "פילטער לויט NFT זאַמלונגען",
+                "ShowNFTCollection": "ווייַזן NFT זאַמלונג אין ...",
+                "AllCollections": "אַלע זאַמלונגען"
+            },
+            "ByUser": {
+                "AllAuthors": "אַלע מחברים",
+                "AllUsers": "אַלעמען",
+                "FilterByAuthors": "פילטער לויט מחברים"
+            }
+        },
+        "Back": "צוריק צו זאַמלונג",
+        "attributes": {
+            "Title": "פירן אַטריביוץ",
+            "Attributes": "אַטריביוץ",
+            "DisplayTitle": "ווייַז טיפּ",
+            "AddDisplayType": "לייג אַ נייַע אַרויסווייַזן טיפּ",
+            "NewDisplay": "ניו ווייַז",
+            "TraitTitle": "טיפּ טיפּ",
+            "AddTraitTitle": "לייג אַ נייַע טיפּ פון טרייט",
+            "NewTrait": "ניו טרייט טיפּ",
+            "ValueTitle": "ווערט",
+            "AddValueTitle": "לייג נייַ ווערט",
+            "NewValue": "ניו ווערט",
+            "NewAttribute": "ניו אַטריביוט",
+            "UpdateAttributes": "דערהייַנטיקן אַטריביוץ",
+            "SaveAttributes": "היט אַטריביוץ"
+        },
+        "profile": {
+            "LogOut": "קלאָץ אויס",
+            "Title": "פּראָפיל פֿאַר {{userName}}",
+            "Description": "באַניצער פרטים",
+            "aboutPlaceholder": "רעדאַגירן ביאָ",
+            "UploadCoverPhoto": "צופֿעליקער קאָווער פאָטאָ",
+            "SureLogOut": "זענט איר זיכער אַז איר ווילן צו קלאָץ אויס?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "נפט קאָנטראַקט",
+                        "seriesId": "סעריע יד",
+                        "owner": "באַזיצער",
+                        "currency": "קראַנטקייַט",
+                        "price": "פּרייַז",
+                        "beneficiary": "בענעפיסיאַרי",
+                        "autoindex": "אַוטאָינדעקס",
+                        "duration": "געדויער",
+                        "rateInterval": "קורס מעהאַלעך",
+                        "rateAmount": "קורס סומע"
+                    },
+                    "small": {
+                        "NFTContract": "נפט קאָנטראַקט",
+                        "seriesId": "טאָקענס וועט זיין מינטיד אין דעם סעריע",
+                        "owner": "באַזיצער פון בייַשפּיל, אַנדערש וועט זיין סענדער",
+                        "currency": "קראַנטקייַט פֿאַר פּערטשאַסט טאָקענס, אויב נול - פֿאַר געבוירן קאָינס",
+                        "price": "פּרייַז",
+                        "beneficiary": "בענאַפישיער פון סעלינג טאָקענס, אַנדערש וועט זיין סענדער",
+                        "autoindex": "Autoindex",
+                        "duration": "שלאָס נאָך מינטינג. נול מיטל באַקומען עס מיד.",
+                        "rateInterval": "עמער מעהאַלעך פֿאַר ספּעציעל קויפן",
+                        "rateAmount": "עמער סומע פֿאַר ספּעציעל קויפן"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(אַפּשאַנאַל)",
+                    "number": "נומער",
+                    "address": "אַדרעס",
+                    "fraction": "בראָכצאָל",
+                    "integer": "גאַנץ נומער",
+                    "seconds": "סעקונדעס",
+                    "uint256": "uint256",
+                    "uint192": "וינט192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "פּראָדוצירן",
+                "viewInstancesList": "דערפרישן רשימה"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "סעריע שייַן",
+                        "account": "חשבון",
+                        "amount": "סומע"
+                    },
+                    "small": {
+                        "seriesId": "נייַ סימען וועט געהערן אין סעריע מיט אַזאַ שייַן",
+                        "account": "באַזיצער פון ניי באשאפן NFT. אויב ניט שטעלן - וועט נוצן קראַנט בייַטל",
+                        "amount": "סומע NFT צו מינץ"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(אַפּשאַנאַל)",
+                    "seriesId": "יד",
+                    "account": "חשבון",
+                    "amount": "סומע",
+                    "integer": "גאַנץ נומער"
+                },
+                "btn": {
+                    "Purchase": "קויפן",
+                    "SpecialPurchase": "ספּעציעלע קויפן"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "אַדרעס"
+                    },
+                    "small": {
+                        "account": "אַדרעס"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "אומגילטיק אַדרעס"
+                },
+                "placeholders": {
+                    "account": "אַדרעס"
+                },
+                "addToWhitelist": "לייג צו ווייטליסט",
+                "removeFromWhitelist": "אַראָפּנעמען פון ווייטליסט"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "טאָקען ID",
+                    "custodian": "קוסטאָדיאַן",
+                    "recipient": "באַקומער"
+                },
+                "small": {
+                    "tokenId": "טאָקען שייַן וואָס איר דאַרפֿן צו שלאָס אָדער ופשליסן",
+                    "custodian": "אַדרעס וואָס קענען זיין ופשליסן",
+                    "recipient": "אַדרעס וואָס וועט באַקומען די טאָקענס"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "אומגילטיק טאָקען איד",
+                "invalidCustodian": "פאַרקריפּלט קוסטאָדיאַן",
+                "invalidRecipient": "אומגילטיק ריסיפּיענט"
+            },
+            "placeholders": {
+                "optional": "(אַפּשאַנאַל)",
+                "tokenId": "יד",
+                "custodian": "אַדרעס"
+            },
+            "Lock": "שלאָס",
+            "Unlock": "ופשליסן",
+            "Locked": "פארשפארט",
+            "CustodianAddress": "קוסטאָדיאַן אַדרעס",
+            "TokenWasClaimed": "סימען &quot; {{title}} &quot; איז געווען קליימד",
+            "TokenWasLocked": "סימען &quot; {{title}} &quot; איז געווען פארשפארט",
+            "TokenWasUnlocked": "טאָקען &quot; {{title}} &quot; איז געווען אַנלאַקט"
+        }
+    },
+    "fundrise": {
+        "placeholder": "שרייב עפּעס וועגן דעם צושטייַער ..."
+    },
+    "currencies": {
+        "choose": "קלייַבן אַ קראַנטקייַט"
+    }
+}

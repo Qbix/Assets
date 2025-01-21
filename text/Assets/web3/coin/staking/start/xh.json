@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ubude bexesha",
+                        "amount": "Isixa"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Ubude bexesha",
+                        "amount": "Isixa"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Ubude bexesha",
+                    "amount": "isixa"
+                },
+                "btns": {
+                    "stake": "Isiteki"
+                },
+                "stake": "Isiteki",
+                "loading": "Iyalayisha"
+            }
+        }
+    }
+}

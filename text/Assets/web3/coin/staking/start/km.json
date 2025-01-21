@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "រយៈពេល",
+                        "amount": "ចំនួនទឹកប្រាក់"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "រយៈពេល",
+                        "amount": "ចំនួនទឹកប្រាក់"
+                    }
+                },
+                "placeholders": {
+                    "duration": "រយៈពេល",
+                    "amount": "ចំនួនទឹកប្រាក់"
+                },
+                "btns": {
+                    "stake": "ភាគហ៊ុន"
+                },
+                "stake": "ភាគហ៊ុន",
+                "loading": "កំពុងផ្ទុក"
+            }
+        }
+    }
+}

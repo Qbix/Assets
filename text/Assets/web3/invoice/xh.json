@@ -1,0 +1,27 @@
+{
+    "title": "Hlawula",
+    "steps": {
+        "sending_native_coins": "Ukuthumela iinkozo zemali",
+        "sending_tokens": "Ukuthumela iithokheni",
+        "swap": "Tshintsha",
+        "approve": "Vuma",
+        "one_tx": "Kufuneka uthumele intengiselwano enye",
+        "two_tx": "Kufuneka uthumele intengiselwano ezimbini"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Iimali zokuhlawula"
+            }
+        },
+        "btns": {
+            "pay": "Hlawula"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Kufuneka uhlawule &quot; {{amountOut}} &quot; iithokheni"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Itsheyini enjalo ene-id &quot; {{chainId}} &quot; ayixhaswanga"
+    }
+}

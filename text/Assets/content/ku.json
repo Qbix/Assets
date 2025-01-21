@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Şaşî",
+        "WalletAbsent": "Wallet ne girêdayî ye.",
+        "Rendering": "Di dema pêşkêşkirina <span class='url'>{{1}}<\/span> de xeletî hebûn",
+        "PriceRequired": "Price pêwîst!",
+        "NameRequired": "Nav pêwîst e!",
+        "PriceInvalid": "Biha nederbasdar e!",
+        "AmountInvalid": "Mûçe nederbasdar e!",
+        "TransactionFailed": "Danûstandin têk çû",
+        "ChainNotSupported": "Zincîra hilbijartî nayê piştgirî kirin. Zincîra piştgirî: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Pêdivî ye ku MetaMask bi serîlêdanê re bixebite",
+        "UserNotLoggedInMetaMask": "Bikarhêner têketî MetaMask nîne",
+        "CurrencyNotFound": "Dirav nehat dîtin",
+        "WrongChain": "Ev NFT di bin &quot; {{chain}} &quot; de hate afirandin. Ji kerema xwe vê zincîrê bikar bînin.",
+        "NoRecipientSelected": "Tu wergir nehat hilbijartin",
+        "CantManageFrozenSeries": "Hûn nikarin rêzefilmên cemidî birêve bibin",
+        "SubscriptionStreamNotPaid": "Te pere nedaye ji bo dîtina vê naverokê. Ji kerema xwe {{subscriptionUrl}} bikirtînin û bibin aboneya plana guncan."
+    },
+    "admin": {
+        "Title": "Samanên îdarî",
+        "SubscriptionTitle": "planên abonetiyê"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Ji bo dayinê bikirtînin"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : lêçûn ji bo {{call 'user.displayName'}} hatiye pêvajo kirin",
+        "ThankYouForYourPayment": "Spas ji bo dayina we ya {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} aboneyên {{plan.title}}",
+        "YouSubscribedTo": "Hûn bûne abone {{plan.title}}",
+        "Assets\/credits\/alert": "Hişyariyek we bi hesabê we ve girêdayî ye"
+    },
+    "charge": {
+        "Subject": "We ji bo &quot; {{description}} &quot; ji {{call 'publisher.displayName'}} {{displayAmount}} pere wergirt.",
+        "HasBeenCharged": "Heye, ev tenê ji bo ku hûn bizanin {{1}} ji bo {{3}} ji hêla {{4}} ve {{2}} hatiye barkirin"
+    },
+    "charged": {
+        "Subject": "Spas ji bo dayina we ya ji bo &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , ev tenê piştrastiyek bilez e ku we bi serfirazî {{2}} ber {{3}} ji bo {{4}} daye."
+    },
+    "connectedAccount": {
+        "Title": "Hesabê girêdan",
+        "Success": "Serketinî",
+        "YourAccountCreated": "Hesabê te bi serkeftî hate afirandin!",
+        "YourAccountAlreadyCreated": "Hesabê we jixwe hatiye afirandin û amade ye ku bikar bîne"
+    },
+    "payment": {
+        "AboutOrder": "Agahdariya li ser fermanê",
+        "PaymentMethod": "Rêbaza dayinê",
+        "ContactInfo": "Agahdariya têkiliyê",
+        "Pay": "Diravdan",
+        "PaymentSucceeded": "Tezmînat bi serkeftî hate kirin",
+        "PaymentProcessing.": "Tezmînata we tê pêvajo kirin",
+        "FailTryAgain": "Tezmînata we serketî nebû. Ji kerema xwe dîsa biceribîne.",
+        "SomethingWrong": "Tiştek xelet derket",
+        "PaymentStatus": "Rewşa dravdanê",
+        "PayTo": "{{displayName}} bidin",
+        "ChooseCurrency": "Pereyek hilbijêrin",
+        "YouCanSendUpTo": "Hûn dikarin heta {{amount}} {{symbol}} bişînin",
+        "Send": "Şandin",
+        "EnterAmount": "mîqdara binivîse"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Vexwendname ji hêla {{invitedUserName}} ve hatî pejirandin",
+        "InvitedUserFilledStream": "{{invitedUserName}} tije {{FilledStreamTitle}}",
+        "ForFillingStream": "Ji bo dagirtina {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "{{amount}} krediyên we hene ku hûn dest pê bikin",
+        "PaymentFor": "Tezmînata ji bo &quot; {{1}} &quot;",
+        "PaymentTo": "Tezmînata {{1}}",
+        "PaymentToUser": "Veguheztin {{toUserName}}",
+        "CreatePrivateChat": "ji bo sohbeta taybet bi {{toUserName}} re",
+        "CreatePaidStream": "ji bo afirandina {{toStreamName}}",
+        "JoinedPaidStream": "ji bo veqetandinê di &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "ji bo afirandina civata &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "di &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot; de wek vegerandina veqetandinê",
+        "BoughtCredits": "{{amount}} kredî kirî",
+        "BonusCredits": "Bonus {{amount}} credits",
+        "BuyAmountCredits": "{{amount}} krediyan bikirin",
+        "WatchClip": "ji bo temaşekirina {{fromStreamTitle}}",
+        "MissingCredits": "Missing Credits",
+        "YouMissingCredits": "Ji bo ku hûn bidomînin hewceyê {{amount}} krediyên din in.",
+        "BuyCredits": "Krediyan bikirin",
+        "BuyBonus": "Kirîna {{amount}} krediyan bi yekcarî dê bibe sedema bonusek ji {{bonus}} krediyan.",
+        "Buy": "Kirrîn",
+        "PurchaseCredits": "Kirîna Kredî",
+        "Credits": "Credits",
+        "ErrorInvalidAmount": "Mûçeya nederbasdar",
+        "ErrorInvalidCurrency": "Mixabin, em hîna pereyê {{currency}} piştgirî nakin",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} credits",
+            "BonusCredits": "{{amount}} credits"
+        }
+    },
+    "history": {
+        "Date": "Rojek",
+        "Amount": "Biha",
+        "Description": "Terîf",
+        "Client": "Kirrîxwaz",
+        "User": "Bikaranîvan",
+        "To": "ber",
+        "From": "ji",
+        "SeeHistory": "Ji bo {{1}} dîroka dravdanê bibînin",
+        "HistoryEmpty": "No muamele hê",
+        "PaymentFor": "{{amount}} kredî şandin",
+        "PaymentTo": "{{amount}} kredî şandin",
+        "PaymentToUser": "{{amount}} kredî şandin",
+        "CreatePaidStream": "{{amount}} kredî xerc kirin",
+        "WatchClip": {
+            "+": "{{amount}} kredî qezenc kirin",
+            "-": "{{amount}} kredî xerc kirin"
+        },
+        "JoinedPaidStream": {
+            "+": "{{amount}} kredî qezenc kirin",
+            "-": "{{amount}} kredî xerc kirin"
+        },
+        "LeftPaidStream": {
+            "+": "{{amount}} kredî standine",
+            "-": "{{amount}} kredî şandin"
+        },
+        "CreatedCommunity": "{{amount}} kredî xerc kirin",
+        "BoughtCredits": "{{amount}} kredî kirî",
+        "BonusCredits": "{{amount}} kredî bonus wergirt",
+        "InviteAcceptedBy": "{{amount}} kredî qezenc kirin",
+        "Streams_user_firstname": "{{amount}} kredî qezenc kirin",
+        "Streams_user_lastname": "{{amount}} kredî qezenc kirin",
+        "Streams_user_icon": "{{amount}} kredî qezenc kirin",
+        "Places_user_location": "{{amount}} kredî qezenc kirin",
+        "Streams_greeting": "{{amount}} kredî qezenc kirin",
+        "YouHaveCreditsToStart": "{{amount}} kredî qezenc kirin",
+        "InvitedUserFilledStream": "{{amount}} kredî qezenc kirin",
+        "ForFillingStream": "{{amount}} kredî qezenc kirin",
+        "CreatePrivateChat": "{{amount}} kredî xerc kirin"
+    },
+    "subscriptions": {
+        "infoTitle": "Agahdariya Tezmînatê bidin",
+        "confirm": {
+            "title": "Abonetiyê dest pê bikin",
+            "message": "Abonetiyek dubare ya &quot; {{title}} &quot; dest pê bikin?",
+            "ok": "OK",
+            "cancel": "Bişûndekirin"
+        },
+        "CreditOrDebitCard": "Qerta krediyê an debîtê",
+        "SubscribePayment": "Subscribe Payment",
+        "ImmediatePayment": "Tezmînata Yekser",
+        "ProcessingPayment": "Processing Payment",
+        "SubscriptionAlreadyPaid": "Vê abonetiyê berê daye",
+        "SubscriptionNotActive": "Abonet niha neçalak e",
+        "Subscribed": "Subscribed",
+        "Unsubscribed": "Abonetî nekiriye",
+        "Unsubscribe": "Abonetiyê nekirin",
+        "Subscribe": "Subscribe",
+        "Started": "Dest pê kir",
+        "EndsIn": "Bi dawî dibe",
+        "NextPay": "dayina Next",
+        "Period": "Cilhatina jinan",
+        "Price": "Biha",
+        "AreYouSureUnsubscribe": "Ma hûn pê bawer in ku hûn dixwazin ji vê planê neqedînin?",
+        "YouUnsubscribedFromPlan": "Te ji plana &quot; {{planTitle}} &quot; betal kir. Cara din ji we nayê xerckirin, lê abonetiya we dê heya {{endsIn}} berdewam bike",
+        "plan": {
+            "TitlePlaceholder": "sernavê planê",
+            "PricePlaceholder": "biha",
+            "SubscriptionTitle": "planên abonetiyê",
+            "DescriptionPlaceholder": "danasîna plana abonetiyê",
+            "AreYouSureDeletePlan": "Ma tu bi rastî dixwazî vê planê jê bibî?",
+            "Duration": "Demajok",
+            "Discount": "Kêmkirinî",
+            "SavePlan": "Rizgarkirin",
+            "Interrupt": "Devjêberdan",
+            "Continue": "Berdewamkirin",
+            "NewPlan": "Plana Nû",
+            "SelectDisplayType": "{{displayType}} hilbijêrin",
+            "EndDate": "roja dawîyê",
+            "Available": "Berdeste",
+            "Hidden": "Veşartî",
+            "InviteOnly": "Vexwend-tenê",
+            "CantSubscribeUnlessInvited": "Hûn nikarin bibin aboneyê vê planê heya ku hûn nehatibin vexwendin"
+        }
+    },
+    "payments": {
+        "infoTitle": "Set Information Payment",
+        "BuyAmountCredits": "{{amount}} krediyan bikirin",
+        "confirm": {
+            "title": "Paymentek Bikin",
+            "message": "Ma hûn razî ne ku hûn {{symbol}} {{amount}} bidin?",
+            "ok": "OK",
+            "cancel": "Bişûndekirin"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Credits",
+            "description": "kredî û dayinan dişopîne"
+        },
+        "Assets\/plan": {
+            "displayType": "Plana Subsription",
+            "description": "plana abonetiyê"
+        },
+        "Assets\/subscription": {
+            "displayType": "Abonetî",
+            "description": "abonetî"
+        },
+        "Assets\/product": {
+            "displayType": "Mal",
+            "description": "berhem tê firotin"
+        },
+        "Assets\/service": {
+            "displayType": "Xizmetkar",
+            "description": "xizmet tê pêşkêş kirin"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "{{amount}} kredî qezenc kirin"
+        },
+        "Assets\/credits\/bought": {
+            "content": "{{amount}} kredî kirî"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} credits"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} kredî xerc kirin"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{amount}} kredî ji {{toUserName}} re şandin"
+        },
+        "Assets\/credits\/received": {
+            "content": "Ji {{fromUserName}} {{amount}} kredî wergirtin"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Krediyên we di hesabê we de kêm in. Ji kerema xwe serdana <a href='<i translate='no'>999 &#39;&gt; lînka<\/a> jêrîn bikin ku hûn bêtir krediyan bikirin."
+        }
+    },
+    "billing": {
+        "Title": "Billing hebûnên",
+        "CreditsMinimum": "Krediyên herî kêm",
+        "CreditsToAdd": "Krediyên ku lê zêde bikin",
+        "Save": "Rizgarkirin",
+        "ThisLink": "vê girêdanê",
+        "errors": {
+            "CreditsMinimumNegative": "Krediyên herî kêm nikarin neyînî bin",
+            "CreditsToAddNegative": "Krediyên ku lê zêde bikin nikarin neyînî bin"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Xizmeta Nû",
+            "TitlePlaceholder": "Sernavê xizmetê",
+            "PricePlaceholder": "Set price",
+            "LinkPlaceholder": "lînka agahdariya zêde saz bikin",
+            "DescriptionPlaceholder": "Danasîna xizmetê",
+            "SaveService": "Xizmeta Save",
+            "SelectRequiredParticipants": "Beşdarên peywendîdar hewce ne",
+            "RequiredParticipantsDesc": "Ji kerema xwe beşdarên têkildar ên ku ji bo karanîna vê karûbarê hewce ne hilbijêrin (mînakî heywanên heywanan ji bo &quot;Dogs show&quot;, an zarok ji bo &quot;betlaneya zarokan&quot; hwd.). Ger karûbar tê dayîn, bikarhêner dê hewce bike ku ji bo her beşdarên têkildar jî bide."
+        },
+        "EditServiceTemplate": {
+            "Title": "Servîsa biguherîne"
+        },
+        "ManageServiceTemplates": "Manage Service Şablonên",
+        "ManageServices": "Karûbarên Manage",
+        "Free": "Belaş",
+        "OptionalContribution": "Beşdariya Bijarî",
+        "RequiredPayment": "Tezmînata pêwîst",
+        "AreYouSureDelete": "Ma hûn pê bawer in ku hûn dixwazin vê karûbarê jêbirin?",
+        "AmountServicesRelated": "{{amount}} berdestiyên girêdayî vê karûbarê hene. Ew ê jî werin rakirin."
+    },
+    "transfer": {
+        "SelectRecipient": "Wergir hilbijêre",
+        "TransactionSuccess": "Serkeftina danûstandinê",
+        "OrTypeWalletAddress": "AN navnîşana berîka wergir binivîsin",
+        "AppCredits": "Credits App"
+    },
+    "NFT": {
+        "Title": "Nav",
+        "Name": "Nav",
+        "EnterName": "Navê binivîse",
+        "EnterAuthorWallet": "Têkeve berîka nivîskarê",
+        "InformationAboutTitle": "Agahdariya li ser {{title}} NFT",
+        "Description": "Terîf",
+        "DetailedInformationAboutNFT": "Agahiyên berfireh li ser NFT",
+        "PresaleStarts": "Pêşfiroş 23ê Kanûnê dest pê dike",
+        "OwnerUserNotFound": "Xwediyê vê NFT-ê di serlêdana me de ne qeydkirî ye.",
+        "BuyNow": "Dibe ez çi bikim",
+        "Buy": "Kirrîn",
+        "Add": "Lêzêdekirin",
+        "Remove": "Dûrxistin",
+        "NoNFTyet": "NFT hîn tune",
+        "Conversation": "Kêfî",
+        "Create": "Xûliqandin",
+        "CurrentBid": "Pêşkêşiya niha",
+        "StartingIn": "Dest pê dike",
+        "EndingIn": "Di dawî de",
+        "CreateNFT": "NFT ava bikin",
+        "TitlePlaceholder": "Sernavek NFT-ya xwe bidin",
+        "DescriptionPlaceholder": "NFT-ya xwe şiroveyek bidin",
+        "CreateYourNFT": "NFT-ya xwe biafirînin",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Bixwe. Beriya veguheztinê mîqdara ku ji afirînerê re hatî dayîn.",
+        "ExpirationDate": "Roja derbasî",
+        "StartingDate": "Dîroka Destpêkê",
+        "BidsBelowThisAmount": "Pêşniyarên di bin vê mîqdarê de dê neyên destûr kirin",
+        "MinimumBid": "Minimum bid",
+        "Author": "Nivîskar",
+        "Price": "Biha",
+        "Commission": "Simsarî",
+        "EnterCommission": "Têkeve komîsyonê",
+        "Owner": "Xwedî",
+        "SelectCategory": "Kategorî hilbijêre",
+        "Day": "Roj",
+        "Days": "Days",
+        "Hour": "Seet",
+        "Hours": "Hours",
+        "Minute": "Deqqe",
+        "Minutes": "Minutes",
+        "Second": "Duyem",
+        "Seconds": "Seconds",
+        "SalesCreator": "ya firotanê dê biçe afirînerê",
+        "Details": "Details",
+        "Bids": "Bids",
+        "History": "Dîrok",
+        "LoremIpsum": "Lorem Ipsum bi tenê metnek xapînok a pîşesaziya çapkirin û nivîsandinê ye.",
+        "PutOnSale": "Di firotanê de bike",
+        "PutOffSale": "Ji firotanê vekişînin",
+        "Transfer": "Derbaskirin",
+        "Actions": "Actions",
+        "Claim": "Maf",
+        "ClaimNFT": "Daxwaza NFT",
+        "Unlocking": "Vekirin",
+        "Unlock": "Vekirin",
+        "Update": "Rojanekirin",
+        "UpdateToken": "Tokenê nûve bikin",
+        "UpdateNFT": "NFT-ê nûve bikin",
+        "CreateToken": "Token çêbikin",
+        "PlaceBid": "Cihê Bid",
+        "SoldOut": "Firotin",
+        "NotOnSale": "Not On Sale",
+        "NftName": "Navê NFT",
+        "DescribeYourNFT": "Ji kerema xwe NFT-ya xwe diyar bikin",
+        "NFTImage": "Wêne ji bo NFT",
+        "NFTVideo": "Vîdyo ji bo NFT, heke hebe",
+        "GenerateDescription": "an jî bixweber çêbike",
+        "UploadMovie": "Fîlm barkirin",
+        "MovieSource": "Çavkaniya Fîlmê",
+        "MovieURL": "URL fîlmê",
+        "UploadFile": "Pelê barkirin",
+        "PutOnMarketplace": "Li sûkê danîn",
+        "InstantPurchase": "Bihayê binivîsin da ku bikarhêner tavilê NFT-ya xwe bikirin",
+        "FixedPrice": "Bihayê sabît",
+        "TimedAuction": "mezadê demî",
+        "OpenForBids": "Ji bo pêşniyaran vekin",
+        "PriceOnePiece": "Bihayê yek perçeyê binivîse",
+        "EnterPrice": "Bihayê binivîse",
+        "EnterMinimumBid": "Kêmtirîn bid binivîse",
+        "SelectChain": "Zincîre hilbijêre",
+        "Currency": "Diravcins",
+        "AreYouSureDeleteImage": "Ma tu bi rastî dixwazî wêneyê jê bikî?",
+        "AreYouSureDeleteVideo": "Ma tu bi rastî dixwazî vîdyoyê jê bikî?",
+        "series": {
+            "Name": "Nav",
+            "Icon": "Icon",
+            "Description": "Terîf",
+            "Author": "Nivîskar",
+            "SelectSeries": "Rêzeyan hilbijêrin",
+            "Value": "Giranî",
+            "AreYouSure": "Piştrastin?",
+            "AuthorInvalid": "Navnîşana nivîskar nederbasdar e!",
+            "Address": "Navnîşan",
+            "CoverImage": "Wêneyê bergê",
+            "UploadCoverImage": "Wêneyê bergê barkirin",
+            "CommissionAddressInvalid": "Navnîşana komîsyonê nederbasdar e",
+            "OnSale": "li ser firotanê",
+            "OffSale": "off sale",
+            "CreateSeries": "Series biafirînin",
+            "UpdateSeries": "Series nûve bikin",
+            "SeriesInfo": "Series Info",
+            "SelectAuthor": "Nivîskar hilbijêre",
+            "NewItem": "Rêzeya NFT ya nû",
+            "NamePlaceholder": "Navê rêzê binivîse",
+            "DescPlaceholder": "Danasîna rêzê binivîse",
+            "EndingIn": "Ending In"
+        },
+        "contract": {
+            "CreateContract": "Peyman çêbikin",
+            "SelectContract": "Peymana hilbijêre",
+            "CreateContractFor": "Ji bo {{userName}} peymanek çêbikin",
+            "ContractFor": "Peymana ji bo {{userName}}",
+            "UpdateContract": "Peymana nûjen bikin",
+            "TransferOwnership": "Veguhastina Xwedîderketin",
+            "SetBaseURI": "Base URI saz bikin",
+            "SetSuffix": "Set Suffix",
+            "CurrentOwner": "Xwediyê niha",
+            "CurrentBaseURL": "Niha BaseURL",
+            "ContractAddressAbsent": "Navnîşana peymanê tune",
+            "FactoryAddressAbsent": "Navnîşana kargehê tune",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Sernav pêdivî ye",
+            "SymbolRequired": "Sembola pêdivî ye",
+            "TypeContractName": "navê peymanê",
+            "TypeContractSymbol": "sembola peymanê (herî zêde 10 tîp)"
+        },
+        "contests": {
+            "Title": "Contests",
+            "NewContest": "Pêşbirka Nû"
+        },
+        "collections": {
+            "Title": "Collections",
+            "EnterTitle": "sernavê binivîse",
+            "EnterDescription": "danasînê binivîse",
+            "NewCollection": "Koleksiyona Nû",
+            "Name": "Nav",
+            "Icon": "Icon",
+            "Description": "Terîf",
+            "Author": "Nivîskar",
+            "SelectCollection": "Koleksiyonê hilbijêrin",
+            "Value": "Giranî",
+            "AreYouSure": "Piştrastin?",
+            "AuthorInvalid": "Navnîşana nivîskar nederbasdar e!",
+            "Address": "Navnîşan",
+            "CoverImage": "Wêneyê bergê",
+            "UploadIcon": "Icon barkirin",
+            "CommissionAddressInvalid": "Navnîşana komîsyonê nederbasdar e",
+            "OnSale": "li ser firotanê",
+            "OffSale": "off sale",
+            "CreateCollection": "Koleksiyonê çêbikin",
+            "UpdateCollection": "Nûvekirina Koleksiyonê",
+            "CollectionInfo": "Agahiyên Berhevkirinê",
+            "SelectAuthor": "Nivîskar hilbijêre",
+            "NewItem": "Koleksiyona NFT ya Nû",
+            "NamePlaceholder": "Navê berhevokê binivîse",
+            "DescPlaceholder": "Danasîna berhevokê binivîse",
+            "EndingIn": "Ending In",
+            "SubmitSeries": "Seriesek bişînin"
+        },
+        "import": {
+            "importNFT": "Importkirina NFT",
+            "importAttributes": "Taybetmendiyên NFT derxînin",
+            "fileNotFound": "Mixabin, pelê CSV nehat dîtin.",
+            "fileEmpty": "Bibore, pelê CSV vala ye.",
+            "userIdNotFound": "bikarhêner heye lê id vala ye",
+            "errorLine": "rêza {{1}}",
+            "fieldNotFound": "Qada pêwîst &quot; {{1}} &quot; nehat dîtin",
+            "displayTypeEmpty": "Tîpa nîşana ji bo &quot; {{1}} &quot; nehat dîtin",
+            "taskStreamInvalid": "herikîna peywirê nederbasdar e",
+            "instructionsEmpty": "talîmatên herikîna peywirê vala ye",
+            "complete": "Temamkirin",
+            "activateUsers": "ji bikarhêneran re peyama çalakkirinê bişînin?",
+            "importProgress": "Pêşverûtî",
+            "importOptions": "Vebijêrk",
+            "sampleCSV": "Nimûneya CSV dakêşin",
+            "fileLabel": "Spreadsheet barkirin:",
+            "errorsTitle": "Çewtî çêbûn"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Parzûna bi Koleksiyonên NFT",
+                "ShowNFTCollection": "Koleksiyona NFT li ...",
+                "AllCollections": "Hemû Koleksiyon"
+            },
+            "ByUser": {
+                "AllAuthors": "Hemû Nivîskar",
+                "AllUsers": "Everyone",
+                "FilterByAuthors": "Parzûnkirin ji hêla Nivîskaran ve"
+            }
+        },
+        "Back": "Vegere berhevokê",
+        "attributes": {
+            "Title": "Manage Attributes",
+            "Attributes": "Taybetmendî",
+            "DisplayTitle": "Type Display",
+            "AddDisplayType": "Tîpa nîşana nû lê zêde bike",
+            "NewDisplay": "Nîşandana Nû",
+            "TraitTitle": "Tîpa Taybetiyê",
+            "AddTraitTitle": "Tîpa taybetmendiya nû lê zêde bike",
+            "NewTrait": "Tîpa Taybetiya Nû",
+            "ValueTitle": "Giranî",
+            "AddValueTitle": "Nirxa nû lê zêde bike",
+            "NewValue": "Nirxa Nû",
+            "NewAttribute": "Taybetmendiya Nû",
+            "UpdateAttributes": "Taybetmendiyan nûve bikin",
+            "SaveAttributes": "Save Attributes"
+        },
+        "profile": {
+            "LogOut": "Derkeve",
+            "Title": "Profîla ji bo {{userName}}",
+            "Description": "Agahiyên bikarhêner",
+            "aboutPlaceholder": "Bio Edit",
+            "UploadCoverPhoto": "Wêneya Bergê barkirin",
+            "SureLogOut": "Ma tu bi rastî dixwazî derkevî?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "Peymana NFTC",
+                        "seriesId": "series Id",
+                        "owner": "Xwedî",
+                        "currency": "Currency",
+                        "price": "Biha",
+                        "beneficiary": "Lêtê",
+                        "autoindex": "Autoindex",
+                        "duration": "Demajok",
+                        "rateInterval": "Navbera Rêjeyê",
+                        "rateAmount": "Rêjeya rêjeya"
+                    },
+                    "small": {
+                        "NFTContract": "Peymana NFTC",
+                        "seriesId": "nîşanekan dê di vê rêzê de werin kişandin",
+                        "owner": "xwediyê nimûneyê, wekî din dê were şandin",
+                        "currency": "Pereyê ji bo nîşaneyên kirîn, heke sifir - ji bo pereyên xwemalî",
+                        "price": "Biha",
+                        "beneficiary": "Sûdmendê firotina tokenan, wekî din dê were şandin",
+                        "autoindex": "Autoindex",
+                        "duration": "Girtî piştî minkirinê. Zero tê vê wateyê ku wê tavilê bistînin.",
+                        "rateInterval": "navberê kepçeyê ji bo kirîna taybetî",
+                        "rateAmount": "mîqdara selikê ji bo kirîna taybetî"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(bixwe)",
+                    "number": "jimare",
+                    "address": "navnîşan",
+                    "fraction": "fraction",
+                    "integer": "yekjimar",
+                    "seconds": "seconds",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Çêkirin",
+                "viewInstancesList": "Lîsteya nûvekirinê"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "ID Series",
+                        "account": "Konto",
+                        "amount": "Biha"
+                    },
+                    "small": {
+                        "seriesId": "nîşanek nû dê di rêzên bi vî rengî ID de cih bigire",
+                        "account": "xwediyê NFT-ya nû hatî afirandin. heke neyê danîn - dê berîka heyî bikar bîne",
+                        "amount": "mîqdara NFT ji bo mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(bixwe)",
+                    "seriesId": "id",
+                    "account": "konto",
+                    "amount": "biha",
+                    "integer": "yekjimar"
+                },
+                "btn": {
+                    "Purchase": "Kirrîn",
+                    "SpecialPurchase": "Kirîna taybetî"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Navnîşan"
+                    },
+                    "small": {
+                        "account": "Navnîşan"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Navnîşana Nederbasdar"
+                },
+                "placeholders": {
+                    "account": "Navnîşan"
+                },
+                "addToWhitelist": "Têxe Lîsteya Spî",
+                "removeFromWhitelist": "Ji Lîsteya Spî Rakin"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Nasnameya Token",
+                    "custodian": "Custodian",
+                    "recipient": "Girtevan"
+                },
+                "small": {
+                    "tokenId": "token id tiştê ku pêdivî ye ku were girtin an vekin",
+                    "custodian": "navnîşana ku dikare bikaribe veke",
+                    "recipient": "navnîşana ku dê nîşanekan bistînin"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId nederbasdar e",
+                "invalidCustodian": "Daxwazkarê nederbasdar",
+                "invalidRecipient": "Wergirtina Nederbasdar"
+            },
+            "placeholders": {
+                "optional": "(bixwe)",
+                "tokenId": "id",
+                "custodian": "navnîşan"
+            },
+            "Lock": "Qesr",
+            "Unlock": "Vekirin",
+            "Locked": "Girtî kirin",
+            "CustodianAddress": "Navnîşana parêzgerê",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; hate îdîakirin",
+            "TokenWasLocked": "Token &quot; {{title}} &quot; hate girtin",
+            "TokenWasUnlocked": "Token &quot; {{title}} &quot; hate vekirin"
+        }
+    },
+    "fundrise": {
+        "placeholder": "Li ser vê beşdariyê tiştek binivîsin..."
+    },
+    "currencies": {
+        "choose": "Diravek hilbijêrin"
+    }
+}

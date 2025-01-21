@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Hvor mye å investere?"
+                    },
+                    "placeholders": {
+                        "amount": "Beløp på {{nativeCoin}}",
+                        "max": "Maks: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Kjøpe",
+                    "execute": "Henrette"
+                }
+            }
+        }
+    }
+}

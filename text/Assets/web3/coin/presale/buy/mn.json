@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Хэр их хөрөнгө оруулалт хийх вэ?"
+                    },
+                    "placeholders": {
+                        "amount": "{{nativeCoin}}",
+                        "max": "Хамгийн их: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Худалдан авах",
+                    "execute": "Гүйцэтгэх"
+                }
+            }
+        }
+    }
+}

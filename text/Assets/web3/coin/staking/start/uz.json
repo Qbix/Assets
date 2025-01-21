@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Davomiyligi",
+                        "amount": "Miqdori"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Davomiyligi",
+                        "amount": "Miqdori"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Davomiyligi",
+                    "amount": "miqdori"
+                },
+                "btns": {
+                    "stake": "Qoziq"
+                },
+                "stake": "Qoziq",
+                "loading": "Yuklanmoqda"
+            }
+        }
+    }
+}

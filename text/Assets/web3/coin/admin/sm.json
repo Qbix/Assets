@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Umi",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "lauiloaToken",
+                    "donations": "foai",
+                    "rewardsRateFraction": "tauiRateFraction",
+                    "numerator": "numera",
+                    "denominator": "fa&#39;atatau"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Umi i aso",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "lauiloaToken",
+                    "donations": "foai",
+                    "rewardsRateFraction": "tauiRateFraction",
+                    "numerator": "numera",
+                    "denominator": "fa&#39;atatau"
+                }
+            },
+            "placeholders": {
+                "optional": "(filifiliga)",
+                "tuple": "tupe []",
+                "number": "numera",
+                "address": "tuatusi",
+                "fraction": "vaega ninii",
+                "integer": "numera atoa",
+                "seconds": "sekone",
+                "days": "aso",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "E leai ni vaitaele"
+            },
+            "btns": {
+                "createPool": "Fausia le vaitaele",
+                "createPoolInForm": "Fausia"
+            },
+            "createPool": "Fausia le Vaivai",
+            "produce": "Fausia",
+            "loading": "utaina",
+            "viewInstancesList": "Toe fa&#39;afouina Lisi"
+        }
+    }
+}

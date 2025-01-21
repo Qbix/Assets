@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "කොපමණ මුදලක් ආයෝජනය කළ යුතුද?"
+                    },
+                    "placeholders": {
+                        "amount": "{{nativeCoin}} ක මුදල",
+                        "max": "උපරිම: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "මිලදී ගන්න",
+                    "execute": "ක්රියාත්මක කරන්න"
+                }
+            }
+        }
+    }
+}

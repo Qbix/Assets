@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "කාලසීමාව",
+                        "amount": "මුදල"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "කාලසීමාව",
+                        "amount": "මුදල"
+                    }
+                },
+                "placeholders": {
+                    "duration": "කාලසීමාව",
+                    "amount": "මුදල"
+                },
+                "btns": {
+                    "stake": "කොටස්"
+                },
+                "stake": "කොටස්",
+                "loading": "පූරණය වෙමින් පවතී"
+            }
+        }
+    }
+}

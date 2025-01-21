@@ -1,0 +1,27 @@
+{
+    "title": "Bayar",
+    "steps": {
+        "sending_native_coins": "Ngirimkeun koin asli",
+        "sending_tokens": "Ngirim token",
+        "swap": "Swap",
+        "approve": "Nyatujuan",
+        "one_tx": "Anjeun kedah ngirim hiji transaksi",
+        "two_tx": "Anjeun kedah ngirim dua transaksi"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Dana pikeun mayar"
+            }
+        },
+        "btns": {
+            "pay": "Bayar"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Kudu mayar &quot; {{amountOut}} &quot; tokens"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Ranté sapertos sareng id &quot; {{chainId}} &quot; henteu dirojong"
+    }
+}

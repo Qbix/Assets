@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Faharetana",
+                        "amount": "vola"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Faharetana",
+                        "amount": "vola"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Faharetana",
+                    "amount": "vola"
+                },
+                "btns": {
+                    "stake": "tsatòka"
+                },
+                "stake": "tsatòka",
+                "loading": "Loading"
+            }
+        }
+    }
+}

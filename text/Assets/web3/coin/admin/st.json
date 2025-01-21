@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "letšoaoErc20",
+                    "duration": "Nako",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "menehelo",
+                    "rewardsRateFraction": "meputsoRateFraction",
+                    "numerator": "palo",
+                    "denominator": "sehloho"
+                },
+                "small": {
+                    "tokenErc20": "letšoaoErc20",
+                    "duration": "Nako ea matsatsi",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "menehelo",
+                    "rewardsRateFraction": "meputsoRateFraction",
+                    "numerator": "palo",
+                    "denominator": "sehloho"
+                }
+            },
+            "placeholders": {
+                "optional": "(ka boikhethelo)",
+                "tuple": "tuple[]",
+                "number": "palo",
+                "address": "aterese",
+                "fraction": "karoloana",
+                "integer": "palo yohle",
+                "seconds": "metsotsoana",
+                "days": "matsatsi",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Ha ho na matamo"
+            },
+            "btns": {
+                "createPool": "Theha Letamo",
+                "createPoolInForm": "Theha"
+            },
+            "createPool": "Theha Letamo",
+            "produce": "Lihlahisoa",
+            "loading": "Loading",
+            "viewInstancesList": "Hlahisa Lethathamo"
+        }
+    }
+}

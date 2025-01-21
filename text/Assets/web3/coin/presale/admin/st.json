@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Selling Token",
+                        "timestamps": "Linako",
+                        "prices": "Litheko",
+                        "endTime": "Nako ea ho Qetela",
+                        "thresholds": "Maemo",
+                        "bonuses": "Libonase"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Mong&#39;a ka khona ho hula",
+                            "option1": "Mong&#39;a a ka tlosa li-tokens feela ka mor&#39;a hore endTime e fete",
+                            "option2": "Mong&#39;a ntlo a ka tlosa li-tokens neng kapa neng"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Aterese ea sechaba",
+                    "methodkeccack": "Keccak256 hash tshebetso",
+                    "roleId": "ID ea karolo",
+                    "sellingToken": "Aterese ea ho rekisa Token",
+                    "prices": "ETH, Theko",
+                    "thresholds": "# ea li-tokens",
+                    "bonuses": "Bonase %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Ha ho na lichelete"
+                },
+                "btns": {
+                    "createFund": "Theha Letlole",
+                    "createFundInForm": "Theha"
+                },
+                "fundAddress": "Aterese ea lichelete",
+                "createFund": "Theha Letlole",
+                "fundInfo": "Info",
+                "produce": "Lihlahisoa",
+                "loading": "Loading",
+                "viewInstancesList": "Hlahisa Lethathamo"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "ਮਿਆਦ",
+                        "amount": "ਰਕਮ"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "ਮਿਆਦ",
+                        "amount": "ਰਕਮ"
+                    }
+                },
+                "placeholders": {
+                    "duration": "ਮਿਆਦ",
+                    "amount": "ਰਕਮ"
+                },
+                "btns": {
+                    "stake": "ਦਾਅ"
+                },
+                "stake": "ਦਾਅ",
+                "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ"
+            }
+        }
+    }
+}

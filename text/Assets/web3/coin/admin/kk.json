@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Ұзақтығы",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "танымал Токен",
+                    "donations": "қайырымдылықтар",
+                    "rewardsRateFraction": "RewardsRateFraction",
+                    "numerator": "алым",
+                    "denominator": "бөлгіш"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Ұзақтығы күндермен",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "танымал Токен",
+                    "donations": "қайырымдылықтар",
+                    "rewardsRateFraction": "RewardsRateFraction",
+                    "numerator": "алым",
+                    "denominator": "бөлгіш"
+                }
+            },
+            "placeholders": {
+                "optional": "(міндетті емес)",
+                "tuple": "кортеж[]",
+                "number": "саны",
+                "address": "мекенжайы",
+                "fraction": "бөлшек",
+                "integer": "бүтін сан",
+                "seconds": "секунд",
+                "days": "күндер",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Бассейндер жоқ"
+            },
+            "btns": {
+                "createPool": "Пул жасау",
+                "createPoolInForm": "Жасау"
+            },
+            "createPool": "Пул жасау",
+            "produce": "Шығару",
+            "loading": "Жүктелуде",
+            "viewInstancesList": "Тізімді жаңарту"
+        }
+    }
+}

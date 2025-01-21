@@ -1,0 +1,27 @@
+{
+    "title": "تادیه",
+    "steps": {
+        "sending_native_coins": "د اصلي سکې لیږل",
+        "sending_tokens": "د نښې لیږل",
+        "swap": "تبادله",
+        "approve": "تصویب کړه",
+        "one_tx": "تاسو باید یوه معامله ولیږئ",
+        "two_tx": "تاسو باید دوه لیږدونه واستوئ"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "د پیسو ورکولو لپاره فنډونه"
+            }
+        },
+        "btns": {
+            "pay": "تادیه"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "د &quot; {{amountOut}} &quot; ټوکن تادیه کولو ته اړتیا ده"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "دا ډول سلسله د &quot; {{chainId}} &quot; id سره نه ملاتړ کیږي"
+    }
+}

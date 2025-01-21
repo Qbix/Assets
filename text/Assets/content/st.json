@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Phoso",
+        "WalletAbsent": "Sepache ha sea hokeloa.",
+        "Rendering": "Ho bile le liphoso ha re fana ka <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Theko e hlokahalang!",
+        "NameRequired": "Ho hlokahala lebitso!",
+        "PriceInvalid": "Theko ha e sebetse!",
+        "AmountInvalid": "Chelete ha e sebetse!",
+        "TransactionFailed": "Thekiso e hlolehile",
+        "ChainNotSupported": "Ketane e khethiloeng ha e tšehetsoe. Ketane e tšehelitsoeng: {{supportedChain}}",
+        "NeedMetaMaskConnected": "U hloka MetaMask e hokahaneng ho sebetsa le ts&#39;ebeliso",
+        "UserNotLoggedInMetaMask": "Mosebelisi ha a kena ho MetaMask",
+        "CurrencyNotFound": "Chelete ha e fumanehe",
+        "WrongChain": "NFT ena e thehile tlasa &quot; {{chain}} &quot;. Ka kopo sebelisa ketane ena.",
+        "NoRecipientSelected": "Ha ho motho ea khethiloeng",
+        "CantManageFrozenSeries": "O ka se khone ho laola letoto la litoeba",
+        "SubscriptionStreamNotPaid": "Ha u so lefe ho sheba litaba tsena. Ka kopo, tobetsa {{subscriptionUrl}} me u ingolise ho moralo o nepahetseng."
+    },
+    "admin": {
+        "Title": "Tsamaiso ea thepa",
+        "SubscriptionTitle": "Merero ea ho ngolisa"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Tlanya ho lefa"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : tefiso e se e sebelitsoe bakeng sa {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Ke leboha tefo ea hau ho {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} e ngolisitse ho {{plan.title}}",
+        "YouSubscribedTo": "U ngolisitsoe ho {{plan.title}}",
+        "Assets\/credits\/alert": "U na le tlhokomeliso e amanang le ak&#39;haonte ea hau"
+    },
+    "charge": {
+        "Subject": "U fumane tefo ea {{displayAmount}} ho tsoa {{call 'publisher.displayName'}} bakeng sa &quot; {{description}} &quot;",
+        "HasBeenCharged": "Lumela, sena ke feela ho u tsebisa hore {{1}} e lefisitsoe {{2}} bakeng sa {{3}} ke {{4}}"
+    },
+    "charged": {
+        "Subject": "Kea leboha ka tefo ea hau ea &quot; {{description}} &quot;",
+        "HavePaid": "Lumela {{1}} , ena ke netefatso e potlakileng ea hore u atlehile ho lefa {{2}} ho isa ho {{3}} bakeng sa {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Hokela ak&#39;haonte",
+        "Success": "Katleho",
+        "YourAccountCreated": "Ak&#39;haonte ea hau e entsoe ka katleho!",
+        "YourAccountAlreadyCreated": "Ak&#39;haonte ea hau e se e entsoe, &#39;me e se e loketse ho sebelisoa"
+    },
+    "payment": {
+        "AboutOrder": "Lintlha mabapi le taelo",
+        "PaymentMethod": "Mokhoa oa tefo",
+        "ContactInfo": "Lintlha tsa ho ikopanya",
+        "Pay": "Lefa",
+        "PaymentSucceeded": "Tefo e sebelitsoe ka katleho",
+        "PaymentProcessing.": "Tefo ea hau e ntse e sebetsoa",
+        "FailTryAgain": "Tefo ea hau ha ea atleha. Ka kopo, leka hape.",
+        "SomethingWrong": "Ho bile le phoso",
+        "PaymentStatus": "Boemo ba tefo",
+        "PayTo": "Lefa {{displayName}}",
+        "ChooseCurrency": "Khetha chelete",
+        "YouCanSendUpTo": "O ka romella ho fihla ho {{amount}} {{symbol}}",
+        "Send": "Romela",
+        "EnterAmount": "kenya chelete"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Memo e amohetsoe ke {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} e tlatsitse {{FilledStreamTitle}}",
+        "ForFillingStream": "Bakeng sa ho tlatsa {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "U na le likalimo tse {{amount}} tseo u lokelang ho li qala",
+        "PaymentFor": "Tefo ea &quot; {{1}} &quot;",
+        "PaymentTo": "Tefo ho {{1}}",
+        "PaymentToUser": "Fetisetsa ho {{toUserName}}",
+        "CreatePrivateChat": "bakeng sa moqoqo oa lekunutu le {{toUserName}}",
+        "CreatePaidStream": "bakeng sa ho theha {{toStreamName}}",
+        "JoinedPaidStream": "bakeng sa peheletso ho &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "bakeng sa ho theha sechaba &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "joalo ka puseletso ea peheletso ho &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "O rekile likalimo {{amount}}",
+        "BonusCredits": "Bonus {{amount}} credits",
+        "BuyAmountCredits": "Reka likalimo {{amount}}",
+        "WatchClip": "bakeng sa ho shebella {{fromStreamTitle}}",
+        "MissingCredits": "Likoloto tse sieo",
+        "YouMissingCredits": "U hloka lintlha tse ling {{amount}} hore u tsoele pele.",
+        "BuyCredits": "Reka likoloto",
+        "BuyBonus": "Ho reka likalimo {{amount}} hang ho tla fella ka bonase ea {{bonus}} ea likoloto.",
+        "Buy": "Reka",
+        "PurchaseCredits": "Likoloto tsa ho Reka",
+        "Credits": "Likoloto",
+        "ErrorInvalidAmount": "Chelete ha e sebetse",
+        "ErrorInvalidCurrency": "Ka bomalimabe, ha re e-so tšehetse chelete ea {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} likoloto",
+            "BonusCredits": "{{amount}} likoloto"
+        }
+    },
+    "history": {
+        "Date": "Letsatsi",
+        "Amount": "Chelete",
+        "Description": "Tlhaloso",
+        "Client": "Moreki",
+        "User": "Mosebedisi",
+        "To": "ho",
+        "From": "ho tloha",
+        "SeeHistory": "Sheba nalane ea litefo bakeng sa {{1}}",
+        "HistoryEmpty": "Ha ho na transactions hajoale",
+        "PaymentFor": "E rometse lintlha {{amount}}",
+        "PaymentTo": "E rometse lintlha {{amount}}",
+        "PaymentToUser": "E rometse lintlha {{amount}}",
+        "CreatePaidStream": "Ke sebelisitse lintlha {{amount}}",
+        "WatchClip": {
+            "+": "E fumane likalimo {{amount}}",
+            "-": "Ke sebelisitse lintlha {{amount}}"
+        },
+        "JoinedPaidStream": {
+            "+": "E fumane likalimo {{amount}}",
+            "-": "Ke sebelisitse lintlha {{amount}}"
+        },
+        "LeftPaidStream": {
+            "+": "E fumane lintlha {{amount}}",
+            "-": "E rometse lintlha {{amount}}"
+        },
+        "CreatedCommunity": "Ke sebelisitse lintlha {{amount}}",
+        "BoughtCredits": "O rekile likalimo {{amount}}",
+        "BonusCredits": "Ke fumane lintlha tse {{amount}} tsa bonase",
+        "InviteAcceptedBy": "E fumane likalimo {{amount}}",
+        "Streams_user_firstname": "E fumane likalimo {{amount}}",
+        "Streams_user_lastname": "E fumane likalimo {{amount}}",
+        "Streams_user_icon": "E fumane likalimo {{amount}}",
+        "Places_user_location": "E fumane likalimo {{amount}}",
+        "Streams_greeting": "E fumane likalimo {{amount}}",
+        "YouHaveCreditsToStart": "E fumane likalimo {{amount}}",
+        "InvitedUserFilledStream": "E fumane likalimo {{amount}}",
+        "ForFillingStream": "E fumane likalimo {{amount}}",
+        "CreatePrivateChat": "Ke sebelisitse lintlha {{amount}}"
+    },
+    "subscriptions": {
+        "infoTitle": "Fana ka Boitsebiso ba Tefo",
+        "confirm": {
+            "title": "Qala Ngoliso",
+            "message": "Qala ho ngolisoa khafetsa ho &quot; {{title}} &quot;?",
+            "ok": "HO LOKILE",
+            "cancel": "Hlakola"
+        },
+        "CreditOrDebitCard": "Karete ea mokitlane kapa debit",
+        "SubscribePayment": "Ngolisa Tefo",
+        "ImmediatePayment": "Tefo ea Hang-hang",
+        "ProcessingPayment": "E sebetsa Tefo",
+        "SubscriptionAlreadyPaid": "Ngoliso ena e se e lefile",
+        "SubscriptionNotActive": "Ngoliso ha e sebetse hajoale",
+        "Subscribed": "O ngolisitsoe",
+        "Unsubscribed": "E sa ngolisoa",
+        "Unsubscribe": "Tlosa boingodiso",
+        "Subscribe": "Ngodisa",
+        "Started": "E qadile",
+        "EndsIn": "E qetella ka",
+        "NextPay": "Tefo e latelang",
+        "Period": "Nako",
+        "Price": "Theko",
+        "AreYouSureUnsubscribe": "Na ehlile u batla ho itokolla ho leano lee?",
+        "YouUnsubscribedFromPlan": "U intšitse ho tsoa ho moralo &quot; {{planTitle}} &quot;. U ke ke ua lefisoa nakong e tlang, empa peeletso ea hau e tla tsoela pele ho fihlela {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "morero oa sehlooho",
+            "PricePlaceholder": "theko",
+            "SubscriptionTitle": "Merero ea ho ngolisa",
+            "DescriptionPlaceholder": "tlhaloso ea moralo oa ho ngolisa",
+            "AreYouSureDeletePlan": "Na ehlile u batla ho hlakola leano lee?",
+            "Duration": "Nako",
+            "Discount": "Theolelo",
+            "SavePlan": "Boloka",
+            "Interrupt": "Khaotsa",
+            "Continue": "Tsoela pele",
+            "NewPlan": "Leano le Lecha",
+            "SelectDisplayType": "Khetha {{displayType}}",
+            "EndDate": "letsatsi la ho qetela",
+            "Available": "E fumaneha",
+            "Hidden": "E patiloe",
+            "InviteOnly": "Memo feela",
+            "CantSubscribeUnlessInvited": "O ka se ingolise ho moralo ona ntle le haeba o memiloe"
+        }
+    },
+    "payments": {
+        "infoTitle": "Beha Boitsebiso ba Tefo",
+        "BuyAmountCredits": "Reka likalimo {{amount}}",
+        "confirm": {
+            "title": "Etsa Tefo",
+            "message": "Na u lumela ho lefa {{symbol}} {{amount}} ?",
+            "ok": "HO LOKILE",
+            "cancel": "Hlakola"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Likoloto",
+            "description": "e boloka tlaleho ea likoloto le litefiso"
+        },
+        "Assets\/plan": {
+            "displayType": "Morero oa ho ngolisa",
+            "description": "leano la peeletso"
+        },
+        "Assets\/subscription": {
+            "displayType": "Ngoliso",
+            "description": "peeletso"
+        },
+        "Assets\/product": {
+            "displayType": "Sehlahisoa",
+            "description": "sehlahisoa se rekisoang"
+        },
+        "Assets\/service": {
+            "displayType": "Tshebeletso",
+            "description": "tšebeletso e fanoang"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "E fumane likalimo {{amount}}"
+        },
+        "Assets\/credits\/bought": {
+            "content": "O rekile likalimo {{amount}}"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} credits"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Ke sebelisitse lintlha {{amount}}"
+        },
+        "Assets\/credits\/sent": {
+            "content": "E romelletse lintlha {{amount}} ho {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "E fumane lintlha {{amount}} ho tsoa ho {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Ha u na likhrediti tse lekaneng akhaonteng ea hau. Ka kopo, etela <a href='<i translate='no'>sehokelo se latelang sa 999 &#39;&gt;<\/a> ho reka likalimo tse ling."
+        }
+    },
+    "billing": {
+        "Title": "Tefiso ea thepa",
+        "CreditsMinimum": "Bonyane ba mekitlane",
+        "CreditsToAdd": "Credits ho eketsa",
+        "Save": "Boloka",
+        "ThisLink": "sehokelo sena",
+        "errors": {
+            "CreditsMinimumNegative": "Litefiso tse fokolang ha li khone ho ba tse mpe",
+            "CreditsToAddNegative": "Lichelete tseo u ka li kenyang li ka se be mpe"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Tšebeletso e Ncha",
+            "TitlePlaceholder": "Sehlooho sa tšebeletso",
+            "PricePlaceholder": "Beha theko",
+            "LinkPlaceholder": "seta sehokelo sa lintlha tse ling",
+            "DescriptionPlaceholder": "Tlhaloso ea litšebeletso",
+            "SaveService": "Boloka Tšebeletso",
+            "SelectRequiredParticipants": "Ho hlokahala barupeluoa ba amanang",
+            "RequiredParticipantsDesc": "Ka kopo, khetha barupeluoa ba amehang ba hlokehang ho sebelisa ts&#39;ebeletso ena (mohlala liphoofolo tse ruuoang lapeng bakeng sa &quot;Dogs Show&quot;, kapa bana bakeng sa &quot;matsatsi a phomolo a Bana&quot; joalo-joalo). Haeba tšebeletso e lefshoa, mosebelisi o tla tlameha ho lefa le bankakarolo ba amanang."
+        },
+        "EditServiceTemplate": {
+            "Title": "Edit Service"
+        },
+        "ManageServiceTemplates": "Laola Lithempleite tsa Tšebeletso",
+        "ManageServices": "Laola Litšebeletso",
+        "Free": "Mahala",
+        "OptionalContribution": "Tlatsetso ea boikhethelo",
+        "RequiredPayment": "Tefo e hlokahalang",
+        "AreYouSureDelete": "Na ehlile u batla ho hlakola tšebeletso ee?",
+        "AmountServicesRelated": "Ho na le lisebelisoa {{amount}} tse amanang le ts&#39;ebeletso ena. Le tsona li tla tlosoa."
+    },
+    "transfer": {
+        "SelectRecipient": "Khetha moamoheli",
+        "TransactionSuccess": "Katleho ea Transaction",
+        "OrTypeWalletAddress": "KAPA ngola aterese ea sepache sa moamoheli",
+        "AppCredits": "Litefiso tsa App"
+    },
+    "NFT": {
+        "Title": "Sehlooho",
+        "Name": "Lebitso",
+        "EnterName": "Kenya lebitso",
+        "EnterAuthorWallet": "Kenya sepache sa mongoli",
+        "InformationAboutTitle": "Lintlha tse mabapi le {{title}} NFT",
+        "Description": "Tlhaloso",
+        "DetailedInformationAboutNFT": "Lintlha tse felletseng mabapi le NFT",
+        "PresaleStarts": "Presale e qala ka la 23 Tšitoe",
+        "OwnerUserNotFound": "Mong&#39;a NFT ena ha a ea ngolisoa kopong ea rona.",
+        "BuyNow": "Reka hona joale",
+        "Buy": "Reka",
+        "Add": "Eketsa",
+        "Remove": "Tlosa",
+        "NoNFTyet": "Ha ho li-NFTs hajoale",
+        "Conversation": "Moqoqo",
+        "Create": "Theha",
+        "CurrentBid": "Teko ea hajoale",
+        "StartingIn": "Ho qala ka",
+        "EndingIn": "E qetella ka",
+        "CreateNFT": "Theha NFT",
+        "TitlePlaceholder": "Fana ka sehlooho sa NFT ea hau",
+        "DescriptionPlaceholder": "Fana ka tlhaloso ea NFT ea hau",
+        "CreateYourNFT": "Theha NFT ea hau",
+        "Royalties": "Lichelete",
+        "RoyaltyPlaceholder": "Taba ea boikhethelo. Chelete e lefuoang ho moetsi pele e fetisoa.",
+        "ExpirationDate": "Letsatsi la pheletso",
+        "StartingDate": "Letsatsi la qalo",
+        "BidsBelowThisAmount": "Litheko tse ka tlase ho chelete ena li ke ke tsa lumelloa",
+        "MinimumBid": "Teko e fokolang",
+        "Author": "Mongoli",
+        "Price": "Theko",
+        "Commission": "Komisi",
+        "EnterCommission": "Kena komisi",
+        "Owner": "Mong&#39;a",
+        "SelectCategory": "Khetha sehlopha",
+        "Day": "Letsatsi",
+        "Days": "Matsatsi",
+        "Hour": "Hora",
+        "Hours": "Lihora",
+        "Minute": "Motsotso",
+        "Minutes": "Metsotso",
+        "Second": "Ea bobeli",
+        "Seconds": "Metsotsoana",
+        "SalesCreator": "ea thekiso e tla ea ho moetsi",
+        "Details": "Lintlha",
+        "Bids": "Litefiso",
+        "History": "Histori",
+        "LoremIpsum": "Lorem Ipsum ke mongolo o makatsang oa indasteri ea khatiso le ea ho seta.",
+        "PutOnSale": "Beha thekisong",
+        "PutOffSale": "Tlosa thekisong",
+        "Transfer": "Phetisetso",
+        "Actions": "Liketso",
+        "Claim": "Kleima",
+        "ClaimNFT": "Kopa NFT",
+        "Unlocking": "Ho notlolla",
+        "Unlock": "Notlolla",
+        "Update": "Nchafatso",
+        "UpdateToken": "Ntlafatsa Letšoao",
+        "UpdateNFT": "Ntlafatsa NFT",
+        "CreateToken": "Theha Letshwao",
+        "PlaceBid": "Bid ea sebaka",
+        "SoldOut": "E rekisitsoe",
+        "NotOnSale": "Ha e Rekisoe",
+        "NftName": "Lebitso la NFT",
+        "DescribeYourNFT": "Ka kopo hlalosa NFT ea hau",
+        "NFTImage": "Setšoantšo sa NFT",
+        "NFTVideo": "Video ea NFT, haeba e teng",
+        "GenerateDescription": "kapa e iketsetseng",
+        "UploadMovie": "Kenya filimi",
+        "MovieSource": "Mohloli oa lifilimi",
+        "MovieURL": "URL ea lifilimi",
+        "UploadFile": "Kenya faele",
+        "PutOnMarketplace": "Beha &#39;marakeng",
+        "InstantPurchase": "Kenya theko ho lumella basebelisi ho reka NFT ea hau hang hang",
+        "FixedPrice": "Theko e tsitsitseng",
+        "TimedAuction": "Fantisi e nakong",
+        "OpenForBids": "E butsoe bakeng sa litefiso",
+        "PriceOnePiece": "Kenya theko bakeng sa sekotoana se le seng",
+        "EnterPrice": "Kenya theko",
+        "EnterMinimumBid": "Kenya Bonyane ba theko",
+        "SelectChain": "Khetha ketane",
+        "Currency": "Chelete",
+        "AreYouSureDeleteImage": "Na ehlile u batla ho tlosa setšoantšo?",
+        "AreYouSureDeleteVideo": "Na ehlile u batla ho tlosa fitio?",
+        "series": {
+            "Name": "Lebitso",
+            "Icon": "Letšoao",
+            "Description": "Tlhaloso",
+            "Author": "Mongoli",
+            "SelectSeries": "Khetha letoto",
+            "Value": "Boleng",
+            "AreYouSure": "U na le bonnete?",
+            "AuthorInvalid": "Aterese ea sengoli ha e sebetse!",
+            "Address": "Aterese",
+            "CoverImage": "Sekoahelo sa setšoantšo",
+            "UploadCoverImage": "Kenya setšoantšo sa sekoahelo",
+            "CommissionAddressInvalid": "Aterese ea Khomishene ha e sebetse",
+            "OnSale": "tse rekisoang",
+            "OffSale": "kantle ho thekiso",
+            "CreateSeries": "Theha Series",
+            "UpdateSeries": "Update Series",
+            "SeriesInfo": "Letoto la Litaba",
+            "SelectAuthor": "Khetha mongoli",
+            "NewItem": "Letoto le lecha la NFT",
+            "NamePlaceholder": "Kenya letoto la mabitso",
+            "DescPlaceholder": "Kenya letoto tlhaloso",
+            "EndingIn": "Ho Qetela"
+        },
+        "contract": {
+            "CreateContract": "Etsa konteraka",
+            "SelectContract": "Khetha konteraka",
+            "CreateContractFor": "Theha konteraka ea {{userName}}",
+            "ContractFor": "Konteraka ea {{userName}}",
+            "UpdateContract": "Nchafatsa Konteraka",
+            "TransferOwnership": "Ho Fetisetsa Beng",
+            "SetBaseURI": "Beha URI ea Base",
+            "SetSuffix": "Beha Sehlomathiso",
+            "CurrentOwner": "Mong&#39;a Hona Joale",
+            "CurrentBaseURL": "BaseURL ea hajoale",
+            "ContractAddressAbsent": "Aterese ea konteraka ha e eo",
+            "FactoryAddressAbsent": "Aterese ea feme ha e eo",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Ho hlokahala sehlooho",
+            "SymbolRequired": "Letšoao lea hlokahala",
+            "TypeContractName": "lebitso la konteraka",
+            "TypeContractSymbol": "letshwao la konteraka (boholo ba 10 char)"
+        },
+        "contests": {
+            "Title": "Litlholisano",
+            "NewContest": "Tlholisano e Ncha"
+        },
+        "collections": {
+            "Title": "Lipokello",
+            "EnterTitle": "kenya sehlooho",
+            "EnterDescription": "kenya tlhaloso",
+            "NewCollection": "Pokello e Ncha",
+            "Name": "Lebitso",
+            "Icon": "Letšoao",
+            "Description": "Tlhaloso",
+            "Author": "Mongoli",
+            "SelectCollection": "Khetha pokello",
+            "Value": "Boleng",
+            "AreYouSure": "U na le bonnete?",
+            "AuthorInvalid": "Aterese ea sengoli ha e sebetse!",
+            "Address": "Aterese",
+            "CoverImage": "Sekoahelo sa setšoantšo",
+            "UploadIcon": "Kenya letšoao",
+            "CommissionAddressInvalid": "Aterese ea Khomishene ha e sebetse",
+            "OnSale": "tse rekisoang",
+            "OffSale": "kantle ho thekiso",
+            "CreateCollection": "Etsa Pokello",
+            "UpdateCollection": "Nchafatsa Pokello",
+            "CollectionInfo": "Boitsebiso ba Pokello",
+            "SelectAuthor": "Khetha mongoli",
+            "NewItem": "Pokello e Ncha ea NFT",
+            "NamePlaceholder": "Kenya lebitso la pokello",
+            "DescPlaceholder": "Kenya tlhaloso ea pokello",
+            "EndingIn": "Ho Qetela",
+            "SubmitSeries": "Kenya Letoto"
+        },
+        "import": {
+            "importNFT": "Ho kenya NFT&#39;s",
+            "importAttributes": "Kenya litšobotsi tsa NFT",
+            "fileNotFound": "Tšoarelo, faele ea CSV ha e fumanehe.",
+            "fileEmpty": "Tšoarelo, faele ea CSV ha e na letho.",
+            "userIdNotFound": "mosebelisi o teng empa id ha e na letho",
+            "errorLine": "moeli oa {{1}}",
+            "fieldNotFound": "Sebaka se hlokahalang &quot; {{1}} &quot; ha se fumanehe",
+            "displayTypeEmpty": "Mofuta oa pontšo bakeng sa &quot; {{1}} &quot; ha o fumanehe",
+            "taskStreamInvalid": "sebaka sa mosebetsi ha se sebetse",
+            "instructionsEmpty": "ditaelo tsa molapo wa mosebetsi ha di na letho",
+            "complete": "Feletseng",
+            "activateUsers": "romela molaetsa oa ho kenya tshebetsong ho basebelisi?",
+            "importProgress": "Tsoelo-pele",
+            "importOptions": "Dikgetho",
+            "sampleCSV": "Khoasolla Mohlala oa CSV",
+            "fileLabel": "Kenya Spreadsheet:",
+            "errorsTitle": "Ho bile le liphoso"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Sefa ka NFT Collections",
+                "ShowNFTCollection": "Hlahisa pokello ea NFT ho ...",
+                "AllCollections": "Likopano Tsohle"
+            },
+            "ByUser": {
+                "AllAuthors": "Bangoli bohle",
+                "AllUsers": "Emong le emong",
+                "FilterByAuthors": "Sefa ka Bangoli"
+            }
+        },
+        "Back": "Khutlela ho Pokello",
+        "attributes": {
+            "Title": "Laola Litšobotsi",
+            "Attributes": "Litšobotsi",
+            "DisplayTitle": "Mofuta oa Pontšo",
+            "AddDisplayType": "Kenya mofuta o mocha oa pontšo",
+            "NewDisplay": "Pontšo e Ncha",
+            "TraitTitle": "Mofuta oa Tšobotsi",
+            "AddTraitTitle": "Kenya mofuta o mocha oa sebopeho",
+            "NewTrait": "Mofuta o Mocha oa Tšobotsi",
+            "ValueTitle": "Boleng",
+            "AddValueTitle": "Kenya boleng bo bocha",
+            "NewValue": "Boleng bo Bocha",
+            "NewAttribute": "Tšobotsi e Ncha",
+            "UpdateAttributes": "Nchafatsa Litšobotsi",
+            "SaveAttributes": "Boloka Litšobotsi"
+        },
+        "profile": {
+            "LogOut": "Tsoa",
+            "Title": "Boemo ba {{userName}}",
+            "Description": "Lintlha tsa mosebelisi",
+            "aboutPlaceholder": "Fetola Bio",
+            "UploadCoverPhoto": "Kenya Cover Photo",
+            "SureLogOut": "Na ehlile u batla ho tsoa?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "letoto Id",
+                        "owner": "Mong&#39;a",
+                        "currency": "Chelete",
+                        "price": "Theko",
+                        "beneficiary": "Mojalefa",
+                        "autoindex": "Autoindex",
+                        "duration": "Nako",
+                        "rateInterval": "Sekhahla sa sekhahla",
+                        "rateAmount": "Sekhahla sa chelete"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "tokens tla minted letotong lena",
+                        "owner": "mong&#39;a mohlala, ho seng joalo e tla ba moromeli",
+                        "currency": "Chelete ea li-tokens tse rekiloeng, haeba zero - bakeng sa lichelete tsa tšepe tsa matsoalloa",
+                        "price": "Theko",
+                        "beneficiary": "Mojalefa oa ho rekisa li-tokens, ho seng joalo e tla ba moromeli",
+                        "autoindex": "Autoindex",
+                        "duration": "Lock ka mor&#39;a minting. Zero e bolela ho e fumana hang-hang.",
+                        "rateInterval": "nako ea bakete bakeng sa theko e khethehileng",
+                        "rateAmount": "chelete ea bakete bakeng sa theko e khethehileng"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ka boikhethelo)",
+                    "number": "palo",
+                    "address": "aterese",
+                    "fraction": "karoloana",
+                    "integer": "palo yohle",
+                    "seconds": "metsotsoana",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Lihlahisoa",
+                "viewInstancesList": "Hlahisa Lethathamo"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Letoto la ID",
+                        "account": "Akhaonto",
+                        "amount": "Chelete"
+                    },
+                    "small": {
+                        "seriesId": "token e ncha e tla ba letotong le nang le ID e joalo",
+                        "account": "mong&#39;a NFT e sa tsoa qaptjoa. haeba e sa hlophisoa - e tla sebelisa sepache sa hajoale",
+                        "amount": "chelete ea NFT ho koena"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ka boikhethelo)",
+                    "seriesId": "id",
+                    "account": "akhaonte",
+                    "amount": "chelete",
+                    "integer": "palo yohle"
+                },
+                "btn": {
+                    "Purchase": "Reka",
+                    "SpecialPurchase": "Theko e khethehileng"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Aterese"
+                    },
+                    "small": {
+                        "account": "Aterese"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Aterese e Fosahetseng"
+                },
+                "placeholders": {
+                    "account": "Aterese"
+                },
+                "addToWhitelist": "Eketsa ho Whitelist",
+                "removeFromWhitelist": "Tlosa ho Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Letšoao la ID",
+                    "custodian": "Mohlokomedi",
+                    "recipient": "Moamohedi"
+                },
+                "small": {
+                    "tokenId": "token id se hlokang ho notlela kapa ho notlolla",
+                    "custodian": "aterese e ka khonang ho notlolla",
+                    "recipient": "aterese e tla amohela tokens"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId e fosahetseng",
+                "invalidCustodian": "Mohlokomeli ea sa sebetseng",
+                "invalidRecipient": "Moamohedi ya Fosahetseng"
+            },
+            "placeholders": {
+                "optional": "(ka boikhethelo)",
+                "tokenId": "id",
+                "custodian": "aterese"
+            },
+            "Lock": "Notlela",
+            "Unlock": "Notlolla",
+            "Locked": "Notletsoe",
+            "CustodianAddress": "Aterese ea mohlokomeli",
+            "TokenWasClaimed": "Letšoao &quot; {{title}} &quot; le ile la batloa",
+            "TokenWasLocked": "Letšoao &quot; {{title}} &quot; le ne le notletsoe",
+            "TokenWasUnlocked": "Letšoao &quot; {{title}} &quot; le ne le notletsoe"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ngola ho hong ka tlatsetso ena..."
+    },
+    "currencies": {
+        "choose": "Khetha chelete"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Kutalika",
+                        "amount": "Ndalama"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Kutalika",
+                        "amount": "Ndalama"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Kutalika",
+                    "amount": "kuchuluka"
+                },
+                "btns": {
+                    "stake": "Mtengo"
+                },
+                "stake": "Mtengo",
+                "loading": "Kutsegula"
+            }
+        }
+    }
+}

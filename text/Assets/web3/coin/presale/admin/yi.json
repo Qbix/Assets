@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "סעלינג טאָקען",
+                        "timestamps": "Times",
+                        "prices": "פּריסעס",
+                        "endTime": "סוף צייט",
+                        "thresholds": "שוועלן",
+                        "bonuses": "באָנוסעס"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "בעל קען נישט צוריקציען",
+                            "option1": "באַזיצער קענען צוריקציען טאָקענס בלויז נאָך ענדטיים דורכגעגאנגען",
+                            "option2": "באַזיצער קענען צוריקציען טאָקענס עניטיים"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "קהל אַדרעס",
+                    "methodkeccack": "Keccak256 האַש פֿונקציע",
+                    "roleId": "ראָלע ID",
+                    "sellingToken": "סעלינג טאָקען אַדרעס",
+                    "prices": "ETH, פּרייַז",
+                    "thresholds": "# פון טאָקענס",
+                    "bonuses": "באָנוס %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "עס זענען קיין געלט"
+                },
+                "btns": {
+                    "createFund": "שאַפֿן פאַנד",
+                    "createFundInForm": "שאַפֿן"
+                },
+                "fundAddress": "פאָנד אַדרעס",
+                "createFund": "שאַפֿן פאַנד",
+                "fundInfo": "אינפֿאָרמאַציע",
+                "produce": "פּראָדוצירן",
+                "loading": "Loading",
+                "viewInstancesList": "דערפרישן רשימה"
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "टोकन विक्री",
+                        "timestamps": "वेळा",
+                        "prices": "किमती",
+                        "endTime": "समाप्ती वेळ",
+                        "thresholds": "उंबरठा",
+                        "bonuses": "बोनस"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "मालक पैसे काढू शकत नाही",
+                            "option1": "एंडटाइम पास झाल्यानंतरच मालक टोकन काढू शकतो",
+                            "option2": "मालक कधीही टोकन काढू शकतो"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "समुदाय पत्ता",
+                    "methodkeccack": "Keccak256 हॅश फंक्शन",
+                    "roleId": "भूमिका आयडी",
+                    "sellingToken": "टोकन पत्ता विकत आहे",
+                    "prices": "ETH, किंमत",
+                    "thresholds": "# टोकन",
+                    "bonuses": "बोनस %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "निधी नाहीत"
+                },
+                "btns": {
+                    "createFund": "निधी तयार करा",
+                    "createFundInForm": "तयार करा"
+                },
+                "fundAddress": "निधी पत्ता",
+                "createFund": "निधी तयार करा",
+                "fundInfo": "माहिती",
+                "produce": "उत्पादन करा",
+                "loading": "लोड करत आहे",
+                "viewInstancesList": "यादी रिफ्रेश करा"
+            }
+        }
+    }
+}

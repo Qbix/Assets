@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Demajok",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populerToken",
+                    "donations": "bexşînan",
+                    "rewardsRateFraction": "xelatRateFraction",
+                    "numerator": "jimarker",
+                    "denominator": "navdêr"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duration bi rojan",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populerToken",
+                    "donations": "bexşînan",
+                    "rewardsRateFraction": "xelatRateFraction",
+                    "numerator": "jimarker",
+                    "denominator": "navdêr"
+                }
+            },
+            "placeholders": {
+                "optional": "(bixwe)",
+                "tuple": "tîrêj[]",
+                "number": "jimare",
+                "address": "navnîşan",
+                "fraction": "fraction",
+                "integer": "yekjimar",
+                "seconds": "seconds",
+                "days": "rojan",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Hewz nîn in"
+            },
+            "btns": {
+                "createPool": "Hewzê biafirînin",
+                "createPoolInForm": "Xûliqandin"
+            },
+            "createPool": "Hewzê biafirînin",
+            "produce": "Çêkirin",
+            "loading": "Barkirin",
+            "viewInstancesList": "Lîsteya nûvekirinê"
+        }
+    }
+}

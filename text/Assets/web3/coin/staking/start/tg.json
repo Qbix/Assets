@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Давомнокӣ",
+                        "amount": "Маблағ"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Давомнокӣ",
+                        "amount": "Маблағ"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Давомнокӣ",
+                    "amount": "маблағи"
+                },
+                "btns": {
+                    "stake": "Саҳм"
+                },
+                "stake": "Саҳм",
+                "loading": "Бор карда мешавад"
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "ടോക്കൺErc20",
+                    "duration": "ദൈർഘ്യം",
+                    "bonusTokenFraction": "ബോണസ് ടോക്കൻ ഫ്രാക്ഷൻ",
+                    "popularToken": "ജനപ്രിയ ടോക്കൺ",
+                    "donations": "സംഭാവനകൾ",
+                    "rewardsRateFraction": "റിവാർഡ് റേറ്റ് ഫ്രാക്ഷൻ",
+                    "numerator": "ന്യൂമറേറ്റർ",
+                    "denominator": "ഡിനോമിനേറ്റർ"
+                },
+                "small": {
+                    "tokenErc20": "ടോക്കൺErc20",
+                    "duration": "ദിവസങ്ങളിൽ ദൈർഘ്യം",
+                    "bonusTokenFraction": "ബോണസ് ടോക്കൻ ഫ്രാക്ഷൻ",
+                    "popularToken": "ജനപ്രിയ ടോക്കൺ",
+                    "donations": "സംഭാവനകൾ",
+                    "rewardsRateFraction": "റിവാർഡ് റേറ്റ് ഫ്രാക്ഷൻ",
+                    "numerator": "ന്യൂമറേറ്റർ",
+                    "denominator": "ഡിനോമിനേറ്റർ"
+                }
+            },
+            "placeholders": {
+                "optional": "(ഓപ്ഷണൽ)",
+                "tuple": "ട്യൂപ്പിൾ[]",
+                "number": "നമ്പർ",
+                "address": "വിലാസം",
+                "fraction": "അംശം",
+                "integer": "പൂർണ്ണസംഖ്യ",
+                "seconds": "സെക്കൻ്റുകൾ",
+                "days": "ദിവസങ്ങൾ",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "കുളങ്ങളൊന്നുമില്ല"
+            },
+            "btns": {
+                "createPool": "കുളം സൃഷ്ടിക്കുക",
+                "createPoolInForm": "സൃഷ്ടിക്കുക"
+            },
+            "createPool": "കുളം സൃഷ്ടിക്കുക",
+            "produce": "ഉൽപ്പാദിപ്പിക്കുക",
+            "loading": "ലോഡ് ചെയ്യുന്നു",
+            "viewInstancesList": "ലിസ്റ്റ് പുതുക്കുക"
+        }
+    }
+}

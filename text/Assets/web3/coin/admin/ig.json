@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "akara Erc20",
+                    "duration": "Ogologo oge",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "PopularToken",
+                    "donations": "onyinye",
+                    "rewardsRateFraction": "ụgwọ ọrụRateFraction",
+                    "numerator": "ọnụọgụgụ",
+                    "denominator": "denominator"
+                },
+                "small": {
+                    "tokenErc20": "akara Erc20",
+                    "duration": "Ogologo oge n&#39;ime ụbọchị",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "PopularToken",
+                    "donations": "onyinye",
+                    "rewardsRateFraction": "ụgwọ ọrụRateFraction",
+                    "numerator": "ọnụọgụgụ",
+                    "denominator": "denominator"
+                }
+            },
+            "placeholders": {
+                "optional": "(nhọrọ)",
+                "tuple": "tuple[]",
+                "number": "nọmba",
+                "address": "adreesị",
+                "fraction": "ntakiri",
+                "integer": "ọnụọgụgụ",
+                "seconds": "sekọnd",
+                "days": "ụbọchị",
+                "uint256": "ihe 256",
+                "uint192": "afọ192",
+                "uint64": "ihe 64",
+                "uint32": "ihe 32",
+                "uint16": "otu16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Enweghị ọdọ mmiri"
+            },
+            "btns": {
+                "createPool": "Mepụta ọdọ mmiri",
+                "createPoolInForm": "Mepụta"
+            },
+            "createPool": "Mepụta ọdọ mmiri",
+            "produce": "Mepụta",
+            "loading": "Na-ebugo",
+            "viewInstancesList": "Ndepụta ume ọhụrụ"
+        }
+    }
+}

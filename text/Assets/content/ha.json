@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Kuskure",
+        "WalletAbsent": "Ba a haɗa walat ɗin ba.",
+        "Rendering": "An sami kurakurai yayin yin <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Farashin da ake buƙata!",
+        "NameRequired": "Suna bukata!",
+        "PriceInvalid": "Farashin mara inganci!",
+        "AmountInvalid": "Adadi ba daidai ba!",
+        "TransactionFailed": "Kasuwancin ya gaza",
+        "ChainNotSupported": "Sarkar da aka zaɓa ba ta da tallafi. Sarkar goyon baya: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Bukatar haɗin MetaMask don aiki tare da aikace-aikacen",
+        "UserNotLoggedInMetaMask": "Mai amfani baya shiga MetaMask",
+        "CurrencyNotFound": "Ba a samo kuɗi ba",
+        "WrongChain": "Wannan NFT ta ƙirƙira ƙarƙashin &quot; {{chain}} &quot;. Da fatan za a yi amfani da wannan sarkar.",
+        "NoRecipientSelected": "Ba a zaɓi mai karɓa ba",
+        "CantManageFrozenSeries": "Ba za ku iya sarrafa jerin daskararre ba",
+        "SubscriptionStreamNotPaid": "Ba ka biya don duba wannan abun ciki ba. Da fatan za a danna {{subscriptionUrl}} kuma ku yi rajista zuwa tsarin da ya dace."
+    },
+    "admin": {
+        "Title": "Gudanar da kadarorin",
+        "SubscriptionTitle": "Shirye-shiryen biyan kuɗi"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Matsa don biya"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : An aiwatar da cajin na {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Na gode da biyan ku zuwa {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} sun yi rajista zuwa {{plan.title}}",
+        "YouSubscribedTo": "An yi muku rajista zuwa {{plan.title}}",
+        "Assets\/credits\/alert": "Kuna da faɗakarwa mai alaƙa da asusun ku"
+    },
+    "charge": {
+        "Subject": "Kun karɓi biyan kuɗi na {{displayAmount}} daga {{call 'publisher.displayName'}} don &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hey, wannan don sanar da ku an caje {{1}} {{2}} akan {{3}} ta {{4}}"
+    },
+    "charged": {
+        "Subject": "Na gode da biyan ku don &quot; {{description}} &quot;",
+        "HavePaid": "Hey {{1}} , wannan shine kawai tabbatarwa da sauri cewa kun sami nasarar biya {{2}} zuwa {{3}} akan {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Haɗa asusun",
+        "Success": "Nasara",
+        "YourAccountCreated": "An ƙirƙiri asusun ku cikin nasara!",
+        "YourAccountAlreadyCreated": "An riga an ƙirƙiri asusun ku kuma yana shirye don amfani"
+    },
+    "payment": {
+        "AboutOrder": "Bayani game da oda",
+        "PaymentMethod": "Hanyar biyan kuɗi",
+        "ContactInfo": "Bayanin tuntuɓar",
+        "Pay": "Biya",
+        "PaymentSucceeded": "An yi nasarar aiwatar da biyan kuɗi",
+        "PaymentProcessing.": "Ana aiwatar da biyan ku",
+        "FailTryAgain": "Biyan ku bai yi nasara ba. Da fatan za a sake gwadawa.",
+        "SomethingWrong": "Wani abu ya faru",
+        "PaymentStatus": "Matsayin biyan kuɗi",
+        "PayTo": "Bayar {{displayName}}",
+        "ChooseCurrency": "Zaɓi kuɗi",
+        "YouCanSendUpTo": "Kuna iya aika har zuwa {{amount}} {{symbol}}",
+        "Send": "Aika",
+        "EnterAmount": "shigar da adadin"
+    },
+    "credits": {
+        "InviteAcceptedBy": "{{invitedUserName}} ta karɓi gayyata",
+        "InvitedUserFilledStream": "{{invitedUserName}} ya cika {{FilledStreamTitle}}",
+        "ForFillingStream": "Domin cika {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Kuna da maki {{amount}} don farawa",
+        "PaymentFor": "Bayar da &quot; {{1}} &quot;",
+        "PaymentTo": "Biya zuwa {{1}}",
+        "PaymentToUser": "Canja wurin zuwa {{toUserName}}",
+        "CreatePrivateChat": "don tattaunawa ta sirri tare da {{toUserName}}",
+        "CreatePaidStream": "don ƙirƙirar {{toStreamName}}",
+        "JoinedPaidStream": "don ajiyar wuri a &quot; <a data-publisherId='<i translate='no'>999&#39; data-streamName=&#39; {{toStreamName}} &quot;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "don ƙirƙirar al&#39;umma &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "a matsayin ajiyar ajiyar kuɗi a cikin &quot; <a data-publisherId='<i translate='no'>999&#39; data-streamName=&#39; {{fromStreamName}} &quot;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Sayi {{amount}} kiredit",
+        "BonusCredits": "Kyauta masu alaƙa {{amount}} Bonus&quot;.",
+        "BuyAmountCredits": "Sayi kiredit {{amount}}",
+        "WatchClip": "don kallo {{fromStreamTitle}}",
+        "MissingCredits": "Bacewar Kiredit",
+        "YouMissingCredits": "Kuna buƙatar ƙarin ƙididdiga {{amount}} don ci gaba.",
+        "BuyCredits": "Sayi kiredit",
+        "BuyBonus": "Siyan ƙididdigewa {{amount}} a lokaci ɗaya zai haifar da kari na ƙididdigewa {{bonus}} .",
+        "Buy": "Saya",
+        "PurchaseCredits": "Sayi Kiredit",
+        "Credits": "Kiredit",
+        "ErrorInvalidAmount": "Adadin bai da inganci",
+        "ErrorInvalidCurrency": "Abin takaici, har yanzu ba mu goyi bayan kudin {{currency}} ba",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} kiredit",
+            "BonusCredits": "{{amount}} kiredit"
+        }
+    },
+    "history": {
+        "Date": "Kwanan wata",
+        "Amount": "Adadin",
+        "Description": "Bayani",
+        "Client": "Abokin ciniki",
+        "User": "Mai amfani",
+        "To": "ku",
+        "From": "daga",
+        "SeeHistory": "Duba tarihin biyan kuɗi na {{1}}",
+        "HistoryEmpty": "Babu ciniki tukuna",
+        "PaymentFor": "An aika da ƙididdiga {{amount}}",
+        "PaymentTo": "An aika {{amount}} kiredit",
+        "PaymentToUser": "An aika da ƙididdiga {{amount}}",
+        "CreatePaidStream": "An kashe {{amount}} credits",
+        "WatchClip": {
+            "+": "An sami kredit {{amount}}",
+            "-": "An kashe {{amount}} credits"
+        },
+        "JoinedPaidStream": {
+            "+": "An sami kredit {{amount}}",
+            "-": "An kashe {{amount}} credits"
+        },
+        "LeftPaidStream": {
+            "+": "An karɓi ƙididdiga {{amount}}",
+            "-": "An aika da ƙididdiga {{amount}}"
+        },
+        "CreatedCommunity": "An kashe {{amount}} credits",
+        "BoughtCredits": "Sayi {{amount}} kiredit",
+        "BonusCredits": "Ya sami bonus {{amount}} credits",
+        "InviteAcceptedBy": "An sami kredit {{amount}}",
+        "Streams_user_firstname": "An sami kredit {{amount}}",
+        "Streams_user_lastname": "An sami kredit {{amount}}",
+        "Streams_user_icon": "An sami kredit {{amount}}",
+        "Places_user_location": "An sami kredit {{amount}}",
+        "Streams_greeting": "An sami kredit {{amount}}",
+        "YouHaveCreditsToStart": "An sami kredit {{amount}}",
+        "InvitedUserFilledStream": "An sami kredit {{amount}}",
+        "ForFillingStream": "An sami kredit {{amount}}",
+        "CreatePrivateChat": "An kashe {{amount}} credits"
+    },
+    "subscriptions": {
+        "infoTitle": "Bada Bayanin Biyan Kuɗi",
+        "confirm": {
+            "title": "Fara Biyan Kuɗi",
+            "message": "Fara biyan kuɗi mai maimaitawa zuwa &quot; {{title}} &quot;?",
+            "ok": "KO",
+            "cancel": "Soke"
+        },
+        "CreditOrDebitCard": "Katin bashi ko zare kudi",
+        "SubscribePayment": "Biyan Biyan Kuɗi",
+        "ImmediatePayment": "Biyan Nan take",
+        "ProcessingPayment": "Gudanar da Biyan Kuɗi",
+        "SubscriptionAlreadyPaid": "An riga an biya wannan biyan kuɗi",
+        "SubscriptionNotActive": "Biyan kuɗi a halin yanzu ba ya aiki",
+        "Subscribed": "An yi rajista",
+        "Unsubscribed": "Ba a yi rajista ba",
+        "Unsubscribe": "Cire rajista",
+        "Subscribe": "Yi rijista",
+        "Started": "An fara",
+        "EndsIn": "Ya ƙare",
+        "NextPay": "Biya ta gaba",
+        "Period": "Lokaci",
+        "Price": "Farashin",
+        "AreYouSureUnsubscribe": "Shin kun tabbata kuna son cire rajista daga wannan shirin?",
+        "YouUnsubscribedFromPlan": "Kun cire rajista daga shirin &quot; {{planTitle}} &quot;. Ba za a caje ku lokaci na gaba ba, amma biyan kuɗin ku zai ci gaba har zuwa {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "shirin take",
+            "PricePlaceholder": "farashin",
+            "SubscriptionTitle": "Shirye-shiryen biyan kuɗi",
+            "DescriptionPlaceholder": "bayanin tsarin biyan kuɗi",
+            "AreYouSureDeletePlan": "Shin kun tabbata kuna son share wannan shirin?",
+            "Duration": "Tsawon lokaci",
+            "Discount": "Rangwame",
+            "SavePlan": "Ajiye",
+            "Interrupt": "Katsewa",
+            "Continue": "Ci gaba",
+            "NewPlan": "Sabon Shiri",
+            "SelectDisplayType": "Zaɓi {{displayType}}",
+            "EndDate": "karshen kwanan wata",
+            "Available": "Akwai",
+            "Hidden": "Boye",
+            "InviteOnly": "Gayyata-kawai",
+            "CantSubscribeUnlessInvited": "Ba za ku iya yin rajista ga wannan shirin ba sai an gayyace ku"
+        }
+    },
+    "payments": {
+        "infoTitle": "Saita Bayanin Biyan Kuɗi",
+        "BuyAmountCredits": "Sayi kiredit {{amount}}",
+        "confirm": {
+            "title": "Yi Biya",
+            "message": "Shin kun yarda ku biya {{symbol}} {{amount}} ?",
+            "ok": "KO",
+            "cancel": "Soke"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Kiredit",
+            "description": "yana lura da ƙima da biyan kuɗi"
+        },
+        "Assets\/plan": {
+            "displayType": "Shirin Biyan Kuɗi",
+            "description": "shirin biyan kuɗi"
+        },
+        "Assets\/subscription": {
+            "displayType": "Biyan kuɗi",
+            "description": "biyan kuɗi"
+        },
+        "Assets\/product": {
+            "displayType": "Samfura",
+            "description": "samfurin da ake sayarwa"
+        },
+        "Assets\/service": {
+            "displayType": "Sabis",
+            "description": "sabis da ake bayarwa"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "An sami kredit {{amount}}"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Sayi {{amount}} kiredit"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Kyauta masu alaƙa {{amount}} Bonus&quot;."
+        },
+        "Assets\/credits\/spent": {
+            "content": "An kashe {{amount}} credits"
+        },
+        "Assets\/credits\/sent": {
+            "content": "An aika kiredit {{amount}} zuwa {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "An karɓi ƙididdiga {{amount}} daga {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Ba ku da isasshen kuɗi a cikin asusunku. Da fatan za a ziyarci <a href='<i translate='no'>mahaɗin 999 &gt;&gt;<\/a> mai zuwa don siyan ƙarin ƙididdiga."
+        }
+    },
+    "billing": {
+        "Title": "Biyan kuɗi na kadari",
+        "CreditsMinimum": "Mafi ƙarancin ƙididdiga",
+        "CreditsToAdd": "Kiredito don ƙarawa",
+        "Save": "Ajiye",
+        "ThisLink": "wannan mahada",
+        "errors": {
+            "CreditsMinimumNegative": "Mafi ƙarancin ƙididdiga ba zai iya zama mara kyau ba",
+            "CreditsToAddNegative": "Ƙididdigar da za a ƙara ba za su iya zama mara kyau ba"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Sabon Sabis",
+            "TitlePlaceholder": "Taken sabis",
+            "PricePlaceholder": "Saita farashi",
+            "LinkPlaceholder": "saita ƙarin hanyar haɗin bayanai",
+            "DescriptionPlaceholder": "Bayanin sabis",
+            "SaveService": "Ajiye Sabis",
+            "SelectRequiredParticipants": "Mahalarta masu alaƙa da ake buƙata",
+            "RequiredParticipantsDesc": "Da fatan za a zaɓi mahalarta masu alaƙa waɗanda ake buƙata don amfani da wannan sabis ɗin (misali dabbobin gida don &quot;nuna karnuka&quot;, ko yara don &quot;Bikin Yara&quot; da sauransu). Idan an biya sabis, mai amfani zai buƙaci biyan kuɗin kowane mahalarta masu alaƙa."
+        },
+        "EditServiceTemplate": {
+            "Title": "Gyara Sabis"
+        },
+        "ManageServiceTemplates": "Sarrafa Samfuran Sabis",
+        "ManageServices": "Sarrafa Ayyuka",
+        "Free": "Kyauta",
+        "OptionalContribution": "Gudunmawa na zaɓi",
+        "RequiredPayment": "Biyan da ake buƙata",
+        "AreYouSureDelete": "Shin kun tabbata kuna son share wannan sabis ɗin?",
+        "AmountServicesRelated": "Akwai wadata {{amount}} masu alaƙa da wannan sabis ɗin. Za a kuma cire su."
+    },
+    "transfer": {
+        "SelectRecipient": "Zaɓi mai karɓa",
+        "TransactionSuccess": "Nasarar ciniki",
+        "OrTypeWalletAddress": "KO rubuta adireshin walat ɗin mai karɓa",
+        "AppCredits": "Kiredit App"
+    },
+    "NFT": {
+        "Title": "Take",
+        "Name": "Suna",
+        "EnterName": "Shigar da suna",
+        "EnterAuthorWallet": "Shigar da walat ɗin marubuci",
+        "InformationAboutTitle": "Bayani na {{title}}",
+        "Description": "Bayani",
+        "DetailedInformationAboutNFT": "Cikakken bayani game da NFT",
+        "PresaleStarts": "Presale yana farawa Dec 23",
+        "OwnerUserNotFound": "Mai wannan NFT bashi da rijista a aikace-aikacen mu.",
+        "BuyNow": "Saya yanzu",
+        "Buy": "Saya",
+        "Add": "Ƙara",
+        "Remove": "Cire",
+        "NoNFTyet": "Babu NFTs tukuna",
+        "Conversation": "Tattaunawa",
+        "Create": "Ƙirƙiri",
+        "CurrentBid": "tayin yanzu",
+        "StartingIn": "Ana farawa",
+        "EndingIn": "Yana ƙarewa",
+        "CreateNFT": "Ƙirƙiri NFT",
+        "TitlePlaceholder": "Ba wa NFT taken ku",
+        "DescriptionPlaceholder": "Ba da bayanin NFT ɗin ku",
+        "CreateYourNFT": "Ƙirƙiri NFT ku",
+        "Royalties": "Sarauta",
+        "RoyaltyPlaceholder": "Na zaɓi. Adadin da aka biya ga mahalicci kafin canja wuri.",
+        "ExpirationDate": "Ranar Karewa",
+        "StartingDate": "Ranar farawa",
+        "BidsBelowThisAmount": "Ba za a yarda da tayin da ke ƙasa da wannan adadin ba",
+        "MinimumBid": "Mafi qarancin tayi",
+        "Author": "Marubuci",
+        "Price": "Farashin",
+        "Commission": "Hukumar",
+        "EnterCommission": "Shigar hukumar",
+        "Owner": "Mai shi",
+        "SelectCategory": "Zaɓi nau&#39;i",
+        "Day": "Rana",
+        "Days": "Kwanaki",
+        "Hour": "Sa&#39;a",
+        "Hours": "Awanni",
+        "Minute": "Minti",
+        "Minutes": "Mintuna",
+        "Second": "Na biyu",
+        "Seconds": "Dakika",
+        "SalesCreator": "na tallace-tallace zai je ga mahalicci",
+        "Details": "Cikakkun bayanai",
+        "Bids": "Bids",
+        "History": "Tarihi",
+        "LoremIpsum": "Lorem Ipsum rubutu ne kawai na bugu da masana&#39;antar rubutu.",
+        "PutOnSale": "Saka kan sayarwa",
+        "PutOffSale": "Janye daga siyarwa",
+        "Transfer": "Canja wurin",
+        "Actions": "Ayyuka",
+        "Claim": "Da&#39;awar",
+        "ClaimNFT": "Farashin NFT",
+        "Unlocking": "Ana buɗewa",
+        "Unlock": "Buɗe",
+        "Update": "Sabuntawa",
+        "UpdateToken": "Sabunta Token",
+        "UpdateNFT": "Sabunta NFT",
+        "CreateToken": "Ƙirƙiri Token",
+        "PlaceBid": "Wuri Bid",
+        "SoldOut": "An sayar",
+        "NotOnSale": "Ba Kan siyarwa ba",
+        "NftName": "Sunan mahaifi NFT",
+        "DescribeYourNFT": "Da fatan za a kwatanta NFT ɗin ku",
+        "NFTImage": "Hoton NFT",
+        "NFTVideo": "Bidiyo don NFT, idan akwai",
+        "GenerateDescription": "ko kuma ta atomatik",
+        "UploadMovie": "Loda fim din",
+        "MovieSource": "Tushen Fim",
+        "MovieURL": "URL na fim",
+        "UploadFile": "Loda fayil",
+        "PutOnMarketplace": "Saka kasuwa",
+        "InstantPurchase": "Shigar da farashi don bawa masu amfani damar siyan NFT ɗinku nan take",
+        "FixedPrice": "Kafaffen farashi",
+        "TimedAuction": "gwanjon lokaci",
+        "OpenForBids": "Bude don tayi",
+        "PriceOnePiece": "Shigar da farashin yanki ɗaya",
+        "EnterPrice": "Shigar da farashi",
+        "EnterMinimumBid": "Shigar da mafi ƙarancin ƙima",
+        "SelectChain": "Zaɓi sarkar",
+        "Currency": "Kudi",
+        "AreYouSureDeleteImage": "Shin kun tabbata kuna son cire hoto?",
+        "AreYouSureDeleteVideo": "Ka tabbata kana son cire bidiyo?",
+        "series": {
+            "Name": "Suna",
+            "Icon": "Ikon",
+            "Description": "Bayani",
+            "Author": "Marubuci",
+            "SelectSeries": "Zaɓi jerin",
+            "Value": "Daraja",
+            "AreYouSure": "Ka tabbata?",
+            "AuthorInvalid": "Adireshin marubuci ba daidai ba ne!",
+            "Address": "Adireshi",
+            "CoverImage": "Hoton murfin",
+            "UploadCoverImage": "Loda hoton murfin",
+            "CommissionAddressInvalid": "Adireshin hukumar ba shi da inganci",
+            "OnSale": "kan sayarwa",
+            "OffSale": "kashe sayarwa",
+            "CreateSeries": "Ƙirƙiri Jerin",
+            "UpdateSeries": "Sabunta Jerin",
+            "SeriesInfo": "Jerin Bayani",
+            "SelectAuthor": "Zaɓi marubuci",
+            "NewItem": "Sabbin jerin NFT",
+            "NamePlaceholder": "Shigar da jerin suna",
+            "DescPlaceholder": "Shigar da bayanin jeri",
+            "EndingIn": "Ƙarshe A"
+        },
+        "contract": {
+            "CreateContract": "Ƙirƙiri kwangila",
+            "SelectContract": "Zaɓi kwangila",
+            "CreateContractFor": "Ƙirƙiri kwangila don {{userName}}",
+            "ContractFor": "Farashin {{userName}}",
+            "UpdateContract": "Sabunta Kwangilar",
+            "TransferOwnership": "Canja wurin Mallaka",
+            "SetBaseURI": "Saita Tushen URI",
+            "SetSuffix": "Saita Suffix",
+            "CurrentOwner": "Mai shi na yanzu",
+            "CurrentBaseURL": "BaseURL na yanzu",
+            "ContractAddressAbsent": "Adireshin kwangila babu",
+            "FactoryAddressAbsent": "Adireshin masana&#39;anta ba ya nan",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Take ake bukata",
+            "SymbolRequired": "Alamar da ake buƙata",
+            "TypeContractName": "sunan kwangila",
+            "TypeContractSymbol": "alamar kwangila (max 10 Chars)"
+        },
+        "contests": {
+            "Title": "Gasa",
+            "NewContest": "Sabuwar Gasa"
+        },
+        "collections": {
+            "Title": "Tari",
+            "EnterTitle": "shigar da take",
+            "EnterDescription": "shigar da bayanin",
+            "NewCollection": "Sabon Tarin",
+            "Name": "Suna",
+            "Icon": "Ikon",
+            "Description": "Bayani",
+            "Author": "Marubuci",
+            "SelectCollection": "Zaɓi tarin",
+            "Value": "Daraja",
+            "AreYouSure": "Ka tabbata?",
+            "AuthorInvalid": "Adireshin marubuci ba daidai ba ne!",
+            "Address": "Adireshi",
+            "CoverImage": "Hoton murfin",
+            "UploadIcon": "Ikon loda",
+            "CommissionAddressInvalid": "Adireshin hukumar ba shi da inganci",
+            "OnSale": "kan sayarwa",
+            "OffSale": "kashe sayarwa",
+            "CreateCollection": "Ƙirƙiri Tarin",
+            "UpdateCollection": "Sabunta Tarin",
+            "CollectionInfo": "Bayanin Tarin",
+            "SelectAuthor": "Zaɓi marubuci",
+            "NewItem": "Sabon Tarin NFT",
+            "NamePlaceholder": "Shigar da sunan tarin",
+            "DescPlaceholder": "Shigar da bayanin tarin",
+            "EndingIn": "Ƙarshe A",
+            "SubmitSeries": "Gabatar da Series"
+        },
+        "import": {
+            "importNFT": "Ana shigo da NFT&#39;s",
+            "importAttributes": "Shigo da halayen NFT",
+            "fileNotFound": "Yi haƙuri, ba a sami fayil ɗin CSV ba.",
+            "fileEmpty": "Yi haƙuri, fayil ɗin CSV fanko ne.",
+            "userIdNotFound": "akwai mai amfani amma id fanko",
+            "errorLine": "layi {{1}}",
+            "fieldNotFound": "Ba a samo filin da ake buƙata &quot; {{1}} &quot; ba",
+            "displayTypeEmpty": "Nau&#39;in nuni don &quot; {{1}} &quot; ba a samo shi ba",
+            "taskStreamInvalid": "rafin aiki mara inganci",
+            "instructionsEmpty": "umarnin rafin aiki fanko",
+            "complete": "Cikakkun",
+            "activateUsers": "aika saƙon kunnawa ga masu amfani?",
+            "importProgress": "Ci gaba",
+            "importOptions": "Zabuka",
+            "sampleCSV": "Zazzage Misalin CSV",
+            "fileLabel": "Loda Marubutan Labarai:",
+            "errorsTitle": "Kurakurai sun faru"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Tace ta tarin NFT",
+                "ShowNFTCollection": "Nuna tarin NFT a...",
+                "AllCollections": "Duk Tarin"
+            },
+            "ByUser": {
+                "AllAuthors": "Duk Marubuta",
+                "AllUsers": "Kowa",
+                "FilterByAuthors": "Tace Marubuta"
+            }
+        },
+        "Back": "Komawa Tarin",
+        "attributes": {
+            "Title": "Sarrafa Halaye",
+            "Attributes": "Halaye",
+            "DisplayTitle": "Nau&#39;in Nuni",
+            "AddDisplayType": "Ƙara sabon nau&#39;in nuni",
+            "NewDisplay": "Sabon Nuni",
+            "TraitTitle": "Nau&#39;in Hali",
+            "AddTraitTitle": "Ƙara sabon nau&#39;in hali",
+            "NewTrait": "Sabon Hali Nau&#39;in",
+            "ValueTitle": "Daraja",
+            "AddValueTitle": "Ƙara sabon ƙima",
+            "NewValue": "Sabon Daraja",
+            "NewAttribute": "Sabuwar Sifa",
+            "UpdateAttributes": "Sabunta Halaye",
+            "SaveAttributes": "Ajiye Halaye"
+        },
+        "profile": {
+            "LogOut": "Fita",
+            "Title": "Bayanan Bayani na {{userName}}",
+            "Description": "Bayanin mai amfani",
+            "aboutPlaceholder": "Gyara Bio",
+            "UploadCoverPhoto": "Loda Hoton Murfin",
+            "SureLogOut": "Ka tabbata kana son fita?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "jerin id",
+                        "owner": "Mai shi",
+                        "currency": "Kudi",
+                        "price": "Farashin",
+                        "beneficiary": "Mai amfana",
+                        "autoindex": "Autoindex",
+                        "duration": "Tsawon lokaci",
+                        "rateInterval": "Tazarar ƙima",
+                        "rateAmount": "Yawan adadin"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "za a yi la&#39;akari a cikin wannan jerin",
+                        "owner": "mai shi misali, in ba haka ba za a aika",
+                        "currency": "Kuɗi don alamun siye, idan sifili - don tsabar kuɗi na asali",
+                        "price": "Farashin",
+                        "beneficiary": "Mai cin gajiyar siyar da alamun, in ba haka ba zai zama mai aikawa",
+                        "autoindex": "Autoindex",
+                        "duration": "Kulle bayan fara aiki. Sifili yana nufin samun shi nan da nan.",
+                        "rateInterval": "tazarar guga don siya ta musamman",
+                        "rateAmount": "adadin guga don siya na musamman"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(na zaɓi)",
+                    "number": "lamba",
+                    "address": "adireshin",
+                    "fraction": "juzu&#39;i",
+                    "integer": "lamba",
+                    "seconds": "seconds",
+                    "uint256": "ciki256",
+                    "uint192": "zuwa 192",
+                    "uint64": "wani 64",
+                    "uint32": "ciki32",
+                    "uint16": "ciki 16"
+                },
+                "produce": "Kera",
+                "viewInstancesList": "Sabunta Lissafi"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Jerin ID",
+                        "account": "Asusu",
+                        "amount": "Adadin"
+                    },
+                    "small": {
+                        "seriesId": "sabuwar alama za ta kasance cikin jeri tare da irin wannan ID",
+                        "account": "mai sabon halitta NFT. idan ba a saita ba - zai yi amfani da walat na yanzu",
+                        "amount": "Adadin NFT zuwa Mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(na zaɓi)",
+                    "seriesId": "id",
+                    "account": "asusu",
+                    "amount": "adadin",
+                    "integer": "lamba"
+                },
+                "btn": {
+                    "Purchase": "Sayi",
+                    "SpecialPurchase": "Sayi na musamman"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Adireshi"
+                    },
+                    "small": {
+                        "account": "Adireshi"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Adireshi mara inganci"
+                },
+                "placeholders": {
+                    "account": "Adireshi"
+                },
+                "addToWhitelist": "Ƙara Zuwa Lissafin Maɗaukaki",
+                "removeFromWhitelist": "Cire Daga Lissafin Maɗaukaki"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Majiɓinci",
+                    "recipient": "Mai karɓa"
+                },
+                "small": {
+                    "tokenId": "token id abin da ake buƙatar kulle ko buɗewa",
+                    "custodian": "adireshin da zai iya buɗewa",
+                    "recipient": "adireshin da zai karbi alamun"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Alamar Id mara inganci",
+                "invalidCustodian": "Majiɓinci mara inganci",
+                "invalidRecipient": "Mai karɓa mara inganci"
+            },
+            "placeholders": {
+                "optional": "(na zaɓi)",
+                "tokenId": "id",
+                "custodian": "adireshin"
+            },
+            "Lock": "Kulle",
+            "Unlock": "Buɗe",
+            "Locked": "Kulle",
+            "CustodianAddress": "Adireshin mai kulawa",
+            "TokenWasClaimed": "Alamar &quot; {{title}} &quot; an yi iƙirarin",
+            "TokenWasLocked": "Alamar &quot; {{title}} &quot; an kulle",
+            "TokenWasUnlocked": "Alamar &quot; {{title}} &quot; an buɗe"
+        }
+    },
+    "fundrise": {
+        "placeholder": "rubuta wani abu game da wannan gudummawar..."
+    },
+    "currencies": {
+        "choose": "Zaɓi kuɗi"
+    }
+}

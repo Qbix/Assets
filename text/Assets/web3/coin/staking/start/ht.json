@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Dire",
+                        "amount": "Kantite lajan"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Dire",
+                        "amount": "Kantite lajan"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Dire",
+                    "amount": "kantite lajan"
+                },
+                "btns": {
+                    "stake": "Pye"
+                },
+                "stake": "Pye",
+                "loading": "Chaje"
+            }
+        }
+    }
+}

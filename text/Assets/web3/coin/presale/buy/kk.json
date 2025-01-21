@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Қанша инвестициялау керек?"
+                    },
+                    "placeholders": {
+                        "amount": "Саны {{nativeCoin}}",
+                        "max": "Максимум: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Сатып алу",
+                    "execute": "Орындау"
+                }
+            }
+        }
+    }
+}

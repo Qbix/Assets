@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Selling Token",
+                        "timestamps": "Times",
+                        "prices": "Cijene",
+                        "endTime": "Vrijeme završetka",
+                        "thresholds": "Pragovi",
+                        "bonuses": "Bonusi"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Vlasnik se ne može povući",
+                            "option1": "Vlasnik može povući tokene tek nakon što prođe endTime",
+                            "option2": "Vlasnik može povući tokene bilo kada"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Adresa zajednice",
+                    "methodkeccack": "Keccak256 hash funkcija",
+                    "roleId": "ID uloge",
+                    "sellingToken": "Adresa za prodaju tokena",
+                    "prices": "ETH, cijena",
+                    "thresholds": "# tokena",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Nema sredstava"
+                },
+                "btns": {
+                    "createFund": "Kreirajte fond",
+                    "createFundInForm": "Kreiraj"
+                },
+                "fundAddress": "Adresa fonda",
+                "createFund": "Kreirajte fond",
+                "fundInfo": "Info",
+                "produce": "Proizvodi",
+                "loading": "Loading",
+                "viewInstancesList": "Osvježi listu"
+            }
+        }
+    }
+}

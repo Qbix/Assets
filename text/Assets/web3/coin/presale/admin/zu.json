@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Ukuthengisa Ithokheni",
+                        "timestamps": "Izikhathi",
+                        "prices": "Amanani",
+                        "endTime": "Isikhathi Sokuphela",
+                        "thresholds": "Amathreshold",
+                        "bonuses": "Amabhonasi"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Umnikazi akakwazi ukuhoxa",
+                            "option1": "Umnikazi angakhipha amathokheni kuphela ngemva kokudlula kwe-endTime",
+                            "option2": "Umnikazi angakhipha amathokheni noma nini"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Ikheli lomphakathi",
+                    "methodkeccack": "Umsebenzi we-Keccak256 hash",
+                    "roleId": "I-ID yendima",
+                    "sellingToken": "Ikheli lokuthengisa Ithokheni",
+                    "prices": "ETH, Intengo",
+                    "thresholds": "# wamathokheni",
+                    "bonuses": "Ibhonasi %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Azikho izimali"
+                },
+                "btns": {
+                    "createFund": "Dala Isikhwama",
+                    "createFundInForm": "Dala"
+                },
+                "fundAddress": "Ikheli lesikhwama",
+                "createFund": "Dala Isikhwama",
+                "fundInfo": "Ulwazi",
+                "produce": "Khiqiza",
+                "loading": "Iyalayisha",
+                "viewInstancesList": "Vuselela Uhlu"
+            }
+        }
+    }
+}

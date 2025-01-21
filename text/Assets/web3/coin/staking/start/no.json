@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Varighet",
+                        "amount": "Beløp"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Varighet",
+                        "amount": "Beløp"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Varighet",
+                    "amount": "beløp"
+                },
+                "btns": {
+                    "stake": "innsats"
+                },
+                "stake": "innsats",
+                "loading": "Laster"
+            }
+        }
+    }
+}

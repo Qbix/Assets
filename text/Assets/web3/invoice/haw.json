@@ -1,0 +1,27 @@
+{
+    "title": "Uku",
+    "steps": {
+        "sending_native_coins": "Ka hoʻouna ʻana i nā kālā maoli",
+        "sending_tokens": "Hoʻouna i nā hōʻailona",
+        "swap": "Hoʻololi",
+        "approve": "Apono",
+        "one_tx": "Pono ʻoe e hoʻouna i hoʻokahi kālepa",
+        "two_tx": "Pono ʻoe e hoʻouna i ʻelua mau hana"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Nā kālā e uku"
+            }
+        },
+        "btns": {
+            "pay": "Uku"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Pono e uku i nā hōʻailona &quot; {{amountOut}} &quot;."
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "ʻAʻole kākoʻo ʻia kēlā kaulahao me ka id &quot; {{chainId}} &quot;."
+    }
+}

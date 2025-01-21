@@ -1,0 +1,27 @@
+{
+    "title": "Bayad",
+    "steps": {
+        "sending_native_coins": "Nagpadala ug lumad nga mga sensilyo",
+        "sending_tokens": "Pagpadala og mga token",
+        "swap": "Pagbayloay",
+        "approve": "Aprobahan",
+        "one_tx": "Kinahanglan ka magpadala usa ka transaksyon",
+        "two_tx": "Kinahanglan ka magpadala duha ka transaksyon"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Mga pondo nga ibayad"
+            }
+        },
+        "btns": {
+            "pay": "Bayad"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Kinahanglan nga magbayad &quot; {{amountOut}} &quot; nga mga token"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Ang ingon nga kadena nga adunay id &quot; {{chainId}} &quot; wala gisuportahan"
+    }
+}

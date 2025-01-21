@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Yakawanda sei yekuisa mari?"
+                    },
+                    "placeholders": {
+                        "amount": "Nhamba {{nativeCoin}}",
+                        "max": "Kuwanda: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Buy",
+                    "execute": "Execute"
+                }
+            }
+        }
+    }
+}

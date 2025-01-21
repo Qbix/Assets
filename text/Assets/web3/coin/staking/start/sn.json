@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duration",
+                        "amount": "Mari"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duration",
+                        "amount": "Mari"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Duration",
+                    "amount": "mari"
+                },
+                "btns": {
+                    "stake": "Stake"
+                },
+                "stake": "Stake",
+                "loading": "Loading"
+            }
+        }
+    }
+}

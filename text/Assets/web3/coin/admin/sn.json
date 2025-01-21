@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "chiratidzoErc20",
+                    "duration": "Duration",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "zvipo",
+                    "rewardsRateFraction": "mibayiroRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                },
+                "small": {
+                    "tokenErc20": "chiratidzoErc20",
+                    "duration": "Duration mumazuva",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "zvipo",
+                    "rewardsRateFraction": "mibayiroRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                }
+            },
+            "placeholders": {
+                "optional": "(sarudzo)",
+                "tuple": "tuple[]",
+                "number": "nhamba",
+                "address": "kero",
+                "fraction": "chikamu",
+                "integer": "integer",
+                "seconds": "seconds",
+                "days": "mazuva",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Hakuna madziva"
+            },
+            "btns": {
+                "createPool": "Gadzira Dziva",
+                "createPoolInForm": "Create"
+            },
+            "createPool": "Gadzira Dziva",
+            "produce": "Produce",
+            "loading": "Loading",
+            "viewInstancesList": "Refresh List"
+        }
+    }
+}

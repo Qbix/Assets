@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Սխալ",
+        "WalletAbsent": "Դրամապանակը միացված չէ:",
+        "Rendering": "<span class='url'>{{1}}<\/span> արտապատկերելիս սխալներ են եղել",
+        "PriceRequired": "Գինը պարտադիր է:",
+        "NameRequired": "Անունը պարտադիր է։",
+        "PriceInvalid": "Գինը անվավեր է:",
+        "AmountInvalid": "Գումարն անվավեր է:",
+        "TransactionFailed": "Գործարքը ձախողվել է",
+        "ChainNotSupported": "Ընտրված շղթան չի աջակցվում: Աջակցվող շղթա՝ {{supportedChain}}",
+        "NeedMetaMaskConnected": "Հավելվածի հետ աշխատելու համար միացված է MetaMask",
+        "UserNotLoggedInMetaMask": "Օգտագործողը մուտք չի գործել MetaMask",
+        "CurrencyNotFound": "Արժույթը չի գտնվել",
+        "WrongChain": "Այս NFT-ն ստեղծված է « {{chain}} »-ի ներքո: Խնդրում ենք օգտագործել այս շղթան:",
+        "NoRecipientSelected": "Ոչ մի ստացող չի ընտրվել",
+        "CantManageFrozenSeries": "Դուք չեք կարող կառավարել սառեցված սերիաները",
+        "SubscriptionStreamNotPaid": "Դուք չեք վճարել այս բովանդակությունը դիտելու համար: Խնդրում ենք սեղմել {{subscriptionUrl}} և բաժանորդագրվել համապատասխան պլանին:"
+    },
+    "admin": {
+        "Title": "Ակտիվների վարչական",
+        "SubscriptionTitle": "Բաժանորդագրման պլաններ"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Հպեք՝ վճարելու համար"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} վճարը մշակվել է {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Շնորհակալություն {{call 'publisher.displayName'}} ին ձեր վճարման համար",
+        "SubscribedTo": "{{call 'user.displayName'}} բաժանորդագրվել է {{plan.title}} ին",
+        "YouSubscribedTo": "Դուք բաժանորդագրված եք {{plan.title}} ին",
+        "Assets\/credits\/alert": "Դուք զգուշացում ունեք՝ կապված ձեր հաշվի հետ"
+    },
+    "charge": {
+        "Subject": "Դուք ստացել եք {{call 'publisher.displayName'}} ից {{displayAmount}} -ի վճարում « {{description}} »-ի համար",
+        "HasBeenCharged": "Հեյ, սա պարզապես ձեզ տեղեկացնելու համար է, որ {{1}} {{4}} ի համար գանձվել է {{2}} {{3}} համար:"
+    },
+    "charged": {
+        "Subject": "Շնորհակալություն « {{description}} »-ի համար վճարելու համար",
+        "HavePaid": "Hey {{1}} , սա պարզապես արագ հաստատում է, որ դուք հաջողությամբ վճարել եք {{2}} ից {{3}} {{4}} համար:"
+    },
+    "connectedAccount": {
+        "Title": "Միացնել հաշիվը",
+        "Success": "Հաջողություն",
+        "YourAccountCreated": "Ձեր հաշիվը հաջողությամբ ստեղծվել է:",
+        "YourAccountAlreadyCreated": "Ձեր հաշիվն արդեն ստեղծվել է և պատրաստ է օգտագործման"
+    },
+    "payment": {
+        "AboutOrder": "Տեղեկություններ պատվերի մասին",
+        "PaymentMethod": "Վճարման եղանակ",
+        "ContactInfo": "Կոնտակտային տվյալներ",
+        "Pay": "Վճարել",
+        "PaymentSucceeded": "Վճարումը հաջողությամբ մշակվել է",
+        "PaymentProcessing.": "Ձեր վճարումը մշակվում է",
+        "FailTryAgain": "Ձեր վճարումը չի հաջողվել: Խնդրում ենք կրկին փորձել:",
+        "SomethingWrong": "Սխալ առաջացավ",
+        "PaymentStatus": "Վճարման կարգավիճակը",
+        "PayTo": "Վճարեք {{displayName}}",
+        "ChooseCurrency": "Ընտրեք արժույթ",
+        "YouCanSendUpTo": "Կարող եք ուղարկել մինչև {{amount}} {{symbol}}",
+        "Send": "Ուղարկել",
+        "EnterAmount": "մուտքագրեք գումարը"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Հրավերն ընդունվել է {{invitedUserName}} ի կողմից",
+        "InvitedUserFilledStream": "{{invitedUserName}} լրացված {{FilledStreamTitle}}",
+        "ForFillingStream": "{{FilledStreamTitle}} լրացնելու համար",
+        "YouHaveCreditsToStart": "Սկսելու համար ունեք {{amount}} վարկ",
+        "PaymentFor": "Վճարում « {{1}} »-ի համար",
+        "PaymentTo": "Վճարում {{1}}",
+        "PaymentToUser": "Փոխանցում {{toUserName}}",
+        "CreatePrivateChat": "{{toUserName}} հետ անձնական զրույցի համար",
+        "CreatePaidStream": "{{toStreamName}} ստեղծելու համար",
+        "JoinedPaidStream": "ամրագրման համար &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "« {{communityId}} » համայնք ստեղծելու համար",
+        "LeftPaidStream": "որպես ամրագրման փոխհատուցում &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;-ում",
+        "BoughtCredits": "Գնել է {{amount}} վարկ",
+        "BonusCredits": "Բոնուս {{amount}} վարկ",
+        "BuyAmountCredits": "Գնեք {{amount}} վարկ",
+        "WatchClip": "{{fromStreamTitle}} դիտելու համար",
+        "MissingCredits": "Բացակայող վարկեր",
+        "YouMissingCredits": "Շարունակելու համար ձեզ անհրաժեշտ է լրացուցիչ {{amount}} վարկ:",
+        "BuyCredits": "Գնեք վարկեր",
+        "BuyBonus": "Միանգամից {{amount}} վարկ գնելը կբերի {{bonus}} վարկի բոնուս:",
+        "Buy": "Գնել",
+        "PurchaseCredits": "Գնեք վարկեր",
+        "Credits": "Վարկեր",
+        "ErrorInvalidAmount": "Գումարն անվավեր է",
+        "ErrorInvalidCurrency": "Ցավոք, մենք դեռ չենք աջակցում {{currency}} արժույթին",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} վարկ",
+            "BonusCredits": "{{amount}} վարկ"
+        }
+    },
+    "history": {
+        "Date": "Ամսաթիվ",
+        "Amount": "Գումարը",
+        "Description": "Նկարագրություն",
+        "Client": "Հաճախորդ",
+        "User": "Օգտագործող",
+        "To": "դեպի",
+        "From": "-ից",
+        "SeeHistory": "Տես {{1}} ի վճարումների պատմությունը",
+        "HistoryEmpty": "Գործարքներ դեռ չկան",
+        "PaymentFor": "Ուղարկվել է {{amount}} վարկ",
+        "PaymentTo": "Ուղարկվել է {{amount}} վարկ",
+        "PaymentToUser": "Ուղարկվել է {{amount}} վարկ",
+        "CreatePaidStream": "Ծախսել է {{amount}} վարկ",
+        "WatchClip": {
+            "+": "Վաստակել է {{amount}} վարկ",
+            "-": "Ծախսել է {{amount}} վարկ"
+        },
+        "JoinedPaidStream": {
+            "+": "Վաստակել է {{amount}} վարկ",
+            "-": "Ծախսել է {{amount}} վարկ"
+        },
+        "LeftPaidStream": {
+            "+": "Ստացել է {{amount}} վարկ",
+            "-": "Ուղարկվել է {{amount}} վարկ"
+        },
+        "CreatedCommunity": "Ծախսել է {{amount}} վարկ",
+        "BoughtCredits": "Գնել է {{amount}} վարկ",
+        "BonusCredits": "Ստացա բոնուս {{amount}} վարկ",
+        "InviteAcceptedBy": "Վաստակել է {{amount}} վարկ",
+        "Streams_user_firstname": "Վաստակել է {{amount}} վարկ",
+        "Streams_user_lastname": "Վաստակել է {{amount}} վարկ",
+        "Streams_user_icon": "Վաստակել է {{amount}} վարկ",
+        "Places_user_location": "Վաստակել է {{amount}} վարկ",
+        "Streams_greeting": "Վաստակել է {{amount}} վարկ",
+        "YouHaveCreditsToStart": "Վաստակել է {{amount}} վարկ",
+        "InvitedUserFilledStream": "Վաստակել է {{amount}} վարկ",
+        "ForFillingStream": "Վաստակել է {{amount}} վարկ",
+        "CreatePrivateChat": "Ծախսել է {{amount}} վարկ"
+    },
+    "subscriptions": {
+        "infoTitle": "Տրամադրել վճարման տեղեկատվությունը",
+        "confirm": {
+            "title": "Սկսեք բաժանորդագրությունը",
+            "message": "Սկսե՞լ « {{title}} »-ի պարբերական բաժանորդագրություն:",
+            "ok": "Լավ",
+            "cancel": "Չեղարկել"
+        },
+        "CreditOrDebitCard": "Վարկային կամ դեբետային քարտ",
+        "SubscribePayment": "Բաժանորդագրվել վճարում",
+        "ImmediatePayment": "Անմիջական վճարում",
+        "ProcessingPayment": "Վճարման մշակում",
+        "SubscriptionAlreadyPaid": "Այս բաժանորդագրությունն արդեն վճարված է",
+        "SubscriptionNotActive": "Բաժանորդագրությունն այս պահին անգործուն է",
+        "Subscribed": "Բաժանորդագրված է",
+        "Unsubscribed": "Չեղարկել բաժանորդագրությունը",
+        "Unsubscribe": "Չեղարկել բաժանորդագրությունը",
+        "Subscribe": "Բաժանորդագրվել",
+        "Started": "Սկսվել է",
+        "EndsIn": "Ավարտվում է",
+        "NextPay": "Հաջորդ վճարումը",
+        "Period": "Ժամանակաշրջան",
+        "Price": "Գին",
+        "AreYouSureUnsubscribe": "Իսկապե՞ս ուզում եք չեղարկել այս պլանի բաժանորդագրությունը:",
+        "YouUnsubscribedFromPlan": "Դուք դուրս եք եկել « {{planTitle}} » պլանից: Հաջորդ անգամ ձեզանից գումար չի գանձվի, բայց ձեր բաժանորդագրությունը կշարունակվի մինչև {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "պլանի վերնագիր",
+            "PricePlaceholder": "գինը",
+            "SubscriptionTitle": "Բաժանորդագրման պլաններ",
+            "DescriptionPlaceholder": "բաժանորդագրության պլանի նկարագրությունը",
+            "AreYouSureDeletePlan": "Իսկապե՞ս ուզում եք ջնջել այս պլանը:",
+            "Duration": "Տևողությունը",
+            "Discount": "Զեղչ",
+            "SavePlan": "Պահպանել",
+            "Interrupt": "Ընդհատել",
+            "Continue": "Շարունակեք",
+            "NewPlan": "Նոր պլան",
+            "SelectDisplayType": "Ընտրեք {{displayType}}",
+            "EndDate": "ավարտի ամսաթիվը",
+            "Available": "Հասանելի է",
+            "Hidden": "Թաքնված",
+            "InviteOnly": "Միայն հրավերով",
+            "CantSubscribeUnlessInvited": "Դուք չեք կարող բաժանորդագրվել այս պլանին, քանի դեռ ձեզ չեն հրավիրել"
+        }
+    },
+    "payments": {
+        "infoTitle": "Սահմանեք վճարման տվյալները",
+        "BuyAmountCredits": "Գնեք {{amount}} վարկ",
+        "confirm": {
+            "title": "Կատարել վճարում",
+            "message": "Համաձա՞յն եք վճարել {{symbol}} {{amount}} :",
+            "ok": "Լավ",
+            "cancel": "Չեղարկել"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Վարկեր",
+            "description": "հետևում է վարկերի և վճարումների"
+        },
+        "Assets\/plan": {
+            "displayType": "Բաժանորդագրման պլան",
+            "description": "բաժանորդագրության պլան"
+        },
+        "Assets\/subscription": {
+            "displayType": "Բաժանորդագրություն",
+            "description": "բաժանորդագրություն"
+        },
+        "Assets\/product": {
+            "displayType": "Արտադրանք",
+            "description": "վաճառվող ապրանքը"
+        },
+        "Assets\/service": {
+            "displayType": "Ծառայություն",
+            "description": "առաջարկվող ծառայություն"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Վաստակել է {{amount}} վարկ"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Գնել է {{amount}} վարկ"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Բոնուս {{amount}} վարկ"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Ծախսել է {{amount}} վարկ"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Ուղարկվել է {{amount}} վարկ {{toUserName}} ին"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} ից ստացել է {{amount}} վարկ"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Ձեր հաշվում անբավարար վարկեր ունեք: Խնդրում ենք այցելել հետևյալ <a href='<i translate='no'>999 &#39;&gt;հղումը<\/a> ` ավելի շատ վարկեր գնելու համար:"
+        }
+    },
+    "billing": {
+        "Title": "Ակտիվների հաշվարկ",
+        "CreditsMinimum": "Նվազագույն վարկեր",
+        "CreditsToAdd": "Վարկեր ավելացնելու համար",
+        "Save": "Պահպանել",
+        "ThisLink": "այս հղումը",
+        "errors": {
+            "CreditsMinimumNegative": "Նվազագույն միավորները չեն կարող բացասական լինել",
+            "CreditsToAddNegative": "Ավելացվող միավորները չեն կարող բացասական լինել"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Նոր ծառայություն",
+            "TitlePlaceholder": "Ծառայության անվանումը",
+            "PricePlaceholder": "Սահմանել գինը",
+            "LinkPlaceholder": "սահմանել լրացուցիչ տեղեկատվության հղում",
+            "DescriptionPlaceholder": "Ծառայության նկարագրությունը",
+            "SaveService": "Պահպանել ծառայությունը",
+            "SelectRequiredParticipants": "Պահանջվում են հարակից մասնակիցներ",
+            "RequiredParticipantsDesc": "Խնդրում ենք ընտրել հարակից մասնակիցներին, որոնցից պահանջվում է օգտվել այս ծառայությունից (օրինակ՝ ընտանի կենդանիներ «Շների շոուի» համար կամ երեխաներ՝ «Մանկական տոն» և այլն): Եթե ծառայությունը վճարովի է, օգտվողը պետք է վճարի նաև յուրաքանչյուր առնչվող մասնակիցների համար:"
+        },
+        "EditServiceTemplate": {
+            "Title": "Խմբագրել ծառայություն"
+        },
+        "ManageServiceTemplates": "Կառավարեք ծառայության ձևանմուշները",
+        "ManageServices": "Կառավարեք ծառայությունները",
+        "Free": "Անվճար",
+        "OptionalContribution": "Ընտրովի ներդրում",
+        "RequiredPayment": "Պահանջվող վճարում",
+        "AreYouSureDelete": "Իսկապե՞ս ուզում եք ջնջել այս ծառայությունը:",
+        "AmountServicesRelated": "Այս ծառայության հետ կապված {{amount}} հասանելիություն կա: Դրանք նույնպես կհեռացվեն։"
+    },
+    "transfer": {
+        "SelectRecipient": "Ընտրեք ստացողին",
+        "TransactionSuccess": "Գործարքի հաջողություն",
+        "OrTypeWalletAddress": "ԿԱՄ մուտքագրեք ստացողի դրամապանակի հասցեն",
+        "AppCredits": "Հավելվածի վարկեր"
+    },
+    "NFT": {
+        "Title": "Վերնագիր",
+        "Name": "Անուն",
+        "EnterName": "Մուտքագրեք անունը",
+        "EnterAuthorWallet": "Մուտքագրեք հեղինակի դրամապանակը",
+        "InformationAboutTitle": "Տեղեկություն {{title}} NFT-ի մասին",
+        "Description": "Նկարագրություն",
+        "DetailedInformationAboutNFT": "Մանրամասն տեղեկություններ NFT-ի մասին",
+        "PresaleStarts": "Նախնական վաճառքը կմեկնարկի դեկտեմբերի 23-ից",
+        "OwnerUserNotFound": "Այս NFT-ի սեփականատերը գրանցված չէ մեր դիմումում:",
+        "BuyNow": "Գնել հիմա",
+        "Buy": "Գնել",
+        "Add": "Ավելացնել",
+        "Remove": "Հեռացնել",
+        "NoNFTyet": "NFT-ներ դեռ չկան",
+        "Conversation": "Զրույց",
+        "Create": "Ստեղծել",
+        "CurrentBid": "Ընթացիկ հայտ",
+        "StartingIn": "Սկսած ներս",
+        "EndingIn": "Ավարտվում է",
+        "CreateNFT": "Ստեղծեք NFT",
+        "TitlePlaceholder": "Ձեր NFT-ին վերնագիր տվեք",
+        "DescriptionPlaceholder": "Տվեք ձեր NFT-ի նկարագրությունը",
+        "CreateYourNFT": "Ստեղծեք ձեր NFT-ը",
+        "Royalties": "Ռոյալթիներ",
+        "RoyaltyPlaceholder": "Ընտրովի: Փոխանցումից առաջ հեղինակին վճարված գումարը:",
+        "ExpirationDate": "Սպառման ամսաթիվ",
+        "StartingDate": "Մեկնարկի ամսաթիվը",
+        "BidsBelowThisAmount": "Այս գումարից ցածր հայտերը չեն թույլատրվի",
+        "MinimumBid": "Նվազագույն հայտ",
+        "Author": "Հեղինակ",
+        "Price": "Գին",
+        "Commission": "հանձնաժողով",
+        "EnterCommission": "Մուտքագրեք հանձնաժողով",
+        "Owner": "Սեփականատեր",
+        "SelectCategory": "Ընտրեք կատեգորիա",
+        "Day": "Օր",
+        "Days": "Օրեր",
+        "Hour": "Ժամ",
+        "Hours": "Ժամեր",
+        "Minute": "Րոպե",
+        "Minutes": "Րոպեներ",
+        "Second": "Երկրորդ",
+        "Seconds": "Վայրկյաններ",
+        "SalesCreator": "վաճառքի ծավալը կտրամադրվի ստեղծողին",
+        "Details": "Մանրամասներ",
+        "Bids": "Հայտեր",
+        "History": "Պատմություն",
+        "LoremIpsum": "Lorem Ipsum-ը տպագրության և տպագրության ոլորտի ուղղակի կեղծ տեքստ է:",
+        "PutOnSale": "վաճառքի հանել",
+        "PutOffSale": "Վաճառքից հանել",
+        "Transfer": "Փոխանցում",
+        "Actions": "Գործողություններ",
+        "Claim": "Հայց",
+        "ClaimNFT": "Պահանջել NFT",
+        "Unlocking": "Ապակողպում",
+        "Unlock": "Ապակողպել",
+        "Update": "Թարմացնել",
+        "UpdateToken": "Թարմացնել նշանը",
+        "UpdateNFT": "Թարմացրեք NFT-ը",
+        "CreateToken": "Ստեղծեք նշան",
+        "PlaceBid": "Տեղի հայտ",
+        "SoldOut": "Վաճառվել է",
+        "NotOnSale": "Վաճառքում չկա",
+        "NftName": "NFT անվանումը",
+        "DescribeYourNFT": "Խնդրում ենք նկարագրել ձեր NFT-ն",
+        "NFTImage": "Պատկեր NFT-ի համար",
+        "NFTVideo": "Տեսանյութ NFT-ի համար, եթե այդպիսիք կան",
+        "GenerateDescription": "կամ ավտոմատ գեներացնել",
+        "UploadMovie": "Վերբեռնել ֆիլմը",
+        "MovieSource": "Ֆիլմի աղբյուրը",
+        "MovieURL": "Ֆիլմի URL",
+        "UploadFile": "Վերբեռնեք ֆայլ",
+        "PutOnMarketplace": "Ներդրեք շուկայում",
+        "InstantPurchase": "Մուտքագրեք գինը՝ օգտատերերին թույլ տալու ակնթարթորեն գնել ձեր NFT-ը",
+        "FixedPrice": "Ֆիքսված գին",
+        "TimedAuction": "Ժամկետային աճուրդ",
+        "OpenForBids": "Բաց հայտերի համար",
+        "PriceOnePiece": "Մուտքագրեք մեկ հատի արժեքը",
+        "EnterPrice": "Մուտքագրեք գինը",
+        "EnterMinimumBid": "Մուտքագրեք նվազագույն հայտ",
+        "SelectChain": "Ընտրեք շղթա",
+        "Currency": "Արժույթ",
+        "AreYouSureDeleteImage": "Իսկապե՞ս ուզում եք հեռացնել պատկերը:",
+        "AreYouSureDeleteVideo": "Իսկապե՞ս ուզում եք հեռացնել տեսանյութը:",
+        "series": {
+            "Name": "Անուն",
+            "Icon": "Սրբապատկեր",
+            "Description": "Նկարագրություն",
+            "Author": "Հեղինակ",
+            "SelectSeries": "Ընտրեք շարքը",
+            "Value": "Արժեք",
+            "AreYouSure": "Վստա՞հ ես։",
+            "AuthorInvalid": "Հեղինակի հասցեն անվավեր է:",
+            "Address": "Հասցե",
+            "CoverImage": "Շապիկի պատկեր",
+            "UploadCoverImage": "Վերբեռնեք շապիկի պատկերը",
+            "CommissionAddressInvalid": "Հանձնաժողովի հասցեն անվավեր է",
+            "OnSale": "վաճառքում",
+            "OffSale": "վաճառքից դուրս",
+            "CreateSeries": "Ստեղծել շարք",
+            "UpdateSeries": "Թարմացնել շարքը",
+            "SeriesInfo": "Սերիա Տեղեկություններ",
+            "SelectAuthor": "Ընտրեք հեղինակ",
+            "NewItem": "Նոր NFT շարք",
+            "NamePlaceholder": "Մուտքագրեք սերիայի անունը",
+            "DescPlaceholder": "Մուտքագրեք սերիայի նկարագրությունը",
+            "EndingIn": "Ավարտվում է"
+        },
+        "contract": {
+            "CreateContract": "Պայմանագիր ստեղծել",
+            "SelectContract": "Ընտրեք պայմանագիր",
+            "CreateContractFor": "Կազմել պայմանագիր {{userName}} համար",
+            "ContractFor": "Պայմանագիր {{userName}} թ",
+            "UpdateContract": "Պայմանագրի թարմացում",
+            "TransferOwnership": "Փոխանցել սեփականության իրավունքը",
+            "SetBaseURI": "Սահմանել Base URI-ը",
+            "SetSuffix": "Սահմանել վերջածանց",
+            "CurrentOwner": "Ներկայիս սեփականատեր",
+            "CurrentBaseURL": "Ընթացիկ BaseURL",
+            "ContractAddressAbsent": "Պայմանագրի հասցեն բացակայում է",
+            "FactoryAddressAbsent": "Գործարանի հասցեն բացակայում է",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Պահանջվում է վերնագիր",
+            "SymbolRequired": "Պահանջվում է խորհրդանիշ",
+            "TypeContractName": "պայմանագրի անվանումը",
+            "TypeContractSymbol": "պայմանագրի խորհրդանիշ (առավելագույնը 10 նիշ)"
+        },
+        "contests": {
+            "Title": "Մրցույթներ",
+            "NewContest": "Նոր մրցույթ"
+        },
+        "collections": {
+            "Title": "Հավաքածուներ",
+            "EnterTitle": "մուտքագրեք վերնագիրը",
+            "EnterDescription": "մուտքագրեք նկարագրությունը",
+            "NewCollection": "Նոր Հավաքածու",
+            "Name": "Անուն",
+            "Icon": "Սրբապատկեր",
+            "Description": "Նկարագրություն",
+            "Author": "Հեղինակ",
+            "SelectCollection": "Ընտրեք հավաքածու",
+            "Value": "Արժեք",
+            "AreYouSure": "Վստա՞հ ես։",
+            "AuthorInvalid": "Հեղինակի հասցեն անվավեր է:",
+            "Address": "Հասցե",
+            "CoverImage": "Շապիկի պատկեր",
+            "UploadIcon": "Վերբեռնման պատկերակ",
+            "CommissionAddressInvalid": "Հանձնաժողովի հասցեն անվավեր է",
+            "OnSale": "վաճառքում",
+            "OffSale": "վաճառքից դուրս",
+            "CreateCollection": "Ստեղծել Հավաքածու",
+            "UpdateCollection": "Թարմացնել հավաքածուն",
+            "CollectionInfo": "Հավաքածուի Տեղեկություններ",
+            "SelectAuthor": "Ընտրեք հեղինակ",
+            "NewItem": "Նոր NFT հավաքածու",
+            "NamePlaceholder": "Մուտքագրեք հավաքածուի անունը",
+            "DescPlaceholder": "Մուտքագրեք հավաքածուի նկարագրությունը",
+            "EndingIn": "Ավարտվում է",
+            "SubmitSeries": "Ներկայացրեք մի շարք"
+        },
+        "import": {
+            "importNFT": "NFT-ների ներմուծում",
+            "importAttributes": "Ներմուծեք NFT հատկանիշներ",
+            "fileNotFound": "Ներեցեք, CSV ֆայլը չի գտնվել:",
+            "fileEmpty": "Ներողություն, CSV ֆայլը դատարկ է:",
+            "userIdNotFound": "օգտատերը գոյություն ունի, բայց ID-ն դատարկ է",
+            "errorLine": "տող {{1}}",
+            "fieldNotFound": "Պահանջվող « {{1}} » դաշտը չի գտնվել",
+            "displayTypeEmpty": "« {{1}} »-ի ցուցադրման տեսակը չի գտնվել",
+            "taskStreamInvalid": "առաջադրանքի հոսքն անվավեր է",
+            "instructionsEmpty": "առաջադրանքների հոսքի հրահանգները դատարկ են",
+            "complete": "Ամբողջական",
+            "activateUsers": "ուղարկե՞լ ակտիվացման հաղորդագրություն օգտվողներին:",
+            "importProgress": "Առաջընթաց",
+            "importOptions": "Ընտրանքներ",
+            "sampleCSV": "Ներբեռնեք CSV-ի նմուշը",
+            "fileLabel": "Վերբեռնել աղյուսակը՝",
+            "errorsTitle": "Սխալներ են տեղի ունեցել"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Զտել ըստ NFT հավաքածուների",
+                "ShowNFTCollection": "Ցույց տալ NFT հավաքածուն...",
+                "AllCollections": "Բոլոր Հավաքածուները"
+            },
+            "ByUser": {
+                "AllAuthors": "Բոլոր հեղինակները",
+                "AllUsers": "Բոլորը",
+                "FilterByAuthors": "Զտել ըստ հեղինակների"
+            }
+        },
+        "Back": "Վերադարձ դեպի Հավաքածու",
+        "attributes": {
+            "Title": "Կառավարեք հատկանիշները",
+            "Attributes": "Հատկանիշներ",
+            "DisplayTitle": "Ցուցադրման տեսակը",
+            "AddDisplayType": "Ավելացրեք ցուցադրման նոր տեսակ",
+            "NewDisplay": "Նոր ցուցադրում",
+            "TraitTitle": "Հատկանիշի տեսակը",
+            "AddTraitTitle": "Ավելացնել նոր հատկանիշի տեսակ",
+            "NewTrait": "Նոր հատկանիշի տեսակ",
+            "ValueTitle": "Արժեք",
+            "AddValueTitle": "Ավելացնել նոր արժեք",
+            "NewValue": "Նոր Արժեք",
+            "NewAttribute": "Նոր հատկանիշ",
+            "UpdateAttributes": "Թարմացնել հատկանիշները",
+            "SaveAttributes": "Պահպանել հատկանիշները"
+        },
+        "profile": {
+            "LogOut": "Դուրս գալ",
+            "Title": "Պրոֆիլ {{userName}} համար",
+            "Description": "Օգտագործողի մանրամասները",
+            "aboutPlaceholder": "Խմբագրել կենսագրությունը",
+            "UploadCoverPhoto": "Վերբեռնեք շապիկի լուսանկարը",
+            "SureLogOut": "Իսկապե՞ս ուզում եք դուրս գալ:"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTC պայմանագիր",
+                        "seriesId": "շարքի ID",
+                        "owner": "Սեփականատեր",
+                        "currency": "Արժույթ",
+                        "price": "Գին",
+                        "beneficiary": "Շահառու",
+                        "autoindex": "Ինդեքս",
+                        "duration": "Տևողությունը",
+                        "rateInterval": "Գնահատման միջակայքը",
+                        "rateAmount": "Գնահատեք գումարը"
+                    },
+                    "small": {
+                        "NFTContract": "NFTC պայմանագիր",
+                        "seriesId": "այս շարքում կարտադրվեն նշաններ",
+                        "owner": "օրինակի սեփականատերը, հակառակ դեպքում կուղարկվի",
+                        "currency": "Արժույթը գնված նշանների համար, եթե զրոյական է, հայրենի մետաղադրամների համար",
+                        "price": "Գին",
+                        "beneficiary": "Թոքենների վաճառքի շահառու, հակառակ դեպքում կուղարկվի",
+                        "autoindex": "Ինդեքս",
+                        "duration": "Կողպեք հատումից հետո: Զրո նշանակում է անմիջապես ստանալ այն:",
+                        "rateInterval": "դույլի ընդմիջում հատուկ գնման համար",
+                        "rateAmount": "դույլ գումար հատուկ գնման համար"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ըստ ցանկության)",
+                    "number": "համարը",
+                    "address": "հասցեն",
+                    "fraction": "կոտորակ",
+                    "integer": "ամբողջ թիվ",
+                    "seconds": "վայրկյան",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Արտադրել",
+                "viewInstancesList": "Թարմացնել ցանկը"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Սերիա ID",
+                        "account": "Հաշիվ",
+                        "amount": "Գումարը"
+                    },
+                    "small": {
+                        "seriesId": "նոր նշանը կպատկանի նման ID-ով շարքին",
+                        "account": "նորաստեղծ NFT-ի սեփականատեր: եթե սահմանված չէ, կօգտագործի ընթացիկ դրամապանակը",
+                        "amount": "գումարը NFT է անանուխ"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ըստ ցանկության)",
+                    "seriesId": "id",
+                    "account": "հաշիվ",
+                    "amount": "գումարը",
+                    "integer": "ամբողջ թիվ"
+                },
+                "btn": {
+                    "Purchase": "Գնել",
+                    "SpecialPurchase": "Հատուկ գնում"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Հասցե"
+                    },
+                    "small": {
+                        "account": "Հասցե"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Անվավեր հասցե"
+                },
+                "placeholders": {
+                    "account": "Հասցե"
+                },
+                "addToWhitelist": "Ավելացնել Սպիտակ ցուցակում",
+                "removeFromWhitelist": "Հեռացնել Սպիտակ ցուցակից"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Պահառու",
+                    "recipient": "Ստացող"
+                },
+                "small": {
+                    "tokenId": "Token ID-ն, որը պետք է կողպել կամ բացել",
+                    "custodian": "հասցե, որը հնարավոր կլինի ապակողպել",
+                    "recipient": "հասցե, որը կստանա նշանները"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Անվավեր tokenId",
+                "invalidCustodian": "Անվավեր պահառու",
+                "invalidRecipient": "Անվավեր ստացող"
+            },
+            "placeholders": {
+                "optional": "(ըստ ցանկության)",
+                "tokenId": "id",
+                "custodian": "հասցեն"
+            },
+            "Lock": "Կողպեք",
+            "Unlock": "Ապակողպել",
+            "Locked": "Կողպված է",
+            "CustodianAddress": "Պահառուի հասցեն",
+            "TokenWasClaimed": "Հայցվել է « {{title}} » նշանը",
+            "TokenWasLocked": "« {{title}} » նշանը կողպված էր",
+            "TokenWasUnlocked": "« {{title}} » նշանն ապակողպվեց"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ինչ-որ բան գրեք այս ներդրման մասին..."
+    },
+    "currencies": {
+        "choose": "Ընտրեք արժույթ"
+    }
+}

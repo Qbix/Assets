@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "ဘယ်လောက်ရင်းနှီးမြှုပ်နှံရမလဲ။"
+                    },
+                    "placeholders": {
+                        "amount": "ပမာဏ {{nativeCoin}}",
+                        "max": "အများဆုံး: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "ဝယ်ပါ။",
+                    "execute": "အပြစ်ဒဏ်"
+                }
+            }
+        }
+    }
+}

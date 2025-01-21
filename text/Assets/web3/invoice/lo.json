@@ -1,0 +1,27 @@
+{
+    "title": "ຈ່າຍ",
+    "steps": {
+        "sending_native_coins": "ສົ່ງຫຼຽນພື້ນເມືອງ",
+        "sending_tokens": "ກຳລັງສົ່ງໂທເຄັນ",
+        "swap": "ແລກປ່ຽນ",
+        "approve": "ອະນຸມັດ",
+        "one_tx": "ທ່ານຄວນສົ່ງຫນຶ່ງທຸລະກໍາ",
+        "two_tx": "ທ່ານຄວນສົ່ງສອງທຸລະກໍາ"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "ທຶນທີ່ຈະຈ່າຍ"
+            }
+        },
+        "btns": {
+            "pay": "ຈ່າຍ"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "ຈໍາເປັນຕ້ອງຈ່າຍ &quot; {{amountOut}} &quot; tokens"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "ລະບົບຕ່ອງໂສ້ດັ່ງກ່າວທີ່ມີ id &quot; {{chainId}} &quot; ບໍ່ໄດ້ຮັບການສະຫນັບສະຫນູນ"
+    }
+}

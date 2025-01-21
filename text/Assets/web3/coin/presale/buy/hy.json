@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Որքա՞ն ներդրումներ կատարել:"
+                    },
+                    "placeholders": {
+                        "amount": "Գումարը՝ {{nativeCoin}}",
+                        "max": "Առավելագույնը՝ {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Գնել",
+                    "execute": "Կատարել"
+                }
+            }
+        }
+    }
+}

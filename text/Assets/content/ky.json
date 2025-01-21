@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Ката",
+        "WalletAbsent": "Капчык туташкан эмес.",
+        "Rendering": "<span class='url'>{{1}}<\/span> көрсөтүүдө каталар болду",
+        "PriceRequired": "Баасы талап кылынат!",
+        "NameRequired": "Аты талап кылынат!",
+        "PriceInvalid": "Баасы жараксыз!",
+        "AmountInvalid": "Сумма жараксыз!",
+        "TransactionFailed": "Транзакция ишке ашпай калды",
+        "ChainNotSupported": "Тандалган чынжыр колдоого алынбайт. Колдоого алынган чынжыр: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Тиркеме менен иштөө үчүн MetaMask керек",
+        "UserNotLoggedInMetaMask": "Колдонуучу MetaMaskке кирген эмес",
+        "CurrencyNotFound": "Валюта табылган жок",
+        "WrongChain": "Бул NFT &quot; {{chain}} &quot; астында түзүлгөн. Сураныч, бул чынжырды колдонуңуз.",
+        "NoRecipientSelected": "Эч алуучу тандалган жок",
+        "CantManageFrozenSeries": "Тоңдурулган серияларды башкара албайсыз",
+        "SubscriptionStreamNotPaid": "Сиз бул мазмунду көрүү үчүн төлөгөн жоксуз. Сураныч, {{subscriptionUrl}} басып, тиешелүү планга жазылыңыз."
+    },
+    "admin": {
+        "Title": "Активдер административдик",
+        "SubscriptionTitle": "Жазылуу пландары"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Төлөө үчүн таптаңыз"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : төлөм {{call 'user.displayName'}} үчүн иштетилди",
+        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} төлөгөнүңүз үчүн рахмат",
+        "SubscribedTo": "{{call 'user.displayName'}} {{plan.title}} жазылды",
+        "YouSubscribedTo": "Сиз {{plan.title}} жазылдыңыз",
+        "Assets\/credits\/alert": "Каттоо эсебиңизге байланыштуу эскертүү бар"
+    },
+    "charge": {
+        "Subject": "Сиз &quot; {{description}} &quot; үчүн {{call 'publisher.displayName'}} {{displayAmount}} төлөдүңүз",
+        "HasBeenCharged": "Эй, бул жөн гана {{1}} {{4}} {{3}} {{2}} алынганын билдирүү үчүн"
+    },
+    "charged": {
+        "Subject": "&quot; {{description}} &quot; үчүн төлөгөнүңүз үчүн рахмат",
+        "HavePaid": "Эй {{1}} , бул {{4}} үчүн {{2}} {{3}} чейин ийгиликтүү төлөгөнүңүздүн тез ырастоосу."
+    },
+    "connectedAccount": {
+        "Title": "Каттоо эсебин туташтыруу",
+        "Success": "Ийгилик",
+        "YourAccountCreated": "Каттоо эсебиңиз ийгиликтүү түзүлдү!",
+        "YourAccountAlreadyCreated": "Каттоо эсебиңиз мурунтан эле түзүлгөн жана колдонууга даяр"
+    },
+    "payment": {
+        "AboutOrder": "Заказ тууралуу маалымат",
+        "PaymentMethod": "Төлөм ыкмасы",
+        "ContactInfo": "Байланыш маалыматы",
+        "Pay": "Төлө",
+        "PaymentSucceeded": "Төлөм ийгиликтүү иштетилди",
+        "PaymentProcessing.": "Төлөмүңүз иштетилүүдө",
+        "FailTryAgain": "Төлөмүңүз ийгиликтүү болгон жок. Сураныч, кайра аракет кылыңыз.",
+        "SomethingWrong": "Бир жерден ката кетти",
+        "PaymentStatus": "Төлөм абалы",
+        "PayTo": "{{displayName}} төлө",
+        "ChooseCurrency": "Валюта тандаңыз",
+        "YouCanSendUpTo": "{{amount}} {{symbol}} чейин жөнөтө аласыз",
+        "Send": "Жөнөтүү",
+        "EnterAmount": "сумманы киргизиңиз"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Чакыруу {{invitedUserName}} тарабынан кабыл алынды",
+        "InvitedUserFilledStream": "{{invitedUserName}} {{FilledStreamTitle}} толду",
+        "ForFillingStream": "{{FilledStreamTitle}} толтуруу үчүн",
+        "YouHaveCreditsToStart": "Баштоо үчүн сизде {{amount}} кредит бар",
+        "PaymentFor": "&quot; {{1}} &quot; үчүн төлөм",
+        "PaymentTo": "Төлөм {{1}}",
+        "PaymentToUser": "{{toUserName}} которуу",
+        "CreatePrivateChat": "{{toUserName}} менен жеке баарлашуу үчүн",
+        "CreatePaidStream": "{{toStreamName}} түзүү үчүн",
+        "JoinedPaidStream": "резервация үчүн &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "коомчулукту түзүү үчүн &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot; ичинде ээленген акчаны кайтаруу катары",
+        "BoughtCredits": "{{amount}} кредит сатып алды",
+        "BonusCredits": "Бонус {{amount}} кредит",
+        "BuyAmountCredits": "{{amount}} кредит сатып алыңыз",
+        "WatchClip": "{{fromStreamTitle}} көрүү үчүн",
+        "MissingCredits": "Жок кредиттер",
+        "YouMissingCredits": "Улантуу үчүн сизге кошумча {{amount}} кредит керек.",
+        "BuyCredits": "Кредиттерди сатып алыңыз",
+        "BuyBonus": "Бир эле учурда {{amount}} кредитти сатып алуу {{bonus}} кредиттик бонуска алып келет.",
+        "Buy": "Сатып алуу",
+        "PurchaseCredits": "Кредиттерди сатып алуу",
+        "Credits": "Кредиттер",
+        "ErrorInvalidAmount": "Сумма жараксыз",
+        "ErrorInvalidCurrency": "Тилекке каршы, биз {{currency}} валютасын азырынча колдой элекпиз",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} кредит",
+            "BonusCredits": "{{amount}} кредит"
+        }
+    },
+    "history": {
+        "Date": "Дата",
+        "Amount": "Суммасы",
+        "Description": "Description",
+        "Client": "Кардар",
+        "User": "Колдонуучу",
+        "To": "чейин",
+        "From": "тартып",
+        "SeeHistory": "{{1}} үчүн төлөм тарыхын караңыз",
+        "HistoryEmpty": "Азырынча транзакциялар жок",
+        "PaymentFor": "{{amount}} кредит жөнөтүлдү",
+        "PaymentTo": "{{amount}} кредит жөнөтүлдү",
+        "PaymentToUser": "{{amount}} кредит жөнөтүлдү",
+        "CreatePaidStream": "{{amount}} кредит жумшалды",
+        "WatchClip": {
+            "+": "{{amount}} кредит алган",
+            "-": "{{amount}} кредит жумшалды"
+        },
+        "JoinedPaidStream": {
+            "+": "{{amount}} кредит алган",
+            "-": "{{amount}} кредит жумшалды"
+        },
+        "LeftPaidStream": {
+            "+": "{{amount}} кредит алды",
+            "-": "{{amount}} кредит жөнөтүлдү"
+        },
+        "CreatedCommunity": "{{amount}} кредит жумшалды",
+        "BoughtCredits": "{{amount}} кредит сатып алды",
+        "BonusCredits": "Бонустук {{amount}} кредит алды",
+        "InviteAcceptedBy": "{{amount}} кредит алган",
+        "Streams_user_firstname": "{{amount}} кредит алган",
+        "Streams_user_lastname": "{{amount}} кредит алган",
+        "Streams_user_icon": "{{amount}} кредит алган",
+        "Places_user_location": "{{amount}} кредит алган",
+        "Streams_greeting": "{{amount}} кредит алган",
+        "YouHaveCreditsToStart": "{{amount}} кредит алган",
+        "InvitedUserFilledStream": "{{amount}} кредит алган",
+        "ForFillingStream": "{{amount}} кредит алган",
+        "CreatePrivateChat": "{{amount}} кредит жумшалды"
+    },
+    "subscriptions": {
+        "infoTitle": "Төлөм маалыматын бериңиз",
+        "confirm": {
+            "title": "Жазылууну баштоо",
+            "message": "&quot; {{title}} &quot; номерине кайталануучу жазылууну баштайсызбы?",
+            "ok": "макул",
+            "cancel": "Жокко чыгаруу"
+        },
+        "CreditOrDebitCard": "Кредиттик же дебеттик карта",
+        "SubscribePayment": "Жазылуу төлөм",
+        "ImmediatePayment": "Дароо төлөм",
+        "ProcessingPayment": "Төлөмдү иштетүү",
+        "SubscriptionAlreadyPaid": "Бул жазылуу мурунтан эле төлөнгөн",
+        "SubscriptionNotActive": "Жазылуу учурда жигердүү эмес",
+        "Subscribed": "Жазылган",
+        "Unsubscribed": "Жазылуу токтотулду",
+        "Unsubscribe": "Жазылууну токтотуу",
+        "Subscribe": "Жазылуу",
+        "Started": "Башталды",
+        "EndsIn": "бүтөт",
+        "NextPay": "Кийинки төлөм",
+        "Period": "Мезгил",
+        "Price": "Баасы",
+        "AreYouSureUnsubscribe": "Бул планга жазылууну чын эле токтоткуңуз келеби?",
+        "YouUnsubscribedFromPlan": "Сиз &quot; {{planTitle}} &quot; планынан чыктыңыз. Кийинки жолу сизден төлөм алынбайт, бирок жазылууңуз {{endsIn}} чейин уланат",
+        "plan": {
+            "TitlePlaceholder": "пландын аталышы",
+            "PricePlaceholder": "баасы",
+            "SubscriptionTitle": "Жазылуу пландары",
+            "DescriptionPlaceholder": "жазылуу планынын сүрөттөлүшү",
+            "AreYouSureDeletePlan": "Бул планды чын эле жок кылгыңыз келеби?",
+            "Duration": "Узактыгы",
+            "Discount": "Арзандатуу",
+            "SavePlan": "Сактоо",
+            "Interrupt": "үзүү",
+            "Continue": "Улантуу",
+            "NewPlan": "Жаңы план",
+            "SelectDisplayType": "{{displayType}} тандаңыз",
+            "EndDate": "аяктоо датасы",
+            "Available": "жеткиликтүү",
+            "Hidden": "Жашырылган",
+            "InviteOnly": "Чакыруу гана",
+            "CantSubscribeUnlessInvited": "Чакырылмайынча бул планга жазыла албайсыз"
+        }
+    },
+    "payments": {
+        "infoTitle": "Төлөм маалыматын коюу",
+        "BuyAmountCredits": "{{amount}} кредит сатып алыңыз",
+        "confirm": {
+            "title": "Төлөм жасаңыз",
+            "message": "{{symbol}} {{amount}} төлөөгө макулсузбу?",
+            "ok": "макул",
+            "cancel": "Жокко чыгаруу"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Кредиттер",
+            "description": "кредиттерди жана төлөмдөрдү эсепке алат"
+        },
+        "Assets\/plan": {
+            "displayType": "Жазылуу планы",
+            "description": "жазылуу планы"
+        },
+        "Assets\/subscription": {
+            "displayType": "Жазылуу",
+            "description": "жазылуу"
+        },
+        "Assets\/product": {
+            "displayType": "Продукт",
+            "description": "продукт сатылууда"
+        },
+        "Assets\/service": {
+            "displayType": "Кызмат",
+            "description": "кызмат сунушталууда"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "{{amount}} кредит алган"
+        },
+        "Assets\/credits\/bought": {
+            "content": "{{amount}} кредит сатып алды"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Бонус {{amount}} кредит"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} кредит жумшалды"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{toUserName}} {{amount}} кредит жөнөтүлдү"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} {{amount}} кредит алды"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Каттоо эсебиңизде кредиттер жетишсиз. Көбүрөөк кредиттерди сатып алуу үчүн төмөнкү <a href='<i translate='no'>999 &#39;&gt;шилтемеге<\/a> кириңиз."
+        }
+    },
+    "billing": {
+        "Title": "Активдерди эсепке алуу",
+        "CreditsMinimum": "Минималдуу кредиттер",
+        "CreditsToAdd": "Кошуу үчүн кредиттер",
+        "Save": "Сактоо",
+        "ThisLink": "бул шилтеме",
+        "errors": {
+            "CreditsMinimumNegative": "Минималдуу кредиттер терс болушу мүмкүн эмес",
+            "CreditsToAddNegative": "Кошула турган кредиттер терс болушу мүмкүн эмес"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Жаңы кызмат",
+            "TitlePlaceholder": "Кызмат аталышы",
+            "PricePlaceholder": "Бааны коюу",
+            "LinkPlaceholder": "кошумча маалымат шилтемесин коюу",
+            "DescriptionPlaceholder": "Кызматтын сүрөттөлүшү",
+            "SaveService": "Кызматты сактоо",
+            "SelectRequiredParticipants": "Тиешелүү катышуучулар талап кылынат",
+            "RequiredParticipantsDesc": "Сураныч, бул кызматты колдонуу үчүн тиешелүү катышуучуларды тандаңыз (мисалы, &quot;Иттердин шоусу&quot; үчүн үй жаныбарлары же &quot;Балдар майрамы&quot; ж.б.у.с.). Эгер кызмат акы төлөнсө, колдонуучу ар бир катышуучу үчүн да төлөшү керек болот."
+        },
+        "EditServiceTemplate": {
+            "Title": "Түзөтүү кызматы"
+        },
+        "ManageServiceTemplates": "Кызмат шаблондорун башкаруу",
+        "ManageServices": "Кызматтарды башкаруу",
+        "Free": "бекер",
+        "OptionalContribution": "Кошумча салым",
+        "RequiredPayment": "Милдеттүү төлөм",
+        "AreYouSureDelete": "Бул кызматты чын эле жок кылгыңыз келеби?",
+        "AmountServicesRelated": "Бул кызматка байланыштуу {{amount}} жеткиликтүүлүк бар. Алар да алынып салынат."
+    },
+    "transfer": {
+        "SelectRecipient": "Алуучуну тандаңыз",
+        "TransactionSuccess": "Транзакция ийгиликтүү",
+        "OrTypeWalletAddress": "ЖЕ алуучунун капчык дарегин териңиз",
+        "AppCredits": "Колдонмо кредиттери"
+    },
+    "NFT": {
+        "Title": "Title",
+        "Name": "аты",
+        "EnterName": "Атын киргизиңиз",
+        "EnterAuthorWallet": "Автордук капчыкты киргизиңиз",
+        "InformationAboutTitle": "{{title}} NFT жөнүндө маалымат",
+        "Description": "Description",
+        "DetailedInformationAboutNFT": "NFT жөнүндө толук маалымат",
+        "PresaleStarts": "Алдын ала сатуу 23-декабрда башталат",
+        "OwnerUserNotFound": "Бул NFT ээси биздин колдонмодо катталган эмес.",
+        "BuyNow": "Азыр сатып ал",
+        "Buy": "Сатып алуу",
+        "Add": "кошуу",
+        "Remove": "Алып салуу",
+        "NoNFTyet": "Азырынча NFTs жок",
+        "Conversation": "Сүйлөшүү",
+        "Create": "Түзүү",
+        "CurrentBid": "Учурдагы сунуш",
+        "StartingIn": "баштап",
+        "EndingIn": "Аяктоо",
+        "CreateNFT": "NFT түзүү",
+        "TitlePlaceholder": "NFTке наам бериңиз",
+        "DescriptionPlaceholder": "Сиздин NFT сүрөттөмөсүн бер",
+        "CreateYourNFT": "NFT түзүңүз",
+        "Royalties": "Роялти",
+        "RoyaltyPlaceholder": "Кошумча. Өткөрүлгөнгө чейин жаратуучуга төлөнгөн сумма.",
+        "ExpirationDate": "Жарамдык датасы",
+        "StartingDate": "Башталыш күнү",
+        "BidsBelowThisAmount": "Бул суммадан төмөн сунуштарга жол берилбейт",
+        "MinimumBid": "Минималдуу сунуш",
+        "Author": "Автор",
+        "Price": "Баасы",
+        "Commission": "Комиссия",
+        "EnterCommission": "Комиссияга кириңиз",
+        "Owner": "Ээси",
+        "SelectCategory": "Категория тандаңыз",
+        "Day": "күн",
+        "Days": "күндөр",
+        "Hour": "Саат",
+        "Hours": "Саат",
+        "Minute": "Мүнөт",
+        "Minutes": "Мүнөттөр",
+        "Second": "Экинчи",
+        "Seconds": "секунд",
+        "SalesCreator": "сатуунун кирешеси жаратуучуга өтөт",
+        "Details": "Толук маалымат",
+        "Bids": "Тендер",
+        "History": "тарых",
+        "LoremIpsum": "Lorem Ipsum - бул басып чыгаруу жана терүү өнөр жайынын жасалма тексти.",
+        "PutOnSale": "Сатууга кой",
+        "PutOffSale": "Сатуудан баш тартуу",
+        "Transfer": "Transfer",
+        "Actions": "Аракеттер",
+        "Claim": "Доомат",
+        "ClaimNFT": "Доомат NFT",
+        "Unlocking": "Кулпуну ачуу",
+        "Unlock": "Кулпуну ачуу",
+        "Update": "Жаңыртуу",
+        "UpdateToken": "Токенди жаңыртуу",
+        "UpdateNFT": "NFTди жаңыртуу",
+        "CreateToken": "Токен түзүү",
+        "PlaceBid": "Тендерди жайгаштыруу",
+        "SoldOut": "Сатылды",
+        "NotOnSale": "Сатыкта эмес",
+        "NftName": "NFT аты",
+        "DescribeYourNFT": "Сураныч, NFTиңизди сүрөттөп бериңиз",
+        "NFTImage": "NFT үчүн сүрөт",
+        "NFTVideo": "NFT үчүн видео, эгер бар болсо",
+        "GenerateDescription": "же автоматтык түрдө түзүү",
+        "UploadMovie": "Кино жүктөө",
+        "MovieSource": "Кино булагы",
+        "MovieURL": "Тасма URL",
+        "UploadFile": "Файл жүктөө",
+        "PutOnMarketplace": "Базарга кой",
+        "InstantPurchase": "Колдонуучуларга NFTиңизди дароо сатып алууга уруксат берүү үчүн бааны киргизиңиз",
+        "FixedPrice": "Туруктуу баа",
+        "TimedAuction": "Убактылуу аукцион",
+        "OpenForBids": "Тендер үчүн ачык",
+        "PriceOnePiece": "Бир даана үчүн бааны киргизиңиз",
+        "EnterPrice": "Бааны киргизиңиз",
+        "EnterMinimumBid": "Минималдуу сунуш киргизиңиз",
+        "SelectChain": "чынжыр тандоо",
+        "Currency": "Валюта",
+        "AreYouSureDeleteImage": "Сүрөттү чын эле алып салгыңыз келеби?",
+        "AreYouSureDeleteVideo": "Видеону чын эле алып салгыңыз келеби?",
+        "series": {
+            "Name": "аты",
+            "Icon": "Белги",
+            "Description": "Description",
+            "Author": "Автор",
+            "SelectSeries": "Серияларды тандоо",
+            "Value": "Нарк",
+            "AreYouSure": "Ишенесиңби?",
+            "AuthorInvalid": "Автордун дареги жараксыз!",
+            "Address": "Дарек",
+            "CoverImage": "Мукаба сүрөтү",
+            "UploadCoverImage": "Мукаба сүрөтүн жүктөө",
+            "CommissionAddressInvalid": "Комиссиянын дареги жараксыз",
+            "OnSale": "сатууда",
+            "OffSale": "сатуудан",
+            "CreateSeries": "Серияларды түзүү",
+            "UpdateSeries": "Жаңыртуу сериясы",
+            "SeriesInfo": "Сериялар жөнүндө маалымат",
+            "SelectAuthor": "Авторду тандаңыз",
+            "NewItem": "Жаңы NFT сериясы",
+            "NamePlaceholder": "Серия атын киргизиңиз",
+            "DescPlaceholder": "Сериянын сүрөттөмөсүн киргизиңиз",
+            "EndingIn": "Аяктоо"
+        },
+        "contract": {
+            "CreateContract": "Келишим түзүү",
+            "SelectContract": "Контракт тандоо",
+            "CreateContractFor": "{{userName}} үчүн келишим түзүү",
+            "ContractFor": "{{userName}} үчүн келишим",
+            "UpdateContract": "Келишимди жаңыртуу",
+            "TransferOwnership": "Менчик укугун өткөрүп берүү",
+            "SetBaseURI": "Негизги URI коюу",
+            "SetSuffix": "Суффикс коюу",
+            "CurrentOwner": "Учурдагы ээси",
+            "CurrentBaseURL": "Учурдагы BaseURL",
+            "ContractAddressAbsent": "Келишимдин дареги жок",
+            "FactoryAddressAbsent": "Заводдун дареги жок",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Аталышы талап кылынат",
+            "SymbolRequired": "Символ талап кылынат",
+            "TypeContractName": "келишимдин аталышы",
+            "TypeContractSymbol": "келишим белгиси (максималдуу 10 белги)"
+        },
+        "contests": {
+            "Title": "Конкурстар",
+            "NewContest": "Жаңы конкурс"
+        },
+        "collections": {
+            "Title": "Коллекциялар",
+            "EnterTitle": "аталышын киргизиңиз",
+            "EnterDescription": "сүрөттөмөсүн киргизиңиз",
+            "NewCollection": "Жаңы коллекция",
+            "Name": "аты",
+            "Icon": "Белги",
+            "Description": "Description",
+            "Author": "Автор",
+            "SelectCollection": "Коллекцияны тандаңыз",
+            "Value": "Нарк",
+            "AreYouSure": "Ишенесиңби?",
+            "AuthorInvalid": "Автордун дареги жараксыз!",
+            "Address": "Дарек",
+            "CoverImage": "Мукаба сүрөтү",
+            "UploadIcon": "Жүктөп берүү сөлөкөтү",
+            "CommissionAddressInvalid": "Комиссиянын дареги жараксыз",
+            "OnSale": "сатууда",
+            "OffSale": "сатуудан",
+            "CreateCollection": "Коллекция түзүү",
+            "UpdateCollection": "Коллекцияны жаңыртуу",
+            "CollectionInfo": "Коллекция маалыматы",
+            "SelectAuthor": "Авторду тандаңыз",
+            "NewItem": "Жаңы NFT коллекциясы",
+            "NamePlaceholder": "Коллекциянын атын киргизиңиз",
+            "DescPlaceholder": "Коллекциянын сүрөттөмөсүн киргизиңиз",
+            "EndingIn": "Аяктоо",
+            "SubmitSeries": "Серия тапшырыңыз"
+        },
+        "import": {
+            "importNFT": "NFT импорттоо",
+            "importAttributes": "NFT атрибуттарын импорттоо",
+            "fileNotFound": "Кечиресиз, CSV файл табылган жок.",
+            "fileEmpty": "Кечиресиз, CSV файлы бош.",
+            "userIdNotFound": "колдонуучу бар, бирок id бош",
+            "errorLine": "сап {{1}}",
+            "fieldNotFound": "Милдеттүү талаа &quot; {{1}} &quot; табылган жок",
+            "displayTypeEmpty": "&quot; {{1}} &quot; үчүн дисплей түрү табылган жок",
+            "taskStreamInvalid": "тапшырма агымы жараксыз",
+            "instructionsEmpty": "тапшырма агымынын нускамалары бош",
+            "complete": "Бүттү",
+            "activateUsers": "колдонуучуларга активдештирүү билдирүүсүн жөнөтөсүзбү?",
+            "importProgress": "Прогресс",
+            "importOptions": "Параметрлер",
+            "sampleCSV": "CSV үлгүсүн жүктөп алыңыз",
+            "fileLabel": "Электрондук жадыбалды жүктөө:",
+            "errorsTitle": "Каталар пайда болду"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "NFT жыйнактары боюнча чыпкалоо",
+                "ShowNFTCollection": "NFT коллекциясын көрсөтүү...",
+                "AllCollections": "Бардык жыйнактар"
+            },
+            "ByUser": {
+                "AllAuthors": "Бардык Авторлор",
+                "AllUsers": "Баары",
+                "FilterByAuthors": "Авторлор боюнча чыпкалоо"
+            }
+        },
+        "Back": "Коллекцияга кайтуу",
+        "attributes": {
+            "Title": "Атрибуттарды башкаруу",
+            "Attributes": "Атрибуттар",
+            "DisplayTitle": "Дисплей түрү",
+            "AddDisplayType": "Жаңы дисплей түрүн кошуу",
+            "NewDisplay": "Жаңы дисплей",
+            "TraitTitle": "Белги түрү",
+            "AddTraitTitle": "Жаңы сапат түрүн кошуу",
+            "NewTrait": "Жаңы сапат түрү",
+            "ValueTitle": "Нарк",
+            "AddValueTitle": "Жаңы маани кошуу",
+            "NewValue": "Жаңы баалуулук",
+            "NewAttribute": "Жаңы атрибут",
+            "UpdateAttributes": "Атрибуттарды жаңыртуу",
+            "SaveAttributes": "Атрибуттарды сактоо"
+        },
+        "profile": {
+            "LogOut": "Чыгыңыз",
+            "Title": "{{userName}} үчүн профиль",
+            "Description": "Колдонуучунун маалыматы",
+            "aboutPlaceholder": "Edit Bio",
+            "UploadCoverPhoto": "Мукаба сүрөтүн жүктөө",
+            "SureLogOut": "Чын эле чыгасызбы?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "серия идентификатору",
+                        "owner": "Ээси",
+                        "currency": "Валюта",
+                        "price": "Баасы",
+                        "beneficiary": "Бенефициар",
+                        "autoindex": "Автоиндекс",
+                        "duration": "Узактыгы",
+                        "rateInterval": "Чен аралыгы",
+                        "rateAmount": "Баа суммасы"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "бул серияда токендер чыгарылат",
+                        "owner": "инстанциянын ээси, болбосо жөнөтүүчү болот",
+                        "currency": "Сатып алынган токендер үчүн валюта, эгерде нөл болсо - жергиликтүү монеталар үчүн",
+                        "price": "Баасы",
+                        "beneficiary": "Токендерди сатуунун бенефициары, антпесе жөнөтүүчү болот",
+                        "autoindex": "Автоиндекс",
+                        "duration": "Зордуктан кийин кулпулоо. Нөл дароо алуу дегенди билдирет.",
+                        "rateInterval": "атайын сатып алуу үчүн чака аралыгы",
+                        "rateAmount": "атайын сатып алуу үчүн челек суммасы"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(милдеттүү эмес)",
+                    "number": "саны",
+                    "address": "дареги",
+                    "fraction": "бөлчөк",
+                    "integer": "бүтүн сан",
+                    "seconds": "секунд",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Өндүрүш",
+                "viewInstancesList": "Тизмени жаңыртуу"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Серия ID",
+                        "account": "Каттоо эсеби",
+                        "amount": "Суммасы"
+                    },
+                    "small": {
+                        "seriesId": "жаңы токен ушундай ID менен катарга таандык болот",
+                        "account": "жаңы түзүлгөн NFT ээси. коюлган эмес болсо - учурдагы капчыкты колдонот",
+                        "amount": "NFT суммасын жалбызга чейин"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(милдеттүү эмес)",
+                    "seriesId": "id",
+                    "account": "эсеп",
+                    "amount": "сумма",
+                    "integer": "бүтүн сан"
+                },
+                "btn": {
+                    "Purchase": "Сатып алуу",
+                    "SpecialPurchase": "Атайын сатып алуу"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Дарек"
+                    },
+                    "small": {
+                        "account": "Дарек"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Жараксыз дарек"
+                },
+                "placeholders": {
+                    "account": "Дарек"
+                },
+                "addToWhitelist": "Ак тизмеге кошуу",
+                "removeFromWhitelist": "Ак тизмеден алып салуу"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Токен ID",
+                    "custodian": "Кастодиан",
+                    "recipient": "Алуучу"
+                },
+                "small": {
+                    "tokenId": "токен идентификатору эмнени кулпулоо же ачуу керек",
+                    "custodian": "кулпусун ача турган дарек",
+                    "recipient": "Токендерди ала турган дарек"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Жараксыз tokenId",
+                "invalidCustodian": "Жараксыз Кастодиан",
+                "invalidRecipient": "Жараксыз Алуучу"
+            },
+            "placeholders": {
+                "optional": "(милдеттүү эмес)",
+                "tokenId": "id",
+                "custodian": "дареги"
+            },
+            "Lock": "Кулпу",
+            "Unlock": "Кулпуну ачуу",
+            "Locked": "Кулпуланган",
+            "CustodianAddress": "Камкорчунун дареги",
+            "TokenWasClaimed": "Токен &quot; {{title}} &quot; талап кылынган",
+            "TokenWasLocked": "Токен &quot; {{title}} &quot; кулпуланган",
+            "TokenWasUnlocked": "Токен &quot; {{title}} &quot; кулпусу ачылды"
+        }
+    },
+    "fundrise": {
+        "placeholder": "бул салым тууралуу бир нерсе жазыңыз..."
+    },
+    "currencies": {
+        "choose": "Валюта тандаңыз"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "title": "पैसे द्या",
+    "steps": {
+        "sending_native_coins": "देशी नाणी पाठवत आहे",
+        "sending_tokens": "टोकन पाठवत आहे",
+        "swap": "स्वॅप",
+        "approve": "मंजूर करा",
+        "one_tx": "तुम्ही एक व्यवहार पाठवावा",
+        "two_tx": "तुम्ही दोन व्यवहार पाठवावेत"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "देय निधी"
+            }
+        },
+        "btns": {
+            "pay": "पैसे द्या"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "&quot; {{amountOut}} &quot; टोकन भरावे लागतील"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "&quot; {{chainId}} &quot; आयडी असलेली अशी साखळी समर्थित नाही"
+    }
+}

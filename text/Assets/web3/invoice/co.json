@@ -1,0 +1,27 @@
+{
+    "title": "Paga",
+    "steps": {
+        "sending_native_coins": "Mandendu muniti nativu",
+        "sending_tokens": "Mandendu tokens",
+        "swap": "Scambià",
+        "approve": "Appruvà",
+        "one_tx": "Duvete mandà una transazzione",
+        "two_tx": "Duvete mandà duie transazzione"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Fondi à pagà"
+            }
+        },
+        "btns": {
+            "pay": "Paga"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Avete bisognu di pagà &quot; {{amountOut}} &quot; tokens"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Tale catena cù id &quot; {{chainId}} &quot; ùn hè micca supportata"
+    }
+}

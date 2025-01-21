@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "अवधि",
+                    "bonusTokenFraction": "बोनस TokenFraction",
+                    "popularToken": "लोकप्रिय टोकन",
+                    "donations": "दानहरू",
+                    "rewardsRateFraction": "rewardsrateFraction",
+                    "numerator": "अंक",
+                    "denominator": "भाजक"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "दिनमा अवधि",
+                    "bonusTokenFraction": "बोनस TokenFraction",
+                    "popularToken": "लोकप्रिय टोकन",
+                    "donations": "दानहरू",
+                    "rewardsRateFraction": "rewardsrateFraction",
+                    "numerator": "अंक",
+                    "denominator": "भाजक"
+                }
+            },
+            "placeholders": {
+                "optional": "(वैकल्पिक)",
+                "tuple": "टपल []",
+                "number": "संख्या",
+                "address": "ठेगाना",
+                "fraction": "अंश",
+                "integer": "पूर्णांक",
+                "seconds": "सेकेन्ड",
+                "days": "दिनहरू",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "पोखरीहरू छैनन्"
+            },
+            "btns": {
+                "createPool": "पोखरी सिर्जना गर्नुहोस्",
+                "createPoolInForm": "सिर्जना गर्नुहोस्"
+            },
+            "createPool": "पोखरी सिर्जना गर्नुहोस्",
+            "produce": "उत्पादन गर्नुहोस्",
+            "loading": "लोड गर्दै",
+            "viewInstancesList": "सूची ताजा गर्नुहोस्"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Davomiyligi",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "mashhur Token",
+                    "donations": "xayriyalar",
+                    "rewardsRateFraction": "mukofotlarRateFraction",
+                    "numerator": "hisoblagich",
+                    "denominator": "maxraj"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Davomiyligi kunlarda",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "mashhur Token",
+                    "donations": "xayriyalar",
+                    "rewardsRateFraction": "mukofotlarRateFraction",
+                    "numerator": "hisoblagich",
+                    "denominator": "maxraj"
+                }
+            },
+            "placeholders": {
+                "optional": "(ixtiyoriy)",
+                "tuple": "tuple[]",
+                "number": "raqam",
+                "address": "manzil",
+                "fraction": "kasr",
+                "integer": "butun son",
+                "seconds": "soniya",
+                "days": "kunlar",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Hovuzlar yo&#39;q"
+            },
+            "btns": {
+                "createPool": "Hovuz yaratish",
+                "createPoolInForm": "Yaratish"
+            },
+            "createPool": "Hovuz yaratish",
+            "produce": "Mahsulot",
+            "loading": "Yuklanmoqda",
+            "viewInstancesList": "Roʻyxatni yangilash"
+        }
+    }
+}

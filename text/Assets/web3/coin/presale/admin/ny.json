@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Chizindikiro Chogulitsa",
+                        "timestamps": "Nthawi",
+                        "prices": "Mitengo",
+                        "endTime": "Nthawi Yotsiriza",
+                        "thresholds": "Zolowera",
+                        "bonuses": "Mabonasi"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Mwini sangachoke",
+                            "option1": "Mwini atha kuchotsa ma tokeni pokhapokha endTime ikadutsa",
+                            "option2": "Mwiniwake akhoza kuchotsa zizindikiro nthawi iliyonse"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Adilesi ya anthu",
+                    "methodkeccack": "Keccak256 hash ntchito",
+                    "roleId": "ID ya udindo",
+                    "sellingToken": "Kugulitsa Chizindikiro",
+                    "prices": "ETH, mtengo",
+                    "thresholds": "# ya zizindikiro",
+                    "bonuses": "Bonasi %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Palibe ndalama"
+                },
+                "btns": {
+                    "createFund": "Pangani Fund",
+                    "createFundInForm": "Pangani"
+                },
+                "fundAddress": "Adilesi yandalama",
+                "createFund": "Pangani Fund",
+                "fundInfo": "Zambiri",
+                "produce": "Panga",
+                "loading": "Kutsegula",
+                "viewInstancesList": "Refresh List"
+            }
+        }
+    }
+}

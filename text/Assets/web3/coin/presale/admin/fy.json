@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Ferkeapje Token",
+                        "timestamps": "Times",
+                        "prices": "Prizen",
+                        "endTime": "Eintiid",
+                        "thresholds": "Drompels",
+                        "bonuses": "Bonussen"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Eigner kin net weromlûke",
+                            "option1": "Eigner kin tokens allinich weromlûke nei&#39;t endTime foarby is",
+                            "option2": "Eigner kin op elk momint tokens weromlûke"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Mienskip adres",
+                    "methodkeccack": "Keccak256 hash funksje",
+                    "roleId": "Rol ID",
+                    "sellingToken": "Selling Token adres",
+                    "prices": "De priis fan ETH",
+                    "thresholds": "# fan tokens",
+                    "bonuses": "Bonus %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Der binne gjin fûnsen"
+                },
+                "btns": {
+                    "createFund": "Meitsje Fûns",
+                    "createFundInForm": "Meitsje"
+                },
+                "fundAddress": "Fûns adres",
+                "createFund": "Meitsje Fûns",
+                "fundInfo": "Info",
+                "produce": "Produsearje",
+                "loading": "Loading",
+                "viewInstancesList": "Ferfarskje List"
+            }
+        }
+    }
+}

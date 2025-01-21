@@ -1,0 +1,27 @@
+{
+    "title": "Peye",
+    "steps": {
+        "sending_native_coins": "Voye pyès monnen natif natal",
+        "sending_tokens": "Voye tokens",
+        "swap": "Boukante",
+        "approve": "Apwouve",
+        "one_tx": "Ou ta dwe voye yon sèl tranzaksyon",
+        "two_tx": "Ou ta dwe voye de tranzaksyon"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Fon pou peye"
+            }
+        },
+        "btns": {
+            "pay": "Peye"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Bezwen peye &quot; {{amountOut}} &quot; marqueur"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Chèn sa a ak id &quot; {{chainId}} &quot; pa sipòte"
+    }
+}

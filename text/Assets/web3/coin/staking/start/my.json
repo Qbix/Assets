@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "သင်တန်းကာလ",
+                        "amount": "ပမာဏ"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "သင်တန်းကာလ",
+                        "amount": "ပမာဏ"
+                    }
+                },
+                "placeholders": {
+                    "duration": "သင်တန်းကာလ",
+                    "amount": "ပမာဏ"
+                },
+                "btns": {
+                    "stake": "လောင်းကြေး"
+                },
+                "stake": "လောင်းကြေး",
+                "loading": "ဒိန်း"
+            }
+        }
+    }
+}

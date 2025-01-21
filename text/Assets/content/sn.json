@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Error",
+        "WalletAbsent": "Chikwama hachina kubatana.",
+        "Rendering": "Paive nezvikanganiso pataipa <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Mutengo unodiwa!",
+        "NameRequired": "Zita rinodiwa!",
+        "PriceInvalid": "Mutengo haushandi!",
+        "AmountInvalid": "Mari haina basa!",
+        "TransactionFailed": "Mutengesi watadza",
+        "ChainNotSupported": "Cheni yakasarudzwa haitsigirwe. Inotsigirwa cheni: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Inoda MetaMask yakabatana kushanda nekushandisa",
+        "UserNotLoggedInMetaMask": "Mushandisi haana kupinda muMetaMask",
+        "CurrencyNotFound": "Mari haina kuwanikwa",
+        "WrongChain": "Iyi NFT yakagadzirwa pasi pe &quot; {{chain}} &quot;. Ndapota shandisa cheni iyi.",
+        "NoRecipientSelected": "Hapana anogamuchira asarudzwa",
+        "CantManageFrozenSeries": "Iwe haugone kubata akaomeswa series",
+        "SubscriptionStreamNotPaid": "Hausati wabhadhara kuti uone zvirimo. Ndokumbira tinya {{subscriptionUrl}} uye unyore kuchirongwa chakakodzera."
+    },
+    "admin": {
+        "Title": "Asset administrative",
+        "SubscriptionTitle": "Zvirongwa zvekunyoresa"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Tinya kuti ubhadhare"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : kubhadharisa kwakagadziriswa {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Ndatenda nekubhadhara kwako {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} vakanyoresa {{plan.title}}",
+        "YouSubscribedTo": "Iwe wakanyoreswa {{plan.title}}",
+        "Assets\/credits\/alert": "Une chenjedzo ine chekuita neakaundi yako"
+    },
+    "charge": {
+        "Subject": "Wakagamuchira mubhadharo {{displayAmount}} kubva {{call 'publisher.displayName'}} ye &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hei, izvi ndezvekukuzivisa iwe kuti {{1}} yabhadhariswa {{2}} {{3}} ne1002 {{4}}"
+    },
+    "charged": {
+        "Subject": "Ndatenda nekubhadhara kwako kwe &quot; {{description}} &quot;",
+        "HavePaid": "Hei {{1}} , ichi chingori chisimbiso chekukurumidza kuti wabhadhara {{2}} kusvika {{3}} {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Batanidza account",
+        "Success": "Success",
+        "YourAccountCreated": "Akaunti yako yakagadzirwa zvakanaka!",
+        "YourAccountAlreadyCreated": "Akaunti yako yakatogadzirwa uye yagadzirira kushandiswa"
+    },
+    "payment": {
+        "AboutOrder": "Info nezve order",
+        "PaymentMethod": "Kubhadhara nzira",
+        "ContactInfo": "Contact info",
+        "Pay": "Pay",
+        "PaymentSucceeded": "Mari yacho yakagadziriswa",
+        "PaymentProcessing.": "Muripo wako uri kugadziriswa",
+        "FailTryAgain": "Muripo wako hauna kubudirira. Ndapota edza zvakare.",
+        "SomethingWrong": "Pane chakaipa",
+        "PaymentStatus": "Mamiriro ekubhadhara",
+        "PayTo": "Bhadhara {{displayName}}",
+        "ChooseCurrency": "Sarudza mari",
+        "YouCanSendUpTo": "Unogona kutumira kusvika {{amount}} {{symbol}}",
+        "Send": "Send",
+        "EnterAmount": "isa mari"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Kukoka kwakagamuchirwa {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} yakazadza {{FilledStreamTitle}}",
+        "ForFillingStream": "Yekuzadza {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Une {{amount}} makiredhiti ekutanga",
+        "PaymentFor": "Kubhadhara kwe &quot; {{1}} &quot;",
+        "PaymentTo": "Kubhadhara {{1}}",
+        "PaymentToUser": "Shandura {{toUserName}}",
+        "CreatePrivateChat": "yekutaura pachivande {{toUserName}}",
+        "CreatePaidStream": "kugadzira {{toStreamName}}",
+        "JoinedPaidStream": "yekuchengeta mu &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "yekugadzira nharaunda &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "semari yekudzoserwa mu &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Akatenga {{amount}} makiredhiti",
+        "BonusCredits": "Bhonasi {{amount}} makiredhiti",
+        "BuyAmountCredits": "Tenga {{amount}} makiredhiti",
+        "WatchClip": "yekuona {{fromStreamTitle}}",
+        "MissingCredits": "Zvikwereti Zvisipo",
+        "YouMissingCredits": "Unoda mamwe {{amount}} makiredhiti kuti uenderere mberi.",
+        "BuyCredits": "Tenga zvikwereti",
+        "BuyBonus": "Kutenga {{amount}} makiredhiti kamwechete kunozounza bhonasi {{bonus}} makiredhiti.",
+        "Buy": "Buy",
+        "PurchaseCredits": "Kutenga Credits",
+        "Credits": "Credits",
+        "ErrorInvalidAmount": "Mari haina kushanda",
+        "ErrorInvalidCurrency": "Nehurombo, isu hatisati tatsigira mari {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} makiredhiti",
+            "BonusCredits": "{{amount}} makiredhiti"
+        }
+    },
+    "history": {
+        "Date": "Date",
+        "Amount": "Mari",
+        "Description": "Tsanangudzo",
+        "Client": "Client",
+        "User": "Mushandisi",
+        "To": "ku",
+        "From": "kubva",
+        "SeeHistory": "Ona nhoroondo yekubhadhara {{1}}",
+        "HistoryEmpty": "Hapasati pave nekutengeserana",
+        "PaymentFor": "Akatumira {{amount}} makiredhiti",
+        "PaymentTo": "Akatumira {{amount}} makiredhiti",
+        "PaymentToUser": "Akatumira {{amount}} makiredhiti",
+        "CreatePaidStream": "Akashandisa {{amount}} makiredhiti",
+        "WatchClip": {
+            "+": "Akawana {{amount}} makiredhiti",
+            "-": "Akashandisa {{amount}} makiredhiti"
+        },
+        "JoinedPaidStream": {
+            "+": "Akawana {{amount}} makiredhiti",
+            "-": "Akashandisa {{amount}} makiredhiti"
+        },
+        "LeftPaidStream": {
+            "+": "Akagamuchira {{amount}} makiredhiti",
+            "-": "Akatumira {{amount}} makiredhiti"
+        },
+        "CreatedCommunity": "Akashandisa {{amount}} makiredhiti",
+        "BoughtCredits": "Akatenga {{amount}} makiredhiti",
+        "BonusCredits": "Ndine bhonasi {{amount}} makiredhiti",
+        "InviteAcceptedBy": "Akawana {{amount}} makiredhiti",
+        "Streams_user_firstname": "Akawana {{amount}} makiredhiti",
+        "Streams_user_lastname": "Akawana {{amount}} makiredhiti",
+        "Streams_user_icon": "Akawana {{amount}} makiredhiti",
+        "Places_user_location": "Akawana {{amount}} makiredhiti",
+        "Streams_greeting": "Akawana {{amount}} makiredhiti",
+        "YouHaveCreditsToStart": "Akawana {{amount}} makiredhiti",
+        "InvitedUserFilledStream": "Akawana {{amount}} makiredhiti",
+        "ForFillingStream": "Akawana {{amount}} makiredhiti",
+        "CreatePrivateChat": "Akashandisa {{amount}} makiredhiti"
+    },
+    "subscriptions": {
+        "infoTitle": "Ipa Ruzivo rwekubhadhara",
+        "confirm": {
+            "title": "Tanga Kunyoresa",
+            "message": "Tanga kunyorera ku &quot; {{title}} &quot;?",
+            "ok": "OK",
+            "cancel": "Cancel"
+        },
+        "CreditOrDebitCard": "Kadhi rechikwereti kana rechikwereti",
+        "SubscribePayment": "Bhalisa Kubhadhara",
+        "ImmediatePayment": "Kubhadhara Pakarepo",
+        "ProcessingPayment": "Kugadzirisa Kubhadhara",
+        "SubscriptionAlreadyPaid": "Kunyoreswa uku kwakatobhadhara",
+        "SubscriptionNotActive": "Kunyoresa hakusi kushanda parizvino",
+        "Subscribed": "Subscribed",
+        "Unsubscribed": "Unsubscribed",
+        "Unsubscribe": "Unsubscribe",
+        "Subscribe": "Subscribe",
+        "Started": "Started",
+        "EndsIn": "Inopera muna",
+        "NextPay": "Kubhadhara kunotevera",
+        "Period": "Period",
+        "Price": "Price",
+        "AreYouSureUnsubscribe": "Une chokwadi chekuti unoda kuzvibvisa kubva kuchirongwa ichi?",
+        "YouUnsubscribedFromPlan": "Iwe wakazvibvisa kubva kuchirongwa &quot; {{planTitle}} &quot;. Iwe hauchabhadhariswa nguva inotevera, asi kunyorera kwako kunoenderera kusvika {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "musoro wechirongwa",
+            "PricePlaceholder": "mutengo",
+            "SubscriptionTitle": "Zvirongwa zvekunyoresa",
+            "DescriptionPlaceholder": "kunyoreswa chirongwa tsananguro",
+            "AreYouSureDeletePlan": "Une chokwadi chekuti unoda kudzima chirongwa ichi?",
+            "Duration": "Duration",
+            "Discount": "Discount",
+            "SavePlan": "Sevha",
+            "Interrupt": "Dimburira",
+            "Continue": "Enderera mberi",
+            "NewPlan": "Chirongwa Chitsva",
+            "SelectDisplayType": "Sarudza {{displayType}}",
+            "EndDate": "zuva rekupedzisira",
+            "Available": "Available",
+            "Hidden": "Hidden",
+            "InviteOnly": "Koka-chete",
+            "CantSubscribeUnlessInvited": "Iwe haugone kunyoresa kuchirongwa ichi kunze kwekunge wakokwa"
+        }
+    },
+    "payments": {
+        "infoTitle": "Seta Kubhadhara Ruzivo",
+        "BuyAmountCredits": "Tenga {{amount}} makiredhiti",
+        "confirm": {
+            "title": "Ita Payment",
+            "message": "Unobvuma here kubhadhara {{symbol}} {{amount}} ?",
+            "ok": "OK",
+            "cancel": "Cancel"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Credits",
+            "description": "inochengetedza zvikwereti uye kubhadhara"
+        },
+        "Assets\/plan": {
+            "displayType": "Kunyoresa Chirongwa",
+            "description": "kunyorera chirongwa"
+        },
+        "Assets\/subscription": {
+            "displayType": "Kunyoresa",
+            "description": "kunyoresa"
+        },
+        "Assets\/product": {
+            "displayType": "Product",
+            "description": "chigadzirwa chiri kutengeswa"
+        },
+        "Assets\/service": {
+            "displayType": "Service",
+            "description": "sevhisi iri kupihwa"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Akawana {{amount}} makiredhiti"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Akatenga {{amount}} makiredhiti"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bhonasi {{amount}} makiredhiti"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Akashandisa {{amount}} makiredhiti"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Akatumira {{amount}} makiredhiti {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Akagamuchira {{amount}} makiredhiti kubva {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Iwe hauna zvikwereti zvakakwana muakaundi yako. Ndokumbira ushanyire inotevera <a href='<i translate='no'>999&#39;&gt; link<\/a> kuti utenge mamwe makiredhiti."
+        }
+    },
+    "billing": {
+        "Title": "Asset billing",
+        "CreditsMinimum": "Zvikwereti zvishoma",
+        "CreditsToAdd": "Credits kuwedzera",
+        "Save": "Sevha",
+        "ThisLink": "iyi link",
+        "errors": {
+            "CreditsMinimumNegative": "Zvikwereti zvishoma hazvigoni kuva zvakashata",
+            "CreditsToAddNegative": "Makiredhiti ekuwedzera haagone kuve asina kunaka"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "New Service",
+            "TitlePlaceholder": "Zita rebasa",
+            "PricePlaceholder": "Seta mutengo",
+            "LinkPlaceholder": "set yekuwedzera info link",
+            "DescriptionPlaceholder": "Tsanangudzo yebasa",
+            "SaveService": "Save Service",
+            "SelectRequiredParticipants": "Vatori vechikamu vanodiwa",
+            "RequiredParticipantsDesc": "Ndapota sarudza vatori vechikamu vanodiwa kuti vashandise sevhisi iyi (semuenzaniso mhuka dzinovaraidza dze &quot;Dogs show&quot;, kana vana &quot;pazororo revana&quot; nezvimwewo). Kana sevhisi yakabhadharwa, mushandisi anozofanira kubhadhara zvakare kune yega yega vatori vechikamu vane hukama."
+        },
+        "EditServiceTemplate": {
+            "Title": "Edit Service"
+        },
+        "ManageServiceTemplates": "Manage Service Matemplate",
+        "ManageServices": "Manage Services",
+        "Free": "Free",
+        "OptionalContribution": "Optional mupiro",
+        "RequiredPayment": "Kubhadhara kunodiwa",
+        "AreYouSureDelete": "Une chokwadi chekuti unoda kudzima sevhisi iyi?",
+        "AmountServicesRelated": "Pane {{amount}} zviripo zvine chekuita nesevhisi iyi. Ivowo vachabviswa."
+    },
+    "transfer": {
+        "SelectRecipient": "Sarudza mugamuchiri",
+        "TransactionSuccess": "Transaction Success",
+        "OrTypeWalletAddress": "KANA nyora kero yechikwama chemugamuchiri",
+        "AppCredits": "App Credits"
+    },
+    "NFT": {
+        "Title": "Title",
+        "Name": "Zita",
+        "EnterName": "Nyora zita",
+        "EnterAuthorWallet": "Pinda munyori chikwama",
+        "InformationAboutTitle": "Ruzivo nezve {{title}} NFT",
+        "Description": "Tsanangudzo",
+        "DetailedInformationAboutNFT": "Ruzivo rwakadzama nezveNFT",
+        "PresaleStarts": "Presale Inotanga Zvita 23",
+        "OwnerUserNotFound": "Muridzi weNFT iyi haana kunyoreswa muchikumbiro chedu.",
+        "BuyNow": "Tenga izvozvi",
+        "Buy": "Buy",
+        "Add": "Wedzera",
+        "Remove": "Bvisa",
+        "NoNFTyet": "Hapana maNFT parizvino",
+        "Conversation": "Kukurukurirana",
+        "Create": "Create",
+        "CurrentBid": "Current bid",
+        "StartingIn": "Kutanga mukati",
+        "EndingIn": "Kuguma",
+        "CreateNFT": "Gadzira iyo NFT",
+        "TitlePlaceholder": "Ipa NFT yako zita",
+        "DescriptionPlaceholder": "Ipa NFT yako tsananguro",
+        "CreateYourNFT": "Gadzira yako NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Optional. Mari yakabhadharwa kumusiki usati waendeswa.",
+        "ExpirationDate": "Zuva rekupera",
+        "StartingDate": "Zuva Rokutanga",
+        "BidsBelowThisAmount": "Mabhidhi ari pasi pemari iyi haatenderwe",
+        "MinimumBid": "Minimum bid",
+        "Author": "Munyori",
+        "Price": "Price",
+        "Commission": "Komisheni",
+        "EnterCommission": "Pinda komisheni",
+        "Owner": "Muridzi",
+        "SelectCategory": "Sarudza chikamu",
+        "Day": "Zuva",
+        "Days": "Mazuva",
+        "Hour": "Awa",
+        "Hours": "Maawa",
+        "Minute": "Mineti",
+        "Minutes": "Maminitsi",
+        "Second": "Chepiri",
+        "Seconds": "Sekondi",
+        "SalesCreator": "zvekutengesa zvichaenda kumusiki",
+        "Details": "Details",
+        "Bids": "Bids",
+        "History": "Nhoroondo",
+        "LoremIpsum": "Lorem Ipsum inongori dummy zvinyorwa zvekudhinda uye typesetting indasitiri.",
+        "PutOnSale": "Isa pakutengesa",
+        "PutOffSale": "Bvisa kubva pakutengesa",
+        "Transfer": "Transfer",
+        "Actions": "Zviito",
+        "Claim": "Claim",
+        "ClaimNFT": "Kumbira NFT",
+        "Unlocking": "Kuvhura",
+        "Unlock": "Kiinura",
+        "Update": "Update",
+        "UpdateToken": "Update Token",
+        "UpdateNFT": "Gadziridza NFT",
+        "CreateToken": "Gadzira Chiratidzo",
+        "PlaceBid": "Nzvimbo Bid",
+        "SoldOut": "Kutengeswa",
+        "NotOnSale": "Haisi Kutengeswa",
+        "NftName": "NFT zita",
+        "DescribeYourNFT": "Ndokumbira utsanangure NFT yako",
+        "NFTImage": "Mufananidzo weNFT",
+        "NFTVideo": "Vhidhiyo yeNFT, kana iripo",
+        "GenerateDescription": "kana kugadzira otomatiki",
+        "UploadMovie": "Upload movie",
+        "MovieSource": "Vadivelu Comedy Movie Source",
+        "MovieURL": "Movie URL",
+        "UploadFile": "Isa faira",
+        "PutOnMarketplace": "Isa pamusika",
+        "InstantPurchase": "Isa mutengo kuti ubvumire vashandisi kutenga yako NFT ipapo ipapo",
+        "FixedPrice": "Fixed price",
+        "TimedAuction": "Auction yenguva",
+        "OpenForBids": "Vhura mabhidhi",
+        "PriceOnePiece": "Pinda mutengo wechidimbu chimwe",
+        "EnterPrice": "Pinda mutengo",
+        "EnterMinimumBid": "Pinda Minimum bid",
+        "SelectChain": "Sarudza ketani",
+        "Currency": "Mari",
+        "AreYouSureDeleteImage": "Une chokwadi chekuti unoda kubvisa mufananidzo?",
+        "AreYouSureDeleteVideo": "Une chokwadi chekuti unoda kubvisa vhidhiyo?",
+        "series": {
+            "Name": "Zita",
+            "Icon": "Icon",
+            "Description": "Tsanangudzo",
+            "Author": "Munyori",
+            "SelectSeries": "Sarudza series",
+            "Value": "Value",
+            "AreYouSure": "Une chokwadi here?",
+            "AuthorInvalid": "Kero yemunyori haisiyo!",
+            "Address": "Kero",
+            "CoverImage": "Mufananidzo webutiro",
+            "UploadCoverImage": "Isa mufananidzo webutiro",
+            "CommissionAddressInvalid": "Kero yekomisheni haisiyo",
+            "OnSale": "pakutengesa",
+            "OffSale": "off sale",
+            "CreateSeries": "Gadzira Series",
+            "UpdateSeries": "Update Series",
+            "SeriesInfo": "Series Info",
+            "SelectAuthor": "Sarudza munyori",
+            "NewItem": "New NFT series",
+            "NamePlaceholder": "Isa zita renhevedzano",
+            "DescPlaceholder": "Pinda tsananguro dzakatevedzana",
+            "EndingIn": "Ending In"
+        },
+        "contract": {
+            "CreateContract": "Gadzira kontrakiti",
+            "SelectContract": "Sarudza kontrakiti",
+            "CreateContractFor": "Gadzira kondirakiti {{userName}}",
+            "ContractFor": "Kondirakiti {{userName}}",
+            "UpdateContract": "Update Contract",
+            "TransferOwnership": "Kutamisa Muridzi",
+            "SetBaseURI": "Seta Base URI",
+            "SetSuffix": "Seta Suffix",
+            "CurrentOwner": "Iyezvino Muridzi",
+            "CurrentBaseURL": "Yazvino BaseURL",
+            "ContractAddressAbsent": "Kero yekondirakiti haipo",
+            "FactoryAddressAbsent": "Kero yefekitari haipo",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Title inodiwa",
+            "SymbolRequired": "Chiratidzo chinodiwa",
+            "TypeContractName": "zita rechibvumirano",
+            "TypeContractSymbol": "chiratidzo chechibvumirano (max 10 chars)"
+        },
+        "contests": {
+            "Title": "Makwikwi",
+            "NewContest": "New Contest"
+        },
+        "collections": {
+            "Title": "Collections",
+            "EnterTitle": "pinda musoro",
+            "EnterDescription": "pinda tsananguro",
+            "NewCollection": "New Collection",
+            "Name": "Zita",
+            "Icon": "Icon",
+            "Description": "Tsanangudzo",
+            "Author": "Munyori",
+            "SelectCollection": "Sarudza kuunganidza",
+            "Value": "Value",
+            "AreYouSure": "Une chokwadi here?",
+            "AuthorInvalid": "Kero yemunyori haisiyo!",
+            "Address": "Kero",
+            "CoverImage": "Mufananidzo webutiro",
+            "UploadIcon": "Upload icon",
+            "CommissionAddressInvalid": "Kero yekomisheni haisiyo",
+            "OnSale": "pakutengesa",
+            "OffSale": "off sale",
+            "CreateCollection": "Gadzira Collection",
+            "UpdateCollection": "Update Collection",
+            "CollectionInfo": "Collection Info",
+            "SelectAuthor": "Sarudza munyori",
+            "NewItem": "New NFT Collection",
+            "NamePlaceholder": "Nyora zita rekuunganidza",
+            "DescPlaceholder": "Pinda tsananguro yekuunganidza",
+            "EndingIn": "Ending In",
+            "SubmitSeries": "Tumira Series"
+        },
+        "import": {
+            "importNFT": "Kuunza NFT&#39;s",
+            "importAttributes": "Ngenisa NFT hunhu",
+            "fileNotFound": "Tine urombo, CSV file harina kuwanikwa.",
+            "fileEmpty": "Tine urombo, CSV faira harina chinhu.",
+            "userIdNotFound": "mushandisi aripo asi id isina chinhu",
+            "errorLine": "mutsara {{1}}",
+            "fieldNotFound": "Inodiwa ndima &quot; {{1}} &quot; haina kuwanikwa",
+            "displayTypeEmpty": "Mhando yekuratidzira ye &quot; {{1}} &quot; haina kuwanikwa",
+            "taskStreamInvalid": "Task stream haishande",
+            "instructionsEmpty": "Task stream mirayiridzo isina chinhu",
+            "complete": "Complete",
+            "activateUsers": "kutumira meseji yekushandisa kune vashandisi?",
+            "importProgress": "Kufambira mberi",
+            "importOptions": "Options",
+            "sampleCSV": "Dhaunirodha Muenzaniso CSV",
+            "fileLabel": "Isa Spreadsheet:",
+            "errorsTitle": "Zvikanganiso zvakaitika"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Sefa neNFT Collections",
+                "ShowNFTCollection": "Ratidza muunganidzwa weNFT mu...",
+                "AllCollections": "All Collections"
+            },
+            "ByUser": {
+                "AllAuthors": "Vose Vanyori",
+                "AllUsers": "Munhu wese",
+                "FilterByAuthors": "Sefa neVanyori"
+            }
+        },
+        "Back": "Dzokera kuKuunganidzwa",
+        "attributes": {
+            "Title": "Manage Attributes",
+            "Attributes": "Attributes",
+            "DisplayTitle": "Display Type",
+            "AddDisplayType": "Wedzera mhando itsva yekuratidzira",
+            "NewDisplay": "Chiratidziro Chitsva",
+            "TraitTitle": "Trait Type",
+            "AddTraitTitle": "Wedzera mhando itsva yehunhu",
+            "NewTrait": "Hunhu Hutsva Rudzi",
+            "ValueTitle": "Value",
+            "AddValueTitle": "Wedzera kukosha kutsva",
+            "NewValue": "New Value",
+            "NewAttribute": "Hunhu Hutsva",
+            "UpdateAttributes": "Update Attributes",
+            "SaveAttributes": "Chengetedza Hunhu"
+        },
+        "profile": {
+            "LogOut": "Log out",
+            "Title": "Profile {{userName}}",
+            "Description": "Mashoko emushandisi",
+            "aboutPlaceholder": "Edit Bio",
+            "UploadCoverPhoto": "Isa Mufananidzo Wekavha",
+            "SureLogOut": "Une chokwadi chekuti unoda kubuda?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "series Id",
+                        "owner": "Muridzi",
+                        "currency": "Currency",
+                        "price": "Price",
+                        "beneficiary": "Mubatsiri",
+                        "autoindex": "Autoindex",
+                        "duration": "Duration",
+                        "rateInterval": "Rate interval",
+                        "rateAmount": "Rate mari"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "ma tokens achanyorwa mune ino nhevedzano",
+                        "owner": "muridzi wemuenzaniso, kana zvisina kudaro achava mutumi",
+                        "currency": "Mari yekutenga tokens, kana zero - yemari yekuzvarwa",
+                        "price": "Price",
+                        "beneficiary": "Anobatsirwa nekutengesa tokens, kana zvisina kudaro achava mutumi",
+                        "autoindex": "Autoindex",
+                        "duration": "Kukiya mushure mekugadzira. Zero zvinoreva kuiwana nekukurumidza.",
+                        "rateInterval": "bhaketi nguva yekutenga kwakakosha",
+                        "rateAmount": "bhaketi mari yekutenga kwakakosha"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(sarudzo)",
+                    "number": "nhamba",
+                    "address": "kero",
+                    "fraction": "chikamu",
+                    "integer": "integer",
+                    "seconds": "seconds",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Produce",
+                "viewInstancesList": "Refresh List"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Series ID",
+                        "account": "Account",
+                        "amount": "Mari"
+                    },
+                    "small": {
+                        "seriesId": "chiratidzo chitsva chichava munhevedzano ine ID yakadaro",
+                        "account": "muridzi weNFT ichangogadzirwa. kana isina kuiswa - ichashandisa ikozvino chikwama",
+                        "amount": "huwandu hweNFT kune mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(sarudzo)",
+                    "seriesId": "id",
+                    "account": "account",
+                    "amount": "mari",
+                    "integer": "integer"
+                },
+                "btn": {
+                    "Purchase": "Purchase",
+                    "SpecialPurchase": "Kutenga kwakakosha"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Kero"
+                    },
+                    "small": {
+                        "account": "Kero"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Kero isiriyo"
+                },
+                "placeholders": {
+                    "account": "Kero"
+                },
+                "addToWhitelist": "Wedzera kune Whitelist",
+                "removeFromWhitelist": "Bvisa Kubva kuWhitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Chiratidzo ID",
+                    "custodian": "Custodian",
+                    "recipient": "Mugamuchiri"
+                },
+                "small": {
+                    "tokenId": "token id chii chinoda kukiya kana kukiinura",
+                    "custodian": "kero inogona kukwanisa kuvhura",
+                    "recipient": "kero iyo ichagamuchira zviratidzo"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokeniId isiriyo",
+                "invalidCustodian": "Muchengeti haashandi",
+                "invalidRecipient": "Mugamuchiri Haashandi"
+            },
+            "placeholders": {
+                "optional": "(sarudzo)",
+                "tokenId": "id",
+                "custodian": "kero"
+            },
+            "Lock": "Lock",
+            "Unlock": "Kiinura",
+            "Locked": "Yakakiyiwa",
+            "CustodianAddress": "Kero yemutariri",
+            "TokenWasClaimed": "Chiratidzo &quot; {{title}} &quot; chakanzi",
+            "TokenWasLocked": "Chiratidzo &quot; {{title}} &quot; chakavharwa",
+            "TokenWasUnlocked": "Chiratidzo &quot; {{title}} &quot; chakavhurwa"
+        }
+    },
+    "fundrise": {
+        "placeholder": "nyora chimwe chinhu pamusoro pechipo ichi..."
+    },
+    "currencies": {
+        "choose": "Sarudza mari"
+    }
+}

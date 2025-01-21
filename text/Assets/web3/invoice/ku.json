@@ -1,0 +1,27 @@
+{
+    "title": "Diravdan",
+    "steps": {
+        "sending_native_coins": "Dişîne coinên xwecî",
+        "sending_tokens": "Nîşan dişîne",
+        "swap": "Swap",
+        "approve": "Destûrdan",
+        "one_tx": "Divê hûn yek danûstandinê bişînin",
+        "two_tx": "Divê hûn du danûstandinan bişînin"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Pereyên ku bidin"
+            }
+        },
+        "btns": {
+            "pay": "Diravdan"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Pêdivî ye ku &quot; {{amountOut}} &quot; nîşanekan bidin"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Zincîra weha bi id &quot; {{chainId}} &quot; nayê piştgirî kirin"
+    }
+}

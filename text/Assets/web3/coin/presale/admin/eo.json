@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Vendo de Token",
+                        "timestamps": "Tempoj",
+                        "prices": "Prezoj",
+                        "endTime": "Fina Tempo",
+                        "thresholds": "Sojloj",
+                        "bonuses": "Gratifikoj"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Posedanto ne povas retiriĝi",
+                            "option1": "Posedanto povas retiri ĵetonojn nur post fintempo pasis",
+                            "option2": "Posedanto povas retiri ĵetonojn iam ajn"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Komunuma adreso",
+                    "methodkeccack": "Keccak256 hash-funkcio",
+                    "roleId": "Rolidentigilo",
+                    "sellingToken": "Vendanta Token-adreso",
+                    "prices": "ETH, Prezo",
+                    "thresholds": "nombro da ĵetonoj",
+                    "bonuses": "Bonus%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Ne estas fundoj"
+                },
+                "btns": {
+                    "createFund": "Krei Fundon",
+                    "createFundInForm": "Krei"
+                },
+                "fundAddress": "Fondadreso",
+                "createFund": "Krei Fundon",
+                "fundInfo": "Info",
+                "produce": "Produkti",
+                "loading": "Ŝarĝante",
+                "viewInstancesList": "Refreŝigi Listo"
+            }
+        }
+    }
+}

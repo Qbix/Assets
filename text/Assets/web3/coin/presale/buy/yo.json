@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Elo ni lati nawo?"
+                    },
+                    "placeholders": {
+                        "amount": "iye {{nativeCoin}}",
+                        "max": "ti o pọju: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Ra",
+                    "execute": "Ṣiṣe"
+                }
+            }
+        }
+    }
+}

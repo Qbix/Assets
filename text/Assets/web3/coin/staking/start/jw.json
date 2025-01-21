@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duration",
+                        "amount": "Jumlah"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duration",
+                        "amount": "Jumlah"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Duration",
+                    "amount": "jumlah"
+                },
+                "btns": {
+                    "stake": "Stake"
+                },
+                "stake": "Stake",
+                "loading": "Loading"
+            }
+        }
+    }
+}

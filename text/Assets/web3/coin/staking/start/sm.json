@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Umi",
+                        "amount": "Aofaiga"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Umi",
+                        "amount": "Aofaiga"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Umi",
+                    "amount": "aofaiga"
+                },
+                "btns": {
+                    "stake": "Siteki"
+                },
+                "stake": "Siteki",
+                "loading": "utaina"
+            }
+        }
+    }
+}

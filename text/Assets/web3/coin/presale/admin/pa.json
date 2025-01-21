@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "ਟੋਕਨ ਵੇਚ ਰਿਹਾ ਹੈ",
+                        "timestamps": "ਵਾਰ",
+                        "prices": "ਕੀਮਤਾਂ",
+                        "endTime": "ਸਮਾਪਤੀ ਸਮਾਂ",
+                        "thresholds": "ਥ੍ਰੈਸ਼ਹੋਲਡ",
+                        "bonuses": "ਬੋਨਸ"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "ਮਾਲਕ ਵਾਪਸ ਨਹੀਂ ਲੈ ਸਕਦਾ",
+                            "option1": "ਸਮਾਪਤੀ ਸਮਾਂ ਲੰਘਣ ਤੋਂ ਬਾਅਦ ਹੀ ਮਾਲਕ ਟੋਕਨ ਵਾਪਸ ਲੈ ਸਕਦਾ ਹੈ",
+                            "option2": "ਮਾਲਕ ਕਿਸੇ ਵੀ ਸਮੇਂ ਟੋਕਨ ਵਾਪਸ ਲੈ ਸਕਦਾ ਹੈ"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "ਭਾਈਚਾਰੇ ਦਾ ਪਤਾ",
+                    "methodkeccack": "Keccak256 ਹੈਸ਼ ਫੰਕਸ਼ਨ",
+                    "roleId": "ਭੂਮਿਕਾ ਆਈ.ਡੀ",
+                    "sellingToken": "ਟੋਕਨ ਪਤਾ ਵੇਚਣਾ",
+                    "prices": "ETH, ਕੀਮਤ",
+                    "thresholds": "ਟੋਕਨਾਂ ਦਾ #",
+                    "bonuses": "ਬੋਨਸ %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "ਕੋਈ ਫੰਡ ਨਹੀਂ ਹਨ"
+                },
+                "btns": {
+                    "createFund": "ਫੰਡ ਬਣਾਓ",
+                    "createFundInForm": "ਬਣਾਓ"
+                },
+                "fundAddress": "ਫੰਡ ਦਾ ਪਤਾ",
+                "createFund": "ਫੰਡ ਬਣਾਓ",
+                "fundInfo": "ਜਾਣਕਾਰੀ",
+                "produce": "ਉਤਪਾਦਨ",
+                "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
+                "viewInstancesList": "ਸੂਚੀ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ"
+            }
+        }
+    }
+}

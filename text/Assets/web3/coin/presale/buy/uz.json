@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Qancha investitsiya qilish kerak?"
+                    },
+                    "placeholders": {
+                        "amount": "Miqdori {{nativeCoin}}",
+                        "max": "Maksimal: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Sotib olish",
+                    "execute": "Bajarish"
+                }
+            }
+        }
+    }
+}

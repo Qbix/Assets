@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "comharraErc20",
+                    "duration": "Fad",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "mòr-chòrdteToken",
+                    "donations": "tabhartasan",
+                    "rewardsRateFraction": "duaiseanRateFraction",
+                    "numerator": "àireamhair",
+                    "denominator": "ainmear"
+                },
+                "small": {
+                    "tokenErc20": "comharraErc20",
+                    "duration": "Faid ann an làithean",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "mòr-chòrdteToken",
+                    "donations": "tabhartasan",
+                    "rewardsRateFraction": "duaiseanRateFraction",
+                    "numerator": "àireamhair",
+                    "denominator": "ainmear"
+                }
+            },
+            "placeholders": {
+                "optional": "(roghainneil)",
+                "tuple": "tuple[]",
+                "number": "àireamh",
+                "address": "seòladh",
+                "fraction": "bloigh",
+                "integer": "iomlanachd",
+                "seconds": "diogan",
+                "days": "làithean",
+                "uint256": "aont256",
+                "uint192": "aont192",
+                "uint64": "aont 64",
+                "uint32": "uint32",
+                "uint16": "aont16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Chan eil lochan ann"
+            },
+            "btns": {
+                "createPool": "Cruthaich Pool",
+                "createPoolInForm": "Cruthaich"
+            },
+            "createPool": "Cruthaich Pool",
+            "produce": "Toradh",
+            "loading": "A&#39; luchdachadh",
+            "viewInstancesList": "Clàr Ath-nuadhachadh"
+        }
+    }
+}

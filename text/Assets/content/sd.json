@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "نقص",
+        "WalletAbsent": "پرس ڳنڍيل نه آهي.",
+        "Rendering": "<span class='url'>{{1}}<\/span> رينجرنگ دوران غلطيون هيون",
+        "PriceRequired": "قيمت گهربل!",
+        "NameRequired": "نالو گهربل!",
+        "PriceInvalid": "قيمت غلط!",
+        "AmountInvalid": "رقم غلط!",
+        "TransactionFailed": "ٽرانزيڪشن ناڪام ٿي وئي آهي",
+        "ChainNotSupported": "منتخب ٿيل زنجير سپورٽ نه آهي. حمايت ٿيل زنجير: {{supportedChain}}",
+        "NeedMetaMaskConnected": "ايپليڪيشن سان ڪم ڪرڻ لاءِ MetaMask ڳنڍڻ جي ضرورت آهي",
+        "UserNotLoggedInMetaMask": "استعمال ڪندڙ MetaMask ۾ لاگ ان نه ٿيو آهي",
+        "CurrencyNotFound": "ڪرنسي نه ملي",
+        "WrongChain": "ھي NFT &quot; {{chain}} &quot; تحت ٺاھيو ويو. مھرباني ڪري ھي زنجير استعمال ڪريو.",
+        "NoRecipientSelected": "ڪو به وصول ڪندڙ نه چونڊيو ويو آهي",
+        "CantManageFrozenSeries": "توهان منجمد سيريز کي منظم نٿا ڪري سگهو",
+        "SubscriptionStreamNotPaid": "توهان هن مواد کي ڏسڻ لاءِ ادا نه ڪيو آهي. مھرباني ڪري {{subscriptionUrl}} تي ڪلڪ ڪريو ۽ مناسب منصوبي جي رڪنيت حاصل ڪريو."
+    },
+    "admin": {
+        "Title": "اثاثن جي انتظامي",
+        "SubscriptionTitle": "سبسڪرپشن منصوبا"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "ادا ڪرڻ لاءِ ٽيپ ڪريو"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : چارج {{call 'user.displayName'}} لاء عمل ڪيو ويو آهي",
+        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} تي توهان جي ادائگي جي مهرباني",
+        "SubscribedTo": "{{call 'user.displayName'}} رڪنيت حاصل ڪئي {{plan.title}}",
+        "YouSubscribedTo": "توھان کي رڪنيت حاصل ڪئي وئي آھي {{plan.title}}",
+        "Assets\/credits\/alert": "توهان وٽ توهان جي اڪائونٽ سان لاڳاپيل هڪ خبرداري آهي"
+    },
+    "charge": {
+        "Subject": "توھان وصول ڪيو {{displayAmount}} جي ادائيگي {{call 'publisher.displayName'}} مان &quot; {{description}} &quot; لاءِ",
+        "HasBeenCharged": "اي، اهو صرف توهان کي ٻڌائڻ لاءِ آهي {{1}} {{4}} جي ذريعي {{3}} لاءِ {{2}} چارج ڪيو ويو آهي"
+    },
+    "charged": {
+        "Subject": "&quot; {{description}} &quot; لاءِ توهان جي ادائگي جي مهرباني",
+        "HavePaid": "هي {{1}} ، هي صرف هڪ تڪڙي تصديق آهي ته توهان ڪاميابيءَ سان ادا ڪيو آهي {{2}} کان {{3}} تائين {{4}} لاءِ"
+    },
+    "connectedAccount": {
+        "Title": "ڳنڍيو اڪائونٽ",
+        "Success": "ڪاميابي",
+        "YourAccountCreated": "توھان جو کاتو ڪاميابيءَ سان ٺاھيو ويو آھي!",
+        "YourAccountAlreadyCreated": "توھان جو اڪائونٽ اڳ ۾ ئي ٺاھيو ويو آھي ۽ استعمال لاءِ تيار آھي"
+    },
+    "payment": {
+        "AboutOrder": "آرڊر بابت ڄاڻ",
+        "PaymentMethod": "ادائگي جو طريقو",
+        "ContactInfo": "رابطي جي معلومات",
+        "Pay": "ادا",
+        "PaymentSucceeded": "ادائگي ڪاميابي سان عمل ڪيو ويو آهي",
+        "PaymentProcessing.": "توهان جي ادائگي تي عمل ڪيو پيو وڃي",
+        "FailTryAgain": "توهان جي ادائيگي ڪامياب نه هئي. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
+        "SomethingWrong": "ڪجهه غلط ٿي ويو",
+        "PaymentStatus": "ادائگي جي حالت",
+        "PayTo": "ادا {{displayName}}",
+        "ChooseCurrency": "ڪرنسي چونڊيو",
+        "YouCanSendUpTo": "توهان {{amount}} {{symbol}} تائين موڪلي سگهو ٿا",
+        "Send": "موڪليو",
+        "EnterAmount": "رقم داخل ڪريو"
+    },
+    "credits": {
+        "InviteAcceptedBy": "{{invitedUserName}} پاران دعوت قبول ڪئي وئي",
+        "InvitedUserFilledStream": "{{invitedUserName}} ڀريل {{FilledStreamTitle}}",
+        "ForFillingStream": "{{FilledStreamTitle}} ڀرڻ لاءِ",
+        "YouHaveCreditsToStart": "توهان وٽ شروع ڪرڻ لاءِ {{amount}} ڪريڊٽ آهن",
+        "PaymentFor": "ادائگي لاء &quot; {{1}} &quot;",
+        "PaymentTo": "{{1}} تائين ادائگي",
+        "PaymentToUser": "{{toUserName}} ڏانهن منتقل ڪريو",
+        "CreatePrivateChat": "{{toUserName}} سان نجي چيٽ لاءِ",
+        "CreatePaidStream": "{{toStreamName}} ٺاهڻ لاء",
+        "JoinedPaidStream": "&quot; <a data-publisherId='<i translate='no'>999&#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot; ۾ رزرويشن لاءِ",
+        "CreatedCommunity": "ڪميونٽي ٺاهڻ لاء &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999&#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot; ۾ رزرويشن جي واپسي جي طور تي",
+        "BoughtCredits": "خريد ڪيو {{amount}} ڪريڊٽ",
+        "BonusCredits": "بونس {{amount}} ڪريڊٽ",
+        "BuyAmountCredits": "خريد ڪريو {{amount}} ڪريڊٽ",
+        "WatchClip": "ڏسڻ لاءِ {{fromStreamTitle}}",
+        "MissingCredits": "غائب ڪريڊٽ",
+        "YouMissingCredits": "اڳتي وڌڻ لاءِ توھان کي اضافي {{amount}} ڪريڊٽ جي ضرورت آھي.",
+        "BuyCredits": "ڪريڊٽ خريد ڪريو",
+        "BuyBonus": "هڪ ڀيرو {{amount}} ڪريڊٽ خريد ڪرڻ جي نتيجي ۾ {{bonus}} ڪريڊٽ جو بونس ٿيندو.",
+        "Buy": "خريد ڪريو",
+        "PurchaseCredits": "ڪريڊٽ خريد ڪريو",
+        "Credits": "ڪريڊٽ",
+        "ErrorInvalidAmount": "رقم غلط",
+        "ErrorInvalidCurrency": "بدقسمتي سان، اسان اڃا تائين ڪرنسي {{currency}} جي حمايت نٿا ڪريون",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} ڪريڊٽ",
+            "BonusCredits": "{{amount}} ڪريڊٽ"
+        }
+    },
+    "history": {
+        "Date": "تاريخ",
+        "Amount": "رقم",
+        "Description": "وصف",
+        "Client": "گراهڪ",
+        "User": "استعمال ڪندڙ",
+        "To": "جي طرف",
+        "From": "کان",
+        "SeeHistory": "ڏسو ادائگي جي تاريخ {{1}} لاءِ",
+        "HistoryEmpty": "اڃا تائين ڪوبه معاملو ناهي",
+        "PaymentFor": "{{amount}} ڪريڊٽ موڪليو",
+        "PaymentTo": "{{amount}} ڪريڊٽ موڪليو",
+        "PaymentToUser": "{{amount}} ڪريڊٽ موڪليو",
+        "CreatePaidStream": "{{amount}} ڪريڊٽ خرچ ڪيو",
+        "WatchClip": {
+            "+": "ڪمايو {{amount}} ڪريڊٽ",
+            "-": "{{amount}} ڪريڊٽ خرچ ڪيو"
+        },
+        "JoinedPaidStream": {
+            "+": "ڪمايو {{amount}} ڪريڊٽ",
+            "-": "{{amount}} ڪريڊٽ خرچ ڪيو"
+        },
+        "LeftPaidStream": {
+            "+": "حاصل ڪيو {{amount}} ڪريڊٽ",
+            "-": "{{amount}} ڪريڊٽ موڪليو"
+        },
+        "CreatedCommunity": "{{amount}} ڪريڊٽ خرچ ڪيو",
+        "BoughtCredits": "خريد ڪيو {{amount}} ڪريڊٽ",
+        "BonusCredits": "حاصل ڪيو بونس {{amount}} ڪريڊٽ",
+        "InviteAcceptedBy": "ڪمايو {{amount}} ڪريڊٽ",
+        "Streams_user_firstname": "ڪمايو {{amount}} ڪريڊٽ",
+        "Streams_user_lastname": "ڪمايو {{amount}} ڪريڊٽ",
+        "Streams_user_icon": "ڪمايو {{amount}} ڪريڊٽ",
+        "Places_user_location": "ڪمايو {{amount}} ڪريڊٽ",
+        "Streams_greeting": "ڪمايو {{amount}} ڪريڊٽ",
+        "YouHaveCreditsToStart": "ڪمايو {{amount}} ڪريڊٽ",
+        "InvitedUserFilledStream": "ڪمايو {{amount}} ڪريڊٽ",
+        "ForFillingStream": "ڪمايو {{amount}} ڪريڊٽ",
+        "CreatePrivateChat": "{{amount}} ڪريڊٽ خرچ ڪيو"
+    },
+    "subscriptions": {
+        "infoTitle": "ادائگي جي معلومات مهيا ڪريو",
+        "confirm": {
+            "title": "سبسڪرپشن شروع ڪريو",
+            "message": "&quot; {{title}} &quot; جي بار بار رڪنيت شروع ڪريو؟",
+            "ok": "ٺيڪ",
+            "cancel": "منسوخ ڪريو"
+        },
+        "CreditOrDebitCard": "ڪريڊٽ يا ڊيبٽ ڪارڊ",
+        "SubscribePayment": "رڪنيت جي ادائيگي",
+        "ImmediatePayment": "فوري ادائيگي",
+        "ProcessingPayment": "پروسيسنگ ادائيگي",
+        "SubscriptionAlreadyPaid": "هي رڪنيت اڳ ۾ ئي ادا ڪئي وئي آهي",
+        "SubscriptionNotActive": "رڪنيت في الحال غير فعال آهي",
+        "Subscribed": "رڪنيت حاصل ڪئي",
+        "Unsubscribed": "رڪنيت ختم ڪئي وئي",
+        "Unsubscribe": "رڪنيت ختم ڪريو",
+        "Subscribe": "رڪنيت حاصل ڪريو",
+        "Started": "شروع ڪيو",
+        "EndsIn": "۾ ختم ٿئي ٿو",
+        "NextPay": "ايندڙ ادائيگي",
+        "Period": "عرصو",
+        "Price": "قيمت",
+        "AreYouSureUnsubscribe": "ڇا توھان پڪ آھي توھان چاھيو ٿا ھن منصوبي مان رڪنيت ختم ڪرڻ؟",
+        "YouUnsubscribedFromPlan": "توھان منصوبا &quot; {{planTitle}} &quot; مان رڪنيت ختم ڪري ڇڏي آھي. توهان کي ايندڙ وقت چارج نه ڪيو ويندو، پر توهان جي رڪنيت {{endsIn}} تائين جاري رهندي",
+        "plan": {
+            "TitlePlaceholder": "منصوبي جو عنوان",
+            "PricePlaceholder": "قيمت",
+            "SubscriptionTitle": "سبسڪرپشن منصوبا",
+            "DescriptionPlaceholder": "سبسڪرپشن پلان جي وضاحت",
+            "AreYouSureDeletePlan": "ڇا توهان پڪ سان هن منصوبي کي ختم ڪرڻ چاهيو ٿا؟",
+            "Duration": "عرصو",
+            "Discount": "رعايت",
+            "SavePlan": "بچايو",
+            "Interrupt": "مداخلت ڪرڻ",
+            "Continue": "جاري رکو",
+            "NewPlan": "نئون منصوبو",
+            "SelectDisplayType": "{{displayType}} چونڊيو",
+            "EndDate": "ختم ٿيڻ جي تاريخ",
+            "Available": "دستياب",
+            "Hidden": "لڪيل",
+            "InviteOnly": "صرف دعوت",
+            "CantSubscribeUnlessInvited": "توهان هن منصوبي جي رڪنيت حاصل نٿا ڪري سگهو جيستائين توهان کي دعوت نه ڏني وڃي"
+        }
+    },
+    "payments": {
+        "infoTitle": "ادائگي جي معلومات مقرر ڪريو",
+        "BuyAmountCredits": "خريد ڪريو {{amount}} ڪريڊٽ",
+        "confirm": {
+            "title": "ادائگي ڪريو",
+            "message": "ڇا توهان {{symbol}} {{amount}} ادا ڪرڻ تي متفق آهيو؟",
+            "ok": "ٺيڪ",
+            "cancel": "منسوخ ڪريو"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "ڪريڊٽ",
+            "description": "ڪريڊٽ ۽ ادائگي جي ٽريڪ رکي ٿو"
+        },
+        "Assets\/plan": {
+            "displayType": "سبسڪرپشن پلان",
+            "description": "سبسڪرپشن پلان"
+        },
+        "Assets\/subscription": {
+            "displayType": "رڪنيت",
+            "description": "رڪنيت"
+        },
+        "Assets\/product": {
+            "displayType": "پيداوار",
+            "description": "پيداوار وڪرو ٿي رهيو آهي"
+        },
+        "Assets\/service": {
+            "displayType": "خدمت",
+            "description": "خدمت پيش ڪئي پئي وڃي"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "ڪمايو {{amount}} ڪريڊٽ"
+        },
+        "Assets\/credits\/bought": {
+            "content": "خريد ڪيو {{amount}} ڪريڊٽ"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "بونس {{amount}} ڪريڊٽ"
+        },
+        "Assets\/credits\/spent": {
+            "content": "{{amount}} ڪريڊٽ خرچ ڪيو"
+        },
+        "Assets\/credits\/sent": {
+            "content": "{{toUserName}} ڏانهن {{amount}} ڪريڊٽ موڪليو"
+        },
+        "Assets\/credits\/received": {
+            "content": "{{fromUserName}} کان {{amount}} ڪريڊٽ حاصل ڪيا"
+        },
+        "Assets\/credits\/alert": {
+            "content": "توهان جي اڪائونٽ ۾ ڪافي ڪريڊٽ نه آهن. وڌيڪ ڪريڊٽ خريد ڪرڻ لاءِ مهرباني ڪري هيٺ ڏنل <a href='<i translate='no'>999&#39;&gt;لنڪ<\/a> تي وڃو."
+        }
+    },
+    "billing": {
+        "Title": "اثاثن جي بلنگ",
+        "CreditsMinimum": "گھٽ ۾ گھٽ ڪريڊٽ",
+        "CreditsToAdd": "شامل ڪرڻ لاء ڪريڊٽ",
+        "Save": "بچايو",
+        "ThisLink": "هي لنڪ",
+        "errors": {
+            "CreditsMinimumNegative": "گھٽ ۾ گھٽ ڪريڊٽ منفي نه ٿي سگھي",
+            "CreditsToAddNegative": "شامل ڪرڻ لاء ڪريڊٽ منفي نه ٿي سگھي"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "نئين خدمت",
+            "TitlePlaceholder": "خدمت جو عنوان",
+            "PricePlaceholder": "قيمت مقرر ڪريو",
+            "LinkPlaceholder": "اضافي معلومات جي لنڪ مقرر ڪريو",
+            "DescriptionPlaceholder": "خدمت جي وضاحت",
+            "SaveService": "خدمت محفوظ ڪريو",
+            "SelectRequiredParticipants": "گهربل لاڳاپيل شرڪت ڪندڙ",
+            "RequiredParticipantsDesc": "مھرباني ڪري لاڳاپيل شرڪت ڪندڙن کي چونڊيو جيڪي ھن خدمت کي استعمال ڪرڻ لاءِ گھربل آھن (مثال طور پالتو جانور &quot;ڪتن جي شو&quot; لاءِ، يا ٻارن لاءِ &quot;ٻارن جي موڪلن&quot; وغيره). جيڪڏهن خدمت ادا ڪئي وئي آهي، صارف کي هر لاڳاپيل شرڪت ڪندڙن لاء پڻ ادا ڪرڻو پوندو."
+        },
+        "EditServiceTemplate": {
+            "Title": "خدمت ۾ ترميم ڪريو"
+        },
+        "ManageServiceTemplates": "سروس ٽيمپليٽس کي منظم ڪريو",
+        "ManageServices": "خدمتون منظم ڪريو",
+        "Free": "واندو",
+        "OptionalContribution": "اختياري تعاون",
+        "RequiredPayment": "گهربل ادائيگي",
+        "AreYouSureDelete": "ڇا توھان واقعي ھن خدمت کي ختم ڪرڻ چاھيو ٿا؟",
+        "AmountServicesRelated": "ھن سروس سان لاڳاپيل {{amount}} دستياب آھن. انهن کي به هٽايو ويندو."
+    },
+    "transfer": {
+        "SelectRecipient": "وصول ڪندڙ چونڊيو",
+        "TransactionSuccess": "ٽرانزيڪشن جي ڪاميابي",
+        "OrTypeWalletAddress": "يا قسم وصول ڪندڙ والٽ ايڊريس",
+        "AppCredits": "ايپ ڪريڊٽ"
+    },
+    "NFT": {
+        "Title": "عنوان",
+        "Name": "نالو",
+        "EnterName": "نالو داخل ڪريو",
+        "EnterAuthorWallet": "ليکڪ پرس داخل ڪريو",
+        "InformationAboutTitle": "{{title}} NFT بابت ڄاڻ",
+        "Description": "وصف",
+        "DetailedInformationAboutNFT": "تفصيلي ڄاڻ NFT",
+        "PresaleStarts": "Presale 23 ڊسمبر تي شروع ٿيندي",
+        "OwnerUserNotFound": "هن NFT جو مالڪ اسان جي درخواست ۾ رجسٽر ٿيل ناهي.",
+        "BuyNow": "هاڻ خريد ڪريو",
+        "Buy": "خريد ڪريو",
+        "Add": "شامل ڪريو",
+        "Remove": "هٽايو",
+        "NoNFTyet": "اڃان تائين ڪوبه NFTs",
+        "Conversation": "ڳالهه ٻولهه",
+        "Create": "ٺاهيو",
+        "CurrentBid": "موجوده آڇ",
+        "StartingIn": "۾ شروع ٿي رهيو آهي",
+        "EndingIn": "۾ ختم ٿيڻ",
+        "CreateNFT": "هڪ NFT ٺاهيو",
+        "TitlePlaceholder": "پنھنجي NFT کي عنوان ڏيو",
+        "DescriptionPlaceholder": "پنھنجي NFT جي وضاحت ڏيو",
+        "CreateYourNFT": "پنهنجو NFT ٺاهيو",
+        "Royalties": "رائلٽيز",
+        "RoyaltyPlaceholder": "اختياري. منتقلي کان اڳ خالق کي ادا ڪيل رقم.",
+        "ExpirationDate": "مدو ختم ٿيڻ جي تاريخ",
+        "StartingDate": "شروعاتي تاريخ",
+        "BidsBelowThisAmount": "هن رقم کان گهٽ جي بولن جي اجازت نه هوندي",
+        "MinimumBid": "گھٽ ۾ گھٽ بول",
+        "Author": "ليکڪ",
+        "Price": "قيمت",
+        "Commission": "ڪميشن",
+        "EnterCommission": "ڪميشن داخل ڪريو",
+        "Owner": "مالڪ",
+        "SelectCategory": "زمرو چونڊيو",
+        "Day": "ڏينهن",
+        "Days": "ڏينهن",
+        "Hour": "ڪلاڪ",
+        "Hours": "ڪلاڪ",
+        "Minute": "منٽ",
+        "Minutes": "منٽ",
+        "Second": "ٻيون",
+        "Seconds": "سيڪنڊ",
+        "SalesCreator": "وڪرو پيدا ڪندڙ ڏانهن ويندا",
+        "Details": "تفصيل",
+        "Bids": "بوليون",
+        "History": "تاريخ",
+        "LoremIpsum": "Lorem Ipsum صرف ڇپائي ۽ ٽائپ سيٽنگ انڊسٽري جو ڊمي متن آهي.",
+        "PutOnSale": "وڪڻڻ تي",
+        "PutOffSale": "وڪرو مان ڪڍڻ",
+        "Transfer": "منتقلي",
+        "Actions": "عمل",
+        "Claim": "دعويٰ",
+        "ClaimNFT": "NFT دعوي ڪريو",
+        "Unlocking": "کولڻ",
+        "Unlock": "لاڪ",
+        "Update": "تازه ڪاري",
+        "UpdateToken": "تازه ڪاري ٽوڪن",
+        "UpdateNFT": "تازه ڪاري ڪريو NFT",
+        "CreateToken": "ٽوڪن ٺاهيو",
+        "PlaceBid": "جاءِ جي بول",
+        "SoldOut": "وڪرو ٿيل",
+        "NotOnSale": "وڪرو تي ناهي",
+        "NftName": "نالو NFT",
+        "DescribeYourNFT": "مھرباني ڪري پنھنجي NFT بيان ڪريو",
+        "NFTImage": "NFT لاء تصوير",
+        "NFTVideo": "NFT لاء وڊيو، جيڪڏهن ڪو",
+        "GenerateDescription": "يا خودڪار ٺاهي",
+        "UploadMovie": "فلم اپ لوڊ ڪريو",
+        "MovieSource": "فلم جو ذريعو",
+        "MovieURL": "فلم URL",
+        "UploadFile": "فائل اپ لوڊ ڪريو",
+        "PutOnMarketplace": "بازار تي لڳايو",
+        "InstantPurchase": "صارفين کي فوري طور تي توهان جي NFT خريد ڪرڻ جي اجازت ڏيڻ لاء قيمت داخل ڪريو",
+        "FixedPrice": "مقرر قيمت",
+        "TimedAuction": "مقرر ٿيل نيلامي",
+        "OpenForBids": "بولن لاءِ کوليو",
+        "PriceOnePiece": "ھڪڙي ٽڪري جي قيمت داخل ڪريو",
+        "EnterPrice": "قيمت داخل ڪريو",
+        "EnterMinimumBid": "گھٽ ۾ گھٽ بول داخل ڪريو",
+        "SelectChain": "زنجير چونڊيو",
+        "Currency": "ڪرنسي",
+        "AreYouSureDeleteImage": "ڇا توهان پڪ سان تصوير هٽائڻ چاهيو ٿا؟",
+        "AreYouSureDeleteVideo": "ڇا توهان واقعي وڊيو هٽائڻ چاهيو ٿا؟",
+        "series": {
+            "Name": "نالو",
+            "Icon": "آئڪن",
+            "Description": "وصف",
+            "Author": "ليکڪ",
+            "SelectSeries": "سيريز چونڊيو",
+            "Value": "قدر",
+            "AreYouSure": "ڇا توهان کي پڪ آهي؟",
+            "AuthorInvalid": "ليکڪ ايڊريس غلط!",
+            "Address": "پتو",
+            "CoverImage": "ڪپڙا تصوير",
+            "UploadCoverImage": "ڪپڙا اپ لوڊ ڪريو تصوير",
+            "CommissionAddressInvalid": "ڪميشن جو پتو غلط آهي",
+            "OnSale": "وڪري تي",
+            "OffSale": "وڪرو بند",
+            "CreateSeries": "سيريز ٺاهيو",
+            "UpdateSeries": "تازه ڪاري سيريز",
+            "SeriesInfo": "سيريز جي ڄاڻ",
+            "SelectAuthor": "ليکڪ چونڊيو",
+            "NewItem": "نئون NFT سيريز",
+            "NamePlaceholder": "سيريز جو نالو داخل ڪريو",
+            "DescPlaceholder": "سيريز جي وضاحت داخل ڪريو",
+            "EndingIn": "۾ ختم ٿيڻ"
+        },
+        "contract": {
+            "CreateContract": "معاهدو ٺاهيو",
+            "SelectContract": "چونڊيو معاهدو",
+            "CreateContractFor": "{{userName}} لاءِ معاهدو ٺاهيو",
+            "ContractFor": "{{userName}} لاءِ معاهدو",
+            "UpdateContract": "تازه ڪاري جو معاهدو",
+            "TransferOwnership": "ملڪيت جي منتقلي",
+            "SetBaseURI": "بيس URI سيٽ ڪريو",
+            "SetSuffix": "Suffix مقرر ڪريو",
+            "CurrentOwner": "موجوده مالڪ",
+            "CurrentBaseURL": "موجوده بيس URL",
+            "ContractAddressAbsent": "معاهدي جو پتو غير حاضر",
+            "FactoryAddressAbsent": "فيڪٽري ايڊريس غير حاضر",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "عنوان گهربل",
+            "SymbolRequired": "علامت گهربل",
+            "TypeContractName": "معاهدي جو نالو",
+            "TypeContractSymbol": "معاهدي جي علامت (وڌ ۾ وڌ 10 اکر)"
+        },
+        "contests": {
+            "Title": "مقابلا",
+            "NewContest": "نئون مقابلو"
+        },
+        "collections": {
+            "Title": "مجموعو",
+            "EnterTitle": "عنوان داخل ڪريو",
+            "EnterDescription": "وضاحت داخل ڪريو",
+            "NewCollection": "نئون مجموعو",
+            "Name": "نالو",
+            "Icon": "آئڪن",
+            "Description": "وصف",
+            "Author": "ليکڪ",
+            "SelectCollection": "مجموعو چونڊيو",
+            "Value": "قدر",
+            "AreYouSure": "ڇا توهان کي پڪ آهي؟",
+            "AuthorInvalid": "ليکڪ ايڊريس غلط!",
+            "Address": "پتو",
+            "CoverImage": "ڪپڙا تصوير",
+            "UploadIcon": "اپلوڊ آئڪن",
+            "CommissionAddressInvalid": "ڪميشن جو پتو غلط آهي",
+            "OnSale": "وڪري تي",
+            "OffSale": "وڪرو بند",
+            "CreateCollection": "مجموعو ٺاهيو",
+            "UpdateCollection": "تازه ڪاري جمع",
+            "CollectionInfo": "معلومات گڏ ڪرڻ",
+            "SelectAuthor": "ليکڪ چونڊيو",
+            "NewItem": "نئون NFT مجموعو",
+            "NamePlaceholder": "جمع جو نالو داخل ڪريو",
+            "DescPlaceholder": "جمع جي تفصيل داخل ڪريو",
+            "EndingIn": "۾ ختم ٿيڻ",
+            "SubmitSeries": "هڪ سيريز جمع ڪرايو"
+        },
+        "import": {
+            "importNFT": "NFT جي درآمد",
+            "importAttributes": "اين ايف ٽي خاصيتون درآمد ڪريو",
+            "fileNotFound": "معاف ڪجو، CSV فائل نه ملي.",
+            "fileEmpty": "معاف ڪجو، CSV فائل خالي آھي.",
+            "userIdNotFound": "صارف موجود آهي پر id خالي آهي",
+            "errorLine": "لائن {{1}}",
+            "fieldNotFound": "گھربل ميدان &quot; {{1}} &quot; نه مليو",
+            "displayTypeEmpty": "ڊسپلي جو قسم &quot; {{1}} &quot; لاءِ نه مليو",
+            "taskStreamInvalid": "ڪم جو وهڪرو غلط",
+            "instructionsEmpty": "ڪم اسٽريم جون هدايتون خالي",
+            "complete": "مڪمل",
+            "activateUsers": "استعمال ڪندڙن کي چالو ڪرڻ جو پيغام موڪليو؟",
+            "importProgress": "ترقي",
+            "importOptions": "اختيارن",
+            "sampleCSV": "ڊائون لوڊ ڪريو نمونو CSV",
+            "fileLabel": "اسپريڊ شيٽ اپ لوڊ ڪريو:",
+            "errorsTitle": "غلطيون ٿي ويون"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "اين ايف ٽي مجموعن ذريعي فلٽر ڪريو",
+                "ShowNFTCollection": "ڏيکاريو NFT گڏ ڪرڻ ۾ ...",
+                "AllCollections": "سڀ مجموعا"
+            },
+            "ByUser": {
+                "AllAuthors": "سڀ ليکڪ",
+                "AllUsers": "هرڪو",
+                "FilterByAuthors": "ليکڪ طرفان فلٽر"
+            }
+        },
+        "Back": "جمع ڏانھن واپس",
+        "attributes": {
+            "Title": "خاصيتن کي منظم ڪريو",
+            "Attributes": "صفتون",
+            "DisplayTitle": "ڊسپلي جو قسم",
+            "AddDisplayType": "نئون ڊسپلي قسم شامل ڪريو",
+            "NewDisplay": "نئون ڊسپلي",
+            "TraitTitle": "خاصيت جو قسم",
+            "AddTraitTitle": "نئين خاصيت جو قسم شامل ڪريو",
+            "NewTrait": "نئين قسم جي خاصيت",
+            "ValueTitle": "قدر",
+            "AddValueTitle": "نئون قدر شامل ڪريو",
+            "NewValue": "نئون قدر",
+            "NewAttribute": "نئون وصف",
+            "UpdateAttributes": "تازه ڪاري خاصيتون",
+            "SaveAttributes": "محفوظ ڪريو خاصيتون"
+        },
+        "profile": {
+            "LogOut": "لاگ آئوٽ",
+            "Title": "{{userName}} لاءِ پروفائل",
+            "Description": "استعمال ڪندڙ جي تفصيل",
+            "aboutPlaceholder": "بايو ايڊٽ ڪريو",
+            "UploadCoverPhoto": "اپ لوڊ ڪريو ڪپڙا فوٽو",
+            "SureLogOut": "ڇا توهان پڪ سان لاگ آئوٽ ٿيڻ چاهيو ٿا؟"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFT معاهدو",
+                        "seriesId": "سيريز جي سڃاڻپ",
+                        "owner": "مالڪ",
+                        "currency": "ڪرنسي",
+                        "price": "قيمت",
+                        "beneficiary": "فائدو ڏيندڙ",
+                        "autoindex": "خودڪار انڊيڪس",
+                        "duration": "عرصو",
+                        "rateInterval": "شرح وقفو",
+                        "rateAmount": "شرح جي رقم"
+                    },
+                    "small": {
+                        "NFTContract": "NFT معاهدو",
+                        "seriesId": "ٽوڪن هن سلسلي ۾ minted ڪيو ويندو",
+                        "owner": "مثال جو مالڪ، ٻي صورت ۾ موڪليندڙ هوندو",
+                        "currency": "خريد ڪيل ٽوڪن لاء ڪرنسي، جيڪڏهن صفر - ڏيهي سکن لاء",
+                        "price": "قيمت",
+                        "beneficiary": "ٽوڪن وڪڻڻ جو فائدو وٺندڙ، ٻي صورت ۾ موڪليندڙ هوندو",
+                        "autoindex": "خودڪار انڊيڪس",
+                        "duration": "ڪٽڻ کان پوء تالا. صفر جو مطلب آهي فوري طور تي حاصل ڪريو.",
+                        "rateInterval": "خاص خريداري لاء بالٽ وقفو",
+                        "rateAmount": "خاص خريداري لاء بالٽ رقم"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(اختياري)",
+                    "number": "نمبر",
+                    "address": "پتو",
+                    "fraction": "حصو",
+                    "integer": "عدد",
+                    "seconds": "سيڪنڊ",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "پيدا ڪرڻ",
+                "viewInstancesList": "ريفريش لسٽ"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "سيريز جي سڃاڻپ",
+                        "account": "کاتو",
+                        "amount": "رقم"
+                    },
+                    "small": {
+                        "seriesId": "نئين ٽوڪن جو تعلق اهڙي ID سان سيريز ۾ هوندو",
+                        "account": "نئين ٺاهيل NFT جو مالڪ. جيڪڏھن مقرر نه ڪيو ويو آھي - موجوده والٽ استعمال ڪندو",
+                        "amount": "رقم NFT کان منٽ تائين"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(اختياري)",
+                    "seriesId": "id",
+                    "account": "اڪائونٽ",
+                    "amount": "رقم",
+                    "integer": "عدد"
+                },
+                "btn": {
+                    "Purchase": "خريداري",
+                    "SpecialPurchase": "خاص خريداري"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "پتو"
+                    },
+                    "small": {
+                        "account": "پتو"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "غلط پتو"
+                },
+                "placeholders": {
+                    "account": "پتو"
+                },
+                "addToWhitelist": "وائيٽ لسٽ ۾ شامل ڪريو",
+                "removeFromWhitelist": "وائيٽ لسٽ مان هٽايو"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "ٽوڪن ID",
+                    "custodian": "سنڀاليندڙ",
+                    "recipient": "وصول ڪندڙ"
+                },
+                "small": {
+                    "tokenId": "ٽوڪن id ڇا کي لاڪ يا ان لاڪ ڪرڻ جي ضرورت آهي",
+                    "custodian": "پتو جيڪو ان لاڪ ڪرڻ جي قابل ٿي سگھي ٿو",
+                    "recipient": "پتو جيڪو ٽوڪن وصول ڪندو"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "غلط ٽوڪن آئي ڊي",
+                "invalidCustodian": "غلط محافظ",
+                "invalidRecipient": "غلط وصول ڪندڙ"
+            },
+            "placeholders": {
+                "optional": "(اختياري)",
+                "tokenId": "id",
+                "custodian": "پتو"
+            },
+            "Lock": "تالا",
+            "Unlock": "لاڪ",
+            "Locked": "بند ٿيل",
+            "CustodianAddress": "سنڀاليندڙ ايڊريس",
+            "TokenWasClaimed": "ٽوڪن &quot; {{title}} &quot; دعوي ڪئي وئي",
+            "TokenWasLocked": "ٽوڪن &quot; {{title}} &quot; کي بند ڪيو ويو",
+            "TokenWasUnlocked": "ٽوڪن &quot; {{title}} &quot; کوليو ويو"
+        }
+    },
+    "fundrise": {
+        "placeholder": "هن تعاون بابت ڪجهه لکو..."
+    },
+    "currencies": {
+        "choose": "ڪرنسي چونڊيو"
+    }
+}

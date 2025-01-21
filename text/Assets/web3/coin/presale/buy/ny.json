@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Kodi ndalama zingati?"
+                    },
+                    "placeholders": {
+                        "amount": "Mtengo wa {{nativeCoin}}",
+                        "max": "Kutalika: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Gulani",
+                    "execute": "Pangani"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Pagbaligya og Token",
+                        "timestamps": "Mga panahon",
+                        "prices": "Mga presyo",
+                        "endTime": "Panahon sa Katapusan",
+                        "thresholds": "Mga sukaranan",
+                        "bonuses": "Mga bonus"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Ang tag-iya dili maka-withdraw",
+                            "option1": "Ang tag-iya mahimo ra nga mag-withdraw sa mga token pagkahuman sa katapusan sa Oras",
+                            "option2": "Mahimong i-withdraw sa tag-iya ang mga token bisan unsang orasa"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Adres sa komunidad",
+                    "methodkeccack": "Keccak256 hash function",
+                    "roleId": "Role ID",
+                    "sellingToken": "Address sa Pagbaligya sa Token",
+                    "prices": "ETH, Presyo",
+                    "thresholds": "# sa mga token",
+                    "bonuses": "Bonus%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Walay pundo"
+                },
+                "btns": {
+                    "createFund": "Paghimo Fund",
+                    "createFundInForm": "Paghimo"
+                },
+                "fundAddress": "Adres sa pondo",
+                "createFund": "Paghimo Fund",
+                "fundInfo": "Impormasyon",
+                "produce": "Pagprodyus",
+                "loading": "Nagkarga",
+                "viewInstancesList": "I-refresh ang Listahan"
+            }
+        }
+    }
+}

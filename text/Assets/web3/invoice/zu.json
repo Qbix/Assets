@@ -1,0 +1,27 @@
+{
+    "title": "Khokha",
+    "steps": {
+        "sending_native_coins": "Ithumela izinhlamvu zemali zomdabu",
+        "sending_tokens": "Ithumela amathokheni",
+        "swap": "Shintsha",
+        "approve": "Gunyaza",
+        "one_tx": "Kufanele uthumele okwenziwayo okukodwa",
+        "two_tx": "Kufanele uthumele okwenziwayo okubili"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Izimali zokukhokha"
+            }
+        },
+        "btns": {
+            "pay": "Khokha"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Udinga ukukhokha amathokheni &quot; {{amountOut}} &quot;."
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Iketango elinjalo eline-id &quot; {{chainId}} &quot; alisekelwe"
+    }
+}

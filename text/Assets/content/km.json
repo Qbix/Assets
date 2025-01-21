@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "កំហុស",
+        "WalletAbsent": "កាបូបមិនត្រូវបានភ្ជាប់ទេ។",
+        "Rendering": "មានកំហុសខណៈពេលកំពុងបង្ហាញ <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "តម្លៃតម្រូវ!",
+        "NameRequired": "ទាមទារឈ្មោះ!",
+        "PriceInvalid": "តម្លៃមិនត្រឹមត្រូវ!",
+        "AmountInvalid": "ចំនួនទឹកប្រាក់មិនត្រឹមត្រូវ!",
+        "TransactionFailed": "ប្រតិបត្តិការបានបរាជ័យ",
+        "ChainNotSupported": "ខ្សែសង្វាក់ដែលបានជ្រើសរើសមិនត្រូវបានគាំទ្រទេ។ ខ្សែសង្វាក់ដែលគាំទ្រ: {{supportedChain}}",
+        "NeedMetaMaskConnected": "ត្រូវការ MetaMask ភ្ជាប់ដើម្បីធ្វើការជាមួយកម្មវិធី",
+        "UserNotLoggedInMetaMask": "អ្នកប្រើប្រាស់មិនបានចូលទៅក្នុង MetaMask ទេ។",
+        "CurrencyNotFound": "រកមិនឃើញរូបិយប័ណ្ណ",
+        "WrongChain": "NFT នេះបង្កើតក្រោម &quot; {{chain}} &quot;។ សូមប្រើខ្សែសង្វាក់នេះ។",
+        "NoRecipientSelected": "គ្មានអ្នកទទួលត្រូវបានជ្រើសរើសទេ។",
+        "CantManageFrozenSeries": "អ្នកមិនអាចគ្រប់គ្រងស៊េរីដែលបង្កកបានទេ។",
+        "SubscriptionStreamNotPaid": "អ្នកមិនទាន់បានបង់ប្រាក់ដើម្បីមើលខ្លឹមសារនេះទេ។ សូមចុច {{subscriptionUrl}} ហើយជាវគម្រោងសមស្រប។"
+    },
+    "admin": {
+        "Title": "ទ្រព្យសម្បត្តិរដ្ឋបាល",
+        "SubscriptionTitle": "គម្រោងការជាវ"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "ប៉ះដើម្បីបង់ប្រាក់"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : ការចោទប្រកាន់ត្រូវបានដំណើរការសម្រាប់ {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "សូមអរគុណចំពោះការបង់ប្រាក់របស់អ្នកទៅ {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} បានជាវ {{plan.title}}",
+        "YouSubscribedTo": "អ្នកបានជាវ {{plan.title}}",
+        "Assets\/credits\/alert": "អ្នកមានការជូនដំណឹងទាក់ទងនឹងគណនីរបស់អ្នក។"
+    },
+    "charge": {
+        "Subject": "អ្នកបានទទួលការទូទាត់ {{displayAmount}} ពី {{call 'publisher.displayName'}} សម្រាប់ &quot; {{description}} &quot;",
+        "HasBeenCharged": "ហេ នេះគ្រាន់តែប្រាប់អ្នកថា {{1}} ត្រូវបានគិតថ្លៃ {{2}} សម្រាប់ {{3}} ដល់ {{4}}"
+    },
+    "charged": {
+        "Subject": "សូមអរគុណចំពោះការបង់ប្រាក់របស់អ្នកសម្រាប់ &quot; {{description}} &quot;",
+        "HavePaid": "ហេ {{1}} នេះគ្រាន់តែជាការបញ្ជាក់យ៉ាងរហ័សថាអ្នកបានបង់ប្រាក់ {{2}} ទៅ {{3}} សម្រាប់ {{4}} ដោយជោគជ័យ"
+    },
+    "connectedAccount": {
+        "Title": "ភ្ជាប់គណនី",
+        "Success": "ជោគជ័យ",
+        "YourAccountCreated": "គណនីរបស់អ្នកត្រូវបានបង្កើតដោយជោគជ័យ!",
+        "YourAccountAlreadyCreated": "គណនីរបស់អ្នកត្រូវបានបង្កើតរួចហើយ និងរួចរាល់ក្នុងការប្រើប្រាស់"
+    },
+    "payment": {
+        "AboutOrder": "ព័ត៌មានអំពីការបញ្ជាទិញ",
+        "PaymentMethod": "វិធីបង់ប្រាក់",
+        "ContactInfo": "ព័ត៌មានទំនាក់ទំនង",
+        "Pay": "បង់",
+        "PaymentSucceeded": "ការទូទាត់ត្រូវបានដំណើរការដោយជោគជ័យ",
+        "PaymentProcessing.": "ការទូទាត់របស់អ្នកកំពុងត្រូវបានដំណើរការ",
+        "FailTryAgain": "ការទូទាត់របស់អ្នកមិនជោគជ័យទេ។ សូមព្យាយាមម្តងទៀត។",
+        "SomethingWrong": "មានអ្វីមួយខុសប្រក្រតី",
+        "PaymentStatus": "ស្ថានភាពការទូទាត់",
+        "PayTo": "បង់ {{displayName}}",
+        "ChooseCurrency": "ជ្រើសរើសរូបិយប័ណ្ណ",
+        "YouCanSendUpTo": "អ្នកអាចផ្ញើរហូតដល់ {{amount}} {{symbol}}",
+        "Send": "ផ្ញើ",
+        "EnterAmount": "បញ្ចូលចំនួនទឹកប្រាក់"
+    },
+    "credits": {
+        "InviteAcceptedBy": "ការអញ្ជើញត្រូវបានទទួលយកដោយ {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} បំពេញ {{FilledStreamTitle}}",
+        "ForFillingStream": "សម្រាប់ការបំពេញ {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "អ្នកមានក្រេឌីត {{amount}} ដើម្បីចាប់ផ្តើម",
+        "PaymentFor": "ការទូទាត់សម្រាប់ &quot; {{1}} &quot;",
+        "PaymentTo": "ការទូទាត់ទៅ {{1}}",
+        "PaymentToUser": "ផ្ទេរទៅ {{toUserName}}",
+        "CreatePrivateChat": "សម្រាប់ការជជែកឯកជនជាមួយ {{toUserName}}",
+        "CreatePaidStream": "សម្រាប់ការបង្កើត {{toStreamName}}",
+        "JoinedPaidStream": "សម្រាប់ការកក់ទុកនៅក្នុង &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "សម្រាប់ការបង្កើតសហគមន៍ &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "ជាការសងប្រាក់ការកក់ទុកក្នុង &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "ទិញ {{amount}} ក្រេឌីត",
+        "BonusCredits": "ប្រាក់រង្វាន់ {{amount}} ក្រេឌីត",
+        "BuyAmountCredits": "ទិញ {{amount}} ក្រេឌីត",
+        "WatchClip": "សម្រាប់ការទស្សនា {{fromStreamTitle}}",
+        "MissingCredits": "បាត់ក្រេឌីត",
+        "YouMissingCredits": "អ្នកត្រូវការក្រេឌីត {{amount}} បន្ថែម ដើម្បីបន្ត។",
+        "BuyCredits": "ទិញឥណទាន",
+        "BuyBonus": "ការទិញ {{amount}} ក្រេឌីតក្នុងពេលតែមួយនឹងផ្តល់ប្រាក់រង្វាន់ {{bonus}} ក្រេឌីត។",
+        "Buy": "ទិញ",
+        "PurchaseCredits": "ការទិញឥណទាន",
+        "Credits": "ឥណទាន",
+        "ErrorInvalidAmount": "ចំនួនទឹកប្រាក់មិនត្រឹមត្រូវ",
+        "ErrorInvalidCurrency": "ជាអកុសល យើងមិនទាន់គាំទ្ររូបិយប័ណ្ណ {{currency}} នៅឡើយទេ",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} ក្រេឌីត",
+            "BonusCredits": "{{amount}} ក្រេឌីត"
+        }
+    },
+    "history": {
+        "Date": "កាលបរិច្ឆេទ",
+        "Amount": "ចំនួនទឹកប្រាក់",
+        "Description": "ការពិពណ៌នា",
+        "Client": "អតិថិជន",
+        "User": "អ្នកប្រើប្រាស់",
+        "To": "ទៅ",
+        "From": "ពី",
+        "SeeHistory": "មើលប្រវត្តិការទូទាត់សម្រាប់ {{1}}",
+        "HistoryEmpty": "មិនមានប្រតិបត្តិការនៅឡើយទេ",
+        "PaymentFor": "បានផ្ញើ {{amount}} ក្រេឌីត",
+        "PaymentTo": "បានផ្ញើ {{amount}} ក្រេឌីត",
+        "PaymentToUser": "បានផ្ញើ {{amount}} ក្រេឌីត",
+        "CreatePaidStream": "ចំណាយ {{amount}} ក្រេឌីត",
+        "WatchClip": {
+            "+": "ទទួលបាន {{amount}} ក្រេឌីត",
+            "-": "ចំណាយ {{amount}} ក្រេឌីត"
+        },
+        "JoinedPaidStream": {
+            "+": "ទទួលបាន {{amount}} ក្រេឌីត",
+            "-": "ចំណាយ {{amount}} ក្រេឌីត"
+        },
+        "LeftPaidStream": {
+            "+": "ទទួលបាន {{amount}} ក្រេឌីត",
+            "-": "បានផ្ញើ {{amount}} ក្រេឌីត"
+        },
+        "CreatedCommunity": "ចំណាយ {{amount}} ក្រេឌីត",
+        "BoughtCredits": "ទិញ {{amount}} ក្រេឌីត",
+        "BonusCredits": "ទទួលបានប្រាក់រង្វាន់ {{amount}} ក្រេឌីត",
+        "InviteAcceptedBy": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "Streams_user_firstname": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "Streams_user_lastname": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "Streams_user_icon": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "Places_user_location": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "Streams_greeting": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "YouHaveCreditsToStart": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "InvitedUserFilledStream": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "ForFillingStream": "ទទួលបាន {{amount}} ក្រេឌីត",
+        "CreatePrivateChat": "ចំណាយ {{amount}} ក្រេឌីត"
+    },
+    "subscriptions": {
+        "infoTitle": "ផ្តល់ព័ត៌មានការទូទាត់",
+        "confirm": {
+            "title": "ចាប់ផ្តើមការជាវ",
+            "message": "ចាប់ផ្តើមការជាវប្រចាំទៅ &quot; {{title}} &quot;?",
+            "ok": "យល់ព្រម",
+            "cancel": "បោះបង់"
+        },
+        "CreditOrDebitCard": "កាតឥណទាន ឬឥណពន្ធ",
+        "SubscribePayment": "ជាវការទូទាត់",
+        "ImmediatePayment": "ការទូទាត់ភ្លាមៗ",
+        "ProcessingPayment": "ដំណើរការការទូទាត់",
+        "SubscriptionAlreadyPaid": "ការជាវនេះបានបង់រួចហើយ",
+        "SubscriptionNotActive": "ការជាវបច្ចុប្បន្នអសកម្ម",
+        "Subscribed": "បានជាវ",
+        "Unsubscribed": "ឈប់ជាវ",
+        "Unsubscribe": "ឈប់ជាវ",
+        "Subscribe": "ជាវ",
+        "Started": "បានចាប់ផ្តើម",
+        "EndsIn": "បញ្ចប់នៅក្នុង",
+        "NextPay": "ការទូទាត់បន្ទាប់",
+        "Period": "រយៈពេល",
+        "Price": "តម្លៃ",
+        "AreYouSureUnsubscribe": "តើអ្នកប្រាកដថាចង់ឈប់ជាវពីគម្រោងនេះទេ?",
+        "YouUnsubscribedFromPlan": "អ្នកបានឈប់ជាវពីគម្រោង &quot; {{planTitle}} &quot;។ អ្នកនឹងមិនត្រូវបានគិតប្រាក់នៅពេលក្រោយទេ ប៉ុន្តែការជាវរបស់អ្នកនឹងបន្តរហូតដល់ {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "ចំណងជើងផែនការ",
+            "PricePlaceholder": "តម្លៃ",
+            "SubscriptionTitle": "គម្រោងការជាវ",
+            "DescriptionPlaceholder": "ការពិពណ៌នាគម្រោងការជាវ",
+            "AreYouSureDeletePlan": "តើអ្នកប្រាកដថាចង់លុបគម្រោងនេះទេ?",
+            "Duration": "រយៈពេល",
+            "Discount": "បញ្ចុះតម្លៃ",
+            "SavePlan": "រក្សាទុក",
+            "Interrupt": "រំខាន",
+            "Continue": "បន្ត",
+            "NewPlan": "ផែនការថ្មី។",
+            "SelectDisplayType": "ជ្រើសរើស {{displayType}}",
+            "EndDate": "កាលបរិច្ឆេទបញ្ចប់",
+            "Available": "មាន",
+            "Hidden": "លាក់",
+            "InviteOnly": "ការអញ្ជើញតែប៉ុណ្ណោះ",
+            "CantSubscribeUnlessInvited": "អ្នកមិនអាចជាវគម្រោងនេះបានទេ លុះត្រាតែអ្នកត្រូវបានអញ្ជើញ"
+        }
+    },
+    "payments": {
+        "infoTitle": "កំណត់ព័ត៌មានការទូទាត់",
+        "BuyAmountCredits": "ទិញ {{amount}} ក្រេឌីត",
+        "confirm": {
+            "title": "ធ្វើការទូទាត់",
+            "message": "តើអ្នកយល់ព្រមបង់ប្រាក់ {{symbol}} {{amount}} ទេ?",
+            "ok": "យល់ព្រម",
+            "cancel": "បោះបង់"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "ឥណទាន",
+            "description": "តាមដានឥណទាន និងការទូទាត់"
+        },
+        "Assets\/plan": {
+            "displayType": "ផែនការជាវ",
+            "description": "គម្រោងការជាវ"
+        },
+        "Assets\/subscription": {
+            "displayType": "ការជាវ",
+            "description": "ការជាវ"
+        },
+        "Assets\/product": {
+            "displayType": "ផលិតផល",
+            "description": "ផលិតផលកំពុងលក់"
+        },
+        "Assets\/service": {
+            "displayType": "សេវាកម្ម",
+            "description": "សេវាកម្មត្រូវបានផ្តល់ជូន"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "ទទួលបាន {{amount}} ក្រេឌីត"
+        },
+        "Assets\/credits\/bought": {
+            "content": "ទិញ {{amount}} ក្រេឌីត"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "ប្រាក់រង្វាន់ {{amount}} ក្រេឌីត"
+        },
+        "Assets\/credits\/spent": {
+            "content": "ចំណាយ {{amount}} ក្រេឌីត"
+        },
+        "Assets\/credits\/sent": {
+            "content": "ផ្ញើ {{amount}} ក្រេឌីតទៅ {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "ទទួលបាន {{amount}} ក្រេឌីតពី {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "អ្នកមានឥណទានមិនគ្រប់គ្រាន់នៅក្នុងគណនីរបស់អ្នក។ សូមចូលទៅកាន់ <a href='<i translate='no'>តំណភ្ជាប់ខាងក្រោម 999 &#39;&gt;<\/a> ដើម្បីទិញក្រេឌីតបន្ថែម។"
+        }
+    },
+    "billing": {
+        "Title": "វិក្កយបត្រទ្រព្យសកម្ម",
+        "CreditsMinimum": "ឥណទានអប្បបរមា",
+        "CreditsToAdd": "ឥណទានដែលត្រូវបន្ថែម",
+        "Save": "រក្សាទុក",
+        "ThisLink": "តំណភ្ជាប់នេះ។",
+        "errors": {
+            "CreditsMinimumNegative": "ឥណទានអប្បបរមាមិនអាចអវិជ្ជមានបានទេ។",
+            "CreditsToAddNegative": "ក្រេឌីតដែលត្រូវបន្ថែមមិនអាចអវិជ្ជមានបានទេ។"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "សេវាកម្មថ្មី។",
+            "TitlePlaceholder": "ចំណងជើងសេវាកម្ម",
+            "PricePlaceholder": "កំណត់តម្លៃ",
+            "LinkPlaceholder": "កំណត់តំណភ្ជាប់ព័ត៌មានបន្ថែម",
+            "DescriptionPlaceholder": "ការពិពណ៌នាអំពីសេវាកម្ម",
+            "SaveService": "រក្សាទុកសេវាកម្ម",
+            "SelectRequiredParticipants": "អ្នកចូលរួមដែលពាក់ព័ន្ធដែលត្រូវការ",
+            "RequiredParticipantsDesc": "សូមជ្រើសរើសអ្នកចូលរួមដែលពាក់ព័ន្ធដែលត្រូវប្រើសេវាកម្មនេះ (ឧទាហរណ៍សត្វចិញ្ចឹមសម្រាប់ &quot;ការបង្ហាញសត្វឆ្កែ&quot; ឬកុមារសម្រាប់ &quot;ថ្ងៃឈប់សម្រាករបស់កុមារ&quot; ។ល។ ប្រសិនបើសេវាកម្មត្រូវបានបង់ អ្នកប្រើប្រាស់នឹងត្រូវបង់ប្រាក់ផងដែរសម្រាប់អ្នកចូលរួមដែលពាក់ព័ន្ធនីមួយៗ។"
+        },
+        "EditServiceTemplate": {
+            "Title": "សេវាកម្មកែសម្រួល"
+        },
+        "ManageServiceTemplates": "គ្រប់គ្រងគំរូសេវាកម្ម",
+        "ManageServices": "គ្រប់គ្រងសេវាកម្ម",
+        "Free": "ឥតគិតថ្លៃ",
+        "OptionalContribution": "ការរួមចំណែកជាជម្រើស",
+        "RequiredPayment": "ការទូទាត់ចាំបាច់",
+        "AreYouSureDelete": "តើអ្នកប្រាកដថាចង់លុបសេវាកម្មនេះទេ?",
+        "AmountServicesRelated": "មានភាពអាចរកបាន {{amount}} ទាក់ទងនឹងសេវាកម្មនេះ។ ពួកគេក៏នឹងត្រូវដកចេញផងដែរ។"
+    },
+    "transfer": {
+        "SelectRecipient": "ជ្រើសរើសអ្នកទទួល",
+        "TransactionSuccess": "ប្រតិបត្តិការជោគជ័យ",
+        "OrTypeWalletAddress": "ឬវាយអាសយដ្ឋានកាបូបអ្នកទទួល",
+        "AppCredits": "ឥណទានកម្មវិធី"
+    },
+    "NFT": {
+        "Title": "ចំណងជើង",
+        "Name": "ឈ្មោះ",
+        "EnterName": "បញ្ចូលឈ្មោះ",
+        "EnterAuthorWallet": "បញ្ចូលកាបូបអ្នកនិពន្ធ",
+        "InformationAboutTitle": "ព័ត៌មានអំពី {{title}} NFT",
+        "Description": "ការពិពណ៌នា",
+        "DetailedInformationAboutNFT": "ព័ត៌មានលំអិតអំពី NFT",
+        "PresaleStarts": "Presale ចាប់ផ្តើមនៅថ្ងៃទី 23 ខែធ្នូ",
+        "OwnerUserNotFound": "ម្ចាស់ NFT នេះមិនត្រូវបានចុះឈ្មោះនៅក្នុងកម្មវិធីរបស់យើងទេ។",
+        "BuyNow": "ទិញឥឡូវនេះ",
+        "Buy": "ទិញ",
+        "Add": "បន្ថែម",
+        "Remove": "ដកចេញ",
+        "NoNFTyet": "មិនទាន់មាន NFTs នៅឡើយទេ",
+        "Conversation": "ការសន្ទនា",
+        "Create": "បង្កើត",
+        "CurrentBid": "ការដេញថ្លៃបច្ចុប្បន្ន",
+        "StartingIn": "ចាប់ផ្តើមនៅក្នុង",
+        "EndingIn": "បញ្ចប់នៅក្នុង",
+        "CreateNFT": "បង្កើត NFT",
+        "TitlePlaceholder": "ផ្តល់ឱ្យ NFT របស់អ្នកនូវចំណងជើង",
+        "DescriptionPlaceholder": "ផ្តល់ឱ្យ NFT របស់អ្នកនូវការពិពណ៌នា",
+        "CreateYourNFT": "បង្កើត NFT របស់អ្នក។",
+        "Royalties": "សួយសារអាករ",
+        "RoyaltyPlaceholder": "ស្រេចចិត្ត។ ចំនួនទឹកប្រាក់ដែលត្រូវបង់ទៅអ្នកបង្កើតមុនពេលផ្ទេរ។",
+        "ExpirationDate": "កាលបរិច្ឆេទផុតកំណត់",
+        "StartingDate": "កាលបរិច្ឆេទចាប់ផ្តើម",
+        "BidsBelowThisAmount": "ការដេញថ្លៃក្រោមចំនួនទឹកប្រាក់នេះនឹងមិនត្រូវបានអនុញ្ញាតទេ។",
+        "MinimumBid": "ការដេញថ្លៃអប្បបរមា",
+        "Author": "អ្នកនិពន្ធ",
+        "Price": "តម្លៃ",
+        "Commission": "គណៈកម្មការ",
+        "EnterCommission": "បញ្ចូលកម្រៃជើងសារ",
+        "Owner": "ម្ចាស់",
+        "SelectCategory": "ជ្រើសរើសប្រភេទ",
+        "Day": "ថ្ងៃ",
+        "Days": "ថ្ងៃ",
+        "Hour": "ម៉ោង",
+        "Hours": "ម៉ោង",
+        "Minute": "នាទី",
+        "Minutes": "នាទី",
+        "Second": "ទីពីរ",
+        "Seconds": "វិនាទី",
+        "SalesCreator": "ការលក់នឹងទៅដល់អ្នកបង្កើត",
+        "Details": "ព័ត៌មានលម្អិត",
+        "Bids": "ការដេញថ្លៃ",
+        "History": "ប្រវត្តិសាស្ត្រ",
+        "LoremIpsum": "Lorem Ipsum គឺជាអត្ថបទមិនពិតនៃឧស្សាហកម្មបោះពុម្ព និងវាយអក្សរ។",
+        "PutOnSale": "ដាក់លក់",
+        "PutOffSale": "ដកពីការលក់",
+        "Transfer": "ផ្ទេរ",
+        "Actions": "សកម្មភាព",
+        "Claim": "ទាមទារ",
+        "ClaimNFT": "ទាមទារ NFT",
+        "Unlocking": "ដោះសោ",
+        "Unlock": "ដោះសោ",
+        "Update": "ធ្វើបច្ចុប្បន្នភាព",
+        "UpdateToken": "ធ្វើបច្ចុប្បន្នភាព Token",
+        "UpdateNFT": "ធ្វើបច្ចុប្បន្នភាព NFT",
+        "CreateToken": "បង្កើតនិមិត្តសញ្ញា",
+        "PlaceBid": "ដាក់ដេញថ្លៃ",
+        "SoldOut": "លក់",
+        "NotOnSale": "មិនមានលក់ទេ។",
+        "NftName": "ឈ្មោះ NFT",
+        "DescribeYourNFT": "សូមពណ៌នាអំពី NFT របស់អ្នក។",
+        "NFTImage": "រូបភាពសម្រាប់ NFT",
+        "NFTVideo": "វីដេអូសម្រាប់ NFT ប្រសិនបើមាន",
+        "GenerateDescription": "ឬបង្កើតដោយស្វ័យប្រវត្តិ",
+        "UploadMovie": "បង្ហោះភាពយន្ត",
+        "MovieSource": "ប្រភពភាពយន្ត",
+        "MovieURL": "URL ភាពយន្ត",
+        "UploadFile": "បង្ហោះឯកសារ",
+        "PutOnMarketplace": "ដាក់នៅលើទីផ្សារ",
+        "InstantPurchase": "បញ្ចូលតម្លៃដើម្បីឱ្យអ្នកប្រើប្រាស់ទិញ NFT របស់អ្នកភ្លាមៗ",
+        "FixedPrice": "តម្លៃថេរ",
+        "TimedAuction": "ការដេញថ្លៃតាមពេលវេលា",
+        "OpenForBids": "បើកសម្រាប់ការដេញថ្លៃ",
+        "PriceOnePiece": "បញ្ចូលតម្លៃសម្រាប់មួយដុំ",
+        "EnterPrice": "បញ្ចូលតម្លៃ",
+        "EnterMinimumBid": "បញ្ចូលការដេញថ្លៃអប្បបរមា",
+        "SelectChain": "ជ្រើសរើសខ្សែសង្វាក់",
+        "Currency": "រូបិយប័ណ្ណ",
+        "AreYouSureDeleteImage": "តើអ្នកប្រាកដថាចង់លុបរូបភាពមែនទេ?",
+        "AreYouSureDeleteVideo": "តើអ្នកប្រាកដថាចង់លុបវីដេអូចេញមែនទេ?",
+        "series": {
+            "Name": "ឈ្មោះ",
+            "Icon": "រូបតំណាង",
+            "Description": "ការពិពណ៌នា",
+            "Author": "អ្នកនិពន្ធ",
+            "SelectSeries": "ជ្រើសរើសស៊េរី",
+            "Value": "តម្លៃ",
+            "AreYouSure": "តើអ្នកប្រាកដទេ?",
+            "AuthorInvalid": "អាសយដ្ឋាន​អ្នក​និពន្ធ​មិន​ត្រឹមត្រូវ!",
+            "Address": "អាស័យដ្ឋាន",
+            "CoverImage": "រូបភាពគម្រប",
+            "UploadCoverImage": "បង្ហោះរូបភាពគម្រប",
+            "CommissionAddressInvalid": "អាសយដ្ឋានគណៈកម្មការមិនត្រឹមត្រូវ",
+            "OnSale": "នៅលើការលក់",
+            "OffSale": "បិទការលក់",
+            "CreateSeries": "បង្កើតស៊េរី",
+            "UpdateSeries": "ធ្វើបច្ចុប្បន្នភាពស៊េរី",
+            "SeriesInfo": "ព័ត៌មានស៊េរី",
+            "SelectAuthor": "ជ្រើសរើសអ្នកនិពន្ធ",
+            "NewItem": "ស៊េរី NFT ថ្មី។",
+            "NamePlaceholder": "បញ្ចូលឈ្មោះស៊េរី",
+            "DescPlaceholder": "បញ្ចូលការពិពណ៌នាស៊េរី",
+            "EndingIn": "ការបញ្ចប់នៅក្នុង"
+        },
+        "contract": {
+            "CreateContract": "បង្កើតកិច្ចសន្យា",
+            "SelectContract": "ជ្រើសរើសកិច្ចសន្យា",
+            "CreateContractFor": "បង្កើតកិច្ចសន្យាសម្រាប់ {{userName}}",
+            "ContractFor": "កិច្ចសន្យា {{userName}}",
+            "UpdateContract": "ធ្វើបច្ចុប្បន្នភាពកិច្ចសន្យា",
+            "TransferOwnership": "ផ្ទេរកម្មសិទ្ធិ",
+            "SetBaseURI": "កំណត់ URI មូលដ្ឋាន",
+            "SetSuffix": "កំណត់បច្ច័យ",
+            "CurrentOwner": "ម្ចាស់បច្ចុប្បន្ន",
+            "CurrentBaseURL": "មូលដ្ឋាន URL បច្ចុប្បន្ន",
+            "ContractAddressAbsent": "អាសយដ្ឋានកិច្ចសន្យាអវត្តមាន",
+            "FactoryAddressAbsent": "អាសយដ្ឋានរោងចក្រអវត្តមាន",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "ទាមទារចំណងជើង",
+            "SymbolRequired": "ត្រូវការនិមិត្តសញ្ញា",
+            "TypeContractName": "ឈ្មោះកិច្ចសន្យា",
+            "TypeContractSymbol": "និមិត្តសញ្ញាកិច្ចសន្យា (អតិបរមា 10 តួអក្សរ)"
+        },
+        "contests": {
+            "Title": "ការប្រកួតប្រជែង",
+            "NewContest": "ការប្រកួតថ្មី។"
+        },
+        "collections": {
+            "Title": "បណ្តុំ",
+            "EnterTitle": "បញ្ចូលចំណងជើង",
+            "EnterDescription": "បញ្ចូលការពិពណ៌នា",
+            "NewCollection": "បណ្តុំថ្មី។",
+            "Name": "ឈ្មោះ",
+            "Icon": "រូបតំណាង",
+            "Description": "ការពិពណ៌នា",
+            "Author": "អ្នកនិពន្ធ",
+            "SelectCollection": "ជ្រើសរើសការប្រមូល",
+            "Value": "តម្លៃ",
+            "AreYouSure": "តើអ្នកប្រាកដទេ?",
+            "AuthorInvalid": "អាសយដ្ឋាន​អ្នក​និពន្ធ​មិន​ត្រឹមត្រូវ!",
+            "Address": "អាស័យដ្ឋាន",
+            "CoverImage": "រូបភាពគម្រប",
+            "UploadIcon": "បង្ហោះរូបតំណាង",
+            "CommissionAddressInvalid": "អាសយដ្ឋានគណៈកម្មការមិនត្រឹមត្រូវ",
+            "OnSale": "នៅលើការលក់",
+            "OffSale": "បិទការលក់",
+            "CreateCollection": "បង្កើតបណ្តុំ",
+            "UpdateCollection": "ធ្វើបច្ចុប្បន្នភាពបណ្តុំ",
+            "CollectionInfo": "ព័ត៌មានប្រមូល",
+            "SelectAuthor": "ជ្រើសរើសអ្នកនិពន្ធ",
+            "NewItem": "ការប្រមូល NFT ថ្មី។",
+            "NamePlaceholder": "បញ្ចូលឈ្មោះបណ្តុំ",
+            "DescPlaceholder": "បញ្ចូលការពិពណ៌នាអំពីបណ្តុំ",
+            "EndingIn": "ការបញ្ចប់នៅក្នុង",
+            "SubmitSeries": "ដាក់ស្នើស៊េរី"
+        },
+        "import": {
+            "importNFT": "ការនាំចូល NFT",
+            "importAttributes": "នាំចូលគុណលក្ខណៈ NFT",
+            "fileNotFound": "សូមអភ័យទោស រកមិនឃើញឯកសារ CSV ទេ។",
+            "fileEmpty": "សូមអភ័យទោស ឯកសារ CSV គឺទទេ។",
+            "userIdNotFound": "អ្នកប្រើប្រាស់មាន ប៉ុន្តែលេខសម្គាល់ទទេ",
+            "errorLine": "បន្ទាត់ {{1}}",
+            "fieldNotFound": "រកមិនឃើញវាល &quot; {{1}} &quot; ដែលត្រូវការ",
+            "displayTypeEmpty": "ប្រភេទបង្ហាញសម្រាប់ &quot; {{1}} &quot; រកមិនឃើញទេ។",
+            "taskStreamInvalid": "ស្ទ្រីមភារកិច្ចមិនត្រឹមត្រូវ",
+            "instructionsEmpty": "ការណែនាំអំពីស្ទ្រីមកិច្ចការទទេ",
+            "complete": "បញ្ចប់",
+            "activateUsers": "ផ្ញើសារធ្វើឱ្យសកម្មទៅអ្នកប្រើប្រាស់?",
+            "importProgress": "វឌ្ឍនភាព",
+            "importOptions": "ជម្រើស",
+            "sampleCSV": "ទាញយកគំរូ CSV",
+            "fileLabel": "ផ្ទុកឡើងសៀវភៅបញ្ជី៖",
+            "errorsTitle": "កំហុសបានកើតឡើង"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "ត្រងដោយ NFT Collections",
+                "ShowNFTCollection": "បង្ហាញការប្រមូល NFT នៅក្នុង...",
+                "AllCollections": "បណ្តុំទាំងអស់។"
+            },
+            "ByUser": {
+                "AllAuthors": "អ្នកនិពន្ធទាំងអស់។",
+                "AllUsers": "គ្រប់គ្នា",
+                "FilterByAuthors": "ត្រងដោយអ្នកនិពន្ធ"
+            }
+        },
+        "Back": "ត្រឡប់ទៅ បណ្តុំ",
+        "attributes": {
+            "Title": "គ្រប់គ្រងគុណលក្ខណៈ",
+            "Attributes": "គុណលក្ខណៈ",
+            "DisplayTitle": "ប្រភេទបង្ហាញ",
+            "AddDisplayType": "បន្ថែមប្រភេទអេក្រង់ថ្មី។",
+            "NewDisplay": "ការបង្ហាញថ្មី។",
+            "TraitTitle": "ប្រភេទលក្ខណៈ",
+            "AddTraitTitle": "បន្ថែមប្រភេទលក្ខណៈថ្មី។",
+            "NewTrait": "ប្រភេទ​លក្ខណៈ​ថ្មី។",
+            "ValueTitle": "តម្លៃ",
+            "AddValueTitle": "បន្ថែមតម្លៃថ្មី។",
+            "NewValue": "តម្លៃថ្មី។",
+            "NewAttribute": "គុណលក្ខណៈថ្មី។",
+            "UpdateAttributes": "ធ្វើបច្ចុប្បន្នភាពគុណលក្ខណៈ",
+            "SaveAttributes": "រក្សាទុកគុណលក្ខណៈ"
+        },
+        "profile": {
+            "LogOut": "ចេញ",
+            "Title": "ប្រវត្តិរូបសម្រាប់ {{userName}}",
+            "Description": "ព័ត៌មានលម្អិតអ្នកប្រើប្រាស់",
+            "aboutPlaceholder": "កែសម្រួលជីវ",
+            "UploadCoverPhoto": "បង្ហោះរូបថតគម្រប",
+            "SureLogOut": "តើ​អ្នក​ប្រាកដ​ជា​ចង់​ចេញ?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "កិច្ចសន្យា NFT",
+                        "seriesId": "លេខសម្គាល់ស៊េរី",
+                        "owner": "ម្ចាស់",
+                        "currency": "រូបិយប័ណ្ណ",
+                        "price": "តម្លៃ",
+                        "beneficiary": "អ្នកទទួលផល",
+                        "autoindex": "សន្ទស្សន៍ស្វ័យប្រវត្តិ",
+                        "duration": "រយៈពេល",
+                        "rateInterval": "ចន្លោះពេលវាយតម្លៃ",
+                        "rateAmount": "អត្រាការប្រាក់"
+                    },
+                    "small": {
+                        "NFTContract": "កិច្ចសន្យា NFT",
+                        "seriesId": "និមិត្តសញ្ញានឹងត្រូវបាន minted នៅក្នុងស៊េរីនេះ។",
+                        "owner": "ម្ចាស់ឧទាហរណ៍ បើមិនដូច្នោះទេ នឹងក្លាយជាអ្នកផ្ញើ",
+                        "currency": "រូបិយប័ណ្ណសម្រាប់ថូខឹនដែលបានទិញ ប្រសិនបើសូន្យ - សម្រាប់កាក់ដើម",
+                        "price": "តម្លៃ",
+                        "beneficiary": "អ្នកទទួលផលពីការលក់សញ្ញាសម្ងាត់ បើមិនដូច្នេះទេនឹងក្លាយជាអ្នកផ្ញើ",
+                        "autoindex": "សន្ទស្សន៍ស្វ័យប្រវត្តិ",
+                        "duration": "ចាក់សោបន្ទាប់ពី minting ។ សូន្យមានន័យថាទទួលបានភ្លាមៗ។",
+                        "rateInterval": "ចន្លោះពេលដាក់ធុងសម្រាប់ការទិញពិសេស",
+                        "rateAmount": "ចំនួនធុងសម្រាប់ការទិញពិសេស"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ស្រេចចិត្ត)",
+                    "number": "លេខ",
+                    "address": "អាសយដ្ឋាន",
+                    "fraction": "ប្រភាគ",
+                    "integer": "ចំនួនគត់",
+                    "seconds": "វិនាទី",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "ផលិត",
+                "viewInstancesList": "ធ្វើឱ្យបញ្ជីឡើងវិញ"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "លេខសម្គាល់ស៊េរី",
+                        "account": "គណនី",
+                        "amount": "ចំនួនទឹកប្រាក់"
+                    },
+                    "small": {
+                        "seriesId": "និមិត្តសញ្ញាថ្មីនឹងជាស៊េរីដែលមានលេខសម្គាល់បែបនេះ",
+                        "account": "ម្ចាស់ NFT ដែលទើបបង្កើតថ្មី។ ប្រសិនបើមិនបានកំណត់ - នឹងប្រើកាបូបបច្ចុប្បន្ន",
+                        "amount": "បរិមាណ NFT ទៅ mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(ស្រេចចិត្ត)",
+                    "seriesId": "លេខសម្គាល់",
+                    "account": "គណនី",
+                    "amount": "ចំនួនទឹកប្រាក់",
+                    "integer": "ចំនួនគត់"
+                },
+                "btn": {
+                    "Purchase": "ទិញ",
+                    "SpecialPurchase": "ការទិញពិសេស"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "អាស័យដ្ឋាន"
+                    },
+                    "small": {
+                        "account": "អាស័យដ្ឋាន"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "អាសយដ្ឋានមិនត្រឹមត្រូវ"
+                },
+                "placeholders": {
+                    "account": "អាស័យដ្ឋាន"
+                },
+                "addToWhitelist": "បន្ថែមទៅបញ្ជីស",
+                "removeFromWhitelist": "យកចេញពីបញ្ជីស"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "លេខសម្គាល់និមិត្តសញ្ញា",
+                    "custodian": "អ្នកថែរក្សា",
+                    "recipient": "អ្នកទទួល"
+                },
+                "small": {
+                    "tokenId": "លេខសម្គាល់សញ្ញាសម្ងាត់អ្វីដែលត្រូវចាក់សោ ឬដោះសោ",
+                    "custodian": "អាសយដ្ឋានដែលអាចដោះសោបាន។",
+                    "recipient": "អាសយដ្ឋានដែលនឹងទទួលបានសញ្ញាសម្ងាត់"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "លេខសម្ងាត់មិនត្រឹមត្រូវ",
+                "invalidCustodian": "អ្នកថែរក្សាមិនត្រឹមត្រូវ",
+                "invalidRecipient": "អ្នកទទួលមិនត្រឹមត្រូវ"
+            },
+            "placeholders": {
+                "optional": "(ស្រេចចិត្ត)",
+                "tokenId": "លេខសម្គាល់",
+                "custodian": "អាសយដ្ឋាន"
+            },
+            "Lock": "ចាក់សោ",
+            "Unlock": "ដោះសោ",
+            "Locked": "ចាក់សោ",
+            "CustodianAddress": "អាសយដ្ឋានអ្នកថែរក្សា",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; ត្រូវបានទាមទារ",
+            "TokenWasLocked": "និមិត្តសញ្ញា &quot; {{title}} &quot; ត្រូវបានចាក់សោ",
+            "TokenWasUnlocked": "Token &quot; {{title}} &quot; ត្រូវបានដោះសោ"
+        }
+    },
+    "fundrise": {
+        "placeholder": "វាយបញ្ចូលអ្វីមួយអំពីការរួមចំណែកនេះ..."
+    },
+    "currencies": {
+        "choose": "ជ្រើសរើសរូបិយប័ណ្ណ"
+    }
+}

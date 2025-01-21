@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duration",
+                        "amount": "Tus nqi"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Duration",
+                        "amount": "Tus nqi"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Duration",
+                    "amount": "tus nqi"
+                },
+                "btns": {
+                    "stake": "Tswv yim"
+                },
+                "stake": "Tswv yim",
+                "loading": "Chaw thau khoom"
+            }
+        }
+    }
+}

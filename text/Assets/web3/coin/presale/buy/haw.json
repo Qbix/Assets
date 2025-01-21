@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "ʻEhia ka nui e hoʻolilo?"
+                    },
+                    "placeholders": {
+                        "amount": "Ka nui o {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Kūʻai",
+                    "execute": "Hoʻokō"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Фурӯши Токен",
+                        "timestamps": "Вақтҳо",
+                        "prices": "Нархҳо",
+                        "endTime": "Вақти анҷом",
+                        "thresholds": "Дараҷаҳо",
+                        "bonuses": "Бонусҳо"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Соҳиб наметавонад бозпас гирад",
+                            "option1": "Соҳиб метавонад токенҳоро танҳо пас аз гузашти вақт бозпас гирад",
+                            "option2": "Соҳиб метавонад токенҳоро дар вақти дилхоҳ бозпас гирад"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Суроғаи ҷомеа",
+                    "methodkeccack": "Функсияи hash Keccak256",
+                    "roleId": "ID нақш",
+                    "sellingToken": "Суроғаи фурӯши токен",
+                    "prices": "ETH, Нарх",
+                    "thresholds": "# аз нишонаҳо",
+                    "bonuses": "Бонус %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Маблағ нест"
+                },
+                "btns": {
+                    "createFund": "Фонд эҷод кунед",
+                    "createFundInForm": "Эҷод кунед"
+                },
+                "fundAddress": "Суроғаи фонд",
+                "createFund": "Фонд эҷод кунед",
+                "fundInfo": "Маълумот",
+                "produce": "Офаридан",
+                "loading": "Бор карда мешавад",
+                "viewInstancesList": "Рӯйхати навсозӣ"
+            }
+        }
+    }
+}

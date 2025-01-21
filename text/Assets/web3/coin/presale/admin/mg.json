@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Mivarotra Token",
+                        "timestamps": "fotoana",
+                        "prices": "vidin&#39;ny",
+                        "endTime": "Fotoana farany",
+                        "thresholds": "tokonana",
+                        "bonuses": "tombontsoa"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Tsy afaka misintona ny tompony",
+                            "option1": "Ny tompony dia afaka misintona famantarana raha tsy rehefa tapitra ny fotoana",
+                            "option2": "Ny tompony dia afaka misintona famantarana amin&#39;ny fotoana rehetra"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Adiresy fiaraha-monina",
+                    "methodkeccack": "Keccak256 hash function",
+                    "roleId": "Role ID",
+                    "sellingToken": "Adiresy fivarotana Token",
+                    "prices": "ETH, Vidiny",
+                    "thresholds": "# ny token",
+                    "bonuses": "Bonus%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Tsy misy vola"
+                },
+                "btns": {
+                    "createFund": "Mamorona Fund",
+                    "createFundInForm": "MANANGANA"
+                },
+                "fundAddress": "Adiresy vola",
+                "createFund": "Mamorona Fund",
+                "fundInfo": "Info",
+                "produce": "Voka-pambolena sy fiompiana",
+                "loading": "Loading",
+                "viewInstancesList": "Havaozina ny lisitra"
+            }
+        }
+    }
+}

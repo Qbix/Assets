@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Токен сатуу",
+                        "timestamps": "Times",
+                        "prices": "Баалар",
+                        "endTime": "Аяктоо убактысы",
+                        "thresholds": "Босоголор",
+                        "bonuses": "Бонустар"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Ээси баш тарта албайт",
+                            "option1": "Ээси токендерди endTime аяктагандан кийин гана ала алат",
+                            "option2": "Ээси каалаган убакта токендерди ала алат"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Коомчулуктун дареги",
+                    "methodkeccack": "Keccak256 хэш-функциясы",
+                    "roleId": "Рол ID",
+                    "sellingToken": "Токен сатуу дареги",
+                    "prices": "ETH, баасы",
+                    "thresholds": "# токендер",
+                    "bonuses": "Бонус %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Каражат жок"
+                },
+                "btns": {
+                    "createFund": "Фонд түзүү",
+                    "createFundInForm": "Түзүү"
+                },
+                "fundAddress": "Фонддун дареги",
+                "createFund": "Фонд түзүү",
+                "fundInfo": "Маалымат",
+                "produce": "Өндүрүш",
+                "loading": "Жүктөө",
+                "viewInstancesList": "Тизмени жаңыртуу"
+            }
+        }
+    }
+}

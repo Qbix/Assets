@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "uphawuErc20",
+                    "duration": "Ubude bexesha",
+                    "bonusTokenFraction": "ibhonasiTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "iminikelo",
+                    "rewardsRateFraction": "imivuzoRateFraction",
+                    "numerator": "inombolo",
+                    "denominator": "idinomineyitha"
+                },
+                "small": {
+                    "tokenErc20": "uphawuErc20",
+                    "duration": "Ubude beentsuku",
+                    "bonusTokenFraction": "ibhonasiTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "iminikelo",
+                    "rewardsRateFraction": "imivuzoRateFraction",
+                    "numerator": "inombolo",
+                    "denominator": "idinomineyitha"
+                }
+            },
+            "placeholders": {
+                "optional": "(ukhetho)",
+                "tuple": "tuple[]",
+                "number": "inani",
+                "address": "idilesi",
+                "fraction": "iqhezu",
+                "integer": "inani elipheleleyo",
+                "seconds": "imizuzwana",
+                "days": "iintsuku",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Akukho machibi"
+            },
+            "btns": {
+                "createPool": "Yenza iPool",
+                "createPoolInForm": "Yenza"
+            },
+            "createPool": "Yenza iPool",
+            "produce": "Velisa",
+            "loading": "Iyalayisha",
+            "viewInstancesList": "Uluhlu Lokuhlaziya"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "նշանErc20",
+                    "duration": "Տևողությունը",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "նվիրատվություններ",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "համարիչ",
+                    "denominator": "հայտարար"
+                },
+                "small": {
+                    "tokenErc20": "նշանErc20",
+                    "duration": "Տևողությունը օրերով",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "նվիրատվություններ",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "համարիչ",
+                    "denominator": "հայտարար"
+                }
+            },
+            "placeholders": {
+                "optional": "(ըստ ցանկության)",
+                "tuple": "կրկնակի[]",
+                "number": "համարը",
+                "address": "հասցեն",
+                "fraction": "կոտորակ",
+                "integer": "ամբողջ թիվ",
+                "seconds": "վայրկյան",
+                "days": "օրեր",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Լողավազաններ չկան"
+            },
+            "btns": {
+                "createPool": "Ստեղծել լողավազան",
+                "createPoolInForm": "Ստեղծել"
+            },
+            "createPool": "Ստեղծել լողավազան",
+            "produce": "Արտադրել",
+            "loading": "Բեռնվում է",
+            "viewInstancesList": "Թարմացնել ցանկը"
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "कालावधी",
+                    "bonusTokenFraction": "बोनस टोकनफ्रॅक्शन",
+                    "popularToken": "लोकप्रिय टोकन",
+                    "donations": "देणग्या",
+                    "rewardsRateFraction": "rewardsrateFraction",
+                    "numerator": "अंश",
+                    "denominator": "भाजक"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "दिवसांमध्ये कालावधी",
+                    "bonusTokenFraction": "बोनस टोकनफ्रॅक्शन",
+                    "popularToken": "लोकप्रिय टोकन",
+                    "donations": "देणग्या",
+                    "rewardsRateFraction": "rewardsrateFraction",
+                    "numerator": "अंश",
+                    "denominator": "भाजक"
+                }
+            },
+            "placeholders": {
+                "optional": "(पर्यायी)",
+                "tuple": "टपल[]",
+                "number": "संख्या",
+                "address": "पत्ता",
+                "fraction": "अंश",
+                "integer": "पूर्णांक",
+                "seconds": "सेकंद",
+                "days": "दिवस",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "पूल नाहीत"
+            },
+            "btns": {
+                "createPool": "पूल तयार करा",
+                "createPoolInForm": "तयार करा"
+            },
+            "createPool": "पूल तयार करा",
+            "produce": "उत्पादन करा",
+            "loading": "लोड करत आहे",
+            "viewInstancesList": "यादी रिफ्रेश करा"
+        }
+    }
+}

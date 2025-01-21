@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Үргэлжлэх хугацаа",
+                        "amount": "Дүн"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Үргэлжлэх хугацаа",
+                        "amount": "Дүн"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Үргэлжлэх хугацаа",
+                    "amount": "хэмжээ"
+                },
+                "btns": {
+                    "stake": "Гадас"
+                },
+                "stake": "Гадас",
+                "loading": "Ачааж байна"
+            }
+        }
+    }
+}

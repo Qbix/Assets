@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "ਕਿੰਨਾ ਨਿਵੇਸ਼ ਕਰਨਾ ਹੈ?"
+                    },
+                    "placeholders": {
+                        "amount": "{{nativeCoin}} ਦੀ ਰਕਮ",
+                        "max": "ਅਧਿਕਤਮ: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "ਖਰੀਦੋ",
+                    "execute": "ਚਲਾਓ"
+                }
+            }
+        }
+    }
+}

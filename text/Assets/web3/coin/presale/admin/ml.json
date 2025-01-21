@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "ടോക്കൺ വിൽക്കുന്നു",
+                        "timestamps": "സമയങ്ങൾ",
+                        "prices": "വിലകൾ",
+                        "endTime": "അവസാന സമയം",
+                        "thresholds": "പരിധികൾ",
+                        "bonuses": "ബോണസുകൾ"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "ഉടമയ്ക്ക് പിൻവലിക്കാൻ കഴിയില്ല",
+                            "option1": "അവസാന സമയം കഴിഞ്ഞതിന് ശേഷം മാത്രമേ ഉടമയ്ക്ക് ടോക്കണുകൾ പിൻവലിക്കാനാകൂ",
+                            "option2": "ഉടമയ്ക്ക് എപ്പോൾ വേണമെങ്കിലും ടോക്കണുകൾ പിൻവലിക്കാം"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "കമ്മ്യൂണിറ്റി വിലാസം",
+                    "methodkeccack": "Keccak256 ഹാഷ് ഫംഗ്‌ഷൻ",
+                    "roleId": "റോൾ ഐഡി",
+                    "sellingToken": "ടോക്കൺ വിലാസം വിൽക്കുന്നു",
+                    "prices": "ETH, വില",
+                    "thresholds": "ടോക്കണുകളുടെ #",
+                    "bonuses": "ബോണസ് %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "ഫണ്ടുകളൊന്നുമില്ല"
+                },
+                "btns": {
+                    "createFund": "ഫണ്ട് സൃഷ്ടിക്കുക",
+                    "createFundInForm": "സൃഷ്ടിക്കുക"
+                },
+                "fundAddress": "ഫണ്ട് വിലാസം",
+                "createFund": "ഫണ്ട് സൃഷ്ടിക്കുക",
+                "fundInfo": "വിവരം",
+                "produce": "ഉൽപ്പാദിപ്പിക്കുക",
+                "loading": "ലോഡ് ചെയ്യുന്നു",
+                "viewInstancesList": "ലിസ്റ്റ് പുതുക്കുക"
+            }
+        }
+    }
+}

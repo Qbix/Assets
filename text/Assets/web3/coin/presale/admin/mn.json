@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Токен зарж байна",
+                        "timestamps": "Цаг хугацаа",
+                        "prices": "Үнэ",
+                        "endTime": "Дуусах цаг",
+                        "thresholds": "Босго",
+                        "bonuses": "Урамшуулал"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Эзэмшигч нь буцаан татах боломжгүй",
+                            "option1": "Эзэмшигч нь зөвхөн endTime дууссаны дараа жетоныг буцааж авах боломжтой",
+                            "option2": "Эзэмшигч нь жетоныг хүссэн үедээ буцааж авах боломжтой"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Олон нийтийн хаяг",
+                    "methodkeccack": "Keccak256 хэш функц",
+                    "roleId": "Үүргийн ID",
+                    "sellingToken": "Токен хаяг зарна",
+                    "prices": "ETH, Үнэ",
+                    "thresholds": "# жетон",
+                    "bonuses": "Бонус %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Ямар ч хөрөнгө байхгүй"
+                },
+                "btns": {
+                    "createFund": "Сан үүсгэх",
+                    "createFundInForm": "Үүсгэх"
+                },
+                "fundAddress": "Сангийн хаяг",
+                "createFund": "Сан үүсгэх",
+                "fundInfo": "Мэдээлэл",
+                "produce": "Үйлдвэрлэх",
+                "loading": "Ачааж байна",
+                "viewInstancesList": "Жагсаалтыг шинэчлэх"
+            }
+        }
+    }
+}

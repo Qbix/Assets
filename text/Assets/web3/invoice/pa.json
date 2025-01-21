@@ -1,0 +1,27 @@
+{
+    "title": "ਭੁਗਤਾਨ ਕਰੋ",
+    "steps": {
+        "sending_native_coins": "ਦੇਸੀ ਸਿੱਕੇ ਭੇਜ ਰਿਹਾ ਹੈ",
+        "sending_tokens": "ਟੋਕਨ ਭੇਜੇ ਜਾ ਰਹੇ ਹਨ",
+        "swap": "ਸਵੈਪ",
+        "approve": "ਮਨਜ਼ੂਰ ਕਰੋ",
+        "one_tx": "ਤੁਹਾਨੂੰ ਇੱਕ ਲੈਣ-ਦੇਣ ਭੇਜਣਾ ਚਾਹੀਦਾ ਹੈ",
+        "two_tx": "ਤੁਹਾਨੂੰ ਦੋ ਲੈਣ-ਦੇਣ ਭੇਜਣੇ ਚਾਹੀਦੇ ਹਨ"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "ਭੁਗਤਾਨ ਕਰਨ ਲਈ ਫੰਡ"
+            }
+        },
+        "btns": {
+            "pay": "ਭੁਗਤਾਨ ਕਰੋ"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "&quot; {{amountOut}} &quot; ਟੋਕਨਾਂ ਦਾ ਭੁਗਤਾਨ ਕਰਨ ਦੀ ਲੋੜ ਹੈ"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "id &quot; {{chainId}} &quot; ਵਾਲੀ ਅਜਿਹੀ ਚੇਨ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ"
+    }
+}

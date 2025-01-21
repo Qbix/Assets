@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Intee in le&#39;eg ayaa la maalgashan karaa?"
+                    },
+                    "placeholders": {
+                        "amount": "Qadarka {{nativeCoin}}",
+                        "max": "ugu badnaan: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Iibso",
+                    "execute": "Fulin"
+                }
+            }
+        }
+    }
+}

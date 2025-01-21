@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Sayop",
+        "WalletAbsent": "Ang pitaka dili konektado.",
+        "Rendering": "Adunay mga sayup samtang naghubad sa <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Gikinahanglan ang presyo!",
+        "NameRequired": "Ngalan gikinahanglan!",
+        "PriceInvalid": "Dili balido ang presyo!",
+        "AmountInvalid": "Dili balido ang kantidad!",
+        "TransactionFailed": "Ang transaksyon napakyas",
+        "ChainNotSupported": "Ang pinili nga kadena wala gisuportahan. Gisuportahan nga kadena: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Kinahanglan MetaMask konektado sa pagtrabaho uban sa aplikasyon",
+        "UserNotLoggedInMetaMask": "Ang user wala naka-log in sa MetaMask",
+        "CurrencyNotFound": "Ang kuwarta wala makit-an",
+        "WrongChain": "Kini nga NFT gihimo ubos sa &quot; {{chain}} &quot;. Palihug gamita kini nga kadena.",
+        "NoRecipientSelected": "Walay gipili nga nakadawat",
+        "CantManageFrozenSeries": "Dili nimo madumala ang frozen nga serye",
+        "SubscriptionStreamNotPaid": "Wala ka pa nakabayad aron matan-aw kini nga sulud. Palihug i-klik {{subscriptionUrl}} ug mag-subscribe sa angay nga plano."
+    },
+    "admin": {
+        "Title": "Administratibo nga mga kabtangan",
+        "SubscriptionTitle": "Mga plano sa suskrisyon"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "I-tap para makabayad"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : giproseso na ang bayad para sa {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Salamat sa imong pagbayad sa {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} nag-subscribe sa {{plan.title}}",
+        "YouSubscribedTo": "Naka-subscribe ka sa {{plan.title}}",
+        "Assets\/credits\/alert": "Adunay ka alerto nga may kalabutan sa imong account"
+    },
+    "charge": {
+        "Subject": "Nakadawat ka og bayad nga {{displayAmount}} gikan sa {{call 'publisher.displayName'}} para sa &quot; {{description}} &quot;",
+        "HasBeenCharged": "Uy, kini aron lang mahibal-an nimo nga {{1}} gisingil {{2}} alang sa {{3}} sa {{4}}"
+    },
+    "charged": {
+        "Subject": "Salamat sa imong pagbayad sa &quot; {{description}} &quot;",
+        "HavePaid": "Uy {{1}} , kini usa lang ka dali nga kumpirmasyon nga malampuson nimo nga nabayran {{2}} hangtod {{3}} alang sa {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Ikonektar ang account",
+        "Success": "Kalampusan",
+        "YourAccountCreated": "Ang imong account malampuson nga nahimo!",
+        "YourAccountAlreadyCreated": "Ang imong account nahimo na ug andam nang gamiton"
+    },
+    "payment": {
+        "AboutOrder": "Impormasyon bahin sa order",
+        "PaymentMethod": "Pamaagi sa pagbayad",
+        "ContactInfo": "Impormasyon sa kontak",
+        "Pay": "Bayad",
+        "PaymentSucceeded": "Ang pagbayad malampuson nga naproseso",
+        "PaymentProcessing.": "Ang imong bayad giproseso",
+        "FailTryAgain": "Wala molampos ang imong pagbayad. Palihug sulayi pag-usab.",
+        "SomethingWrong": "Naay nahitabo",
+        "PaymentStatus": "Status sa pagbayad",
+        "PayTo": "Bayad {{displayName}}",
+        "ChooseCurrency": "Pagpili og kwarta",
+        "YouCanSendUpTo": "Makapadala ka hangtod sa {{amount}} {{symbol}}",
+        "Send": "Ipadala",
+        "EnterAmount": "isulod ang kantidad"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Gidawat ang imbitasyon sa {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} napuno sa {{FilledStreamTitle}}",
+        "ForFillingStream": "Alang sa pagpuno {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Adunay ka {{amount}} nga mga kredito aron magsugod",
+        "PaymentFor": "Pagbayad alang sa &quot; {{1}} &quot;",
+        "PaymentTo": "Pagbayad sa {{1}}",
+        "PaymentToUser": "Pagbalhin sa {{toUserName}}",
+        "CreatePrivateChat": "para sa pribadong chat sa {{toUserName}}",
+        "CreatePaidStream": "alang sa paghimo sa {{toStreamName}}",
+        "JoinedPaidStream": "para sa reserbasyon sa &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName =&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "alang sa paghimo sa komunidad &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "isip refund sa reservation sa &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName =&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Gipalit {{amount}} nga mga kredito",
+        "BonusCredits": "Bonus {{amount}} nga mga kredito",
+        "BuyAmountCredits": "Pagpalit og {{amount}} nga mga kredito",
+        "WatchClip": "sa pagtan-aw {{fromStreamTitle}}",
+        "MissingCredits": "Nawala nga Credits",
+        "YouMissingCredits": "Kinahanglan nimo ang dugang nga {{amount}} nga mga kredito aron makapadayon.",
+        "BuyCredits": "Pagpalit ug mga kredito",
+        "BuyBonus": "Ang pagpalit sa {{amount}} nga mga kredito sa makausa moresulta sa usa ka bonus nga {{bonus}} nga mga kredito.",
+        "Buy": "Palita",
+        "PurchaseCredits": "Pagpalit og mga Kredito",
+        "Credits": "Mga kredito",
+        "ErrorInvalidAmount": "Dili balido ang kantidad",
+        "ErrorInvalidCurrency": "Ikasubo, wala pa namo gisuportahan ang currency {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} nga mga kredito",
+            "BonusCredits": "{{amount}} nga mga kredito"
+        }
+    },
+    "history": {
+        "Date": "Petsa",
+        "Amount": "kantidad",
+        "Description": "Deskripsyon",
+        "Client": "Kliyente",
+        "User": "Gumagamit",
+        "To": "sa",
+        "From": "gikan sa",
+        "SeeHistory": "Tan-awa ang kasaysayan sa pagbayad para sa {{1}}",
+        "HistoryEmpty": "Wala pa’y transaksyon",
+        "PaymentFor": "Gipadala {{amount}} nga mga kredito",
+        "PaymentTo": "Gipadala {{amount}} nga mga kredito",
+        "PaymentToUser": "Gipadala {{amount}} nga mga kredito",
+        "CreatePaidStream": "Naggasto og {{amount}} nga mga kredito",
+        "WatchClip": {
+            "+": "Nakuha {{amount}} nga mga kredito",
+            "-": "Naggasto og {{amount}} nga mga kredito"
+        },
+        "JoinedPaidStream": {
+            "+": "Nakuha {{amount}} nga mga kredito",
+            "-": "Naggasto og {{amount}} nga mga kredito"
+        },
+        "LeftPaidStream": {
+            "+": "Nakadawat ug {{amount}} nga mga kredito",
+            "-": "Gipadala {{amount}} nga mga kredito"
+        },
+        "CreatedCommunity": "Naggasto og {{amount}} nga mga kredito",
+        "BoughtCredits": "Gipalit {{amount}} nga mga kredito",
+        "BonusCredits": "Nakakuha ug bonus {{amount}} credits",
+        "InviteAcceptedBy": "Nakuha {{amount}} nga mga kredito",
+        "Streams_user_firstname": "Nakuha {{amount}} nga mga kredito",
+        "Streams_user_lastname": "Nakuha {{amount}} nga mga kredito",
+        "Streams_user_icon": "Nakuha {{amount}} nga mga kredito",
+        "Places_user_location": "Nakuha {{amount}} nga mga kredito",
+        "Streams_greeting": "Nakuha {{amount}} nga mga kredito",
+        "YouHaveCreditsToStart": "Nakuha {{amount}} nga mga kredito",
+        "InvitedUserFilledStream": "Nakuha {{amount}} nga mga kredito",
+        "ForFillingStream": "Nakuha {{amount}} nga mga kredito",
+        "CreatePrivateChat": "Naggasto og {{amount}} nga mga kredito"
+    },
+    "subscriptions": {
+        "infoTitle": "Ihatag ang Impormasyon sa Pagbayad",
+        "confirm": {
+            "title": "Pagsugod sa Suskrisyon",
+            "message": "Pagsugod ug nagbalikbalik nga suskrisyon sa &quot; {{title}} &quot;?",
+            "ok": "OK ra",
+            "cancel": "Pagkanselar"
+        },
+        "CreditOrDebitCard": "Credit o debit card",
+        "SubscribePayment": "Pagbayad sa Pag-subscribe",
+        "ImmediatePayment": "Diha-diha nga Pagbayad",
+        "ProcessingPayment": "Pagproseso sa Bayad",
+        "SubscriptionAlreadyPaid": "Kini nga suskrisyon nabayran na",
+        "SubscriptionNotActive": "Ang suskrisyon sa pagkakaron dili aktibo",
+        "Subscribed": "Nag-subscribe",
+        "Unsubscribed": "Nag-unsubscribe",
+        "Unsubscribe": "Pag-unsubscribe",
+        "Subscribe": "Mag-subscribe",
+        "Started": "Nagsugod",
+        "EndsIn": "Nagtapos sa",
+        "NextPay": "Sunod nga bayad",
+        "Period": "Panahon",
+        "Price": "Presyo",
+        "AreYouSureUnsubscribe": "Sigurado ka ba nga gusto nimo nga mag-unsubscribe gikan niini nga plano?",
+        "YouUnsubscribedFromPlan": "Nag-unsubscribe ka sa plano nga &quot; {{planTitle}} &quot;. Dili ka masingil sa sunod, apan ang imong suskrisyon magpadayon hangtod sa {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "titulo sa plano",
+            "PricePlaceholder": "presyo",
+            "SubscriptionTitle": "Mga plano sa suskrisyon",
+            "DescriptionPlaceholder": "paghulagway sa plano sa subscription",
+            "AreYouSureDeletePlan": "Sigurado ka ba nga gusto nimong papason kini nga plano?",
+            "Duration": "Gidugayon",
+            "Discount": "Diskwento",
+            "SavePlan": "Tipigi",
+            "Interrupt": "Pagbalda",
+            "Continue": "Padayon",
+            "NewPlan": "Bag-ong Plano",
+            "SelectDisplayType": "Pilia {{displayType}}",
+            "EndDate": "petsa sa pagtapos",
+            "Available": "Anaa",
+            "Hidden": "Gitagoan",
+            "InviteOnly": "Imbitasyon-lamang",
+            "CantSubscribeUnlessInvited": "Dili ka maka-subscribe niini nga plano gawas kung giimbitar ka"
+        }
+    },
+    "payments": {
+        "infoTitle": "Itakda ang Impormasyon sa Pagbayad",
+        "BuyAmountCredits": "Pagpalit og {{amount}} nga mga kredito",
+        "confirm": {
+            "title": "Pagbayad",
+            "message": "Mouyon ka ba sa pagbayad {{symbol}} {{amount}} ?",
+            "ok": "OK ra",
+            "cancel": "Pagkanselar"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Mga kredito",
+            "description": "nagsubay sa mga kredito ug pagbayad"
+        },
+        "Assets\/plan": {
+            "displayType": "Plano sa Subsripsyon",
+            "description": "plano sa suskrisyon"
+        },
+        "Assets\/subscription": {
+            "displayType": "Suskrisyon",
+            "description": "suskrisyon"
+        },
+        "Assets\/product": {
+            "displayType": "produkto",
+            "description": "produkto nga gibaligya"
+        },
+        "Assets\/service": {
+            "displayType": "Serbisyo",
+            "description": "serbisyo nga gitanyag"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Nakuha {{amount}} nga mga kredito"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Gipalit {{amount}} nga mga kredito"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Bonus {{amount}} nga mga kredito"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Naggasto og {{amount}} nga mga kredito"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Gipadala {{amount}} nga mga kredito sa {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Nakadawat ug {{amount}} ka kredito gikan sa {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Dili igo ang imong mga kredito sa imong account. Palihug bisitaha ang mosunod nga <a href='<i translate='no'>999&#39;&gt;link<\/a> para makapalit ug dugang mga credits."
+        }
+    },
+    "billing": {
+        "Title": "Pagsingil sa mga asset",
+        "CreditsMinimum": "Minimum nga mga kredito",
+        "CreditsToAdd": "Mga kredito nga idugang",
+        "Save": "Tipigi",
+        "ThisLink": "kini nga link",
+        "errors": {
+            "CreditsMinimumNegative": "Ang minimum nga mga kredito dili mahimong negatibo",
+            "CreditsToAddNegative": "Ang mga kredito nga idugang dili mahimong negatibo"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Bag-ong Serbisyo",
+            "TitlePlaceholder": "Titulo sa serbisyo",
+            "PricePlaceholder": "Ibutang ang presyo",
+            "LinkPlaceholder": "ibutang ang dugang nga link sa impormasyon",
+            "DescriptionPlaceholder": "Deskripsyon sa serbisyo",
+            "SaveService": "I-save ang Serbisyo",
+            "SelectRequiredParticipants": "Gikinahanglan nga may kalabutan nga mga partisipante",
+            "RequiredParticipantsDesc": "Palihug pilia ang mga partisipante nga may kalabutan nga gikinahanglan sa paggamit niini nga serbisyo (pananglitan mga binuhi alang sa &quot;Pagpakita sa mga iro&quot;, o mga bata alang sa &quot;Pista sa mga Bata&quot; ug uban pa). Kung ang serbisyo gibayran, ang tiggamit kinahanglan usab nga magbayad alang sa matag may kalabutan nga mga partisipante."
+        },
+        "EditServiceTemplate": {
+            "Title": "I-edit ang Serbisyo"
+        },
+        "ManageServiceTemplates": "Pagdumala sa mga Template sa Serbisyo",
+        "ManageServices": "Pagdumala sa mga Serbisyo",
+        "Free": "Libre",
+        "OptionalContribution": "Opsyonal nga kontribusyon",
+        "RequiredPayment": "Gikinahanglan nga bayad",
+        "AreYouSureDelete": "Sigurado ka ba nga gusto nimong papason kini nga serbisyo?",
+        "AmountServicesRelated": "Adunay {{amount}} nga magamit nga may kalabutan sa kini nga serbisyo. Sila usab tangtangon."
+    },
+    "transfer": {
+        "SelectRecipient": "Pilia ang makadawat",
+        "TransactionSuccess": "Kalampusan sa Transaksyon",
+        "OrTypeWalletAddress": "O i-type ang adres sa pitaka sa nakadawat",
+        "AppCredits": "Mga Kredito sa App"
+    },
+    "NFT": {
+        "Title": "Titulo",
+        "Name": "Ngalan",
+        "EnterName": "Ibutang ang ngalan",
+        "EnterAuthorWallet": "Pagsulod sa pitaka sa tagsulat",
+        "InformationAboutTitle": "Impormasyon bahin sa {{title}} NFT",
+        "Description": "Deskripsyon",
+        "DetailedInformationAboutNFT": "Detalyadong impormasyon bahin sa NFT",
+        "PresaleStarts": "Presale Magsugod Disyembre 23",
+        "OwnerUserNotFound": "Ang tag-iya niini nga NFT wala narehistro sa among aplikasyon.",
+        "BuyNow": "Palita karon",
+        "Buy": "Palita",
+        "Add": "Idugang",
+        "Remove": "Kuhaa",
+        "NoNFTyet": "Wala pa&#39;y NFT",
+        "Conversation": "Pag-istoryahanay",
+        "Create": "Paghimo",
+        "CurrentBid": "Kasamtangang bid",
+        "StartingIn": "Nagsugod sa",
+        "EndingIn": "Pagtapos sa",
+        "CreateNFT": "Paghimo og NFT",
+        "TitlePlaceholder": "Hatagi og titulo ang imong NFT",
+        "DescriptionPlaceholder": "Ihatag ang imong NFT og deskripsyon",
+        "CreateYourNFT": "Paghimo sa imong NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "Opsyonal. Ang kantidad nga gibayad sa tiglalang sa wala pa ibalhin.",
+        "ExpirationDate": "Petsa sa Pag-expire",
+        "StartingDate": "Petsa sa Pagsugod",
+        "BidsBelowThisAmount": "Ang mga bid nga ubos sa kini nga kantidad dili tugutan",
+        "MinimumBid": "Minimum nga bid",
+        "Author": "Awtor",
+        "Price": "Presyo",
+        "Commission": "Komisyon",
+        "EnterCommission": "Pagsulod sa komisyon",
+        "Owner": "Tag-iya",
+        "SelectCategory": "Pilia ang kategorya",
+        "Day": "Adlaw",
+        "Days": "Mga adlaw",
+        "Hour": "Oras",
+        "Hours": "Mga oras",
+        "Minute": "Minuto",
+        "Minutes": "Mga minuto",
+        "Second": "Ikaduha",
+        "Seconds": "Segundo",
+        "SalesCreator": "sa mga halin maadto sa magbubuhat",
+        "Details": "Mga Detalye",
+        "Bids": "Mga bid",
+        "History": "Kasaysayan",
+        "LoremIpsum": "Ang Lorem Ipsum usa lang ka dummy nga teksto sa industriya sa pag-imprenta ug pag-type.",
+        "PutOnSale": "Ibutang sa sale",
+        "PutOffSale": "Pag-withdraw gikan sa pagbaligya",
+        "Transfer": "Pagbalhin",
+        "Actions": "Mga aksyon",
+        "Claim": "Pangangkon",
+        "ClaimNFT": "Pag-angkon sa NFT",
+        "Unlocking": "Pag-abli",
+        "Unlock": "Unlock",
+        "Update": "Update",
+        "UpdateToken": "Pag-update sa Token",
+        "UpdateNFT": "Pag-update sa NFT",
+        "CreateToken": "Paghimo og Token",
+        "PlaceBid": "Bid sa Lugar",
+        "SoldOut": "Gibaligya",
+        "NotOnSale": "Dili Gibaligya",
+        "NftName": "NFT ngalan",
+        "DescribeYourNFT": "Palihug ihulagway ang imong NFT",
+        "NFTImage": "Imahe para sa NFT",
+        "NFTVideo": "Video para sa NFT, kung naa man",
+        "GenerateDescription": "o auto-generate",
+        "UploadMovie": "Pag-upload og salida",
+        "MovieSource": "Tinubdan sa Pelikula",
+        "MovieURL": "URL sa salida",
+        "UploadFile": "Pag-upload og file",
+        "PutOnMarketplace": "Ibutang sa merkado",
+        "InstantPurchase": "Pagsulod sa presyo aron tugotan ang mga tiggamit nga makapalit dayon sa imong NFT",
+        "FixedPrice": "Gitakdang presyo",
+        "TimedAuction": "Gitakdang subasta",
+        "OpenForBids": "Bukas alang sa mga bid",
+        "PriceOnePiece": "Pagsulod sa presyo alang sa usa ka piraso",
+        "EnterPrice": "Pagsulod sa presyo",
+        "EnterMinimumBid": "Pagsulod sa Minimum nga bid",
+        "SelectChain": "Pilia ang kadena",
+        "Currency": "Salapi",
+        "AreYouSureDeleteImage": "Sigurado ka ba nga gusto nimong tangtangon ang imahe?",
+        "AreYouSureDeleteVideo": "Sigurado ka ba nga gusto nimong tangtangon ang video?",
+        "series": {
+            "Name": "Ngalan",
+            "Icon": "Icon",
+            "Description": "Deskripsyon",
+            "Author": "Awtor",
+            "SelectSeries": "Pilia ang serye",
+            "Value": "Bili",
+            "AreYouSure": "Sigurado ka?",
+            "AuthorInvalid": "Ang adres sa tagsulat dili balido!",
+            "Address": "Address",
+            "CoverImage": "Hapin nga hulagway",
+            "UploadCoverImage": "I-upload ang hulagway sa hapin",
+            "CommissionAddressInvalid": "Ang adres sa komisyon dili balido",
+            "OnSale": "gibaligya",
+            "OffSale": "off sale",
+            "CreateSeries": "Paghimo og Serye",
+            "UpdateSeries": "Pag-update sa Serye",
+            "SeriesInfo": "Impormasyon sa Serye",
+            "SelectAuthor": "Pilia ang awtor",
+            "NewItem": "Bag-ong serye sa NFT",
+            "NamePlaceholder": "Pagsulod sa ngalan sa serye",
+            "DescPlaceholder": "Pagsulod sa deskripsyon sa serye",
+            "EndingIn": "Pagtapos sa"
+        },
+        "contract": {
+            "CreateContract": "Paghimo og kontrata",
+            "SelectContract": "Pilia ang kontrata",
+            "CreateContractFor": "Paghimo og kontrata alang sa {{userName}}",
+            "ContractFor": "Kontrata sa {{userName}}",
+            "UpdateContract": "Pag-update sa Kontrata",
+            "TransferOwnership": "Pagbalhin sa Panag-iya",
+            "SetBaseURI": "Ibutang ang Base URI",
+            "SetSuffix": "Ibutang ang Suffix",
+            "CurrentOwner": "Kasamtangang Tag-iya",
+            "CurrentBaseURL": "Kasamtangang BaseURL",
+            "ContractAddressAbsent": "Wala ang adres sa kontrata",
+            "FactoryAddressAbsent": "Wala ang address sa pabrika",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Titulo gikinahanglan",
+            "SymbolRequired": "Simbolo nga gikinahanglan",
+            "TypeContractName": "ngalan sa kontrata",
+            "TypeContractSymbol": "simbolo sa kontrata (max 10 ka karakter)"
+        },
+        "contests": {
+            "Title": "Mga sangka",
+            "NewContest": "Bag-ong Paligsahan"
+        },
+        "collections": {
+            "Title": "Mga koleksyon",
+            "EnterTitle": "isulod ang titulo",
+            "EnterDescription": "pagsulod sa paghulagway",
+            "NewCollection": "Bag-ong Koleksyon",
+            "Name": "Ngalan",
+            "Icon": "Icon",
+            "Description": "Deskripsyon",
+            "Author": "Awtor",
+            "SelectCollection": "Pagpili sa koleksyon",
+            "Value": "Bili",
+            "AreYouSure": "Sigurado ka?",
+            "AuthorInvalid": "Ang adres sa tagsulat dili balido!",
+            "Address": "Address",
+            "CoverImage": "Hapin nga hulagway",
+            "UploadIcon": "Icon sa pag-upload",
+            "CommissionAddressInvalid": "Ang adres sa komisyon dili balido",
+            "OnSale": "gibaligya",
+            "OffSale": "off sale",
+            "CreateCollection": "Paghimo Koleksyon",
+            "UpdateCollection": "Pag-update sa Koleksyon",
+            "CollectionInfo": "Impormasyon sa Pagkolekta",
+            "SelectAuthor": "Pilia ang awtor",
+            "NewItem": "Bag-ong Koleksyon sa NFT",
+            "NamePlaceholder": "Pagsulod sa ngalan sa koleksyon",
+            "DescPlaceholder": "Pagsulod sa paghulagway sa koleksyon",
+            "EndingIn": "Pagtapos sa",
+            "SubmitSeries": "Pagsumite ug Serye"
+        },
+        "import": {
+            "importNFT": "Pag-import sa mga NFT",
+            "importAttributes": "Import NFT nga mga hiyas",
+            "fileNotFound": "Pasayloa, CSV file wala makit-an.",
+            "fileEmpty": "Sorry, CSV file walay sulod.",
+            "userIdNotFound": "naay user pero walay sulod ang id",
+            "errorLine": "linya {{1}}",
+            "fieldNotFound": "Ang gikinahanglan nga field &quot; {{1}} &quot; wala makit-an",
+            "displayTypeEmpty": "Ang tipo sa display para sa &quot; {{1}} &quot; wala makit-an",
+            "taskStreamInvalid": "dili balido ang stream sa buluhaton",
+            "instructionsEmpty": "walay sulod nga mga instruksyon sa stream sa buluhaton",
+            "complete": "Kompleto",
+            "activateUsers": "ipadala ang mensahe sa pagpaaktibo sa mga tiggamit?",
+            "importProgress": "Pag-uswag",
+            "importOptions": "Mga kapilian",
+            "sampleCSV": "Pag-download sa Sampol nga CSV",
+            "fileLabel": "Pag-upload sa Spreadsheet:",
+            "errorsTitle": "Nahitabo ang mga sayop"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Pagsala pinaagi sa NFT Collections",
+                "ShowNFTCollection": "Ipakita ang koleksyon sa NFT sa ...",
+                "AllCollections": "Tanan nga Koleksyon"
+            },
+            "ByUser": {
+                "AllAuthors": "Tanan nga mga Awtor",
+                "AllUsers": "Ang tanan",
+                "FilterByAuthors": "Salain pinaagi sa mga Awtor"
+            }
+        },
+        "Back": "Balik sa Koleksyon",
+        "attributes": {
+            "Title": "Pagdumala sa mga Katangian",
+            "Attributes": "Mga hiyas",
+            "DisplayTitle": "Uri sa Pagpakita",
+            "AddDisplayType": "Pagdugang bag-ong tipo sa display",
+            "NewDisplay": "Bag-ong Display",
+            "TraitTitle": "Uri sa Kinaiya",
+            "AddTraitTitle": "Pagdugang bag-ong tipo sa kinaiya",
+            "NewTrait": "Bag-ong Uri sa Kinaiya",
+            "ValueTitle": "Bili",
+            "AddValueTitle": "Pagdugang bag-ong bili",
+            "NewValue": "Bag-ong Bili",
+            "NewAttribute": "Bag-ong Hiyas",
+            "UpdateAttributes": "Pag-update sa mga Katangian",
+            "SaveAttributes": "I-save ang mga Katangian"
+        },
+        "profile": {
+            "LogOut": "Log out",
+            "Title": "Profile para sa {{userName}}",
+            "Description": "Mga detalye sa tiggamit",
+            "aboutPlaceholder": "I-edit ang Bio",
+            "UploadCoverPhoto": "I-upload ang Cover Photo",
+            "SureLogOut": "Sigurado ka ba nga gusto ka nga mo-log out?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "serye Id",
+                        "owner": "Tag-iya",
+                        "currency": "Currency",
+                        "price": "Presyo",
+                        "beneficiary": "benepisyaryo",
+                        "autoindex": "Autoindex",
+                        "duration": "Gidugayon",
+                        "rateInterval": "I-rate ang interval",
+                        "rateAmount": "kantidad sa rate"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "ang mga token himoon sa kini nga serye",
+                        "owner": "tag-iya sa pananglitan, kung dili mao ang nagpadala",
+                        "currency": "Currency alang sa gipalit nga mga token, kung zero - alang sa lumad nga mga sensilyo",
+                        "price": "Presyo",
+                        "beneficiary": "Ang benepisyaryo sa pagbaligya sa mga token, kung dili mao ang nagpadala",
+                        "autoindex": "Autoindex",
+                        "duration": "Lock human sa pagmina. Ang zero nagpasabot nga makuha kini dayon.",
+                        "rateInterval": "agwat sa balde alang sa espesyal nga pagpalit",
+                        "rateAmount": "kantidad sa balde alang sa espesyal nga pagpalit"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opsyonal)",
+                    "number": "numero",
+                    "address": "adres",
+                    "fraction": "tipik",
+                    "integer": "integer",
+                    "seconds": "segundos",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Pagprodyus",
+                "viewInstancesList": "I-refresh ang Listahan"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Series ID",
+                        "account": "Account",
+                        "amount": "kantidad"
+                    },
+                    "small": {
+                        "seriesId": "bag-ong token mahisakop sa serye nga adunay ingon nga ID",
+                        "account": "tag-iya sa bag-ong gibuhat nga NFT. kung dili itakda - gamiton ang kasamtangan nga pitaka",
+                        "amount": "kantidad sa NFT sa mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(opsyonal)",
+                    "seriesId": "id",
+                    "account": "asoy",
+                    "amount": "kantidad",
+                    "integer": "integer"
+                },
+                "btn": {
+                    "Purchase": "Pagpalit",
+                    "SpecialPurchase": "Espesyal nga pagpalit"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Address"
+                    },
+                    "small": {
+                        "account": "Address"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Dili balido nga Address"
+                },
+                "placeholders": {
+                    "account": "Address"
+                },
+                "addToWhitelist": "Idugang Sa Whitelist",
+                "removeFromWhitelist": "Kuhaa Gikan sa Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Tigbantay",
+                    "recipient": "Tigdawat"
+                },
+                "small": {
+                    "tokenId": "token id kung unsa ang kinahanglan nga i-lock o i-unlock",
+                    "custodian": "adres nga mahimong maablihan",
+                    "recipient": "adres nga makadawat sa mga token"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Dili balido nga tokenId",
+                "invalidCustodian": "Dili balido nga Custodian",
+                "invalidRecipient": "Dili balido nga Tigdawat"
+            },
+            "placeholders": {
+                "optional": "(opsyonal)",
+                "tokenId": "id",
+                "custodian": "adres"
+            },
+            "Lock": "Lock",
+            "Unlock": "Unlock",
+            "Locked": "Gi-lock",
+            "CustodianAddress": "Address sa kustodian",
+            "TokenWasClaimed": "Ang token nga &quot; {{title}} &quot; giangkon",
+            "TokenWasLocked": "Ang token nga &quot; {{title}} &quot; gi-lock",
+            "TokenWasUnlocked": "Ang token nga &quot; {{title}} &quot; gi-unlock"
+        }
+    },
+    "fundrise": {
+        "placeholder": "pag-type og usa ka butang mahitungod niini nga kontribusyon..."
+    },
+    "currencies": {
+        "choose": "Pagpili og kwarta"
+    }
+}

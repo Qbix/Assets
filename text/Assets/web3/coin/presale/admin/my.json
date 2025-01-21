@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "တိုကင်ရောင်းခြင်း။",
+                        "timestamps": "ကြိမ်",
+                        "prices": "စျေးနှုန်းများ",
+                        "endTime": "ကုန်ဆုံးချိန်",
+                        "thresholds": "တံခါးခုံများ",
+                        "bonuses": "ဆုကြေးငွေများ"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "ပိုင်ရှင်က ပြန်ထုတ်လို့မရဘူး",
+                            "option1": "ပိုင်ရှင်သည် endTime ကျော်လွန်ပြီးမှသာ တိုကင်များကို ထုတ်ယူနိုင်သည်။",
+                            "option2": "ပိုင်ရှင်သည် တိုကင်များကို အချိန်မရွေး ထုတ်ယူနိုင်သည်။"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "ရပ်ရွာလိပ်စာ",
+                    "methodkeccack": "Keccak256 hash လုပ်ဆောင်ချက်",
+                    "roleId": "အခန်းကဏ္ဍ ID",
+                    "sellingToken": "တိုကင်ရောင်းရန်လိပ်စာ",
+                    "prices": "ETH၊ စျေးနှုန်း",
+                    "thresholds": "တိုကင် # ခု",
+                    "bonuses": "အပိုဆု %"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "ရန်ပုံငွေမရှိဘူး။"
+                },
+                "btns": {
+                    "createFund": "ရန်ပုံငွေဖန်တီးပါ။",
+                    "createFundInForm": "ဖန်တီးပါ။"
+                },
+                "fundAddress": "ရန်ပုံငွေလိပ်စာ",
+                "createFund": "ရန်ပုံငွေဖန်တီးပါ။",
+                "fundInfo": "အချက်အလက်",
+                "produce": "ဟင်းသီးဟင်းရွက်",
+                "loading": "ဒိန်း",
+                "viewInstancesList": "စာရင်းကို ပြန်လည်စတင်ပါ။"
+            }
+        }
+    }
+}

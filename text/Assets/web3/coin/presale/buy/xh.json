@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Yimalini oza kuyityala?"
+                    },
+                    "placeholders": {
+                        "amount": "Isixa-mali sama {{nativeCoin}}",
+                        "max": "Ubukhulu: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Thenga",
+                    "execute": "Phumeza"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "ڪيترو سيڙپڪاري ڪرڻ؟"
+                    },
+                    "placeholders": {
+                        "amount": "رقم {{nativeCoin}}",
+                        "max": "وڌ ۾ وڌ: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "خريد ڪريو",
+                    "execute": "عمل ڪرڻ"
+                }
+            }
+        }
+    }
+}

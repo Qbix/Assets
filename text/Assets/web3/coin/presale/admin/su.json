@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Ngajual Token",
+                        "timestamps": "Kali",
+                        "prices": "Harga",
+                        "endTime": "Waktos Tungtung",
+                        "thresholds": "Ambang-ambang",
+                        "bonuses": "bonus"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Pamilik teu tiasa mundur",
+                            "option1": "Pamilik tiasa mundur token ngan saatos waktos akhir",
+                            "option2": "Pamilik tiasa mundur token iraha waé"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Alamat komunitas",
+                    "methodkeccack": "Fungsi hash Keccak256",
+                    "roleId": "ID peran",
+                    "sellingToken": "Alamat Ngajual Token",
+                    "prices": "ETH, harga",
+                    "thresholds": "# tina token",
+                    "bonuses": "Bonus%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Teu aya dana"
+                },
+                "btns": {
+                    "createFund": "Jieun Dana",
+                    "createFundInForm": "Nyiptakeun"
+                },
+                "fundAddress": "Alamat dana",
+                "createFund": "Jieun Dana",
+                "fundInfo": "Inpo",
+                "produce": "Ngahasilkeun",
+                "loading": "Ngamuat",
+                "viewInstancesList": "Refresh Daptar"
+            }
+        }
+    }
+}

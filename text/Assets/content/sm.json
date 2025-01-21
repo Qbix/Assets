@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "Sese",
+        "WalletAbsent": "E le feso&#39;ota&#39;i le atotupe.",
+        "Rendering": "Sa iai fa&#39;aletonu a&#39;o fa&#39;aliliuina <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Tau mana&#39;omia!",
+        "NameRequired": "Manaomia le igoa!",
+        "PriceInvalid": "E le aoga le tau!",
+        "AmountInvalid": "E le aoga le aofa&#39;i!",
+        "TransactionFailed": "Ua le manuia le fefaʻatauaiga",
+        "ChainNotSupported": "E le lagolagoina le filifili filifilia. filifili lagolago: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Manaomia MetaMask fesoʻotaʻi e galue ma le talosaga",
+        "UserNotLoggedInMetaMask": "E le o saini le tagata fa&#39;aoga ile MetaMask",
+        "CurrencyNotFound": "E le maua se tupe",
+        "WrongChain": "O lenei NFT na faia i lalo o le &quot; {{chain}} &quot;. Fa&#39;amolemole fa&#39;aaoga lenei filifili.",
+        "NoRecipientSelected": "E leai se tagata e mauaina ua filifilia",
+        "CantManageFrozenSeries": "E le mafai ona e pulea fa&#39;asologa fa&#39;aaisa",
+        "SubscriptionStreamNotPaid": "E te le&#39;i totogia e matamata ai i lenei mea. Fa&#39;amolemole kiliki {{subscriptionUrl}} ma lesitala i le fuafuaga talafeagai."
+    },
+    "admin": {
+        "Title": "Pulega o aseta",
+        "SubscriptionTitle": "Fa&#39;asoa fuafuaga"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Tap e totogi"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : ua mae&#39;a ona fa&#39;agasolo le totogi mo {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Faafetai mo lau totogi ile {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} na lesitala i {{plan.title}}",
+        "YouSubscribedTo": "Ua uma ona e lesitala i {{plan.title}}",
+        "Assets\/credits\/alert": "E iai sau fa&#39;aaliga e feso&#39;ota&#39;i ma lau teugatupe"
+    },
+    "charge": {
+        "Subject": "Na e mauaina se totogi o {{displayAmount}} mai {{call 'publisher.displayName'}} mo le &quot; {{description}} &quot;",
+        "HasBeenCharged": "Ei, e na&#39;o le ta&#39;u atu ia te oe {{1}} ua molia {{2}} mo {{3}} e {{4}}"
+    },
+    "charged": {
+        "Subject": "Faafetai mo lau totogi mo le &quot; {{description}} &quot;",
+        "HavePaid": "Talofa {{1}} , ua na&#39;o se fa&#39;amaoniga vave na e totogiina manuia {{2}} i {{3}} mo {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Feso&#39;ota&#39;i tala",
+        "Success": "Manuia",
+        "YourAccountCreated": "Ua manuia lau tala!",
+        "YourAccountAlreadyCreated": "Ua uma ona fai lau tala ma ua sauni e fa&#39;aoga"
+    },
+    "payment": {
+        "AboutOrder": "Fa&#39;amatalaga e uiga i oka",
+        "PaymentMethod": "Auala totogi",
+        "ContactInfo": "Fa&#39;amatalaga fa&#39;afeso&#39;ota&#39;i",
+        "Pay": "Totogi",
+        "PaymentSucceeded": "Ua fa&#39;agasolo lelei le totogiina",
+        "PaymentProcessing.": "O lo&#39;o fa&#39;agasolo lau totogi",
+        "FailTryAgain": "E le&#39;i manuia lau totogi. Fa&#39;amolemole toe taumafai.",
+        "SomethingWrong": "Sa i ai se mea na faaletonu",
+        "PaymentStatus": "Tulaga totogi",
+        "PayTo": "Totogi {{displayName}}",
+        "ChooseCurrency": "Filifili se tupe",
+        "YouCanSendUpTo": "E mafai ona e lafo atu i {{amount}} {{symbol}}",
+        "Send": "Auina atu",
+        "EnterAmount": "tu&#39;u le aofa&#39;i"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Na talia le valaaulia e {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} fa&#39;atumu {{FilledStreamTitle}}",
+        "ForFillingStream": "Mo le faʻatumu {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "E {{amount}} ou maka e amata ai",
+        "PaymentFor": "Totogi mo &quot; {{1}} &quot;",
+        "PaymentTo": "Totogi ile {{1}}",
+        "PaymentToUser": "Sii atu ile {{toUserName}}",
+        "CreatePrivateChat": "mo talanoaga patino ma {{toUserName}}",
+        "CreatePaidStream": "mo le fatuina o {{toStreamName}}",
+        "JoinedPaidStream": "mo le fa&#39;asao i le &quot; <a data-publisherId='<i translate='no'>999 &#39;data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "mo le fausiaina o nuu &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "e fai ma toe fa&#39;aagaga tupe i le &quot; <a data-publisherId='<i translate='no'>999 &#39;data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Fa&#39;atau {{amount}} credits",
+        "BonusCredits": "Ponesi {{amount}} maka",
+        "BuyAmountCredits": "Fa&#39;atau {{amount}} credits",
+        "WatchClip": "mo le matamata {{fromStreamTitle}}",
+        "MissingCredits": "Ua misi Credits",
+        "YouMissingCredits": "E te mana&#39;omia se fa&#39;aopoopo {{amount}} maka e fa&#39;agasolo ai.",
+        "BuyCredits": "Fa&#39;atau aitalafu",
+        "BuyBonus": "Fa&#39;atau {{amount}} credits i le taimi e tasi o le a maua ai se ponesi o {{bonus}} credits.",
+        "Buy": "Fa&#39;atau",
+        "PurchaseCredits": "Fa&#39;atauga Tupe",
+        "Credits": "Fa&#39;aaitalafu",
+        "ErrorInvalidAmount": "E le aoga le aofa&#39;i",
+        "ErrorInvalidCurrency": "Ae paga lea, matou te le o lagolagoina le tupe {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} maka",
+            "BonusCredits": "{{amount}} maka"
+        }
+    },
+    "history": {
+        "Date": "Aso",
+        "Amount": "Aofaiga",
+        "Description": "Fa&#39;amatalaga",
+        "Client": "Tagata fa&#39;atau",
+        "User": "Tagata fa&#39;aoga",
+        "To": "ia",
+        "From": "mai",
+        "SeeHistory": "Va&#39;ai tala fa&#39;asolopito mo le {{1}}",
+        "HistoryEmpty": "E leai ni fefa&#39;atauaiga",
+        "PaymentFor": "Tuuina atu {{amount}} maka",
+        "PaymentTo": "Tuuina atu {{amount}} maka",
+        "PaymentToUser": "Tuuina atu {{amount}} maka",
+        "CreatePaidStream": "Fa&#39;aalu {{amount}} maka",
+        "WatchClip": {
+            "+": "Maua {{amount}} maka",
+            "-": "Fa&#39;aalu {{amount}} maka"
+        },
+        "JoinedPaidStream": {
+            "+": "Maua {{amount}} maka",
+            "-": "Fa&#39;aalu {{amount}} maka"
+        },
+        "LeftPaidStream": {
+            "+": "Maua {{amount}} maka",
+            "-": "Tuuina atu {{amount}} maka"
+        },
+        "CreatedCommunity": "Fa&#39;aalu {{amount}} maka",
+        "BoughtCredits": "Fa&#39;atau {{amount}} credits",
+        "BonusCredits": "Maua ponesi {{amount}} credits",
+        "InviteAcceptedBy": "Maua {{amount}} maka",
+        "Streams_user_firstname": "Maua {{amount}} maka",
+        "Streams_user_lastname": "Maua {{amount}} maka",
+        "Streams_user_icon": "Maua {{amount}} maka",
+        "Places_user_location": "Maua {{amount}} maka",
+        "Streams_greeting": "Maua {{amount}} maka",
+        "YouHaveCreditsToStart": "Maua {{amount}} maka",
+        "InvitedUserFilledStream": "Maua {{amount}} maka",
+        "ForFillingStream": "Maua {{amount}} maka",
+        "CreatePrivateChat": "Fa&#39;aalu {{amount}} maka"
+    },
+    "subscriptions": {
+        "infoTitle": "Tuuina atu le Faʻamatalaga Totogi",
+        "confirm": {
+            "title": "Amata le Fa&#39;atauga",
+            "message": "Amata se saofaga faifaipea i le &quot; {{title}} &quot;?",
+            "ok": "Ua lelei",
+            "cancel": "Fa&#39;aleaogaina"
+        },
+        "CreditOrDebitCard": "aitalafu po&#39;o aitalafu aitalafu",
+        "SubscribePayment": "Totogi Totogi",
+        "ImmediatePayment": "Totogi vave",
+        "ProcessingPayment": "Fa&#39;agaioiina Totogi",
+        "SubscriptionAlreadyPaid": "Ua uma ona totogi lenei saofaga",
+        "SubscriptionNotActive": "O lo&#39;o le toaga le saofaga i le taimi nei",
+        "Subscribed": "Fa&#39;asoa",
+        "Unsubscribed": "Le&#39;i lesitalaina",
+        "Unsubscribe": "Taofi le lesitala",
+        "Subscribe": "Fa&#39;asoa",
+        "Started": "Amata",
+        "EndsIn": "Fa&#39;ai&#39;u i totonu",
+        "NextPay": "Ole isi totogi",
+        "Period": "Vaitaimi",
+        "Price": "Tau",
+        "AreYouSureUnsubscribe": "E te mautinoa e te mana&#39;o e le&#39;i lesitala mai lenei fuafuaga?",
+        "YouUnsubscribedFromPlan": "Ua e fa&#39;amavae mai le fuafuaga &quot; {{planTitle}} &quot;. E le toe molia oe i le isi taimi, ae o le a fa&#39;aauau pea lau saofaga seia o&#39;o i {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "igoa o le fuafuaga",
+            "PricePlaceholder": "tau",
+            "SubscriptionTitle": "Fa&#39;asoa fuafuaga",
+            "DescriptionPlaceholder": "fa&#39;amatalaga o fuafuaga fa&#39;asoa",
+            "AreYouSureDeletePlan": "E te mautinoa e te mana&#39;o e tape lenei fuafuaga?",
+            "Duration": "Umi",
+            "Discount": "Pa&#39;u",
+            "SavePlan": "Faasaoina",
+            "Interrupt": "Fa&#39;alavelave",
+            "Continue": "Fa&#39;aauau",
+            "NewPlan": "Fuafuaga Fou",
+            "SelectDisplayType": "Filifili {{displayType}}",
+            "EndDate": "aso faaiu",
+            "Available": "Avanoa",
+            "Hidden": "Natia",
+            "InviteOnly": "Valaaulia-na&#39;o",
+            "CantSubscribeUnlessInvited": "E le mafai ona e lesitala i lenei fuafuaga se&#39;i vagana ua vala&#39;aulia oe"
+        }
+    },
+    "payments": {
+        "infoTitle": "Seti Fa&#39;amatalaga Totogi",
+        "BuyAmountCredits": "Fa&#39;atau {{amount}} credits",
+        "confirm": {
+            "title": "Fai se Totogi",
+            "message": "Ete malie e totogi {{symbol}} {{amount}} ?",
+            "ok": "Ua lelei",
+            "cancel": "Fa&#39;aleaogaina"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Fa&#39;aaitalafu",
+            "description": "siaki aitalafu ma totogi"
+        },
+        "Assets\/plan": {
+            "displayType": "Fuafuaga Fa&#39;asoa",
+            "description": "fuafuaga tau saofaga"
+        },
+        "Assets\/subscription": {
+            "displayType": "Fa&#39;asoa",
+            "description": "saofaga"
+        },
+        "Assets\/product": {
+            "displayType": "Oloa",
+            "description": "oloa o lo&#39;o fa&#39;atau atu"
+        },
+        "Assets\/service": {
+            "displayType": "Auaunaga",
+            "description": "auaunaga e ofoina atu"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Maua {{amount}} maka"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Fa&#39;atau {{amount}} credits"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Ponesi {{amount}} maka"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Fa&#39;aalu {{amount}} maka"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Tuuina atu {{amount}} maka i {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Maua {{amount}} maka mai {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "E le lava au aitalafu i lau teugatupe. Fa&#39;amolemole asiasi i le <a href='<i translate='no'>999 &#39;&gt;so&#39;otaga<\/a> o lo&#39;o mulimuli mai e fa&#39;atau ai nisi fa&#39;atagaga."
+        }
+    },
+    "billing": {
+        "Title": "Totogi o aseta",
+        "CreditsMinimum": "Fa&#39;asili maualalo",
+        "CreditsToAdd": "Fa&#39;aaitalafu e fa&#39;aopoopo",
+        "Save": "Faasaoina",
+        "ThisLink": "lenei sootaga",
+        "errors": {
+            "CreditsMinimumNegative": "E le mafai ona fa&#39;aletonu le togi maualalo",
+            "CreditsToAddNegative": "O togi e fa&#39;aopoopo e le mafai ona leaga"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Auaunaga Fou",
+            "TitlePlaceholder": "Igoa tautua",
+            "PricePlaceholder": "Seti tau",
+            "LinkPlaceholder": "seti fa&#39;amatalaga fa&#39;aopoopo so&#39;oga",
+            "DescriptionPlaceholder": "Fa&#39;amatalaga o auaunaga",
+            "SaveService": "Faasaoina Auaunaga",
+            "SelectRequiredParticipants": "Manaomia tagata auai fesootai",
+            "RequiredParticipantsDesc": "Fa&#39;amolemole filifili sui auai e mana&#39;omia e fa&#39;aoga ai lenei auaunaga (fa&#39;ata&#39;ita&#39;iga fagafao mo le &quot;Taifau fa&#39;aaliga&quot;, po&#39;o tamaiti mo le &quot;Tama&#39;i aso malolo&quot; ma isi). Afai e totogi le tautua, e mana&#39;omia fo&#39;i ona totogi e le tagata fa&#39;aoga mo sui auai ta&#39;itasi."
+        },
+        "EditServiceTemplate": {
+            "Title": "Fa&#39;atonu Auaunaga"
+        },
+        "ManageServiceTemplates": "Puleaina Au&#39;aunaga Fa&#39;ata&#39;ita&#39;iga",
+        "ManageServices": "Puleaina Auaunaga",
+        "Free": "Sa&#39;oloto",
+        "OptionalContribution": "Saofai faitalia",
+        "RequiredPayment": "Manaomia totogi",
+        "AreYouSureDelete": "E te mautinoa e te mana&#39;o e tape lenei tautua?",
+        "AmountServicesRelated": "E {{amount}} avanoa e fa&#39;atatau i lenei auaunaga. O le a aveesea foi."
+    },
+    "transfer": {
+        "SelectRecipient": "Filifili le tagata e mauaina",
+        "TransactionSuccess": "Manuia Fefaatauaiga",
+        "OrTypeWalletAddress": "POO fa&#39;aigoa le tuatusi atotupe a le tagata e mauaina",
+        "AppCredits": "App Credits"
+    },
+    "NFT": {
+        "Title": "Ulutala",
+        "Name": "Igoa",
+        "EnterName": "Ulufale igoa",
+        "EnterAuthorWallet": "Ulufale i le atotupe a le tusitala",
+        "InformationAboutTitle": "Fa&#39;amatalaga e uiga i {{title}} NFT",
+        "Description": "Fa&#39;amatalaga",
+        "DetailedInformationAboutNFT": "Fa&#39;amatalaga auiliili e uiga i le NFT",
+        "PresaleStarts": "Pressale Amata Tesema 23",
+        "OwnerUserNotFound": "O lē e ona lenei NFT e le o lesitala i la matou talosaga.",
+        "BuyNow": "Faatau nei",
+        "Buy": "Fa&#39;atau",
+        "Add": "Faaopoopo",
+        "Remove": "Aveese",
+        "NoNFTyet": "E leai ni NFT i le taimi nei",
+        "Conversation": "Talanoaga",
+        "Create": "Fausia",
+        "CurrentBid": "Tauofo o iai nei",
+        "StartingIn": "Amata i totonu",
+        "EndingIn": "Fa&#39;ai&#39;u i",
+        "CreateNFT": "Fausia se NFT",
+        "TitlePlaceholder": "Tu&#39;u lou igoa NFT",
+        "DescriptionPlaceholder": "Tuʻu lau NFT faʻamatalaga",
+        "CreateYourNFT": "Fausia lau NFT",
+        "Royalties": "Malo",
+        "RoyaltyPlaceholder": "Filifili. Aofa&#39;iga e totogi ile foafoa a&#39;o le&#39;i fesiita&#39;i.",
+        "ExpirationDate": "Uma le aoga",
+        "StartingDate": "Aso Amata",
+        "BidsBelowThisAmount": "O tauofo i lalo ole aofa&#39;i ole a le fa&#39;atagaina",
+        "MinimumBid": "Fa&#39;atau maualalo",
+        "Author": "Tusitala",
+        "Price": "Tau",
+        "Commission": "Komisi",
+        "EnterCommission": "Ulufale komisi",
+        "Owner": "Pule",
+        "SelectCategory": "Filifili vaega",
+        "Day": "Aso",
+        "Days": "Aso",
+        "Hour": "Itula",
+        "Hours": "Itula",
+        "Minute": "Minute",
+        "Minutes": "minute",
+        "Second": "Tulaga lua",
+        "Seconds": "Sekona",
+        "SalesCreator": "o fa&#39;atauga o le a alu ile foafoa",
+        "Details": "Fa&#39;amatalaga",
+        "Bids": "Tauofoga",
+        "History": "Tala&#39;aga",
+        "LoremIpsum": "O Lorem Ipsum o se fa&#39;amatalaga fa&#39;atauva&#39;a o le fale lomitusi ma fa&#39;asologa tusi.",
+        "PutOnSale": "Fa&#39;atau atu",
+        "PutOffSale": "Aveese mai le fa&#39;atau",
+        "Transfer": "Fa&#39;aliliuina",
+        "Actions": "Gaioiga",
+        "Claim": "Talosaga",
+        "ClaimNFT": "Talosaga NFT",
+        "Unlocking": "Tatala",
+        "Unlock": "Tatala",
+        "Update": "Fa&#39;afou",
+        "UpdateToken": "Fa&#39;afouina Token",
+        "UpdateNFT": "Fa&#39;afou le NFT",
+        "CreateToken": "Fausia Token",
+        "PlaceBid": "Tuu Tauofo",
+        "SoldOut": "Fa&#39;atau atu",
+        "NotOnSale": "Le Fa&#39;atau",
+        "NftName": "NFT igoa",
+        "DescribeYourNFT": "Fa&#39;amolemole fa&#39;amatala lau NFT",
+        "NFTImage": "Ata mo NFT",
+        "NFTVideo": "Vitio mo le NFT, pe a iai",
+        "GenerateDescription": "po&#39;o le fa&#39;atupu fa&#39;a-autometi",
+        "UploadMovie": "La&#39;u ata tifaga",
+        "MovieSource": "Punavai Ataata",
+        "MovieURL": "URL ata tifaga",
+        "UploadFile": "Tu&#39;u i luga se faila",
+        "PutOnMarketplace": "Tuu i luga o le maketi",
+        "InstantPurchase": "Ulufale tau e fa&#39;ataga ai tagata fa&#39;aoga e fa&#39;atau vave lau NFT",
+        "FixedPrice": "Tau tumau",
+        "TimedAuction": "Fa&#39;atautu&#39;i taimi",
+        "OpenForBids": "Tatala mo tauofoga",
+        "PriceOnePiece": "Tu&#39;u le tau mo le fasi pepa e tasi",
+        "EnterPrice": "Ulufale tau",
+        "EnterMinimumBid": "Ulufale mai le tau maualalo",
+        "SelectChain": "Filifili filifili",
+        "Currency": "Tupe",
+        "AreYouSureDeleteImage": "E te mautinoa e te mana&#39;o e aveese ata?",
+        "AreYouSureDeleteVideo": "E te mautinoa e te mana&#39;o e aveese le vitio?",
+        "series": {
+            "Name": "Igoa",
+            "Icon": "Fa&#39;ailoga",
+            "Description": "Fa&#39;amatalaga",
+            "Author": "Tusitala",
+            "SelectSeries": "Filifili faasologa",
+            "Value": "Taua",
+            "AreYouSure": "E mo&#39;i lava oe?",
+            "AuthorInvalid": "E le aoga le tuatusi o le tusitala!",
+            "Address": "tuatusi",
+            "CoverImage": "Ata fa&#39;avaa",
+            "UploadCoverImage": "Tu&#39;u i luga ata faavaa",
+            "CommissionAddressInvalid": "E le aoga le tuatusi o le Komisi",
+            "OnSale": "fa&#39;atau",
+            "OffSale": "fa&#39;atau atu",
+            "CreateSeries": "Fausia Fa&#39;asologa",
+            "UpdateSeries": "Fa&#39;afou Fa&#39;asologa",
+            "SeriesInfo": "Fa&#39;amatalaga Fa&#39;asologa",
+            "SelectAuthor": "Filifili le tusitala",
+            "NewItem": "NFT fou",
+            "NamePlaceholder": "Ulufale igoa o le faasologa",
+            "DescPlaceholder": "Ulufale fa&#39;amatalaga fa&#39;asologa",
+            "EndingIn": "Fa&#39;ai&#39;u I"
+        },
+        "contract": {
+            "CreateContract": "Fausia konekarate",
+            "SelectContract": "Filifili konekarate",
+            "CreateContractFor": "Fausia konekarate mo {{userName}}",
+            "ContractFor": "Konekarate mo le {{userName}}",
+            "UpdateContract": "Fa&#39;afouina Konekarate",
+            "TransferOwnership": "Fa&#39;aliliuina le Pule",
+            "SetBaseURI": "Seti Fa&#39;avae URI",
+            "SetSuffix": "Seti Suffix",
+            "CurrentOwner": "Tagata e ona le taimi nei",
+            "CurrentBaseURL": "BaseURL o iai nei",
+            "ContractAddressAbsent": "E leai se tuatusi o le konekarate",
+            "FactoryAddressAbsent": "E leai se tuatusi falegaosimea",
+            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+            "TitleRequired": "Manaomia le suafa",
+            "SymbolRequired": "Fa&#39;ailoga mana&#39;omia",
+            "TypeContractName": "igoa konekarate",
+            "TypeContractSymbol": "fa&#39;ailoga konekarate (max 10 chars)"
+        },
+        "contests": {
+            "Title": "Tauvaga",
+            "NewContest": "Tauvaga Fou"
+        },
+        "collections": {
+            "Title": "Aoina",
+            "EnterTitle": "ulufale i le ulutala",
+            "EnterDescription": "tu&#39;u fa&#39;amatalaga",
+            "NewCollection": "Aoina fou",
+            "Name": "Igoa",
+            "Icon": "Fa&#39;ailoga",
+            "Description": "Fa&#39;amatalaga",
+            "Author": "Tusitala",
+            "SelectCollection": "Filifili le aoina",
+            "Value": "Taua",
+            "AreYouSure": "E mo&#39;i lava oe?",
+            "AuthorInvalid": "E le aoga le tuatusi o le tusitala!",
+            "Address": "tuatusi",
+            "CoverImage": "Ata fa&#39;avaa",
+            "UploadIcon": "Tu&#39;u i luga le fa&#39;ailoga",
+            "CommissionAddressInvalid": "E le aoga le tuatusi o le Komisi",
+            "OnSale": "fa&#39;atau",
+            "OffSale": "fa&#39;atau atu",
+            "CreateCollection": "Fausia Aoina",
+            "UpdateCollection": "Fa&#39;afou Aoina",
+            "CollectionInfo": "Fa&#39;amatalaga Aoina",
+            "SelectAuthor": "Filifili le tusitala",
+            "NewItem": "New NFT Collection",
+            "NamePlaceholder": "Ulufale igoa aoina",
+            "DescPlaceholder": "Ulufale fa&#39;amatalaga aoina",
+            "EndingIn": "Fa&#39;ai&#39;u I",
+            "SubmitSeries": "Tuuina atu se Faasologa"
+        },
+        "import": {
+            "importNFT": "Fa&#39;aulufale mai NFT",
+            "importAttributes": "Auina mai uiga NFT",
+            "fileNotFound": "Fa&#39;amalie atu, e le&#39;i maua le faila CSV.",
+            "fileEmpty": "Fa&#39;amalie atu, o lo&#39;o gaogao le faila CSV.",
+            "userIdNotFound": "o lo&#39;o iai le tagata fa&#39;aoga ae leai se id",
+            "errorLine": "laina {{1}}",
+            "fieldNotFound": "Manaomia fanua &quot; {{1}} &quot; le maua",
+            "displayTypeEmpty": "Fa&#39;aali ituaiga mo &quot; {{1}} &quot; e le&#39;i maua",
+            "taskStreamInvalid": "e le aoga le tafega o galuega",
+            "instructionsEmpty": "fa&#39;atonuga alia galuega gaogao",
+            "complete": "mae&#39;a",
+            "activateUsers": "auina atu le fe&#39;au fa&#39;ato&#39;aga i tagata fa&#39;aoga?",
+            "importProgress": "Alualu i luma",
+            "importOptions": "Filifiliga",
+            "sampleCSV": "La&#39;u mai le Fa&#39;ata&#39;ita&#39;iga CSV",
+            "fileLabel": "La&#39;uina atu le Pepa Pepa:",
+            "errorsTitle": "Na tutupu mea sese"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Filifili e ala ile NFT Collections",
+                "ShowNFTCollection": "Faaali atu le aoina o le NFT i...",
+                "AllCollections": "Aoina uma"
+            },
+            "ByUser": {
+                "AllAuthors": "Tusitala uma",
+                "AllUsers": "Tagata uma",
+                "FilterByAuthors": "Filifili e Tusitala"
+            }
+        },
+        "Back": "Toe fo&#39;i i le Aoina",
+        "attributes": {
+            "Title": "Puleaina Uiga",
+            "Attributes": "Uiga",
+            "DisplayTitle": "Fa&#39;aaliga Ituaiga",
+            "AddDisplayType": "Fa&#39;aopoopo ituaiga fa&#39;aaliga fou",
+            "NewDisplay": "Fa&#39;aaliga Fou",
+            "TraitTitle": "Ituaiga Uiga",
+            "AddTraitTitle": "Fa&#39;aopoopo ituaiga uiga fou",
+            "NewTrait": "Ituaiga Uiga Fou",
+            "ValueTitle": "Taua",
+            "AddValueTitle": "Fa&#39;aopoopo le tau fou",
+            "NewValue": "Taua Fou",
+            "NewAttribute": "Uiga Fou",
+            "UpdateAttributes": "Fa&#39;afou Uiga",
+            "SaveAttributes": "Faasaoina Uiga"
+        },
+        "profile": {
+            "LogOut": "Saini ese j",
+            "Title": "Tala&#39;aga mo le {{userName}}",
+            "Description": "Fa&#39;amatalaga fa&#39;aoga",
+            "aboutPlaceholder": "Fa&#39;asa&#39;o le Bio",
+            "UploadCoverPhoto": "Tu&#39;u i luga le Ata Fa&#39;avaa",
+            "SureLogOut": "E te mautinoa e te mana&#39;o e alu i fafo?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTKonekarate",
+                        "seriesId": "faasologa Id",
+                        "owner": "Pule",
+                        "currency": "Tupe",
+                        "price": "Tau",
+                        "beneficiary": "Tagata fa&#39;amanuiaina",
+                        "autoindex": "Autoindex",
+                        "duration": "Umi",
+                        "rateInterval": "Vaeluaga o fua faatatau",
+                        "rateAmount": "Fuainumera tau"
+                    },
+                    "small": {
+                        "NFTContract": "NFTKonekarate",
+                        "seriesId": "fa&#39;ailoga o le a faia i lenei faasologa",
+                        "owner": "pule o faʻataʻitaʻiga, a leai o le a auina atu",
+                        "currency": "Tupe mo faʻailoga faʻatau, pe a leai - mo tupe siliva",
+                        "price": "Tau",
+                        "beneficiary": "Le fa&#39;amanuiaina o le fa&#39;atauina atu o fa&#39;ailoga, a leai o le a tu&#39;uina atu",
+                        "autoindex": "Autoindex",
+                        "duration": "Loka pe a uma ona liuina. Zero o lona uiga ia maua vave.",
+                        "rateInterval": "pakete va&#39;aiga mo fa&#39;atau fa&#39;apitoa",
+                        "rateAmount": "pakete tupe mo faʻatau faʻapitoa"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(filifiliga)",
+                    "number": "numera",
+                    "address": "tuatusi",
+                    "fraction": "vaega ninii",
+                    "integer": "numera atoa",
+                    "seconds": "sekone",
+                    "uint256": "uint256",
+                    "uint192": "uint192",
+                    "uint64": "uint64",
+                    "uint32": "uint32",
+                    "uint16": "uint16"
+                },
+                "produce": "Fausia",
+                "viewInstancesList": "Toe fa&#39;afouina Lisi"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Fa&#39;asologa ID",
+                        "account": "Teugatupe",
+                        "amount": "Aofaiga"
+                    },
+                    "small": {
+                        "seriesId": "fa&#39;ailoga fou o le a fa&#39;atasi i fa&#39;asologa fa&#39;atasi ma lea ID",
+                        "account": "pule ole NFT fou. pe a le setiina - o le a faʻaogaina le atotupe o loʻo iai nei",
+                        "amount": "aofa&#39;i o le NFT i le mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(filifiliga)",
+                    "seriesId": "id",
+                    "account": "tala",
+                    "amount": "aofaiga",
+                    "integer": "numera atoa"
+                },
+                "btn": {
+                    "Purchase": "Fa&#39;atau",
+                    "SpecialPurchase": "Fa&#39;atauga fa&#39;apitoa"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "tuatusi"
+                    },
+                    "small": {
+                        "account": "tuatusi"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Tulaga le aoga"
+                },
+                "placeholders": {
+                    "account": "tuatusi"
+                },
+                "addToWhitelist": "Fa&#39;aopoopo i le Lisi Pa&#39;epa&#39;e",
+                "removeFromWhitelist": "Ave&#39;ese Mai le Lisi Pa&#39;epa&#39;e"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Tausi",
+                    "recipient": "Tagata e mauaina"
+                },
+                "small": {
+                    "tokenId": "fa&#39;ailoga id mea e tatau ona loka pe tatala",
+                    "custodian": "tuatusi e mafai ona tatala",
+                    "recipient": "tuatusi o le a maua ai faailoga"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "TokenId le aoga",
+                "invalidCustodian": "Tausi le aoga",
+                "invalidRecipient": "Le Fa&#39;ailoaina"
+            },
+            "placeholders": {
+                "optional": "(filifiliga)",
+                "tokenId": "id",
+                "custodian": "tuatusi"
+            },
+            "Lock": "Loka",
+            "Unlock": "Tatala",
+            "Locked": "Loka",
+            "CustodianAddress": "Tulaga tausi",
+            "TokenWasClaimed": "Faailoga &quot; {{title}} &quot; na fai mai",
+            "TokenWasLocked": "Faailoga &quot; {{title}} &quot; na loka",
+            "TokenWasUnlocked": "Faailoga &quot; {{title}} &quot; na tatalaina"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ta&#39;i se mea e uiga i lenei sao..."
+    },
+    "currencies": {
+        "choose": "Filifili se tupe"
+    }
+}

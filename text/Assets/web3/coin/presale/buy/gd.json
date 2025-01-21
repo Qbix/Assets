@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Dè cho mòr ri tasgadh?"
+                    },
+                    "placeholders": {
+                        "amount": "An t-suim de {{nativeCoin}}",
+                        "max": "as àirde: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Ceannaich",
+                    "execute": "Cur gu bàs"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Pila ang puhonan?"
+                    },
+                    "placeholders": {
+                        "amount": "Ang kantidad nga {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Palita",
+                    "execute": "Ipatuman"
+                }
+            }
+        }
+    }
+}

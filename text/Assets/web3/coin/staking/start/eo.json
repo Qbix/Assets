@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "rezervoToken",
+                        "duration": "Daŭro",
+                        "amount": "Kvanto"
+                    },
+                    "small": {
+                        "reserveToken": "rezervoToken",
+                        "duration": "Daŭro",
+                        "amount": "Kvanto"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Daŭro",
+                    "amount": "kvanto"
+                },
+                "btns": {
+                    "stake": "Paliso"
+                },
+                "stake": "Paliso",
+                "loading": "Ŝarĝante"
+            }
+        }
+    }
+}

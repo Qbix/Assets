@@ -1,0 +1,27 @@
+{
+    "title": "Lipirani",
+    "steps": {
+        "sending_native_coins": "Kutumiza ndalama zakomweko",
+        "sending_tokens": "Kutumiza zizindikiro",
+        "swap": "Sinthani",
+        "approve": "Vomerezani",
+        "one_tx": "Muyenera kutumiza kugulitsa kumodzi",
+        "two_tx": "Muyenera kutumiza ziwiri zochita"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Ndalama zolipirira"
+            }
+        },
+        "btns": {
+            "pay": "Lipirani"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Muyenera kulipira &quot; {{amountOut}} &quot; zizindikiro"
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Unyolo wotere wokhala ndi id &quot; {{chainId}} &quot; suthandizidwa"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Yimalini ongayifaka?"
+                    },
+                    "placeholders": {
+                        "amount": "Inani lama- {{nativeCoin}}",
+                        "max": "Ubukhulu: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Thenga",
+                    "execute": "Yenza"
+                }
+            }
+        }
+    }
+}

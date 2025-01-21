@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "किती गुंतवणूक करायची?"
+                    },
+                    "placeholders": {
+                        "amount": "{{nativeCoin}} ची रक्कम",
+                        "max": "कमाल: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "खरेदी करा",
+                    "execute": "अंमलात आणा"
+                }
+            }
+        }
+    }
+}

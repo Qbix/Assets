@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Lilana",
+                        "amount": "Jumlah"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Lilana",
+                        "amount": "Jumlah"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Lilana",
+                    "amount": "jumlah"
+                },
+                "btns": {
+                    "stake": "Patok"
+                },
+                "stake": "Patok",
+                "loading": "Ngamuat"
+            }
+        }
+    }
+}

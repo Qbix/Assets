@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "څومره پانګه اچونه وکړئ؟"
+                    },
+                    "placeholders": {
+                        "amount": "د {{nativeCoin}} اندازه",
+                        "max": "اعظمي: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "پېرود",
+                    "execute": "اجرا کول"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "रिजर्व टोकन",
+                        "duration": "अवधि",
+                        "amount": "रकम"
+                    },
+                    "small": {
+                        "reserveToken": "रिजर्व टोकन",
+                        "duration": "अवधि",
+                        "amount": "रकम"
+                    }
+                },
+                "placeholders": {
+                    "duration": "अवधि",
+                    "amount": "रकम"
+                },
+                "btns": {
+                    "stake": "दांव"
+                },
+                "stake": "दांव",
+                "loading": "लोड गर्दै"
+            }
+        }
+    }
+}

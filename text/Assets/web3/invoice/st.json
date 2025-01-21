@@ -1,0 +1,27 @@
+{
+    "title": "Lefa",
+    "steps": {
+        "sending_native_coins": "Ho romela lichelete tsa tšepe tsa matsoalloa",
+        "sending_tokens": "Ho romela li-tokens",
+        "swap": "Fapanya",
+        "approve": "Amohela",
+        "one_tx": "U lokela ho romela transaction e le &#39;ngoe",
+        "two_tx": "U lokela ho romela litšebelisano tse peli"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Chelete ea ho lefa"
+            }
+        },
+        "btns": {
+            "pay": "Lefa"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "U hloka ho lefa li-tokens tsa &quot; {{amountOut}} &quot;."
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Ketane e joalo e nang le id &quot; {{chainId}} &quot; ha e tšehetsoe"
+    }
+}

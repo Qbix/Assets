@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Roanga",
+                        "amount": "Te nui"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "Roanga",
+                        "amount": "Te nui"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Roanga",
+                    "amount": "nui"
+                },
+                "btns": {
+                    "stake": "Tiiki"
+                },
+                "stake": "Tiiki",
+                "loading": "Uta ana"
+            }
+        }
+    }
+}

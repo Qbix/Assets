@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duration",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "sumbangan",
+                    "rewardsRateFraction": "ganjaranRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duration ing dina",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "popularToken",
+                    "donations": "sumbangan",
+                    "rewardsRateFraction": "ganjaranRateFraction",
+                    "numerator": "numerator",
+                    "denominator": "denominator"
+                }
+            },
+            "placeholders": {
+                "optional": "(opsional)",
+                "tuple": "tuple []",
+                "number": "nomer",
+                "address": "alamat",
+                "fraction": "pecahan",
+                "integer": "integer",
+                "seconds": "detik",
+                "days": "dina",
+                "uint256": "uint256",
+                "uint192": "uint192",
+                "uint64": "uit64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Ora ana blumbang"
+            },
+            "btns": {
+                "createPool": "Nggawe Pool",
+                "createPoolInForm": "Nggawe"
+            },
+            "createPool": "Nggawe Pool",
+            "produce": "ngasilaken",
+            "loading": "Loading",
+            "viewInstancesList": "Refresh Daftar"
+        }
+    }
+}

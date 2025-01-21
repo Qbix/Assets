@@ -1,0 +1,54 @@
+{
+    "coin": {
+        "admin": {
+            "form": {
+                "labels": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Doer",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populêr Token",
+                    "donations": "donaasjes",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "teller",
+                    "denominator": "neamer"
+                },
+                "small": {
+                    "tokenErc20": "tokenErc20",
+                    "duration": "Duration yn dagen",
+                    "bonusTokenFraction": "bonusTokenFraction",
+                    "popularToken": "populêr Token",
+                    "donations": "donaasjes",
+                    "rewardsRateFraction": "rewardsRateFraction",
+                    "numerator": "teller",
+                    "denominator": "neamer"
+                }
+            },
+            "placeholders": {
+                "optional": "(fakultatyf)",
+                "tuple": "tuppel[]",
+                "number": "nûmer",
+                "address": "adres",
+                "fraction": "fraksje",
+                "integer": "integer",
+                "seconds": "sekonden",
+                "days": "dagen",
+                "uint256": "ynt256",
+                "uint192": "ynt192",
+                "uint64": "uint64",
+                "uint32": "uint32",
+                "uint16": "uint16"
+            },
+            "errmsgs": {
+                "ThereAreNoPools": "Der binne gjin swimbaden"
+            },
+            "btns": {
+                "createPool": "Meitsje Pool",
+                "createPoolInForm": "Meitsje"
+            },
+            "createPool": "Meitsje Pool",
+            "produce": "Produsearje",
+            "loading": "Loading",
+            "viewInstancesList": "Ferfarskje List"
+        }
+    }
+}

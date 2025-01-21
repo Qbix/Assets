@@ -1,0 +1,47 @@
+{
+    "coin": {
+        "presale": {
+            "admin": {
+                "form": {
+                    "labels": {
+                        "sellingToken": "Sade Token",
+                        "timestamps": "kaping",
+                        "prices": "Rega",
+                        "endTime": "Wektu pungkasan",
+                        "thresholds": "Watesan",
+                        "bonuses": "Bonus"
+                    },
+                    "fields": {
+                        "ownerWithdrawOptions": {
+                            "option0": "Pemilik ora bisa mundur",
+                            "option1": "Pamilik bisa mbatalake token mung sawise endTime liwati",
+                            "option2": "Pamilik bisa mbatalake token kapan wae"
+                        }
+                    }
+                },
+                "placeholders": {
+                    "communityAddress": "Alamat komunitas",
+                    "methodkeccack": "Fungsi hash Keccak256",
+                    "roleId": "ID peran",
+                    "sellingToken": "Alamat Sade Token",
+                    "prices": "ETH, rega",
+                    "thresholds": "# saka token",
+                    "bonuses": "Bonus%"
+                },
+                "errmsgs": {
+                    "ThereAreNoFunds": "Ora ana dana"
+                },
+                "btns": {
+                    "createFund": "Nggawe Dana",
+                    "createFundInForm": "Nggawe"
+                },
+                "fundAddress": "Alamat dana",
+                "createFund": "Nggawe Dana",
+                "fundInfo": "Info",
+                "produce": "ngasilaken",
+                "loading": "Loading",
+                "viewInstancesList": "Refresh Daftar"
+            }
+        }
+    }
+}

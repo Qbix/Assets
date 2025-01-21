@@ -1,0 +1,27 @@
+{
+    "title": "mbayar",
+    "steps": {
+        "sending_native_coins": "Ngirim dhuwit recehan native",
+        "sending_tokens": "Ngirim token",
+        "swap": "Ngganti",
+        "approve": "Sarujuk",
+        "one_tx": "Sampeyan kudu ngirim siji transaksi",
+        "two_tx": "Sampeyan kudu ngirim rong transaksi"
+    },
+    "form": {
+        "fields": {
+            "labels": {
+                "funds_to_pay": "Dana kanggo mbayar"
+            }
+        },
+        "btns": {
+            "pay": "mbayar"
+        }
+    },
+    "msgs": {
+        "need_to_pay": "Kudu mbayar token &quot; {{amountOut}} &quot;."
+    },
+    "errmsgs": {
+        "chain_is_not_supported": "Rantai kasebut kanthi id &quot; {{chainId}} &quot; ora didhukung"
+    }
+}

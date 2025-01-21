@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "rezervToken",
+                        "duration": "Demajok",
+                        "amount": "Biha"
+                    },
+                    "small": {
+                        "reserveToken": "rezervToken",
+                        "duration": "Demajok",
+                        "amount": "Biha"
+                    }
+                },
+                "placeholders": {
+                    "duration": "Demajok",
+                    "amount": "biha"
+                },
+                "btns": {
+                    "stake": "Stake"
+                },
+                "stake": "Stake",
+                "loading": "Barkirin"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "coin": {
+        "presale": {
+            "buy": {
+                "form": {
+                    "labels": {
+                        "amount": "Ohatrinona ny fampiasam-bola?"
+                    },
+                    "placeholders": {
+                        "amount": "Vidin&#39;ny {{nativeCoin}}",
+                        "max": "Max: {{nativeCoinBalance}}"
+                    }
+                },
+                "btns": {
+                    "buy": "Buy",
+                    "execute": "hampihatra"
+                }
+            }
+        }
+    }
+}

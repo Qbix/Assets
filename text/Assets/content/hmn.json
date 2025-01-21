@@ -1,0 +1,618 @@
+{
+    "errors": {
+        "Error": "yuam kev",
+        "WalletAbsent": "Lub hnab nyiaj tsis txuas nrog.",
+        "Rendering": "Muaj qhov yuam kev thaum rendering <span class='url'>{{1}}<\/span>",
+        "PriceRequired": "Nqe yuav tsum tau!",
+        "NameRequired": "Xav tau lub npe!",
+        "PriceInvalid": "Nqe invalid!",
+        "AmountInvalid": "Tus nqi tsis raug!",
+        "TransactionFailed": "Kev ua lag luam ua tsis tiav",
+        "ChainNotSupported": "Cov saw hlau xaiv tsis tau txais kev txhawb nqa. Txhawb nqa: {{supportedChain}}",
+        "NeedMetaMaskConnected": "Xav tau MetaMask txuas nrog ua haujlwm nrog daim ntawv thov",
+        "UserNotLoggedInMetaMask": "Tus neeg siv tsis nkag rau hauv MetaMask",
+        "CurrencyNotFound": "Nyiaj tsis pom",
+        "WrongChain": "No NFT tsim nyob rau hauv &quot; {{chain}} &quot;. Thov siv cov saw no.",
+        "NoRecipientSelected": "Tsis tau xaiv tus neeg txais kev pab",
+        "CantManageFrozenSeries": "Koj tsis tuaj yeem tswj frozen series",
+        "SubscriptionStreamNotPaid": "Koj tsis tau them nyiaj los saib cov ntsiab lus no. Thov nias {{subscriptionUrl}} thiab subscribe rau txoj kev npaj tsim nyog."
+    },
+    "admin": {
+        "Title": "Cov cuab yeej tswj hwm",
+        "SubscriptionTitle": "Subscription plan"
+    },
+    "browsertab": {
+        "html": "{{button}}",
+        "button": "Coj mus rhaub kom them"
+    },
+    "notifications": {
+        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : tus nqi tau ua tiav rau {{call 'user.displayName'}}",
+        "ThankYouForYourPayment": "Ua tsaug rau koj cov nyiaj them rau {{call 'publisher.displayName'}}",
+        "SubscribedTo": "{{call 'user.displayName'}} subscribed rau {{plan.title}}",
+        "YouSubscribedTo": "Pab subscribe {{plan.title}} nawb",
+        "Assets\/credits\/alert": "Koj muaj kev ceeb toom ntsig txog koj tus account"
+    },
+    "charge": {
+        "Subject": "Koj tau txais kev them nyiaj ntawm {{displayAmount}} los ntawm {{call 'publisher.displayName'}} rau &quot; {{description}} &quot;",
+        "HasBeenCharged": "Hav, qhov no tsuas yog qhia rau koj paub tias {{1}} tau them {{2}} rau {{3}} los ntawm {{4}}"
+    },
+    "charged": {
+        "Subject": "Ua tsaug rau koj cov nyiaj them rau &quot; {{description}} &quot;",
+        "HavePaid": "Nyob zoo {{1}} , qhov no tsuas yog kev lees paub sai tias koj tau ua tiav them {{2}} rau {{3}} rau {{4}}"
+    },
+    "connectedAccount": {
+        "Title": "Txuas tus account",
+        "Success": "Kev vam meej",
+        "YourAccountCreated": "Koj tus account tau tsim tiav lawm!",
+        "YourAccountAlreadyCreated": "Koj tus account twb tau tsim thiab npaj siv"
+    },
+    "payment": {
+        "AboutOrder": "Cov ntaub ntawv hais txog kev txiav txim",
+        "PaymentMethod": "Txoj kev them nyiaj",
+        "ContactInfo": "Cov ntaub ntawv tiv tauj",
+        "Pay": "Them",
+        "PaymentSucceeded": "Kev them nyiaj tau ua tiav",
+        "PaymentProcessing.": "Koj qhov kev them nyiaj tab tom ua tiav",
+        "FailTryAgain": "Koj qhov kev them nyiaj tsis tiav. Thov rov sim dua.",
+        "SomethingWrong": "Ib yam dab tsi mus tsis ncaj ncees lawm",
+        "PaymentStatus": "Cov xwm txheej them nyiaj",
+        "PayTo": "Them {{displayName}}",
+        "ChooseCurrency": "Xaiv ib lub txiaj",
+        "YouCanSendUpTo": "Koj tuaj yeem xa mus rau {{amount}} {{symbol}}",
+        "Send": "Xa",
+        "EnterAmount": "sau tus nqi"
+    },
+    "credits": {
+        "InviteAcceptedBy": "Caw txais los ntawm {{invitedUserName}}",
+        "InvitedUserFilledStream": "{{invitedUserName}} ua {{FilledStreamTitle}}",
+        "ForFillingStream": "Rau filling {{FilledStreamTitle}}",
+        "YouHaveCreditsToStart": "Koj muaj {{amount}} credits los pib",
+        "PaymentFor": "Them rau &quot; {{1}} &quot;",
+        "PaymentTo": "Them rau {{1}}",
+        "PaymentToUser": "Hloov mus rau {{toUserName}}",
+        "CreatePrivateChat": "rau tus kheej tham nrog {{toUserName}}",
+        "CreatePaidStream": "rau {{toStreamName}}",
+        "JoinedPaidStream": "rau reservation hauv &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
+        "CreatedCommunity": "tsim lub zej zog &quot; {{communityId}} &quot;",
+        "LeftPaidStream": "raws li kev tso nyiaj rov qab rau hauv &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
+        "BoughtCredits": "Yuav {{amount}} credits",
+        "BonusCredits": "Ntxiv {{amount}} credits",
+        "BuyAmountCredits": "Yuav {{amount}} credits",
+        "WatchClip": "rau saib {{fromStreamTitle}}",
+        "MissingCredits": "Cov qhab nia ploj",
+        "YouMissingCredits": "Koj xav tau {{amount}} cov qhab nia ntxiv txhawm rau txuas ntxiv mus.",
+        "BuyCredits": "Yuav cov qhab nia",
+        "BuyBonus": "Kev yuav {{amount}} khab nias ib zaug yuav ua rau muaj nyiaj ntxiv ntawm {{bonus}} khab nias.",
+        "Buy": "Yuav",
+        "PurchaseCredits": "Kev yuav credit",
+        "Credits": "Cov qhab nia",
+        "ErrorInvalidAmount": "Tus nqi tsis raug",
+        "ErrorInvalidCurrency": "Hmoov tsis zoo, peb tseem tsis tau txhawb nqa txiaj {{currency}}",
+        "forMessages": {
+            "BoughtCredits": "{{amount}} credits ua",
+            "BonusCredits": "{{amount}} credits ua"
+        }
+    },
+    "history": {
+        "Date": "Hnub tim",
+        "Amount": "Tus nqi",
+        "Description": "Kev piav qhia",
+        "Client": "Cov neeg siv khoom",
+        "User": "Cov neeg siv",
+        "To": "rau",
+        "From": "los ntawm",
+        "SeeHistory": "Saib keeb kwm kev them nyiaj rau {{1}}",
+        "HistoryEmpty": "Tseem tsis tau muaj kev pauv hloov",
+        "PaymentFor": "xa {{amount}} credits",
+        "PaymentTo": "xa {{amount}} credits",
+        "PaymentToUser": "xa {{amount}} credits",
+        "CreatePaidStream": "Siv {{amount}} credits",
+        "WatchClip": {
+            "+": "Tau txais {{amount}} credits",
+            "-": "Siv {{amount}} credits"
+        },
+        "JoinedPaidStream": {
+            "+": "Tau txais {{amount}} credits",
+            "-": "Siv {{amount}} credits"
+        },
+        "LeftPaidStream": {
+            "+": "Tau txais {{amount}} credits",
+            "-": "xa {{amount}} credits"
+        },
+        "CreatedCommunity": "Siv {{amount}} credits",
+        "BoughtCredits": "Yuav {{amount}} credits",
+        "BonusCredits": "Tau txais nyiaj {{amount}} credits",
+        "InviteAcceptedBy": "Tau txais {{amount}} credits",
+        "Streams_user_firstname": "Tau txais {{amount}} credits",
+        "Streams_user_lastname": "Tau txais {{amount}} credits",
+        "Streams_user_icon": "Tau txais {{amount}} credits",
+        "Places_user_location": "Tau txais {{amount}} credits",
+        "Streams_greeting": "Tau txais {{amount}} credits",
+        "YouHaveCreditsToStart": "Tau txais {{amount}} credits",
+        "InvitedUserFilledStream": "Tau txais {{amount}} credits",
+        "ForFillingStream": "Tau txais {{amount}} credits",
+        "CreatePrivateChat": "Siv {{amount}} credits"
+    },
+    "subscriptions": {
+        "infoTitle": "Muab cov ntaub ntawv them nqi",
+        "confirm": {
+            "title": "Pib Subscription",
+            "message": "Pib qhov kev tso npe rov ua dua rau &quot; {{title}} &quot;?",
+            "ok": "OK",
+            "cancel": "Tso tseg"
+        },
+        "CreditOrDebitCard": "Credit lossis debit card",
+        "SubscribePayment": "Sau npe yuav them nyiaj",
+        "ImmediatePayment": "Them sai sai",
+        "ProcessingPayment": "Kev Them Nyiaj",
+        "SubscriptionAlreadyPaid": "Qhov no subscription twb them",
+        "SubscriptionNotActive": "Lub subscription yog tam sim no inactive",
+        "Subscribed": "Subscribed",
+        "Unsubscribed": "Unsubscribed",
+        "Unsubscribe": "Unsubscribe",
+        "Subscribe": "Sau npe",
+        "Started": "Pib",
+        "EndsIn": "Xaus hauv",
+        "NextPay": "Kev them nyiaj tom ntej",
+        "Period": "Lub sijhawm",
+        "Price": "Nqe",
+        "AreYouSureUnsubscribe": "Koj puas paub tseeb tias koj xav rho tawm ntawm txoj kev npaj no?",
+        "YouUnsubscribedFromPlan": "Koj tau unsubscribed los ntawm txoj kev npaj &quot; {{planTitle}} &quot;. Koj yuav tsis raug them rau lwm zaus, tab sis koj qhov kev tso npe yuav txuas ntxiv mus txog {{endsIn}}",
+        "plan": {
+            "TitlePlaceholder": "lub npe phiaj xwm",
+            "PricePlaceholder": "nqe",
+            "SubscriptionTitle": "Subscription plan",
+            "DescriptionPlaceholder": "subscription plan piav qhia",
+            "AreYouSureDeletePlan": "Koj puas paub tseeb tias koj xav rho tawm txoj kev npaj no?",
+            "Duration": "Duration",
+            "Discount": "luv nqi",
+            "SavePlan": "Txuag",
+            "Interrupt": "cuam tshuam",
+            "Continue": "Mus ntxiv",
+            "NewPlan": "Txoj Kev Npaj Tshiab",
+            "SelectDisplayType": "Xaiv {{displayType}}",
+            "EndDate": "hnub kawg",
+            "Available": "Muaj",
+            "Hidden": "zais",
+            "InviteOnly": "Caw-tsuas",
+            "CantSubscribeUnlessInvited": "Koj tsis tuaj yeem sau npe rau txoj kev npaj no tshwj tsis yog tias koj raug caw"
+        }
+    },
+    "payments": {
+        "infoTitle": "Teeb cov ntaub ntawv them nyiaj",
+        "BuyAmountCredits": "Yuav {{amount}} credits",
+        "confirm": {
+            "title": "Ua Them Nyiaj",
+            "message": "Koj puas kam them {{symbol}} {{amount}} ?",
+            "ok": "OK",
+            "cancel": "Tso tseg"
+        }
+    },
+    "types": {
+        "Assets\/credits": {
+            "displayType": "Cov qhab nia",
+            "description": "khaws cov qhab nia thiab kev them nyiaj"
+        },
+        "Assets\/plan": {
+            "displayType": "Subsription Plan",
+            "description": "subscription plan"
+        },
+        "Assets\/subscription": {
+            "displayType": "Subscription",
+            "description": "kev tso npe"
+        },
+        "Assets\/product": {
+            "displayType": "Khoom",
+            "description": "khoom muag"
+        },
+        "Assets\/service": {
+            "displayType": "Kev pabcuam",
+            "description": "muab kev pabcuam"
+        }
+    },
+    "messages": {
+        "Assets\/credits\/earned": {
+            "content": "Tau txais {{amount}} credits"
+        },
+        "Assets\/credits\/bought": {
+            "content": "Yuav {{amount}} credits"
+        },
+        "Assets\/credits\/bonus": {
+            "content": "Ntxiv {{amount}} credits"
+        },
+        "Assets\/credits\/spent": {
+            "content": "Siv {{amount}} credits"
+        },
+        "Assets\/credits\/sent": {
+            "content": "Xa {{amount}} credits rau {{toUserName}}"
+        },
+        "Assets\/credits\/received": {
+            "content": "Tau txais {{amount}} credits los ntawm {{fromUserName}}"
+        },
+        "Assets\/credits\/alert": {
+            "content": "Koj muaj credit tsis txaus nyob rau hauv koj tus account. Thov mus saib hauv qab no <a href='<i translate='no'>999 &#39;&gt; txuas<\/a> mus yuav cov qhab nia ntxiv."
+        }
+    },
+    "billing": {
+        "Title": "Kev xa khoom vaj khoom tsev",
+        "CreditsMinimum": "Cov qhab nia tsawg kawg",
+        "CreditsToAdd": "Cov qhab nia ntxiv",
+        "Save": "Txuag",
+        "ThisLink": "qhov txuas no",
+        "errors": {
+            "CreditsMinimumNegative": "Qhov tsawg kawg nkaus credit tsis tuaj yeem yog qhov tsis zoo",
+            "CreditsToAddNegative": "Cov qhab nia ntxiv yuav tsis zoo"
+        }
+    },
+    "services": {
+        "NewServiceTemplate": {
+            "Title": "Kev Pabcuam Tshiab",
+            "TitlePlaceholder": "Kev pabcuam npe",
+            "PricePlaceholder": "Teeb tus nqi",
+            "LinkPlaceholder": "teeb tsa cov ntaub ntawv txuas ntxiv",
+            "DescriptionPlaceholder": "Kev piav qhia txog kev pabcuam",
+            "SaveService": "Txuag Kev Pabcuam",
+            "SelectRequiredParticipants": "Yuav tsum muaj cov neeg koom nrog",
+            "RequiredParticipantsDesc": "Thov xaiv cov neeg koom nrog uas yuav tsum tau siv qhov kev pabcuam no (piv txwv li cov tsiaj rau &quot;Dog show&quot;, lossis cov menyuam yaus rau &quot;Children&#39;s holiday&quot; thiab lwm yam). Yog tias qhov kev pabcuam raug them, tus neeg siv yuav tsum tau them nyiaj rau txhua tus neeg koom nrog."
+        },
+        "EditServiceTemplate": {
+            "Title": "Kho kom raug Service"
+        },
+        "ManageServiceTemplates": "Tswj Cov Kev Pabcuam Templates",
+        "ManageServices": "Tswj Kev Pabcuam",
+        "Free": "Dawb",
+        "OptionalContribution": "Optional pab txhawb",
+        "RequiredPayment": "Yuav tsum tau them nyiaj",
+        "AreYouSureDelete": "Koj puas paub tseeb tias koj xav rho tawm qhov kev pabcuam no?",
+        "AmountServicesRelated": "Muaj {{amount}} qhov muaj ntsig txog qhov kev pabcuam no. Lawv kuj yuav raug tshem tawm."
+    },
+    "transfer": {
+        "SelectRecipient": "Xaiv tus neeg txais",
+        "TransactionSuccess": "Kev lag luam vam meej",
+        "OrTypeWalletAddress": "LOSSIS ntaus tus neeg txais lub hnab nyiaj qhov chaw nyob",
+        "AppCredits": "App Credits"
+    },
+    "NFT": {
+        "Title": "Title",
+        "Name": "Lub npe",
+        "EnterName": "Sau npe",
+        "EnterAuthorWallet": "Sau tus sau lub hnab nyiaj",
+        "InformationAboutTitle": "Cov ntaub ntawv hais txog {{title}} NFT",
+        "Description": "Kev piav qhia",
+        "DetailedInformationAboutNFT": "Cov ncauj lus kom ntxaws txog NFT",
+        "PresaleStarts": "Presale pib Lub Kaum Ob Hlis 23",
+        "OwnerUserNotFound": "Tus tswv ntawm NFT no tsis tau sau npe hauv peb daim ntawv thov.",
+        "BuyNow": "Yuav tam sim no",
+        "Buy": "Yuav",
+        "Add": "Ntxiv",
+        "Remove": "Tshem tawm",
+        "NoNFTyet": "Tsis muaj NFTs tseem",
+        "Conversation": "Kev sib tham",
+        "Create": "Tsim",
+        "CurrentBid": "Tam sim no twv",
+        "StartingIn": "Pib hauv",
+        "EndingIn": "Xaus hauv",
+        "CreateNFT": "Tsim NFT",
+        "TitlePlaceholder": "Muab koj NFT ib lub npe",
+        "DescriptionPlaceholder": "Muab koj NFT ib qho lus piav qhia",
+        "CreateYourNFT": "Tsim koj NFT",
+        "Royalties": "Royalties",
+        "RoyaltyPlaceholder": "xaiv tau. Tus nqi them rau tus tsim ua ntej hloov pauv.",
+        "ExpirationDate": "Hnub Kawg",
+        "StartingDate": "Pib Hnub",
+        "BidsBelowThisAmount": "Kev twv hauv qab no yuav tsis tso cai",
+        "MinimumBid": "Yam tsawg kawg nkaus",
+        "Author": "Tus sau",
+        "Price": "Nqe",
+        "Commission": "Commission",
+        "EnterCommission": "Nkag mus commission",
+        "Owner": "Tus tswv",
+        "SelectCategory": "Xaiv qeb",
+        "Day": "Hnub",
+        "Days": "Hnub",
+        "Hour": "Teev",
+        "Hours": "Teev",
+        "Minute": "feeb",
+        "Minutes": "feeb",
+        "Second": "Thib ob",
+        "Seconds": "Thib ob",
+        "SalesCreator": "kev muag khoom yuav mus rau tus creator",
+        "Details": "Paub meej",
+        "Bids": "Kev twv",
+        "History": "Keeb kwm",
+        "LoremIpsum": "Lorem Ipsum tsuas yog dummy ntawv ntawm kev lag luam luam ntawv thiab kev lag luam.",
+        "PutOnSale": "Muab tso rau muag",
+        "PutOffSale": "Tshem tawm ntawm kev muag khoom",
+        "Transfer": "Hloov",
+        "Actions": "Kev ua",
+        "Claim": "Thov",
+        "ClaimNFT": "Thov NFT",
+        "Unlocking": "Xauv",
+        "Unlock": "Xauv",
+        "Update": "Hloov tshiab",
+        "UpdateToken": "Hloov tshiab Token",
+        "UpdateNFT": "Hloov tshiab NFT",
+        "CreateToken": "Tsim Token",
+        "PlaceBid": "Qhov chaw Bid",
+        "SoldOut": "Muag",
+        "NotOnSale": "Tsis Muaj Muag",
+        "NftName": "NFT npe",
+        "DescribeYourNFT": "Thov piav qhia koj li NFT",
+        "NFTImage": "Image rau NFT",
+        "NFTVideo": "Video rau NFT, yog tias muaj",
+        "GenerateDescription": "los yog auto-generate",
+        "UploadMovie": "Upload yeeb yaj duab",
+        "MovieSource": "Movie Source",
+        "MovieURL": "Movie URL",
+        "UploadFile": "Upload ib cov ntaub ntawv",
+        "PutOnMarketplace": "Muab tso rau hauv khw",
+        "InstantPurchase": "Nkag mus rau tus nqi tso cai rau cov neeg siv tam sim yuav koj NFT",
+        "FixedPrice": "Tsau nqe",
+        "TimedAuction": "Sijhawm auction",
+        "OpenForBids": "Qhib rau kev twv",
+        "PriceOnePiece": "Sau tus nqi rau ib thooj",
+        "EnterPrice": "Sau tus nqi",
+        "EnterMinimumBid": "Sau Yam tsawg kawg nkaus bid",
+        "SelectChain": "Xaiv cov saw hlau",
+        "Currency": "txiaj",
+        "AreYouSureDeleteImage": "Koj puas paub tseeb tias koj xav tshem tawm cov duab?",
+        "AreYouSureDeleteVideo": "Koj puas paub tseeb tias koj xav tshem tawm video?",
+        "series": {
+            "Name": "Lub npe",
+            "Icon": "Icon",
+            "Description": "Kev piav qhia",
+            "Author": "Tus sau",
+            "SelectSeries": "Xaiv series",
+            "Value": "Tus nqi",
+            "AreYouSure": "Koj puas paub tseeb?",
+            "AuthorInvalid": "Tus sau chaw nyob tsis raug!",
+            "Address": "Chaw nyob",
+            "CoverImage": "Npog duab",
+            "UploadCoverImage": "Upload duab cover",
+            "CommissionAddressInvalid": "Commission chaw nyob tsis raug",
+            "OnSale": "ntawm kev muag khoom",
+            "OffSale": "tawm muag",
+            "CreateSeries": "Tsim Series",
+            "UpdateSeries": "Hloov tshiab Series",
+            "SeriesInfo": "Cov ntaub ntawv series",
+            "SelectAuthor": "Xaiv tus sau",
+            "NewItem": "Tshiab NFT series",
+            "NamePlaceholder": "Sau lub npe series",
+            "DescPlaceholder": "Sau cov lus piav qhia series",
+            "EndingIn": "Xaus Hauv"
+        },
+        "contract": {
+            "CreateContract": "Tsim daim ntawv cog lus",
+            "SelectContract": "Xaiv daim ntawv cog lus",
+            "CreateContractFor": "Tsim daim ntawv cog lus rau {{userName}}",
+            "ContractFor": "Daim ntawv cog lus rau {{userName}}",
+            "UpdateContract": "Hloov kho daim ntawv cog lus",
+            "TransferOwnership": "Hloov cov tswv cuab",
+            "SetBaseURI": "Teem Base URI",
+            "SetSuffix": "Teeb Suffix",
+            "CurrentOwner": "Tus tswv tam sim no",
+            "CurrentBaseURL": "Tam sim no BaseURL",
+            "ContractAddressAbsent": "Daim ntawv cog lus tsis tuaj",
+            "FactoryAddressAbsent": "Lub Hoobkas chaw nyob tsis tuaj",
+            "ContractName": "{{contractName}} ( {{chainNetwork}} ) {{contractSymbol}} kuv.",
+            "TitleRequired": "Title yuav tsum tau",
+            "SymbolRequired": "Cov cim yuav tsum tau",
+            "TypeContractName": "npe cog",
+            "TypeContractSymbol": "Daim ntawv cog lus (max 10 chars)"
+        },
+        "contests": {
+            "Title": "Kev sib tw",
+            "NewContest": "Kev sib tw tshiab"
+        },
+        "collections": {
+            "Title": "Kev sau",
+            "EnterTitle": "sau npe",
+            "EnterDescription": "sau cov lus piav qhia",
+            "NewCollection": "Tshiab Collection",
+            "Name": "Lub npe",
+            "Icon": "Icon",
+            "Description": "Kev piav qhia",
+            "Author": "Tus sau",
+            "SelectCollection": "Xaiv kev sau",
+            "Value": "Tus nqi",
+            "AreYouSure": "Koj puas paub tseeb?",
+            "AuthorInvalid": "Tus sau chaw nyob tsis raug!",
+            "Address": "Chaw nyob",
+            "CoverImage": "Daim duab npog",
+            "UploadIcon": "Upload icon",
+            "CommissionAddressInvalid": "Commission chaw nyob tsis raug",
+            "OnSale": "ntawm kev muag khoom",
+            "OffSale": "tawm muag",
+            "CreateCollection": "Tsim Sau",
+            "UpdateCollection": "Hloov tshiab Collection",
+            "CollectionInfo": "Cov ntaub ntawv khaws tseg",
+            "SelectAuthor": "Xaiv tus sau",
+            "NewItem": "New NFT Collection",
+            "NamePlaceholder": "Sau lub npe sau",
+            "DescPlaceholder": "Sau cov lus piav qhia txog kev sau",
+            "EndingIn": "Xaus Hauv",
+            "SubmitSeries": "Xa ib Series"
+        },
+        "import": {
+            "importNFT": "Importing NFT cov",
+            "importAttributes": "Ntshuam NFT cwj pwm",
+            "fileNotFound": "Thov txim, tsis pom cov ntaub ntawv CSV.",
+            "fileEmpty": "Thov txim, CSV cov ntaub ntawv tsis muaj dab tsi.",
+            "userIdNotFound": "tus neeg siv muaj tab sis id khoob",
+            "errorLine": "kab {{1}}",
+            "fieldNotFound": "Yuav tsum tau teb &quot; {{1}} &quot; tsis pom",
+            "displayTypeEmpty": "Hom zaub rau &quot; {{1}} &quot; tsis pom",
+            "taskStreamInvalid": "ua hauj lwm stream invalid",
+            "instructionsEmpty": "ua hauj lwm stream cov lus qhia khoob",
+            "complete": "Ua kom tiav",
+            "activateUsers": "xa cov lus qhib rau cov neeg siv?",
+            "importProgress": "Kev vam meej",
+            "importOptions": "Kev xaiv",
+            "sampleCSV": "Download Sample CSV",
+            "fileLabel": "Upload daim ntawv qhia:",
+            "errorsTitle": "Qhov yuam kev tshwm sim"
+        },
+        "filter": {
+            "ByCategory": {
+                "FilterByNFTCollections": "Lim los ntawm NFT Collections",
+                "ShowNFTCollection": "Qhia NFT sau hauv ...",
+                "AllCollections": "Tag nrho cov Collections"
+            },
+            "ByUser": {
+                "AllAuthors": "Txhua Tus Sau",
+                "AllUsers": "Txhua tus",
+                "FilterByAuthors": "Lim los ntawm Cov Kws Sau Ntawv"
+            }
+        },
+        "Back": "Rov qab mus rau Collection",
+        "attributes": {
+            "Title": "Tswj Cov Cai",
+            "Attributes": "Yam ntxwv",
+            "DisplayTitle": "Hom zaub",
+            "AddDisplayType": "Ntxiv hom zaub tshiab",
+            "NewDisplay": "Zaub tshiab",
+            "TraitTitle": "Hom yam",
+            "AddTraitTitle": "Ntxiv cov yam ntxwv tshiab",
+            "NewTrait": "Hom Kev Cai Tshiab",
+            "ValueTitle": "Tus nqi",
+            "AddValueTitle": "Ntxiv tus nqi tshiab",
+            "NewValue": "Tus nqi tshiab",
+            "NewAttribute": "Tus cwj pwm tshiab",
+            "UpdateAttributes": "Hloov cov cwj pwm",
+            "SaveAttributes": "Txuag tus cwj pwm"
+        },
+        "profile": {
+            "LogOut": "Nkag mus",
+            "Title": "Profile rau {{userName}}",
+            "Description": "Cov ntaub ntawv siv",
+            "aboutPlaceholder": "Khob Bio",
+            "UploadCoverPhoto": "Upload Cover Photo",
+            "SureLogOut": "Koj puas paub tseeb tias koj xav rho tawm?"
+        },
+        "sales": {
+            "factory": {
+                "form": {
+                    "labels": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "series Id",
+                        "owner": "Tus tswv",
+                        "currency": "Nyiaj txiag",
+                        "price": "Nqe",
+                        "beneficiary": "Cov neeg tau txais txiaj ntsig",
+                        "autoindex": "Autoindex",
+                        "duration": "Duration",
+                        "rateInterval": "Ntsuas lub sijhawm",
+                        "rateAmount": "Tus nqi npaum li cas"
+                    },
+                    "small": {
+                        "NFTContract": "NFTContract",
+                        "seriesId": "tokens yuav minted nyob rau hauv no series",
+                        "owner": "tus tswv ntawm piv txwv, txwv tsis pub yuav yog sender",
+                        "currency": "Cov txiaj ntsig rau kev yuav tokens, yog xoom - rau cov npib ib txwm muaj",
+                        "price": "Nqe",
+                        "beneficiary": "Cov neeg tau txais txiaj ntsig ntawm kev muag tokens, txwv tsis pub yuav yog tus xa",
+                        "autoindex": "Autoindex",
+                        "duration": "Xauv tom qab minting. Zero txhais tau tias tau txais tam sim ntawd.",
+                        "rateInterval": "thoob lub sijhawm rau kev yuav khoom tshwj xeeb",
+                        "rateAmount": "tus nqi thoob rau kev yuav khoom tshwj xeeb"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(yeem)",
+                    "number": "tus lej",
+                    "address": "chaw nyob",
+                    "fraction": "feem",
+                    "integer": "tus lej",
+                    "seconds": "vib nas this",
+                    "uint256": "ua 256",
+                    "uint192": "ib 192",
+                    "uint64": "ua 64",
+                    "uint32": "ntu 32",
+                    "uint16": "ntu 16"
+                },
+                "produce": "Tsim tawm",
+                "viewInstancesList": "Refresh List"
+            },
+            "instance": {
+                "form": {
+                    "labels": {
+                        "seriesId": "Series ID",
+                        "account": "Tus account",
+                        "amount": "Tus nqi"
+                    },
+                    "small": {
+                        "seriesId": "tshiab token yuav nyob rau hauv series nrog xws li ID",
+                        "account": "tus tswv ntawm NFT tshiab tsim. yog tsis teem - yuav siv lub hnab nyiaj tam sim no",
+                        "amount": "nyiaj NFT rau mint"
+                    }
+                },
+                "placeholders": {
+                    "optional": "(yeem)",
+                    "seriesId": "id",
+                    "account": "tus account",
+                    "amount": "tus nqi",
+                    "integer": "tus lej"
+                },
+                "btn": {
+                    "Purchase": "Yuav",
+                    "SpecialPurchase": "Kev yuav khoom tshwj xeeb"
+                }
+            },
+            "whitelist": {
+                "form": {
+                    "labels": {
+                        "account": "Chaw nyob"
+                    },
+                    "small": {
+                        "account": "Chaw nyob"
+                    }
+                },
+                "errors": {
+                    "invalidAddress": "Chaw Nyob Tsis Muaj Cai"
+                },
+                "placeholders": {
+                    "account": "Chaw nyob"
+                },
+                "addToWhitelist": "Ntxiv rau Whitelist",
+                "removeFromWhitelist": "Tshem tawm ntawm Whitelist"
+            }
+        },
+        "locked": {
+            "form": {
+                "labels": {
+                    "tokenId": "Token ID",
+                    "custodian": "Tus neeg saib xyuas",
+                    "recipient": "Tus neeg txais"
+                },
+                "small": {
+                    "tokenId": "token id dab tsi yuav tsum tau xauv lossis xauv",
+                    "custodian": "chaw nyob uas tuaj yeem qhib tau",
+                    "recipient": "chaw nyob uas yuav tau txais cov tokens"
+                }
+            },
+            "errors": {
+                "invalidTokenId": "Invalid tokenId",
+                "invalidCustodian": "Tus neeg saib xyuas tsis raug",
+                "invalidRecipient": "Tus neeg txais tsis raug"
+            },
+            "placeholders": {
+                "optional": "(yeem)",
+                "tokenId": "id",
+                "custodian": "chaw nyob"
+            },
+            "Lock": "Xauv",
+            "Unlock": "Xauv",
+            "Locked": "Xauv",
+            "CustodianAddress": "Tus neeg saib xyuas chaw nyob",
+            "TokenWasClaimed": "Token &quot; {{title}} &quot; tau thov",
+            "TokenWasLocked": "Token &quot; {{title}} &quot; raug kaw",
+            "TokenWasUnlocked": "Token &quot; {{title}} &quot; tau qhib"
+        }
+    },
+    "fundrise": {
+        "placeholder": "ntaus ib yam dab tsi txog qhov kev pab cuam no ..."
+    },
+    "currencies": {
+        "choose": "Xaiv ib lub txiaj"
+    }
+}

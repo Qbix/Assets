@@ -1,0 +1,29 @@
+{
+    "coin": {
+        "staking": {
+            "start": {
+                "form": {
+                    "labels": {
+                        "reserveToken": "reserveToken",
+                        "duration": "कालावधी",
+                        "amount": "रक्कम"
+                    },
+                    "small": {
+                        "reserveToken": "reserveToken",
+                        "duration": "कालावधी",
+                        "amount": "रक्कम"
+                    }
+                },
+                "placeholders": {
+                    "duration": "कालावधी",
+                    "amount": "रक्कम"
+                },
+                "btns": {
+                    "stake": "भागभांडवल"
+                },
+                "stake": "भागभांडवल",
+                "loading": "लोड करत आहे"
+            }
+        }
+    }
+}
