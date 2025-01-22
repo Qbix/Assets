@@ -1,5 +1,5 @@
 <?php
-require ASSETS_PLUGIN_DIR.DS.'vendor'.DS.'autoload.php';
+require_once ASSETS_PLUGIN_DIR.DS.'vendor'.DS.'autoload.php';
 
 /**
  * @module Assets
