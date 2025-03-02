@@ -401,6 +401,7 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 		getAll: new Q.Method(),
 		getFundConfig: new Q.Method(),
 		getWhitelisted: new Q.Method(),
+        getOwner: new Q.Method(),
 		adjustFundConfig: function(infoConfig, options) {
 			//make output data an userfriendly
 			var infoConfigAdjusted = Object.assign({}, infoConfig);
@@ -408,9 +409,11 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 			infoConfigAdjusted._endTs = new Date(parseInt(infoConfig._endTs) * 1000).toDateString();
 			infoConfigAdjusted._prices = infoConfig._prices.map(
 					x => ethers.utils.formatUnits(
-						x.toString(), 
+						(x/100).toString(), //div to 100 to get $ instead cents
 						Q.isEmpty(options.priceDenom)?18:Math.log10(options.priceDenom)
 					));
+            
+            infoConfigAdjusted._amountRaised = infoConfig._amountRaised.map(x => Math.trunc(ethers.utils.formatUnits(x.toString(), 18)));
 			infoConfigAdjusted._thresholds = infoConfig._thresholds.map(x => ethers.utils.formatUnits(x.toString(), 18));
 			infoConfigAdjusted._timestamps = infoConfig._timestamps.map(x => new Date(parseInt(x) * 1000).toDateString());
 			
@@ -522,6 +525,7 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 			}}
 		}
 	}, '{{Assets}}/js/methods/Assets/Web3'),
+    
 };
 
 
@@ -655,6 +659,15 @@ Q.Tool.define({
 	"Assets/web3/coin/admin": {
 		js: "{{Assets}}/js/tools/web3/coin/admin.js",
 		css: ["{{Assets}}/css/tools/web3/coin/admin.css", "{{Q}}/css/bootstrap-custom/bootstrap.css"]
+	},
+    "Assets/web3/sales/main": {
+		js: "{{Assets}}/js/tools/web3/sales/main.js",
+		css: ["{{Assets}}/css/tools/web3/sales/main.css"],
+        text: ["Assets/content", "Assets/web3/sales/main"]
+	},
+    "Assets/web3/sales/group": {
+		js: "{{Assets}}/js/tools/web3/sales/group.js",
+        text: ["Assets/content", "Assets/web3/sales/group"]
 	},
 	"Assets/web3/coin/staking/start": {
 		js: "{{Assets}}/js/tools/web3/coin/staking/start.js",
