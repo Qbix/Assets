@@ -1,0 +1,20 @@
+{
+    "sales": {
+        "main": {
+            "test": "test",
+            "placeholder": {
+                "amountInUSD": "Amount in USD"
+            },
+            
+            "titles": {
+                "condition1":"Condition, tokens",
+                "bonus":"Bonus, %",
+                "condition2":"Condition",
+                "price":"Price, $",
+                "buy": "Buy",
+                "bonuses": "See Bonuses",
+                "prices": "See Prices"
+            }
+        }
+    }
+}
