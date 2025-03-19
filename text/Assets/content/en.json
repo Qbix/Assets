@@ -1,4 +1,4 @@
-{
+{ 
     "errors": {
         "Error": "Error",
         "WalletAbsent": "The wallet is not connected.",
