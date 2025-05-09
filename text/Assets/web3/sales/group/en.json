@@ -1,0 +1,19 @@
+{
+    "sales": {
+        "group": {
+            "errors": {
+                "AddressInvalid":"Address invalid",
+                "GroupNameInvalid":"Group name invalid"
+            },
+            "titles": {
+                "AddtoWhitelist": "Add to Whitelist",
+                "SetGroup":"Set Group",
+                "OnWhitelist":"On whitelist",
+                "NotYetOnWhitelist":"Not yet on whitelist"
+            },
+            "placeholder": {
+                "ExactGroupName": "Exact Group Name"
+            }
+        }
+    }
+}
