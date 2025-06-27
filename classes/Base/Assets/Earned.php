@@ -658,6 +658,13 @@ return array (
 );			
 	}
 
+	/**
+	 * Check if mandatory fields are set and updates 'magic fields' with appropriate values
+	 * @method beforeSave
+	 * @param {array} $value The array of fields
+	 * @return {array}
+	 * @throws {Exception} If mandatory field is not set
+	 */
 	function beforeSave($value)
 	{
 
@@ -673,7 +680,7 @@ return array (
 		if (!isset($value["badgeName"])) {
 			$this->badgeName = $value["badgeName"] = "";
 		}
-			
+		return $value;			
 	}
 
 	/**

@@ -542,6 +542,14 @@ Base.column_streamName = function () {
 return [["varbinary","255","",false],true,"",null];
 };
 
+/**
+ * Check if mandatory fields are set and updates 'magic fields' with appropriate values
+ * @method beforeSave
+ * @param {Object} value The object of fields
+ * @param {Function} callback Call this callback if you return null
+ * @return {Object|null} Return the fields, modified if necessary. If you return null, then you should call the callback(err, modifiedFields)
+ * @throws {Error} If e.g. mandatory field is not set or a bad values are supplied
+ */
 Base.prototype.beforeSave = function (value) {
 
 	if (this.fields["appId"] == undefined) {
@@ -556,7 +564,7 @@ Base.prototype.beforeSave = function (value) {
 	if (this.fields["badgeName"] == undefined) {
 		this.fields["badgeName"] = value["badgeName"] = "";
 	}
-
+	return value;
 };
 
 module.exports = Base;
