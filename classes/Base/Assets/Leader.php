@@ -493,6 +493,18 @@ return array (
 				}
 			}
 		}
+		if (!isset($value["communityId"])) {
+			$this->communityId = $value["communityId"] = "";
+		}
+		if (!isset($value["day"])) {
+			$this->day = $value["day"] = "";
+		}
+		if (!isset($value["userId"])) {
+			$this->userId = $value["userId"] = "";
+		}
+		if (!isset($value["points"])) {
+			$this->points = $value["points"] = 0;
+		}
 		return $value;			
 	}
 

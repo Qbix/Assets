@@ -571,6 +571,18 @@ Base.prototype.beforeSave = function (value) {
 			}
 		}
 	}
+	if (this.fields["appId"] == undefined) {
+		this.fields["appId"] = value["appId"] = "";
+	}
+	if (this.fields["name"] == undefined) {
+		this.fields["name"] = value["name"] = "";
+	}
+	if (this.fields["title"] == undefined) {
+		this.fields["title"] = value["title"] = "";
+	}
+	if (this.fields["points"] == undefined) {
+		this.fields["points"] = value["points"] = 0;
+	}
 	return value;
 };
 

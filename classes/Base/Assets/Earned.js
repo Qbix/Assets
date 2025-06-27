@@ -542,4 +542,21 @@ Base.column_streamName = function () {
 return [["varbinary","255","",false],true,"",null];
 };
 
+Base.prototype.beforeSave = function (value) {
+
+	if (this.fields["appId"] == undefined) {
+		this.fields["appId"] = value["appId"] = "";
+	}
+	if (this.fields["earnedTime"] == undefined) {
+		this.fields["earnedTime"] = value["earnedTime"] = new Db.Expression("CURRENT_TIMESTAMP");
+	}
+	if (this.fields["userId"] == undefined) {
+		this.fields["userId"] = value["userId"] = "";
+	}
+	if (this.fields["badgeName"] == undefined) {
+		this.fields["badgeName"] = value["badgeName"] = "";
+	}
+
+};
+
 module.exports = Base;

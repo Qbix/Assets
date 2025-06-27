@@ -658,6 +658,24 @@ return array (
 );			
 	}
 
+	function beforeSave($value)
+	{
+
+		if (!isset($value["appId"])) {
+			$this->appId = $value["appId"] = "";
+		}
+		if (!isset($value["earnedTime"])) {
+			$this->earnedTime = $value["earnedTime"] = new Db_Expression("CURRENT_TIMESTAMP");
+		}
+		if (!isset($value["userId"])) {
+			$this->userId = $value["userId"] = "";
+		}
+		if (!isset($value["badgeName"])) {
+			$this->badgeName = $value["badgeName"] = "";
+		}
+			
+	}
+
 	/**
 	 * Retrieves field names for class table
 	 * @method fieldNames

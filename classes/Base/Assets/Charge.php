@@ -55,7 +55,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @property $description
 	 * @type string
 	 * @default ""
-	 * human-readable description of the charge
+	 * key in Q.Text file with human-readable description of the charge
 	 */
 	/**
 	 * @property $attributes
@@ -451,7 +451,7 @@ return array (
   ),
   1 => false,
   2 => '',
-  3 => NULL,
+  3 => '',
 );			
 	}
 
@@ -736,6 +736,24 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
+		if (!isset($value["userId"])) {
+			$this->userId = $value["userId"] = "";
+		}
+		if (!isset($value["id"])) {
+			$this->id = $value["id"] = "";
+		}
+		if (!isset($value["publisherId"])) {
+			$this->publisherId = $value["publisherId"] = "";
+		}
+		if (!isset($value["streamName"])) {
+			$this->streamName = $value["streamName"] = "";
+		}
+		if (!isset($value["description"])) {
+			$this->description = $value["description"] = "";
+		}
+		if (!isset($value["attributes"])) {
+			$this->attributes = $value["attributes"] = "";
+		}
 		return $value;			
 	}
 

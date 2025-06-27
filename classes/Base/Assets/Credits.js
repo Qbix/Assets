@@ -29,7 +29,7 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.toPublisherId] defaults to null
  * @param {String|Buffer} [fields.toStreamName] defaults to null
  * @param {String} [fields.reason] defaults to ""
- * @param {String|Buffer} [fields.communityId] defaults to ""
+ * @param {String|Buffer} [fields.communityId] defaults to "0x4D697261636C6573"
  * @param {Number} [fields.amount] defaults to 0
  * @param {String} [fields.attributes] defaults to null
  * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
@@ -87,12 +87,12 @@ Q.mixin(Base, Row);
  * @property reason
  * @type String
  * @default ""
- * human-readable description of the charge
+ * key in Q.Text file with human-readable description of the charge
  */
 /**
  * @property communityId
  * @type String|Buffer
- * @default ""
+ * @default "0x4D697261636C6573"
  * community managing the credits
  */
 /**
@@ -670,7 +670,7 @@ Base.prototype.maxSize_communityId = function () {
 	 */
 Base.column_communityId = function () {
 
-return [["varbinary","31","",false],false,"",null];
+return [["varbinary","31","",false],false,"","0x4D697261636C6573"];
 };
 
 /**
@@ -804,6 +804,18 @@ Base.prototype.beforeSave = function (value) {
 	}
 	// convention: we'll have updatedTime = insertedTime if just created.
 	this['updatedTime'] = value['updatedTime'] = new Db.Expression('CURRENT_TIMESTAMP');
+	if (this.fields["id"] == undefined) {
+		this.fields["id"] = value["id"] = "";
+	}
+	if (this.fields["reason"] == undefined) {
+		this.fields["reason"] = value["reason"] = "";
+	}
+	if (this.fields["communityId"] == undefined) {
+		this.fields["communityId"] = value["communityId"] = "0x4D697261636C6573";
+	}
+	if (this.fields["amount"] == undefined) {
+		this.fields["amount"] = value["amount"] = 0;
+	}
 	return value;
 };
 

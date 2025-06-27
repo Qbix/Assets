@@ -685,6 +685,18 @@ return array (
 				}
 			}
 		}
+		if (!isset($value["appId"])) {
+			$this->appId = $value["appId"] = "";
+		}
+		if (!isset($value["name"])) {
+			$this->name = $value["name"] = "";
+		}
+		if (!isset($value["title"])) {
+			$this->title = $value["title"] = "";
+		}
+		if (!isset($value["points"])) {
+			$this->points = $value["points"] = 0;
+		}
 		return $value;			
 	}
 

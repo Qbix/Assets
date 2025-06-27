@@ -423,6 +423,18 @@ Base.prototype.beforeSave = function (value) {
 			}
 		}
 	}
+	if (this.fields["communityId"] == undefined) {
+		this.fields["communityId"] = value["communityId"] = "";
+	}
+	if (this.fields["day"] == undefined) {
+		this.fields["day"] = value["day"] = "";
+	}
+	if (this.fields["userId"] == undefined) {
+		this.fields["userId"] = value["userId"] = "";
+	}
+	if (this.fields["points"] == undefined) {
+		this.fields["points"] = value["points"] = 0;
+	}
 	return value;
 };
 

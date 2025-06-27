@@ -24,7 +24,7 @@
  * @param {string} [$fields.toPublisherId] defaults to null
  * @param {string} [$fields.toStreamName] defaults to null
  * @param {string} [$fields.reason] defaults to ""
- * @param {string} [$fields.communityId] defaults to ""
+ * @param {string} [$fields.communityId] defaults to "0x4D697261636C6573"
  * @param {float} [$fields.amount] defaults to 0
  * @param {string} [$fields.attributes] defaults to null
  * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
@@ -78,12 +78,12 @@ abstract class Base_Assets_Credits extends Db_Row
 	 * @property $reason
 	 * @type string
 	 * @default ""
-	 * human-readable description of the charge
+	 * key in Q.Text file with human-readable description of the charge
 	 */
 	/**
 	 * @property $communityId
 	 * @type string
-	 * @default ""
+	 * @default "0x4D697261636C6573"
 	 * community managing the credits
 	 */
 	/**
@@ -815,7 +815,7 @@ return array (
   ),
   1 => false,
   2 => '',
-  3 => NULL,
+  3 => '0x4D697261636C6573',
 );			
 	}
 
@@ -1023,6 +1023,18 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
+		if (!isset($value["id"])) {
+			$this->id = $value["id"] = "";
+		}
+		if (!isset($value["reason"])) {
+			$this->reason = $value["reason"] = "";
+		}
+		if (!isset($value["communityId"])) {
+			$this->communityId = $value["communityId"] = "0x4D697261636C6573";
+		}
+		if (!isset($value["amount"])) {
+			$this->amount = $value["amount"] = 0;
+		}
 		return $value;			
 	}
 
