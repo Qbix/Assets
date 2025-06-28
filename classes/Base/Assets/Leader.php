@@ -493,16 +493,16 @@ return array (
 				}
 			}
 		}
-		if (!isset($value["communityId"])) {
+		if (!isset($this->fields["communityId"]) and !isset($value["communityId"])) {
 			$this->communityId = $value["communityId"] = "";
 		}
-		if (!isset($value["day"])) {
+		if (!isset($this->fields["day"]) and !isset($value["day"])) {
 			$this->day = $value["day"] = "";
 		}
-		if (!isset($value["userId"])) {
+		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
 			$this->userId = $value["userId"] = "";
 		}
-		if (!isset($value["points"])) {
+		if (!isset($this->fields["points"]) and !isset($value["points"])) {
 			$this->points = $value["points"] = 0;
 		}
 		return $value;			

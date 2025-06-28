@@ -736,22 +736,22 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
-		if (!isset($value["userId"])) {
+		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
 			$this->userId = $value["userId"] = "";
 		}
-		if (!isset($value["id"])) {
+		if (!isset($this->fields["id"]) and !isset($value["id"])) {
 			$this->id = $value["id"] = "";
 		}
-		if (!isset($value["publisherId"])) {
+		if (!isset($this->fields["publisherId"]) and !isset($value["publisherId"])) {
 			$this->publisherId = $value["publisherId"] = "";
 		}
-		if (!isset($value["streamName"])) {
+		if (!isset($this->fields["streamName"]) and !isset($value["streamName"])) {
 			$this->streamName = $value["streamName"] = "";
 		}
-		if (!isset($value["description"])) {
+		if (!isset($this->fields["description"]) and !isset($value["description"])) {
 			$this->description = $value["description"] = "";
 		}
-		if (!isset($value["attributes"])) {
+		if (!isset($this->fields["attributes"]) and !isset($value["attributes"])) {
 			$this->attributes = $value["attributes"] = "";
 		}
 		return $value;			

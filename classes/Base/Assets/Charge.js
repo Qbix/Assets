@@ -603,22 +603,22 @@ Base.prototype.beforeSave = function (value) {
 	}
 	// convention: we'll have updatedTime = insertedTime if just created.
 	this['updatedTime'] = value['updatedTime'] = new Db.Expression('CURRENT_TIMESTAMP');
-	if (this.fields["userId"] == undefined) {
+	if (this.fields["userId"] == undefined && value["userId"] == undefined) {
 		this.fields["userId"] = value["userId"] = "";
 	}
-	if (this.fields["id"] == undefined) {
+	if (this.fields["id"] == undefined && value["id"] == undefined) {
 		this.fields["id"] = value["id"] = "";
 	}
-	if (this.fields["publisherId"] == undefined) {
+	if (this.fields["publisherId"] == undefined && value["publisherId"] == undefined) {
 		this.fields["publisherId"] = value["publisherId"] = "";
 	}
-	if (this.fields["streamName"] == undefined) {
+	if (this.fields["streamName"] == undefined && value["streamName"] == undefined) {
 		this.fields["streamName"] = value["streamName"] = "";
 	}
-	if (this.fields["description"] == undefined) {
+	if (this.fields["description"] == undefined && value["description"] == undefined) {
 		this.fields["description"] = value["description"] = "";
 	}
-	if (this.fields["attributes"] == undefined) {
+	if (this.fields["attributes"] == undefined && value["attributes"] == undefined) {
 		this.fields["attributes"] = value["attributes"] = "";
 	}
 	return value;

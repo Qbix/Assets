@@ -685,16 +685,16 @@ return array (
 				}
 			}
 		}
-		if (!isset($value["appId"])) {
+		if (!isset($this->fields["appId"]) and !isset($value["appId"])) {
 			$this->appId = $value["appId"] = "";
 		}
-		if (!isset($value["name"])) {
+		if (!isset($this->fields["name"]) and !isset($value["name"])) {
 			$this->name = $value["name"] = "";
 		}
-		if (!isset($value["title"])) {
+		if (!isset($this->fields["title"]) and !isset($value["title"])) {
 			$this->title = $value["title"] = "";
 		}
-		if (!isset($value["points"])) {
+		if (!isset($this->fields["points"]) and !isset($value["points"])) {
 			$this->points = $value["points"] = 0;
 		}
 		return $value;			

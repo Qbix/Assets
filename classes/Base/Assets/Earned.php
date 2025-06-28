@@ -668,16 +668,16 @@ return array (
 	function beforeSave($value)
 	{
 
-		if (!isset($value["appId"])) {
+		if (!isset($this->fields["appId"]) and !isset($value["appId"])) {
 			$this->appId = $value["appId"] = "";
 		}
-		if (!isset($value["earnedTime"])) {
+		if (!isset($this->fields["earnedTime"]) and !isset($value["earnedTime"])) {
 			$this->earnedTime = $value["earnedTime"] = new Db_Expression("CURRENT_TIMESTAMP");
 		}
-		if (!isset($value["userId"])) {
+		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
 			$this->userId = $value["userId"] = "";
 		}
-		if (!isset($value["badgeName"])) {
+		if (!isset($this->fields["badgeName"]) and !isset($value["badgeName"])) {
 			$this->badgeName = $value["badgeName"] = "";
 		}
 		return $value;			

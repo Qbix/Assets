@@ -552,16 +552,16 @@ return [["varbinary","255","",false],true,"",null];
  */
 Base.prototype.beforeSave = function (value) {
 
-	if (this.fields["appId"] == undefined) {
+	if (this.fields["appId"] == undefined && value["appId"] == undefined) {
 		this.fields["appId"] = value["appId"] = "";
 	}
-	if (this.fields["earnedTime"] == undefined) {
+	if (this.fields["earnedTime"] == undefined && value["earnedTime"] == undefined) {
 		this.fields["earnedTime"] = value["earnedTime"] = new Db.Expression("CURRENT_TIMESTAMP");
 	}
-	if (this.fields["userId"] == undefined) {
+	if (this.fields["userId"] == undefined && value["userId"] == undefined) {
 		this.fields["userId"] = value["userId"] = "";
 	}
-	if (this.fields["badgeName"] == undefined) {
+	if (this.fields["badgeName"] == undefined && value["badgeName"] == undefined) {
 		this.fields["badgeName"] = value["badgeName"] = "";
 	}
 	return value;

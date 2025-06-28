@@ -1023,16 +1023,16 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
-		if (!isset($value["id"])) {
+		if (!isset($this->fields["id"]) and !isset($value["id"])) {
 			$this->id = $value["id"] = "";
 		}
-		if (!isset($value["reason"])) {
+		if (!isset($this->fields["reason"]) and !isset($value["reason"])) {
 			$this->reason = $value["reason"] = "";
 		}
-		if (!isset($value["communityId"])) {
+		if (!isset($this->fields["communityId"]) and !isset($value["communityId"])) {
 			$this->communityId = $value["communityId"] = "0x4D697261636C6573";
 		}
-		if (!isset($value["amount"])) {
+		if (!isset($this->fields["amount"]) and !isset($value["amount"])) {
 			$this->amount = $value["amount"] = 0;
 		}
 		return $value;			

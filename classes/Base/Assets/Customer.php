@@ -597,16 +597,16 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
-		if (!isset($value["userId"])) {
+		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
 			$this->userId = $value["userId"] = "";
 		}
-		if (!isset($value["payments"])) {
+		if (!isset($this->fields["payments"]) and !isset($value["payments"])) {
 			$this->payments = $value["payments"] = "stripe";
 		}
-		if (!isset($value["customerId"])) {
+		if (!isset($this->fields["customerId"]) and !isset($value["customerId"])) {
 			$this->customerId = $value["customerId"] = "";
 		}
-		if (!isset($value["hash"])) {
+		if (!isset($this->fields["hash"]) and !isset($value["hash"])) {
 			$this->hash = $value["hash"] = "";
 		}
 		return $value;			

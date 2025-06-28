@@ -571,16 +571,16 @@ Base.prototype.beforeSave = function (value) {
 			}
 		}
 	}
-	if (this.fields["appId"] == undefined) {
+	if (this.fields["appId"] == undefined && value["appId"] == undefined) {
 		this.fields["appId"] = value["appId"] = "";
 	}
-	if (this.fields["name"] == undefined) {
+	if (this.fields["name"] == undefined && value["name"] == undefined) {
 		this.fields["name"] = value["name"] = "";
 	}
-	if (this.fields["title"] == undefined) {
+	if (this.fields["title"] == undefined && value["title"] == undefined) {
 		this.fields["title"] = value["title"] = "";
 	}
-	if (this.fields["points"] == undefined) {
+	if (this.fields["points"] == undefined && value["points"] == undefined) {
 		this.fields["points"] = value["points"] = 0;
 	}
 	return value;

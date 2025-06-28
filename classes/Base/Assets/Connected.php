@@ -612,13 +612,13 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
-		if (!isset($value["userId"])) {
+		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
 			$this->userId = $value["userId"] = "";
 		}
-		if (!isset($value["payments"])) {
+		if (!isset($this->fields["payments"]) and !isset($value["payments"])) {
 			$this->payments = $value["payments"] = "";
 		}
-		if (!isset($value["accountId"])) {
+		if (!isset($this->fields["accountId"]) and !isset($value["accountId"])) {
 			$this->accountId = $value["accountId"] = "";
 		}
 		return $value;			

@@ -423,16 +423,16 @@ Base.prototype.beforeSave = function (value) {
 			}
 		}
 	}
-	if (this.fields["communityId"] == undefined) {
+	if (this.fields["communityId"] == undefined && value["communityId"] == undefined) {
 		this.fields["communityId"] = value["communityId"] = "";
 	}
-	if (this.fields["day"] == undefined) {
+	if (this.fields["day"] == undefined && value["day"] == undefined) {
 		this.fields["day"] = value["day"] = "";
 	}
-	if (this.fields["userId"] == undefined) {
+	if (this.fields["userId"] == undefined && value["userId"] == undefined) {
 		this.fields["userId"] = value["userId"] = "";
 	}
-	if (this.fields["points"] == undefined) {
+	if (this.fields["points"] == undefined && value["points"] == undefined) {
 		this.fields["points"] = value["points"] = 0;
 	}
 	return value;
