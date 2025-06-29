@@ -20,7 +20,7 @@
  * @param {string} [$fields.display_type] defaults to ""
  * @param {string} [$fields.trait_type] defaults to ""
  * @param {string} [$fields.value] defaults to ""
- * @param {string|Db_Expression} [$fields.insertedTime] defaults to null
+ * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
  * @param {string|Db_Expression} [$fields.updatedTime] defaults to null
  */
 abstract class Base_Assets_NftAttributes extends Db_Row
@@ -52,7 +52,7 @@ abstract class Base_Assets_NftAttributes extends Db_Row
 	/**
 	 * @property $insertedTime
 	 * @type string|Db_Expression
-	 * @default null
+	 * @default new Db_Expression("CURRENT_TIMESTAMP")
 	 * 
 	 */
 	/**

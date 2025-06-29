@@ -21,11 +21,11 @@ var Row = Q.require('Db/Row');
  * @constructor
  * @param {Object} [fields={}] The fields values to initialize table row as 
  * an associative array of {column: value} pairs
- * @param {String|Buffer} [fields.userId] defaults to null
- * @param {String} [fields.payments] defaults to null
- * @param {String|Buffer} [fields.customerId] defaults to null
+ * @param {String|Buffer} [fields.userId] defaults to ""
+ * @param {String} [fields.payments] defaults to "stripe"
+ * @param {String|Buffer} [fields.customerId] defaults to ""
  * @param {String} [fields.hash] defaults to ""
- * @param {String|Db.Expression} [fields.insertedTime] defaults to null
+ * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
  * @param {String|Db.Expression} [fields.updatedTime] defaults to null
  */
 function Base (fields) {
@@ -37,19 +37,19 @@ Q.mixin(Base, Row);
 /**
  * @property userId
  * @type String|Buffer
- * @default null
+ * @default ""
  * 
  */
 /**
  * @property payments
  * @type String
- * @default null
+ * @default "stripe"
  * the payment processor for the customer
  */
 /**
  * @property customerId
  * @type String|Buffer
- * @default null
+ * @default ""
  * the customer id in the payments processor
  */
 /**
@@ -61,7 +61,7 @@ Q.mixin(Base, Row);
 /**
  * @property insertedTime
  * @type String|Db.Expression
- * @default null
+ * @default new Db.Expression("CURRENT_TIMESTAMP")
  * 
  */
 /**

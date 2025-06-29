@@ -22,7 +22,7 @@
  * @param {string} [$fields.icon] defaults to null
  * @param {string} [$fields.title] defaults to ""
  * @param {string} [$fields.description] defaults to null
- * @param {integer} [$fields.points] defaults to null
+ * @param {integer} [$fields.points] defaults to 0
  */
 abstract class Base_Assets_Badge extends Db_Row
 {
@@ -65,7 +65,7 @@ abstract class Base_Assets_Badge extends Db_Row
 	/**
 	 * @property $points
 	 * @type integer
-	 * @default null
+	 * @default 0
 	 * 
 	 */
 	/**

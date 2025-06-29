@@ -27,7 +27,7 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.icon] defaults to null
  * @param {String} [fields.title] defaults to ""
  * @param {String} [fields.description] defaults to null
- * @param {Integer} [fields.points] defaults to null
+ * @param {Integer} [fields.points] defaults to 0
  */
 function Base (fields) {
 	Base.constructors.apply(this, arguments);
@@ -74,7 +74,7 @@ Q.mixin(Base, Row);
 /**
  * @property points
  * @type Integer
- * @default null
+ * @default 0
  * 
  */
 

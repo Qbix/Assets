@@ -18,11 +18,11 @@
  * an associative array of $column => $value pairs
  * @param {string} [$fields.userId] defaults to ""
  * @param {string} [$fields.id] defaults to ""
- * @param {string} [$fields.publisherId] defaults to null
- * @param {string} [$fields.streamName] defaults to null
+ * @param {string} [$fields.publisherId] defaults to ""
+ * @param {string} [$fields.streamName] defaults to ""
  * @param {string} [$fields.description] defaults to ""
  * @param {string} [$fields.attributes] defaults to ""
- * @param {string|Db_Expression} [$fields.insertedTime] defaults to null
+ * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
  * @param {string|Db_Expression} [$fields.updatedTime] defaults to null
  */
 abstract class Base_Assets_Charge extends Db_Row
@@ -42,13 +42,13 @@ abstract class Base_Assets_Charge extends Db_Row
 	/**
 	 * @property $publisherId
 	 * @type string
-	 * @default null
+	 * @default ""
 	 * publisherId of the stream regarding which the charge was made
 	 */
 	/**
 	 * @property $streamName
 	 * @type string
-	 * @default null
+	 * @default ""
 	 * name of the stream regarding which the charge was made
 	 */
 	/**
@@ -66,7 +66,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	/**
 	 * @property $insertedTime
 	 * @type string|Db_Expression
-	 * @default null
+	 * @default new Db_Expression("CURRENT_TIMESTAMP")
 	 * 
 	 */
 	/**

@@ -23,7 +23,7 @@ var Row = Q.require('Db/Row');
  * an associative array of {column: value} pairs
  * @param {String|Buffer} [fields.appId] defaults to ""
  * @param {String|Buffer} [fields.communityId] defaults to null
- * @param {String|Db.Expression} [fields.earnedTime] defaults to null
+ * @param {String|Db.Expression} [fields.earnedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
  * @param {String} [fields.userId] defaults to ""
  * @param {String} [fields.badgeName] defaults to ""
  * @param {String|Buffer} [fields.publisherId] defaults to null
@@ -50,7 +50,7 @@ Q.mixin(Base, Row);
 /**
  * @property earnedTime
  * @type String|Db.Expression
- * @default null
+ * @default new Db.Expression("CURRENT_TIMESTAMP")
  * 
  */
 /**

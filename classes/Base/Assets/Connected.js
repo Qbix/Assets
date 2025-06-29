@@ -25,7 +25,7 @@ var Row = Q.require('Db/Row');
  * @param {String} [fields.payments] defaults to ""
  * @param {String} [fields.accountId] defaults to ""
  * @param {String} [fields.refreshToken] defaults to null
- * @param {String|Db.Expression} [fields.insertedTime] defaults to null
+ * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
  * @param {String|Db.Expression} [fields.updatedTime] defaults to null
  */
 function Base (fields) {
@@ -61,7 +61,7 @@ Q.mixin(Base, Row);
 /**
  * @property insertedTime
  * @type String|Db.Expression
- * @default null
+ * @default new Db.Expression("CURRENT_TIMESTAMP")
  * 
  */
 /**

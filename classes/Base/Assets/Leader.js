@@ -24,7 +24,7 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.communityId] defaults to ""
  * @param {String|Db.Expression} [fields.day] defaults to ""
  * @param {String} [fields.userId] defaults to ""
- * @param {Integer} [fields.points] defaults to null
+ * @param {Integer} [fields.points] defaults to 0
  */
 function Base (fields) {
 	Base.constructors.apply(this, arguments);
@@ -53,7 +53,7 @@ Q.mixin(Base, Row);
 /**
  * @property points
  * @type Integer
- * @default null
+ * @default 0
  * 
  */
 

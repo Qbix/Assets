@@ -20,7 +20,7 @@
  * @param {string} [$fields.payments] defaults to ""
  * @param {string} [$fields.accountId] defaults to ""
  * @param {string} [$fields.refreshToken] defaults to null
- * @param {string|Db_Expression} [$fields.insertedTime] defaults to null
+ * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
  * @param {string|Db_Expression} [$fields.updatedTime] defaults to null
  */
 abstract class Base_Assets_Connected extends Db_Row
@@ -52,7 +52,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	/**
 	 * @property $insertedTime
 	 * @type string|Db_Expression
-	 * @default null
+	 * @default new Db_Expression("CURRENT_TIMESTAMP")
 	 * 
 	 */
 	/**
