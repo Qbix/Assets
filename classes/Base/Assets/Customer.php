@@ -16,11 +16,11 @@
  *
  * @param {array} [$fields=array()] The fields values to initialize table row as 
  * an associative array of $column => $value pairs
- * @param {string} [$fields.userId] defaults to ""
- * @param {string} [$fields.payments] defaults to "stripe"
- * @param {string} [$fields.customerId] defaults to ""
+ * @param {string} [$fields.userId] defaults to null
+ * @param {string} [$fields.payments] defaults to null
+ * @param {string} [$fields.customerId] defaults to null
  * @param {string} [$fields.hash] defaults to ""
- * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
+ * @param {string|Db_Expression} [$fields.insertedTime] defaults to null
  * @param {string|Db_Expression} [$fields.updatedTime] defaults to null
  */
 abstract class Base_Assets_Customer extends Db_Row
@@ -28,19 +28,19 @@ abstract class Base_Assets_Customer extends Db_Row
 	/**
 	 * @property $userId
 	 * @type string
-	 * @default ""
+	 * @default null
 	 * 
 	 */
 	/**
 	 * @property $payments
 	 * @type string
-	 * @default "stripe"
+	 * @default null
 	 * the payment processor for the customer
 	 */
 	/**
 	 * @property $customerId
 	 * @type string
-	 * @default ""
+	 * @default null
 	 * the customer id in the payments processor
 	 */
 	/**
@@ -52,7 +52,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	/**
 	 * @property $insertedTime
 	 * @type string|Db_Expression
-	 * @default new Db_Expression("CURRENT_TIMESTAMP")
+	 * @default null
 	 * 
 	 */
 	/**
@@ -597,15 +597,6 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
-		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
-			$this->userId = $value["userId"] = "";
-		}
-		if (!isset($this->fields["payments"]) and !isset($value["payments"])) {
-			$this->payments = $value["payments"] = "stripe";
-		}
-		if (!isset($this->fields["customerId"]) and !isset($value["customerId"])) {
-			$this->customerId = $value["customerId"] = "";
-		}
 		if (!isset($this->fields["hash"]) and !isset($value["hash"])) {
 			$this->hash = $value["hash"] = "";
 		}

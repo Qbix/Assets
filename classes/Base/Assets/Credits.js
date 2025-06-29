@@ -29,10 +29,10 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.toPublisherId] defaults to null
  * @param {String|Buffer} [fields.toStreamName] defaults to null
  * @param {String} [fields.reason] defaults to ""
- * @param {String|Buffer} [fields.communityId] defaults to "0x4D697261636C6573"
+ * @param {String|Buffer} [fields.communityId] defaults to null
  * @param {Number} [fields.amount] defaults to 0
  * @param {String} [fields.attributes] defaults to null
- * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
+ * @param {String|Db.Expression} [fields.insertedTime] defaults to null
  * @param {String|Db.Expression} [fields.updatedTime] defaults to null
  */
 function Base (fields) {
@@ -92,7 +92,7 @@ Q.mixin(Base, Row);
 /**
  * @property communityId
  * @type String|Buffer
- * @default "0x4D697261636C6573"
+ * @default null
  * community managing the credits
  */
 /**
@@ -110,7 +110,7 @@ Q.mixin(Base, Row);
 /**
  * @property insertedTime
  * @type String|Db.Expression
- * @default new Db.Expression("CURRENT_TIMESTAMP")
+ * @default null
  * 
  */
 /**
@@ -809,9 +809,6 @@ Base.prototype.beforeSave = function (value) {
 	}
 	if (this.fields["reason"] == undefined && value["reason"] == undefined) {
 		this.fields["reason"] = value["reason"] = "";
-	}
-	if (this.fields["communityId"] == undefined && value["communityId"] == undefined) {
-		this.fields["communityId"] = value["communityId"] = "0x4D697261636C6573";
 	}
 	if (this.fields["amount"] == undefined && value["amount"] == undefined) {
 		this.fields["amount"] = value["amount"] = 0;

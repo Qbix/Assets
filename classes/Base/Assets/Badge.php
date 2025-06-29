@@ -22,7 +22,7 @@
  * @param {string} [$fields.icon] defaults to null
  * @param {string} [$fields.title] defaults to ""
  * @param {string} [$fields.description] defaults to null
- * @param {integer} [$fields.points] defaults to 0
+ * @param {integer} [$fields.points] defaults to null
  */
 abstract class Base_Assets_Badge extends Db_Row
 {
@@ -65,7 +65,7 @@ abstract class Base_Assets_Badge extends Db_Row
 	/**
 	 * @property $points
 	 * @type integer
-	 * @default 0
+	 * @default null
 	 * 
 	 */
 	/**
@@ -693,9 +693,6 @@ return array (
 		}
 		if (!isset($this->fields["title"]) and !isset($value["title"])) {
 			$this->title = $value["title"] = "";
-		}
-		if (!isset($this->fields["points"]) and !isset($value["points"])) {
-			$this->points = $value["points"] = 0;
 		}
 		return $value;			
 	}

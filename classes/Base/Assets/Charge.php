@@ -18,11 +18,11 @@
  * an associative array of $column => $value pairs
  * @param {string} [$fields.userId] defaults to ""
  * @param {string} [$fields.id] defaults to ""
- * @param {string} [$fields.publisherId] defaults to ""
- * @param {string} [$fields.streamName] defaults to ""
+ * @param {string} [$fields.publisherId] defaults to null
+ * @param {string} [$fields.streamName] defaults to null
  * @param {string} [$fields.description] defaults to ""
  * @param {string} [$fields.attributes] defaults to ""
- * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
+ * @param {string|Db_Expression} [$fields.insertedTime] defaults to null
  * @param {string|Db_Expression} [$fields.updatedTime] defaults to null
  */
 abstract class Base_Assets_Charge extends Db_Row
@@ -42,13 +42,13 @@ abstract class Base_Assets_Charge extends Db_Row
 	/**
 	 * @property $publisherId
 	 * @type string
-	 * @default ""
+	 * @default null
 	 * publisherId of the stream regarding which the charge was made
 	 */
 	/**
 	 * @property $streamName
 	 * @type string
-	 * @default ""
+	 * @default null
 	 * name of the stream regarding which the charge was made
 	 */
 	/**
@@ -66,7 +66,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	/**
 	 * @property $insertedTime
 	 * @type string|Db_Expression
-	 * @default new Db_Expression("CURRENT_TIMESTAMP")
+	 * @default null
 	 * 
 	 */
 	/**
@@ -741,12 +741,6 @@ return array (
 		}
 		if (!isset($this->fields["id"]) and !isset($value["id"])) {
 			$this->id = $value["id"] = "";
-		}
-		if (!isset($this->fields["publisherId"]) and !isset($value["publisherId"])) {
-			$this->publisherId = $value["publisherId"] = "";
-		}
-		if (!isset($this->fields["streamName"]) and !isset($value["streamName"])) {
-			$this->streamName = $value["streamName"] = "";
 		}
 		if (!isset($this->fields["description"]) and !isset($value["description"])) {
 			$this->description = $value["description"] = "";

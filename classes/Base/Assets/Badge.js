@@ -27,7 +27,7 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.icon] defaults to null
  * @param {String} [fields.title] defaults to ""
  * @param {String} [fields.description] defaults to null
- * @param {Integer} [fields.points] defaults to 0
+ * @param {Integer} [fields.points] defaults to null
  */
 function Base (fields) {
 	Base.constructors.apply(this, arguments);
@@ -74,7 +74,7 @@ Q.mixin(Base, Row);
 /**
  * @property points
  * @type Integer
- * @default 0
+ * @default null
  * 
  */
 
@@ -579,9 +579,6 @@ Base.prototype.beforeSave = function (value) {
 	}
 	if (this.fields["title"] == undefined && value["title"] == undefined) {
 		this.fields["title"] = value["title"] = "";
-	}
-	if (this.fields["points"] == undefined && value["points"] == undefined) {
-		this.fields["points"] = value["points"] = 0;
 	}
 	return value;
 };

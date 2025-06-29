@@ -21,11 +21,11 @@ var Row = Q.require('Db/Row');
  * @constructor
  * @param {Object} [fields={}] The fields values to initialize table row as 
  * an associative array of {column: value} pairs
- * @param {String|Buffer} [fields.userId] defaults to ""
- * @param {String} [fields.payments] defaults to "stripe"
- * @param {String|Buffer} [fields.customerId] defaults to ""
+ * @param {String|Buffer} [fields.userId] defaults to null
+ * @param {String} [fields.payments] defaults to null
+ * @param {String|Buffer} [fields.customerId] defaults to null
  * @param {String} [fields.hash] defaults to ""
- * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
+ * @param {String|Db.Expression} [fields.insertedTime] defaults to null
  * @param {String|Db.Expression} [fields.updatedTime] defaults to null
  */
 function Base (fields) {
@@ -37,19 +37,19 @@ Q.mixin(Base, Row);
 /**
  * @property userId
  * @type String|Buffer
- * @default ""
+ * @default null
  * 
  */
 /**
  * @property payments
  * @type String
- * @default "stripe"
+ * @default null
  * the payment processor for the customer
  */
 /**
  * @property customerId
  * @type String|Buffer
- * @default ""
+ * @default null
  * the customer id in the payments processor
  */
 /**
@@ -61,7 +61,7 @@ Q.mixin(Base, Row);
 /**
  * @property insertedTime
  * @type String|Db.Expression
- * @default new Db.Expression("CURRENT_TIMESTAMP")
+ * @default null
  * 
  */
 /**
@@ -497,15 +497,6 @@ Base.prototype.beforeSave = function (value) {
 	}
 	// convention: we'll have updatedTime = insertedTime if just created.
 	this['updatedTime'] = value['updatedTime'] = new Db.Expression('CURRENT_TIMESTAMP');
-	if (this.fields["userId"] == undefined && value["userId"] == undefined) {
-		this.fields["userId"] = value["userId"] = "";
-	}
-	if (this.fields["payments"] == undefined && value["payments"] == undefined) {
-		this.fields["payments"] = value["payments"] = "stripe";
-	}
-	if (this.fields["customerId"] == undefined && value["customerId"] == undefined) {
-		this.fields["customerId"] = value["customerId"] = "";
-	}
 	if (this.fields["hash"] == undefined && value["hash"] == undefined) {
 		this.fields["hash"] = value["hash"] = "";
 	}

@@ -19,7 +19,7 @@
  * @param {string} [$fields.communityId] defaults to ""
  * @param {string|Db_Expression} [$fields.day] defaults to ""
  * @param {string} [$fields.userId] defaults to ""
- * @param {integer} [$fields.points] defaults to 0
+ * @param {integer} [$fields.points] defaults to null
  */
 abstract class Base_Assets_Leader extends Db_Row
 {
@@ -44,7 +44,7 @@ abstract class Base_Assets_Leader extends Db_Row
 	/**
 	 * @property $points
 	 * @type integer
-	 * @default 0
+	 * @default null
 	 * 
 	 */
 	/**
@@ -501,9 +501,6 @@ return array (
 		}
 		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
 			$this->userId = $value["userId"] = "";
-		}
-		if (!isset($this->fields["points"]) and !isset($value["points"])) {
-			$this->points = $value["points"] = 0;
 		}
 		return $value;			
 	}

@@ -23,11 +23,11 @@ var Row = Q.require('Db/Row');
  * an associative array of {column: value} pairs
  * @param {String|Buffer} [fields.userId] defaults to ""
  * @param {String|Buffer} [fields.id] defaults to ""
- * @param {String|Buffer} [fields.publisherId] defaults to ""
- * @param {String|Buffer} [fields.streamName] defaults to ""
+ * @param {String|Buffer} [fields.publisherId] defaults to null
+ * @param {String|Buffer} [fields.streamName] defaults to null
  * @param {String} [fields.description] defaults to ""
  * @param {String} [fields.attributes] defaults to ""
- * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
+ * @param {String|Db.Expression} [fields.insertedTime] defaults to null
  * @param {String|Db.Expression} [fields.updatedTime] defaults to null
  */
 function Base (fields) {
@@ -51,13 +51,13 @@ Q.mixin(Base, Row);
 /**
  * @property publisherId
  * @type String|Buffer
- * @default ""
+ * @default null
  * publisherId of the stream regarding which the charge was made
  */
 /**
  * @property streamName
  * @type String|Buffer
- * @default ""
+ * @default null
  * name of the stream regarding which the charge was made
  */
 /**
@@ -75,7 +75,7 @@ Q.mixin(Base, Row);
 /**
  * @property insertedTime
  * @type String|Db.Expression
- * @default new Db.Expression("CURRENT_TIMESTAMP")
+ * @default null
  * 
  */
 /**
@@ -608,12 +608,6 @@ Base.prototype.beforeSave = function (value) {
 	}
 	if (this.fields["id"] == undefined && value["id"] == undefined) {
 		this.fields["id"] = value["id"] = "";
-	}
-	if (this.fields["publisherId"] == undefined && value["publisherId"] == undefined) {
-		this.fields["publisherId"] = value["publisherId"] = "";
-	}
-	if (this.fields["streamName"] == undefined && value["streamName"] == undefined) {
-		this.fields["streamName"] = value["streamName"] = "";
 	}
 	if (this.fields["description"] == undefined && value["description"] == undefined) {
 		this.fields["description"] = value["description"] = "";
