@@ -279,7 +279,7 @@
 						}
 					}
 				},
-				"updateRelations": ["from"]
+				"syncRelations": ["from"]
 			},
 			"Assets/plan": {
 				"emoji": "📊",
