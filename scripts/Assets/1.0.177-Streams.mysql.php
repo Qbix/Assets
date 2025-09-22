@@ -28,7 +28,7 @@ function Assets_1_0_177_Streams_mysql()
                 continue;
             }
             // set the peak to current amount, best we can do:
-            $stream->updateRelations(array('firstTimeAddingAttributes' => array(
+            $stream->syncRelations(array('firstTimeAddingAttributes' => array(
                 'peak' => true
             )));
 			++$i;

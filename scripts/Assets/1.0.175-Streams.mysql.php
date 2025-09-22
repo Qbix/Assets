@@ -18,7 +18,7 @@ function Assets_1_0_175()
             if (!$stream) {
                 continue;
             }
-            $stream->updateRelations(array('firstTimeAddingAttributes' => array(
+            $stream->syncRelations(array('firstTimeAddingAttributes' => array(
                 'amount' => true
             )));
             ++$i;
