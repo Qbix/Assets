@@ -8,12 +8,16 @@ function Assets_1_0_175()
     $i = 0;
     while (1) {
         $users = Users_User::select()
+            ->where(array('id' => new Db_Range('A', true, true, 'Z')))
             ->limit(100, $offset)
             ->fetchDbRows();
         if (!$users) {
             break;
         }
         foreach ($users as $user) {
+            if (!Users::isCommunityId($user->id)) {
+                continue;
+            }
             $stream = Streams_Stream::fetch($communityId, $communityId, "Assets/credits/" . $user->id);
             if (!$stream) {
                 continue;
