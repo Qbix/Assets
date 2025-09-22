@@ -1,4 +1,16 @@
 {
+  "Assets/category/credits": {
+    "type": "Streams/category",
+    "title": "Index of Credits",
+    "icon": "{{Assets}}/img/credits.png",
+    "content": "",
+    "attributes": "",
+    "readLevel": 0,
+    "writeLevel": 0,
+    "adminLevel": 0,
+    "permissions": "",
+    "inheritAccess": ""
+  },
   "Assets/plans": {
     "type": "Streams/category",
     "title": "Assets subscription plans",

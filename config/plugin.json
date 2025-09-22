@@ -411,7 +411,7 @@
 			"Assets/NFT/series": true
 		},
 		"onInsert": {
-			"community": [],
+			"community": ["Assets/category/credits"],
 			"person": ["Assets/NFT/series"]
 		}
 	},
