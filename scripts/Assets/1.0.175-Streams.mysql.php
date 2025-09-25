@@ -8,7 +8,7 @@ function Assets_1_0_175()
     $i = 0;
     while (1) {
         $users = Users_User::select()
-            ->where(array('id' => new Db_Range('A', true, true, 'Z')))
+            ->where(array('id' => new Db_Range('A', true, false, '[')))
             ->limit(100, $offset)
             ->fetchDbRows();
         if (!$users) {
