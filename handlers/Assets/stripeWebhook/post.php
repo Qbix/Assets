@@ -5,7 +5,7 @@ require_once ASSETS_PLUGIN_DIR.DS.'vendor'.DS.'autoload.php';
 /**
  * Stripe webhook https://stripe.com/docs/webhooks
  */
-function Assets_stripeWebhook_response_post ($params)
+function Assets_stripeWebhook_post ($params)
 {
     $payload = @file_get_contents('php://input');
 	$event = null;
