@@ -1,11 +1,13 @@
 <?php
+
 require_once ASSETS_PLUGIN_DIR.DS.'vendor'.DS.'autoload.php';
 
 /**
  * Stripe webhook https://stripe.com/docs/webhooks
  */
-function Assets_stripeWebhook_response_content ($params) {
-	$payload = @file_get_contents('php://input');
+function Assets_stripeWebhook_response_post ($params)
+{
+    $payload = @file_get_contents('php://input');
 	$event = null;
 	$endpoint_secret = Q_Config::expect("Assets", "payments", "stripe", "webhookSecret");
 
@@ -16,7 +18,7 @@ function Assets_stripeWebhook_response_content ($params) {
 
 		Assets_Payments_Stripe::log('Stripe.webhook', 'Webhook error while parsing basic request.', $e);
 		http_response_code(400);
-		exit();
+		exit;
 	}
 
 	// Only verify the event if there is an endpoint secret defined
@@ -28,7 +30,7 @@ function Assets_stripeWebhook_response_content ($params) {
 		// Invalid signature
 		Assets_Payments_Stripe::log('Stripe.webhook', 'Webhook error while validating signature.', $e);
 		http_response_code(400);
-		exit();
+		exit;
 	}
 
 	// Handle the event
@@ -86,7 +88,6 @@ function Assets_stripeWebhook_response_content ($params) {
 		default:
 			Assets_Payments_Stripe::log('Stripe.webhook', 'Received unknown event type', $event->type);
 	}
-
-	http_response_code(200); // PHP 5.4 or greater
-	exit;
+    http_response_code(200); // PHP 5.4 or greater
+    exit;
 }
