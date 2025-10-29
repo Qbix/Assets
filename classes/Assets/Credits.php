@@ -361,11 +361,13 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} [$fromUserId=null] null = logged user
 	 * @param {array} [$more] An array supplying more information
 	 * @param {array} [$more.items] an array of items, each with "publisherId", "streamName" and "amount"
-	 * @param {array} [$more.forcePayment=false] If true and not enough credits, try to charge credits
+	 * @param {array} [$more.forcePayment=false] If true and not enough credits, try to charge credits.
+	 *   Also used for forcing payments to happen if amount = 0
 	 * @param {string} [$more.toPublisherId] The publisher of the value-producing stream for which the payment is made
 	 * @param {string} [$more.toStreamName] The name of the stream value-producing for which the payment is made
 	 * @param {string} [$more.fromPublisherId] The publisher of the value-consuming stream on whose behalf the payment is made
 	 * @param {string} [$more.fromStreamName] The name of the value-consuming stream on whose behalf the payment is made
+	 * @return {float} Returns how much was ultimately transferred
 	 */
 	static function transfer($communityId, $amount, $reason, $toUserId, $fromUserId = null, $more = array())
 	{
@@ -378,6 +380,10 @@ class Assets_Credits extends Base_Assets_Credits
 				'field' => 'amount',
 				'type' => 'positive number'
 			));
+		}
+
+		if ($amount == 0 and empty($more['forceTransfer'])) {
+			return 0;
 		}
 
 		if (empty($reason)) {
@@ -461,6 +467,7 @@ class Assets_Credits extends Base_Assets_Credits
 			'content' => Q::interpolate($content, $instructions),
 			'instructions' => Q::json_encode($instructions)
 		));
+		return $amount;
 	}
 	/**
 	 * Fill message instructions with needed info
