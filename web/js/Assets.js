@@ -52,7 +52,7 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 		if (Q.isEmpty(config)) {
 			return console.info("Assets.setCreditsBadge: if you want credits badge, please define object Q.Assets.creditsBadge");
 		}
-		var element = config.$element ? config.$element[0] : (config.element || document.querySelector('.Users_loggedIn #dashboard_user'));
+		var element = config.$element ? config.$element[0] : (config.element || document.querySelector('.Users_loggedIn #dashboard_user .Users_avatar_icon'));
 		var ds = document.getElementById('dashboard_slot');
 		if (Q.isEmpty(config) || !element || !ds) {
 			return;
