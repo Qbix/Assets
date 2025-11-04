@@ -193,7 +193,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 		$method = Q::ifset($uri, 'method', null);
 
 		$stripe = new \Stripe\StripeClient($options['secret']);
-		$account = self::getConnectedAccount($options['user']);
+		$account = self::getConnectedAccount($options);
 		if ($account) {
 			if (self::connectedAccountReady($account)) {
 				return Q::view("Assets/content/connectedAccountCreated.php", compact("method"));
@@ -241,7 +241,9 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	 * @return string
 	 */
 	function getConnectedAccount ($options = array()) {
-		$options = array_merge($this->options, $options);
+		if (is_array($options)) {
+			$options = array_merge($this->options, $options);
+		}
 
 		$connectedAccount = new Assets_Connected();
 		$connectedAccount->userId = $this->options['user']->id;
@@ -276,7 +278,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	function deleteConnectedAccount ($options = array()) {
 		$options = array_merge($this->options, $options);
 
-		$accountId = self::getConnectedAccount($this->options['user']);
+		$accountId = self::getConnectedAccount($this->options);
 		if (!$accountId) {
 			throw new Exception("You have no connected account");
 		}
