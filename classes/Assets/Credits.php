@@ -341,7 +341,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$stream->post($userId, array(
 			'type' => $type,
 			'content' => Q::interpolate($content, @compact('amount')),
-			'instructions' => Q::json_encode($instructions)
+			'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
 		), true);
 
 		// TODO: take commissions out of the grant and give to user who invited this user
@@ -449,7 +449,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$from_stream->post($communityId, array(
 			'type' => $type,
 			'content' => Q::interpolate($content, $instructions),
-			'instructions' => Q::json_encode($instructions)
+			'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
 		));
 		
 		// TODO: add journaling system
@@ -465,7 +465,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$to_stream->post($communityId, array(
 			'type' => $type,
 			'content' => Q::interpolate($content, $instructions),
-			'instructions' => Q::json_encode($instructions)
+			'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
 		));
 		return $amount;
 	}
