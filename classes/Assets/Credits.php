@@ -681,7 +681,7 @@ class Assets_Credits extends Base_Assets_Credits
 	}
 
 	/**
-	 * Pay bonus to user if credits amount
+	 * Pay bonus to user if user buys a lot of credits
 	 * @method payBonus
 	 * @static
 	 * @param {string} $communityId The community issuing the credits, pass null for Users::currentCommunity()
