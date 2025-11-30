@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Διάρκεια",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "δημοφιλέςToken",
-                    "donations": "δωρεές",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "αριθμητής",
-                    "denominator": "παρονομαστής"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Διάρκεια σε ημέρες",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "δημοφιλέςToken",
-                    "donations": "δωρεές",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "αριθμητής",
-                    "denominator": "παρονομαστής"
-                }
-            },
-            "placeholders": {
-                "optional": "(προαιρετικός)",
-                "tuple": "πλειάδα[]",
-                "number": "αριθμός",
-                "address": "διεύθυνση",
-                "fraction": "κλάσμα",
-                "integer": "ακέραιος αριθμός",
-                "seconds": "δευτερόλεπτα",
-                "days": "ημέρες",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Δεν υπάρχουν πισίνες"
-            },
-            "btns": {
-                "createPool": "Δημιουργία πισίνας",
-                "createPoolInForm": "Δημιουργώ"
-            },
-            "createPool": "Δημιουργία πισίνας",
-            "produce": "Παράγω",
-            "loading": "Φόρτωση",
-            "viewInstancesList": "Ανανέωση λίστας"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u03b4\u03b7\u03bc\u03bf\u03c6\u03b9\u03bb\u03ad\u03c2Token",
+					"donations": "\u03b4\u03c9\u03c1\u03b5\u03ad\u03c2",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u03b1\u03c1\u03b9\u03b8\u03bc\u03b7\u03c4\u03ae\u03c2",
+					"denominator": "\u03c0\u03b1\u03c1\u03bf\u03bd\u03bf\u03bc\u03b1\u03c3\u03c4\u03ae\u03c2"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1 \u03c3\u03b5 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u03b4\u03b7\u03bc\u03bf\u03c6\u03b9\u03bb\u03ad\u03c2Token",
+					"donations": "\u03b4\u03c9\u03c1\u03b5\u03ad\u03c2",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u03b1\u03c1\u03b9\u03b8\u03bc\u03b7\u03c4\u03ae\u03c2",
+					"denominator": "\u03c0\u03b1\u03c1\u03bf\u03bd\u03bf\u03bc\u03b1\u03c3\u03c4\u03ae\u03c2"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u03c0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2)",
+				"tuple": "\u03c0\u03bb\u03b5\u03b9\u03ac\u03b4\u03b1[]",
+				"number": "\u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2",
+				"address": "\u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7",
+				"fraction": "\u03ba\u03bb\u03ac\u03c3\u03bc\u03b1",
+				"integer": "\u03b1\u03ba\u03ad\u03c1\u03b1\u03b9\u03bf\u03c2 \u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2",
+				"seconds": "\u03b4\u03b5\u03c5\u03c4\u03b5\u03c1\u03cc\u03bb\u03b5\u03c0\u03c4\u03b1",
+				"days": "\u03b7\u03bc\u03ad\u03c1\u03b5\u03c2",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u0394\u03b5\u03bd \u03c5\u03c0\u03ac\u03c1\u03c7\u03bf\u03c5\u03bd \u03c0\u03b9\u03c3\u03af\u03bd\u03b5\u03c2"
+			},
+			"btns": {
+				"createPool": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c0\u03b9\u03c3\u03af\u03bd\u03b1\u03c2",
+				"createPoolInForm": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ce"
+			},
+			"createPool": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c0\u03b9\u03c3\u03af\u03bd\u03b1\u03c2",
+			"produce": "\u03a0\u03b1\u03c1\u03ac\u03b3\u03c9",
+			"loading": "\u03a6\u03cc\u03c1\u03c4\u03c9\u03c3\u03b7",
+			"viewInstancesList": "\u0391\u03bd\u03b1\u03bd\u03ad\u03c9\u03c3\u03b7 \u03bb\u03af\u03c3\u03c4\u03b1\u03c2"
+		}
+	}
 }

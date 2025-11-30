@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "టోకెన్Erc20",
-                    "duration": "వ్యవధి",
-                    "bonusTokenFraction": "బోనస్ టోకెన్ ఫ్రాక్షన్",
-                    "popularToken": "ప్రముఖ టోకెన్",
-                    "donations": "విరాళాలు",
-                    "rewardsRateFraction": "రివార్డ్స్ రేటు భిన్నం",
-                    "numerator": "న్యూమరేటర్",
-                    "denominator": "హారం"
-                },
-                "small": {
-                    "tokenErc20": "టోకెన్Erc20",
-                    "duration": "రోజులలో వ్యవధి",
-                    "bonusTokenFraction": "బోనస్ టోకెన్ ఫ్రాక్షన్",
-                    "popularToken": "ప్రముఖ టోకెన్",
-                    "donations": "విరాళాలు",
-                    "rewardsRateFraction": "రివార్డ్స్ రేటు భిన్నం",
-                    "numerator": "న్యూమరేటర్",
-                    "denominator": "హారం"
-                }
-            },
-            "placeholders": {
-                "optional": "(ఐచ్ఛికం)",
-                "tuple": "టుపుల్[]",
-                "number": "సంఖ్య",
-                "address": "చిరునామా",
-                "fraction": "భిన్నం",
-                "integer": "పూర్ణ సంఖ్య",
-                "seconds": "సెకన్లు",
-                "days": "రోజులు",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "కొలనులు లేవు"
-            },
-            "btns": {
-                "createPool": "పూల్ సృష్టించండి",
-                "createPoolInForm": "సృష్టించు"
-            },
-            "createPool": "పూల్ సృష్టించండి",
-            "produce": "ఉత్పత్తి",
-            "loading": "లోడ్",
-            "viewInstancesList": "జాబితాను రిఫ్రెష్ చేయండి"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "\u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4dErc20",
+					"duration": "\u0c35\u0c4d\u0c2f\u0c35\u0c27\u0c3f",
+					"bonusTokenFraction": "\u0c2c\u0c4b\u0c28\u0c38\u0c4d \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d \u0c2b\u0c4d\u0c30\u0c3e\u0c15\u0c4d\u0c37\u0c28\u0c4d",
+					"popularToken": "\u0c2a\u0c4d\u0c30\u0c2e\u0c41\u0c16 \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d",
+					"donations": "\u0c35\u0c3f\u0c30\u0c3e\u0c33\u0c3e\u0c32\u0c41",
+					"rewardsRateFraction": "\u0c30\u0c3f\u0c35\u0c3e\u0c30\u0c4d\u0c21\u0c4d\u0c38\u0c4d \u0c30\u0c47\u0c1f\u0c41 \u0c2d\u0c3f\u0c28\u0c4d\u0c28\u0c02",
+					"numerator": "\u0c28\u0c4d\u0c2f\u0c42\u0c2e\u0c30\u0c47\u0c1f\u0c30\u0c4d",
+					"denominator": "\u0c39\u0c3e\u0c30\u0c02"
+				},
+				"small": {
+					"tokenErc20": "\u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4dErc20",
+					"duration": "\u0c30\u0c4b\u0c1c\u0c41\u0c32\u0c32\u0c4b \u0c35\u0c4d\u0c2f\u0c35\u0c27\u0c3f",
+					"bonusTokenFraction": "\u0c2c\u0c4b\u0c28\u0c38\u0c4d \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d \u0c2b\u0c4d\u0c30\u0c3e\u0c15\u0c4d\u0c37\u0c28\u0c4d",
+					"popularToken": "\u0c2a\u0c4d\u0c30\u0c2e\u0c41\u0c16 \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d",
+					"donations": "\u0c35\u0c3f\u0c30\u0c3e\u0c33\u0c3e\u0c32\u0c41",
+					"rewardsRateFraction": "\u0c30\u0c3f\u0c35\u0c3e\u0c30\u0c4d\u0c21\u0c4d\u0c38\u0c4d \u0c30\u0c47\u0c1f\u0c41 \u0c2d\u0c3f\u0c28\u0c4d\u0c28\u0c02",
+					"numerator": "\u0c28\u0c4d\u0c2f\u0c42\u0c2e\u0c30\u0c47\u0c1f\u0c30\u0c4d",
+					"denominator": "\u0c39\u0c3e\u0c30\u0c02"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u0c10\u0c1a\u0c4d\u0c1b\u0c3f\u0c15\u0c02)",
+				"tuple": "\u0c1f\u0c41\u0c2a\u0c41\u0c32\u0c4d[]",
+				"number": "\u0c38\u0c02\u0c16\u0c4d\u0c2f",
+				"address": "\u0c1a\u0c3f\u0c30\u0c41\u0c28\u0c3e\u0c2e\u0c3e",
+				"fraction": "\u0c2d\u0c3f\u0c28\u0c4d\u0c28\u0c02",
+				"integer": "\u0c2a\u0c42\u0c30\u0c4d\u0c23 \u0c38\u0c02\u0c16\u0c4d\u0c2f",
+				"seconds": "\u0c38\u0c46\u0c15\u0c28\u0c4d\u0c32\u0c41",
+				"days": "\u0c30\u0c4b\u0c1c\u0c41\u0c32\u0c41",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u0c15\u0c4a\u0c32\u0c28\u0c41\u0c32\u0c41 \u0c32\u0c47\u0c35\u0c41"
+			},
+			"btns": {
+				"createPool": "\u0c2a\u0c42\u0c32\u0c4d \u0c38\u0c43\u0c37\u0c4d\u0c1f\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f",
+				"createPoolInForm": "\u0c38\u0c43\u0c37\u0c4d\u0c1f\u0c3f\u0c02\u0c1a\u0c41"
+			},
+			"createPool": "\u0c2a\u0c42\u0c32\u0c4d \u0c38\u0c43\u0c37\u0c4d\u0c1f\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f",
+			"produce": "\u0c09\u0c24\u0c4d\u0c2a\u0c24\u0c4d\u0c24\u0c3f",
+			"loading": "\u0c32\u0c4b\u0c21\u0c4d",
+			"viewInstancesList": "\u0c1c\u0c3e\u0c2c\u0c3f\u0c24\u0c3e\u0c28\u0c41 \u0c30\u0c3f\u0c2b\u0c4d\u0c30\u0c46\u0c37\u0c4d \u0c1a\u0c47\u0c2f\u0c02\u0c21\u0c3f"
+		}
+	}
 }

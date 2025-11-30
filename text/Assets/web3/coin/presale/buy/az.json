@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Nə qədər investisiya etmək lazımdır?"
-                    },
-                    "placeholders": {
-                        "amount": "Məbləğ {{nativeCoin}}",
-                        "max": "Maksimum: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "al",
-                    "execute": "İcra etmək"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "N\u0259 q\u0259d\u0259r investisiya etm\u0259k laz\u0131md\u0131r?"
+					},
+					"placeholders": {
+						"amount": "M\u0259bl\u0259\u011f {{nativeCoin}}",
+						"max": "Maksimum: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "al",
+					"execute": "\u0130cra etm\u0259k"
+				}
+			}
+		}
+	}
 }

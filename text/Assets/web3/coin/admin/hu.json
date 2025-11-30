@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Időtartam",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "népszerűToken",
-                    "donations": "adományokat",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "számláló",
-                    "denominator": "névadó"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Időtartam napokban",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "népszerűToken",
-                    "donations": "adományokat",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "számláló",
-                    "denominator": "névadó"
-                }
-            },
-            "placeholders": {
-                "optional": "(választható)",
-                "tuple": "tuple[]",
-                "number": "szám",
-                "address": "cím",
-                "fraction": "töredék",
-                "integer": "egész szám",
-                "seconds": "másodpercig",
-                "days": "napok",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Nincsenek medencék"
-            },
-            "btns": {
-                "createPool": "Pool létrehozása",
-                "createPoolInForm": "Teremt"
-            },
-            "createPool": "Pool létrehozása",
-            "produce": "előállítani",
-            "loading": "Betöltés",
-            "viewInstancesList": "Lista frissítése"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Id\u0151tartam",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "n\u00e9pszer\u0171Token",
+					"donations": "adom\u00e1nyokat",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "sz\u00e1ml\u00e1l\u00f3",
+					"denominator": "n\u00e9vad\u00f3"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Id\u0151tartam napokban",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "n\u00e9pszer\u0171Token",
+					"donations": "adom\u00e1nyokat",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "sz\u00e1ml\u00e1l\u00f3",
+					"denominator": "n\u00e9vad\u00f3"
+				}
+			},
+			"placeholders": {
+				"optional": "(v\u00e1laszthat\u00f3)",
+				"tuple": "tuple[]",
+				"number": "sz\u00e1m",
+				"address": "c\u00edm",
+				"fraction": "t\u00f6red\u00e9k",
+				"integer": "eg\u00e9sz sz\u00e1m",
+				"seconds": "m\u00e1sodpercig",
+				"days": "napok",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Nincsenek medenc\u00e9k"
+			},
+			"btns": {
+				"createPool": "Pool l\u00e9trehoz\u00e1sa",
+				"createPoolInForm": "Teremt"
+			},
+			"createPool": "Pool l\u00e9trehoz\u00e1sa",
+			"produce": "el\u0151\u00e1ll\u00edtani",
+			"loading": "Bet\u00f6lt\u00e9s",
+			"viewInstancesList": "Lista friss\u00edt\u00e9se"
+		}
+	}
 }

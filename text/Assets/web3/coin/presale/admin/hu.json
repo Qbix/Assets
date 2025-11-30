@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Token eladása",
-                        "timestamps": "Times",
-                        "prices": "Árak",
-                        "endTime": "Idő vége",
-                        "thresholds": "Küszöbértékek",
-                        "bonuses": "Bónuszok"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "A tulajdonos nem tud visszavonni",
-                            "option1": "A tulajdonos csak az endTime lejárta után vonhatja ki a tokeneket",
-                            "option2": "A tulajdonos bármikor visszavonhatja a tokeneket"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Közösségi cím",
-                    "methodkeccack": "Keccak256 hash függvény",
-                    "roleId": "Szerep azonosító",
-                    "sellingToken": "Eladó Token cím",
-                    "prices": "ETH, ár",
-                    "thresholds": "tokenek száma",
-                    "bonuses": "bónusz %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Nincsenek alapok"
-                },
-                "btns": {
-                    "createFund": "Alap létrehozása",
-                    "createFundInForm": "Teremt"
-                },
-                "fundAddress": "Pénztár címe",
-                "createFund": "Alap létrehozása",
-                "fundInfo": "Info",
-                "produce": "előállítani",
-                "loading": "Betöltés",
-                "viewInstancesList": "Lista frissítése"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Token elad\u00e1sa",
+						"timestamps": "Times",
+						"prices": "\u00c1rak",
+						"endTime": "Id\u0151 v\u00e9ge",
+						"thresholds": "K\u00fcsz\u00f6b\u00e9rt\u00e9kek",
+						"bonuses": "B\u00f3nuszok"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "A tulajdonos nem tud visszavonni",
+							"option1": "A tulajdonos csak az endTime lej\u00e1rta ut\u00e1n vonhatja ki a tokeneket",
+							"option2": "A tulajdonos b\u00e1rmikor visszavonhatja a tokeneket"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "K\u00f6z\u00f6ss\u00e9gi c\u00edm",
+					"methodkeccack": "Keccak256 hash f\u00fcggv\u00e9ny",
+					"roleId": "Szerep azonos\u00edt\u00f3",
+					"sellingToken": "Elad\u00f3 Token c\u00edm",
+					"prices": "ETH, \u00e1r",
+					"thresholds": "tokenek sz\u00e1ma",
+					"bonuses": "b\u00f3nusz %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Nincsenek alapok"
+				},
+				"btns": {
+					"createFund": "Alap l\u00e9trehoz\u00e1sa",
+					"createFundInForm": "Teremt"
+				},
+				"fundAddress": "P\u00e9nzt\u00e1r c\u00edme",
+				"createFund": "Alap l\u00e9trehoz\u00e1sa",
+				"fundInfo": "Info",
+				"produce": "el\u0151\u00e1ll\u00edtani",
+				"loading": "Bet\u00f6lt\u00e9s",
+				"viewInstancesList": "Lista friss\u00edt\u00e9se"
+			}
+		}
+	}
 }

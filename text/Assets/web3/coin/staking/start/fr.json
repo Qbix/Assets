@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "jeton de réserve",
-                        "duration": "Durée",
-                        "amount": "Montant"
-                    },
-                    "small": {
-                        "reserveToken": "jeton de réserve",
-                        "duration": "Durée",
-                        "amount": "Montant"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Durée",
-                    "amount": "montant"
-                },
-                "btns": {
-                    "stake": "Miser"
-                },
-                "stake": "Miser",
-                "loading": "Chargement"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "jeton de r\u00e9serve",
+						"duration": "Dur\u00e9e",
+						"amount": "Montant"
+					},
+					"small": {
+						"reserveToken": "jeton de r\u00e9serve",
+						"duration": "Dur\u00e9e",
+						"amount": "Montant"
+					}
+				},
+				"placeholders": {
+					"duration": "Dur\u00e9e",
+					"amount": "montant"
+				},
+				"btns": {
+					"stake": "Miser"
+				},
+				"stake": "Miser",
+				"loading": "Chargement"
+			}
+		}
+	}
 }

@@ -1,27 +1,27 @@
 {
-    "title": "לְשַׁלֵם",
-    "steps": {
-        "sending_native_coins": "שליחת מטבעות מקומיים",
-        "sending_tokens": "שולח אסימונים",
-        "swap": "לְהַחלִיף",
-        "approve": "לְאַשֵׁר",
-        "one_tx": "עליך לשלוח עסקה אחת",
-        "two_tx": "עליך לשלוח שתי עסקאות"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "כספים לתשלום"
-            }
-        },
-        "btns": {
-            "pay": "לְשַׁלֵם"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "צריך לשלם אסימונים של &quot; {{amountOut}} &quot;."
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "שרשרת כזו עם המזהה &quot; {{chainId}} &quot; אינה נתמכת"
-    }
+	"title": "\u05dc\u05b0\u05e9\u05c1\u05b7\u05dc\u05b5\u05dd",
+	"steps": {
+		"sending_native_coins": "\u05e9\u05dc\u05d9\u05d7\u05ea \u05de\u05d8\u05d1\u05e2\u05d5\u05ea \u05de\u05e7\u05d5\u05de\u05d9\u05d9\u05dd",
+		"sending_tokens": "\u05e9\u05d5\u05dc\u05d7 \u05d0\u05e1\u05d9\u05de\u05d5\u05e0\u05d9\u05dd",
+		"swap": "\u05dc\u05b0\u05d4\u05b7\u05d7\u05dc\u05b4\u05d9\u05e3",
+		"approve": "\u05dc\u05b0\u05d0\u05b7\u05e9\u05c1\u05b5\u05e8",
+		"one_tx": "\u05e2\u05dc\u05d9\u05da \u05dc\u05e9\u05dc\u05d5\u05d7 \u05e2\u05e1\u05e7\u05d4 \u05d0\u05d7\u05ea",
+		"two_tx": "\u05e2\u05dc\u05d9\u05da \u05dc\u05e9\u05dc\u05d5\u05d7 \u05e9\u05ea\u05d9 \u05e2\u05e1\u05e7\u05d0\u05d5\u05ea"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u05db\u05e1\u05e4\u05d9\u05dd \u05dc\u05ea\u05e9\u05dc\u05d5\u05dd"
+			}
+		},
+		"btns": {
+			"pay": "\u05dc\u05b0\u05e9\u05c1\u05b7\u05dc\u05b5\u05dd"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "\u05e6\u05e8\u05d9\u05da \u05dc\u05e9\u05dc\u05dd \u05d0\u05e1\u05d9\u05de\u05d5\u05e0\u05d9\u05dd \u05e9\u05dc &quot; {{amountOut}} &quot;."
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "\u05e9\u05e8\u05e9\u05e8\u05ea \u05db\u05d6\u05d5 \u05e2\u05dd \u05d4\u05de\u05d6\u05d4\u05d4 &quot; {{chainId}} &quot; \u05d0\u05d9\u05e0\u05d4 \u05e0\u05ea\u05de\u05db\u05ea"
+	}
 }

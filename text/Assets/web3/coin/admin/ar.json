@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "مدة",
-                    "bonusTokenFraction": "BonusTokenFraction",
-                    "popularToken": "PopularToken",
-                    "donations": "التبرعات",
-                    "rewardsRateFraction": "RewardsRateFraction",
-                    "numerator": "البسط",
-                    "denominator": "المقام - صفة مشتركة - حالة"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "المدة بالأيام",
-                    "bonusTokenFraction": "BonusTokenFraction",
-                    "popularToken": "PopularToken",
-                    "donations": "التبرعات",
-                    "rewardsRateFraction": "RewardsRateFraction",
-                    "numerator": "البسط",
-                    "denominator": "المقام - صفة مشتركة - حالة"
-                }
-            },
-            "placeholders": {
-                "optional": "(خياري)",
-                "tuple": "مترابطة بيانية[]",
-                "number": "رقم",
-                "address": "عنوان",
-                "fraction": "جزء",
-                "integer": "عدد صحيح",
-                "seconds": "ثواني",
-                "days": "أيام",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "لا توجد حمامات سباحة"
-            },
-            "btns": {
-                "createPool": "إنشاء تجمع",
-                "createPoolInForm": "يخلق"
-            },
-            "createPool": "إنشاء تجمع",
-            "produce": "ينتج",
-            "loading": "تحميل",
-            "viewInstancesList": "تحديث القائمة"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u0645\u062f\u0629",
+					"bonusTokenFraction": "BonusTokenFraction",
+					"popularToken": "PopularToken",
+					"donations": "\u0627\u0644\u062a\u0628\u0631\u0639\u0627\u062a",
+					"rewardsRateFraction": "RewardsRateFraction",
+					"numerator": "\u0627\u0644\u0628\u0633\u0637",
+					"denominator": "\u0627\u0644\u0645\u0642\u0627\u0645 - \u0635\u0641\u0629 \u0645\u0634\u062a\u0631\u0643\u0629 - \u062d\u0627\u0644\u0629"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u0627\u0644\u0645\u062f\u0629 \u0628\u0627\u0644\u0623\u064a\u0627\u0645",
+					"bonusTokenFraction": "BonusTokenFraction",
+					"popularToken": "PopularToken",
+					"donations": "\u0627\u0644\u062a\u0628\u0631\u0639\u0627\u062a",
+					"rewardsRateFraction": "RewardsRateFraction",
+					"numerator": "\u0627\u0644\u0628\u0633\u0637",
+					"denominator": "\u0627\u0644\u0645\u0642\u0627\u0645 - \u0635\u0641\u0629 \u0645\u0634\u062a\u0631\u0643\u0629 - \u062d\u0627\u0644\u0629"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u062e\u064a\u0627\u0631\u064a)",
+				"tuple": "\u0645\u062a\u0631\u0627\u0628\u0637\u0629 \u0628\u064a\u0627\u0646\u064a\u0629[]",
+				"number": "\u0631\u0642\u0645",
+				"address": "\u0639\u0646\u0648\u0627\u0646",
+				"fraction": "\u062c\u0632\u0621",
+				"integer": "\u0639\u062f\u062f \u0635\u062d\u064a\u062d",
+				"seconds": "\u062b\u0648\u0627\u0646\u064a",
+				"days": "\u0623\u064a\u0627\u0645",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u0644\u0627 \u062a\u0648\u062c\u062f \u062d\u0645\u0627\u0645\u0627\u062a \u0633\u0628\u0627\u062d\u0629"
+			},
+			"btns": {
+				"createPool": "\u0625\u0646\u0634\u0627\u0621 \u062a\u062c\u0645\u0639",
+				"createPoolInForm": "\u064a\u062e\u0644\u0642"
+			},
+			"createPool": "\u0625\u0646\u0634\u0627\u0621 \u062a\u062c\u0645\u0639",
+			"produce": "\u064a\u0646\u062a\u062c",
+			"loading": "\u062a\u062d\u0645\u064a\u0644",
+			"viewInstancesList": "\u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0642\u0627\u0626\u0645\u0629"
+		}
+	}
 }

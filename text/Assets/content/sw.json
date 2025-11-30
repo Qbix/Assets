@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Hitilafu",
-        "WalletAbsent": "Mkoba haujaunganishwa.",
-        "Rendering": "Kulikuwa na makosa wakati wa kutoa <span class='url'>{{1}}<\/span>",
-        "PriceRequired": "Bei inahitajika!",
-        "NameRequired": "Jina linahitajika!",
-        "PriceInvalid": "Bei si sahihi!",
-        "AmountInvalid": "Kiasi ni batili!",
-        "TransactionFailed": "Muamala Umeshindwa",
-        "ChainNotSupported": "Msururu uliochaguliwa hautumiki. Mnyororo unaoungwa mkono: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Inahitaji MetaMask iliyounganishwa kufanya kazi na programu",
-        "UserNotLoggedInMetaMask": "Mtumiaji hajaingia kwenye MetaMask",
-        "CurrencyNotFound": "Sarafu haijapatikana",
-        "WrongChain": "NFT hii iliundwa chini ya &quot; {{chain}} &quot;. Tafadhali tumia mnyororo huu.",
-        "NoRecipientSelected": "Hakuna mpokeaji aliyechaguliwa",
-        "NotEnoughPermissionsWallet": "Hakuna ruhusa za kutosha kusoma pochi ya mtumiaji huyu",
-        "ThisUserHaveNoWallet": "Mtumiaji huyu hajakabidhiwa pochi",
-        "TheWalletOfThisUserInvalid": "Pochi ya mtumiaji huyu ni batili",
-        "WalletInvalid": "Anwani ya Wallet si sahihi",
-        "CantManageFrozenSeries": "Huwezi kudhibiti mfululizo uliogandishwa",
-        "SubscriptionStreamNotPaid": "Hujalipa ili kutazama maudhui haya. Tafadhali bofya {{subscriptionUrl}} na ujiandikishe kwa mpango unaofaa."
-    },
-    "admin": {
-        "Title": "Utawala wa mali",
-        "SubscriptionTitle": "Mipango ya usajili"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Gusa ili kulipa"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : malipo yamechakatwa kwa {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Asante kwa malipo yako kwa {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} walijiandikisha kwa {{plan.title}}",
-        "YouSubscribedTo": "Umejisajili kwa {{plan.title}}",
-        "Assets\/credits\/alert": "Una arifa inayohusiana na akaunti yako"
-    },
-    "charge": {
-        "Subject": "Unapata malipo ya {{displayAmount}} kutoka {{call 'publisher.displayName'}} kwa &quot; {{description}} &quot;",
-        "HasBeenCharged": "Halo, hii ni kukujulisha tu {{1}} imetozwa {{2}} kwa {{3}} na {{4}}"
-    },
-    "charged": {
-        "Subject": "Asante kwa malipo yako ya &quot; {{description}} &quot;",
-        "HavePaid": "Hey {{1}} , huu ni uthibitisho wa haraka kwamba umefanikiwa kulipa {{2}} hadi {{3}} kwa {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Habari juu ya agizo",
-        "PaymentMethod": "Njia ya malipo",
-        "ContactInfo": "Maelezo ya mawasiliano",
-        "Pay": "Lipa",
-        "PaymentSucceeded": "Malipo yamefaulu",
-        "PaymentProcessing.": "Malipo yako yanachakatwa",
-        "FailTryAgain": "Malipo yako hayakufanikiwa, tafadhali jaribu tena",
-        "SomethingWrong": "Hitilafu fulani imetokea",
-        "PaymentStatus": "Hali ya malipo",
-        "PayTo": "Lipa {{displayName}}",
-        "ChooseCurrency": "Chagua sarafu",
-        "YouCanSendUpTo": "Unaweza kutuma hadi {{amount}} {{symbol}}",
-        "Send": "Tuma",
-        "EnterAmount": "ingiza kiasi"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Mwaliko umekubaliwa na {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} walijaza {{FilledStreamTitle}}",
-        "ForFillingStream": "Kwa kujaza {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "Una mikopo {{amount}} ya kuanza",
-        "PaymentFor": "Malipo ya &quot; {{1}} &quot;",
-        "PaymentTo": "Malipo kwa {{1}}",
-        "PaymentToUser": "Malipo kwa {{toUserName}}",
-        "CreatePrivateChat": "kwa mazungumzo ya faragha na {{toUserName}}",
-        "CreatePaidStream": "kwa kuunda {{toStreamName}}",
-        "JoinedPaidStream": "kwa kuhifadhi katika &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "kwa kuunda jumuiya &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "kama urejeshaji wa pesa uliyohifadhi katika &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "Alinunua mikopo {{amount}}",
-        "BonusCredits": "Bonus {{amount}} mikopo",
-        "BuyAmountCredits": "Nunua mikopo {{amount}}",
-        "WatchClip": "Imepata mikopo {{amount}} kwa kutazama {{fromStreamTitle}}",
-        "MissingCredits": "Mikopo inayokosekana",
-        "YouMissingCredits": "Unahitaji salio la ziada {{amount}} ili kuendelea.",
-        "BuyCredits": "Nunua mikopo",
-        "BuyBonus": "Kununua mikopo {{amount}} mara moja, kutapelekea bonasi ya mikopo {{bonus}} .",
-        "Buy": "Nunua",
-        "PurchaseCredits": "Kununua Mikopo",
-        "Credits": "Mikopo",
-        "ErrorInvalidAmount": "Kiasi ni batili",
-        "ErrorInvalidCurrency": "Kwa bahati mbaya bado hatutumii sarafu {{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} mikopo",
-            "BonusCredits": "{{amount}} mikopo"
-        }
-    },
-    "history": {
-        "Date": "Tarehe",
-        "Amount": "Kiasi",
-        "Description": "Maelezo",
-        "Client": "Mteja",
-        "User": "Mtumiaji",
-        "To": "kwa",
-        "From": "kutoka",
-        "SeeHistory": "Tazama historia ya malipo ya {{1}}",
-        "HistoryEmpty": "Bado huna data",
-        "PaymentFor": "Imetuma mikopo {{amount}}",
-        "PaymentTo": "Imetuma mikopo {{amount}}",
-        "PaymentToUser": "Imetuma mikopo {{amount}}",
-        "CreatePaidStream": "Alitumia mikopo {{amount}}",
-        "WatchClip": {
-            "+": "Alipata mikopo {{amount}}",
-            "-": "Alitumia mikopo {{amount}}"
-        },
-        "JoinedPaidStream": {
-            "+": "Alipata mikopo {{amount}}",
-            "-": "Alitumia mikopo {{amount}}"
-        },
-        "LeftPaidStream": {
-            "+": "Imepokea mikopo {{amount}}",
-            "-": "Imetuma mikopo {{amount}}"
-        },
-        "CreatedCommunity": "Alitumia mikopo {{amount}}",
-        "BoughtCredits": "Alinunua mikopo {{amount}}",
-        "BonusCredits": "Nimepata mikopo {{amount}} ya bonasi",
-        "InviteAcceptedBy": "Alipata mikopo {{amount}}",
-        "Streams_user_firstname": "Alipata mikopo {{amount}}",
-        "Streams_user_lastname": "Alipata mikopo {{amount}}",
-        "Streams_user_icon": "Alipata mikopo {{amount}}",
-        "Places_user_location": "Alipata mikopo {{amount}}",
-        "Streams_greeting": "Alipata mikopo {{amount}}",
-        "YouHaveCreditsToStart": "Alipata mikopo {{amount}}",
-        "InvitedUserFilledStream": "Alipata mikopo {{amount}}",
-        "ForFillingStream": "Alipata mikopo {{amount}}",
-        "CreatePrivateChat": "Alitumia mikopo {{amount}}"
-    },
-    "subscriptions": {
-        "infoTitle": "Weka Taarifa ya Malipo",
-        "confirm": {
-            "title": "Anza Usajili",
-            "message": "Anzisha usajili unaorudiwa kwa &quot; {{title}} &quot;?",
-            "ok": "sawa",
-            "cancel": "Ghairi"
-        },
-        "CreditOrDebitCard": "Kadi ya mkopo au ya benki",
-        "SubscribePayment": "Jisajili Malipo",
-        "ImmediatePayment": "Malipo ya Hapo Hapo",
-        "ProcessingPayment": "Inachakata Malipo",
-        "SubscriptionAlreadyPaid": "Usajili huu tayari umelipiwa",
-        "SubscriptionNotActive": "Usajili huu hautumiki",
-        "Subscribed": "Umejisajili",
-        "Unsubscribed": "Umejiondoa",
-        "Unsubscribe": "Jiondoe",
-        "Subscribe": "Jisajili",
-        "Started": "Imeanza",
-        "EndsIn": "Inaisha kwa",
-        "NextPay": "Malipo yanayofuata",
-        "Period": "Kipindi",
-        "Price": "Bei",
-        "AreYouSureUnsubscribe": "Je, una uhakika unataka kujiondoa kwenye mpango huu?",
-        "YouUnsubscribedFromPlan": "Umejiondoa kwenye mpango &quot; {{planTitle}} &quot;. Hutatozwa, lakini usajili wako utaendelea hadi {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "kichwa cha mpango",
-            "PricePlaceholder": "bei",
-            "DescriptionPlaceholder": "maelezo ya mpango wa usajili",
-            "SavePlan": "Hifadhi Mpango",
-            "NewPlan": "Mpango Mpya",
-            "SubscriptionTitle": "Mipango ya usajili",
-            "AreYouSureDeletePlan": "Je, una uhakika unataka kufuta mpango huu?",
-            "Duration": "Muda",
-            "Discount": "Punguzo",
-            "Interrupt": "Katiza",
-            "Continue": "Endelea",
-            "SelectDisplayType": "Chagua {{displayType}}",
-            "EndDate": "tarehe ya mwisho",
-            "Available": "Inapatikana",
-            "Hidden": "Imefichwa",
-            "InviteOnly": "Mwaliko pekee",
-            "CantSubscribeUnlessInvited": "Huwezi kujiandikisha kwa mpango huu isipokuwa kama umealikwa"
-        }
-    },
-    "payments": {
-        "infoTitle": "Weka Taarifa ya Malipo",
-        "BuyAmountCredits": "Nunua mikopo {{amount}}",
-        "confirm": {
-            "title": "Fanya malipo",
-            "message": "Je, unakubali kulipa {{symbol}} {{amount}} ?",
-            "ok": "sawa",
-            "cancel": "Ghairi"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Mikopo",
-            "description": "hufuatilia mikopo na malipo"
-        },
-        "Assets\/plan": {
-            "displayType": "Mpango wa Usajili",
-            "description": "mpango wa usajili"
-        },
-        "Assets\/subscription": {
-            "displayType": "Usajili",
-            "description": "usajili"
-        },
-        "Assets\/product": {
-            "displayType": "Bidhaa",
-            "description": "bidhaa inayouzwa"
-        },
-        "Assets\/service": {
-            "displayType": "Huduma",
-            "description": "huduma inayotolewa"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "Alipata mikopo {{amount}}"
-        },
-        "Assets\/credits\/bought": {
-            "content": "Alinunua mikopo {{amount}}"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bonus {{amount}} mikopo"
-        },
-        "Assets\/credits\/spent": {
-            "content": "Alitumia mikopo {{amount}}"
-        },
-        "Assets\/credits\/sent": {
-            "content": "Imetuma salio {{amount}} kwa {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Imepokea mikopo {{amount}} kutoka {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Una mikopo kidogo kwenye akaunti yako. Tafadhali tembelea <a href='<i translate='no'>999 &#39;&gt;kiungo hiki<\/a> ili kununua mikopo zaidi."
-        }
-    },
-    "billing": {
-        "Title": "Malipo ya mali",
-        "CreditsMinimum": "Kima cha chini cha mikopo",
-        "CreditsToAdd": "Mikopo ya kuongeza",
-        "Save": "Hifadhi",
-        "ThisLink": "kiungo hiki",
-        "errors": {
-            "CreditsMinimumNegative": "Kima cha chini cha mikopo hakiwezi kuwa hasi",
-            "CreditsToAddNegative": "Salio la kuongeza haliwezi kuwa hasi"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Huduma Mpya",
-            "TitlePlaceholder": "Jina la huduma",
-            "PricePlaceholder": "Weka bei",
-            "LinkPlaceholder": "weka kiungo cha maelezo ya ziada",
-            "DescriptionPlaceholder": "Maelezo ya huduma",
-            "SaveService": "Hifadhi Huduma",
-            "SelectRequiredParticipants": "Washiriki wanaohusika wanaohitajika",
-            "RequiredParticipantsDesc": "Tafadhali chagua washiriki wanaohusiana wanaohitajika kutumia huduma hii (kwa mfano wanyama vipenzi kwa &quot;Onyesho la Mbwa&quot;, au watoto kwa &quot;likizo ya Watoto&quot; nk). Ikiwa huduma italipwa, mtumiaji atahitaji pia kulipa kwa kila washiriki husika."
-        },
-        "EditServiceTemplate": {
-            "Title": "Hariri Huduma"
-        },
-        "ManageServiceTemplates": "Dhibiti Violezo vya Huduma",
-        "ManageServices": "Dhibiti Huduma",
-        "Free": "Bure",
-        "OptionalContribution": "Mchango wa hiari",
-        "RequiredPayment": "Malipo yanayohitajika",
-        "AreYouSureDelete": "Je, una uhakika unataka kufuta huduma hii?",
-        "AmountServicesRelated": "Kuna uwezekano {{amount}} unaohusiana na huduma hii. Wao pia wataondolewa."
-    },
-    "transfer": {
-        "SelectRecipient": "Chagua mpokeaji",
-        "TransactionSuccess": "Mafanikio ya Muamala",
-        "OrTypeWalletAddress": "AU andika anwani ya pochi ya mpokeaji",
-        "AppCredits": "Mikopo ya Programu"
-    },
-    "NFT": {
-        "Title": "Kichwa",
-        "Name": "Jina",
-        "EnterName": "Ingiza jina",
-        "EnterAuthorWallet": "Ingiza mkoba wa mwandishi",
-        "InformationAboutTitle": "Habari zinazohusiana na {{title}} NFT",
-        "Description": "Maelezo",
-        "DetailedInformationAboutNFT": "Maelezo ya kina kuhusu NFT",
-        "PresaleStarts": "Uuzaji wa awali Utaanza Desemba 23",
-        "OwnerUserNotFound": "Mmiliki wa NFT hii hajasajiliwa katika maombi yetu.",
-        "BuyNow": "Nunua Sasa",
-        "Buy": "Nunua",
-        "Add": "Ongeza",
-        "Remove": "Ondoa",
-        "NoNFTyet": "Bado hakuna NFTs",
-        "Conversation": "Mazungumzo",
-        "Create": "Unda",
-        "CurrentBid": "Zabuni ya sasa",
-        "StartingIn": "Kuanzia ndani",
-        "EndingIn": "Kumalizia",
-        "CreateNFT": "Unda NFT",
-        "TitlePlaceholder": "Ipe NFT yako jina",
-        "DescriptionPlaceholder": "Ipe NFT yako maelezo",
-        "CreateYourNFT": "Unda NFT yako",
-        "Royalties": "Mirabaha",
-        "RoyaltyPlaceholder": "Hiari. Kiasi kinacholipwa kwa mtayarishi kabla ya kuhamisha.",
-        "ExpirationDate": "Tarehe ya kumalizika muda wake",
-        "StartingDate": "Tarehe ya Kuanza",
-        "BidsBelowThisAmount": "Zabuni zilizo chini ya kiasi hiki hazitaruhusiwa",
-        "MinimumBid": "Kima cha chini cha zabuni",
-        "Author": "Mwandishi",
-        "Price": "Bei",
-        "Commission": "Tume",
-        "EnterCommission": "Ingiza tume",
-        "Owner": "Mmiliki",
-        "SelectCategory": "Chagua kategoria",
-        "Day": "Siku",
-        "Days": "Siku",
-        "Hour": "Saa",
-        "Hours": "Saa",
-        "Minute": "Dakika",
-        "Minutes": "Dakika",
-        "Second": "Pili",
-        "Seconds": "Sekunde",
-        "SalesCreator": "mauzo yataenda kwa muundaji",
-        "Details": "Maelezo",
-        "Bids": "Zabuni",
-        "History": "Historia",
-        "LoremIpsum": "Lorem Ipsum ni maandishi duni ya tasnia ya uchapishaji na uchapaji.",
-        "PutOnSale": "Weka kwenye mauzo",
-        "PutOffSale": "Ondoka kwenye mauzo",
-        "Transfer": "Uhamisho",
-        "Actions": "Vitendo",
-        "Claim": "Dai",
-        "ClaimNFT": "Dai NFT",
-        "Unlocking": "Kufungua",
-        "Unlock": "Fungua",
-        "Update": "Sasisha",
-        "UpdateToken": "Sasisha Tokeni",
-        "UpdateNFT": "Sasisha NFT",
-        "CreateToken": "Tengeneza Tokeni",
-        "PlaceBid": "Mahali pa Zabuni",
-        "SoldOut": "Inauzwa",
-        "NotOnSale": "Haiuzwi",
-        "NftName": "Jina la NFT",
-        "DescribeYourNFT": "Tafadhali eleza NFT yako",
-        "NFTImage": "Picha ya NFT",
-        "NFTVideo": "Video ya NFT, ikiwa ipo",
-        "UploadMovie": "Pakia filamu",
-        "MovieSource": "Chanzo cha Sinema",
-        "MovieURL": "URL ya filamu",
-        "UploadFile": "Pakia faili",
-        "PutOnMarketplace": "Weka sokoni",
-        "InstantPurchase": "Weka bei ili kuruhusu watumiaji kununua NFT yako papo hapo",
-        "FixedPrice": "Bei isiyobadilika",
-        "TimedAuction": "Mnada uliopitwa na wakati",
-        "OpenForBids": "Fungua kwa zabuni",
-        "PriceOnePiece": "Weka bei ya kipande kimoja",
-        "EnterPrice": "Weka bei",
-        "EnterMinimumBid": "Weka Kima cha chini cha zabuni",
-        "SelectChain": "Chagua mnyororo",
-        "Currency": "Sarafu",
-        "AreYouSureDeleteImage": "Je, una uhakika unataka kuondoa picha?",
-        "AreYouSureDeleteVideo": "Je, una uhakika unataka kuondoa video?",
-        "series": {
-            "Name": "Jina",
-            "Icon": "Aikoni",
-            "Description": "Maelezo",
-            "Author": "Mwandishi",
-            "SelectSeries": "Chagua mfululizo",
-            "Value": "Thamani",
-            "AreYouSure": "Una uhakika?",
-            "AuthorInvalid": "Anwani ya mwandishi si sahihi!",
-            "Address": "Anwani",
-            "CoverImage": "Picha ya jalada",
-            "UploadCoverImage": "Pakia picha ya jalada",
-            "CommissionAddressInvalid": "Anwani ya tume ni batili",
-            "OnSale": "inauzwa",
-            "OffSale": "nje ya mauzo",
-            "CreateSeries": "Tengeneza Msururu",
-            "UpdateSeries": "Sasisha Msururu",
-            "SeriesInfo": "Maelezo ya Mfululizo",
-            "SelectAuthor": "Chagua mwandishi",
-            "NewItem": "Mfululizo mpya wa NFT",
-            "NamePlaceholder": "Weka jina la mfululizo",
-            "DescPlaceholder": "Ingiza maelezo ya mfululizo",
-            "EndingIn": "Kumalizia Katika"
-        },
-        "contract": {
-            "CreateContract": "Tengeneza mkataba",
-            "SelectContract": "Chagua mkataba",
-            "CreateContractFor": "Unda mkataba wa {{userName}}",
-            "ContractFor": "Mkataba wa {{userName}}",
-            "UpdateContract": "Sasisha Mkataba",
-            "TransferOwnership": "Hamisha Umiliki",
-            "SetBaseURI": "Weka URI ya Msingi",
-            "SetSuffix": "Weka Kiambishi tamati",
-            "CurrentOwner": "Mmiliki wa Sasa",
-            "CurrentBaseURL": "BaseURL ya Sasa",
-            "ContractAddressAbsent": "Anwani ya mkataba haipo",
-            "FactoryAddressAbsent": "Anwani ya kiwanda haipo",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Kichwa kinahitajika",
-            "SymbolRequired": "Alama inahitajika",
-            "TypeContractName": "jina la mkataba",
-            "TypeContractSymbol": "ishara ya mkataba (hadi char 10)"
-        },
-        "contests": {
-            "Title": "Mashindano",
-            "NewContest": "Shindano Jipya"
-        },
-        "import": {
-            "importNFT": "Inaleta NFT&#39;s",
-            "importAttributes": "Ingiza sifa za NFT",
-            "fileNotFound": "Samahani, faili ya CSV haikupatikana.",
-            "fileEmpty": "Samahani, faili ya CSV haina chochote.",
-            "userIdNotFound": "mtumiaji yupo lakini kitambulisho tupu",
-            "errorLine": "mstari wa {{1}}",
-            "fieldNotFound": "Sehemu inayohitajika &quot; {{1}} &quot; haipatikani",
-            "displayTypeEmpty": "Aina ya onyesho la &quot; {{1}} &quot; haipatikani",
-            "taskStreamInvalid": "mtiririko wa kazi ni batili",
-            "instructionsEmpty": "maagizo ya mtiririko wa kazi tupu",
-            "complete": "Kamilisha",
-            "activateUsers": "kutuma ujumbe wa kuwezesha watumiaji?",
-            "importProgress": "Maendeleo",
-            "importOptions": "Chaguo",
-            "sampleCSV": "Pakua Sampuli ya CSV",
-            "fileLabel": "Pakia Lahajedwali:",
-            "errorsTitle": "Hitilafu zimetokea"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Chuja kulingana na Mikusanyiko ya NFT",
-                "ShowNFTCollection": "Onyesha mkusanyiko wa NFT katika ...",
-                "AllCollections": "Mikusanyiko Yote"
-            },
-            "ByUser": {
-                "AllAuthors": "Waandishi Wote",
-                "AllUsers": "Kila mtu",
-                "FilterByAuthors": "Chuja kwa Waandishi"
-            }
-        },
-        "Back": "Rudi kwenye Mkusanyiko",
-        "attributes": {
-            "Title": "Dhibiti Sifa",
-            "Attributes": "Sifa",
-            "DisplayTitle": "Aina ya Kuonyesha",
-            "AddDisplayType": "Ongeza aina mpya ya onyesho",
-            "NewDisplay": "Onyesho Jipya",
-            "TraitTitle": "Aina ya Tabia",
-            "AddTraitTitle": "Ongeza aina mpya ya sifa",
-            "NewTrait": "Aina Mpya ya Tabia",
-            "ValueTitle": "Thamani",
-            "AddValueTitle": "Ongeza thamani mpya",
-            "NewValue": "Thamani Mpya",
-            "NewAttribute": "Sifa Mpya",
-            "UpdateAttributes": "Sasisha Sifa",
-            "SaveAttributes": "Hifadhi Sifa"
-        },
-        "profile": {
-            "LogOut": "Toka nje",
-            "Title": "Wasifu wa {{userName}}",
-            "Description": "Maelezo ya mtumiaji",
-            "aboutPlaceholder": "Hariri Wasifu",
-            "SureLogOut": "Je, una uhakika unataka kutoka?",
-            "UploadCoverPhoto": "Pakia Picha ya Jalada"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "kitambulisho cha mfululizo",
-                        "owner": "Mmiliki",
-                        "currency": "Fedha",
-                        "price": "Bei",
-                        "beneficiary": "Anayefaidika",
-                        "autoindex": "Autoindex",
-                        "duration": "Muda",
-                        "rateInterval": "Kiwango cha muda",
-                        "rateAmount": "Kiwango cha kiasi"
-                    },
-                    "small": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "ishara zitatengenezwa katika mfululizo huu",
-                        "owner": "mmiliki wa mfano, vinginevyo atakuwa mtumaji",
-                        "currency": "Fedha kwa ishara zilizonunuliwa, ikiwa sifuri - kwa sarafu za asili",
-                        "price": "Bei",
-                        "beneficiary": "Mnufaika wa kuuza ishara, vinginevyo atakuwa mtumaji",
-                        "autoindex": "Autoindex",
-                        "duration": "Funga baada ya kuchimba. Sifuri inamaanisha kuipata mara moja.",
-                        "rateInterval": "muda wa ndoo kwa ununuzi maalum",
-                        "rateAmount": "kiasi cha ndoo kwa ununuzi maalum"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(si lazima)",
-                    "number": "nambari",
-                    "address": "anwani",
-                    "fraction": "sehemu",
-                    "integer": "nambari kamili",
-                    "seconds": "sekunde",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Kuzalisha",
-                "viewInstancesList": "Onyesha upya Orodha"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "Kitambulisho cha mfululizo",
-                        "account": "Akaunti",
-                        "amount": "Kiasi"
-                    },
-                    "small": {
-                        "seriesId": "ishara mpya itakuwa katika mfululizo na kitambulisho kama hicho",
-                        "account": "mmiliki wa NFT mpya iliyoundwa. ikiwa haijawekwa - itatumia mkoba wa sasa",
-                        "amount": "kiasi cha NFT kwa mint"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(si lazima)",
-                    "seriesId": "kitambulisho",
-                    "account": "akaunti",
-                    "amount": "kiasi",
-                    "integer": "nambari kamili"
-                },
-                "btn": {
-                    "Purchase": "Nunua",
-                    "SpecialPurchase": "Ununuzi maalum"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Anwani"
-                    },
-                    "small": {
-                        "account": "Anwani"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Anwani Batili"
-                },
-                "placeholders": {
-                    "account": "Anwani"
-                },
-                "addToWhitelist": "Ongeza kwenye Orodha iliyoidhinishwa",
-                "removeFromWhitelist": "Ondoa kwenye Orodha iliyoidhinishwa"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "Kitambulisho cha ishara",
-                    "custodian": "Mlinzi",
-                    "recipient": "Mpokeaji"
-                },
-                "small": {
-                    "tokenId": "kitambulisho cha ishara ni nini kinachohitajika kufunga au kufungua",
-                    "custodian": "anwani ambayo inaweza kufungua",
-                    "recipient": "anwani ambayo itapokea ishara"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Kitambulisho cha ishara si sahihi",
-                "invalidCustodian": "Mlinzi batili",
-                "invalidRecipient": "Mpokeaji Batili"
-            },
-            "placeholders": {
-                "optional": "(si lazima)",
-                "tokenId": "kitambulisho",
-                "custodian": "anwani"
-            },
-            "Lock": "Funga",
-            "Unlock": "Fungua",
-            "Locked": "Imefungwa",
-            "CustodianAddress": "Anwani ya mlinzi",
-            "TokenWasClaimed": "Tokeni &quot; {{title}} &quot; ilidaiwa",
-            "TokenWasLocked": "Tokeni &quot; {{title}} &quot; ilikuwa imefungwa",
-            "TokenWasUnlocked": "Tokeni &quot; {{title}} &quot; ilifunguliwa"
-        },
-        "GenerateDescription": "au tengeneza kiotomatiki",
-        "collections": {
-            "Title": "Mikusanyiko",
-            "EnterTitle": "ingiza kichwa",
-            "EnterDescription": "ingiza maelezo",
-            "NewCollection": "Mkusanyiko Mpya",
-            "Name": "Jina",
-            "Icon": "Aikoni",
-            "Description": "Maelezo",
-            "Author": "Mwandishi",
-            "SelectCollection": "Chagua mkusanyiko",
-            "Value": "Thamani",
-            "AreYouSure": "Una uhakika?",
-            "AuthorInvalid": "Anwani ya mwandishi si sahihi!",
-            "Address": "Anwani",
-            "CoverImage": "Picha ya jalada",
-            "UploadIcon": "Pakia ikoni",
-            "CommissionAddressInvalid": "Anwani ya tume ni batili",
-            "OnSale": "inauzwa",
-            "OffSale": "nje ya mauzo",
-            "CreateCollection": "Unda Mkusanyiko",
-            "UpdateCollection": "Sasisha Mkusanyiko",
-            "CollectionInfo": "Maelezo ya Mkusanyiko",
-            "SelectAuthor": "Chagua mwandishi",
-            "NewItem": "Mkusanyiko Mpya wa NFT",
-            "NamePlaceholder": "Weka jina la mkusanyiko",
-            "DescPlaceholder": "Weka maelezo ya mkusanyiko",
-            "EndingIn": "Kumalizia Katika",
-            "SubmitSeries": "Wasilisha Msururu"
-        }
-    },
-    "currencies": {
-        "choose": "Chagua sarafu"
-    },
-    "connectedAccount": {
-        "Title": "Unganisha akaunti",
-        "Success": "Mafanikio",
-        "YourAccountCreated": "Akaunti yako imeundwa!",
-        "YourAccountAlreadyCreated": "Akaunti yako tayari imeundwa na iko tayari kutumika"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Kiasi"
-                    },
-                    "small": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Kiasi"
-                    }
-                },
-                "placeholders": {
-                    "amount": "kiasi"
-                },
-                "btns": {
-                    "stake": "Wadau"
-                },
-                "stake": "Wadau",
-                "loading": "Inapakia"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "isharaErc20",
-                    "duration": "Muda",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "maarufuToken",
-                    "donations": "michango",
-                    "rewardsRateFraction": "tuzoRateFraction",
-                    "numerator": "namba",
-                    "denominator": "dhehebu"
-                },
-                "small": {
-                    "tokenErc20": "isharaErc20",
-                    "duration": "Muda katika siku",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "maarufuToken",
-                    "donations": "michango",
-                    "rewardsRateFraction": "tuzoRateFraction",
-                    "numerator": "namba",
-                    "denominator": "dhehebu"
-                }
-            },
-            "placeholders": {
-                "optional": "(si lazima)",
-                "tuple": "tuple[]",
-                "number": "nambari",
-                "address": "anwani",
-                "fraction": "sehemu",
-                "integer": "nambari kamili",
-                "seconds": "sekunde",
-                "days": "siku",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Hakuna mabwawa"
-            },
-            "btns": {
-                "createPool": "Unda Dimbwi",
-                "createPoolInForm": "Unda"
-            },
-            "createPool": "Unda Dimbwi",
-            "produce": "Kuzalisha",
-            "loading": "Inapakia",
-            "viewInstancesList": "Onyesha upya Orodha"
-        }
-    },
-    "fundrise": {
-        "placeholder": "andika kitu kuhusu mchango huu..."
-    }
+	"errors": {
+		"Error": "Hitilafu",
+		"WalletAbsent": "Mkoba haujaunganishwa.",
+		"Rendering": "Kulikuwa na makosa wakati wa kutoa <span class='url'>{{1}}</span>",
+		"PriceRequired": "Bei inahitajika!",
+		"NameRequired": "Jina linahitajika!",
+		"PriceInvalid": "Bei si sahihi!",
+		"AmountInvalid": "Kiasi ni batili!",
+		"TransactionFailed": "Muamala Umeshindwa",
+		"ChainNotSupported": "Msururu uliochaguliwa hautumiki. Mnyororo unaoungwa mkono: {{supportedChain}}",
+		"NeedMetaMaskConnected": "Inahitaji MetaMask iliyounganishwa kufanya kazi na programu",
+		"UserNotLoggedInMetaMask": "Mtumiaji hajaingia kwenye MetaMask",
+		"CurrencyNotFound": "Sarafu haijapatikana",
+		"WrongChain": "NFT hii iliundwa chini ya &quot; {{chain}} &quot;. Tafadhali tumia mnyororo huu.",
+		"NoRecipientSelected": "Hakuna mpokeaji aliyechaguliwa",
+		"NotEnoughPermissionsWallet": "Hakuna ruhusa za kutosha kusoma pochi ya mtumiaji huyu",
+		"ThisUserHaveNoWallet": "Mtumiaji huyu hajakabidhiwa pochi",
+		"TheWalletOfThisUserInvalid": "Pochi ya mtumiaji huyu ni batili",
+		"WalletInvalid": "Anwani ya Wallet si sahihi",
+		"CantManageFrozenSeries": "Huwezi kudhibiti mfululizo uliogandishwa",
+		"SubscriptionStreamNotPaid": "Hujalipa ili kutazama maudhui haya. Tafadhali bofya {{subscriptionUrl}} na ujiandikishe kwa mpango unaofaa."
+	},
+	"admin": {
+		"Title": "Utawala wa mali",
+		"SubscriptionTitle": "Mipango ya usajili"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Gusa ili kulipa"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : malipo yamechakatwa kwa {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "Asante kwa malipo yako kwa {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} walijiandikisha kwa {{plan.title}}",
+		"YouSubscribedTo": "Umejisajili kwa {{plan.title}}",
+		"Assets/credits/alert": "Una arifa inayohusiana na akaunti yako"
+	},
+	"charge": {
+		"Subject": "Unapata malipo ya {{displayAmount}} kutoka {{call 'publisher.displayName'}} kwa &quot; {{description}} &quot;",
+		"HasBeenCharged": "Halo, hii ni kukujulisha tu {{1}} imetozwa {{2}} kwa {{3}} na {{4}}"
+	},
+	"charged": {
+		"Subject": "Asante kwa malipo yako ya &quot; {{description}} &quot;",
+		"HavePaid": "Hey {{1}} , huu ni uthibitisho wa haraka kwamba umefanikiwa kulipa {{2}} hadi {{3}} kwa {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "Habari juu ya agizo",
+		"PaymentMethod": "Njia ya malipo",
+		"ContactInfo": "Maelezo ya mawasiliano",
+		"Pay": "Lipa",
+		"PaymentSucceeded": "Malipo yamefaulu",
+		"PaymentProcessing.": "Malipo yako yanachakatwa",
+		"FailTryAgain": "Malipo yako hayakufanikiwa, tafadhali jaribu tena",
+		"SomethingWrong": "Hitilafu fulani imetokea",
+		"PaymentStatus": "Hali ya malipo",
+		"PayTo": "Lipa {{displayName}}",
+		"ChooseCurrency": "Chagua sarafu",
+		"YouCanSendUpTo": "Unaweza kutuma hadi {{amount}} {{symbol}}",
+		"Send": "Tuma",
+		"EnterAmount": "ingiza kiasi"
+	},
+	"credits": {
+		"InviteAcceptedBy": "Mwaliko umekubaliwa na {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} walijaza {{FilledStreamTitle}}",
+		"ForFillingStream": "Kwa kujaza {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "Una mikopo {{amount}} ya kuanza",
+		"PaymentFor": "Malipo ya &quot; {{1}} &quot;",
+		"PaymentTo": "Malipo kwa {{1}}",
+		"PaymentToUser": "Malipo kwa {{toUserName}}",
+		"CreatePrivateChat": "kwa mazungumzo ya faragha na {{toUserName}}",
+		"CreatePaidStream": "kwa kuunda {{toStreamName}}",
+		"JoinedPaidStream": "kwa kuhifadhi katika &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "kwa kuunda jumuiya &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "kama urejeshaji wa pesa uliyohifadhi katika &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "Alinunua mikopo {{amount}}",
+		"BonusCredits": "Bonus {{amount}} mikopo",
+		"BuyAmountCredits": "Nunua mikopo {{amount}}",
+		"WatchClip": "Imepata mikopo {{amount}} kwa kutazama {{fromStreamTitle}}",
+		"MissingCredits": "Mikopo inayokosekana",
+		"YouMissingCredits": "Unahitaji salio la ziada la {{amount}} {{currency}} ili kuendelea.",
+		"BuyCredits": "Nunua mikopo",
+		"BuyBonus": "Kununua mikopo {{amount}} mara moja, kutapelekea bonasi ya mikopo {{bonus}} .",
+		"Buy": "Nunua",
+		"PurchaseCredits": "Kununua Mikopo",
+		"Credits": "Mikopo",
+		"ErrorInvalidAmount": "Kiasi ni batili",
+		"ErrorInvalidCurrency": "Kwa bahati mbaya bado hatutumii sarafu {{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} mikopo",
+			"BonusCredits": "{{amount}} mikopo"
+		}
+	},
+	"history": {
+		"Date": "Tarehe",
+		"Amount": "Kiasi",
+		"Description": "Maelezo",
+		"Client": "Mteja",
+		"User": "Mtumiaji",
+		"To": "kwa",
+		"From": "kutoka",
+		"SeeHistory": "Tazama historia ya malipo ya {{1}}",
+		"HistoryEmpty": "Bado huna data",
+		"PaymentFor": "Imetuma mikopo {{amount}}",
+		"PaymentTo": "Imetuma mikopo {{amount}}",
+		"PaymentToUser": "Imetuma mikopo {{amount}}",
+		"CreatePaidStream": "Alitumia mikopo {{amount}}",
+		"WatchClip": {
+			"+": "Alipata mikopo {{amount}}",
+			"-": "Alitumia mikopo {{amount}}"
+		},
+		"JoinedPaidStream": {
+			"+": "Alipata mikopo {{amount}}",
+			"-": "Alitumia mikopo {{amount}}"
+		},
+		"LeftPaidStream": {
+			"+": "Imepokea mikopo {{amount}}",
+			"-": "Imetuma mikopo {{amount}}"
+		},
+		"CreatedCommunity": "Alitumia mikopo {{amount}}",
+		"BoughtCredits": "Alinunua mikopo {{amount}}",
+		"BonusCredits": "Nimepata mikopo {{amount}} ya bonasi",
+		"InviteAcceptedBy": "Alipata mikopo {{amount}}",
+		"Streams_user_firstname": "Alipata mikopo {{amount}}",
+		"Streams_user_lastname": "Alipata mikopo {{amount}}",
+		"Streams_user_icon": "Alipata mikopo {{amount}}",
+		"Places_user_location": "Alipata mikopo {{amount}}",
+		"Streams_greeting": "Alipata mikopo {{amount}}",
+		"YouHaveCreditsToStart": "Alipata mikopo {{amount}}",
+		"InvitedUserFilledStream": "Alipata mikopo {{amount}}",
+		"ForFillingStream": "Alipata mikopo {{amount}}",
+		"CreatePrivateChat": "Alitumia mikopo {{amount}}"
+	},
+	"subscriptions": {
+		"infoTitle": "Weka Taarifa ya Malipo",
+		"confirm": {
+			"title": "Anza Usajili",
+			"message": "Anzisha usajili unaorudiwa kwa &quot; {{title}} &quot;?",
+			"ok": "sawa",
+			"cancel": "Ghairi"
+		},
+		"CreditOrDebitCard": "Kadi ya mkopo au ya benki",
+		"SubscribePayment": "Jisajili Malipo",
+		"ImmediatePayment": "Malipo ya Hapo Hapo",
+		"ProcessingPayment": "Inachakata Malipo",
+		"SubscriptionAlreadyPaid": "Usajili huu tayari umelipiwa",
+		"SubscriptionNotActive": "Usajili huu hautumiki",
+		"Subscribed": "Umejisajili",
+		"Unsubscribed": "Umejiondoa",
+		"Unsubscribe": "Jiondoe",
+		"Subscribe": "Jisajili",
+		"Started": "Imeanza",
+		"EndsIn": "Inaisha kwa",
+		"NextPay": "Malipo yanayofuata",
+		"Period": "Kipindi",
+		"Price": "Bei",
+		"AreYouSureUnsubscribe": "Je, una uhakika unataka kujiondoa kwenye mpango huu?",
+		"YouUnsubscribedFromPlan": "Umejiondoa kwenye mpango &quot; {{planTitle}} &quot;. Hutatozwa, lakini usajili wako utaendelea hadi {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "kichwa cha mpango",
+			"PricePlaceholder": "bei",
+			"DescriptionPlaceholder": "maelezo ya mpango wa usajili",
+			"SavePlan": "Hifadhi Mpango",
+			"NewPlan": "Mpango Mpya",
+			"SubscriptionTitle": "Mipango ya usajili",
+			"AreYouSureDeletePlan": "Je, una uhakika unataka kufuta mpango huu?",
+			"Duration": "Muda",
+			"Discount": "Punguzo",
+			"Interrupt": "Katiza",
+			"Continue": "Endelea",
+			"SelectDisplayType": "Chagua {{displayType}}",
+			"EndDate": "tarehe ya mwisho",
+			"Available": "Inapatikana",
+			"Hidden": "Imefichwa",
+			"InviteOnly": "Mwaliko pekee",
+			"CantSubscribeUnlessInvited": "Huwezi kujiandikisha kwa mpango huu isipokuwa kama umealikwa"
+		}
+	},
+	"payments": {
+		"infoTitle": "Weka Taarifa ya Malipo",
+		"BuyAmountCredits": "Nunua mikopo {{amount}}",
+		"confirm": {
+			"title": "Fanya malipo",
+			"message": "Je, unakubali kulipa {{symbol}} {{amount}} ?",
+			"ok": "sawa",
+			"cancel": "Ghairi"
+		},
+		"reasons": {
+			"BuyCredits": "Nunua Mikopo"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "Mikopo",
+			"description": "hufuatilia mikopo na malipo"
+		},
+		"Assets/plan": {
+			"displayType": "Mpango wa Usajili",
+			"description": "mpango wa usajili"
+		},
+		"Assets/subscription": {
+			"displayType": "Usajili",
+			"description": "usajili"
+		},
+		"Assets/product": {
+			"displayType": "Bidhaa",
+			"description": "bidhaa inayouzwa"
+		},
+		"Assets/service": {
+			"displayType": "Huduma",
+			"description": "huduma inayotolewa"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "Alipata mikopo {{amount}}"
+		},
+		"Assets/credits/bought": {
+			"content": "Alinunua mikopo {{amount}}"
+		},
+		"Assets/credits/bonus": {
+			"content": "Bonus {{amount}} mikopo"
+		},
+		"Assets/credits/spent": {
+			"content": "Alitumia mikopo {{amount}}"
+		},
+		"Assets/credits/sent": {
+			"content": "Imetuma salio {{amount}} kwa {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "Imepokea mikopo {{amount}} kutoka {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "Una mikopo kidogo kwenye akaunti yako. Tafadhali tembelea <a href='<i translate='no'>999 &#39;&gt;kiungo hiki</a> ili kununua mikopo zaidi."
+		}
+	},
+	"billing": {
+		"Title": "Malipo ya mali",
+		"CreditsMinimum": "Kima cha chini cha mikopo",
+		"CreditsToAdd": "Mikopo ya kuongeza",
+		"Save": "Hifadhi",
+		"ThisLink": "kiungo hiki",
+		"errors": {
+			"CreditsMinimumNegative": "Kima cha chini cha mikopo hakiwezi kuwa hasi",
+			"CreditsToAddNegative": "Salio la kuongeza haliwezi kuwa hasi"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "Huduma Mpya",
+			"TitlePlaceholder": "Jina la huduma",
+			"PricePlaceholder": "Weka bei",
+			"LinkPlaceholder": "weka kiungo cha maelezo ya ziada",
+			"DescriptionPlaceholder": "Maelezo ya huduma",
+			"SaveService": "Hifadhi Huduma",
+			"SelectRequiredParticipants": "Washiriki wanaohusika wanaohitajika",
+			"RequiredParticipantsDesc": "Tafadhali chagua washiriki wanaohusiana wanaohitajika kutumia huduma hii (kwa mfano wanyama vipenzi kwa &quot;Onyesho la Mbwa&quot;, au watoto kwa &quot;likizo ya Watoto&quot; nk). Ikiwa huduma italipwa, mtumiaji atahitaji pia kulipa kwa kila washiriki husika."
+		},
+		"EditServiceTemplate": {
+			"Title": "Hariri Huduma"
+		},
+		"ManageServiceTemplates": "Dhibiti Violezo vya Huduma",
+		"ManageServices": "Dhibiti Huduma",
+		"Free": "Bure",
+		"OptionalContribution": "Mchango wa hiari",
+		"RequiredPayment": "Malipo yanayohitajika",
+		"AreYouSureDelete": "Je, una uhakika unataka kufuta huduma hii?",
+		"AmountServicesRelated": "Kuna uwezekano {{amount}} unaohusiana na huduma hii. Wao pia wataondolewa."
+	},
+	"transfer": {
+		"SelectRecipient": "Chagua mpokeaji",
+		"TransactionSuccess": "Mafanikio ya Muamala",
+		"OrTypeWalletAddress": "AU andika anwani ya pochi ya mpokeaji",
+		"AppCredits": "Mikopo ya Programu"
+	},
+	"NFT": {
+		"Title": "Kichwa",
+		"Name": "Jina",
+		"EnterName": "Ingiza jina",
+		"EnterAuthorWallet": "Ingiza mkoba wa mwandishi",
+		"InformationAboutTitle": "Habari zinazohusiana na {{title}} NFT",
+		"Description": "Maelezo",
+		"DetailedInformationAboutNFT": "Maelezo ya kina kuhusu NFT",
+		"PresaleStarts": "Uuzaji wa awali Utaanza Desemba 23",
+		"OwnerUserNotFound": "Mmiliki wa NFT hii hajasajiliwa katika maombi yetu.",
+		"BuyNow": "Nunua Sasa",
+		"Buy": "Nunua",
+		"Add": "Ongeza",
+		"Remove": "Ondoa",
+		"NoNFTyet": "Bado hakuna NFTs",
+		"Conversation": "Mazungumzo",
+		"Create": "Unda",
+		"CurrentBid": "Zabuni ya sasa",
+		"StartingIn": "Kuanzia ndani",
+		"EndingIn": "Kumalizia",
+		"CreateNFT": "Unda NFT",
+		"TitlePlaceholder": "Ipe NFT yako jina",
+		"DescriptionPlaceholder": "Ipe NFT yako maelezo",
+		"CreateYourNFT": "Unda NFT yako",
+		"Royalties": "Mirabaha",
+		"RoyaltyPlaceholder": "Hiari. Kiasi kinacholipwa kwa mtayarishi kabla ya kuhamisha.",
+		"ExpirationDate": "Tarehe ya kumalizika muda wake",
+		"StartingDate": "Tarehe ya Kuanza",
+		"BidsBelowThisAmount": "Zabuni zilizo chini ya kiasi hiki hazitaruhusiwa",
+		"MinimumBid": "Kima cha chini cha zabuni",
+		"Author": "Mwandishi",
+		"Price": "Bei",
+		"Commission": "Tume",
+		"EnterCommission": "Ingiza tume",
+		"Owner": "Mmiliki",
+		"SelectCategory": "Chagua kategoria",
+		"Day": "Siku",
+		"Days": "Siku",
+		"Hour": "Saa",
+		"Hours": "Saa",
+		"Minute": "Dakika",
+		"Minutes": "Dakika",
+		"Second": "Pili",
+		"Seconds": "Sekunde",
+		"SalesCreator": "mauzo yataenda kwa muundaji",
+		"Details": "Maelezo",
+		"Bids": "Zabuni",
+		"History": "Historia",
+		"LoremIpsum": "Lorem Ipsum ni maandishi duni ya tasnia ya uchapishaji na uchapaji.",
+		"PutOnSale": "Weka kwenye mauzo",
+		"PutOffSale": "Ondoka kwenye mauzo",
+		"Transfer": "Uhamisho",
+		"Actions": "Vitendo",
+		"Claim": "Dai",
+		"ClaimNFT": "Dai NFT",
+		"Unlocking": "Kufungua",
+		"Unlock": "Fungua",
+		"Update": "Sasisha",
+		"UpdateToken": "Sasisha Tokeni",
+		"UpdateNFT": "Sasisha NFT",
+		"CreateToken": "Tengeneza Tokeni",
+		"PlaceBid": "Mahali pa Zabuni",
+		"SoldOut": "Inauzwa",
+		"NotOnSale": "Haiuzwi",
+		"NftName": "Jina la NFT",
+		"DescribeYourNFT": "Tafadhali eleza NFT yako",
+		"NFTImage": "Picha ya NFT",
+		"NFTVideo": "Video ya NFT, ikiwa ipo",
+		"UploadMovie": "Pakia filamu",
+		"MovieSource": "Chanzo cha Sinema",
+		"MovieURL": "URL ya filamu",
+		"UploadFile": "Pakia faili",
+		"PutOnMarketplace": "Weka sokoni",
+		"InstantPurchase": "Weka bei ili kuruhusu watumiaji kununua NFT yako papo hapo",
+		"FixedPrice": "Bei isiyobadilika",
+		"TimedAuction": "Mnada uliopitwa na wakati",
+		"OpenForBids": "Fungua kwa zabuni",
+		"PriceOnePiece": "Weka bei ya kipande kimoja",
+		"EnterPrice": "Weka bei",
+		"EnterMinimumBid": "Weka Kima cha chini cha zabuni",
+		"SelectChain": "Chagua mnyororo",
+		"Currency": "Sarafu",
+		"AreYouSureDeleteImage": "Je, una uhakika unataka kuondoa picha?",
+		"AreYouSureDeleteVideo": "Je, una uhakika unataka kuondoa video?",
+		"series": {
+			"Name": "Jina",
+			"Icon": "Aikoni",
+			"Description": "Maelezo",
+			"Author": "Mwandishi",
+			"SelectSeries": "Chagua mfululizo",
+			"Value": "Thamani",
+			"AreYouSure": "Una uhakika?",
+			"AuthorInvalid": "Anwani ya mwandishi si sahihi!",
+			"Address": "Anwani",
+			"CoverImage": "Picha ya jalada",
+			"UploadCoverImage": "Pakia picha ya jalada",
+			"CommissionAddressInvalid": "Anwani ya tume ni batili",
+			"OnSale": "inauzwa",
+			"OffSale": "nje ya mauzo",
+			"CreateSeries": "Tengeneza Msururu",
+			"UpdateSeries": "Sasisha Msururu",
+			"SeriesInfo": "Maelezo ya Mfululizo",
+			"SelectAuthor": "Chagua mwandishi",
+			"NewItem": "Mfululizo mpya wa NFT",
+			"NamePlaceholder": "Weka jina la mfululizo",
+			"DescPlaceholder": "Ingiza maelezo ya mfululizo",
+			"EndingIn": "Kumalizia Katika"
+		},
+		"contract": {
+			"CreateContract": "Tengeneza mkataba",
+			"SelectContract": "Chagua mkataba",
+			"CreateContractFor": "Unda mkataba wa {{userName}}",
+			"ContractFor": "Mkataba wa {{userName}}",
+			"UpdateContract": "Sasisha Mkataba",
+			"TransferOwnership": "Hamisha Umiliki",
+			"SetBaseURI": "Weka URI ya Msingi",
+			"SetSuffix": "Weka Kiambishi tamati",
+			"CurrentOwner": "Mmiliki wa Sasa",
+			"CurrentBaseURL": "BaseURL ya Sasa",
+			"ContractAddressAbsent": "Anwani ya mkataba haipo",
+			"FactoryAddressAbsent": "Anwani ya kiwanda haipo",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "Kichwa kinahitajika",
+			"SymbolRequired": "Alama inahitajika",
+			"TypeContractName": "jina la mkataba",
+			"TypeContractSymbol": "ishara ya mkataba (hadi char 10)"
+		},
+		"contests": {
+			"Title": "Mashindano",
+			"NewContest": "Shindano Jipya"
+		},
+		"import": {
+			"importNFT": "Inaleta NFT&#39;s",
+			"importAttributes": "Ingiza sifa za NFT",
+			"fileNotFound": "Samahani, faili ya CSV haikupatikana.",
+			"fileEmpty": "Samahani, faili ya CSV haina chochote.",
+			"userIdNotFound": "mtumiaji yupo lakini kitambulisho tupu",
+			"errorLine": "mstari wa {{1}}",
+			"fieldNotFound": "Sehemu inayohitajika &quot; {{1}} &quot; haipatikani",
+			"displayTypeEmpty": "Aina ya onyesho la &quot; {{1}} &quot; haipatikani",
+			"taskStreamInvalid": "mtiririko wa kazi ni batili",
+			"instructionsEmpty": "maagizo ya mtiririko wa kazi tupu",
+			"complete": "Kamilisha",
+			"activateUsers": "kutuma ujumbe wa kuwezesha watumiaji?",
+			"importProgress": "Maendeleo",
+			"importOptions": "Chaguo",
+			"sampleCSV": "Pakua Sampuli ya CSV",
+			"fileLabel": "Pakia Lahajedwali:",
+			"errorsTitle": "Hitilafu zimetokea"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "Chuja kulingana na Mikusanyiko ya NFT",
+				"ShowNFTCollection": "Onyesha mkusanyiko wa NFT katika ...",
+				"AllCollections": "Mikusanyiko Yote"
+			},
+			"ByUser": {
+				"AllAuthors": "Waandishi Wote",
+				"AllUsers": "Kila mtu",
+				"FilterByAuthors": "Chuja kwa Waandishi"
+			}
+		},
+		"Back": "Rudi kwenye Mkusanyiko",
+		"attributes": {
+			"Title": "Dhibiti Sifa",
+			"Attributes": "Sifa",
+			"DisplayTitle": "Aina ya Kuonyesha",
+			"AddDisplayType": "Ongeza aina mpya ya onyesho",
+			"NewDisplay": "Onyesho Jipya",
+			"TraitTitle": "Aina ya Tabia",
+			"AddTraitTitle": "Ongeza aina mpya ya sifa",
+			"NewTrait": "Aina Mpya ya Tabia",
+			"ValueTitle": "Thamani",
+			"AddValueTitle": "Ongeza thamani mpya",
+			"NewValue": "Thamani Mpya",
+			"NewAttribute": "Sifa Mpya",
+			"UpdateAttributes": "Sasisha Sifa",
+			"SaveAttributes": "Hifadhi Sifa"
+		},
+		"profile": {
+			"LogOut": "Toka nje",
+			"Title": "Wasifu wa {{userName}}",
+			"Description": "Maelezo ya mtumiaji",
+			"aboutPlaceholder": "Hariri Wasifu",
+			"SureLogOut": "Je, una uhakika unataka kutoka?",
+			"UploadCoverPhoto": "Pakia Picha ya Jalada"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFTContract",
+						"seriesId": "kitambulisho cha mfululizo",
+						"owner": "Mmiliki",
+						"currency": "Fedha",
+						"price": "Bei",
+						"beneficiary": "Anayefaidika",
+						"autoindex": "Autoindex",
+						"duration": "Muda",
+						"rateInterval": "Kiwango cha muda",
+						"rateAmount": "Kiwango cha kiasi"
+					},
+					"small": {
+						"NFTContract": "NFTContract",
+						"seriesId": "ishara zitatengenezwa katika mfululizo huu",
+						"owner": "mmiliki wa mfano, vinginevyo atakuwa mtumaji",
+						"currency": "Fedha kwa ishara zilizonunuliwa, ikiwa sifuri - kwa sarafu za asili",
+						"price": "Bei",
+						"beneficiary": "Mnufaika wa kuuza ishara, vinginevyo atakuwa mtumaji",
+						"autoindex": "Autoindex",
+						"duration": "Funga baada ya kuchimba. Sifuri inamaanisha kuipata mara moja.",
+						"rateInterval": "muda wa ndoo kwa ununuzi maalum",
+						"rateAmount": "kiasi cha ndoo kwa ununuzi maalum"
+					}
+				},
+				"placeholders": {
+					"optional": "(si lazima)",
+					"number": "nambari",
+					"address": "anwani",
+					"fraction": "sehemu",
+					"integer": "nambari kamili",
+					"seconds": "sekunde",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "Kuzalisha",
+				"viewInstancesList": "Onyesha upya Orodha"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "Kitambulisho cha mfululizo",
+						"account": "Akaunti",
+						"amount": "Kiasi"
+					},
+					"small": {
+						"seriesId": "ishara mpya itakuwa katika mfululizo na kitambulisho kama hicho",
+						"account": "mmiliki wa NFT mpya iliyoundwa. ikiwa haijawekwa - itatumia mkoba wa sasa",
+						"amount": "kiasi cha NFT kwa mint"
+					}
+				},
+				"placeholders": {
+					"optional": "(si lazima)",
+					"seriesId": "kitambulisho",
+					"account": "akaunti",
+					"amount": "kiasi",
+					"integer": "nambari kamili"
+				},
+				"btn": {
+					"Purchase": "Nunua",
+					"SpecialPurchase": "Ununuzi maalum"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "Anwani"
+					},
+					"small": {
+						"account": "Anwani"
+					}
+				},
+				"errors": {
+					"invalidAddress": "Anwani Batili"
+				},
+				"placeholders": {
+					"account": "Anwani"
+				},
+				"addToWhitelist": "Ongeza kwenye Orodha iliyoidhinishwa",
+				"removeFromWhitelist": "Ondoa kwenye Orodha iliyoidhinishwa"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "Kitambulisho cha ishara",
+					"custodian": "Mlinzi",
+					"recipient": "Mpokeaji"
+				},
+				"small": {
+					"tokenId": "kitambulisho cha ishara ni nini kinachohitajika kufunga au kufungua",
+					"custodian": "anwani ambayo inaweza kufungua",
+					"recipient": "anwani ambayo itapokea ishara"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "Kitambulisho cha ishara si sahihi",
+				"invalidCustodian": "Mlinzi batili",
+				"invalidRecipient": "Mpokeaji Batili"
+			},
+			"placeholders": {
+				"optional": "(si lazima)",
+				"tokenId": "kitambulisho",
+				"custodian": "anwani"
+			},
+			"Lock": "Funga",
+			"Unlock": "Fungua",
+			"Locked": "Imefungwa",
+			"CustodianAddress": "Anwani ya mlinzi",
+			"TokenWasClaimed": "Tokeni &quot; {{title}} &quot; ilidaiwa",
+			"TokenWasLocked": "Tokeni &quot; {{title}} &quot; ilikuwa imefungwa",
+			"TokenWasUnlocked": "Tokeni &quot; {{title}} &quot; ilifunguliwa"
+		},
+		"GenerateDescription": "au tengeneza kiotomatiki",
+		"collections": {
+			"Title": "Mikusanyiko",
+			"EnterTitle": "ingiza kichwa",
+			"EnterDescription": "ingiza maelezo",
+			"NewCollection": "Mkusanyiko Mpya",
+			"Name": "Jina",
+			"Icon": "Aikoni",
+			"Description": "Maelezo",
+			"Author": "Mwandishi",
+			"SelectCollection": "Chagua mkusanyiko",
+			"Value": "Thamani",
+			"AreYouSure": "Una uhakika?",
+			"AuthorInvalid": "Anwani ya mwandishi si sahihi!",
+			"Address": "Anwani",
+			"CoverImage": "Picha ya jalada",
+			"UploadIcon": "Pakia ikoni",
+			"CommissionAddressInvalid": "Anwani ya tume ni batili",
+			"OnSale": "inauzwa",
+			"OffSale": "nje ya mauzo",
+			"CreateCollection": "Unda Mkusanyiko",
+			"UpdateCollection": "Sasisha Mkusanyiko",
+			"CollectionInfo": "Maelezo ya Mkusanyiko",
+			"SelectAuthor": "Chagua mwandishi",
+			"NewItem": "Mkusanyiko Mpya wa NFT",
+			"NamePlaceholder": "Weka jina la mkusanyiko",
+			"DescPlaceholder": "Weka maelezo ya mkusanyiko",
+			"EndingIn": "Kumalizia Katika",
+			"SubmitSeries": "Wasilisha Msururu"
+		}
+	},
+	"currencies": {
+		"choose": "Chagua sarafu"
+	},
+	"connectedAccount": {
+		"Title": "Unganisha akaunti",
+		"Success": "Mafanikio",
+		"YourAccountCreated": "Akaunti yako imeundwa!",
+		"YourAccountAlreadyCreated": "Akaunti yako tayari imeundwa na iko tayari kutumika"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "reserveToken",
+						"amount": "Kiasi"
+					},
+					"small": {
+						"reserveToken": "reserveToken",
+						"amount": "Kiasi"
+					}
+				},
+				"placeholders": {
+					"amount": "kiasi"
+				},
+				"btns": {
+					"stake": "Wadau"
+				},
+				"stake": "Wadau",
+				"loading": "Inapakia"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "isharaErc20",
+					"duration": "Muda",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "maarufuToken",
+					"donations": "michango",
+					"rewardsRateFraction": "tuzoRateFraction",
+					"numerator": "namba",
+					"denominator": "dhehebu"
+				},
+				"small": {
+					"tokenErc20": "isharaErc20",
+					"duration": "Muda katika siku",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "maarufuToken",
+					"donations": "michango",
+					"rewardsRateFraction": "tuzoRateFraction",
+					"numerator": "namba",
+					"denominator": "dhehebu"
+				}
+			},
+			"placeholders": {
+				"optional": "(si lazima)",
+				"tuple": "tuple[]",
+				"number": "nambari",
+				"address": "anwani",
+				"fraction": "sehemu",
+				"integer": "nambari kamili",
+				"seconds": "sekunde",
+				"days": "siku",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Hakuna mabwawa"
+			},
+			"btns": {
+				"createPool": "Unda Dimbwi",
+				"createPoolInForm": "Unda"
+			},
+			"createPool": "Unda Dimbwi",
+			"produce": "Kuzalisha",
+			"loading": "Inapakia",
+			"viewInstancesList": "Onyesha upya Orodha"
+		}
+	},
+	"fundrise": {
+		"placeholder": "andika kitu kuhusu mchango huu..."
+	}
 }

@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "reserveToken",
-                        "duration": "ቆይታ",
-                        "amount": "መጠን"
-                    },
-                    "small": {
-                        "reserveToken": "reserveToken",
-                        "duration": "ቆይታ",
-                        "amount": "መጠን"
-                    }
-                },
-                "placeholders": {
-                    "duration": "ቆይታ",
-                    "amount": "መጠን"
-                },
-                "btns": {
-                    "stake": "ካስማ"
-                },
-                "stake": "ካስማ",
-                "loading": "በመጫን ላይ"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "reserveToken",
+						"duration": "\u1246\u12ed\u1273",
+						"amount": "\u1218\u1320\u1295"
+					},
+					"small": {
+						"reserveToken": "reserveToken",
+						"duration": "\u1246\u12ed\u1273",
+						"amount": "\u1218\u1320\u1295"
+					}
+				},
+				"placeholders": {
+					"duration": "\u1246\u12ed\u1273",
+					"amount": "\u1218\u1320\u1295"
+				},
+				"btns": {
+					"stake": "\u12ab\u1235\u121b"
+				},
+				"stake": "\u12ab\u1235\u121b",
+				"loading": "\u1260\u1218\u132b\u1295 \u120b\u12ed"
+			}
+		}
+	}
 }

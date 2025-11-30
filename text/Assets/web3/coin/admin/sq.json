@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Kohëzgjatja",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popullorToken",
-                    "donations": "donacionet",
-                    "rewardsRateFraction": "shpërblimetRateFraction",
-                    "numerator": "numërues",
-                    "denominator": "emërues"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Kohëzgjatja në ditë",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popullorToken",
-                    "donations": "donacionet",
-                    "rewardsRateFraction": "shpërblimetRateFraction",
-                    "numerator": "numërues",
-                    "denominator": "emërues"
-                }
-            },
-            "placeholders": {
-                "optional": "(opsionale)",
-                "tuple": "dyfish[]",
-                "number": "numri",
-                "address": "adresë",
-                "fraction": "fraksion",
-                "integer": "numër i plotë",
-                "seconds": "sekonda",
-                "days": "ditë",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Nuk ka pishina"
-            },
-            "btns": {
-                "createPool": "Krijo Pool",
-                "createPoolInForm": "Krijo"
-            },
-            "createPool": "Krijo Pool",
-            "produce": "Prodhoni",
-            "loading": "Po ngarkohet",
-            "viewInstancesList": "Rifresko listën"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Koh\u00ebzgjatja",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popullorToken",
+					"donations": "donacionet",
+					"rewardsRateFraction": "shp\u00ebrblimetRateFraction",
+					"numerator": "num\u00ebrues",
+					"denominator": "em\u00ebrues"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Koh\u00ebzgjatja n\u00eb dit\u00eb",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popullorToken",
+					"donations": "donacionet",
+					"rewardsRateFraction": "shp\u00ebrblimetRateFraction",
+					"numerator": "num\u00ebrues",
+					"denominator": "em\u00ebrues"
+				}
+			},
+			"placeholders": {
+				"optional": "(opsionale)",
+				"tuple": "dyfish[]",
+				"number": "numri",
+				"address": "adres\u00eb",
+				"fraction": "fraksion",
+				"integer": "num\u00ebr i plot\u00eb",
+				"seconds": "sekonda",
+				"days": "dit\u00eb",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Nuk ka pishina"
+			},
+			"btns": {
+				"createPool": "Krijo Pool",
+				"createPoolInForm": "Krijo"
+			},
+			"createPool": "Krijo Pool",
+			"produce": "Prodhoni",
+			"loading": "Po ngarkohet",
+			"viewInstancesList": "Rifresko list\u00ebn"
+		}
+	}
 }

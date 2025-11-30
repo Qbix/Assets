@@ -1,27 +1,27 @@
 {
-    "title": "বেতন",
-    "steps": {
-        "sending_native_coins": "দেশীয় কয়েন পাঠানো হচ্ছে",
-        "sending_tokens": "টোকেন পাঠানো হচ্ছে",
-        "swap": "অদলবদল",
-        "approve": "অনুমোদন করুন",
-        "one_tx": "আপনি একটি লেনদেন পাঠাতে হবে",
-        "two_tx": "আপনি দুটি লেনদেন পাঠাতে হবে"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "দিতে তহবিল"
-            }
-        },
-        "btns": {
-            "pay": "বেতন"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "&quot; {{amountOut}} &quot; টোকেন দিতে হবে"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "&quot; {{chainId}} &quot; আইডি সহ এই ধরনের চেইন সমর্থিত নয়৷"
-    }
+	"title": "\u09ac\u09c7\u09a4\u09a8",
+	"steps": {
+		"sending_native_coins": "\u09a6\u09c7\u09b6\u09c0\u09af\u09bc \u0995\u09af\u09bc\u09c7\u09a8 \u09aa\u09be\u09a0\u09be\u09a8\u09cb \u09b9\u099a\u09cd\u099b\u09c7",
+		"sending_tokens": "\u099f\u09cb\u0995\u09c7\u09a8 \u09aa\u09be\u09a0\u09be\u09a8\u09cb \u09b9\u099a\u09cd\u099b\u09c7",
+		"swap": "\u0985\u09a6\u09b2\u09ac\u09a6\u09b2",
+		"approve": "\u0985\u09a8\u09c1\u09ae\u09cb\u09a6\u09a8 \u0995\u09b0\u09c1\u09a8",
+		"one_tx": "\u0986\u09aa\u09a8\u09bf \u098f\u0995\u099f\u09bf \u09b2\u09c7\u09a8\u09a6\u09c7\u09a8 \u09aa\u09be\u09a0\u09be\u09a4\u09c7 \u09b9\u09ac\u09c7",
+		"two_tx": "\u0986\u09aa\u09a8\u09bf \u09a6\u09c1\u099f\u09bf \u09b2\u09c7\u09a8\u09a6\u09c7\u09a8 \u09aa\u09be\u09a0\u09be\u09a4\u09c7 \u09b9\u09ac\u09c7"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u09a6\u09bf\u09a4\u09c7 \u09a4\u09b9\u09ac\u09bf\u09b2"
+			}
+		},
+		"btns": {
+			"pay": "\u09ac\u09c7\u09a4\u09a8"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "&quot; {{amountOut}} &quot; \u099f\u09cb\u0995\u09c7\u09a8 \u09a6\u09bf\u09a4\u09c7 \u09b9\u09ac\u09c7"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "&quot; {{chainId}} &quot; \u0986\u0987\u09a1\u09bf \u09b8\u09b9 \u098f\u0987 \u09a7\u09b0\u09a8\u09c7\u09b0 \u099a\u09c7\u0987\u09a8 \u09b8\u09ae\u09b0\u09cd\u09a5\u09bf\u09a4 \u09a8\u09af\u09bc\u09f7"
+	}
 }

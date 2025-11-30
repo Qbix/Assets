@@ -1,27 +1,27 @@
 {
-    "title": "Ħlas",
-    "steps": {
-        "sending_native_coins": "Tibgħat muniti indiġeni",
-        "sending_tokens": "Tibgħat tokens",
-        "swap": "Skambju",
-        "approve": "Japprova",
-        "one_tx": "Għandek tibgħat transazzjoni waħda",
-        "two_tx": "Għandek tibgħat żewġ tranżazzjonijiet"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Fondi li għandhom iħallsu"
-            }
-        },
-        "btns": {
-            "pay": "Ħlas"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Ħtieġa li tħallas &quot; {{amountOut}} &quot; tokens"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Tali katina b&#39;id &quot; {{chainId}} &quot; mhix appoġġjata"
-    }
+	"title": "\u0126las",
+	"steps": {
+		"sending_native_coins": "Tibg\u0127at muniti indi\u0121eni",
+		"sending_tokens": "Tibg\u0127at tokens",
+		"swap": "Skambju",
+		"approve": "Japprova",
+		"one_tx": "G\u0127andek tibg\u0127at transazzjoni wa\u0127da",
+		"two_tx": "G\u0127andek tibg\u0127at \u017cew\u0121 tran\u017cazzjonijiet"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Fondi li g\u0127andhom i\u0127allsu"
+			}
+		},
+		"btns": {
+			"pay": "\u0126las"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "\u0126tie\u0121a li t\u0127allas &quot; {{amountOut}} &quot; tokens"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "Tali katina b&#39;id &quot; {{chainId}} &quot; mhix appo\u0121\u0121jata"
+	}
 }

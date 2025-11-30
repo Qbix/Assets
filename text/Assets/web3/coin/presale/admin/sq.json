@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Shitja e Tokenit",
-                        "timestamps": "Kohët",
-                        "prices": "Çmimet",
-                        "endTime": "Koha e Fundit",
-                        "thresholds": "Pragjet",
-                        "bonuses": "Bonuset"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Pronari nuk mund të tërhiqet",
-                            "option1": "Pronari mund të tërheqë argumentet vetëm pasi të ketë kaluar koha e fundit",
-                            "option2": "Pronari mund të tërheqë argumentet në çdo kohë"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Adresa e komunitetit",
-                    "methodkeccack": "Funksioni hash Keccak256",
-                    "roleId": "ID-ja e rolit",
-                    "sellingToken": "Adresa e Shitjes së Tokenit",
-                    "prices": "ETH, Çmimi",
-                    "thresholds": "# e argumenteve",
-                    "bonuses": "Bonus %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Nuk ka fonde"
-                },
-                "btns": {
-                    "createFund": "Krijo Fond",
-                    "createFundInForm": "Krijo"
-                },
-                "fundAddress": "Adresa e fondit",
-                "createFund": "Krijo Fond",
-                "fundInfo": "Informacion",
-                "produce": "Prodhoni",
-                "loading": "Po ngarkohet",
-                "viewInstancesList": "Rifresko listën"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Shitja e Tokenit",
+						"timestamps": "Koh\u00ebt",
+						"prices": "\u00c7mimet",
+						"endTime": "Koha e Fundit",
+						"thresholds": "Pragjet",
+						"bonuses": "Bonuset"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Pronari nuk mund t\u00eb t\u00ebrhiqet",
+							"option1": "Pronari mund t\u00eb t\u00ebrheq\u00eb argumentet vet\u00ebm pasi t\u00eb ket\u00eb kaluar koha e fundit",
+							"option2": "Pronari mund t\u00eb t\u00ebrheq\u00eb argumentet n\u00eb \u00e7do koh\u00eb"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "Adresa e komunitetit",
+					"methodkeccack": "Funksioni hash Keccak256",
+					"roleId": "ID-ja e rolit",
+					"sellingToken": "Adresa e Shitjes s\u00eb Tokenit",
+					"prices": "ETH, \u00c7mimi",
+					"thresholds": "# e argumenteve",
+					"bonuses": "Bonus %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Nuk ka fonde"
+				},
+				"btns": {
+					"createFund": "Krijo Fond",
+					"createFundInForm": "Krijo"
+				},
+				"fundAddress": "Adresa e fondit",
+				"createFund": "Krijo Fond",
+				"fundInfo": "Informacion",
+				"produce": "Prodhoni",
+				"loading": "Po ngarkohet",
+				"viewInstancesList": "Rifresko list\u00ebn"
+			}
+		}
+	}
 }

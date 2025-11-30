@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Token de vânzare",
-                        "timestamps": "Times",
-                        "prices": "Preturi",
-                        "endTime": "Sfârșitul timpului",
-                        "thresholds": "Pragurile",
-                        "bonuses": "Bonusuri"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Proprietarul nu se poate retrage",
-                            "option1": "Proprietarul poate retrage jetoanele numai după expirarea timpului de terminare",
-                            "option2": "Proprietarul poate retrage jetoanele oricând"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "adresa comunității",
-                    "methodkeccack": "Funcția hash Keccak256",
-                    "roleId": "ID rol",
-                    "sellingToken": "Adresă Token de vânzare",
-                    "prices": "ETH, preț",
-                    "thresholds": "# de jetoane",
-                    "bonuses": "Primă %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Nu există fonduri"
-                },
-                "btns": {
-                    "createFund": "Creați fond",
-                    "createFundInForm": "Crea"
-                },
-                "fundAddress": "Adresa fondului",
-                "createFund": "Creați fond",
-                "fundInfo": "Info",
-                "produce": "Legume şi fructe",
-                "loading": "Se încarcă",
-                "viewInstancesList": "Actualizează lista"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Token de v\u00e2nzare",
+						"timestamps": "Times",
+						"prices": "Preturi",
+						"endTime": "Sf\u00e2r\u0219itul timpului",
+						"thresholds": "Pragurile",
+						"bonuses": "Bonusuri"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Proprietarul nu se poate retrage",
+							"option1": "Proprietarul poate retrage jetoanele numai dup\u0103 expirarea timpului de terminare",
+							"option2": "Proprietarul poate retrage jetoanele oric\u00e2nd"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "adresa comunit\u0103\u021bii",
+					"methodkeccack": "Func\u021bia hash Keccak256",
+					"roleId": "ID rol",
+					"sellingToken": "Adres\u0103 Token de v\u00e2nzare",
+					"prices": "ETH, pre\u021b",
+					"thresholds": "# de jetoane",
+					"bonuses": "Prim\u0103 %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Nu exist\u0103 fonduri"
+				},
+				"btns": {
+					"createFund": "Crea\u021bi fond",
+					"createFundInForm": "Crea"
+				},
+				"fundAddress": "Adresa fondului",
+				"createFund": "Crea\u021bi fond",
+				"fundInfo": "Info",
+				"produce": "Legume \u015fi fructe",
+				"loading": "Se \u00eencarc\u0103",
+				"viewInstancesList": "Actualizeaz\u0103 lista"
+			}
+		}
+	}
 }

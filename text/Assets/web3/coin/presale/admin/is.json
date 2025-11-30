@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Selja tákn",
-                        "timestamps": "Tímar",
-                        "prices": "Verð",
-                        "endTime": "Lokatími",
-                        "thresholds": "Þröskuldar",
-                        "bonuses": "Bónusar"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Eigandi getur ekki afturkallað",
-                            "option1": "Eigandi getur aðeins tekið út tákn eftir að endTime er liðinn",
-                            "option2": "Eigandi getur tekið út tákn hvenær sem er"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Heimilisfang samfélagsins",
-                    "methodkeccack": "Keccak256 kjötkássaaðgerð",
-                    "roleId": "Auðkenni hlutverks",
-                    "sellingToken": "Heimilisfang Selling Token",
-                    "prices": "ETH, verð",
-                    "thresholds": "# af táknum",
-                    "bonuses": "Bónus %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Það eru engir fjármunir"
-                },
-                "btns": {
-                    "createFund": "Stofna sjóð",
-                    "createFundInForm": "Búa til"
-                },
-                "fundAddress": "Heimilisfang sjóðsins",
-                "createFund": "Stofna sjóð",
-                "fundInfo": "Upplýsingar",
-                "produce": "Framleiða",
-                "loading": "Hleðsla",
-                "viewInstancesList": "Endurnýja lista"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Selja t\u00e1kn",
+						"timestamps": "T\u00edmar",
+						"prices": "Ver\u00f0",
+						"endTime": "Lokat\u00edmi",
+						"thresholds": "\u00der\u00f6skuldar",
+						"bonuses": "B\u00f3nusar"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Eigandi getur ekki afturkalla\u00f0",
+							"option1": "Eigandi getur a\u00f0eins teki\u00f0 \u00fat t\u00e1kn eftir a\u00f0 endTime er li\u00f0inn",
+							"option2": "Eigandi getur teki\u00f0 \u00fat t\u00e1kn hven\u00e6r sem er"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "Heimilisfang samf\u00e9lagsins",
+					"methodkeccack": "Keccak256 kj\u00f6tk\u00e1ssaa\u00f0ger\u00f0",
+					"roleId": "Au\u00f0kenni hlutverks",
+					"sellingToken": "Heimilisfang Selling Token",
+					"prices": "ETH, ver\u00f0",
+					"thresholds": "# af t\u00e1knum",
+					"bonuses": "B\u00f3nus %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u00dea\u00f0 eru engir fj\u00e1rmunir"
+				},
+				"btns": {
+					"createFund": "Stofna sj\u00f3\u00f0",
+					"createFundInForm": "B\u00faa til"
+				},
+				"fundAddress": "Heimilisfang sj\u00f3\u00f0sins",
+				"createFund": "Stofna sj\u00f3\u00f0",
+				"fundInfo": "Uppl\u00fdsingar",
+				"produce": "Framlei\u00f0a",
+				"loading": "Hle\u00f0sla",
+				"viewInstancesList": "Endurn\u00fdja lista"
+			}
+		}
+	}
 }

@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Bán mã thông báo",
-                        "timestamps": "lần",
-                        "prices": "Giá cả",
-                        "endTime": "Thời gian kết thúc",
-                        "thresholds": "Ngưỡng",
-                        "bonuses": "Tiền thưởng"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Chủ sở hữu không thể rút tiền",
-                            "option1": "Chủ sở hữu chỉ có thể rút mã thông báo sau khi hết thời gian",
-                            "option2": "Chủ sở hữu có thể rút token bất cứ lúc nào"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Địa chỉ cộng đồng",
-                    "methodkeccack": "Hàm băm Keccak256",
-                    "roleId": "ID vai trò",
-                    "sellingToken": "Địa chỉ mã thông báo bán",
-                    "prices": "ETH, Giá",
-                    "thresholds": "# token",
-                    "bonuses": "Thưởng %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Không có tiền"
-                },
-                "btns": {
-                    "createFund": "Tạo quỹ",
-                    "createFundInForm": "Tạo nên"
-                },
-                "fundAddress": "Địa chỉ quỹ",
-                "createFund": "Tạo quỹ",
-                "fundInfo": "Thông tin",
-                "produce": "Sản xuất",
-                "loading": "Đang tải",
-                "viewInstancesList": "Làm mới danh sách"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "B\u00e1n m\u00e3 th\u00f4ng b\u00e1o",
+						"timestamps": "l\u1ea7n",
+						"prices": "Gi\u00e1 c\u1ea3",
+						"endTime": "Th\u1eddi gian k\u1ebft th\u00fac",
+						"thresholds": "Ng\u01b0\u1ee1ng",
+						"bonuses": "Ti\u1ec1n th\u01b0\u1edfng"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Ch\u1ee7 s\u1edf h\u1eefu kh\u00f4ng th\u1ec3 r\u00fat ti\u1ec1n",
+							"option1": "Ch\u1ee7 s\u1edf h\u1eefu ch\u1ec9 c\u00f3 th\u1ec3 r\u00fat m\u00e3 th\u00f4ng b\u00e1o sau khi h\u1ebft th\u1eddi gian",
+							"option2": "Ch\u1ee7 s\u1edf h\u1eefu c\u00f3 th\u1ec3 r\u00fat token b\u1ea5t c\u1ee9 l\u00fac n\u00e0o"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u0110\u1ecba ch\u1ec9 c\u1ed9ng \u0111\u1ed3ng",
+					"methodkeccack": "H\u00e0m b\u0103m Keccak256",
+					"roleId": "ID vai tr\u00f2",
+					"sellingToken": "\u0110\u1ecba ch\u1ec9 m\u00e3 th\u00f4ng b\u00e1o b\u00e1n",
+					"prices": "ETH, Gi\u00e1",
+					"thresholds": "# token",
+					"bonuses": "Th\u01b0\u1edfng %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Kh\u00f4ng c\u00f3 ti\u1ec1n"
+				},
+				"btns": {
+					"createFund": "T\u1ea1o qu\u1ef9",
+					"createFundInForm": "T\u1ea1o n\u00ean"
+				},
+				"fundAddress": "\u0110\u1ecba ch\u1ec9 qu\u1ef9",
+				"createFund": "T\u1ea1o qu\u1ef9",
+				"fundInfo": "Th\u00f4ng tin",
+				"produce": "S\u1ea3n xu\u1ea5t",
+				"loading": "\u0110ang t\u1ea3i",
+				"viewInstancesList": "L\u00e0m m\u1edbi danh s\u00e1ch"
+			}
+		}
+	}
 }

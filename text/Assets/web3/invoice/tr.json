@@ -1,27 +1,27 @@
 {
-    "title": "Ödemek",
-    "steps": {
-        "sending_native_coins": "Yerel paraların gönderilmesi",
-        "sending_tokens": "Jeton gönderme",
-        "swap": "Takas",
-        "approve": "Onaylamak",
-        "one_tx": "Bir işlem göndermelisiniz",
-        "two_tx": "İki işlem göndermelisiniz"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Ödenecek fonlar"
-            }
-        },
-        "btns": {
-            "pay": "Ödemek"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "&quot; {{amountOut}} &quot; token ödemeniz gerekiyor"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "&quot; {{chainId}} &quot; kimliğine sahip bu tür zincir desteklenmiyor"
-    }
+	"title": "\u00d6demek",
+	"steps": {
+		"sending_native_coins": "Yerel paralar\u0131n g\u00f6nderilmesi",
+		"sending_tokens": "Jeton g\u00f6nderme",
+		"swap": "Takas",
+		"approve": "Onaylamak",
+		"one_tx": "Bir i\u015flem g\u00f6ndermelisiniz",
+		"two_tx": "\u0130ki i\u015flem g\u00f6ndermelisiniz"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u00d6denecek fonlar"
+			}
+		},
+		"btns": {
+			"pay": "\u00d6demek"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "&quot; {{amountOut}} &quot; token \u00f6demeniz gerekiyor"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "&quot; {{chainId}} &quot; kimli\u011fine sahip bu t\u00fcr zincir desteklenmiyor"
+	}
 }

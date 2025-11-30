@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "ரிசர்வ் டோக்கன்",
-                        "duration": "கால அளவு",
-                        "amount": "தொகை"
-                    },
-                    "small": {
-                        "reserveToken": "ரிசர்வ் டோக்கன்",
-                        "duration": "கால அளவு",
-                        "amount": "தொகை"
-                    }
-                },
-                "placeholders": {
-                    "duration": "கால அளவு",
-                    "amount": "தொகை"
-                },
-                "btns": {
-                    "stake": "பங்கு"
-                },
-                "stake": "பங்கு",
-                "loading": "ஏற்றுகிறது"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u0bb0\u0bbf\u0b9a\u0bb0\u0bcd\u0bb5\u0bcd \u0b9f\u0bcb\u0b95\u0bcd\u0b95\u0ba9\u0bcd",
+						"duration": "\u0b95\u0bbe\u0bb2 \u0b85\u0bb3\u0bb5\u0bc1",
+						"amount": "\u0ba4\u0bca\u0b95\u0bc8"
+					},
+					"small": {
+						"reserveToken": "\u0bb0\u0bbf\u0b9a\u0bb0\u0bcd\u0bb5\u0bcd \u0b9f\u0bcb\u0b95\u0bcd\u0b95\u0ba9\u0bcd",
+						"duration": "\u0b95\u0bbe\u0bb2 \u0b85\u0bb3\u0bb5\u0bc1",
+						"amount": "\u0ba4\u0bca\u0b95\u0bc8"
+					}
+				},
+				"placeholders": {
+					"duration": "\u0b95\u0bbe\u0bb2 \u0b85\u0bb3\u0bb5\u0bc1",
+					"amount": "\u0ba4\u0bca\u0b95\u0bc8"
+				},
+				"btns": {
+					"stake": "\u0baa\u0b99\u0bcd\u0b95\u0bc1"
+				},
+				"stake": "\u0baa\u0b99\u0bcd\u0b95\u0bc1",
+				"loading": "\u0b8f\u0bb1\u0bcd\u0bb1\u0bc1\u0b95\u0bbf\u0bb1\u0ba4\u0bc1"
+			}
+		}
+	}
 }

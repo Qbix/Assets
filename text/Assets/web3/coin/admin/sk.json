@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Trvanie",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "populárnyToken",
-                    "donations": "darov",
-                    "rewardsRateFraction": "odmenyRateFraction",
-                    "numerator": "čitateľ",
-                    "denominator": "menovateľ"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Trvanie v dňoch",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "populárnyToken",
-                    "donations": "darov",
-                    "rewardsRateFraction": "odmenyRateFraction",
-                    "numerator": "čitateľ",
-                    "denominator": "menovateľ"
-                }
-            },
-            "placeholders": {
-                "optional": "(voliteľné)",
-                "tuple": "násobný[]",
-                "number": "číslo",
-                "address": "adresu",
-                "fraction": "zlomok",
-                "integer": "celé číslo",
-                "seconds": "sekúnd",
-                "days": "dni",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Nie sú tam žiadne bazény"
-            },
-            "btns": {
-                "createPool": "Vytvoriť fond",
-                "createPoolInForm": "Vytvorte"
-            },
-            "createPool": "Vytvoriť fond",
-            "produce": "Produkovať",
-            "loading": "Načítava",
-            "viewInstancesList": "Obnoviť zoznam"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Trvanie",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popul\u00e1rnyToken",
+					"donations": "darov",
+					"rewardsRateFraction": "odmenyRateFraction",
+					"numerator": "\u010ditate\u013e",
+					"denominator": "menovate\u013e"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Trvanie v d\u0148och",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popul\u00e1rnyToken",
+					"donations": "darov",
+					"rewardsRateFraction": "odmenyRateFraction",
+					"numerator": "\u010ditate\u013e",
+					"denominator": "menovate\u013e"
+				}
+			},
+			"placeholders": {
+				"optional": "(volite\u013en\u00e9)",
+				"tuple": "n\u00e1sobn\u00fd[]",
+				"number": "\u010d\u00edslo",
+				"address": "adresu",
+				"fraction": "zlomok",
+				"integer": "cel\u00e9 \u010d\u00edslo",
+				"seconds": "sek\u00fand",
+				"days": "dni",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Nie s\u00fa tam \u017eiadne baz\u00e9ny"
+			},
+			"btns": {
+				"createPool": "Vytvori\u0165 fond",
+				"createPoolInForm": "Vytvorte"
+			},
+			"createPool": "Vytvori\u0165 fond",
+			"produce": "Produkova\u0165",
+			"loading": "Na\u010d\u00edtava",
+			"viewInstancesList": "Obnovi\u0165 zoznam"
+		}
+	}
 }

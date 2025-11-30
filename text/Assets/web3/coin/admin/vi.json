@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "mã thông báoErc20",
-                    "duration": "Khoảng thời gian",
-                    "bonusTokenFraction": "phần thưởngTokenPhân số",
-                    "popularToken": "phổ biếnToken",
-                    "donations": "Quyên góp",
-                    "rewardsRateFraction": "phần thưởngTỷ lệPhân số",
-                    "numerator": "tử số",
-                    "denominator": "mẫu số"
-                },
-                "small": {
-                    "tokenErc20": "mã thông báoErc20",
-                    "duration": "Thời lượng tính theo ngày",
-                    "bonusTokenFraction": "phần thưởngTokenPhân số",
-                    "popularToken": "phổ biếnToken",
-                    "donations": "Quyên góp",
-                    "rewardsRateFraction": "phần thưởngTỷ lệPhân số",
-                    "numerator": "tử số",
-                    "denominator": "mẫu số"
-                }
-            },
-            "placeholders": {
-                "optional": "(không bắt buộc)",
-                "tuple": "bộ []",
-                "number": "con số",
-                "address": "Địa chỉ",
-                "fraction": "phân số",
-                "integer": "số nguyên",
-                "seconds": "giây",
-                "days": "ngày",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Không có hồ bơi"
-            },
-            "btns": {
-                "createPool": "Tạo nhóm",
-                "createPoolInForm": "Tạo nên"
-            },
-            "createPool": "Tạo nhóm",
-            "produce": "Sản xuất",
-            "loading": "Đang tải",
-            "viewInstancesList": "Làm mới danh sách"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "m\u00e3 th\u00f4ng b\u00e1oErc20",
+					"duration": "Kho\u1ea3ng th\u1eddi gian",
+					"bonusTokenFraction": "ph\u1ea7n th\u01b0\u1edfngTokenPh\u00e2n s\u1ed1",
+					"popularToken": "ph\u1ed5 bi\u1ebfnToken",
+					"donations": "Quy\u00ean g\u00f3p",
+					"rewardsRateFraction": "ph\u1ea7n th\u01b0\u1edfngT\u1ef7 l\u1ec7Ph\u00e2n s\u1ed1",
+					"numerator": "t\u1eed s\u1ed1",
+					"denominator": "m\u1eabu s\u1ed1"
+				},
+				"small": {
+					"tokenErc20": "m\u00e3 th\u00f4ng b\u00e1oErc20",
+					"duration": "Th\u1eddi l\u01b0\u1ee3ng t\u00ednh theo ng\u00e0y",
+					"bonusTokenFraction": "ph\u1ea7n th\u01b0\u1edfngTokenPh\u00e2n s\u1ed1",
+					"popularToken": "ph\u1ed5 bi\u1ebfnToken",
+					"donations": "Quy\u00ean g\u00f3p",
+					"rewardsRateFraction": "ph\u1ea7n th\u01b0\u1edfngT\u1ef7 l\u1ec7Ph\u00e2n s\u1ed1",
+					"numerator": "t\u1eed s\u1ed1",
+					"denominator": "m\u1eabu s\u1ed1"
+				}
+			},
+			"placeholders": {
+				"optional": "(kh\u00f4ng b\u1eaft bu\u1ed9c)",
+				"tuple": "b\u1ed9 []",
+				"number": "con s\u1ed1",
+				"address": "\u0110\u1ecba ch\u1ec9",
+				"fraction": "ph\u00e2n s\u1ed1",
+				"integer": "s\u1ed1 nguy\u00ean",
+				"seconds": "gi\u00e2y",
+				"days": "ng\u00e0y",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Kh\u00f4ng c\u00f3 h\u1ed3 b\u01a1i"
+			},
+			"btns": {
+				"createPool": "T\u1ea1o nh\u00f3m",
+				"createPoolInForm": "T\u1ea1o n\u00ean"
+			},
+			"createPool": "T\u1ea1o nh\u00f3m",
+			"produce": "S\u1ea3n xu\u1ea5t",
+			"loading": "\u0110ang t\u1ea3i",
+			"viewInstancesList": "L\u00e0m m\u1edbi danh s\u00e1ch"
+		}
+	}
 }

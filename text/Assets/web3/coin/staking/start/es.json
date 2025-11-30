@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "token de reserva",
-                        "duration": "Duración",
-                        "amount": "Cantidad"
-                    },
-                    "small": {
-                        "reserveToken": "token de reserva",
-                        "duration": "Duración",
-                        "amount": "Cantidad"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Duración",
-                    "amount": "cantidad"
-                },
-                "btns": {
-                    "stake": "Apostar"
-                },
-                "stake": "Apostar",
-                "loading": "Cargando"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "token de reserva",
+						"duration": "Duraci\u00f3n",
+						"amount": "Cantidad"
+					},
+					"small": {
+						"reserveToken": "token de reserva",
+						"duration": "Duraci\u00f3n",
+						"amount": "Cantidad"
+					}
+				},
+				"placeholders": {
+					"duration": "Duraci\u00f3n",
+					"amount": "cantidad"
+				},
+				"btns": {
+					"stake": "Apostar"
+				},
+				"stake": "Apostar",
+				"loading": "Cargando"
+			}
+		}
+	}
 }

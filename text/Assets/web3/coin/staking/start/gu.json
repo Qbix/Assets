@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "અનામત ટોકન",
-                        "duration": "અવધિ",
-                        "amount": "રકમ"
-                    },
-                    "small": {
-                        "reserveToken": "અનામત ટોકન",
-                        "duration": "અવધિ",
-                        "amount": "રકમ"
-                    }
-                },
-                "placeholders": {
-                    "duration": "અવધિ",
-                    "amount": "રકમ"
-                },
-                "btns": {
-                    "stake": "દાવ"
-                },
-                "stake": "દાવ",
-                "loading": "લોડ કરી રહ્યું છે"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u0a85\u0aa8\u0abe\u0aae\u0aa4 \u0a9f\u0acb\u0a95\u0aa8",
+						"duration": "\u0a85\u0ab5\u0aa7\u0abf",
+						"amount": "\u0ab0\u0a95\u0aae"
+					},
+					"small": {
+						"reserveToken": "\u0a85\u0aa8\u0abe\u0aae\u0aa4 \u0a9f\u0acb\u0a95\u0aa8",
+						"duration": "\u0a85\u0ab5\u0aa7\u0abf",
+						"amount": "\u0ab0\u0a95\u0aae"
+					}
+				},
+				"placeholders": {
+					"duration": "\u0a85\u0ab5\u0aa7\u0abf",
+					"amount": "\u0ab0\u0a95\u0aae"
+				},
+				"btns": {
+					"stake": "\u0aa6\u0abe\u0ab5"
+				},
+				"stake": "\u0aa6\u0abe\u0ab5",
+				"loading": "\u0ab2\u0acb\u0aa1 \u0a95\u0ab0\u0ac0 \u0ab0\u0ab9\u0acd\u0aaf\u0ac1\u0a82 \u0a9b\u0ac7"
+			}
+		}
+	}
 }

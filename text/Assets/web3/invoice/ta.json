@@ -1,27 +1,27 @@
 {
-    "title": "செலுத்து",
-    "steps": {
-        "sending_native_coins": "நாட்டு நாணயங்களை அனுப்புகிறது",
-        "sending_tokens": "டோக்கன்களை அனுப்புகிறது",
-        "swap": "இடமாற்று",
-        "approve": "ஒப்புதல்",
-        "one_tx": "நீங்கள் ஒரு பரிவர்த்தனையை அனுப்ப வேண்டும்",
-        "two_tx": "நீங்கள் இரண்டு பரிவர்த்தனைகளை அனுப்ப வேண்டும்"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "செலுத்த வேண்டிய நிதி"
-            }
-        },
-        "btns": {
-            "pay": "செலுத்து"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "&quot; {{amountOut}} &quot; டோக்கன்களை செலுத்த வேண்டும்"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "&quot; {{chainId}} &quot; ஐடி கொண்ட அத்தகைய சங்கிலி ஆதரிக்கப்படவில்லை"
-    }
+	"title": "\u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1",
+	"steps": {
+		"sending_native_coins": "\u0ba8\u0bbe\u0b9f\u0bcd\u0b9f\u0bc1 \u0ba8\u0bbe\u0ba3\u0baf\u0b99\u0bcd\u0b95\u0bb3\u0bc8 \u0b85\u0ba9\u0bc1\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bbf\u0bb1\u0ba4\u0bc1",
+		"sending_tokens": "\u0b9f\u0bcb\u0b95\u0bcd\u0b95\u0ba9\u0bcd\u0b95\u0bb3\u0bc8 \u0b85\u0ba9\u0bc1\u0baa\u0bcd\u0baa\u0bc1\u0b95\u0bbf\u0bb1\u0ba4\u0bc1",
+		"swap": "\u0b87\u0b9f\u0bae\u0bbe\u0bb1\u0bcd\u0bb1\u0bc1",
+		"approve": "\u0b92\u0baa\u0bcd\u0baa\u0bc1\u0ba4\u0bb2\u0bcd",
+		"one_tx": "\u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b92\u0bb0\u0bc1 \u0baa\u0bb0\u0bbf\u0bb5\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0ba9\u0bc8\u0baf\u0bc8 \u0b85\u0ba9\u0bc1\u0baa\u0bcd\u0baa \u0bb5\u0bc7\u0ba3\u0bcd\u0b9f\u0bc1\u0bae\u0bcd",
+		"two_tx": "\u0ba8\u0bc0\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0b87\u0bb0\u0ba3\u0bcd\u0b9f\u0bc1 \u0baa\u0bb0\u0bbf\u0bb5\u0bb0\u0bcd\u0ba4\u0bcd\u0ba4\u0ba9\u0bc8\u0b95\u0bb3\u0bc8 \u0b85\u0ba9\u0bc1\u0baa\u0bcd\u0baa \u0bb5\u0bc7\u0ba3\u0bcd\u0b9f\u0bc1\u0bae\u0bcd"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4 \u0bb5\u0bc7\u0ba3\u0bcd\u0b9f\u0bbf\u0baf \u0ba8\u0bbf\u0ba4\u0bbf"
+			}
+		},
+		"btns": {
+			"pay": "\u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4\u0bc1"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "&quot; {{amountOut}} &quot; \u0b9f\u0bcb\u0b95\u0bcd\u0b95\u0ba9\u0bcd\u0b95\u0bb3\u0bc8 \u0b9a\u0bc6\u0bb2\u0bc1\u0ba4\u0bcd\u0ba4 \u0bb5\u0bc7\u0ba3\u0bcd\u0b9f\u0bc1\u0bae\u0bcd"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "&quot; {{chainId}} &quot; \u0b90\u0b9f\u0bbf \u0b95\u0bca\u0ba3\u0bcd\u0b9f \u0b85\u0ba4\u0bcd\u0ba4\u0b95\u0bc8\u0baf \u0b9a\u0b99\u0bcd\u0b95\u0bbf\u0bb2\u0bbf \u0b86\u0ba4\u0bb0\u0bbf\u0b95\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0b9f\u0bb5\u0bbf\u0bb2\u0bcd\u0bb2\u0bc8"
+	}
 }

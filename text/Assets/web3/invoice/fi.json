@@ -1,27 +1,27 @@
 {
-    "title": "Maksaa",
-    "steps": {
-        "sending_native_coins": "Kotimaisten kolikoiden lähettäminen",
-        "sending_tokens": "Tokenien lähettäminen",
-        "swap": "Vaihtaa",
-        "approve": "Hyväksyä",
-        "one_tx": "Sinun tulee lähettää yksi tapahtuma",
-        "two_tx": "Sinun tulee lähettää kaksi tapahtumaa"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Rahat maksettavaksi"
-            }
-        },
-        "btns": {
-            "pay": "Maksaa"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Sinun on maksettava &quot; {{amountOut}} &quot; tokeneja"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Tällaista ketjua, jonka tunnus on &quot; {{chainId}} &quot;, ei tueta"
-    }
+	"title": "Maksaa",
+	"steps": {
+		"sending_native_coins": "Kotimaisten kolikoiden l\u00e4hett\u00e4minen",
+		"sending_tokens": "Tokenien l\u00e4hett\u00e4minen",
+		"swap": "Vaihtaa",
+		"approve": "Hyv\u00e4ksy\u00e4",
+		"one_tx": "Sinun tulee l\u00e4hett\u00e4\u00e4 yksi tapahtuma",
+		"two_tx": "Sinun tulee l\u00e4hett\u00e4\u00e4 kaksi tapahtumaa"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Rahat maksettavaksi"
+			}
+		},
+		"btns": {
+			"pay": "Maksaa"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "Sinun on maksettava &quot; {{amountOut}} &quot; tokeneja"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "T\u00e4llaista ketjua, jonka tunnus on &quot; {{chainId}} &quot;, ei tueta"
+	}
 }

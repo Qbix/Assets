@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Hoeveel om te belê?"
-                    },
-                    "placeholders": {
-                        "amount": "Bedrag van {{nativeCoin}}",
-                        "max": "Maksimum: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Koop",
-                    "execute": "Voer uit"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "Hoeveel om te bel\u00ea?"
+					},
+					"placeholders": {
+						"amount": "Bedrag van {{nativeCoin}}",
+						"max": "Maksimum: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "Koop",
+					"execute": "Voer uit"
+				}
+			}
+		}
+	}
 }

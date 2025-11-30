@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Hversu mikið á að fjárfesta?"
-                    },
-                    "placeholders": {
-                        "amount": "Upphæð {{nativeCoin}}",
-                        "max": "Hámark: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Kaupa",
-                    "execute": "Framkvæma"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "Hversu miki\u00f0 \u00e1 a\u00f0 fj\u00e1rfesta?"
+					},
+					"placeholders": {
+						"amount": "Upph\u00e6\u00f0 {{nativeCoin}}",
+						"max": "H\u00e1mark: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "Kaupa",
+					"execute": "Framkv\u00e6ma"
+				}
+			}
+		}
+	}
 }

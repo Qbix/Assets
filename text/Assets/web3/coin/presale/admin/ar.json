@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "بيع رمز",
-                        "timestamps": "مرات",
-                        "prices": "الأسعار",
-                        "endTime": "وقت النهاية",
-                        "thresholds": "الحدود القصوى",
-                        "bonuses": "المكافآت"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "لا يمكن للمالك الانسحاب",
-                            "option1": "لا يمكن للمالك سحب الرموز المميزة إلا بعد مرور وقت الانتهاء",
-                            "option2": "يمكن للمالك سحب الرموز في أي وقت"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "عنوان المجتمع",
-                    "methodkeccack": "وظيفة التجزئة Keccak256",
-                    "roleId": "معرف الدور",
-                    "sellingToken": "عنوان بيع الرمز المميز",
-                    "prices": "إيثريوم، السعر",
-                    "thresholds": "# من الرموز",
-                    "bonuses": "نسبة المكافأة"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "لا توجد أموال"
-                },
-                "btns": {
-                    "createFund": "إنشاء صندوق",
-                    "createFundInForm": "يخلق"
-                },
-                "fundAddress": "عنوان الصندوق",
-                "createFund": "إنشاء صندوق",
-                "fundInfo": "معلومات",
-                "produce": "ينتج",
-                "loading": "تحميل",
-                "viewInstancesList": "تحديث القائمة"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u0628\u064a\u0639 \u0631\u0645\u0632",
+						"timestamps": "\u0645\u0631\u0627\u062a",
+						"prices": "\u0627\u0644\u0623\u0633\u0639\u0627\u0631",
+						"endTime": "\u0648\u0642\u062a \u0627\u0644\u0646\u0647\u0627\u064a\u0629",
+						"thresholds": "\u0627\u0644\u062d\u062f\u0648\u062f \u0627\u0644\u0642\u0635\u0648\u0649",
+						"bonuses": "\u0627\u0644\u0645\u0643\u0627\u0641\u0622\u062a"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u0644\u0627 \u064a\u0645\u0643\u0646 \u0644\u0644\u0645\u0627\u0644\u0643 \u0627\u0644\u0627\u0646\u0633\u062d\u0627\u0628",
+							"option1": "\u0644\u0627 \u064a\u0645\u0643\u0646 \u0644\u0644\u0645\u0627\u0644\u0643 \u0633\u062d\u0628 \u0627\u0644\u0631\u0645\u0648\u0632 \u0627\u0644\u0645\u0645\u064a\u0632\u0629 \u0625\u0644\u0627 \u0628\u0639\u062f \u0645\u0631\u0648\u0631 \u0648\u0642\u062a \u0627\u0644\u0627\u0646\u062a\u0647\u0627\u0621",
+							"option2": "\u064a\u0645\u0643\u0646 \u0644\u0644\u0645\u0627\u0644\u0643 \u0633\u062d\u0628 \u0627\u0644\u0631\u0645\u0648\u0632 \u0641\u064a \u0623\u064a \u0648\u0642\u062a"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0645\u062c\u062a\u0645\u0639",
+					"methodkeccack": "\u0648\u0638\u064a\u0641\u0629 \u0627\u0644\u062a\u062c\u0632\u0626\u0629 Keccak256",
+					"roleId": "\u0645\u0639\u0631\u0641 \u0627\u0644\u062f\u0648\u0631",
+					"sellingToken": "\u0639\u0646\u0648\u0627\u0646 \u0628\u064a\u0639 \u0627\u0644\u0631\u0645\u0632 \u0627\u0644\u0645\u0645\u064a\u0632",
+					"prices": "\u0625\u064a\u062b\u0631\u064a\u0648\u0645\u060c \u0627\u0644\u0633\u0639\u0631",
+					"thresholds": "# \u0645\u0646 \u0627\u0644\u0631\u0645\u0648\u0632",
+					"bonuses": "\u0646\u0633\u0628\u0629 \u0627\u0644\u0645\u0643\u0627\u0641\u0623\u0629"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u0644\u0627 \u062a\u0648\u062c\u062f \u0623\u0645\u0648\u0627\u0644"
+				},
+				"btns": {
+					"createFund": "\u0625\u0646\u0634\u0627\u0621 \u0635\u0646\u062f\u0648\u0642",
+					"createFundInForm": "\u064a\u062e\u0644\u0642"
+				},
+				"fundAddress": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0635\u0646\u062f\u0648\u0642",
+				"createFund": "\u0625\u0646\u0634\u0627\u0621 \u0635\u0646\u062f\u0648\u0642",
+				"fundInfo": "\u0645\u0639\u0644\u0648\u0645\u0627\u062a",
+				"produce": "\u064a\u0646\u062a\u062c",
+				"loading": "\u062a\u062d\u0645\u064a\u0644",
+				"viewInstancesList": "\u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0642\u0627\u0626\u0645\u0629"
+			}
+		}
+	}
 }

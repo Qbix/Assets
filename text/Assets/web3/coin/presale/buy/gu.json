@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "કેટલું રોકાણ કરવું?"
-                    },
-                    "placeholders": {
-                        "amount": "{{nativeCoin}} ની રકમ",
-                        "max": "મહત્તમ: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "ખરીદો",
-                    "execute": "ચલાવો"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "\u0a95\u0ac7\u0a9f\u0ab2\u0ac1\u0a82 \u0ab0\u0acb\u0a95\u0abe\u0aa3 \u0a95\u0ab0\u0ab5\u0ac1\u0a82?"
+					},
+					"placeholders": {
+						"amount": "{{nativeCoin}} \u0aa8\u0ac0 \u0ab0\u0a95\u0aae",
+						"max": "\u0aae\u0ab9\u0aa4\u0acd\u0aa4\u0aae: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "\u0a96\u0ab0\u0ac0\u0aa6\u0acb",
+					"execute": "\u0a9a\u0ab2\u0abe\u0ab5\u0acb"
+				}
+			}
+		}
+	}
 }

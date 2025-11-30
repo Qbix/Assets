@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "tartalékToken",
-                        "duration": "Időtartam",
-                        "amount": "Összeg"
-                    },
-                    "small": {
-                        "reserveToken": "tartalékToken",
-                        "duration": "Időtartam",
-                        "amount": "Összeg"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Időtartam",
-                    "amount": "összeg"
-                },
-                "btns": {
-                    "stake": "Tét"
-                },
-                "stake": "Tét",
-                "loading": "Betöltés"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "tartal\u00e9kToken",
+						"duration": "Id\u0151tartam",
+						"amount": "\u00d6sszeg"
+					},
+					"small": {
+						"reserveToken": "tartal\u00e9kToken",
+						"duration": "Id\u0151tartam",
+						"amount": "\u00d6sszeg"
+					}
+				},
+				"placeholders": {
+					"duration": "Id\u0151tartam",
+					"amount": "\u00f6sszeg"
+				},
+				"btns": {
+					"stake": "T\u00e9t"
+				},
+				"stake": "T\u00e9t",
+				"loading": "Bet\u00f6lt\u00e9s"
+			}
+		}
+	}
 }

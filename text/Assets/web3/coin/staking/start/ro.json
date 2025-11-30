@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "reserveToken",
-                        "duration": "Durată",
-                        "amount": "Cantitate"
-                    },
-                    "small": {
-                        "reserveToken": "reserveToken",
-                        "duration": "Durată",
-                        "amount": "Cantitate"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Durată",
-                    "amount": "Cantitate"
-                },
-                "btns": {
-                    "stake": "Miză"
-                },
-                "stake": "Miză",
-                "loading": "Se încarcă"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "reserveToken",
+						"duration": "Durat\u0103",
+						"amount": "Cantitate"
+					},
+					"small": {
+						"reserveToken": "reserveToken",
+						"duration": "Durat\u0103",
+						"amount": "Cantitate"
+					}
+				},
+				"placeholders": {
+					"duration": "Durat\u0103",
+					"amount": "Cantitate"
+				},
+				"btns": {
+					"stake": "Miz\u0103"
+				},
+				"stake": "Miz\u0103",
+				"loading": "Se \u00eencarc\u0103"
+			}
+		}
+	}
 }

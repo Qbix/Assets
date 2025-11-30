@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Hiba",
-        "WalletAbsent": "A pénztárca nincs csatlakoztatva.",
-        "Rendering": "Hiba történt <span class='url'>{{1}}<\/span> renderelése közben",
-        "PriceRequired": "Ár kötelező!",
-        "NameRequired": "Név (szükséges!",
-        "PriceInvalid": "Az ár érvénytelen!",
-        "AmountInvalid": "Az összeg érvénytelen!",
-        "TransactionFailed": "Sikertelen tranzakció",
-        "ChainNotSupported": "A kiválasztott lánc nem támogatott. Támogatott lánc: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Az alkalmazás használatához csatlakoztatva kell lennie a MetaMask-nak",
-        "UserNotLoggedInMetaMask": "A felhasználó nincs bejelentkezve a MetaMask-ba",
-        "CurrencyNotFound": "A pénznem nem található",
-        "WrongChain": "Ez az NFT „ {{chain}} ” alatt jött létre. Kérjük, használja ezt a láncot.",
-        "NoRecipientSelected": "Nincs kiválasztott címzett",
-        "NotEnoughPermissionsWallet": "Nincs elegendő engedély a felhasználó pénztárcájának olvasásához",
-        "ThisUserHaveNoWallet": "Ehhez a felhasználóhoz nincs hozzárendelve pénztárca",
-        "TheWalletOfThisUserInvalid": "A felhasználó pénztárcája érvénytelen",
-        "WalletInvalid": "A Wallet-cím érvénytelen",
-        "CantManageFrozenSeries": "A fagyasztott sorozatokat nem tudod kezelni",
-        "SubscriptionStreamNotPaid": "Nem fizetett a tartalom megtekintéséhez. Kérjük, kattintson {{subscriptionUrl}} , és iratkozzon fel a megfelelő csomagra."
-    },
-    "admin": {
-        "Title": "Vagyonkezelés",
-        "SubscriptionTitle": "Előfizetési tervek"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Koppintson a fizetéshez"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : {{call 'user.displayName'}} ért feldolgozott terhelés",
-        "ThankYouForYourPayment": "Köszönjük a {{call 'publisher.displayName'}} es befizetést",
-        "SubscribedTo": "{{call 'user.displayName'}} előfizetett az {{plan.title}}",
-        "YouSubscribedTo": "Feliratkozott a {{plan.title}}",
-        "Assets\/credits\/alert": "Fiókjához kapcsolódó figyelmeztetés érkezett"
-    },
-    "charge": {
-        "Subject": "{{displayAmount}} et kapsz {{call 'publisher.displayName'}} ről &quot; {{description}} &quot;-re",
-        "HasBeenCharged": "Hé, ez csak azért van, hogy tudd, {{1}} {{2}} et {{3}} ért {{4}}"
-    },
-    "charged": {
-        "Subject": "Köszönjük, hogy befizette a &quot; {{description}} &quot;-et",
-        "HavePaid": "Hé {{1}} , ez csak egy gyors megerősítés, hogy sikeresen kifizette {{2}} től {{3}} ig {{4}} ért"
-    },
-    "payment": {
-        "AboutOrder": "Információ a rendelésről",
-        "PaymentMethod": "Fizetési mód",
-        "ContactInfo": "Elérhetőségei",
-        "Pay": "Fizetés",
-        "PaymentSucceeded": "A fizetés sikerült",
-        "PaymentProcessing.": "Befizetése feldolgozás alatt áll",
-        "FailTryAgain": "A fizetés sikertelen volt, kérjük, próbálja újra",
-        "SomethingWrong": "Valami elromlott",
-        "PaymentStatus": "Fizetési állapot",
-        "PayTo": "Fizessen {{displayName}} et",
-        "ChooseCurrency": "Válasszon pénznemet",
-        "YouCanSendUpTo": "Legfeljebb {{amount}} {{symbol}} et küldhet",
-        "Send": "Küld",
-        "EnterAmount": "adja meg az összeget"
-    },
-    "credits": {
-        "InviteAcceptedBy": "A meghívást {{invitedUserName}} fogadta el",
-        "InvitedUserFilledStream": "{{invitedUserName}} töltött {{FilledStreamTitle}}",
-        "ForFillingStream": "{{FilledStreamTitle}} töltéséhez",
-        "YouHaveCreditsToStart": "{{amount}} kredited van a kezdéshez",
-        "PaymentFor": "Fizetés &quot; {{1}} &quot;",
-        "PaymentTo": "Fizetés {{1}} -ig",
-        "PaymentToUser": "Fizetés {{toUserName}} -ig",
-        "CreatePrivateChat": "privát csevegésre {{toUserName}} el",
-        "CreatePaidStream": "{{toStreamName}} létrehozásához",
-        "JoinedPaidStream": "foglaláshoz in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "a &quot; {{communityId}} &quot; közösség létrehozásáért",
-        "LeftPaidStream": "foglalás visszatérítésként itt: &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "{{amount}} kreditet vásárolt",
-        "BonusCredits": "Bónusz {{amount}} kredit",
-        "BuyAmountCredits": "Vásároljon {{amount}} kreditet",
-        "WatchClip": "{{amount}} kreditet szerzett {{fromStreamTitle}} megtekintéséért",
-        "MissingCredits": "Hiányzó kreditek",
-        "YouMissingCredits": "A folytatáshoz további {{amount}} kreditre van szüksége.",
-        "BuyCredits": "Vásároljon krediteket",
-        "BuyBonus": "Ha egyszerre {{amount}} kreditet vásárol, {{bonus}} kredit bónuszhoz vezet.",
-        "Buy": "megvesz",
-        "PurchaseCredits": "Vásárlási kreditek",
-        "Credits": "Kredit",
-        "ErrorInvalidAmount": "Az összeg érvénytelen",
-        "ErrorInvalidCurrency": "Sajnos még nem támogatjuk a {{currency}} valutát",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} kredit",
-            "BonusCredits": "{{amount}} kredit"
-        }
-    },
-    "history": {
-        "Date": "Dátum",
-        "Amount": "Összeg",
-        "Description": "Leírás",
-        "Client": "Ügyfél",
-        "User": "Felhasználó",
-        "To": "nak nek",
-        "From": "tól től",
-        "SeeHistory": "Tekintse meg a {{1}} fizetési előzményeit",
-        "HistoryEmpty": "Még nincsenek adatok",
-        "PaymentFor": "{{amount}} kreditet küldtek",
-        "PaymentTo": "{{amount}} kreditet küldtek",
-        "PaymentToUser": "{{amount}} kreditet küldtek",
-        "CreatePaidStream": "{{amount}} kreditet költött el",
-        "WatchClip": {
-            "+": "{{amount}} kreditet szerzett",
-            "-": "{{amount}} kreditet költött el"
-        },
-        "JoinedPaidStream": {
-            "+": "{{amount}} kreditet szerzett",
-            "-": "{{amount}} kreditet költött el"
-        },
-        "LeftPaidStream": {
-            "+": "{{amount}} kreditet kapott",
-            "-": "{{amount}} kreditet küldtek"
-        },
-        "CreatedCommunity": "{{amount}} kreditet költött el",
-        "BoughtCredits": "{{amount}} kreditet vásárolt",
-        "BonusCredits": "{{amount}} kreditet kapott",
-        "InviteAcceptedBy": "{{amount}} kreditet szerzett",
-        "Streams_user_firstname": "{{amount}} kreditet szerzett",
-        "Streams_user_lastname": "{{amount}} kreditet szerzett",
-        "Streams_user_icon": "{{amount}} kreditet szerzett",
-        "Places_user_location": "{{amount}} kreditet szerzett",
-        "Streams_greeting": "{{amount}} kreditet szerzett",
-        "YouHaveCreditsToStart": "{{amount}} kreditet szerzett",
-        "InvitedUserFilledStream": "{{amount}} kreditet szerzett",
-        "ForFillingStream": "{{amount}} kreditet szerzett",
-        "CreatePrivateChat": "{{amount}} kreditet költött el"
-    },
-    "subscriptions": {
-        "infoTitle": "Állítsa be a fizetési információkat",
-        "confirm": {
-            "title": "Indítsa el az előfizetést",
-            "message": "Indít egy ismétlődő előfizetést a &quot; {{title}} &quot;-re?",
-            "ok": "rendben",
-            "cancel": "Megszünteti"
-        },
-        "CreditOrDebitCard": "Hitel- vagy betéti kártya",
-        "SubscribePayment": "Előfizetés Fizetés",
-        "ImmediatePayment": "Azonnali fizetés",
-        "ProcessingPayment": "Fizetés feldolgozása",
-        "SubscriptionAlreadyPaid": "Ez az előfizetés már ki van fizetve",
-        "SubscriptionNotActive": "Ez az előfizetés nem aktív",
-        "Subscribed": "Előfizetve",
-        "Unsubscribed": "Leiratkozott",
-        "Unsubscribe": "Leiratkozás",
-        "Subscribe": "Iratkozz fel",
-        "Started": "Elindult",
-        "EndsIn": "-ben végződik",
-        "NextPay": "Következő fizetés",
-        "Period": "Időszak",
-        "Price": "Ár",
-        "AreYouSureUnsubscribe": "Biztosan leiratkozik erről a csomagról?",
-        "YouUnsubscribedFromPlan": "Leiratkozott a „ {{planTitle}} ” előfizetésről. Nem kell fizetnie, de előfizetése {{endsIn}} -ig tart",
-        "plan": {
-            "TitlePlaceholder": "terv címe",
-            "PricePlaceholder": "ár",
-            "DescriptionPlaceholder": "előfizetési terv leírása",
-            "SavePlan": "Terv mentése",
-            "NewPlan": "Új terv",
-            "SubscriptionTitle": "Előfizetési tervek",
-            "AreYouSureDeletePlan": "Biztosan törli ezt a tervet?",
-            "Duration": "Időtartam",
-            "Discount": "Kedvezmény",
-            "Interrupt": "Megszakítás",
-            "Continue": "Folytatni",
-            "SelectDisplayType": "Válassza {{displayType}}",
-            "EndDate": "befejezés dátuma",
-            "Available": "Elérhető",
-            "Hidden": "Rejtett",
-            "InviteOnly": "Csak meghívással",
-            "CantSubscribeUnlessInvited": "Nem fizethet elő erre a csomagra, hacsak nem kaptál meghívást"
-        }
-    },
-    "payments": {
-        "infoTitle": "Állítsa be a fizetési információkat",
-        "BuyAmountCredits": "Vásároljon {{amount}} kreditet",
-        "confirm": {
-            "title": "Fizetni",
-            "message": "Egyetértesz {{symbol}} {{amount}} fizetéssel?",
-            "ok": "rendben",
-            "cancel": "Megszünteti"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Kredit",
-            "description": "nyomon követi a jóváírásokat és a kifizetéseket"
-        },
-        "Assets\/plan": {
-            "displayType": "Előfizetési terv",
-            "description": "előfizetési terv"
-        },
-        "Assets\/subscription": {
-            "displayType": "Feliratkozás",
-            "description": "Feliratkozás"
-        },
-        "Assets\/product": {
-            "displayType": "Termék",
-            "description": "árusított termék"
-        },
-        "Assets\/service": {
-            "displayType": "Szolgáltatás",
-            "description": "kínált szolgáltatást"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "{{amount}} kreditet szerzett"
-        },
-        "Assets\/credits\/bought": {
-            "content": "{{amount}} kreditet vásárolt"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bónusz {{amount}} kredit"
-        },
-        "Assets\/credits\/spent": {
-            "content": "{{amount}} kreditet költött el"
-        },
-        "Assets\/credits\/sent": {
-            "content": "{{amount}} kreditet küldtek {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "{{amount}} kreditet kapott {{fromUserName}} ből"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Kevés jóváírás van a számláján. További kreditek vásárlásához kérjük, látogassa meg <a href='<i translate='no'>999 &#39;&gt;ezt a linket<\/a> ."
-        }
-    },
-    "billing": {
-        "Title": "Eszközök számlázása",
-        "CreditsMinimum": "Minimális kredit",
-        "CreditsToAdd": "Hozzáadandó kreditek",
-        "Save": "Megment",
-        "ThisLink": "ez a link",
-        "errors": {
-            "CreditsMinimumNegative": "A kreditek minimuma nem lehet negatív",
-            "CreditsToAddNegative": "A hozzáadandó jóváírások nem lehetnek negatívak"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Új szolgáltatás",
-            "TitlePlaceholder": "Szolgáltatás címe",
-            "PricePlaceholder": "Állítsa be az árat",
-            "LinkPlaceholder": "további információs link beállítása",
-            "DescriptionPlaceholder": "Szolgáltatás leírása",
-            "SaveService": "Szolgáltatás mentése",
-            "SelectRequiredParticipants": "Szükséges kapcsolódó résztvevők",
-            "RequiredParticipantsDesc": "Kérjük, válassza ki azokat a kapcsolódó résztvevőket, akikre szükség van a szolgáltatás használatához (például háziállatok a &quot;Kutyakiállításhoz&quot;, vagy gyermekek a &quot;Gyermekünnephez&quot; stb.). Fizetős szolgáltatás esetén a felhasználónak minden kapcsolódó résztvevőért is fizetnie kell."
-        },
-        "EditServiceTemplate": {
-            "Title": "Szolgáltatás szerkesztése"
-        },
-        "ManageServiceTemplates": "Szolgáltatássablonok kezelése",
-        "ManageServices": "Szolgáltatások kezelése",
-        "Free": "Ingyenes",
-        "OptionalContribution": "Választható hozzájárulás",
-        "RequiredPayment": "Kötelező fizetés",
-        "AreYouSureDelete": "Biztosan törli ezt a szolgáltatást?",
-        "AmountServicesRelated": "{{amount}} elérhetőség kapcsolódik ehhez a szolgáltatáshoz. Ezeket is eltávolítják."
-    },
-    "transfer": {
-        "SelectRecipient": "Válassza ki a címzettet",
-        "TransactionSuccess": "A tranzakció sikere",
-        "OrTypeWalletAddress": "VAGY írja be a címzett pénztárca címét",
-        "AppCredits": "Alkalmazás kreditek"
-    },
-    "NFT": {
-        "Title": "Cím",
-        "Name": "Név",
-        "EnterName": "Írja be a nevet",
-        "EnterAuthorWallet": "Írja be a szerzői pénztárcát",
-        "InformationAboutTitle": "Információ {{title}} NFT-ről",
-        "Description": "Leírás",
-        "DetailedInformationAboutNFT": "Részletes információk az NFT-ről",
-        "PresaleStarts": "Az elővétel december 23-án kezdődik",
-        "OwnerUserNotFound": "Ennek az NFT-nek a tulajdonosa nincs regisztrálva az alkalmazásunkban.",
-        "BuyNow": "Vásárolj most",
-        "Buy": "megvesz",
-        "Add": "Hozzáadás",
-        "Remove": "Távolítsa el",
-        "NoNFTyet": "Még nincsenek NFT-k",
-        "Conversation": "Beszélgetés",
-        "Create": "Teremt",
-        "CurrentBid": "Jelenlegi ajánlat",
-        "StartingIn": "Kezdve",
-        "EndingIn": "Befejeződik",
-        "CreateNFT": "Hozzon létre egy NFT-t",
-        "TitlePlaceholder": "Adjon címet az NFT-nek",
-        "DescriptionPlaceholder": "Adja meg az NFT leírását",
-        "CreateYourNFT": "Készítse el NFT-jét",
-        "Royalties": "Jogdíjak",
-        "RoyaltyPlaceholder": "Választható. Az átutalás előtt az alkotónak fizetett összeg.",
-        "ExpirationDate": "Lejárati dátum",
-        "StartingDate": "Kezdő dátum",
-        "BidsBelowThisAmount": "Ennél az összegnél alacsonyabb ajánlatok nem engedélyezettek",
-        "MinimumBid": "Minimális ajánlat",
-        "Author": "Szerző",
-        "Price": "Ár",
-        "Commission": "jutalék",
-        "EnterCommission": "Adja meg a jutalékot",
-        "Owner": "Tulajdonos",
-        "SelectCategory": "Válassz kategóriát",
-        "Day": "Nap",
-        "Days": "Napok",
-        "Hour": "Óra",
-        "Hours": "Órák",
-        "Minute": "Perc",
-        "Minutes": "Percek",
-        "Second": "Második",
-        "Seconds": "Másodpercek",
-        "SalesCreator": "az értékesítésből az alkotó kapja",
-        "Details": "Részletek",
-        "Bids": "Ajánlatok",
-        "History": "Történelem",
-        "LoremIpsum": "A Lorem Ipsum egyszerűen álszöveg a nyomda- és szedőiparban.",
-        "PutOnSale": "Eladó",
-        "PutOffSale": "Kilépés az értékesítésből",
-        "Transfer": "Átruházás",
-        "Actions": "Akciók",
-        "Claim": "Követelés",
-        "ClaimNFT": "NFT igénylése",
-        "Unlocking": "Feloldás",
-        "Unlock": "Kinyit",
-        "Update": "Frissítés",
-        "UpdateToken": "Token frissítése",
-        "UpdateNFT": "Frissítse az NFT-t",
-        "CreateToken": "Token létrehozása",
-        "PlaceBid": "Ajánlattétel",
-        "SoldOut": "Eladott",
-        "NotOnSale": "Nem eladó",
-        "NftName": "NFT név",
-        "DescribeYourNFT": "Kérjük, írja le az NFT-jét",
-        "NFTImage": "Kép az NFT-hez",
-        "NFTVideo": "Videó NFT-hez, ha van",
-        "UploadMovie": "Film feltöltése",
-        "MovieSource": "Film Forrás",
-        "MovieURL": "Film URL",
-        "UploadFile": "Feltölteni egy fájlt",
-        "PutOnMarketplace": "Tedd piacra",
-        "InstantPurchase": "Adja meg az árat, hogy a felhasználók azonnal megvásárolhassák NFT-jét",
-        "FixedPrice": "Fix áron",
-        "TimedAuction": "Időzített aukció",
-        "OpenForBids": "Nyitva licitekre",
-        "PriceOnePiece": "Adja meg egy darab árát",
-        "EnterPrice": "Adja meg az árat",
-        "EnterMinimumBid": "Adja meg a Minimális ajánlatot",
-        "SelectChain": "Válassza ki a láncot",
-        "Currency": "Valuta",
-        "AreYouSureDeleteImage": "Biztosan eltávolítja a képet?",
-        "AreYouSureDeleteVideo": "Biztosan eltávolítod a videót?",
-        "series": {
-            "Name": "Név",
-            "Icon": "Ikon",
-            "Description": "Leírás",
-            "Author": "Szerző",
-            "SelectSeries": "Sorozat kiválasztása",
-            "Value": "Érték",
-            "AreYouSure": "biztos vagy ebben?",
-            "AuthorInvalid": "A szerző címe érvénytelen!",
-            "Address": "Cím",
-            "CoverImage": "Borítókép",
-            "UploadCoverImage": "Borítókép feltöltése",
-            "CommissionAddressInvalid": "A megbízási cím érvénytelen",
-            "OnSale": "eladó",
-            "OffSale": "végkiárusítás",
-            "CreateSeries": "Sorozat létrehozása",
-            "UpdateSeries": "Sorozat frissítése",
-            "SeriesInfo": "sorozat info",
-            "SelectAuthor": "Válasszon szerzőt",
-            "NewItem": "Új NFT sorozat",
-            "NamePlaceholder": "Írja be a sorozat nevét",
-            "DescPlaceholder": "Adja meg a sorozat leírását",
-            "EndingIn": "Befejeződik"
-        },
-        "contract": {
-            "CreateContract": "Hozzon létre szerződést",
-            "SelectContract": "Válassza ki a szerződést",
-            "CreateContractFor": "Hozzon létre szerződést {{userName}}",
-            "ContractFor": "{{userName}} forintos szerződés",
-            "UpdateContract": "Szerződés frissítése",
-            "TransferOwnership": "Átruházza a tulajdonjogot",
-            "SetBaseURI": "Állítsa be az alap URI-t",
-            "SetSuffix": "Utótag beállítása",
-            "CurrentOwner": "Jelenlegi tulajdonos",
-            "CurrentBaseURL": "Jelenlegi BaseURL",
-            "ContractAddressAbsent": "A szerződés címe hiányzik",
-            "FactoryAddressAbsent": "A gyári cím hiányzik",
-            "ContractName": "{{contractName}} ( {{contractSymbol}} {{chainNetwork}}",
-            "TitleRequired": "Cím kötelező",
-            "SymbolRequired": "Szimbólum szükséges",
-            "TypeContractName": "szerződés neve",
-            "TypeContractSymbol": "szerződés szimbólum (max 10 karakter)"
-        },
-        "contests": {
-            "Title": "Versenyek",
-            "NewContest": "Új verseny"
-        },
-        "import": {
-            "importNFT": "NFT-k importálása",
-            "importAttributes": "Importálja az NFT-attribútumokat",
-            "fileNotFound": "Sajnáljuk, a CSV-fájl nem található.",
-            "fileEmpty": "Sajnáljuk, a CSV-fájl üres.",
-            "userIdNotFound": "felhasználó létezik, de az azonosító üres",
-            "errorLine": "{{1}} sor",
-            "fieldNotFound": "A &quot; {{1}} &quot; kötelező mező nem található",
-            "displayTypeEmpty": "A &quot; {{1}} &quot; megjelenítési típusa nem található",
-            "taskStreamInvalid": "feladatfolyam érvénytelen",
-            "instructionsEmpty": "a feladatfolyam utasításai üresek",
-            "complete": "teljes",
-            "activateUsers": "aktiváló üzenetet küld a felhasználóknak?",
-            "importProgress": "Előrehalad",
-            "importOptions": "Lehetőségek",
-            "sampleCSV": "Töltse le a CSV-mintát",
-            "fileLabel": "Táblázat feltöltése:",
-            "errorsTitle": "Hibák történtek"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Szűrés NFT-gyűjtemények szerint",
-                "ShowNFTCollection": "NFT gyűjtemény megjelenítése itt...",
-                "AllCollections": "Minden gyűjtemény"
-            },
-            "ByUser": {
-                "AllAuthors": "Minden szerző",
-                "AllUsers": "Mindenki",
-                "FilterByAuthors": "Szűrés szerzők szerint"
-            }
-        },
-        "Back": "Vissza a gyűjteményhez",
-        "attributes": {
-            "Title": "Attribútumok kezelése",
-            "Attributes": "Attribútumok",
-            "DisplayTitle": "Kijelző típusa",
-            "AddDisplayType": "Új megjelenítési típus hozzáadása",
-            "NewDisplay": "Új kijelző",
-            "TraitTitle": "Tulajdonság típusa",
-            "AddTraitTitle": "Új tulajdonságtípus hozzáadása",
-            "NewTrait": "Új tulajdonságtípus",
-            "ValueTitle": "Érték",
-            "AddValueTitle": "Új érték hozzáadása",
-            "NewValue": "Új érték",
-            "NewAttribute": "Új attribútum",
-            "UpdateAttributes": "Attribútumok frissítése",
-            "SaveAttributes": "Attribútumok mentése"
-        },
-        "profile": {
-            "LogOut": "Kijelentkezés",
-            "Title": "Profil {{userName}} ért",
-            "Description": "Felhasználói adatok",
-            "aboutPlaceholder": "Életrajz szerkesztése",
-            "SureLogOut": "Biztos, hogy ki akar jelentkezni?",
-            "UploadCoverPhoto": "Borítókép feltöltése"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "sorozat Id",
-                        "owner": "Tulajdonos",
-                        "currency": "valuta",
-                        "price": "Ár",
-                        "beneficiary": "Kedvezményezett",
-                        "autoindex": "Autoindex",
-                        "duration": "Időtartam",
-                        "rateInterval": "Rate intervallum",
-                        "rateAmount": "Rate összeg"
-                    },
-                    "small": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "zsetonokat vernek ebben a sorozatban",
-                        "owner": "példány tulajdonosa, ellenkező esetben a feladó lesz",
-                        "currency": "A vásárolt tokenek pénzneme, ha nulla - a natív érmékre",
-                        "price": "Ár",
-                        "beneficiary": "A tokenek értékesítésének kedvezményezettje, ellenkező esetben a feladó lesz",
-                        "autoindex": "Autoindex",
-                        "duration": "Verés után zár. A nulla azt jelenti, hogy azonnal szerezze be.",
-                        "rateInterval": "vödör intervallum speciális vásárláshoz",
-                        "rateAmount": "vödör összeg speciális vásárláshoz"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(választható)",
-                    "number": "szám",
-                    "address": "cím",
-                    "fraction": "töredék",
-                    "integer": "egész szám",
-                    "seconds": "másodpercig",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Gyárt",
-                "viewInstancesList": "Lista frissítése"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "Sorozatazonosító",
-                        "account": "fiók",
-                        "amount": "Összeg"
-                    },
-                    "small": {
-                        "seriesId": "az új token ilyen azonosítójú sorozatba fog tartozni",
-                        "account": "az újonnan létrehozott NFT tulajdonosa. ha nincs beállítva - az aktuális pénztárcát használja",
-                        "amount": "összeg NFT a menta"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(választható)",
-                    "seriesId": "id",
-                    "account": "fiókot",
-                    "amount": "összeg",
-                    "integer": "egész szám"
-                },
-                "btn": {
-                    "Purchase": "Vásárlás",
-                    "SpecialPurchase": "Különleges vásárlás"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Cím"
-                    },
-                    "small": {
-                        "account": "Cím"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Helytelen cím"
-                },
-                "placeholders": {
-                    "account": "Cím"
-                },
-                "addToWhitelist": "Hozzáadás az engedélyezőlistához",
-                "removeFromWhitelist": "Eltávolítás az engedélyezési listáról"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "Token azonosító",
-                    "custodian": "Gondnok",
-                    "recipient": "Befogadó"
-                },
-                "small": {
-                    "tokenId": "token azonosító, amit zárni vagy feloldani kell",
-                    "custodian": "cím, amely feloldható",
-                    "recipient": "címet, amely a tokeneket kapja"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Érvénytelen tokenId",
-                "invalidCustodian": "Érvénytelen letétkezelő",
-                "invalidRecipient": "Érvénytelen címzett"
-            },
-            "placeholders": {
-                "optional": "(választható)",
-                "tokenId": "id",
-                "custodian": "cím"
-            },
-            "Lock": "Zár",
-            "Unlock": "Kinyit",
-            "Locked": "Zárt",
-            "CustodianAddress": "A letétkezelő címe",
-            "TokenWasClaimed": "A „ {{title}} ” tokent igényelték",
-            "TokenWasLocked": "A „ {{title}} ” token zárolva volt",
-            "TokenWasUnlocked": "A „ {{title}} ” token feloldva"
-        },
-        "GenerateDescription": "vagy automatikusan generál",
-        "collections": {
-            "Title": "Gyűjtemények",
-            "EnterTitle": "írja be a címet",
-            "EnterDescription": "írja be a leírást",
-            "NewCollection": "Új kollekció",
-            "Name": "Név",
-            "Icon": "Ikon",
-            "Description": "Leírás",
-            "Author": "Szerző",
-            "SelectCollection": "Válassza ki a gyűjteményt",
-            "Value": "Érték",
-            "AreYouSure": "biztos vagy ebben?",
-            "AuthorInvalid": "A szerző címe érvénytelen!",
-            "Address": "Cím",
-            "CoverImage": "Borítókép",
-            "UploadIcon": "Feltöltés ikon",
-            "CommissionAddressInvalid": "A megbízási cím érvénytelen",
-            "OnSale": "eladó",
-            "OffSale": "végkiárusítás",
-            "CreateCollection": "Gyűjtemény létrehozása",
-            "UpdateCollection": "Gyűjtemény frissítése",
-            "CollectionInfo": "Gyűjtemény Info",
-            "SelectAuthor": "Válasszon szerzőt",
-            "NewItem": "Új NFT kollekció",
-            "NamePlaceholder": "Adja meg a gyűjtemény nevét",
-            "DescPlaceholder": "Adja meg a gyűjtemény leírását",
-            "EndingIn": "Befejeződik",
-            "SubmitSeries": "Sorozat benyújtása"
-        }
-    },
-    "currencies": {
-        "choose": "Válasszon pénznemet"
-    },
-    "connectedAccount": {
-        "Title": "Csatlakoztassa a fiókot",
-        "Success": "Siker",
-        "YourAccountCreated": "Fiókja sikeresen létrejött!",
-        "YourAccountAlreadyCreated": "Fiókja már létrejött és használatra kész"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "tartalékToken",
-                        "amount": "Összeg"
-                    },
-                    "small": {
-                        "reserveToken": "tartalékToken",
-                        "amount": "Összeg"
-                    }
-                },
-                "placeholders": {
-                    "amount": "összeg"
-                },
-                "btns": {
-                    "stake": "Tét"
-                },
-                "stake": "Tét",
-                "loading": "Betöltés"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Időtartam",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "népszerűToken",
-                    "donations": "adományokat",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "számláló",
-                    "denominator": "névadó"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Időtartam napokban",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "népszerűToken",
-                    "donations": "adományokat",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "számláló",
-                    "denominator": "névadó"
-                }
-            },
-            "placeholders": {
-                "optional": "(választható)",
-                "tuple": "tuple[]",
-                "number": "szám",
-                "address": "cím",
-                "fraction": "töredék",
-                "integer": "egész szám",
-                "seconds": "másodpercig",
-                "days": "napok",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Nincsenek medencék"
-            },
-            "btns": {
-                "createPool": "Pool létrehozása",
-                "createPoolInForm": "Teremt"
-            },
-            "createPool": "Pool létrehozása",
-            "produce": "Gyárt",
-            "loading": "Betöltés",
-            "viewInstancesList": "Lista frissítése"
-        }
-    },
-    "fundrise": {
-        "placeholder": "írj valamit erről a hozzájárulásról..."
-    }
+	"errors": {
+		"Error": "Hiba",
+		"WalletAbsent": "A p\u00e9nzt\u00e1rca nincs csatlakoztatva.",
+		"Rendering": "Hiba t\u00f6rt\u00e9nt <span class='url'>{{1}}</span> renderel\u00e9se k\u00f6zben",
+		"PriceRequired": "\u00c1r k\u00f6telez\u0151!",
+		"NameRequired": "N\u00e9v (sz\u00fcks\u00e9ges!",
+		"PriceInvalid": "Az \u00e1r \u00e9rv\u00e9nytelen!",
+		"AmountInvalid": "Az \u00f6sszeg \u00e9rv\u00e9nytelen!",
+		"TransactionFailed": "Sikertelen tranzakci\u00f3",
+		"ChainNotSupported": "A kiv\u00e1lasztott l\u00e1nc nem t\u00e1mogatott. T\u00e1mogatott l\u00e1nc: {{supportedChain}}",
+		"NeedMetaMaskConnected": "Az alkalmaz\u00e1s haszn\u00e1lat\u00e1hoz csatlakoztatva kell lennie a MetaMask-nak",
+		"UserNotLoggedInMetaMask": "A felhaszn\u00e1l\u00f3 nincs bejelentkezve a MetaMask-ba",
+		"CurrencyNotFound": "A p\u00e9nznem nem tal\u00e1lhat\u00f3",
+		"WrongChain": "Ez az NFT \u201e {{chain}} \u201d alatt j\u00f6tt l\u00e9tre. K\u00e9rj\u00fck, haszn\u00e1lja ezt a l\u00e1ncot.",
+		"NoRecipientSelected": "Nincs kiv\u00e1lasztott c\u00edmzett",
+		"NotEnoughPermissionsWallet": "Nincs elegend\u0151 enged\u00e9ly a felhaszn\u00e1l\u00f3 p\u00e9nzt\u00e1rc\u00e1j\u00e1nak olvas\u00e1s\u00e1hoz",
+		"ThisUserHaveNoWallet": "Ehhez a felhaszn\u00e1l\u00f3hoz nincs hozz\u00e1rendelve p\u00e9nzt\u00e1rca",
+		"TheWalletOfThisUserInvalid": "A felhaszn\u00e1l\u00f3 p\u00e9nzt\u00e1rc\u00e1ja \u00e9rv\u00e9nytelen",
+		"WalletInvalid": "A Wallet-c\u00edm \u00e9rv\u00e9nytelen",
+		"CantManageFrozenSeries": "A fagyasztott sorozatokat nem tudod kezelni",
+		"SubscriptionStreamNotPaid": "Nem fizetett a tartalom megtekint\u00e9s\u00e9hez. K\u00e9rj\u00fck, kattintson {{subscriptionUrl}} , \u00e9s iratkozzon fel a megfelel\u0151 csomagra."
+	},
+	"admin": {
+		"Title": "Vagyonkezel\u00e9s",
+		"SubscriptionTitle": "El\u0151fizet\u00e9si tervek"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Koppintson a fizet\u00e9shez"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : {{call 'user.displayName'}} \u00e9rt feldolgozott terhel\u00e9s",
+		"ThankYouForYourPayment": "K\u00f6sz\u00f6nj\u00fck a {{call 'publisher.displayName'}} es befizet\u00e9st",
+		"SubscribedTo": "{{call 'user.displayName'}} el\u0151fizetett az {{plan.title}}",
+		"YouSubscribedTo": "Feliratkozott a {{plan.title}}",
+		"Assets/credits/alert": "Fi\u00f3kj\u00e1hoz kapcsol\u00f3d\u00f3 figyelmeztet\u00e9s \u00e9rkezett"
+	},
+	"charge": {
+		"Subject": "{{displayAmount}} et kapsz {{call 'publisher.displayName'}} r\u0151l &quot; {{description}} &quot;-re",
+		"HasBeenCharged": "H\u00e9, ez csak az\u00e9rt van, hogy tudd, {{1}} {{2}} et {{3}} \u00e9rt {{4}}"
+	},
+	"charged": {
+		"Subject": "K\u00f6sz\u00f6nj\u00fck, hogy befizette a &quot; {{description}} &quot;-et",
+		"HavePaid": "H\u00e9 {{1}} , ez csak egy gyors meger\u0151s\u00edt\u00e9s, hogy sikeresen kifizette {{2}} t\u0151l {{3}} ig {{4}} \u00e9rt"
+	},
+	"payment": {
+		"AboutOrder": "Inform\u00e1ci\u00f3 a rendel\u00e9sr\u0151l",
+		"PaymentMethod": "Fizet\u00e9si m\u00f3d",
+		"ContactInfo": "El\u00e9rhet\u0151s\u00e9gei",
+		"Pay": "Fizet\u00e9s",
+		"PaymentSucceeded": "A fizet\u00e9s siker\u00fclt",
+		"PaymentProcessing.": "Befizet\u00e9se feldolgoz\u00e1s alatt \u00e1ll",
+		"FailTryAgain": "A fizet\u00e9s sikertelen volt, k\u00e9rj\u00fck, pr\u00f3b\u00e1lja \u00fajra",
+		"SomethingWrong": "Valami elromlott",
+		"PaymentStatus": "Fizet\u00e9si \u00e1llapot",
+		"PayTo": "Fizessen {{displayName}} et",
+		"ChooseCurrency": "V\u00e1lasszon p\u00e9nznemet",
+		"YouCanSendUpTo": "Legfeljebb {{amount}} {{symbol}} et k\u00fcldhet",
+		"Send": "K\u00fcld",
+		"EnterAmount": "adja meg az \u00f6sszeget"
+	},
+	"credits": {
+		"InviteAcceptedBy": "A megh\u00edv\u00e1st {{invitedUserName}} fogadta el",
+		"InvitedUserFilledStream": "{{invitedUserName}} t\u00f6lt\u00f6tt {{FilledStreamTitle}}",
+		"ForFillingStream": "{{FilledStreamTitle}} t\u00f6lt\u00e9s\u00e9hez",
+		"YouHaveCreditsToStart": "{{amount}} kredited van a kezd\u00e9shez",
+		"PaymentFor": "Fizet\u00e9s &quot; {{1}} &quot;",
+		"PaymentTo": "Fizet\u00e9s {{1}} -ig",
+		"PaymentToUser": "Fizet\u00e9s {{toUserName}} -ig",
+		"CreatePrivateChat": "priv\u00e1t cseveg\u00e9sre {{toUserName}} el",
+		"CreatePaidStream": "{{toStreamName}} l\u00e9trehoz\u00e1s\u00e1hoz",
+		"JoinedPaidStream": "foglal\u00e1shoz in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "a &quot; {{communityId}} &quot; k\u00f6z\u00f6ss\u00e9g l\u00e9trehoz\u00e1s\u00e1\u00e9rt",
+		"LeftPaidStream": "foglal\u00e1s visszat\u00e9r\u00edt\u00e9sk\u00e9nt itt: &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "{{amount}} kreditet v\u00e1s\u00e1rolt",
+		"BonusCredits": "B\u00f3nusz {{amount}} kredit",
+		"BuyAmountCredits": "V\u00e1s\u00e1roljon {{amount}} kreditet",
+		"WatchClip": "{{amount}} kreditet szerzett {{fromStreamTitle}} megtekint\u00e9s\u00e9\u00e9rt",
+		"MissingCredits": "Hi\u00e1nyz\u00f3 kreditek",
+		"YouMissingCredits": "Tov\u00e1bbi {{amount}} {{currency}} \u00e9rt\u00e9k\u0171 kreditre van sz\u00fcks\u00e9ged a folytat\u00e1shoz.",
+		"BuyCredits": "V\u00e1s\u00e1roljon krediteket",
+		"BuyBonus": "Ha egyszerre {{amount}} kreditet v\u00e1s\u00e1rol, {{bonus}} kredit b\u00f3nuszhoz vezet.",
+		"Buy": "megvesz",
+		"PurchaseCredits": "V\u00e1s\u00e1rl\u00e1si kreditek",
+		"Credits": "Kredit",
+		"ErrorInvalidAmount": "Az \u00f6sszeg \u00e9rv\u00e9nytelen",
+		"ErrorInvalidCurrency": "Sajnos m\u00e9g nem t\u00e1mogatjuk a {{currency}} valut\u00e1t",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} kredit",
+			"BonusCredits": "{{amount}} kredit"
+		}
+	},
+	"history": {
+		"Date": "D\u00e1tum",
+		"Amount": "\u00d6sszeg",
+		"Description": "Le\u00edr\u00e1s",
+		"Client": "\u00dcgyf\u00e9l",
+		"User": "Felhaszn\u00e1l\u00f3",
+		"To": "nak nek",
+		"From": "t\u00f3l t\u0151l",
+		"SeeHistory": "Tekintse meg a {{1}} fizet\u00e9si el\u0151zm\u00e9nyeit",
+		"HistoryEmpty": "M\u00e9g nincsenek adatok",
+		"PaymentFor": "{{amount}} kreditet k\u00fcldtek",
+		"PaymentTo": "{{amount}} kreditet k\u00fcldtek",
+		"PaymentToUser": "{{amount}} kreditet k\u00fcldtek",
+		"CreatePaidStream": "{{amount}} kreditet k\u00f6lt\u00f6tt el",
+		"WatchClip": {
+			"+": "{{amount}} kreditet szerzett",
+			"-": "{{amount}} kreditet k\u00f6lt\u00f6tt el"
+		},
+		"JoinedPaidStream": {
+			"+": "{{amount}} kreditet szerzett",
+			"-": "{{amount}} kreditet k\u00f6lt\u00f6tt el"
+		},
+		"LeftPaidStream": {
+			"+": "{{amount}} kreditet kapott",
+			"-": "{{amount}} kreditet k\u00fcldtek"
+		},
+		"CreatedCommunity": "{{amount}} kreditet k\u00f6lt\u00f6tt el",
+		"BoughtCredits": "{{amount}} kreditet v\u00e1s\u00e1rolt",
+		"BonusCredits": "{{amount}} kreditet kapott",
+		"InviteAcceptedBy": "{{amount}} kreditet szerzett",
+		"Streams_user_firstname": "{{amount}} kreditet szerzett",
+		"Streams_user_lastname": "{{amount}} kreditet szerzett",
+		"Streams_user_icon": "{{amount}} kreditet szerzett",
+		"Places_user_location": "{{amount}} kreditet szerzett",
+		"Streams_greeting": "{{amount}} kreditet szerzett",
+		"YouHaveCreditsToStart": "{{amount}} kreditet szerzett",
+		"InvitedUserFilledStream": "{{amount}} kreditet szerzett",
+		"ForFillingStream": "{{amount}} kreditet szerzett",
+		"CreatePrivateChat": "{{amount}} kreditet k\u00f6lt\u00f6tt el"
+	},
+	"subscriptions": {
+		"infoTitle": "\u00c1ll\u00edtsa be a fizet\u00e9si inform\u00e1ci\u00f3kat",
+		"confirm": {
+			"title": "Ind\u00edtsa el az el\u0151fizet\u00e9st",
+			"message": "Ind\u00edt egy ism\u00e9tl\u0151d\u0151 el\u0151fizet\u00e9st a &quot; {{title}} &quot;-re?",
+			"ok": "rendben",
+			"cancel": "Megsz\u00fcnteti"
+		},
+		"CreditOrDebitCard": "Hitel- vagy bet\u00e9ti k\u00e1rtya",
+		"SubscribePayment": "El\u0151fizet\u00e9s Fizet\u00e9s",
+		"ImmediatePayment": "Azonnali fizet\u00e9s",
+		"ProcessingPayment": "Fizet\u00e9s feldolgoz\u00e1sa",
+		"SubscriptionAlreadyPaid": "Ez az el\u0151fizet\u00e9s m\u00e1r ki van fizetve",
+		"SubscriptionNotActive": "Ez az el\u0151fizet\u00e9s nem akt\u00edv",
+		"Subscribed": "El\u0151fizetve",
+		"Unsubscribed": "Leiratkozott",
+		"Unsubscribe": "Leiratkoz\u00e1s",
+		"Subscribe": "Iratkozz fel",
+		"Started": "Elindult",
+		"EndsIn": "-ben v\u00e9gz\u0151dik",
+		"NextPay": "K\u00f6vetkez\u0151 fizet\u00e9s",
+		"Period": "Id\u0151szak",
+		"Price": "\u00c1r",
+		"AreYouSureUnsubscribe": "Biztosan leiratkozik err\u0151l a csomagr\u00f3l?",
+		"YouUnsubscribedFromPlan": "Leiratkozott a \u201e {{planTitle}} \u201d el\u0151fizet\u00e9sr\u0151l. Nem kell fizetnie, de el\u0151fizet\u00e9se {{endsIn}} -ig tart",
+		"plan": {
+			"TitlePlaceholder": "terv c\u00edme",
+			"PricePlaceholder": "\u00e1r",
+			"DescriptionPlaceholder": "el\u0151fizet\u00e9si terv le\u00edr\u00e1sa",
+			"SavePlan": "Terv ment\u00e9se",
+			"NewPlan": "\u00daj terv",
+			"SubscriptionTitle": "El\u0151fizet\u00e9si tervek",
+			"AreYouSureDeletePlan": "Biztosan t\u00f6rli ezt a tervet?",
+			"Duration": "Id\u0151tartam",
+			"Discount": "Kedvezm\u00e9ny",
+			"Interrupt": "Megszak\u00edt\u00e1s",
+			"Continue": "Folytatni",
+			"SelectDisplayType": "V\u00e1lassza {{displayType}}",
+			"EndDate": "befejez\u00e9s d\u00e1tuma",
+			"Available": "El\u00e9rhet\u0151",
+			"Hidden": "Rejtett",
+			"InviteOnly": "Csak megh\u00edv\u00e1ssal",
+			"CantSubscribeUnlessInvited": "Nem fizethet el\u0151 erre a csomagra, hacsak nem kapt\u00e1l megh\u00edv\u00e1st"
+		}
+	},
+	"payments": {
+		"infoTitle": "\u00c1ll\u00edtsa be a fizet\u00e9si inform\u00e1ci\u00f3kat",
+		"BuyAmountCredits": "V\u00e1s\u00e1roljon {{amount}} kreditet",
+		"confirm": {
+			"title": "Fizetni",
+			"message": "Egyet\u00e9rtesz {{symbol}} {{amount}} fizet\u00e9ssel?",
+			"ok": "rendben",
+			"cancel": "Megsz\u00fcnteti"
+		},
+		"reasons": {
+			"BuyCredits": "V\u00e1s\u00e1roljon krediteket"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "Kredit",
+			"description": "nyomon k\u00f6veti a j\u00f3v\u00e1\u00edr\u00e1sokat \u00e9s a kifizet\u00e9seket"
+		},
+		"Assets/plan": {
+			"displayType": "El\u0151fizet\u00e9si terv",
+			"description": "el\u0151fizet\u00e9si terv"
+		},
+		"Assets/subscription": {
+			"displayType": "Feliratkoz\u00e1s",
+			"description": "Feliratkoz\u00e1s"
+		},
+		"Assets/product": {
+			"displayType": "Term\u00e9k",
+			"description": "\u00e1rus\u00edtott term\u00e9k"
+		},
+		"Assets/service": {
+			"displayType": "Szolg\u00e1ltat\u00e1s",
+			"description": "k\u00edn\u00e1lt szolg\u00e1ltat\u00e1st"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "{{amount}} kreditet szerzett"
+		},
+		"Assets/credits/bought": {
+			"content": "{{amount}} kreditet v\u00e1s\u00e1rolt"
+		},
+		"Assets/credits/bonus": {
+			"content": "B\u00f3nusz {{amount}} kredit"
+		},
+		"Assets/credits/spent": {
+			"content": "{{amount}} kreditet k\u00f6lt\u00f6tt el"
+		},
+		"Assets/credits/sent": {
+			"content": "{{amount}} kreditet k\u00fcldtek {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "{{amount}} kreditet kapott {{fromUserName}} b\u0151l"
+		},
+		"Assets/credits/alert": {
+			"content": "Kev\u00e9s j\u00f3v\u00e1\u00edr\u00e1s van a sz\u00e1ml\u00e1j\u00e1n. Tov\u00e1bbi kreditek v\u00e1s\u00e1rl\u00e1s\u00e1hoz k\u00e9rj\u00fck, l\u00e1togassa meg <a href='<i translate='no'>999 &#39;&gt;ezt a linket</a> ."
+		}
+	},
+	"billing": {
+		"Title": "Eszk\u00f6z\u00f6k sz\u00e1ml\u00e1z\u00e1sa",
+		"CreditsMinimum": "Minim\u00e1lis kredit",
+		"CreditsToAdd": "Hozz\u00e1adand\u00f3 kreditek",
+		"Save": "Megment",
+		"ThisLink": "ez a link",
+		"errors": {
+			"CreditsMinimumNegative": "A kreditek minimuma nem lehet negat\u00edv",
+			"CreditsToAddNegative": "A hozz\u00e1adand\u00f3 j\u00f3v\u00e1\u00edr\u00e1sok nem lehetnek negat\u00edvak"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "\u00daj szolg\u00e1ltat\u00e1s",
+			"TitlePlaceholder": "Szolg\u00e1ltat\u00e1s c\u00edme",
+			"PricePlaceholder": "\u00c1ll\u00edtsa be az \u00e1rat",
+			"LinkPlaceholder": "tov\u00e1bbi inform\u00e1ci\u00f3s link be\u00e1ll\u00edt\u00e1sa",
+			"DescriptionPlaceholder": "Szolg\u00e1ltat\u00e1s le\u00edr\u00e1sa",
+			"SaveService": "Szolg\u00e1ltat\u00e1s ment\u00e9se",
+			"SelectRequiredParticipants": "Sz\u00fcks\u00e9ges kapcsol\u00f3d\u00f3 r\u00e9sztvev\u0151k",
+			"RequiredParticipantsDesc": "K\u00e9rj\u00fck, v\u00e1lassza ki azokat a kapcsol\u00f3d\u00f3 r\u00e9sztvev\u0151ket, akikre sz\u00fcks\u00e9g van a szolg\u00e1ltat\u00e1s haszn\u00e1lat\u00e1hoz (p\u00e9ld\u00e1ul h\u00e1zi\u00e1llatok a &quot;Kutyaki\u00e1ll\u00edt\u00e1shoz&quot;, vagy gyermekek a &quot;Gyermek\u00fcnnephez&quot; stb.). Fizet\u0151s szolg\u00e1ltat\u00e1s eset\u00e9n a felhaszn\u00e1l\u00f3nak minden kapcsol\u00f3d\u00f3 r\u00e9sztvev\u0151\u00e9rt is fizetnie kell."
+		},
+		"EditServiceTemplate": {
+			"Title": "Szolg\u00e1ltat\u00e1s szerkeszt\u00e9se"
+		},
+		"ManageServiceTemplates": "Szolg\u00e1ltat\u00e1ssablonok kezel\u00e9se",
+		"ManageServices": "Szolg\u00e1ltat\u00e1sok kezel\u00e9se",
+		"Free": "Ingyenes",
+		"OptionalContribution": "V\u00e1laszthat\u00f3 hozz\u00e1j\u00e1rul\u00e1s",
+		"RequiredPayment": "K\u00f6telez\u0151 fizet\u00e9s",
+		"AreYouSureDelete": "Biztosan t\u00f6rli ezt a szolg\u00e1ltat\u00e1st?",
+		"AmountServicesRelated": "{{amount}} el\u00e9rhet\u0151s\u00e9g kapcsol\u00f3dik ehhez a szolg\u00e1ltat\u00e1shoz. Ezeket is elt\u00e1vol\u00edtj\u00e1k."
+	},
+	"transfer": {
+		"SelectRecipient": "V\u00e1lassza ki a c\u00edmzettet",
+		"TransactionSuccess": "A tranzakci\u00f3 sikere",
+		"OrTypeWalletAddress": "VAGY \u00edrja be a c\u00edmzett p\u00e9nzt\u00e1rca c\u00edm\u00e9t",
+		"AppCredits": "Alkalmaz\u00e1s kreditek"
+	},
+	"NFT": {
+		"Title": "C\u00edm",
+		"Name": "N\u00e9v",
+		"EnterName": "\u00cdrja be a nevet",
+		"EnterAuthorWallet": "\u00cdrja be a szerz\u0151i p\u00e9nzt\u00e1rc\u00e1t",
+		"InformationAboutTitle": "Inform\u00e1ci\u00f3 {{title}} NFT-r\u0151l",
+		"Description": "Le\u00edr\u00e1s",
+		"DetailedInformationAboutNFT": "R\u00e9szletes inform\u00e1ci\u00f3k az NFT-r\u0151l",
+		"PresaleStarts": "Az el\u0151v\u00e9tel december 23-\u00e1n kezd\u0151dik",
+		"OwnerUserNotFound": "Ennek az NFT-nek a tulajdonosa nincs regisztr\u00e1lva az alkalmaz\u00e1sunkban.",
+		"BuyNow": "V\u00e1s\u00e1rolj most",
+		"Buy": "megvesz",
+		"Add": "Hozz\u00e1ad\u00e1s",
+		"Remove": "T\u00e1vol\u00edtsa el",
+		"NoNFTyet": "M\u00e9g nincsenek NFT-k",
+		"Conversation": "Besz\u00e9lget\u00e9s",
+		"Create": "Teremt",
+		"CurrentBid": "Jelenlegi aj\u00e1nlat",
+		"StartingIn": "Kezdve",
+		"EndingIn": "Befejez\u0151dik",
+		"CreateNFT": "Hozzon l\u00e9tre egy NFT-t",
+		"TitlePlaceholder": "Adjon c\u00edmet az NFT-nek",
+		"DescriptionPlaceholder": "Adja meg az NFT le\u00edr\u00e1s\u00e1t",
+		"CreateYourNFT": "K\u00e9sz\u00edtse el NFT-j\u00e9t",
+		"Royalties": "Jogd\u00edjak",
+		"RoyaltyPlaceholder": "V\u00e1laszthat\u00f3. Az \u00e1tutal\u00e1s el\u0151tt az alkot\u00f3nak fizetett \u00f6sszeg.",
+		"ExpirationDate": "Lej\u00e1rati d\u00e1tum",
+		"StartingDate": "Kezd\u0151 d\u00e1tum",
+		"BidsBelowThisAmount": "Enn\u00e9l az \u00f6sszegn\u00e9l alacsonyabb aj\u00e1nlatok nem enged\u00e9lyezettek",
+		"MinimumBid": "Minim\u00e1lis aj\u00e1nlat",
+		"Author": "Szerz\u0151",
+		"Price": "\u00c1r",
+		"Commission": "jutal\u00e9k",
+		"EnterCommission": "Adja meg a jutal\u00e9kot",
+		"Owner": "Tulajdonos",
+		"SelectCategory": "V\u00e1lassz kateg\u00f3ri\u00e1t",
+		"Day": "Nap",
+		"Days": "Napok",
+		"Hour": "\u00d3ra",
+		"Hours": "\u00d3r\u00e1k",
+		"Minute": "Perc",
+		"Minutes": "Percek",
+		"Second": "M\u00e1sodik",
+		"Seconds": "M\u00e1sodpercek",
+		"SalesCreator": "az \u00e9rt\u00e9kes\u00edt\u00e9sb\u0151l az alkot\u00f3 kapja",
+		"Details": "R\u00e9szletek",
+		"Bids": "Aj\u00e1nlatok",
+		"History": "T\u00f6rt\u00e9nelem",
+		"LoremIpsum": "A Lorem Ipsum egyszer\u0171en \u00e1lsz\u00f6veg a nyomda- \u00e9s szed\u0151iparban.",
+		"PutOnSale": "Elad\u00f3",
+		"PutOffSale": "Kil\u00e9p\u00e9s az \u00e9rt\u00e9kes\u00edt\u00e9sb\u0151l",
+		"Transfer": "\u00c1truh\u00e1z\u00e1s",
+		"Actions": "Akci\u00f3k",
+		"Claim": "K\u00f6vetel\u00e9s",
+		"ClaimNFT": "NFT ig\u00e9nyl\u00e9se",
+		"Unlocking": "Felold\u00e1s",
+		"Unlock": "Kinyit",
+		"Update": "Friss\u00edt\u00e9s",
+		"UpdateToken": "Token friss\u00edt\u00e9se",
+		"UpdateNFT": "Friss\u00edtse az NFT-t",
+		"CreateToken": "Token l\u00e9trehoz\u00e1sa",
+		"PlaceBid": "Aj\u00e1nlatt\u00e9tel",
+		"SoldOut": "Eladott",
+		"NotOnSale": "Nem elad\u00f3",
+		"NftName": "NFT n\u00e9v",
+		"DescribeYourNFT": "K\u00e9rj\u00fck, \u00edrja le az NFT-j\u00e9t",
+		"NFTImage": "K\u00e9p az NFT-hez",
+		"NFTVideo": "Vide\u00f3 NFT-hez, ha van",
+		"UploadMovie": "Film felt\u00f6lt\u00e9se",
+		"MovieSource": "Film Forr\u00e1s",
+		"MovieURL": "Film URL",
+		"UploadFile": "Felt\u00f6lteni egy f\u00e1jlt",
+		"PutOnMarketplace": "Tedd piacra",
+		"InstantPurchase": "Adja meg az \u00e1rat, hogy a felhaszn\u00e1l\u00f3k azonnal megv\u00e1s\u00e1rolhass\u00e1k NFT-j\u00e9t",
+		"FixedPrice": "Fix \u00e1ron",
+		"TimedAuction": "Id\u0151z\u00edtett aukci\u00f3",
+		"OpenForBids": "Nyitva licitekre",
+		"PriceOnePiece": "Adja meg egy darab \u00e1r\u00e1t",
+		"EnterPrice": "Adja meg az \u00e1rat",
+		"EnterMinimumBid": "Adja meg a Minim\u00e1lis aj\u00e1nlatot",
+		"SelectChain": "V\u00e1lassza ki a l\u00e1ncot",
+		"Currency": "Valuta",
+		"AreYouSureDeleteImage": "Biztosan elt\u00e1vol\u00edtja a k\u00e9pet?",
+		"AreYouSureDeleteVideo": "Biztosan elt\u00e1vol\u00edtod a vide\u00f3t?",
+		"series": {
+			"Name": "N\u00e9v",
+			"Icon": "Ikon",
+			"Description": "Le\u00edr\u00e1s",
+			"Author": "Szerz\u0151",
+			"SelectSeries": "Sorozat kiv\u00e1laszt\u00e1sa",
+			"Value": "\u00c9rt\u00e9k",
+			"AreYouSure": "biztos vagy ebben?",
+			"AuthorInvalid": "A szerz\u0151 c\u00edme \u00e9rv\u00e9nytelen!",
+			"Address": "C\u00edm",
+			"CoverImage": "Bor\u00edt\u00f3k\u00e9p",
+			"UploadCoverImage": "Bor\u00edt\u00f3k\u00e9p felt\u00f6lt\u00e9se",
+			"CommissionAddressInvalid": "A megb\u00edz\u00e1si c\u00edm \u00e9rv\u00e9nytelen",
+			"OnSale": "elad\u00f3",
+			"OffSale": "v\u00e9gki\u00e1rus\u00edt\u00e1s",
+			"CreateSeries": "Sorozat l\u00e9trehoz\u00e1sa",
+			"UpdateSeries": "Sorozat friss\u00edt\u00e9se",
+			"SeriesInfo": "sorozat info",
+			"SelectAuthor": "V\u00e1lasszon szerz\u0151t",
+			"NewItem": "\u00daj NFT sorozat",
+			"NamePlaceholder": "\u00cdrja be a sorozat nev\u00e9t",
+			"DescPlaceholder": "Adja meg a sorozat le\u00edr\u00e1s\u00e1t",
+			"EndingIn": "Befejez\u0151dik"
+		},
+		"contract": {
+			"CreateContract": "Hozzon l\u00e9tre szerz\u0151d\u00e9st",
+			"SelectContract": "V\u00e1lassza ki a szerz\u0151d\u00e9st",
+			"CreateContractFor": "Hozzon l\u00e9tre szerz\u0151d\u00e9st {{userName}}",
+			"ContractFor": "{{userName}} forintos szerz\u0151d\u00e9s",
+			"UpdateContract": "Szerz\u0151d\u00e9s friss\u00edt\u00e9se",
+			"TransferOwnership": "\u00c1truh\u00e1zza a tulajdonjogot",
+			"SetBaseURI": "\u00c1ll\u00edtsa be az alap URI-t",
+			"SetSuffix": "Ut\u00f3tag be\u00e1ll\u00edt\u00e1sa",
+			"CurrentOwner": "Jelenlegi tulajdonos",
+			"CurrentBaseURL": "Jelenlegi BaseURL",
+			"ContractAddressAbsent": "A szerz\u0151d\u00e9s c\u00edme hi\u00e1nyzik",
+			"FactoryAddressAbsent": "A gy\u00e1ri c\u00edm hi\u00e1nyzik",
+			"ContractName": "{{contractName}} ( {{contractSymbol}} {{chainNetwork}}",
+			"TitleRequired": "C\u00edm k\u00f6telez\u0151",
+			"SymbolRequired": "Szimb\u00f3lum sz\u00fcks\u00e9ges",
+			"TypeContractName": "szerz\u0151d\u00e9s neve",
+			"TypeContractSymbol": "szerz\u0151d\u00e9s szimb\u00f3lum (max 10 karakter)"
+		},
+		"contests": {
+			"Title": "Versenyek",
+			"NewContest": "\u00daj verseny"
+		},
+		"import": {
+			"importNFT": "NFT-k import\u00e1l\u00e1sa",
+			"importAttributes": "Import\u00e1lja az NFT-attrib\u00fatumokat",
+			"fileNotFound": "Sajn\u00e1ljuk, a CSV-f\u00e1jl nem tal\u00e1lhat\u00f3.",
+			"fileEmpty": "Sajn\u00e1ljuk, a CSV-f\u00e1jl \u00fcres.",
+			"userIdNotFound": "felhaszn\u00e1l\u00f3 l\u00e9tezik, de az azonos\u00edt\u00f3 \u00fcres",
+			"errorLine": "{{1}} sor",
+			"fieldNotFound": "A &quot; {{1}} &quot; k\u00f6telez\u0151 mez\u0151 nem tal\u00e1lhat\u00f3",
+			"displayTypeEmpty": "A &quot; {{1}} &quot; megjelen\u00edt\u00e9si t\u00edpusa nem tal\u00e1lhat\u00f3",
+			"taskStreamInvalid": "feladatfolyam \u00e9rv\u00e9nytelen",
+			"instructionsEmpty": "a feladatfolyam utas\u00edt\u00e1sai \u00fcresek",
+			"complete": "teljes",
+			"activateUsers": "aktiv\u00e1l\u00f3 \u00fczenetet k\u00fcld a felhaszn\u00e1l\u00f3knak?",
+			"importProgress": "El\u0151rehalad",
+			"importOptions": "Lehet\u0151s\u00e9gek",
+			"sampleCSV": "T\u00f6ltse le a CSV-mint\u00e1t",
+			"fileLabel": "T\u00e1bl\u00e1zat felt\u00f6lt\u00e9se:",
+			"errorsTitle": "Hib\u00e1k t\u00f6rt\u00e9ntek"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "Sz\u0171r\u00e9s NFT-gy\u0171jtem\u00e9nyek szerint",
+				"ShowNFTCollection": "NFT gy\u0171jtem\u00e9ny megjelen\u00edt\u00e9se itt...",
+				"AllCollections": "Minden gy\u0171jtem\u00e9ny"
+			},
+			"ByUser": {
+				"AllAuthors": "Minden szerz\u0151",
+				"AllUsers": "Mindenki",
+				"FilterByAuthors": "Sz\u0171r\u00e9s szerz\u0151k szerint"
+			}
+		},
+		"Back": "Vissza a gy\u0171jtem\u00e9nyhez",
+		"attributes": {
+			"Title": "Attrib\u00fatumok kezel\u00e9se",
+			"Attributes": "Attrib\u00fatumok",
+			"DisplayTitle": "Kijelz\u0151 t\u00edpusa",
+			"AddDisplayType": "\u00daj megjelen\u00edt\u00e9si t\u00edpus hozz\u00e1ad\u00e1sa",
+			"NewDisplay": "\u00daj kijelz\u0151",
+			"TraitTitle": "Tulajdons\u00e1g t\u00edpusa",
+			"AddTraitTitle": "\u00daj tulajdons\u00e1gt\u00edpus hozz\u00e1ad\u00e1sa",
+			"NewTrait": "\u00daj tulajdons\u00e1gt\u00edpus",
+			"ValueTitle": "\u00c9rt\u00e9k",
+			"AddValueTitle": "\u00daj \u00e9rt\u00e9k hozz\u00e1ad\u00e1sa",
+			"NewValue": "\u00daj \u00e9rt\u00e9k",
+			"NewAttribute": "\u00daj attrib\u00fatum",
+			"UpdateAttributes": "Attrib\u00fatumok friss\u00edt\u00e9se",
+			"SaveAttributes": "Attrib\u00fatumok ment\u00e9se"
+		},
+		"profile": {
+			"LogOut": "Kijelentkez\u00e9s",
+			"Title": "Profil {{userName}} \u00e9rt",
+			"Description": "Felhaszn\u00e1l\u00f3i adatok",
+			"aboutPlaceholder": "\u00c9letrajz szerkeszt\u00e9se",
+			"SureLogOut": "Biztos, hogy ki akar jelentkezni?",
+			"UploadCoverPhoto": "Bor\u00edt\u00f3k\u00e9p felt\u00f6lt\u00e9se"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFTContract",
+						"seriesId": "sorozat Id",
+						"owner": "Tulajdonos",
+						"currency": "valuta",
+						"price": "\u00c1r",
+						"beneficiary": "Kedvezm\u00e9nyezett",
+						"autoindex": "Autoindex",
+						"duration": "Id\u0151tartam",
+						"rateInterval": "Rate intervallum",
+						"rateAmount": "Rate \u00f6sszeg"
+					},
+					"small": {
+						"NFTContract": "NFTContract",
+						"seriesId": "zsetonokat vernek ebben a sorozatban",
+						"owner": "p\u00e9ld\u00e1ny tulajdonosa, ellenkez\u0151 esetben a felad\u00f3 lesz",
+						"currency": "A v\u00e1s\u00e1rolt tokenek p\u00e9nzneme, ha nulla - a nat\u00edv \u00e9rm\u00e9kre",
+						"price": "\u00c1r",
+						"beneficiary": "A tokenek \u00e9rt\u00e9kes\u00edt\u00e9s\u00e9nek kedvezm\u00e9nyezettje, ellenkez\u0151 esetben a felad\u00f3 lesz",
+						"autoindex": "Autoindex",
+						"duration": "Ver\u00e9s ut\u00e1n z\u00e1r. A nulla azt jelenti, hogy azonnal szerezze be.",
+						"rateInterval": "v\u00f6d\u00f6r intervallum speci\u00e1lis v\u00e1s\u00e1rl\u00e1shoz",
+						"rateAmount": "v\u00f6d\u00f6r \u00f6sszeg speci\u00e1lis v\u00e1s\u00e1rl\u00e1shoz"
+					}
+				},
+				"placeholders": {
+					"optional": "(v\u00e1laszthat\u00f3)",
+					"number": "sz\u00e1m",
+					"address": "c\u00edm",
+					"fraction": "t\u00f6red\u00e9k",
+					"integer": "eg\u00e9sz sz\u00e1m",
+					"seconds": "m\u00e1sodpercig",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "Gy\u00e1rt",
+				"viewInstancesList": "Lista friss\u00edt\u00e9se"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "Sorozatazonos\u00edt\u00f3",
+						"account": "fi\u00f3k",
+						"amount": "\u00d6sszeg"
+					},
+					"small": {
+						"seriesId": "az \u00faj token ilyen azonos\u00edt\u00f3j\u00fa sorozatba fog tartozni",
+						"account": "az \u00fajonnan l\u00e9trehozott NFT tulajdonosa. ha nincs be\u00e1ll\u00edtva - az aktu\u00e1lis p\u00e9nzt\u00e1rc\u00e1t haszn\u00e1lja",
+						"amount": "\u00f6sszeg NFT a menta"
+					}
+				},
+				"placeholders": {
+					"optional": "(v\u00e1laszthat\u00f3)",
+					"seriesId": "id",
+					"account": "fi\u00f3kot",
+					"amount": "\u00f6sszeg",
+					"integer": "eg\u00e9sz sz\u00e1m"
+				},
+				"btn": {
+					"Purchase": "V\u00e1s\u00e1rl\u00e1s",
+					"SpecialPurchase": "K\u00fcl\u00f6nleges v\u00e1s\u00e1rl\u00e1s"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "C\u00edm"
+					},
+					"small": {
+						"account": "C\u00edm"
+					}
+				},
+				"errors": {
+					"invalidAddress": "Helytelen c\u00edm"
+				},
+				"placeholders": {
+					"account": "C\u00edm"
+				},
+				"addToWhitelist": "Hozz\u00e1ad\u00e1s az enged\u00e9lyez\u0151list\u00e1hoz",
+				"removeFromWhitelist": "Elt\u00e1vol\u00edt\u00e1s az enged\u00e9lyez\u00e9si list\u00e1r\u00f3l"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "Token azonos\u00edt\u00f3",
+					"custodian": "Gondnok",
+					"recipient": "Befogad\u00f3"
+				},
+				"small": {
+					"tokenId": "token azonos\u00edt\u00f3, amit z\u00e1rni vagy feloldani kell",
+					"custodian": "c\u00edm, amely feloldhat\u00f3",
+					"recipient": "c\u00edmet, amely a tokeneket kapja"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "\u00c9rv\u00e9nytelen tokenId",
+				"invalidCustodian": "\u00c9rv\u00e9nytelen let\u00e9tkezel\u0151",
+				"invalidRecipient": "\u00c9rv\u00e9nytelen c\u00edmzett"
+			},
+			"placeholders": {
+				"optional": "(v\u00e1laszthat\u00f3)",
+				"tokenId": "id",
+				"custodian": "c\u00edm"
+			},
+			"Lock": "Z\u00e1r",
+			"Unlock": "Kinyit",
+			"Locked": "Z\u00e1rt",
+			"CustodianAddress": "A let\u00e9tkezel\u0151 c\u00edme",
+			"TokenWasClaimed": "A \u201e {{title}} \u201d tokent ig\u00e9nyelt\u00e9k",
+			"TokenWasLocked": "A \u201e {{title}} \u201d token z\u00e1rolva volt",
+			"TokenWasUnlocked": "A \u201e {{title}} \u201d token feloldva"
+		},
+		"GenerateDescription": "vagy automatikusan gener\u00e1l",
+		"collections": {
+			"Title": "Gy\u0171jtem\u00e9nyek",
+			"EnterTitle": "\u00edrja be a c\u00edmet",
+			"EnterDescription": "\u00edrja be a le\u00edr\u00e1st",
+			"NewCollection": "\u00daj kollekci\u00f3",
+			"Name": "N\u00e9v",
+			"Icon": "Ikon",
+			"Description": "Le\u00edr\u00e1s",
+			"Author": "Szerz\u0151",
+			"SelectCollection": "V\u00e1lassza ki a gy\u0171jtem\u00e9nyt",
+			"Value": "\u00c9rt\u00e9k",
+			"AreYouSure": "biztos vagy ebben?",
+			"AuthorInvalid": "A szerz\u0151 c\u00edme \u00e9rv\u00e9nytelen!",
+			"Address": "C\u00edm",
+			"CoverImage": "Bor\u00edt\u00f3k\u00e9p",
+			"UploadIcon": "Felt\u00f6lt\u00e9s ikon",
+			"CommissionAddressInvalid": "A megb\u00edz\u00e1si c\u00edm \u00e9rv\u00e9nytelen",
+			"OnSale": "elad\u00f3",
+			"OffSale": "v\u00e9gki\u00e1rus\u00edt\u00e1s",
+			"CreateCollection": "Gy\u0171jtem\u00e9ny l\u00e9trehoz\u00e1sa",
+			"UpdateCollection": "Gy\u0171jtem\u00e9ny friss\u00edt\u00e9se",
+			"CollectionInfo": "Gy\u0171jtem\u00e9ny Info",
+			"SelectAuthor": "V\u00e1lasszon szerz\u0151t",
+			"NewItem": "\u00daj NFT kollekci\u00f3",
+			"NamePlaceholder": "Adja meg a gy\u0171jtem\u00e9ny nev\u00e9t",
+			"DescPlaceholder": "Adja meg a gy\u0171jtem\u00e9ny le\u00edr\u00e1s\u00e1t",
+			"EndingIn": "Befejez\u0151dik",
+			"SubmitSeries": "Sorozat beny\u00fajt\u00e1sa"
+		}
+	},
+	"currencies": {
+		"choose": "V\u00e1lasszon p\u00e9nznemet"
+	},
+	"connectedAccount": {
+		"Title": "Csatlakoztassa a fi\u00f3kot",
+		"Success": "Siker",
+		"YourAccountCreated": "Fi\u00f3kja sikeresen l\u00e9trej\u00f6tt!",
+		"YourAccountAlreadyCreated": "Fi\u00f3kja m\u00e1r l\u00e9trej\u00f6tt \u00e9s haszn\u00e1latra k\u00e9sz"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "tartal\u00e9kToken",
+						"amount": "\u00d6sszeg"
+					},
+					"small": {
+						"reserveToken": "tartal\u00e9kToken",
+						"amount": "\u00d6sszeg"
+					}
+				},
+				"placeholders": {
+					"amount": "\u00f6sszeg"
+				},
+				"btns": {
+					"stake": "T\u00e9t"
+				},
+				"stake": "T\u00e9t",
+				"loading": "Bet\u00f6lt\u00e9s"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Id\u0151tartam",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "n\u00e9pszer\u0171Token",
+					"donations": "adom\u00e1nyokat",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "sz\u00e1ml\u00e1l\u00f3",
+					"denominator": "n\u00e9vad\u00f3"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Id\u0151tartam napokban",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "n\u00e9pszer\u0171Token",
+					"donations": "adom\u00e1nyokat",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "sz\u00e1ml\u00e1l\u00f3",
+					"denominator": "n\u00e9vad\u00f3"
+				}
+			},
+			"placeholders": {
+				"optional": "(v\u00e1laszthat\u00f3)",
+				"tuple": "tuple[]",
+				"number": "sz\u00e1m",
+				"address": "c\u00edm",
+				"fraction": "t\u00f6red\u00e9k",
+				"integer": "eg\u00e9sz sz\u00e1m",
+				"seconds": "m\u00e1sodpercig",
+				"days": "napok",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Nincsenek medenc\u00e9k"
+			},
+			"btns": {
+				"createPool": "Pool l\u00e9trehoz\u00e1sa",
+				"createPoolInForm": "Teremt"
+			},
+			"createPool": "Pool l\u00e9trehoz\u00e1sa",
+			"produce": "Gy\u00e1rt",
+			"loading": "Bet\u00f6lt\u00e9s",
+			"viewInstancesList": "Lista friss\u00edt\u00e9se"
+		}
+	},
+	"fundrise": {
+		"placeholder": "\u00edrj valamit err\u0151l a hozz\u00e1j\u00e1rul\u00e1sr\u00f3l..."
+	}
 }

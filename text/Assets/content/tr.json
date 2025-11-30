@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Hata",
-        "WalletAbsent": "Cüzdan bağlı değil.",
-        "Rendering": "<span class='url'>{{1}}<\/span> oluşturulurken hatalar oluştu",
-        "PriceRequired": "Fiyat gerekli!",
-        "NameRequired": "İsim (gerekli!",
-        "PriceInvalid": "Fiyat geçersiz!",
-        "AmountInvalid": "Tutar geçersiz!",
-        "TransactionFailed": "İşlem başarısız",
-        "ChainNotSupported": "Seçilen zincir desteklenmiyor. Desteklenen zincir: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Uygulamayla çalışmak için bağlı MetaMask&#39;a ihtiyacınız var",
-        "UserNotLoggedInMetaMask": "Kullanıcı MetaMask&#39;ta oturum açmamış",
-        "CurrencyNotFound": "Para birimi bulunamadı",
-        "WrongChain": "Bu NFT, &quot; {{chain}} &quot; altında oluşturulmuştur. Lütfen bu zinciri kullanın.",
-        "NoRecipientSelected": "Alıcı seçilmedi",
-        "NotEnoughPermissionsWallet": "Bu kullanıcının cüzdanını okumak için yeterli izin yok",
-        "ThisUserHaveNoWallet": "Bu kullanıcıya atanmış bir cüzdan yok",
-        "TheWalletOfThisUserInvalid": "Bu kullanıcının cüzdanı geçersiz",
-        "WalletInvalid": "Cüzdan adresi geçersiz",
-        "CantManageFrozenSeries": "Dondurulmuş dizileri yönetemezsin",
-        "SubscriptionStreamNotPaid": "Bu içeriği görüntülemek için ödeme yapmadınız. Lütfen {{subscriptionUrl}} tıklayın ve uygun plana abone olun."
-    },
-    "admin": {
-        "Title": "Yönetimsel varlıklar",
-        "SubscriptionTitle": "Abonelik planları"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Ödemek için dokunun"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : {{call 'user.displayName'}} için ücret işlendi",
-        "ThankYouForYourPayment": "{{call 'publisher.displayName'}} ödeme yaptığınız için teşekkür ederiz.",
-        "SubscribedTo": "{{call 'user.displayName'}} {{plan.title}} abone oldu",
-        "YouSubscribedTo": "{{plan.title}} abone oldun",
-        "Assets\/credits\/alert": "Hesabınızla ilgili uyarınız var"
-    },
-    "charge": {
-        "Subject": "&quot; {{description}} &quot; ile {{call 'publisher.displayName'}} {{displayAmount}} ödeme alırsınız",
-        "HasBeenCharged": "Hey, bu sadece {{1}} {{4}} {{3}} için {{2}} ücretlendirildiğini bildirmek için."
-    },
-    "charged": {
-        "Subject": "&quot; {{description}} &quot; ödemeniz için teşekkür ederiz.",
-        "HavePaid": "Hey {{1}} , bu, {{4}} için {{2}} {{3}} başarılı bir şekilde ödeme yaptığınızın hızlı bir onayıdır."
-    },
-    "payment": {
-        "AboutOrder": "sipariş hakkında bilgi",
-        "PaymentMethod": "Ödeme yöntemi",
-        "ContactInfo": "İletişim bilgileri",
-        "Pay": "Ödemek",
-        "PaymentSucceeded": "ödeme başarılı",
-        "PaymentProcessing.": "ödemeniz işleniyor",
-        "FailTryAgain": "Ödemeniz başarılı olmadı, lütfen tekrar deneyin",
-        "SomethingWrong": "Bir şeyler yanlış gitti",
-        "PaymentStatus": "ödeme durumu",
-        "PayTo": "{{displayName}} öde",
-        "ChooseCurrency": "Bir para birimi seçin",
-        "YouCanSendUpTo": "{{amount}} {{symbol}} kadar gönderebilirsiniz",
-        "Send": "Göndermek",
-        "EnterAmount": "miktarı girin"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Davet {{invitedUserName}} tarafından kabul edildi",
-        "InvitedUserFilledStream": "{{invitedUserName}} dolu {{FilledStreamTitle}}",
-        "ForFillingStream": "{{FilledStreamTitle}} doldurmak için",
-        "YouHaveCreditsToStart": "Başlamak için {{amount}} krediniz var",
-        "PaymentFor": "&quot; {{1}} &quot; için ödeme",
-        "PaymentTo": "{{1}} ödeme",
-        "PaymentToUser": "{{toUserName}} ödeme",
-        "CreatePrivateChat": "{{toUserName}} ile özel sohbet için",
-        "CreatePaidStream": "{{toStreamName}} oluşturmak için",
-        "JoinedPaidStream": "rezervasyon için &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "&quot; {{communityId}} &quot; topluluğu oluşturmak için",
-        "LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot; içinde rezervasyon iadesi olarak",
-        "BoughtCredits": "{{amount}} kredi satın aldı",
-        "BonusCredits": "Bonus {{amount}} kredi",
-        "BuyAmountCredits": "{{amount}} kredi satın al",
-        "WatchClip": "{{fromStreamTitle}} izlediği için {{amount}} kredi kazandı",
-        "MissingCredits": "Eksik Krediler",
-        "YouMissingCredits": "Devam etmek için ek {{amount}} krediye ihtiyacınız var.",
-        "BuyCredits": "Kredi satın Al",
-        "BuyBonus": "Tek seferde {{amount}} kredi satın almak, {{bonus}} kredi bonusuna yol açacaktır.",
-        "Buy": "Satın almak",
-        "PurchaseCredits": "satın alma kredisi",
-        "Credits": "Kredi",
-        "ErrorInvalidAmount": "Tutar geçersiz",
-        "ErrorInvalidCurrency": "Maalesef henüz {{currency}} para birimini desteklemiyoruz",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} kredi",
-            "BonusCredits": "{{amount}} kredi"
-        }
-    },
-    "history": {
-        "Date": "Tarih",
-        "Amount": "Miktar",
-        "Description": "Tanım",
-        "Client": "Müşteri",
-        "User": "kullanıcı",
-        "To": "ile",
-        "From": "itibaren",
-        "SeeHistory": "{{1}} için ödeme geçmişini görün",
-        "HistoryEmpty": "Henüz veriniz yok",
-        "PaymentFor": "{{amount}} kredi gönderildi",
-        "PaymentTo": "{{amount}} kredi gönderildi",
-        "PaymentToUser": "{{amount}} kredi gönderildi",
-        "CreatePaidStream": "{{amount}} kredi harcadı",
-        "WatchClip": {
-            "+": "{{amount}} kredi kazandı",
-            "-": "{{amount}} kredi harcadı"
-        },
-        "JoinedPaidStream": {
-            "+": "{{amount}} kredi kazandı",
-            "-": "{{amount}} kredi harcadı"
-        },
-        "LeftPaidStream": {
-            "+": "{{amount}} kredi aldı",
-            "-": "{{amount}} kredi gönderildi"
-        },
-        "CreatedCommunity": "{{amount}} kredi harcadı",
-        "BoughtCredits": "{{amount}} kredi satın aldı",
-        "BonusCredits": "{{amount}} kredi bonusu var",
-        "InviteAcceptedBy": "{{amount}} kredi kazandı",
-        "Streams_user_firstname": "{{amount}} kredi kazandı",
-        "Streams_user_lastname": "{{amount}} kredi kazandı",
-        "Streams_user_icon": "{{amount}} kredi kazandı",
-        "Places_user_location": "{{amount}} kredi kazandı",
-        "Streams_greeting": "{{amount}} kredi kazandı",
-        "YouHaveCreditsToStart": "{{amount}} kredi kazandı",
-        "InvitedUserFilledStream": "{{amount}} kredi kazandı",
-        "ForFillingStream": "{{amount}} kredi kazandı",
-        "CreatePrivateChat": "{{amount}} kredi harcadı"
-    },
-    "subscriptions": {
-        "infoTitle": "Ödeme Bilgilerini Ayarla",
-        "confirm": {
-            "title": "Aboneliği Başlat",
-            "message": "&quot; {{title}} &quot; için yinelenen bir abonelik başlatılsın mı?",
-            "ok": "TAMAM",
-            "cancel": "İptal etmek"
-        },
-        "CreditOrDebitCard": "Kredi veya banka kartı",
-        "SubscribePayment": "Ödemeye abone ol",
-        "ImmediatePayment": "Anında ödeme",
-        "ProcessingPayment": "Ödeme İşlemi",
-        "SubscriptionAlreadyPaid": "Bu abonelik zaten ödenmiş",
-        "SubscriptionNotActive": "Bu abonelik aktif değil",
-        "Subscribed": "Abone olundu",
-        "Unsubscribed": "Abonelikten çıkıldı",
-        "Unsubscribe": "abonelikten çık",
-        "Subscribe": "Abone",
-        "Started": "başladı",
-        "EndsIn": "biter",
-        "NextPay": "Sonraki ödeme",
-        "Period": "Dönem",
-        "Price": "Fiyat",
-        "AreYouSureUnsubscribe": "Bu planın aboneliğini iptal etmek istediğinizden emin misiniz?",
-        "YouUnsubscribedFromPlan": "&quot; {{planTitle}} &quot; planı aboneliğinden çıktınız. Sizden ücret alınmayacak, ancak aboneliğiniz {{endsIn}} kadar devam edecek",
-        "plan": {
-            "TitlePlaceholder": "plan başlığı",
-            "PricePlaceholder": "fiyat",
-            "DescriptionPlaceholder": "abonelik planı açıklaması",
-            "SavePlan": "Planı Kaydet",
-            "NewPlan": "Yeni plan",
-            "SubscriptionTitle": "Abonelik planları",
-            "AreYouSureDeletePlan": "Bu planı silmek istediğinizden emin misiniz?",
-            "Duration": "Süre",
-            "Discount": "İndirim",
-            "Interrupt": "Yarıda kesmek",
-            "Continue": "Devam etmek",
-            "SelectDisplayType": "{{displayType}} seçin",
-            "EndDate": "bitiş tarihi",
-            "Available": "Mevcut",
-            "Hidden": "Gizlenmiş",
-            "InviteOnly": "Sadece davetli",
-            "CantSubscribeUnlessInvited": "Davet edilmediğiniz sürece bu plana abone olamazsınız"
-        }
-    },
-    "payments": {
-        "infoTitle": "Ödeme Bilgilerini Ayarla",
-        "BuyAmountCredits": "{{amount}} kredi satın al",
-        "confirm": {
-            "title": "Bir ödeme yapmak",
-            "message": "{{symbol}} {{amount}} ödemeyi kabul ediyor musunuz?",
-            "ok": "TAMAM",
-            "cancel": "İptal etmek"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Kredi",
-            "description": "kredileri ve ödemeleri takip eder"
-        },
-        "Assets\/plan": {
-            "displayType": "Abonelik Planı",
-            "description": "abonelik planı"
-        },
-        "Assets\/subscription": {
-            "displayType": "abonelik",
-            "description": "abonelik"
-        },
-        "Assets\/product": {
-            "displayType": "Ürün",
-            "description": "satılan ürün"
-        },
-        "Assets\/service": {
-            "displayType": "Hizmet",
-            "description": "sunulan hizmet"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "{{amount}} kredi kazandı"
-        },
-        "Assets\/credits\/bought": {
-            "content": "{{amount}} kredi satın aldı"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bonus {{amount}} kredi"
-        },
-        "Assets\/credits\/spent": {
-            "content": "{{amount}} kredi harcadı"
-        },
-        "Assets\/credits\/sent": {
-            "content": "{{amount}} krediyi {{toUserName}} gönderdi"
-        },
-        "Assets\/credits\/received": {
-            "content": "{{fromUserName}} {{amount}} kredi alındı"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Hesabınızda çok az krediniz var. Daha fazla kredi satın almak için lütfen <a href='<i translate='no'>999 &#39;&gt;bu bağlantıyı<\/a> ziyaret edin."
-        }
-    },
-    "billing": {
-        "Title": "varlık faturalandırması",
-        "CreditsMinimum": "Minimum kredi",
-        "CreditsToAdd": "Eklenecek krediler",
-        "Save": "Kaydetmek",
-        "ThisLink": "bu bağlantı",
-        "errors": {
-            "CreditsMinimumNegative": "Minimum kredi negatif olamaz",
-            "CreditsToAddNegative": "Eklenecek krediler negatif olamaz"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Yeni Hizmet",
-            "TitlePlaceholder": "hizmet unvanı",
-            "PricePlaceholder": "fiyatı belirle",
-            "LinkPlaceholder": "ek bilgi bağlantısı ayarla",
-            "DescriptionPlaceholder": "Servis açıklaması",
-            "SaveService": "Hizmeti Kaydet",
-            "SelectRequiredParticipants": "Gerekli ilgili katılımcılar",
-            "RequiredParticipantsDesc": "Lütfen bu hizmeti kullanması gereken ilgili katılımcıları seçin (örneğin, &quot;Köpek gösterisi&quot; için evcil hayvanlar veya &quot;Çocuk tatili&quot; için çocuklar vb.). Hizmet ücretli ise, kullanıcının ilgili her katılımcı için ayrıca ödeme yapması gerekecektir."
-        },
-        "EditServiceTemplate": {
-            "Title": "Hizmeti Düzenle"
-        },
-        "ManageServiceTemplates": "Hizmet Şablonlarını Yönetin",
-        "ManageServices": "Hizmetleri Yönet",
-        "Free": "Özgür",
-        "OptionalContribution": "İsteğe bağlı katkı",
-        "RequiredPayment": "gerekli ödeme",
-        "AreYouSureDelete": "Bu hizmeti silmek istediğinizden emin misiniz?",
-        "AmountServicesRelated": "Bu hizmetle ilgili {{amount}} müsaitlik var. Onlar da kaldırılacak."
-    },
-    "transfer": {
-        "SelectRecipient": "alıcı seç",
-        "TransactionSuccess": "İşlem Başarısı",
-        "OrTypeWalletAddress": "VEYA alıcının cüzdan adresini yazın",
-        "AppCredits": "Uygulama Kredileri"
-    },
-    "NFT": {
-        "Title": "Başlık",
-        "Name": "İsim",
-        "EnterName": "İsim giriniz",
-        "EnterAuthorWallet": "Yazar cüzdanını girin",
-        "InformationAboutTitle": "{{title}} NFT hakkında bilgi",
-        "Description": "Tanım",
-        "DetailedInformationAboutNFT": "NFT hakkında detaylı bilgi",
-        "PresaleStarts": "Ön Satış 23 Aralık&#39;ta Başlıyor",
-        "OwnerUserNotFound": "Bu NFT&#39;nin sahibi uygulamamızda kayıtlı değil.",
-        "BuyNow": "Şimdi al",
-        "Buy": "Satın almak",
-        "Add": "Eklemek",
-        "Remove": "Kaldırmak",
-        "NoNFTyet": "Henüz NFT yok",
-        "Conversation": "Konuşma",
-        "Create": "Yaratmak",
-        "CurrentBid": "Mevcut teklif",
-        "StartingIn": "İçinde başlayan",
-        "EndingIn": "biten",
-        "CreateNFT": "Bir NFT oluşturun",
-        "TitlePlaceholder": "NFT&#39;nize bir başlık verin",
-        "DescriptionPlaceholder": "NFT&#39;nize bir açıklama verin",
-        "CreateYourNFT": "NFT&#39;nizi oluşturun",
-        "Royalties": "Telif hakları",
-        "RoyaltyPlaceholder": "İsteğe bağlı. Aktarımdan önce yaratıcıya ödenen tutar.",
-        "ExpirationDate": "Son kullanma tarihi",
-        "StartingDate": "Başlangıç tarihi",
-        "BidsBelowThisAmount": "Bu tutarın altındaki tekliflere izin verilmeyecektir",
-        "MinimumBid": "Minimum teklif",
-        "Author": "Yazar",
-        "Price": "Fiyat",
-        "Commission": "komisyon",
-        "EnterCommission": "Komisyonu girin",
-        "Owner": "Mal sahibi",
-        "SelectCategory": "Kategori seç",
-        "Day": "Gün",
-        "Days": "gün",
-        "Hour": "Saat",
-        "Hours": "Saat",
-        "Minute": "Dakika",
-        "Minutes": "Dakika",
-        "Second": "Saniye",
-        "Seconds": "saniye",
-        "SalesCreator": "satışların oranı yaratıcıya gidecek",
-        "Details": "Detaylar",
-        "Bids": "teklifler",
-        "History": "Tarih",
-        "LoremIpsum": "Lorem Ipsum, basım ve dizgi endüstrisinin basit bir şekilde sahte metnidir.",
-        "PutOnSale": "satışa çıkarmak",
-        "PutOffSale": "Satıştan çekilmek",
-        "Transfer": "Aktar",
-        "Actions": "Hareketler",
-        "Claim": "İddia",
-        "ClaimNFT": "NFT&#39;yi talep et",
-        "Unlocking": "kilit açma",
-        "Unlock": "Kilidini aç",
-        "Update": "Güncelleme",
-        "UpdateToken": "Jetonu Güncelle",
-        "UpdateNFT": "NFT&#39;yi güncelle",
-        "CreateToken": "Belirteç Oluştur",
-        "PlaceBid": "Teklif Ver",
-        "SoldOut": "Satılmış",
-        "NotOnSale": "Satışta Değil",
-        "NftName": "NFT adı",
-        "DescribeYourNFT": "Lütfen NFT&#39;nizi tanımlayın",
-        "NFTImage": "NFT için resim",
-        "NFTVideo": "Varsa, NFT için video",
-        "UploadMovie": "film yükle",
-        "MovieSource": "Film Kaynağı",
-        "MovieURL": "Film URL&#39;si",
-        "UploadFile": "Bir dosya yükle",
-        "PutOnMarketplace": "Pazar yerine koymak",
-        "InstantPurchase": "Kullanıcıların NFT&#39;nizi anında satın almalarını sağlamak için fiyatı girin",
-        "FixedPrice": "Sabit fiyat",
-        "TimedAuction": "süreli müzayede",
-        "OpenForBids": "tekliflere açık",
-        "PriceOnePiece": "Tek parça için fiyat girin",
-        "EnterPrice": "fiyatı girin",
-        "EnterMinimumBid": "Minimum teklifi girin",
-        "SelectChain": "zincir seçin",
-        "Currency": "Para birimi",
-        "AreYouSureDeleteImage": "Resmi kaldırmak istediğinizden emin misiniz?",
-        "AreYouSureDeleteVideo": "Videoyu kaldırmak istediğinizden emin misiniz?",
-        "series": {
-            "Name": "İsim",
-            "Icon": "simge",
-            "Description": "Tanım",
-            "Author": "Yazar",
-            "SelectSeries": "seri seç",
-            "Value": "Değer",
-            "AreYouSure": "Emin misin?",
-            "AuthorInvalid": "Yazar adresi geçersiz!",
-            "Address": "Adres",
-            "CoverImage": "Kapak resmi",
-            "UploadCoverImage": "Kapak resmi yükle",
-            "CommissionAddressInvalid": "Komisyon adresi geçersiz",
-            "OnSale": "satılık",
-            "OffSale": "indirimli",
-            "CreateSeries": "Seri Oluştur",
-            "UpdateSeries": "Güncelleme Serisi",
-            "SeriesInfo": "Seri Bilgisi",
-            "SelectAuthor": "yazar seç",
-            "NewItem": "Yeni NFT serisi",
-            "NamePlaceholder": "Seri adını girin",
-            "DescPlaceholder": "Seri açıklamasını girin",
-            "EndingIn": "Biten"
-        },
-        "contract": {
-            "CreateContract": "Sözleşme oluştur",
-            "SelectContract": "sözleşme seç",
-            "CreateContractFor": "{{userName}} için sözleşme oluştur",
-            "ContractFor": "{{userName}} için sözleşme",
-            "UpdateContract": "Sözleşmeyi Güncelle",
-            "TransferOwnership": "Sahipliği Aktar",
-            "SetBaseURI": "Temel URI&#39;yi Ayarla",
-            "SetSuffix": "Soneki Ayarla",
-            "CurrentOwner": "Mevcut Sahibi",
-            "CurrentBaseURL": "Geçerli TemelURL",
-            "ContractAddressAbsent": "Sözleşme adresi yok",
-            "FactoryAddressAbsent": "Fabrika adresi yok",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Başlık gerekli",
-            "SymbolRequired": "Sembol gerekli",
-            "TypeContractName": "sözleşme adı",
-            "TypeContractSymbol": "sözleşme sembolü (en fazla 10 karakter)"
-        },
-        "contests": {
-            "Title": "yarışmalar",
-            "NewContest": "Yeni Yarışma"
-        },
-        "import": {
-            "importNFT": "NFT&#39;leri içe aktarma",
-            "importAttributes": "NFT özniteliklerini içe aktar",
-            "fileNotFound": "Üzgünüz, CSV dosyası bulunamadı.",
-            "fileEmpty": "Üzgünüz, CSV dosyası boş.",
-            "userIdNotFound": "kullanıcı var ama kimliği boş",
-            "errorLine": "satır {{1}}",
-            "fieldNotFound": "Gerekli alan &quot; {{1}} &quot; bulunamadı",
-            "displayTypeEmpty": "&quot; {{1}} &quot; için görüntüleme tipi bulunamadı",
-            "taskStreamInvalid": "görev akışı geçersiz",
-            "instructionsEmpty": "görev akışı yönergeleri boş",
-            "complete": "Tamamlamak",
-            "activateUsers": "kullanıcılara aktivasyon mesajı gönderilsin mi?",
-            "importProgress": "İlerlemek",
-            "importOptions": "Seçenekler",
-            "sampleCSV": "Örnek CSV&#39;yi İndirin",
-            "fileLabel": "Elektronik Tablo Yükle:",
-            "errorsTitle": "Hatalar oluştu"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "NFT Koleksiyonlarına Göre Filtrele",
-                "ShowNFTCollection": "NFT koleksiyonunu şurada göster...",
-                "AllCollections": "Tüm Koleksiyonlar"
-            },
-            "ByUser": {
-                "AllAuthors": "Tüm Yazarlar",
-                "AllUsers": "Herkes",
-                "FilterByAuthors": "Yazarlara Göre Filtrele"
-            }
-        },
-        "Back": "Koleksiyona Geri Dön",
-        "attributes": {
-            "Title": "Nitelikleri Yönet",
-            "Attributes": "Öznitellikler",
-            "DisplayTitle": "Ekran tipi",
-            "AddDisplayType": "Yeni görüntüleme türü ekle",
-            "NewDisplay": "Yeni Ekran",
-            "TraitTitle": "Özellik Türü",
-            "AddTraitTitle": "Yeni özellik türü ekle",
-            "NewTrait": "Yeni Özellik Türü",
-            "ValueTitle": "Değer",
-            "AddValueTitle": "Yeni değer ekle",
-            "NewValue": "Yeni değer",
-            "NewAttribute": "Yeni Öznitelik",
-            "UpdateAttributes": "Nitelikleri Güncelle",
-            "SaveAttributes": "Öznitelikleri Kaydet"
-        },
-        "profile": {
-            "LogOut": "Çıkış Yap",
-            "Title": "{{userName}} için profil",
-            "Description": "Kullanıcı detayları",
-            "aboutPlaceholder": "Biyografiyi Düzenle",
-            "SureLogOut": "Oturumu kapatmak istediğinizden emin misiniz?",
-            "UploadCoverPhoto": "Kapak Fotoğrafı Yükle"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFT Sözleşmesi",
-                        "seriesId": "dizi kimliği",
-                        "owner": "Mal sahibi",
-                        "currency": "para birimi",
-                        "price": "Fiyat",
-                        "beneficiary": "yararlanıcı",
-                        "autoindex": "otomatik dizin",
-                        "duration": "Süre",
-                        "rateInterval": "Oran aralığı",
-                        "rateAmount": "Oran miktarı"
-                    },
-                    "small": {
-                        "NFTContract": "NFT Sözleşmesi",
-                        "seriesId": "jetonlar bu seride basılacak",
-                        "owner": "örneğin sahibi, aksi takdirde gönderici olur",
-                        "currency": "Sıfırsa, satın alınan jetonlar için para birimi - yerel madeni paralar için",
-                        "price": "Fiyat",
-                        "beneficiary": "Jeton satmanın lehtarı, aksi takdirde gönderici olacaktır.",
-                        "autoindex": "otomatik dizin",
-                        "duration": "Bastıktan sonra kilitleyin. Sıfır, hemen alın demektir.",
-                        "rateInterval": "özel satın alma için kova aralığı",
-                        "rateAmount": "özel satın alma için kova miktarı"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(isteğe bağlı)",
-                    "number": "sayı",
-                    "address": "adres",
-                    "fraction": "kesir",
-                    "integer": "tamsayı",
-                    "seconds": "saniye",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Üretmek",
-                "viewInstancesList": "Listeyi Yenile"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "Seri Kimliği",
-                        "account": "Hesap",
-                        "amount": "Miktar"
-                    },
-                    "small": {
-                        "seriesId": "yeni belirteç, bu kimliğe sahip seriye ait olacak",
-                        "account": "yeni oluşturulan NFT&#39;nin sahibi. ayarlanmamışsa - geçerli cüzdanı kullanır",
-                        "amount": "miktar NFT to mint"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(isteğe bağlı)",
-                    "seriesId": "İD",
-                    "account": "hesap",
-                    "amount": "miktar",
-                    "integer": "tamsayı"
-                },
-                "btn": {
-                    "Purchase": "Satın almak",
-                    "SpecialPurchase": "özel satın alma"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Adres"
-                    },
-                    "small": {
-                        "account": "Adres"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Geçersiz adres"
-                },
-                "placeholders": {
-                    "account": "Adres"
-                },
-                "addToWhitelist": "Beyaz Listeye Ekle",
-                "removeFromWhitelist": "Beyaz Listeden Çıkar"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "Belirteç Kimliği",
-                    "custodian": "Sorumlu",
-                    "recipient": "alıcı"
-                },
-                "small": {
-                    "tokenId": "belirteç kimliği kilitlemek veya kilidini açmak için gerekenler",
-                    "custodian": "kilidini açabilecek adres",
-                    "recipient": "belirteçleri alacak adres"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Geçersiz belirteç kimliği",
-                "invalidCustodian": "Geçersiz Vasi",
-                "invalidRecipient": "Geçersiz Alıcı"
-            },
-            "placeholders": {
-                "optional": "(isteğe bağlı)",
-                "tokenId": "İD",
-                "custodian": "adres"
-            },
-            "Lock": "Kilit",
-            "Unlock": "Kilidini aç",
-            "Locked": "Kilitli",
-            "CustodianAddress": "veli adresi",
-            "TokenWasClaimed": "Token &quot; {{title}} &quot; talep edildi",
-            "TokenWasLocked": "&quot; {{title}} &quot; belirteci kilitlendi",
-            "TokenWasUnlocked": "&quot; {{title}} &quot; jetonunun kilidi açıldı"
-        },
-        "GenerateDescription": "veya otomatik oluştur",
-        "collections": {
-            "Title": "Koleksiyonlar",
-            "EnterTitle": "başlığı girin",
-            "EnterDescription": "açıklamayı girin",
-            "NewCollection": "Yeni koleksiyon",
-            "Name": "İsim",
-            "Icon": "simge",
-            "Description": "Tanım",
-            "Author": "Yazar",
-            "SelectCollection": "koleksiyon seç",
-            "Value": "Değer",
-            "AreYouSure": "Emin misin?",
-            "AuthorInvalid": "Yazar adresi geçersiz!",
-            "Address": "Adres",
-            "CoverImage": "Kapak resmi",
-            "UploadIcon": "yükleme simgesi",
-            "CommissionAddressInvalid": "Komisyon adresi geçersiz",
-            "OnSale": "satılık",
-            "OffSale": "indirimli",
-            "CreateCollection": "Koleksiyon Oluştur",
-            "UpdateCollection": "Koleksiyonu Güncelle",
-            "CollectionInfo": "Koleksiyon Bilgisi",
-            "SelectAuthor": "yazar seç",
-            "NewItem": "Yeni NFT Koleksiyonu",
-            "NamePlaceholder": "Koleksiyon adını girin",
-            "DescPlaceholder": "Koleksiyon açıklamasını girin",
-            "EndingIn": "Biten",
-            "SubmitSeries": "Bir Seri Gönder"
-        }
-    },
-    "currencies": {
-        "choose": "Bir para birimi seçin"
-    },
-    "connectedAccount": {
-        "Title": "Hesabı bağla",
-        "Success": "Başarı",
-        "YourAccountCreated": "Hesabınız başarıyla oluşturuldu!",
-        "YourAccountAlreadyCreated": "Hesabınız zaten oluşturuldu ve kullanıma hazır"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "rezerv belirteci",
-                        "amount": "Miktar"
-                    },
-                    "small": {
-                        "reserveToken": "rezerv belirteci",
-                        "amount": "Miktar"
-                    }
-                },
-                "placeholders": {
-                    "amount": "miktar"
-                },
-                "btns": {
-                    "stake": "kazık"
-                },
-                "stake": "kazık",
-                "loading": "Yükleniyor"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "belirteçErc20",
-                    "duration": "Süre",
-                    "bonusTokenFraction": "bonusTokenKesiri",
-                    "popularToken": "popüler belirteç",
-                    "donations": "bağışlar",
-                    "rewardsRateFraction": "ödüllerRateFraction",
-                    "numerator": "pay",
-                    "denominator": "payda"
-                },
-                "small": {
-                    "tokenErc20": "belirteçErc20",
-                    "duration": "Gün cinsinden süre",
-                    "bonusTokenFraction": "bonusTokenKesiri",
-                    "popularToken": "popüler belirteç",
-                    "donations": "bağışlar",
-                    "rewardsRateFraction": "ödüllerRateFraction",
-                    "numerator": "pay",
-                    "denominator": "payda"
-                }
-            },
-            "placeholders": {
-                "optional": "(isteğe bağlı)",
-                "tuple": "demet[]",
-                "number": "sayı",
-                "address": "adres",
-                "fraction": "kesir",
-                "integer": "tamsayı",
-                "seconds": "saniye",
-                "days": "günler",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "havuz yok"
-            },
-            "btns": {
-                "createPool": "Havuz Oluştur",
-                "createPoolInForm": "Yaratmak"
-            },
-            "createPool": "Havuz Oluştur",
-            "produce": "Üretmek",
-            "loading": "Yükleniyor",
-            "viewInstancesList": "Listeyi Yenile"
-        }
-    },
-    "fundrise": {
-        "placeholder": "Bu katkı hakkında bir şeyler yazın..."
-    }
+	"errors": {
+		"Error": "Hata",
+		"WalletAbsent": "C\u00fczdan ba\u011fl\u0131 de\u011fil.",
+		"Rendering": "<span class='url'>{{1}}</span> olu\u015fturulurken hatalar olu\u015ftu",
+		"PriceRequired": "Fiyat gerekli!",
+		"NameRequired": "\u0130sim (gerekli!",
+		"PriceInvalid": "Fiyat ge\u00e7ersiz!",
+		"AmountInvalid": "Tutar ge\u00e7ersiz!",
+		"TransactionFailed": "\u0130\u015flem ba\u015far\u0131s\u0131z",
+		"ChainNotSupported": "Se\u00e7ilen zincir desteklenmiyor. Desteklenen zincir: {{supportedChain}}",
+		"NeedMetaMaskConnected": "Uygulamayla \u00e7al\u0131\u015fmak i\u00e7in ba\u011fl\u0131 MetaMask&#39;a ihtiyac\u0131n\u0131z var",
+		"UserNotLoggedInMetaMask": "Kullan\u0131c\u0131 MetaMask&#39;ta oturum a\u00e7mam\u0131\u015f",
+		"CurrencyNotFound": "Para birimi bulunamad\u0131",
+		"WrongChain": "Bu NFT, &quot; {{chain}} &quot; alt\u0131nda olu\u015fturulmu\u015ftur. L\u00fctfen bu zinciri kullan\u0131n.",
+		"NoRecipientSelected": "Al\u0131c\u0131 se\u00e7ilmedi",
+		"NotEnoughPermissionsWallet": "Bu kullan\u0131c\u0131n\u0131n c\u00fczdan\u0131n\u0131 okumak i\u00e7in yeterli izin yok",
+		"ThisUserHaveNoWallet": "Bu kullan\u0131c\u0131ya atanm\u0131\u015f bir c\u00fczdan yok",
+		"TheWalletOfThisUserInvalid": "Bu kullan\u0131c\u0131n\u0131n c\u00fczdan\u0131 ge\u00e7ersiz",
+		"WalletInvalid": "C\u00fczdan adresi ge\u00e7ersiz",
+		"CantManageFrozenSeries": "Dondurulmu\u015f dizileri y\u00f6netemezsin",
+		"SubscriptionStreamNotPaid": "Bu i\u00e7eri\u011fi g\u00f6r\u00fcnt\u00fclemek i\u00e7in \u00f6deme yapmad\u0131n\u0131z. L\u00fctfen {{subscriptionUrl}} t\u0131klay\u0131n ve uygun plana abone olun."
+	},
+	"admin": {
+		"Title": "Y\u00f6netimsel varl\u0131klar",
+		"SubscriptionTitle": "Abonelik planlar\u0131"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "\u00d6demek i\u00e7in dokunun"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : {{call 'user.displayName'}} i\u00e7in \u00fccret i\u015flendi",
+		"ThankYouForYourPayment": "{{call 'publisher.displayName'}} \u00f6deme yapt\u0131\u011f\u0131n\u0131z i\u00e7in te\u015fekk\u00fcr ederiz.",
+		"SubscribedTo": "{{call 'user.displayName'}} {{plan.title}} abone oldu",
+		"YouSubscribedTo": "{{plan.title}} abone oldun",
+		"Assets/credits/alert": "Hesab\u0131n\u0131zla ilgili uyar\u0131n\u0131z var"
+	},
+	"charge": {
+		"Subject": "&quot; {{description}} &quot; ile {{call 'publisher.displayName'}} {{displayAmount}} \u00f6deme al\u0131rs\u0131n\u0131z",
+		"HasBeenCharged": "Hey, bu sadece {{1}} {{4}} {{3}} i\u00e7in {{2}} \u00fccretlendirildi\u011fini bildirmek i\u00e7in."
+	},
+	"charged": {
+		"Subject": "&quot; {{description}} &quot; \u00f6demeniz i\u00e7in te\u015fekk\u00fcr ederiz.",
+		"HavePaid": "Hey {{1}} , bu, {{4}} i\u00e7in {{2}} {{3}} ba\u015far\u0131l\u0131 bir \u015fekilde \u00f6deme yapt\u0131\u011f\u0131n\u0131z\u0131n h\u0131zl\u0131 bir onay\u0131d\u0131r."
+	},
+	"payment": {
+		"AboutOrder": "sipari\u015f hakk\u0131nda bilgi",
+		"PaymentMethod": "\u00d6deme y\u00f6ntemi",
+		"ContactInfo": "\u0130leti\u015fim bilgileri",
+		"Pay": "\u00d6demek",
+		"PaymentSucceeded": "\u00f6deme ba\u015far\u0131l\u0131",
+		"PaymentProcessing.": "\u00f6demeniz i\u015fleniyor",
+		"FailTryAgain": "\u00d6demeniz ba\u015far\u0131l\u0131 olmad\u0131, l\u00fctfen tekrar deneyin",
+		"SomethingWrong": "Bir \u015feyler yanl\u0131\u015f gitti",
+		"PaymentStatus": "\u00f6deme durumu",
+		"PayTo": "{{displayName}} \u00f6de",
+		"ChooseCurrency": "Bir para birimi se\u00e7in",
+		"YouCanSendUpTo": "{{amount}} {{symbol}} kadar g\u00f6nderebilirsiniz",
+		"Send": "G\u00f6ndermek",
+		"EnterAmount": "miktar\u0131 girin"
+	},
+	"credits": {
+		"InviteAcceptedBy": "Davet {{invitedUserName}} taraf\u0131ndan kabul edildi",
+		"InvitedUserFilledStream": "{{invitedUserName}} dolu {{FilledStreamTitle}}",
+		"ForFillingStream": "{{FilledStreamTitle}} doldurmak i\u00e7in",
+		"YouHaveCreditsToStart": "Ba\u015flamak i\u00e7in {{amount}} krediniz var",
+		"PaymentFor": "&quot; {{1}} &quot; i\u00e7in \u00f6deme",
+		"PaymentTo": "{{1}} \u00f6deme",
+		"PaymentToUser": "{{toUserName}} \u00f6deme",
+		"CreatePrivateChat": "{{toUserName}} ile \u00f6zel sohbet i\u00e7in",
+		"CreatePaidStream": "{{toStreamName}} olu\u015fturmak i\u00e7in",
+		"JoinedPaidStream": "rezervasyon i\u00e7in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "&quot; {{communityId}} &quot; toplulu\u011fu olu\u015fturmak i\u00e7in",
+		"LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot; i\u00e7inde rezervasyon iadesi olarak",
+		"BoughtCredits": "{{amount}} kredi sat\u0131n ald\u0131",
+		"BonusCredits": "Bonus {{amount}} kredi",
+		"BuyAmountCredits": "{{amount}} kredi sat\u0131n al",
+		"WatchClip": "{{fromStreamTitle}} izledi\u011fi i\u00e7in {{amount}} kredi kazand\u0131",
+		"MissingCredits": "Eksik Krediler",
+		"YouMissingCredits": "Devam edebilmek i\u00e7in ek {{amount}} {{currency}} krediye ihtiyac\u0131n\u0131z var.",
+		"BuyCredits": "Kredi sat\u0131n Al",
+		"BuyBonus": "Tek seferde {{amount}} kredi sat\u0131n almak, {{bonus}} kredi bonusuna yol a\u00e7acakt\u0131r.",
+		"Buy": "Sat\u0131n almak",
+		"PurchaseCredits": "sat\u0131n alma kredisi",
+		"Credits": "Kredi",
+		"ErrorInvalidAmount": "Tutar ge\u00e7ersiz",
+		"ErrorInvalidCurrency": "Maalesef hen\u00fcz {{currency}} para birimini desteklemiyoruz",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} kredi",
+			"BonusCredits": "{{amount}} kredi"
+		}
+	},
+	"history": {
+		"Date": "Tarih",
+		"Amount": "Miktar",
+		"Description": "Tan\u0131m",
+		"Client": "M\u00fc\u015fteri",
+		"User": "kullan\u0131c\u0131",
+		"To": "ile",
+		"From": "itibaren",
+		"SeeHistory": "{{1}} i\u00e7in \u00f6deme ge\u00e7mi\u015fini g\u00f6r\u00fcn",
+		"HistoryEmpty": "Hen\u00fcz veriniz yok",
+		"PaymentFor": "{{amount}} kredi g\u00f6nderildi",
+		"PaymentTo": "{{amount}} kredi g\u00f6nderildi",
+		"PaymentToUser": "{{amount}} kredi g\u00f6nderildi",
+		"CreatePaidStream": "{{amount}} kredi harcad\u0131",
+		"WatchClip": {
+			"+": "{{amount}} kredi kazand\u0131",
+			"-": "{{amount}} kredi harcad\u0131"
+		},
+		"JoinedPaidStream": {
+			"+": "{{amount}} kredi kazand\u0131",
+			"-": "{{amount}} kredi harcad\u0131"
+		},
+		"LeftPaidStream": {
+			"+": "{{amount}} kredi ald\u0131",
+			"-": "{{amount}} kredi g\u00f6nderildi"
+		},
+		"CreatedCommunity": "{{amount}} kredi harcad\u0131",
+		"BoughtCredits": "{{amount}} kredi sat\u0131n ald\u0131",
+		"BonusCredits": "{{amount}} kredi bonusu var",
+		"InviteAcceptedBy": "{{amount}} kredi kazand\u0131",
+		"Streams_user_firstname": "{{amount}} kredi kazand\u0131",
+		"Streams_user_lastname": "{{amount}} kredi kazand\u0131",
+		"Streams_user_icon": "{{amount}} kredi kazand\u0131",
+		"Places_user_location": "{{amount}} kredi kazand\u0131",
+		"Streams_greeting": "{{amount}} kredi kazand\u0131",
+		"YouHaveCreditsToStart": "{{amount}} kredi kazand\u0131",
+		"InvitedUserFilledStream": "{{amount}} kredi kazand\u0131",
+		"ForFillingStream": "{{amount}} kredi kazand\u0131",
+		"CreatePrivateChat": "{{amount}} kredi harcad\u0131"
+	},
+	"subscriptions": {
+		"infoTitle": "\u00d6deme Bilgilerini Ayarla",
+		"confirm": {
+			"title": "Aboneli\u011fi Ba\u015flat",
+			"message": "&quot; {{title}} &quot; i\u00e7in yinelenen bir abonelik ba\u015flat\u0131ls\u0131n m\u0131?",
+			"ok": "TAMAM",
+			"cancel": "\u0130ptal etmek"
+		},
+		"CreditOrDebitCard": "Kredi veya banka kart\u0131",
+		"SubscribePayment": "\u00d6demeye abone ol",
+		"ImmediatePayment": "An\u0131nda \u00f6deme",
+		"ProcessingPayment": "\u00d6deme \u0130\u015flemi",
+		"SubscriptionAlreadyPaid": "Bu abonelik zaten \u00f6denmi\u015f",
+		"SubscriptionNotActive": "Bu abonelik aktif de\u011fil",
+		"Subscribed": "Abone olundu",
+		"Unsubscribed": "Abonelikten \u00e7\u0131k\u0131ld\u0131",
+		"Unsubscribe": "abonelikten \u00e7\u0131k",
+		"Subscribe": "Abone",
+		"Started": "ba\u015flad\u0131",
+		"EndsIn": "biter",
+		"NextPay": "Sonraki \u00f6deme",
+		"Period": "D\u00f6nem",
+		"Price": "Fiyat",
+		"AreYouSureUnsubscribe": "Bu plan\u0131n aboneli\u011fini iptal etmek istedi\u011finizden emin misiniz?",
+		"YouUnsubscribedFromPlan": "&quot; {{planTitle}} &quot; plan\u0131 aboneli\u011finden \u00e7\u0131kt\u0131n\u0131z. Sizden \u00fccret al\u0131nmayacak, ancak aboneli\u011finiz {{endsIn}} kadar devam edecek",
+		"plan": {
+			"TitlePlaceholder": "plan ba\u015fl\u0131\u011f\u0131",
+			"PricePlaceholder": "fiyat",
+			"DescriptionPlaceholder": "abonelik plan\u0131 a\u00e7\u0131klamas\u0131",
+			"SavePlan": "Plan\u0131 Kaydet",
+			"NewPlan": "Yeni plan",
+			"SubscriptionTitle": "Abonelik planlar\u0131",
+			"AreYouSureDeletePlan": "Bu plan\u0131 silmek istedi\u011finizden emin misiniz?",
+			"Duration": "S\u00fcre",
+			"Discount": "\u0130ndirim",
+			"Interrupt": "Yar\u0131da kesmek",
+			"Continue": "Devam etmek",
+			"SelectDisplayType": "{{displayType}} se\u00e7in",
+			"EndDate": "biti\u015f tarihi",
+			"Available": "Mevcut",
+			"Hidden": "Gizlenmi\u015f",
+			"InviteOnly": "Sadece davetli",
+			"CantSubscribeUnlessInvited": "Davet edilmedi\u011finiz s\u00fcrece bu plana abone olamazs\u0131n\u0131z"
+		}
+	},
+	"payments": {
+		"infoTitle": "\u00d6deme Bilgilerini Ayarla",
+		"BuyAmountCredits": "{{amount}} kredi sat\u0131n al",
+		"confirm": {
+			"title": "Bir \u00f6deme yapmak",
+			"message": "{{symbol}} {{amount}} \u00f6demeyi kabul ediyor musunuz?",
+			"ok": "TAMAM",
+			"cancel": "\u0130ptal etmek"
+		},
+		"reasons": {
+			"BuyCredits": "Kredi Sat\u0131n Al"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "Kredi",
+			"description": "kredileri ve \u00f6demeleri takip eder"
+		},
+		"Assets/plan": {
+			"displayType": "Abonelik Plan\u0131",
+			"description": "abonelik plan\u0131"
+		},
+		"Assets/subscription": {
+			"displayType": "abonelik",
+			"description": "abonelik"
+		},
+		"Assets/product": {
+			"displayType": "\u00dcr\u00fcn",
+			"description": "sat\u0131lan \u00fcr\u00fcn"
+		},
+		"Assets/service": {
+			"displayType": "Hizmet",
+			"description": "sunulan hizmet"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "{{amount}} kredi kazand\u0131"
+		},
+		"Assets/credits/bought": {
+			"content": "{{amount}} kredi sat\u0131n ald\u0131"
+		},
+		"Assets/credits/bonus": {
+			"content": "Bonus {{amount}} kredi"
+		},
+		"Assets/credits/spent": {
+			"content": "{{amount}} kredi harcad\u0131"
+		},
+		"Assets/credits/sent": {
+			"content": "{{amount}} krediyi {{toUserName}} g\u00f6nderdi"
+		},
+		"Assets/credits/received": {
+			"content": "{{fromUserName}} {{amount}} kredi al\u0131nd\u0131"
+		},
+		"Assets/credits/alert": {
+			"content": "Hesab\u0131n\u0131zda \u00e7ok az krediniz var. Daha fazla kredi sat\u0131n almak i\u00e7in l\u00fctfen <a href='<i translate='no'>999 &#39;&gt;bu ba\u011flant\u0131y\u0131</a> ziyaret edin."
+		}
+	},
+	"billing": {
+		"Title": "varl\u0131k faturaland\u0131rmas\u0131",
+		"CreditsMinimum": "Minimum kredi",
+		"CreditsToAdd": "Eklenecek krediler",
+		"Save": "Kaydetmek",
+		"ThisLink": "bu ba\u011flant\u0131",
+		"errors": {
+			"CreditsMinimumNegative": "Minimum kredi negatif olamaz",
+			"CreditsToAddNegative": "Eklenecek krediler negatif olamaz"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "Yeni Hizmet",
+			"TitlePlaceholder": "hizmet unvan\u0131",
+			"PricePlaceholder": "fiyat\u0131 belirle",
+			"LinkPlaceholder": "ek bilgi ba\u011flant\u0131s\u0131 ayarla",
+			"DescriptionPlaceholder": "Servis a\u00e7\u0131klamas\u0131",
+			"SaveService": "Hizmeti Kaydet",
+			"SelectRequiredParticipants": "Gerekli ilgili kat\u0131l\u0131mc\u0131lar",
+			"RequiredParticipantsDesc": "L\u00fctfen bu hizmeti kullanmas\u0131 gereken ilgili kat\u0131l\u0131mc\u0131lar\u0131 se\u00e7in (\u00f6rne\u011fin, &quot;K\u00f6pek g\u00f6sterisi&quot; i\u00e7in evcil hayvanlar veya &quot;\u00c7ocuk tatili&quot; i\u00e7in \u00e7ocuklar vb.). Hizmet \u00fccretli ise, kullan\u0131c\u0131n\u0131n ilgili her kat\u0131l\u0131mc\u0131 i\u00e7in ayr\u0131ca \u00f6deme yapmas\u0131 gerekecektir."
+		},
+		"EditServiceTemplate": {
+			"Title": "Hizmeti D\u00fczenle"
+		},
+		"ManageServiceTemplates": "Hizmet \u015eablonlar\u0131n\u0131 Y\u00f6netin",
+		"ManageServices": "Hizmetleri Y\u00f6net",
+		"Free": "\u00d6zg\u00fcr",
+		"OptionalContribution": "\u0130ste\u011fe ba\u011fl\u0131 katk\u0131",
+		"RequiredPayment": "gerekli \u00f6deme",
+		"AreYouSureDelete": "Bu hizmeti silmek istedi\u011finizden emin misiniz?",
+		"AmountServicesRelated": "Bu hizmetle ilgili {{amount}} m\u00fcsaitlik var. Onlar da kald\u0131r\u0131lacak."
+	},
+	"transfer": {
+		"SelectRecipient": "al\u0131c\u0131 se\u00e7",
+		"TransactionSuccess": "\u0130\u015flem Ba\u015far\u0131s\u0131",
+		"OrTypeWalletAddress": "VEYA al\u0131c\u0131n\u0131n c\u00fczdan adresini yaz\u0131n",
+		"AppCredits": "Uygulama Kredileri"
+	},
+	"NFT": {
+		"Title": "Ba\u015fl\u0131k",
+		"Name": "\u0130sim",
+		"EnterName": "\u0130sim giriniz",
+		"EnterAuthorWallet": "Yazar c\u00fczdan\u0131n\u0131 girin",
+		"InformationAboutTitle": "{{title}} NFT hakk\u0131nda bilgi",
+		"Description": "Tan\u0131m",
+		"DetailedInformationAboutNFT": "NFT hakk\u0131nda detayl\u0131 bilgi",
+		"PresaleStarts": "\u00d6n Sat\u0131\u015f 23 Aral\u0131k&#39;ta Ba\u015fl\u0131yor",
+		"OwnerUserNotFound": "Bu NFT&#39;nin sahibi uygulamam\u0131zda kay\u0131tl\u0131 de\u011fil.",
+		"BuyNow": "\u015eimdi al",
+		"Buy": "Sat\u0131n almak",
+		"Add": "Eklemek",
+		"Remove": "Kald\u0131rmak",
+		"NoNFTyet": "Hen\u00fcz NFT yok",
+		"Conversation": "Konu\u015fma",
+		"Create": "Yaratmak",
+		"CurrentBid": "Mevcut teklif",
+		"StartingIn": "\u0130\u00e7inde ba\u015flayan",
+		"EndingIn": "biten",
+		"CreateNFT": "Bir NFT olu\u015fturun",
+		"TitlePlaceholder": "NFT&#39;nize bir ba\u015fl\u0131k verin",
+		"DescriptionPlaceholder": "NFT&#39;nize bir a\u00e7\u0131klama verin",
+		"CreateYourNFT": "NFT&#39;nizi olu\u015fturun",
+		"Royalties": "Telif haklar\u0131",
+		"RoyaltyPlaceholder": "\u0130ste\u011fe ba\u011fl\u0131. Aktar\u0131mdan \u00f6nce yarat\u0131c\u0131ya \u00f6denen tutar.",
+		"ExpirationDate": "Son kullanma tarihi",
+		"StartingDate": "Ba\u015flang\u0131\u00e7 tarihi",
+		"BidsBelowThisAmount": "Bu tutar\u0131n alt\u0131ndaki tekliflere izin verilmeyecektir",
+		"MinimumBid": "Minimum teklif",
+		"Author": "Yazar",
+		"Price": "Fiyat",
+		"Commission": "komisyon",
+		"EnterCommission": "Komisyonu girin",
+		"Owner": "Mal sahibi",
+		"SelectCategory": "Kategori se\u00e7",
+		"Day": "G\u00fcn",
+		"Days": "g\u00fcn",
+		"Hour": "Saat",
+		"Hours": "Saat",
+		"Minute": "Dakika",
+		"Minutes": "Dakika",
+		"Second": "Saniye",
+		"Seconds": "saniye",
+		"SalesCreator": "sat\u0131\u015flar\u0131n oran\u0131 yarat\u0131c\u0131ya gidecek",
+		"Details": "Detaylar",
+		"Bids": "teklifler",
+		"History": "Tarih",
+		"LoremIpsum": "Lorem Ipsum, bas\u0131m ve dizgi end\u00fcstrisinin basit bir \u015fekilde sahte metnidir.",
+		"PutOnSale": "sat\u0131\u015fa \u00e7\u0131karmak",
+		"PutOffSale": "Sat\u0131\u015ftan \u00e7ekilmek",
+		"Transfer": "Aktar",
+		"Actions": "Hareketler",
+		"Claim": "\u0130ddia",
+		"ClaimNFT": "NFT&#39;yi talep et",
+		"Unlocking": "kilit a\u00e7ma",
+		"Unlock": "Kilidini a\u00e7",
+		"Update": "G\u00fcncelleme",
+		"UpdateToken": "Jetonu G\u00fcncelle",
+		"UpdateNFT": "NFT&#39;yi g\u00fcncelle",
+		"CreateToken": "Belirte\u00e7 Olu\u015ftur",
+		"PlaceBid": "Teklif Ver",
+		"SoldOut": "Sat\u0131lm\u0131\u015f",
+		"NotOnSale": "Sat\u0131\u015fta De\u011fil",
+		"NftName": "NFT ad\u0131",
+		"DescribeYourNFT": "L\u00fctfen NFT&#39;nizi tan\u0131mlay\u0131n",
+		"NFTImage": "NFT i\u00e7in resim",
+		"NFTVideo": "Varsa, NFT i\u00e7in video",
+		"UploadMovie": "film y\u00fckle",
+		"MovieSource": "Film Kayna\u011f\u0131",
+		"MovieURL": "Film URL&#39;si",
+		"UploadFile": "Bir dosya y\u00fckle",
+		"PutOnMarketplace": "Pazar yerine koymak",
+		"InstantPurchase": "Kullan\u0131c\u0131lar\u0131n NFT&#39;nizi an\u0131nda sat\u0131n almalar\u0131n\u0131 sa\u011flamak i\u00e7in fiyat\u0131 girin",
+		"FixedPrice": "Sabit fiyat",
+		"TimedAuction": "s\u00fcreli m\u00fczayede",
+		"OpenForBids": "tekliflere a\u00e7\u0131k",
+		"PriceOnePiece": "Tek par\u00e7a i\u00e7in fiyat girin",
+		"EnterPrice": "fiyat\u0131 girin",
+		"EnterMinimumBid": "Minimum teklifi girin",
+		"SelectChain": "zincir se\u00e7in",
+		"Currency": "Para birimi",
+		"AreYouSureDeleteImage": "Resmi kald\u0131rmak istedi\u011finizden emin misiniz?",
+		"AreYouSureDeleteVideo": "Videoyu kald\u0131rmak istedi\u011finizden emin misiniz?",
+		"series": {
+			"Name": "\u0130sim",
+			"Icon": "simge",
+			"Description": "Tan\u0131m",
+			"Author": "Yazar",
+			"SelectSeries": "seri se\u00e7",
+			"Value": "De\u011fer",
+			"AreYouSure": "Emin misin?",
+			"AuthorInvalid": "Yazar adresi ge\u00e7ersiz!",
+			"Address": "Adres",
+			"CoverImage": "Kapak resmi",
+			"UploadCoverImage": "Kapak resmi y\u00fckle",
+			"CommissionAddressInvalid": "Komisyon adresi ge\u00e7ersiz",
+			"OnSale": "sat\u0131l\u0131k",
+			"OffSale": "indirimli",
+			"CreateSeries": "Seri Olu\u015ftur",
+			"UpdateSeries": "G\u00fcncelleme Serisi",
+			"SeriesInfo": "Seri Bilgisi",
+			"SelectAuthor": "yazar se\u00e7",
+			"NewItem": "Yeni NFT serisi",
+			"NamePlaceholder": "Seri ad\u0131n\u0131 girin",
+			"DescPlaceholder": "Seri a\u00e7\u0131klamas\u0131n\u0131 girin",
+			"EndingIn": "Biten"
+		},
+		"contract": {
+			"CreateContract": "S\u00f6zle\u015fme olu\u015ftur",
+			"SelectContract": "s\u00f6zle\u015fme se\u00e7",
+			"CreateContractFor": "{{userName}} i\u00e7in s\u00f6zle\u015fme olu\u015ftur",
+			"ContractFor": "{{userName}} i\u00e7in s\u00f6zle\u015fme",
+			"UpdateContract": "S\u00f6zle\u015fmeyi G\u00fcncelle",
+			"TransferOwnership": "Sahipli\u011fi Aktar",
+			"SetBaseURI": "Temel URI&#39;yi Ayarla",
+			"SetSuffix": "Soneki Ayarla",
+			"CurrentOwner": "Mevcut Sahibi",
+			"CurrentBaseURL": "Ge\u00e7erli TemelURL",
+			"ContractAddressAbsent": "S\u00f6zle\u015fme adresi yok",
+			"FactoryAddressAbsent": "Fabrika adresi yok",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "Ba\u015fl\u0131k gerekli",
+			"SymbolRequired": "Sembol gerekli",
+			"TypeContractName": "s\u00f6zle\u015fme ad\u0131",
+			"TypeContractSymbol": "s\u00f6zle\u015fme sembol\u00fc (en fazla 10 karakter)"
+		},
+		"contests": {
+			"Title": "yar\u0131\u015fmalar",
+			"NewContest": "Yeni Yar\u0131\u015fma"
+		},
+		"import": {
+			"importNFT": "NFT&#39;leri i\u00e7e aktarma",
+			"importAttributes": "NFT \u00f6zniteliklerini i\u00e7e aktar",
+			"fileNotFound": "\u00dczg\u00fcn\u00fcz, CSV dosyas\u0131 bulunamad\u0131.",
+			"fileEmpty": "\u00dczg\u00fcn\u00fcz, CSV dosyas\u0131 bo\u015f.",
+			"userIdNotFound": "kullan\u0131c\u0131 var ama kimli\u011fi bo\u015f",
+			"errorLine": "sat\u0131r {{1}}",
+			"fieldNotFound": "Gerekli alan &quot; {{1}} &quot; bulunamad\u0131",
+			"displayTypeEmpty": "&quot; {{1}} &quot; i\u00e7in g\u00f6r\u00fcnt\u00fcleme tipi bulunamad\u0131",
+			"taskStreamInvalid": "g\u00f6rev ak\u0131\u015f\u0131 ge\u00e7ersiz",
+			"instructionsEmpty": "g\u00f6rev ak\u0131\u015f\u0131 y\u00f6nergeleri bo\u015f",
+			"complete": "Tamamlamak",
+			"activateUsers": "kullan\u0131c\u0131lara aktivasyon mesaj\u0131 g\u00f6nderilsin mi?",
+			"importProgress": "\u0130lerlemek",
+			"importOptions": "Se\u00e7enekler",
+			"sampleCSV": "\u00d6rnek CSV&#39;yi \u0130ndirin",
+			"fileLabel": "Elektronik Tablo Y\u00fckle:",
+			"errorsTitle": "Hatalar olu\u015ftu"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "NFT Koleksiyonlar\u0131na G\u00f6re Filtrele",
+				"ShowNFTCollection": "NFT koleksiyonunu \u015furada g\u00f6ster...",
+				"AllCollections": "T\u00fcm Koleksiyonlar"
+			},
+			"ByUser": {
+				"AllAuthors": "T\u00fcm Yazarlar",
+				"AllUsers": "Herkes",
+				"FilterByAuthors": "Yazarlara G\u00f6re Filtrele"
+			}
+		},
+		"Back": "Koleksiyona Geri D\u00f6n",
+		"attributes": {
+			"Title": "Nitelikleri Y\u00f6net",
+			"Attributes": "\u00d6znitellikler",
+			"DisplayTitle": "Ekran tipi",
+			"AddDisplayType": "Yeni g\u00f6r\u00fcnt\u00fcleme t\u00fcr\u00fc ekle",
+			"NewDisplay": "Yeni Ekran",
+			"TraitTitle": "\u00d6zellik T\u00fcr\u00fc",
+			"AddTraitTitle": "Yeni \u00f6zellik t\u00fcr\u00fc ekle",
+			"NewTrait": "Yeni \u00d6zellik T\u00fcr\u00fc",
+			"ValueTitle": "De\u011fer",
+			"AddValueTitle": "Yeni de\u011fer ekle",
+			"NewValue": "Yeni de\u011fer",
+			"NewAttribute": "Yeni \u00d6znitelik",
+			"UpdateAttributes": "Nitelikleri G\u00fcncelle",
+			"SaveAttributes": "\u00d6znitelikleri Kaydet"
+		},
+		"profile": {
+			"LogOut": "\u00c7\u0131k\u0131\u015f Yap",
+			"Title": "{{userName}} i\u00e7in profil",
+			"Description": "Kullan\u0131c\u0131 detaylar\u0131",
+			"aboutPlaceholder": "Biyografiyi D\u00fczenle",
+			"SureLogOut": "Oturumu kapatmak istedi\u011finizden emin misiniz?",
+			"UploadCoverPhoto": "Kapak Foto\u011fraf\u0131 Y\u00fckle"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFT S\u00f6zle\u015fmesi",
+						"seriesId": "dizi kimli\u011fi",
+						"owner": "Mal sahibi",
+						"currency": "para birimi",
+						"price": "Fiyat",
+						"beneficiary": "yararlan\u0131c\u0131",
+						"autoindex": "otomatik dizin",
+						"duration": "S\u00fcre",
+						"rateInterval": "Oran aral\u0131\u011f\u0131",
+						"rateAmount": "Oran miktar\u0131"
+					},
+					"small": {
+						"NFTContract": "NFT S\u00f6zle\u015fmesi",
+						"seriesId": "jetonlar bu seride bas\u0131lacak",
+						"owner": "\u00f6rne\u011fin sahibi, aksi takdirde g\u00f6nderici olur",
+						"currency": "S\u0131f\u0131rsa, sat\u0131n al\u0131nan jetonlar i\u00e7in para birimi - yerel madeni paralar i\u00e7in",
+						"price": "Fiyat",
+						"beneficiary": "Jeton satman\u0131n lehtar\u0131, aksi takdirde g\u00f6nderici olacakt\u0131r.",
+						"autoindex": "otomatik dizin",
+						"duration": "Bast\u0131ktan sonra kilitleyin. S\u0131f\u0131r, hemen al\u0131n demektir.",
+						"rateInterval": "\u00f6zel sat\u0131n alma i\u00e7in kova aral\u0131\u011f\u0131",
+						"rateAmount": "\u00f6zel sat\u0131n alma i\u00e7in kova miktar\u0131"
+					}
+				},
+				"placeholders": {
+					"optional": "(iste\u011fe ba\u011fl\u0131)",
+					"number": "say\u0131",
+					"address": "adres",
+					"fraction": "kesir",
+					"integer": "tamsay\u0131",
+					"seconds": "saniye",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "\u00dcretmek",
+				"viewInstancesList": "Listeyi Yenile"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "Seri Kimli\u011fi",
+						"account": "Hesap",
+						"amount": "Miktar"
+					},
+					"small": {
+						"seriesId": "yeni belirte\u00e7, bu kimli\u011fe sahip seriye ait olacak",
+						"account": "yeni olu\u015fturulan NFT&#39;nin sahibi. ayarlanmam\u0131\u015fsa - ge\u00e7erli c\u00fczdan\u0131 kullan\u0131r",
+						"amount": "miktar NFT to mint"
+					}
+				},
+				"placeholders": {
+					"optional": "(iste\u011fe ba\u011fl\u0131)",
+					"seriesId": "\u0130D",
+					"account": "hesap",
+					"amount": "miktar",
+					"integer": "tamsay\u0131"
+				},
+				"btn": {
+					"Purchase": "Sat\u0131n almak",
+					"SpecialPurchase": "\u00f6zel sat\u0131n alma"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "Adres"
+					},
+					"small": {
+						"account": "Adres"
+					}
+				},
+				"errors": {
+					"invalidAddress": "Ge\u00e7ersiz adres"
+				},
+				"placeholders": {
+					"account": "Adres"
+				},
+				"addToWhitelist": "Beyaz Listeye Ekle",
+				"removeFromWhitelist": "Beyaz Listeden \u00c7\u0131kar"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "Belirte\u00e7 Kimli\u011fi",
+					"custodian": "Sorumlu",
+					"recipient": "al\u0131c\u0131"
+				},
+				"small": {
+					"tokenId": "belirte\u00e7 kimli\u011fi kilitlemek veya kilidini a\u00e7mak i\u00e7in gerekenler",
+					"custodian": "kilidini a\u00e7abilecek adres",
+					"recipient": "belirte\u00e7leri alacak adres"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "Ge\u00e7ersiz belirte\u00e7 kimli\u011fi",
+				"invalidCustodian": "Ge\u00e7ersiz Vasi",
+				"invalidRecipient": "Ge\u00e7ersiz Al\u0131c\u0131"
+			},
+			"placeholders": {
+				"optional": "(iste\u011fe ba\u011fl\u0131)",
+				"tokenId": "\u0130D",
+				"custodian": "adres"
+			},
+			"Lock": "Kilit",
+			"Unlock": "Kilidini a\u00e7",
+			"Locked": "Kilitli",
+			"CustodianAddress": "veli adresi",
+			"TokenWasClaimed": "Token &quot; {{title}} &quot; talep edildi",
+			"TokenWasLocked": "&quot; {{title}} &quot; belirteci kilitlendi",
+			"TokenWasUnlocked": "&quot; {{title}} &quot; jetonunun kilidi a\u00e7\u0131ld\u0131"
+		},
+		"GenerateDescription": "veya otomatik olu\u015ftur",
+		"collections": {
+			"Title": "Koleksiyonlar",
+			"EnterTitle": "ba\u015fl\u0131\u011f\u0131 girin",
+			"EnterDescription": "a\u00e7\u0131klamay\u0131 girin",
+			"NewCollection": "Yeni koleksiyon",
+			"Name": "\u0130sim",
+			"Icon": "simge",
+			"Description": "Tan\u0131m",
+			"Author": "Yazar",
+			"SelectCollection": "koleksiyon se\u00e7",
+			"Value": "De\u011fer",
+			"AreYouSure": "Emin misin?",
+			"AuthorInvalid": "Yazar adresi ge\u00e7ersiz!",
+			"Address": "Adres",
+			"CoverImage": "Kapak resmi",
+			"UploadIcon": "y\u00fckleme simgesi",
+			"CommissionAddressInvalid": "Komisyon adresi ge\u00e7ersiz",
+			"OnSale": "sat\u0131l\u0131k",
+			"OffSale": "indirimli",
+			"CreateCollection": "Koleksiyon Olu\u015ftur",
+			"UpdateCollection": "Koleksiyonu G\u00fcncelle",
+			"CollectionInfo": "Koleksiyon Bilgisi",
+			"SelectAuthor": "yazar se\u00e7",
+			"NewItem": "Yeni NFT Koleksiyonu",
+			"NamePlaceholder": "Koleksiyon ad\u0131n\u0131 girin",
+			"DescPlaceholder": "Koleksiyon a\u00e7\u0131klamas\u0131n\u0131 girin",
+			"EndingIn": "Biten",
+			"SubmitSeries": "Bir Seri G\u00f6nder"
+		}
+	},
+	"currencies": {
+		"choose": "Bir para birimi se\u00e7in"
+	},
+	"connectedAccount": {
+		"Title": "Hesab\u0131 ba\u011fla",
+		"Success": "Ba\u015far\u0131",
+		"YourAccountCreated": "Hesab\u0131n\u0131z ba\u015far\u0131yla olu\u015fturuldu!",
+		"YourAccountAlreadyCreated": "Hesab\u0131n\u0131z zaten olu\u015fturuldu ve kullan\u0131ma haz\u0131r"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "rezerv belirteci",
+						"amount": "Miktar"
+					},
+					"small": {
+						"reserveToken": "rezerv belirteci",
+						"amount": "Miktar"
+					}
+				},
+				"placeholders": {
+					"amount": "miktar"
+				},
+				"btns": {
+					"stake": "kaz\u0131k"
+				},
+				"stake": "kaz\u0131k",
+				"loading": "Y\u00fckleniyor"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "belirte\u00e7Erc20",
+					"duration": "S\u00fcre",
+					"bonusTokenFraction": "bonusTokenKesiri",
+					"popularToken": "pop\u00fcler belirte\u00e7",
+					"donations": "ba\u011f\u0131\u015flar",
+					"rewardsRateFraction": "\u00f6d\u00fcllerRateFraction",
+					"numerator": "pay",
+					"denominator": "payda"
+				},
+				"small": {
+					"tokenErc20": "belirte\u00e7Erc20",
+					"duration": "G\u00fcn cinsinden s\u00fcre",
+					"bonusTokenFraction": "bonusTokenKesiri",
+					"popularToken": "pop\u00fcler belirte\u00e7",
+					"donations": "ba\u011f\u0131\u015flar",
+					"rewardsRateFraction": "\u00f6d\u00fcllerRateFraction",
+					"numerator": "pay",
+					"denominator": "payda"
+				}
+			},
+			"placeholders": {
+				"optional": "(iste\u011fe ba\u011fl\u0131)",
+				"tuple": "demet[]",
+				"number": "say\u0131",
+				"address": "adres",
+				"fraction": "kesir",
+				"integer": "tamsay\u0131",
+				"seconds": "saniye",
+				"days": "g\u00fcnler",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "havuz yok"
+			},
+			"btns": {
+				"createPool": "Havuz Olu\u015ftur",
+				"createPoolInForm": "Yaratmak"
+			},
+			"createPool": "Havuz Olu\u015ftur",
+			"produce": "\u00dcretmek",
+			"loading": "Y\u00fckleniyor",
+			"viewInstancesList": "Listeyi Yenile"
+		}
+	},
+	"fundrise": {
+		"placeholder": "Bu katk\u0131 hakk\u0131nda bir \u015feyler yaz\u0131n..."
+	}
 }

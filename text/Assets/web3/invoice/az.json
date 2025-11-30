@@ -1,27 +1,27 @@
 {
-    "title": "Ödəmək",
-    "steps": {
-        "sending_native_coins": "Doğma sikkələrin göndərilməsi",
-        "sending_tokens": "Tokenlərin göndərilməsi",
-        "swap": "Mübadilə",
-        "approve": "Təsdiq edin",
-        "one_tx": "Bir əməliyyat göndərməlisiniz",
-        "two_tx": "Siz iki əməliyyat göndərməlisiniz"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Ödəmək üçün vəsait"
-            }
-        },
-        "btns": {
-            "pay": "Ödəmək"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "&quot; {{amountOut}} &quot; token ödəmək lazımdır"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "&quot; {{chainId}} &quot; id ilə belə zəncir dəstəklənmir"
-    }
+	"title": "\u00d6d\u0259m\u0259k",
+	"steps": {
+		"sending_native_coins": "Do\u011fma sikk\u0259l\u0259rin g\u00f6nd\u0259rilm\u0259si",
+		"sending_tokens": "Tokenl\u0259rin g\u00f6nd\u0259rilm\u0259si",
+		"swap": "M\u00fcbadil\u0259",
+		"approve": "T\u0259sdiq edin",
+		"one_tx": "Bir \u0259m\u0259liyyat g\u00f6nd\u0259rm\u0259lisiniz",
+		"two_tx": "Siz iki \u0259m\u0259liyyat g\u00f6nd\u0259rm\u0259lisiniz"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u00d6d\u0259m\u0259k \u00fc\u00e7\u00fcn v\u0259sait"
+			}
+		},
+		"btns": {
+			"pay": "\u00d6d\u0259m\u0259k"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "&quot; {{amountOut}} &quot; token \u00f6d\u0259m\u0259k laz\u0131md\u0131r"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "&quot; {{chainId}} &quot; id il\u0259 bel\u0259 z\u0259ncir d\u0259st\u0259kl\u0259nmir"
+	}
 }

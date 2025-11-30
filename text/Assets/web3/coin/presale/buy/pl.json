@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Ile zainwestować?"
-                    },
-                    "placeholders": {
-                        "amount": "Ilość {{nativeCoin}}",
-                        "max": "Maks.: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Kupić",
-                    "execute": "Wykonać"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "Ile zainwestowa\u0107?"
+					},
+					"placeholders": {
+						"amount": "Ilo\u015b\u0107 {{nativeCoin}}",
+						"max": "Maks.: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "Kupi\u0107",
+					"execute": "Wykona\u0107"
+				}
+			}
+		}
+	}
 }

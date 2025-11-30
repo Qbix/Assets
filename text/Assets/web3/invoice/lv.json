@@ -1,27 +1,27 @@
 {
-    "title": "Maksājiet",
-    "steps": {
-        "sending_native_coins": "Vietējo monētu sūtīšana",
-        "sending_tokens": "Žetonu nosūtīšana",
-        "swap": "Apmainīt",
-        "approve": "Apstiprināt",
-        "one_tx": "Jums vajadzētu nosūtīt vienu darījumu",
-        "two_tx": "Jums jānosūta divi darījumi"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Līdzekļi, kas jāmaksā"
-            }
-        },
-        "btns": {
-            "pay": "Maksājiet"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Jāmaksā &quot; {{amountOut}} &quot; žetoni"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Šāda ķēde ar ID &quot; {{chainId}} &quot; netiek atbalstīta"
-    }
+	"title": "Maks\u0101jiet",
+	"steps": {
+		"sending_native_coins": "Viet\u0113jo mon\u0113tu s\u016bt\u012b\u0161ana",
+		"sending_tokens": "\u017detonu nos\u016bt\u012b\u0161ana",
+		"swap": "Apmain\u012bt",
+		"approve": "Apstiprin\u0101t",
+		"one_tx": "Jums vajadz\u0113tu nos\u016bt\u012bt vienu dar\u012bjumu",
+		"two_tx": "Jums j\u0101nos\u016bta divi dar\u012bjumi"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "L\u012bdzek\u013ci, kas j\u0101maks\u0101"
+			}
+		},
+		"btns": {
+			"pay": "Maks\u0101jiet"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "J\u0101maks\u0101 &quot; {{amountOut}} &quot; \u017eetoni"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "\u0160\u0101da \u0137\u0113de ar ID &quot; {{chainId}} &quot; netiek atbalst\u012bta"
+	}
 }

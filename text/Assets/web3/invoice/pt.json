@@ -1,27 +1,27 @@
 {
-    "title": "Pagar",
-    "steps": {
-        "sending_native_coins": "Envio de moedas nativas",
-        "sending_tokens": "Envio de tokens",
-        "swap": "Trocar",
-        "approve": "Aprovar",
-        "one_tx": "Você deve enviar uma transação",
-        "two_tx": "Você deve enviar duas transações"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Fundos para pagar"
-            }
-        },
-        "btns": {
-            "pay": "Pagar"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Precisa pagar &quot; {{amountOut}} &quot; tokens"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Essa cadeia com id &quot; {{chainId}} &quot; não é suportada"
-    }
+	"title": "Pagar",
+	"steps": {
+		"sending_native_coins": "Envio de moedas nativas",
+		"sending_tokens": "Envio de tokens",
+		"swap": "Trocar",
+		"approve": "Aprovar",
+		"one_tx": "Voc\u00ea deve enviar uma transa\u00e7\u00e3o",
+		"two_tx": "Voc\u00ea deve enviar duas transa\u00e7\u00f5es"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Fundos para pagar"
+			}
+		},
+		"btns": {
+			"pay": "Pagar"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "Precisa pagar &quot; {{amountOut}} &quot; tokens"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "Essa cadeia com id &quot; {{chainId}} &quot; n\u00e3o \u00e9 suportada"
+	}
 }

@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Earráid",
-        "WalletAbsent": "Níl an sparán ceangailte.",
-        "Rendering": "Tharla earráidí agus <span class='url'>{{1}}<\/span> á rindreáil",
-        "PriceRequired": "Praghas ag teastáil!",
-        "NameRequired": "Ainm ag teastáil!",
-        "PriceInvalid": "Praghas neamhbhailí!",
-        "AmountInvalid": "Méid neamhbhailí!",
-        "TransactionFailed": "Theip ar Idirbheart",
-        "ChainNotSupported": "Ní thacaítear leis an slabhra roghnaithe. Slabhra tacaithe: {{supportedChain}}",
-        "NeedMetaMaskConnected": "An riachtanas is gá MetaMask ceangailte a bheith ag obair leis an bhfeidhmchlár",
-        "UserNotLoggedInMetaMask": "Níl an t-úsáideoir logáilte isteach i MetaMask",
-        "CurrencyNotFound": "Airgeadra gan aimsiú",
-        "WrongChain": "Cruthaíodh an NFT seo faoi &quot; {{chain}} &quot; . Bain úsáid as an slabhra seo le do thoil.",
-        "NoRecipientSelected": "Níor roghnaíodh aon fhaighteoir",
-        "NotEnoughPermissionsWallet": "Níl go leor ceadanna chun sparán an úsáideora seo a léamh",
-        "ThisUserHaveNoWallet": "Níl aon sparán sannta don úsáideoir seo",
-        "TheWalletOfThisUserInvalid": "Tá sparán an úsáideora seo neamhbhailí",
-        "WalletInvalid": "Seoladh sparán neamhbhailí",
-        "CantManageFrozenSeries": "Ní féidir leat sraith reoite a bhainistiú",
-        "SubscriptionStreamNotPaid": "Níor íoc tú chun féachaint ar an ábhar seo. Cliceáil {{subscriptionUrl}} le do thoil agus liostáil don phlean cuí."
-    },
-    "admin": {
-        "Title": "Sócmhainní riaracháin",
-        "SubscriptionTitle": "Pleananna síntiús"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Tapáil chun íoc"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : muirear próiseáilte le haghaidh {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Go raibh maith agat as d’íocaíocht chuig {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} suibscríofa le {{plan.title}}",
-        "YouSubscribedTo": "Tá tú sínithe le {{plan.title}}",
-        "Assets\/credits\/alert": "Tá foláireamh agat a bhaineann le do chuntas"
-    },
-    "charge": {
-        "Subject": "Faigheann tú íocaíocht {{displayAmount}} ó {{call 'publisher.displayName'}} faoi &quot; {{description}} &quot;",
-        "HasBeenCharged": "Hey, níl anseo ach a chur in iúl duit gur gearradh {{2}} ar {{1}} as {{3}} faoi {{4}}"
-    },
-    "charged": {
-        "Subject": "Go raibh maith agat as d&#39;íocaíocht as &quot; {{description}} &quot;",
-        "HavePaid": "Hey {{1}} , níl anseo ach dearbhú tapa gur éirigh leat {{2}} go {{3}} a íoc le haghaidh {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Eolas faoi ordú",
-        "PaymentMethod": "Modh íocaíochta",
-        "ContactInfo": "Eolas teagmhála",
-        "Pay": "Pá",
-        "PaymentSucceeded": "D&#39;éirigh leis an íocaíocht",
-        "PaymentProcessing.": "Tá d&#39;íocaíocht á próiseáil",
-        "FailTryAgain": "Níor éirigh le d&#39;íocaíocht, bain triail eile as",
-        "SomethingWrong": "Chuaigh rud eigin mícheart",
-        "PaymentStatus": "Stádas íocaíochta",
-        "PayTo": "Íoc {{displayName}}",
-        "ChooseCurrency": "Roghnaigh airgeadra",
-        "YouCanSendUpTo": "Is féidir leat suas le {{amount}} {{symbol}} a sheoladh",
-        "Send": "Seol",
-        "EnterAmount": "cuir isteach méid"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Glacadh le cuireadh le {{invitedUserName}}",
-        "InvitedUserFilledStream": "Líonadh {{invitedUserName}} {{FilledStreamTitle}}",
-        "ForFillingStream": "Chun {{FilledStreamTitle}} a líonadh",
-        "YouHaveCreditsToStart": "Tá {{amount}} creidiúint agat le tosú",
-        "PaymentFor": "Íocaíocht as &quot; {{1}} &quot;",
-        "PaymentTo": "Íocaíocht le {{1}}",
-        "PaymentToUser": "Íocaíocht le {{toUserName}}",
-        "CreatePrivateChat": "le haghaidh comhrá príobháideach le {{toUserName}}",
-        "CreatePaidStream": "Chun {{toStreamName}} a chruthú",
-        "JoinedPaidStream": "chun áirithint i &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "chun pobail &quot; {{communityId}} &quot; a chruthú",
-        "LeftPaidStream": "mar aisíocaíocht áirithinte i &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{fromStreamName}} &quot;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "{{amount}} creidmheasanna ceannaithe",
-        "BonusCredits": "Bónas {{amount}} creidmheasanna",
-        "BuyAmountCredits": "Ceannaigh {{amount}} creidmheas",
-        "WatchClip": "Ghnóthaigh {{amount}} creidmheas as féachaint ar {{fromStreamTitle}}",
-        "MissingCredits": "Creidmheasanna ar Iarraidh",
-        "YouMissingCredits": "Teastaíonn {{amount}} creidiúint bhreise uait chun leanúint ar aghaidh.",
-        "BuyCredits": "Ceannaigh creidmheasanna",
-        "BuyBonus": "Má cheannaítear {{amount}} creidmheas láithreach, gheobhaidh tú bónas {{bonus}} creidmheasanna.",
-        "Buy": "Ceannaigh",
-        "PurchaseCredits": "Creidmheasanna Ceannaigh",
-        "Credits": "Creidmheasanna",
-        "ErrorInvalidAmount": "Méid neamhbhailí",
-        "ErrorInvalidCurrency": "Ar an drochuair ní thacaímid le hairgeadra {{currency}} go fóill",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} creidmheasanna",
-            "BonusCredits": "{{amount}} creidmheasanna"
-        }
-    },
-    "history": {
-        "Date": "Dáta",
-        "Amount": "Méid",
-        "Description": "Cur síos",
-        "Client": "Cliant",
-        "User": "Úsáideoir",
-        "To": "chun",
-        "From": "ó",
-        "SeeHistory": "Féach ar an stair íocaíochta do {{1}}",
-        "HistoryEmpty": "Níl aon sonraí agat fós",
-        "PaymentFor": "{{amount}} creidmheasanna seolta",
-        "PaymentTo": "{{amount}} creidmheasanna seolta",
-        "PaymentToUser": "{{amount}} creidmheasanna seolta",
-        "CreatePaidStream": "{{amount}} creidmheasanna caite",
-        "WatchClip": {
-            "+": "Ghnóthaigh {{amount}} creidmheas",
-            "-": "{{amount}} creidmheasanna caite"
-        },
-        "JoinedPaidStream": {
-            "+": "Ghnóthaigh {{amount}} creidmheas",
-            "-": "{{amount}} creidmheasanna caite"
-        },
-        "LeftPaidStream": {
-            "+": "Fuarthas {{amount}} creidmheas",
-            "-": "{{amount}} creidmheasanna seolta"
-        },
-        "CreatedCommunity": "{{amount}} creidmheasanna caite",
-        "BoughtCredits": "{{amount}} creidmheasanna ceannaithe",
-        "BonusCredits": "Fuair bónas {{amount}} creidmheasanna",
-        "InviteAcceptedBy": "Ghnóthaigh {{amount}} creidmheas",
-        "Streams_user_firstname": "Ghnóthaigh {{amount}} creidmheas",
-        "Streams_user_lastname": "Ghnóthaigh {{amount}} creidmheas",
-        "Streams_user_icon": "Ghnóthaigh {{amount}} creidmheas",
-        "Places_user_location": "Ghnóthaigh {{amount}} creidmheas",
-        "Streams_greeting": "Ghnóthaigh {{amount}} creidmheas",
-        "YouHaveCreditsToStart": "Ghnóthaigh {{amount}} creidmheas",
-        "InvitedUserFilledStream": "Ghnóthaigh {{amount}} creidmheas",
-        "ForFillingStream": "Ghnóthaigh {{amount}} creidmheas",
-        "CreatePrivateChat": "{{amount}} creidmheasanna caite"
-    },
-    "subscriptions": {
-        "infoTitle": "Socraigh Faisnéis Íocaíochta",
-        "confirm": {
-            "title": "Tosaigh Síntiúis",
-            "message": "Tosaigh síntiús athfhillteach le &quot; {{title}} &quot;?",
-            "ok": "ceart go leor",
-            "cancel": "Cealaigh"
-        },
-        "CreditOrDebitCard": "Cárta creidmheasa nó dochair",
-        "SubscribePayment": "Liostáil Íocaíocht",
-        "ImmediatePayment": "Íocaíocht Láithreach",
-        "ProcessingPayment": "Íocaíocht Próiseála",
-        "SubscriptionAlreadyPaid": "Tá an síntiús seo íoctha cheana féin",
-        "SubscriptionNotActive": "Níl an síntiús seo gníomhach",
-        "Subscribed": "suibscríofa",
-        "Unsubscribed": "Gan liostáil",
-        "Unsubscribe": "Díliostáil",
-        "Subscribe": "Liostáil",
-        "Started": "Thosaigh",
-        "EndsIn": "Críochnaíonn i",
-        "NextPay": "An chéad íocaíocht eile",
-        "Period": "Tréimhse",
-        "Price": "Praghas",
-        "AreYouSureUnsubscribe": "An bhfuil tú cinnte gur mhaith leat an plean seo a dhíliostáil?",
-        "YouUnsubscribedFromPlan": "Dhíshuiteáil tú ón bplean &quot; {{planTitle}} &quot;. Ní ghearrfar aon táille ort, ach leanfaidh do shíntiús ar aghaidh go dtí {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "teideal plean",
-            "PricePlaceholder": "praghas",
-            "DescriptionPlaceholder": "cur síos ar phlean síntiús",
-            "SavePlan": "Sábháil Plean",
-            "NewPlan": "Plean Nua",
-            "SubscriptionTitle": "Pleananna síntiús",
-            "AreYouSureDeletePlan": "An bhfuil tú cinnte gur mhaith leat an plean seo a scriosadh?",
-            "Duration": "Fad",
-            "Discount": "Lascaine",
-            "Interrupt": "Cur isteach",
-            "Continue": "Leanúint ar aghaidh",
-            "SelectDisplayType": "Roghnaigh {{displayType}}",
-            "EndDate": "dáta deiridh",
-            "Available": "Ar fáil",
-            "Hidden": "i bhfolach",
-            "InviteOnly": "Cuireadh-amháin",
-            "CantSubscribeUnlessInvited": "Ní féidir leat liostáil leis an bplean seo ach amháin má tugadh cuireadh duit"
-        }
-    },
-    "payments": {
-        "infoTitle": "Socraigh Faisnéis Íocaíochta",
-        "BuyAmountCredits": "Ceannaigh {{amount}} creidmheas",
-        "confirm": {
-            "title": "Déan Íocaíocht",
-            "message": "An aontaíonn tú {{symbol}} {{amount}} a íoc?",
-            "ok": "ceart go leor",
-            "cancel": "Cealaigh"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Creidmheasanna",
-            "description": "coinníonn sé cuntas ar chreidmheasanna agus íocaíochtaí"
-        },
-        "Assets\/plan": {
-            "displayType": "Plean Síntiúis",
-            "description": "plean síntiús"
-        },
-        "Assets\/subscription": {
-            "displayType": "Sintiús",
-            "description": "sintiús"
-        },
-        "Assets\/product": {
-            "displayType": "Táirge",
-            "description": "táirge á dhíol"
-        },
-        "Assets\/service": {
-            "displayType": "Seirbhís",
-            "description": "seirbhís á thairiscint"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "Ghnóthaigh {{amount}} creidmheas"
-        },
-        "Assets\/credits\/bought": {
-            "content": "{{amount}} creidmheasanna ceannaithe"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bónas {{amount}} creidmheasanna"
-        },
-        "Assets\/credits\/spent": {
-            "content": "{{amount}} creidmheasanna caite"
-        },
-        "Assets\/credits\/sent": {
-            "content": "{{amount}} creidmheasanna seolta chuig {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Fuarthas {{amount}} creidmheas ó {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Is beag creidmheasanna atá agat ar do chuntas. Tabhair cuairt le do thoil ar <a href='<i translate='no'>999 &#39;&gt;an nasc seo<\/a> chun tuilleadh creidmheasanna a cheannach."
-        }
-    },
-    "billing": {
-        "Title": "Billeáil sócmhainní",
-        "CreditsMinimum": "Creidmheasanna íosta",
-        "CreditsToAdd": "Creidmheasanna le cur leis",
-        "Save": "Sábháil",
-        "ThisLink": "an nasc seo",
-        "errors": {
-            "CreditsMinimumNegative": "Ní féidir íosmhéid creidmheasanna a bheith diúltach",
-            "CreditsToAddNegative": "Ní féidir le creidmheasanna le cur leis a bheith diúltach"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Seirbhís Nua",
-            "TitlePlaceholder": "Teideal seirbhíse",
-            "PricePlaceholder": "Praghas socraithe",
-            "LinkPlaceholder": "socraigh nasc faisnéise breise",
-            "DescriptionPlaceholder": "Cur síos ar an tseirbhís",
-            "SaveService": "Sábháil Seirbhís",
-            "SelectRequiredParticipants": "Rannpháirtithe gaolmhara riachtanacha",
-            "RequiredParticipantsDesc": "Roghnaigh le do thoil na rannpháirtithe gaolmhara atá ag teastáil chun an tseirbhís seo a úsáid (mar shampla peataí le haghaidh &quot;Seó Madraí&quot;, nó leanaí le haghaidh &quot;Saoire Leanaí&quot; srl). Má íoctar seirbhís, beidh ar an úsáideoir íoc as gach rannpháirtí gaolmhar freisin."
-        },
-        "EditServiceTemplate": {
-            "Title": "Cuir Seirbhís in Eagar"
-        },
-        "ManageServiceTemplates": "Bainistigh Teimpléid Seirbhíse",
-        "ManageServices": "Bainistigh Seirbhísí",
-        "Free": "Saor",
-        "OptionalContribution": "Ranníocaíocht roghnach",
-        "RequiredPayment": "Íocaíocht riachtanach",
-        "AreYouSureDelete": "An bhfuil tú cinnte gur mhaith leat an tseirbhís seo a scriosadh?",
-        "AmountServicesRelated": "Tá fáil ar {{amount}} a bhaineann leis an tseirbhís seo. Tá siad Beidh a chur as oifig freisin."
-    },
-    "transfer": {
-        "SelectRecipient": "Roghnaigh faighteoir",
-        "TransactionSuccess": "Rath Idirbheart",
-        "OrTypeWalletAddress": "NÓ cineál seoladh sparán an fhaighteora",
-        "AppCredits": "Creidmheasanna App"
-    },
-    "NFT": {
-        "Title": "Teideal",
-        "Name": "Ainm",
-        "EnterName": "Cuir isteach ainm",
-        "EnterAuthorWallet": "Cuir isteach sparán an údair",
-        "InformationAboutTitle": "Eolas faoi {{title}} NFT",
-        "Description": "Cur síos",
-        "DetailedInformationAboutNFT": "Faisnéis mhionsonraithe faoi NFT",
-        "PresaleStarts": "Presale ag tosú 23 Nollaig",
-        "OwnerUserNotFound": "Níl úinéir an NFT seo cláraithe inár n-iarratas.",
-        "BuyNow": "Ceannaigh Anois",
-        "Buy": "Ceannaigh",
-        "Add": "Cuir",
-        "Remove": "Bain",
-        "NoNFTyet": "Níl aon NFTanna fós",
-        "Conversation": "Comhrá",
-        "Create": "Cruthaigh",
-        "CurrentBid": "Tairiscint reatha",
-        "StartingIn": "Ag tosú i",
-        "EndingIn": "Ag críochnú i",
-        "CreateNFT": "Cruthaigh NFT",
-        "TitlePlaceholder": "Tabhair teideal do do NFT",
-        "DescriptionPlaceholder": "Tabhair cur síos ar do NFT",
-        "CreateYourNFT": "Cruthaigh do NFT",
-        "Royalties": "Dleachtanna",
-        "RoyaltyPlaceholder": "Roghnach. An méid a íocadh leis an cruthaitheoir roimh an aistriú.",
-        "ExpirationDate": "Dáta Éaga",
-        "StartingDate": "Dáta tosaigh",
-        "BidsBelowThisAmount": "Ní cheadófar tairiscintí faoin méid seo",
-        "MinimumBid": "Tairiscint íosta",
-        "Author": "Údar",
-        "Price": "Praghas",
-        "Commission": "Coimisiún",
-        "EnterCommission": "Cuir isteach coimisiún",
-        "Owner": "Úinéir",
-        "SelectCategory": "Roghnaigh catagóir",
-        "Day": "Lá",
-        "Days": "Laethanta",
-        "Hour": "Uair",
-        "Hours": "Uaireanta",
-        "Minute": "Nóiméad",
-        "Minutes": "Nóiméad",
-        "Second": "Dara",
-        "Seconds": "Soicind",
-        "SalesCreator": "Beidh na díolacháin téigh go dtí cruthaitheoir",
-        "Details": "Sonraí",
-        "Bids": "Tairiscintí",
-        "History": "Stair",
-        "LoremIpsum": "Is é atá i Lorem Ipsum ná téacs caocha den tionscal priontála agus clóchuradóireachta.",
-        "PutOnSale": "Cuir ar díol",
-        "PutOffSale": "A tharraingt siar ó dhíol",
-        "Transfer": "Aistriú",
-        "Actions": "Gníomhartha",
-        "Claim": "Éileamh",
-        "ClaimNFT": "Éileamh NFT",
-        "Unlocking": "Ag díghlasáil",
-        "Unlock": "Díghlasáil",
-        "Update": "Nuashonrú",
-        "UpdateToken": "Nuashonraigh Token",
-        "UpdateNFT": "Íosluchtaigh cothrom le dáta NFT",
-        "CreateToken": "Cruthaigh Comhartha",
-        "PlaceBid": "Tairiscint Áite",
-        "SoldOut": "Díolta",
-        "NotOnSale": "Ní Ar Díol",
-        "NftName": "Ainm NFT",
-        "DescribeYourNFT": "Déan cur síos ar do NFT",
-        "NFTImage": "Íomhánna do NFT saor in aisce,",
-        "NFTVideo": "Físeán le haghaidh NFT, más ann",
-        "UploadMovie": "Scannán a uaslódáil",
-        "MovieSource": "Foinse Scannán",
-        "MovieURL": "URL scannáin",
-        "UploadFile": "Uaslódáil comhad",
-        "PutOnMarketplace": "Cuir ar an margadh",
-        "InstantPurchase": "Cuir isteach an praghas chun ligean d&#39;úsáideoirí do NFT a cheannach láithreach",
-        "FixedPrice": "Praghas seasta",
-        "TimedAuction": "Ceant uainithe",
-        "OpenForBids": "Oscailte le haghaidh tairiscintí",
-        "PriceOnePiece": "Íosluchtaigh praghas píosa amháin",
-        "EnterPrice": "Cuir isteach praghas",
-        "EnterMinimumBid": "Cuir isteach tairiscint íosta",
-        "SelectChain": "Roghnaigh slabhra",
-        "Currency": "Airgeadra",
-        "AreYouSureDeleteImage": "An bhfuil tú cinnte gur mhaith leat íomhá a bhaint?",
-        "AreYouSureDeleteVideo": "An bhfuil tú cinnte gur mhaith leat an físeán a bhaint?",
-        "series": {
-            "Name": "Ainm",
-            "Icon": "Deilbhín",
-            "Description": "Cur síos",
-            "Author": "Údar",
-            "SelectSeries": "Roghnaigh sraith",
-            "Value": "Luach",
-            "AreYouSure": "An bhfuil tú cinnte?",
-            "AuthorInvalid": "Seoladh an údair neamhbhailí!",
-            "Address": "Seoladh",
-            "CoverImage": "Íomhá chlúdaigh",
-            "UploadCoverImage": "Íosluchtaigh íomhá clúdach",
-            "CommissionAddressInvalid": "Seoladh an Choimisiúin neamhbhailí",
-            "OnSale": "Ar díol",
-            "OffSale": "as díol",
-            "CreateSeries": "Cruthaigh Sraith",
-            "UpdateSeries": "Sraith Nuashonraithe",
-            "SeriesInfo": "Faisnéise sraith",
-            "SelectAuthor": "Roghnaigh údar",
-            "NewItem": "Sraith nua de NFT saor in aisce,",
-            "NamePlaceholder": "Iontráil ainm an tsraith",
-            "DescPlaceholder": "Iontráil cur síos ar an tsraith",
-            "EndingIn": "Ag críochnú I"
-        },
-        "contract": {
-            "CreateContract": "Cruthaigh conradh",
-            "SelectContract": "Roghnaigh conradh",
-            "CreateContractFor": "Íosluchtaigh conradh le haghaidh {{userName}}",
-            "ContractFor": "An conradh le haghaidh {{userName}}",
-            "UpdateContract": "Conradh a thabhairt cothrom le dáta",
-            "TransferOwnership": "Úinéireacht Aistrithe",
-            "SetBaseURI": "Socraigh Bonn URI",
-            "SetSuffix": "Socraigh Iarmhír",
-            "CurrentOwner": "Úinéir Reatha",
-            "CurrentBaseURL": "BaseURL Reatha",
-            "ContractAddressAbsent": "Seoladh conartha as láthair",
-            "FactoryAddressAbsent": "Seoladh monarchan as láthair",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Teideal ag teastáil",
-            "SymbolRequired": "Siombail ag teastáil",
-            "TypeContractName": "ainm conartha",
-            "TypeContractSymbol": "siombail an chonartha (uasmhéid 10 gcarr)"
-        },
-        "contests": {
-            "Title": "Comórtais",
-            "NewContest": "Comórtas Nua"
-        },
-        "import": {
-            "importNFT": "NFTanna á n-iompórtáil",
-            "importAttributes": "Iompórtáil tréithe NFT",
-            "fileNotFound": "Ár leithscéal, níor aimsíodh an comhad CSV.",
-            "fileEmpty": "Ár leithscéal, tá an comhad CSV folamh.",
-            "userIdNotFound": "úsáideoir ann ach id folamh",
-            "errorLine": "Líne {{1}}",
-            "fieldNotFound": "Réimse riachtanach &quot; {{1}} &quot; gan aimsiú",
-            "displayTypeEmpty": "Ní bhfuarthas cineál taispeána le haghaidh &quot; {{1}} &quot;",
-            "taskStreamInvalid": "sruth tasc neamhbhailí",
-            "instructionsEmpty": "treoracha sruth tasc folamh",
-            "complete": "Críochnaigh",
-            "activateUsers": "teachtaireacht gníomhachtaithe a sheoladh chuig úsáideoirí?",
-            "importProgress": "Dul chun cinn",
-            "importOptions": "Roghanna",
-            "sampleCSV": "Íosluchtaigh sampla CSV",
-            "fileLabel": "Uaslódáil Scarbhileog:",
-            "errorsTitle": "Tharla earráidí"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Scag de réir Bailiúcháin NFT",
-                "ShowNFTCollection": "Taispeáin bailiúchán NFT i ...",
-                "AllCollections": "Gach Bailiúchán"
-            },
-            "ByUser": {
-                "AllAuthors": "Gach Údair",
-                "AllUsers": "gach duine",
-                "FilterByAuthors": "Scag de réir Údair"
-            }
-        },
-        "Back": "Ar ais go Bailiúchán",
-        "attributes": {
-            "Title": "Bainistigh Tréithe",
-            "Attributes": "Tréithe",
-            "DisplayTitle": "Cineál Taispeána",
-            "AddDisplayType": "Cuir cineál taispeána nua leis",
-            "NewDisplay": "Taispeáint Nua",
-            "TraitTitle": "Cineál Trait",
-            "AddTraitTitle": "Cuir cineál tréithe nua leis",
-            "NewTrait": "Cineál Tréith Nua",
-            "ValueTitle": "Luach",
-            "AddValueTitle": "Cuir luach nua leis",
-            "NewValue": "Luach Nua",
-            "NewAttribute": "Tréith Nua",
-            "UpdateAttributes": "Tréithe Nuashonraithe",
-            "SaveAttributes": "Sábháil Tréithe"
-        },
-        "profile": {
-            "LogOut": "Logáil Amach",
-            "Title": "Próifíl do {{userName}}",
-            "Description": "Sonraí úsáideora",
-            "aboutPlaceholder": "Cuir Bitheolaíocht in Eagar",
-            "SureLogOut": "An bhfuil tú cinnte gur mhaith leat logáil amach?",
-            "UploadCoverPhoto": "Íosluchtaigh grianghraf clúdach"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "Conradh NFT",
-                        "seriesId": "sraith ID",
-                        "owner": "Úinéir",
-                        "currency": "airgeadra",
-                        "price": "Praghas",
-                        "beneficiary": "Tairbhí",
-                        "autoindex": "Autoindex",
-                        "duration": "Fad",
-                        "rateInterval": "Eatramh ráta",
-                        "rateAmount": "Méid an ráta"
-                    },
-                    "small": {
-                        "NFTContract": "Conradh NFT",
-                        "seriesId": "déanfar comharthaí a bhreacadh sa tsraith seo",
-                        "owner": "úinéir mar shampla, ar shlí eile beidh seoltóir",
-                        "currency": "Airgeadra le haghaidh comharthaí ceannaithe, más nialas é - le haghaidh boinn dhúchasacha",
-                        "price": "Praghas",
-                        "beneficiary": "Is é an seoltóir a bheidh ina thairbhí as éarlaisí a dhíol",
-                        "autoindex": "Autoindex",
-                        "duration": "Glasáil tar éis miontáil. Ciallaíonn nialais é a fháil láithreach.",
-                        "rateInterval": "eatramh buicéad le ceannach speisialta",
-                        "rateAmount": "méid buicéad le ceannach speisialta"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(roghnach)",
-                    "number": "uimhir",
-                    "address": "seoladh",
-                    "fraction": "codán",
-                    "integer": "slánuimhir",
-                    "seconds": "soicind",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Tháirgeadh",
-                "viewInstancesList": "Liosta Athnuaigh"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "ID sraith",
-                        "account": "Cuntas",
-                        "amount": "Méid"
-                    },
-                    "small": {
-                        "seriesId": "bainfidh an comhartha nua sa tsraith le haitheantas dá leithéid",
-                        "account": "úinéir NFT nuachruthaithe. más rud é nach bhfuil socraithe - bain úsáid as sparán reatha",
-                        "amount": "méid NFT go miontas"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(roghnach)",
-                    "seriesId": "id",
-                    "account": "cuntas",
-                    "amount": "méid",
-                    "integer": "slánuimhir"
-                },
-                "btn": {
-                    "Purchase": "Ceannach",
-                    "SpecialPurchase": "Ceannach speisialta"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Seoladh"
-                    },
-                    "small": {
-                        "account": "Seoladh"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Seoladh Neamhbhailí"
-                },
-                "placeholders": {
-                    "account": "Seoladh"
-                },
-                "addToWhitelist": "Cuir Leis an Liosta Bán",
-                "removeFromWhitelist": "Bain Ó Liosta Bán"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "Aitheantas Comhartha",
-                    "custodian": "caomhnóir",
-                    "recipient": "Faighteoir"
-                },
-                "small": {
-                    "tokenId": "id comhartha cad is gá a ghlasáil nó a dhíghlasáil",
-                    "custodian": "seoladh is féidir a dhíghlasáil",
-                    "recipient": "seoladh a gheobhaidh na comharthaí"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Id comhartha neamhbhailí",
-                "invalidCustodian": "Coimeádaí Neamhbhailí",
-                "invalidRecipient": "Faighteoir Neamhbhailí"
-            },
-            "placeholders": {
-                "optional": "(roghnach)",
-                "tokenId": "id",
-                "custodian": "seoladh"
-            },
-            "Lock": "Glasáil",
-            "Unlock": "Díghlasáil",
-            "Locked": "Faoi ghlas",
-            "CustodianAddress": "Seoladh coimeádaí",
-            "TokenWasClaimed": "Éilíodh comhartha &quot; {{title}} &quot;",
-            "TokenWasLocked": "Cuireadh glas ar Chomhartha &quot; {{title}} &quot;",
-            "TokenWasUnlocked": "Díghlasáladh Token &quot; {{title}} &quot;"
-        },
-        "GenerateDescription": "nó uathghin",
-        "collections": {
-            "Title": "Bailiúcháin",
-            "EnterTitle": "cuir isteach teideal",
-            "EnterDescription": "isteach cur síos",
-            "NewCollection": "Bailiúchán Nua",
-            "Name": "Ainm",
-            "Icon": "Deilbhín",
-            "Description": "Cur síos",
-            "Author": "Údar",
-            "SelectCollection": "Roghnaigh bailiúchán",
-            "Value": "Luach",
-            "AreYouSure": "An bhfuil tú cinnte?",
-            "AuthorInvalid": "Seoladh an údair neamhbhailí!",
-            "Address": "Seoladh",
-            "CoverImage": "Íomhá chlúdaigh",
-            "UploadIcon": "Uaslódáil deilbhín",
-            "CommissionAddressInvalid": "Seoladh an Choimisiúin neamhbhailí",
-            "OnSale": "Ar díol",
-            "OffSale": "as díol",
-            "CreateCollection": "Cruthaigh Bailiúchán",
-            "UpdateCollection": "Bailiúchán Nuashonraithe",
-            "CollectionInfo": "Eolas Bailiúchán",
-            "SelectAuthor": "Roghnaigh údar",
-            "NewItem": "Bailiúchán nua de NFT saor in aisce,",
-            "NamePlaceholder": "Cuir isteach ainm an bhailiúcháin",
-            "DescPlaceholder": "Cuir isteach cur síos ar an mbailiúchán",
-            "EndingIn": "Ag críochnú I",
-            "SubmitSeries": "Cuir Sraith isteach"
-        }
-    },
-    "currencies": {
-        "choose": "Roghnaigh airgeadra"
-    },
-    "connectedAccount": {
-        "Title": "Ceangail cuntas",
-        "Success": "Rath",
-        "YourAccountCreated": "D&#39;éirigh le cruthú do chuntas!",
-        "YourAccountAlreadyCreated": "Do chuntas cruthaithe cheana agus réidh le húsáid"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "cúlchiste",
-                        "amount": "Méid"
-                    },
-                    "small": {
-                        "reserveToken": "cúlchiste",
-                        "amount": "Méid"
-                    }
-                },
-                "placeholders": {
-                    "amount": "méid"
-                },
-                "btns": {
-                    "stake": "Geall"
-                },
-                "stake": "Geall",
-                "loading": "Ag lódáil"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "comharthaErc20",
-                    "duration": "Fad",
-                    "bonusTokenFraction": "bónasTokenFraction",
-                    "popularToken": "tóirToken",
-                    "donations": "tabhartais",
-                    "rewardsRateFraction": "luach saothairRateFraction",
-                    "numerator": "uimhreoir",
-                    "denominator": "ainmneoir"
-                },
-                "small": {
-                    "tokenErc20": "comharthaErc20",
-                    "duration": "Fad i laethanta",
-                    "bonusTokenFraction": "bónasTokenFraction",
-                    "popularToken": "tóirToken",
-                    "donations": "tabhartais",
-                    "rewardsRateFraction": "luach saothairRateFraction",
-                    "numerator": "uimhreoir",
-                    "denominator": "ainmneoir"
-                }
-            },
-            "placeholders": {
-                "optional": "(roghnach)",
-                "tuple": "tuple[]",
-                "number": "uimhir",
-                "address": "seoladh",
-                "fraction": "codán",
-                "integer": "slánuimhir",
-                "seconds": "soicind",
-                "days": "laethanta",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Níl aon linnte"
-            },
-            "btns": {
-                "createPool": "Cruthaigh Linn",
-                "createPoolInForm": "Cruthaigh"
-            },
-            "createPool": "Cruthaigh Linn",
-            "produce": "Tháirgeadh",
-            "loading": "Ag lódáil",
-            "viewInstancesList": "Liosta Athnuaigh"
-        }
-    },
-    "fundrise": {
-        "placeholder": "clóscríobh rud éigin faoin ranníocaíocht seo..."
-    }
+	"errors": {
+		"Error": "Earr\u00e1id",
+		"WalletAbsent": "N\u00edl an spar\u00e1n ceangailte.",
+		"Rendering": "Tharla earr\u00e1id\u00ed agus <span class='url'>{{1}}</span> \u00e1 rindre\u00e1il",
+		"PriceRequired": "Praghas ag teast\u00e1il!",
+		"NameRequired": "Ainm ag teast\u00e1il!",
+		"PriceInvalid": "Praghas neamhbhail\u00ed!",
+		"AmountInvalid": "M\u00e9id neamhbhail\u00ed!",
+		"TransactionFailed": "Theip ar Idirbheart",
+		"ChainNotSupported": "N\u00ed thaca\u00edtear leis an slabhra roghnaithe. Slabhra tacaithe: {{supportedChain}}",
+		"NeedMetaMaskConnected": "An riachtanas is g\u00e1 MetaMask ceangailte a bheith ag obair leis an bhfeidhmchl\u00e1r",
+		"UserNotLoggedInMetaMask": "N\u00edl an t-\u00fas\u00e1ideoir log\u00e1ilte isteach i MetaMask",
+		"CurrencyNotFound": "Airgeadra gan aimsi\u00fa",
+		"WrongChain": "Crutha\u00edodh an NFT seo faoi &quot; {{chain}} &quot; . Bain \u00fas\u00e1id as an slabhra seo le do thoil.",
+		"NoRecipientSelected": "N\u00edor roghna\u00edodh aon fhaighteoir",
+		"NotEnoughPermissionsWallet": "N\u00edl go leor ceadanna chun spar\u00e1n an \u00fas\u00e1ideora seo a l\u00e9amh",
+		"ThisUserHaveNoWallet": "N\u00edl aon spar\u00e1n sannta don \u00fas\u00e1ideoir seo",
+		"TheWalletOfThisUserInvalid": "T\u00e1 spar\u00e1n an \u00fas\u00e1ideora seo neamhbhail\u00ed",
+		"WalletInvalid": "Seoladh spar\u00e1n neamhbhail\u00ed",
+		"CantManageFrozenSeries": "N\u00ed f\u00e9idir leat sraith reoite a bhainisti\u00fa",
+		"SubscriptionStreamNotPaid": "N\u00edor \u00edoc t\u00fa chun f\u00e9achaint ar an \u00e1bhar seo. Clice\u00e1il {{subscriptionUrl}} le do thoil agus liost\u00e1il don phlean cu\u00ed."
+	},
+	"admin": {
+		"Title": "S\u00f3cmhainn\u00ed riarach\u00e1in",
+		"SubscriptionTitle": "Pleananna s\u00ednti\u00fas"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Tap\u00e1il chun \u00edoc"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : muirear pr\u00f3ise\u00e1ilte le haghaidh {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "Go raibh maith agat as d\u2019\u00edoca\u00edocht chuig {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} suibscr\u00edofa le {{plan.title}}",
+		"YouSubscribedTo": "T\u00e1 t\u00fa s\u00ednithe le {{plan.title}}",
+		"Assets/credits/alert": "T\u00e1 fol\u00e1ireamh agat a bhaineann le do chuntas"
+	},
+	"charge": {
+		"Subject": "Faigheann t\u00fa \u00edoca\u00edocht {{displayAmount}} \u00f3 {{call 'publisher.displayName'}} faoi &quot; {{description}} &quot;",
+		"HasBeenCharged": "Hey, n\u00edl anseo ach a chur in i\u00fal duit gur gearradh {{2}} ar {{1}} as {{3}} faoi {{4}}"
+	},
+	"charged": {
+		"Subject": "Go raibh maith agat as d&#39;\u00edoca\u00edocht as &quot; {{description}} &quot;",
+		"HavePaid": "Hey {{1}} , n\u00edl anseo ach dearbh\u00fa tapa gur \u00e9irigh leat {{2}} go {{3}} a \u00edoc le haghaidh {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "Eolas faoi ord\u00fa",
+		"PaymentMethod": "Modh \u00edoca\u00edochta",
+		"ContactInfo": "Eolas teagmh\u00e1la",
+		"Pay": "P\u00e1",
+		"PaymentSucceeded": "D&#39;\u00e9irigh leis an \u00edoca\u00edocht",
+		"PaymentProcessing.": "T\u00e1 d&#39;\u00edoca\u00edocht \u00e1 pr\u00f3ise\u00e1il",
+		"FailTryAgain": "N\u00edor \u00e9irigh le d&#39;\u00edoca\u00edocht, bain triail eile as",
+		"SomethingWrong": "Chuaigh rud eigin m\u00edcheart",
+		"PaymentStatus": "St\u00e1das \u00edoca\u00edochta",
+		"PayTo": "\u00cdoc {{displayName}}",
+		"ChooseCurrency": "Roghnaigh airgeadra",
+		"YouCanSendUpTo": "Is f\u00e9idir leat suas le {{amount}} {{symbol}} a sheoladh",
+		"Send": "Seol",
+		"EnterAmount": "cuir isteach m\u00e9id"
+	},
+	"credits": {
+		"InviteAcceptedBy": "Glacadh le cuireadh le {{invitedUserName}}",
+		"InvitedUserFilledStream": "L\u00edonadh {{invitedUserName}} {{FilledStreamTitle}}",
+		"ForFillingStream": "Chun {{FilledStreamTitle}} a l\u00edonadh",
+		"YouHaveCreditsToStart": "T\u00e1 {{amount}} creidi\u00faint agat le tos\u00fa",
+		"PaymentFor": "\u00cdoca\u00edocht as &quot; {{1}} &quot;",
+		"PaymentTo": "\u00cdoca\u00edocht le {{1}}",
+		"PaymentToUser": "\u00cdoca\u00edocht le {{toUserName}}",
+		"CreatePrivateChat": "le haghaidh comhr\u00e1 pr\u00edobh\u00e1ideach le {{toUserName}}",
+		"CreatePaidStream": "Chun {{toStreamName}} a chruth\u00fa",
+		"JoinedPaidStream": "chun \u00e1irithint i &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName= &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "chun pobail &quot; {{communityId}} &quot; a chruth\u00fa",
+		"LeftPaidStream": "mar ais\u00edoca\u00edocht \u00e1irithinte i &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{fromStreamName}} &quot;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "{{amount}} creidmheasanna ceannaithe",
+		"BonusCredits": "B\u00f3nas {{amount}} creidmheasanna",
+		"BuyAmountCredits": "Ceannaigh {{amount}} creidmheas",
+		"WatchClip": "Ghn\u00f3thaigh {{amount}} creidmheas as f\u00e9achaint ar {{fromStreamTitle}}",
+		"MissingCredits": "Creidmheasanna ar Iarraidh",
+		"YouMissingCredits": "Teasta\u00edonn creidmheasanna breise {{currency}} {{amount}} le dul ar aghaidh.",
+		"BuyCredits": "Ceannaigh creidmheasanna",
+		"BuyBonus": "M\u00e1 cheanna\u00edtear {{amount}} creidmheas l\u00e1ithreach, gheobhaidh t\u00fa b\u00f3nas {{bonus}} creidmheasanna.",
+		"Buy": "Ceannaigh",
+		"PurchaseCredits": "Creidmheasanna Ceannaigh",
+		"Credits": "Creidmheasanna",
+		"ErrorInvalidAmount": "M\u00e9id neamhbhail\u00ed",
+		"ErrorInvalidCurrency": "Ar an drochuair n\u00ed thaca\u00edmid le hairgeadra {{currency}} go f\u00f3ill",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} creidmheasanna",
+			"BonusCredits": "{{amount}} creidmheasanna"
+		}
+	},
+	"history": {
+		"Date": "D\u00e1ta",
+		"Amount": "M\u00e9id",
+		"Description": "Cur s\u00edos",
+		"Client": "Cliant",
+		"User": "\u00das\u00e1ideoir",
+		"To": "chun",
+		"From": "\u00f3",
+		"SeeHistory": "F\u00e9ach ar an stair \u00edoca\u00edochta do {{1}}",
+		"HistoryEmpty": "N\u00edl aon sonra\u00ed agat f\u00f3s",
+		"PaymentFor": "{{amount}} creidmheasanna seolta",
+		"PaymentTo": "{{amount}} creidmheasanna seolta",
+		"PaymentToUser": "{{amount}} creidmheasanna seolta",
+		"CreatePaidStream": "{{amount}} creidmheasanna caite",
+		"WatchClip": {
+			"+": "Ghn\u00f3thaigh {{amount}} creidmheas",
+			"-": "{{amount}} creidmheasanna caite"
+		},
+		"JoinedPaidStream": {
+			"+": "Ghn\u00f3thaigh {{amount}} creidmheas",
+			"-": "{{amount}} creidmheasanna caite"
+		},
+		"LeftPaidStream": {
+			"+": "Fuarthas {{amount}} creidmheas",
+			"-": "{{amount}} creidmheasanna seolta"
+		},
+		"CreatedCommunity": "{{amount}} creidmheasanna caite",
+		"BoughtCredits": "{{amount}} creidmheasanna ceannaithe",
+		"BonusCredits": "Fuair b\u00f3nas {{amount}} creidmheasanna",
+		"InviteAcceptedBy": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"Streams_user_firstname": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"Streams_user_lastname": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"Streams_user_icon": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"Places_user_location": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"Streams_greeting": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"YouHaveCreditsToStart": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"InvitedUserFilledStream": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"ForFillingStream": "Ghn\u00f3thaigh {{amount}} creidmheas",
+		"CreatePrivateChat": "{{amount}} creidmheasanna caite"
+	},
+	"subscriptions": {
+		"infoTitle": "Socraigh Faisn\u00e9is \u00cdoca\u00edochta",
+		"confirm": {
+			"title": "Tosaigh S\u00ednti\u00fais",
+			"message": "Tosaigh s\u00ednti\u00fas athfhillteach le &quot; {{title}} &quot;?",
+			"ok": "ceart go leor",
+			"cancel": "Cealaigh"
+		},
+		"CreditOrDebitCard": "C\u00e1rta creidmheasa n\u00f3 dochair",
+		"SubscribePayment": "Liost\u00e1il \u00cdoca\u00edocht",
+		"ImmediatePayment": "\u00cdoca\u00edocht L\u00e1ithreach",
+		"ProcessingPayment": "\u00cdoca\u00edocht Pr\u00f3ise\u00e1la",
+		"SubscriptionAlreadyPaid": "T\u00e1 an s\u00ednti\u00fas seo \u00edoctha cheana f\u00e9in",
+		"SubscriptionNotActive": "N\u00edl an s\u00ednti\u00fas seo gn\u00edomhach",
+		"Subscribed": "suibscr\u00edofa",
+		"Unsubscribed": "Gan liost\u00e1il",
+		"Unsubscribe": "D\u00edliost\u00e1il",
+		"Subscribe": "Liost\u00e1il",
+		"Started": "Thosaigh",
+		"EndsIn": "Cr\u00edochna\u00edonn i",
+		"NextPay": "An ch\u00e9ad \u00edoca\u00edocht eile",
+		"Period": "Tr\u00e9imhse",
+		"Price": "Praghas",
+		"AreYouSureUnsubscribe": "An bhfuil t\u00fa cinnte gur mhaith leat an plean seo a dh\u00edliost\u00e1il?",
+		"YouUnsubscribedFromPlan": "Dh\u00edshuite\u00e1il t\u00fa \u00f3n bplean &quot; {{planTitle}} &quot;. N\u00ed ghearrfar aon t\u00e1ille ort, ach leanfaidh do sh\u00ednti\u00fas ar aghaidh go dt\u00ed {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "teideal plean",
+			"PricePlaceholder": "praghas",
+			"DescriptionPlaceholder": "cur s\u00edos ar phlean s\u00ednti\u00fas",
+			"SavePlan": "S\u00e1bh\u00e1il Plean",
+			"NewPlan": "Plean Nua",
+			"SubscriptionTitle": "Pleananna s\u00ednti\u00fas",
+			"AreYouSureDeletePlan": "An bhfuil t\u00fa cinnte gur mhaith leat an plean seo a scriosadh?",
+			"Duration": "Fad",
+			"Discount": "Lascaine",
+			"Interrupt": "Cur isteach",
+			"Continue": "Lean\u00faint ar aghaidh",
+			"SelectDisplayType": "Roghnaigh {{displayType}}",
+			"EndDate": "d\u00e1ta deiridh",
+			"Available": "Ar f\u00e1il",
+			"Hidden": "i bhfolach",
+			"InviteOnly": "Cuireadh-amh\u00e1in",
+			"CantSubscribeUnlessInvited": "N\u00ed f\u00e9idir leat liost\u00e1il leis an bplean seo ach amh\u00e1in m\u00e1 tugadh cuireadh duit"
+		}
+	},
+	"payments": {
+		"infoTitle": "Socraigh Faisn\u00e9is \u00cdoca\u00edochta",
+		"BuyAmountCredits": "Ceannaigh {{amount}} creidmheas",
+		"confirm": {
+			"title": "D\u00e9an \u00cdoca\u00edocht",
+			"message": "An aonta\u00edonn t\u00fa {{symbol}} {{amount}} a \u00edoc?",
+			"ok": "ceart go leor",
+			"cancel": "Cealaigh"
+		},
+		"reasons": {
+			"BuyCredits": "Ceannaigh Creidmheasanna"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "Creidmheasanna",
+			"description": "coinn\u00edonn s\u00e9 cuntas ar chreidmheasanna agus \u00edoca\u00edochta\u00ed"
+		},
+		"Assets/plan": {
+			"displayType": "Plean S\u00ednti\u00fais",
+			"description": "plean s\u00ednti\u00fas"
+		},
+		"Assets/subscription": {
+			"displayType": "Sinti\u00fas",
+			"description": "sinti\u00fas"
+		},
+		"Assets/product": {
+			"displayType": "T\u00e1irge",
+			"description": "t\u00e1irge \u00e1 dh\u00edol"
+		},
+		"Assets/service": {
+			"displayType": "Seirbh\u00eds",
+			"description": "seirbh\u00eds \u00e1 thairiscint"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "Ghn\u00f3thaigh {{amount}} creidmheas"
+		},
+		"Assets/credits/bought": {
+			"content": "{{amount}} creidmheasanna ceannaithe"
+		},
+		"Assets/credits/bonus": {
+			"content": "B\u00f3nas {{amount}} creidmheasanna"
+		},
+		"Assets/credits/spent": {
+			"content": "{{amount}} creidmheasanna caite"
+		},
+		"Assets/credits/sent": {
+			"content": "{{amount}} creidmheasanna seolta chuig {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "Fuarthas {{amount}} creidmheas \u00f3 {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "Is beag creidmheasanna at\u00e1 agat ar do chuntas. Tabhair cuairt le do thoil ar <a href='<i translate='no'>999 &#39;&gt;an nasc seo</a> chun tuilleadh creidmheasanna a cheannach."
+		}
+	},
+	"billing": {
+		"Title": "Bille\u00e1il s\u00f3cmhainn\u00ed",
+		"CreditsMinimum": "Creidmheasanna \u00edosta",
+		"CreditsToAdd": "Creidmheasanna le cur leis",
+		"Save": "S\u00e1bh\u00e1il",
+		"ThisLink": "an nasc seo",
+		"errors": {
+			"CreditsMinimumNegative": "N\u00ed f\u00e9idir \u00edosmh\u00e9id creidmheasanna a bheith di\u00faltach",
+			"CreditsToAddNegative": "N\u00ed f\u00e9idir le creidmheasanna le cur leis a bheith di\u00faltach"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "Seirbh\u00eds Nua",
+			"TitlePlaceholder": "Teideal seirbh\u00edse",
+			"PricePlaceholder": "Praghas socraithe",
+			"LinkPlaceholder": "socraigh nasc faisn\u00e9ise breise",
+			"DescriptionPlaceholder": "Cur s\u00edos ar an tseirbh\u00eds",
+			"SaveService": "S\u00e1bh\u00e1il Seirbh\u00eds",
+			"SelectRequiredParticipants": "Rannph\u00e1irtithe gaolmhara riachtanacha",
+			"RequiredParticipantsDesc": "Roghnaigh le do thoil na rannph\u00e1irtithe gaolmhara at\u00e1 ag teast\u00e1il chun an tseirbh\u00eds seo a \u00fas\u00e1id (mar shampla peata\u00ed le haghaidh &quot;Se\u00f3 Madra\u00ed&quot;, n\u00f3 leana\u00ed le haghaidh &quot;Saoire Leana\u00ed&quot; srl). M\u00e1 \u00edoctar seirbh\u00eds, beidh ar an \u00fas\u00e1ideoir \u00edoc as gach rannph\u00e1irt\u00ed gaolmhar freisin."
+		},
+		"EditServiceTemplate": {
+			"Title": "Cuir Seirbh\u00eds in Eagar"
+		},
+		"ManageServiceTemplates": "Bainistigh Teimpl\u00e9id Seirbh\u00edse",
+		"ManageServices": "Bainistigh Seirbh\u00eds\u00ed",
+		"Free": "Saor",
+		"OptionalContribution": "Rann\u00edoca\u00edocht roghnach",
+		"RequiredPayment": "\u00cdoca\u00edocht riachtanach",
+		"AreYouSureDelete": "An bhfuil t\u00fa cinnte gur mhaith leat an tseirbh\u00eds seo a scriosadh?",
+		"AmountServicesRelated": "T\u00e1 f\u00e1il ar {{amount}} a bhaineann leis an tseirbh\u00eds seo. T\u00e1 siad Beidh a chur as oifig freisin."
+	},
+	"transfer": {
+		"SelectRecipient": "Roghnaigh faighteoir",
+		"TransactionSuccess": "Rath Idirbheart",
+		"OrTypeWalletAddress": "N\u00d3 cine\u00e1l seoladh spar\u00e1n an fhaighteora",
+		"AppCredits": "Creidmheasanna App"
+	},
+	"NFT": {
+		"Title": "Teideal",
+		"Name": "Ainm",
+		"EnterName": "Cuir isteach ainm",
+		"EnterAuthorWallet": "Cuir isteach spar\u00e1n an \u00fadair",
+		"InformationAboutTitle": "Eolas faoi {{title}} NFT",
+		"Description": "Cur s\u00edos",
+		"DetailedInformationAboutNFT": "Faisn\u00e9is mhionsonraithe faoi NFT",
+		"PresaleStarts": "Presale ag tos\u00fa 23 Nollaig",
+		"OwnerUserNotFound": "N\u00edl \u00fain\u00e9ir an NFT seo cl\u00e1raithe in\u00e1r n-iarratas.",
+		"BuyNow": "Ceannaigh Anois",
+		"Buy": "Ceannaigh",
+		"Add": "Cuir",
+		"Remove": "Bain",
+		"NoNFTyet": "N\u00edl aon NFTanna f\u00f3s",
+		"Conversation": "Comhr\u00e1",
+		"Create": "Cruthaigh",
+		"CurrentBid": "Tairiscint reatha",
+		"StartingIn": "Ag tos\u00fa i",
+		"EndingIn": "Ag cr\u00edochn\u00fa i",
+		"CreateNFT": "Cruthaigh NFT",
+		"TitlePlaceholder": "Tabhair teideal do do NFT",
+		"DescriptionPlaceholder": "Tabhair cur s\u00edos ar do NFT",
+		"CreateYourNFT": "Cruthaigh do NFT",
+		"Royalties": "Dleachtanna",
+		"RoyaltyPlaceholder": "Roghnach. An m\u00e9id a \u00edocadh leis an cruthaitheoir roimh an aistri\u00fa.",
+		"ExpirationDate": "D\u00e1ta \u00c9aga",
+		"StartingDate": "D\u00e1ta tosaigh",
+		"BidsBelowThisAmount": "N\u00ed chead\u00f3far tairiscint\u00ed faoin m\u00e9id seo",
+		"MinimumBid": "Tairiscint \u00edosta",
+		"Author": "\u00dadar",
+		"Price": "Praghas",
+		"Commission": "Coimisi\u00fan",
+		"EnterCommission": "Cuir isteach coimisi\u00fan",
+		"Owner": "\u00dain\u00e9ir",
+		"SelectCategory": "Roghnaigh catag\u00f3ir",
+		"Day": "L\u00e1",
+		"Days": "Laethanta",
+		"Hour": "Uair",
+		"Hours": "Uaireanta",
+		"Minute": "N\u00f3im\u00e9ad",
+		"Minutes": "N\u00f3im\u00e9ad",
+		"Second": "Dara",
+		"Seconds": "Soicind",
+		"SalesCreator": "Beidh na d\u00edolach\u00e1in t\u00e9igh go dt\u00ed cruthaitheoir",
+		"Details": "Sonra\u00ed",
+		"Bids": "Tairiscint\u00ed",
+		"History": "Stair",
+		"LoremIpsum": "Is \u00e9 at\u00e1 i Lorem Ipsum n\u00e1 t\u00e9acs caocha den tionscal priont\u00e1la agus cl\u00f3churad\u00f3ireachta.",
+		"PutOnSale": "Cuir ar d\u00edol",
+		"PutOffSale": "A tharraingt siar \u00f3 dh\u00edol",
+		"Transfer": "Aistri\u00fa",
+		"Actions": "Gn\u00edomhartha",
+		"Claim": "\u00c9ileamh",
+		"ClaimNFT": "\u00c9ileamh NFT",
+		"Unlocking": "Ag d\u00edghlas\u00e1il",
+		"Unlock": "D\u00edghlas\u00e1il",
+		"Update": "Nuashonr\u00fa",
+		"UpdateToken": "Nuashonraigh Token",
+		"UpdateNFT": "\u00cdosluchtaigh cothrom le d\u00e1ta NFT",
+		"CreateToken": "Cruthaigh Comhartha",
+		"PlaceBid": "Tairiscint \u00c1ite",
+		"SoldOut": "D\u00edolta",
+		"NotOnSale": "N\u00ed Ar D\u00edol",
+		"NftName": "Ainm NFT",
+		"DescribeYourNFT": "D\u00e9an cur s\u00edos ar do NFT",
+		"NFTImage": "\u00cdomh\u00e1nna do NFT saor in aisce,",
+		"NFTVideo": "F\u00edse\u00e1n le haghaidh NFT, m\u00e1s ann",
+		"UploadMovie": "Scann\u00e1n a uasl\u00f3d\u00e1il",
+		"MovieSource": "Foinse Scann\u00e1n",
+		"MovieURL": "URL scann\u00e1in",
+		"UploadFile": "Uasl\u00f3d\u00e1il comhad",
+		"PutOnMarketplace": "Cuir ar an margadh",
+		"InstantPurchase": "Cuir isteach an praghas chun ligean d&#39;\u00fas\u00e1ideoir\u00ed do NFT a cheannach l\u00e1ithreach",
+		"FixedPrice": "Praghas seasta",
+		"TimedAuction": "Ceant uainithe",
+		"OpenForBids": "Oscailte le haghaidh tairiscint\u00ed",
+		"PriceOnePiece": "\u00cdosluchtaigh praghas p\u00edosa amh\u00e1in",
+		"EnterPrice": "Cuir isteach praghas",
+		"EnterMinimumBid": "Cuir isteach tairiscint \u00edosta",
+		"SelectChain": "Roghnaigh slabhra",
+		"Currency": "Airgeadra",
+		"AreYouSureDeleteImage": "An bhfuil t\u00fa cinnte gur mhaith leat \u00edomh\u00e1 a bhaint?",
+		"AreYouSureDeleteVideo": "An bhfuil t\u00fa cinnte gur mhaith leat an f\u00edse\u00e1n a bhaint?",
+		"series": {
+			"Name": "Ainm",
+			"Icon": "Deilbh\u00edn",
+			"Description": "Cur s\u00edos",
+			"Author": "\u00dadar",
+			"SelectSeries": "Roghnaigh sraith",
+			"Value": "Luach",
+			"AreYouSure": "An bhfuil t\u00fa cinnte?",
+			"AuthorInvalid": "Seoladh an \u00fadair neamhbhail\u00ed!",
+			"Address": "Seoladh",
+			"CoverImage": "\u00cdomh\u00e1 chl\u00fadaigh",
+			"UploadCoverImage": "\u00cdosluchtaigh \u00edomh\u00e1 cl\u00fadach",
+			"CommissionAddressInvalid": "Seoladh an Choimisi\u00fain neamhbhail\u00ed",
+			"OnSale": "Ar d\u00edol",
+			"OffSale": "as d\u00edol",
+			"CreateSeries": "Cruthaigh Sraith",
+			"UpdateSeries": "Sraith Nuashonraithe",
+			"SeriesInfo": "Faisn\u00e9ise sraith",
+			"SelectAuthor": "Roghnaigh \u00fadar",
+			"NewItem": "Sraith nua de NFT saor in aisce,",
+			"NamePlaceholder": "Iontr\u00e1il ainm an tsraith",
+			"DescPlaceholder": "Iontr\u00e1il cur s\u00edos ar an tsraith",
+			"EndingIn": "Ag cr\u00edochn\u00fa I"
+		},
+		"contract": {
+			"CreateContract": "Cruthaigh conradh",
+			"SelectContract": "Roghnaigh conradh",
+			"CreateContractFor": "\u00cdosluchtaigh conradh le haghaidh {{userName}}",
+			"ContractFor": "An conradh le haghaidh {{userName}}",
+			"UpdateContract": "Conradh a thabhairt cothrom le d\u00e1ta",
+			"TransferOwnership": "\u00dain\u00e9ireacht Aistrithe",
+			"SetBaseURI": "Socraigh Bonn URI",
+			"SetSuffix": "Socraigh Iarmh\u00edr",
+			"CurrentOwner": "\u00dain\u00e9ir Reatha",
+			"CurrentBaseURL": "BaseURL Reatha",
+			"ContractAddressAbsent": "Seoladh conartha as l\u00e1thair",
+			"FactoryAddressAbsent": "Seoladh monarchan as l\u00e1thair",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "Teideal ag teast\u00e1il",
+			"SymbolRequired": "Siombail ag teast\u00e1il",
+			"TypeContractName": "ainm conartha",
+			"TypeContractSymbol": "siombail an chonartha (uasmh\u00e9id 10 gcarr)"
+		},
+		"contests": {
+			"Title": "Com\u00f3rtais",
+			"NewContest": "Com\u00f3rtas Nua"
+		},
+		"import": {
+			"importNFT": "NFTanna \u00e1 n-iomp\u00f3rt\u00e1il",
+			"importAttributes": "Iomp\u00f3rt\u00e1il tr\u00e9ithe NFT",
+			"fileNotFound": "\u00c1r leithsc\u00e9al, n\u00edor aims\u00edodh an comhad CSV.",
+			"fileEmpty": "\u00c1r leithsc\u00e9al, t\u00e1 an comhad CSV folamh.",
+			"userIdNotFound": "\u00fas\u00e1ideoir ann ach id folamh",
+			"errorLine": "L\u00edne {{1}}",
+			"fieldNotFound": "R\u00e9imse riachtanach &quot; {{1}} &quot; gan aimsi\u00fa",
+			"displayTypeEmpty": "N\u00ed bhfuarthas cine\u00e1l taispe\u00e1na le haghaidh &quot; {{1}} &quot;",
+			"taskStreamInvalid": "sruth tasc neamhbhail\u00ed",
+			"instructionsEmpty": "treoracha sruth tasc folamh",
+			"complete": "Cr\u00edochnaigh",
+			"activateUsers": "teachtaireacht gn\u00edomhachtaithe a sheoladh chuig \u00fas\u00e1ideoir\u00ed?",
+			"importProgress": "Dul chun cinn",
+			"importOptions": "Roghanna",
+			"sampleCSV": "\u00cdosluchtaigh sampla CSV",
+			"fileLabel": "Uasl\u00f3d\u00e1il Scarbhileog:",
+			"errorsTitle": "Tharla earr\u00e1id\u00ed"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "Scag de r\u00e9ir Baili\u00fach\u00e1in NFT",
+				"ShowNFTCollection": "Taispe\u00e1in baili\u00fach\u00e1n NFT i ...",
+				"AllCollections": "Gach Baili\u00fach\u00e1n"
+			},
+			"ByUser": {
+				"AllAuthors": "Gach \u00dadair",
+				"AllUsers": "gach duine",
+				"FilterByAuthors": "Scag de r\u00e9ir \u00dadair"
+			}
+		},
+		"Back": "Ar ais go Baili\u00fach\u00e1n",
+		"attributes": {
+			"Title": "Bainistigh Tr\u00e9ithe",
+			"Attributes": "Tr\u00e9ithe",
+			"DisplayTitle": "Cine\u00e1l Taispe\u00e1na",
+			"AddDisplayType": "Cuir cine\u00e1l taispe\u00e1na nua leis",
+			"NewDisplay": "Taispe\u00e1int Nua",
+			"TraitTitle": "Cine\u00e1l Trait",
+			"AddTraitTitle": "Cuir cine\u00e1l tr\u00e9ithe nua leis",
+			"NewTrait": "Cine\u00e1l Tr\u00e9ith Nua",
+			"ValueTitle": "Luach",
+			"AddValueTitle": "Cuir luach nua leis",
+			"NewValue": "Luach Nua",
+			"NewAttribute": "Tr\u00e9ith Nua",
+			"UpdateAttributes": "Tr\u00e9ithe Nuashonraithe",
+			"SaveAttributes": "S\u00e1bh\u00e1il Tr\u00e9ithe"
+		},
+		"profile": {
+			"LogOut": "Log\u00e1il Amach",
+			"Title": "Pr\u00f3if\u00edl do {{userName}}",
+			"Description": "Sonra\u00ed \u00fas\u00e1ideora",
+			"aboutPlaceholder": "Cuir Bitheola\u00edocht in Eagar",
+			"SureLogOut": "An bhfuil t\u00fa cinnte gur mhaith leat log\u00e1il amach?",
+			"UploadCoverPhoto": "\u00cdosluchtaigh grianghraf cl\u00fadach"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "Conradh NFT",
+						"seriesId": "sraith ID",
+						"owner": "\u00dain\u00e9ir",
+						"currency": "airgeadra",
+						"price": "Praghas",
+						"beneficiary": "Tairbh\u00ed",
+						"autoindex": "Autoindex",
+						"duration": "Fad",
+						"rateInterval": "Eatramh r\u00e1ta",
+						"rateAmount": "M\u00e9id an r\u00e1ta"
+					},
+					"small": {
+						"NFTContract": "Conradh NFT",
+						"seriesId": "d\u00e9anfar comhartha\u00ed a bhreacadh sa tsraith seo",
+						"owner": "\u00fain\u00e9ir mar shampla, ar shl\u00ed eile beidh seolt\u00f3ir",
+						"currency": "Airgeadra le haghaidh comhartha\u00ed ceannaithe, m\u00e1s nialas \u00e9 - le haghaidh boinn dh\u00fachasacha",
+						"price": "Praghas",
+						"beneficiary": "Is \u00e9 an seolt\u00f3ir a bheidh ina thairbh\u00ed as \u00e9arlais\u00ed a dh\u00edol",
+						"autoindex": "Autoindex",
+						"duration": "Glas\u00e1il tar \u00e9is miont\u00e1il. Cialla\u00edonn nialais \u00e9 a fh\u00e1il l\u00e1ithreach.",
+						"rateInterval": "eatramh buic\u00e9ad le ceannach speisialta",
+						"rateAmount": "m\u00e9id buic\u00e9ad le ceannach speisialta"
+					}
+				},
+				"placeholders": {
+					"optional": "(roghnach)",
+					"number": "uimhir",
+					"address": "seoladh",
+					"fraction": "cod\u00e1n",
+					"integer": "sl\u00e1nuimhir",
+					"seconds": "soicind",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "Th\u00e1irgeadh",
+				"viewInstancesList": "Liosta Athnuaigh"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "ID sraith",
+						"account": "Cuntas",
+						"amount": "M\u00e9id"
+					},
+					"small": {
+						"seriesId": "bainfidh an comhartha nua sa tsraith le haitheantas d\u00e1 leith\u00e9id",
+						"account": "\u00fain\u00e9ir NFT nuachruthaithe. m\u00e1s rud \u00e9 nach bhfuil socraithe - bain \u00fas\u00e1id as spar\u00e1n reatha",
+						"amount": "m\u00e9id NFT go miontas"
+					}
+				},
+				"placeholders": {
+					"optional": "(roghnach)",
+					"seriesId": "id",
+					"account": "cuntas",
+					"amount": "m\u00e9id",
+					"integer": "sl\u00e1nuimhir"
+				},
+				"btn": {
+					"Purchase": "Ceannach",
+					"SpecialPurchase": "Ceannach speisialta"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "Seoladh"
+					},
+					"small": {
+						"account": "Seoladh"
+					}
+				},
+				"errors": {
+					"invalidAddress": "Seoladh Neamhbhail\u00ed"
+				},
+				"placeholders": {
+					"account": "Seoladh"
+				},
+				"addToWhitelist": "Cuir Leis an Liosta B\u00e1n",
+				"removeFromWhitelist": "Bain \u00d3 Liosta B\u00e1n"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "Aitheantas Comhartha",
+					"custodian": "caomhn\u00f3ir",
+					"recipient": "Faighteoir"
+				},
+				"small": {
+					"tokenId": "id comhartha cad is g\u00e1 a ghlas\u00e1il n\u00f3 a dh\u00edghlas\u00e1il",
+					"custodian": "seoladh is f\u00e9idir a dh\u00edghlas\u00e1il",
+					"recipient": "seoladh a gheobhaidh na comhartha\u00ed"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "Id comhartha neamhbhail\u00ed",
+				"invalidCustodian": "Coime\u00e1da\u00ed Neamhbhail\u00ed",
+				"invalidRecipient": "Faighteoir Neamhbhail\u00ed"
+			},
+			"placeholders": {
+				"optional": "(roghnach)",
+				"tokenId": "id",
+				"custodian": "seoladh"
+			},
+			"Lock": "Glas\u00e1il",
+			"Unlock": "D\u00edghlas\u00e1il",
+			"Locked": "Faoi ghlas",
+			"CustodianAddress": "Seoladh coime\u00e1da\u00ed",
+			"TokenWasClaimed": "\u00c9il\u00edodh comhartha &quot; {{title}} &quot;",
+			"TokenWasLocked": "Cuireadh glas ar Chomhartha &quot; {{title}} &quot;",
+			"TokenWasUnlocked": "D\u00edghlas\u00e1ladh Token &quot; {{title}} &quot;"
+		},
+		"GenerateDescription": "n\u00f3 uathghin",
+		"collections": {
+			"Title": "Baili\u00fach\u00e1in",
+			"EnterTitle": "cuir isteach teideal",
+			"EnterDescription": "isteach cur s\u00edos",
+			"NewCollection": "Baili\u00fach\u00e1n Nua",
+			"Name": "Ainm",
+			"Icon": "Deilbh\u00edn",
+			"Description": "Cur s\u00edos",
+			"Author": "\u00dadar",
+			"SelectCollection": "Roghnaigh baili\u00fach\u00e1n",
+			"Value": "Luach",
+			"AreYouSure": "An bhfuil t\u00fa cinnte?",
+			"AuthorInvalid": "Seoladh an \u00fadair neamhbhail\u00ed!",
+			"Address": "Seoladh",
+			"CoverImage": "\u00cdomh\u00e1 chl\u00fadaigh",
+			"UploadIcon": "Uasl\u00f3d\u00e1il deilbh\u00edn",
+			"CommissionAddressInvalid": "Seoladh an Choimisi\u00fain neamhbhail\u00ed",
+			"OnSale": "Ar d\u00edol",
+			"OffSale": "as d\u00edol",
+			"CreateCollection": "Cruthaigh Baili\u00fach\u00e1n",
+			"UpdateCollection": "Baili\u00fach\u00e1n Nuashonraithe",
+			"CollectionInfo": "Eolas Baili\u00fach\u00e1n",
+			"SelectAuthor": "Roghnaigh \u00fadar",
+			"NewItem": "Baili\u00fach\u00e1n nua de NFT saor in aisce,",
+			"NamePlaceholder": "Cuir isteach ainm an bhaili\u00fach\u00e1in",
+			"DescPlaceholder": "Cuir isteach cur s\u00edos ar an mbaili\u00fach\u00e1n",
+			"EndingIn": "Ag cr\u00edochn\u00fa I",
+			"SubmitSeries": "Cuir Sraith isteach"
+		}
+	},
+	"currencies": {
+		"choose": "Roghnaigh airgeadra"
+	},
+	"connectedAccount": {
+		"Title": "Ceangail cuntas",
+		"Success": "Rath",
+		"YourAccountCreated": "D&#39;\u00e9irigh le cruth\u00fa do chuntas!",
+		"YourAccountAlreadyCreated": "Do chuntas cruthaithe cheana agus r\u00e9idh le h\u00fas\u00e1id"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "c\u00falchiste",
+						"amount": "M\u00e9id"
+					},
+					"small": {
+						"reserveToken": "c\u00falchiste",
+						"amount": "M\u00e9id"
+					}
+				},
+				"placeholders": {
+					"amount": "m\u00e9id"
+				},
+				"btns": {
+					"stake": "Geall"
+				},
+				"stake": "Geall",
+				"loading": "Ag l\u00f3d\u00e1il"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "comharthaErc20",
+					"duration": "Fad",
+					"bonusTokenFraction": "b\u00f3nasTokenFraction",
+					"popularToken": "t\u00f3irToken",
+					"donations": "tabhartais",
+					"rewardsRateFraction": "luach saothairRateFraction",
+					"numerator": "uimhreoir",
+					"denominator": "ainmneoir"
+				},
+				"small": {
+					"tokenErc20": "comharthaErc20",
+					"duration": "Fad i laethanta",
+					"bonusTokenFraction": "b\u00f3nasTokenFraction",
+					"popularToken": "t\u00f3irToken",
+					"donations": "tabhartais",
+					"rewardsRateFraction": "luach saothairRateFraction",
+					"numerator": "uimhreoir",
+					"denominator": "ainmneoir"
+				}
+			},
+			"placeholders": {
+				"optional": "(roghnach)",
+				"tuple": "tuple[]",
+				"number": "uimhir",
+				"address": "seoladh",
+				"fraction": "cod\u00e1n",
+				"integer": "sl\u00e1nuimhir",
+				"seconds": "soicind",
+				"days": "laethanta",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "N\u00edl aon linnte"
+			},
+			"btns": {
+				"createPool": "Cruthaigh Linn",
+				"createPoolInForm": "Cruthaigh"
+			},
+			"createPool": "Cruthaigh Linn",
+			"produce": "Th\u00e1irgeadh",
+			"loading": "Ag l\u00f3d\u00e1il",
+			"viewInstancesList": "Liosta Athnuaigh"
+		}
+	},
+	"fundrise": {
+		"placeholder": "cl\u00f3scr\u00edobh rud \u00e9igin faoin rann\u00edoca\u00edocht seo..."
+	}
 }

@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "रिज़र्वटोकन",
-                        "duration": "अवधि",
-                        "amount": "मात्रा"
-                    },
-                    "small": {
-                        "reserveToken": "रिज़र्वटोकन",
-                        "duration": "अवधि",
-                        "amount": "मात्रा"
-                    }
-                },
-                "placeholders": {
-                    "duration": "अवधि",
-                    "amount": "मात्रा"
-                },
-                "btns": {
-                    "stake": "दांव"
-                },
-                "stake": "दांव",
-                "loading": "लोड हो रहा है"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u0930\u093f\u091c\u093c\u0930\u094d\u0935\u091f\u094b\u0915\u0928",
+						"duration": "\u0905\u0935\u0927\u093f",
+						"amount": "\u092e\u093e\u0924\u094d\u0930\u093e"
+					},
+					"small": {
+						"reserveToken": "\u0930\u093f\u091c\u093c\u0930\u094d\u0935\u091f\u094b\u0915\u0928",
+						"duration": "\u0905\u0935\u0927\u093f",
+						"amount": "\u092e\u093e\u0924\u094d\u0930\u093e"
+					}
+				},
+				"placeholders": {
+					"duration": "\u0905\u0935\u0927\u093f",
+					"amount": "\u092e\u093e\u0924\u094d\u0930\u093e"
+				},
+				"btns": {
+					"stake": "\u0926\u093e\u0902\u0935"
+				},
+				"stake": "\u0926\u093e\u0902\u0935",
+				"loading": "\u0932\u094b\u0921 \u0939\u094b \u0930\u0939\u093e \u0939\u0948"
+			}
+		}
+	}
 }

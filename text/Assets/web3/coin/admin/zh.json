@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "代币Erc20",
-                    "duration": "期间",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popularToken",
-                    "donations": "捐款",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "分子",
-                    "denominator": "分母"
-                },
-                "small": {
-                    "tokenErc20": "代币Erc20",
-                    "duration": "持续时间（天）",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popularToken",
-                    "donations": "捐款",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "分子",
-                    "denominator": "分母"
-                }
-            },
-            "placeholders": {
-                "optional": "（选修的）",
-                "tuple": "元组[]",
-                "number": "数字",
-                "address": "地址",
-                "fraction": "分数",
-                "integer": "整数",
-                "seconds": "秒",
-                "days": "天",
-                "uint256": "uint256",
-                "uint192": "单位192",
-                "uint64": "uint64",
-                "uint32": "单位32",
-                "uint16": "单位16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "没有泳池"
-            },
-            "btns": {
-                "createPool": "创建池",
-                "createPoolInForm": "创造"
-            },
-            "createPool": "创建池",
-            "produce": "生产",
-            "loading": "加载中",
-            "viewInstancesList": "刷新列表"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "\u4ee3\u5e01Erc20",
+					"duration": "\u671f\u95f4",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popularToken",
+					"donations": "\u6350\u6b3e",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u5206\u5b50",
+					"denominator": "\u5206\u6bcd"
+				},
+				"small": {
+					"tokenErc20": "\u4ee3\u5e01Erc20",
+					"duration": "\u6301\u7eed\u65f6\u95f4\uff08\u5929\uff09",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popularToken",
+					"donations": "\u6350\u6b3e",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u5206\u5b50",
+					"denominator": "\u5206\u6bcd"
+				}
+			},
+			"placeholders": {
+				"optional": "\uff08\u9009\u4fee\u7684\uff09",
+				"tuple": "\u5143\u7ec4[]",
+				"number": "\u6570\u5b57",
+				"address": "\u5730\u5740",
+				"fraction": "\u5206\u6570",
+				"integer": "\u6574\u6570",
+				"seconds": "\u79d2",
+				"days": "\u5929",
+				"uint256": "uint256",
+				"uint192": "\u5355\u4f4d192",
+				"uint64": "uint64",
+				"uint32": "\u5355\u4f4d32",
+				"uint16": "\u5355\u4f4d16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u6ca1\u6709\u6cf3\u6c60"
+			},
+			"btns": {
+				"createPool": "\u521b\u5efa\u6c60",
+				"createPoolInForm": "\u521b\u9020"
+			},
+			"createPool": "\u521b\u5efa\u6c60",
+			"produce": "\u751f\u4ea7",
+			"loading": "\u52a0\u8f7d\u4e2d",
+			"viewInstancesList": "\u5237\u65b0\u5217\u8868"
+		}
+	}
 }

@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Cât de mult să investești?"
-                    },
-                    "placeholders": {
-                        "amount": "Suma de {{nativeCoin}}",
-                        "max": "Max: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Cumpără",
-                    "execute": "A executa"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "C\u00e2t de mult s\u0103 investe\u0219ti?"
+					},
+					"placeholders": {
+						"amount": "Suma de {{nativeCoin}}",
+						"max": "Max: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "Cump\u0103r\u0103",
+					"execute": "A executa"
+				}
+			}
+		}
+	}
 }

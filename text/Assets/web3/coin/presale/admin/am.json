@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "የሽያጭ ማስመሰያ",
-                        "timestamps": "ጊዜያት",
-                        "prices": "ዋጋዎች",
-                        "endTime": "የመጨረሻ ጊዜ",
-                        "thresholds": "ገደቦች",
-                        "bonuses": "ጉርሻዎች"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "ባለቤቱ ማንሳት አይችልም።",
-                            "option1": "ባለቤቱ ቶከኖችን ማውጣት የሚችለው የመጨረሻ ጊዜ ካለፈ በኋላ ነው።",
-                            "option2": "ባለቤቱ በማንኛውም ጊዜ ማስመሰያዎችን ማውጣት ይችላል።"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "የማህበረሰብ አድራሻ",
-                    "methodkeccack": "Keccak256 hash ተግባር",
-                    "roleId": "የሚና መታወቂያ",
-                    "sellingToken": "የሽያጭ ማስመሰያ አድራሻ",
-                    "prices": "ETH፣ ዋጋ",
-                    "thresholds": "# ማስመሰያዎች",
-                    "bonuses": "ጉርሻ%"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "ምንም ፈንዶች የሉም"
-                },
-                "btns": {
-                    "createFund": "ፈንድ ፍጠር",
-                    "createFundInForm": "ፍጠር"
-                },
-                "fundAddress": "የገንዘብ አድራሻ",
-                "createFund": "ፈንድ ፍጠር",
-                "fundInfo": "መረጃ",
-                "produce": "ማምረት",
-                "loading": "በመጫን ላይ",
-                "viewInstancesList": "ዝርዝር አድስ"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u12e8\u123d\u12eb\u132d \u121b\u1235\u1218\u1230\u12eb",
+						"timestamps": "\u130a\u12dc\u12eb\u1275",
+						"prices": "\u12cb\u130b\u12ce\u127d",
+						"endTime": "\u12e8\u1218\u1328\u1228\u123b \u130a\u12dc",
+						"thresholds": "\u1308\u12f0\u1266\u127d",
+						"bonuses": "\u1309\u122d\u123b\u12ce\u127d"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u1263\u1208\u1264\u1271 \u121b\u1295\u1233\u1275 \u12a0\u12ed\u127d\u120d\u121d\u1362",
+							"option1": "\u1263\u1208\u1264\u1271 \u1276\u12a8\u1296\u127d\u1295 \u121b\u12cd\u1323\u1275 \u12e8\u121a\u127d\u1208\u12cd \u12e8\u1218\u1328\u1228\u123b \u130a\u12dc \u12ab\u1208\u1348 \u1260\u128b\u120b \u1290\u12cd\u1362",
+							"option2": "\u1263\u1208\u1264\u1271 \u1260\u121b\u1295\u129b\u12cd\u121d \u130a\u12dc \u121b\u1235\u1218\u1230\u12eb\u12ce\u127d\u1295 \u121b\u12cd\u1323\u1275 \u12ed\u127d\u120b\u120d\u1362"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u12e8\u121b\u1205\u1260\u1228\u1230\u1265 \u12a0\u12f5\u122b\u123b",
+					"methodkeccack": "Keccak256 hash \u1270\u130d\u1263\u122d",
+					"roleId": "\u12e8\u121a\u1293 \u1218\u1273\u12c8\u1242\u12eb",
+					"sellingToken": "\u12e8\u123d\u12eb\u132d \u121b\u1235\u1218\u1230\u12eb \u12a0\u12f5\u122b\u123b",
+					"prices": "ETH\u1363 \u12cb\u130b",
+					"thresholds": "# \u121b\u1235\u1218\u1230\u12eb\u12ce\u127d",
+					"bonuses": "\u1309\u122d\u123b%"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u121d\u1295\u121d \u1348\u1295\u12f6\u127d \u12e8\u1209\u121d"
+				},
+				"btns": {
+					"createFund": "\u1348\u1295\u12f5 \u134d\u1320\u122d",
+					"createFundInForm": "\u134d\u1320\u122d"
+				},
+				"fundAddress": "\u12e8\u1308\u1295\u12d8\u1265 \u12a0\u12f5\u122b\u123b",
+				"createFund": "\u1348\u1295\u12f5 \u134d\u1320\u122d",
+				"fundInfo": "\u1218\u1228\u1303",
+				"produce": "\u121b\u121d\u1228\u1275",
+				"loading": "\u1260\u1218\u132b\u1295 \u120b\u12ed",
+				"viewInstancesList": "\u12dd\u122d\u12dd\u122d \u12a0\u12f5\u1235"
+			}
+		}
+	}
 }

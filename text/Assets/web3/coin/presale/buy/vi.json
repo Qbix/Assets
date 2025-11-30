@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Đầu tư bao nhiêu?"
-                    },
-                    "placeholders": {
-                        "amount": "Số tiền {{nativeCoin}}",
-                        "max": "Tối đa: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Mua",
-                    "execute": "Hành hình"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "\u0110\u1ea7u t\u01b0 bao nhi\u00eau?"
+					},
+					"placeholders": {
+						"amount": "S\u1ed1 ti\u1ec1n {{nativeCoin}}",
+						"max": "T\u1ed1i \u0111a: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "Mua",
+					"execute": "H\u00e0nh h\u00ecnh"
+				}
+			}
+		}
+	}
 }

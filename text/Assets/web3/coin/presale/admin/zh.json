@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "出售代币",
-                        "timestamps": "時間",
-                        "prices": "价格",
-                        "endTime": "时间结束",
-                        "thresholds": "阈值",
-                        "bonuses": "奖金"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "所有者无法撤回",
-                            "option1": "所有者只能在 endTime 结束后才能提取代币",
-                            "option2": "所有者可以随时提取代币"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "社区地址",
-                    "methodkeccack": "Keccak256 哈希函数",
-                    "roleId": "角色 ID",
-                    "sellingToken": "出售代币地址",
-                    "prices": "ETH，价格",
-                    "thresholds": "代币数量",
-                    "bonuses": "奖金 ％"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "没有资金"
-                },
-                "btns": {
-                    "createFund": "创建基金",
-                    "createFundInForm": "创造"
-                },
-                "fundAddress": "基金地址",
-                "createFund": "创建基金",
-                "fundInfo": "信息",
-                "produce": "生产",
-                "loading": "加载中",
-                "viewInstancesList": "刷新列表"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u51fa\u552e\u4ee3\u5e01",
+						"timestamps": "\u6642\u9593",
+						"prices": "\u4ef7\u683c",
+						"endTime": "\u65f6\u95f4\u7ed3\u675f",
+						"thresholds": "\u9608\u503c",
+						"bonuses": "\u5956\u91d1"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u6240\u6709\u8005\u65e0\u6cd5\u64a4\u56de",
+							"option1": "\u6240\u6709\u8005\u53ea\u80fd\u5728 endTime \u7ed3\u675f\u540e\u624d\u80fd\u63d0\u53d6\u4ee3\u5e01",
+							"option2": "\u6240\u6709\u8005\u53ef\u4ee5\u968f\u65f6\u63d0\u53d6\u4ee3\u5e01"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u793e\u533a\u5730\u5740",
+					"methodkeccack": "Keccak256 \u54c8\u5e0c\u51fd\u6570",
+					"roleId": "\u89d2\u8272 ID",
+					"sellingToken": "\u51fa\u552e\u4ee3\u5e01\u5730\u5740",
+					"prices": "ETH\uff0c\u4ef7\u683c",
+					"thresholds": "\u4ee3\u5e01\u6570\u91cf",
+					"bonuses": "\u5956\u91d1 \uff05"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u6ca1\u6709\u8d44\u91d1"
+				},
+				"btns": {
+					"createFund": "\u521b\u5efa\u57fa\u91d1",
+					"createFundInForm": "\u521b\u9020"
+				},
+				"fundAddress": "\u57fa\u91d1\u5730\u5740",
+				"createFund": "\u521b\u5efa\u57fa\u91d1",
+				"fundInfo": "\u4fe1\u606f",
+				"produce": "\u751f\u4ea7",
+				"loading": "\u52a0\u8f7d\u4e2d",
+				"viewInstancesList": "\u5237\u65b0\u5217\u8868"
+			}
+		}
+	}
 }

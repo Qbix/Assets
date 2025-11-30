@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "কত বিনিয়োগ করতে হবে?"
-                    },
-                    "placeholders": {
-                        "amount": "পরিমাণ {{nativeCoin}}",
-                        "max": "সর্বোচ্চ: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "কেনা",
-                    "execute": "এক্সিকিউট"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "\u0995\u09a4 \u09ac\u09bf\u09a8\u09bf\u09af\u09bc\u09cb\u0997 \u0995\u09b0\u09a4\u09c7 \u09b9\u09ac\u09c7?"
+					},
+					"placeholders": {
+						"amount": "\u09aa\u09b0\u09bf\u09ae\u09be\u09a3 {{nativeCoin}}",
+						"max": "\u09b8\u09b0\u09cd\u09ac\u09cb\u099a\u09cd\u099a: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "\u0995\u09c7\u09a8\u09be",
+					"execute": "\u098f\u0995\u09cd\u09b8\u09bf\u0995\u09bf\u0989\u099f"
+				}
+			}
+		}
+	}
 }

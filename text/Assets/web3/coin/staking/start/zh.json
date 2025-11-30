@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "储备代币",
-                        "duration": "期间",
-                        "amount": "数量"
-                    },
-                    "small": {
-                        "reserveToken": "储备代币",
-                        "duration": "期间",
-                        "amount": "数量"
-                    }
-                },
-                "placeholders": {
-                    "duration": "期间",
-                    "amount": "数量"
-                },
-                "btns": {
-                    "stake": "赌注"
-                },
-                "stake": "赌注",
-                "loading": "加载中"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u50a8\u5907\u4ee3\u5e01",
+						"duration": "\u671f\u95f4",
+						"amount": "\u6570\u91cf"
+					},
+					"small": {
+						"reserveToken": "\u50a8\u5907\u4ee3\u5e01",
+						"duration": "\u671f\u95f4",
+						"amount": "\u6570\u91cf"
+					}
+				},
+				"placeholders": {
+					"duration": "\u671f\u95f4",
+					"amount": "\u6570\u91cf"
+				},
+				"btns": {
+					"stake": "\u8d4c\u6ce8"
+				},
+				"stake": "\u8d4c\u6ce8",
+				"loading": "\u52a0\u8f7d\u4e2d"
+			}
+		}
+	}
 }

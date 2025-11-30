@@ -1,27 +1,27 @@
 {
-    "title": "Chi trả",
-    "steps": {
-        "sending_native_coins": "Gửi tiền bản địa",
-        "sending_tokens": "Gửi mã thông báo",
-        "swap": "Tráo đổi",
-        "approve": "Chấp thuận",
-        "one_tx": "Bạn nên gửi một giao dịch",
-        "two_tx": "Bạn nên gửi hai giao dịch"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Nguồn kinh phí phải trả"
-            }
-        },
-        "btns": {
-            "pay": "Chi trả"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Cần phải trả {{amountOut}} token"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Chuỗi có id &quot; {{chainId}} &quot; như vậy không được hỗ trợ"
-    }
+	"title": "Chi tr\u1ea3",
+	"steps": {
+		"sending_native_coins": "G\u1eedi ti\u1ec1n b\u1ea3n \u0111\u1ecba",
+		"sending_tokens": "G\u1eedi m\u00e3 th\u00f4ng b\u00e1o",
+		"swap": "Tr\u00e1o \u0111\u1ed5i",
+		"approve": "Ch\u1ea5p thu\u1eadn",
+		"one_tx": "B\u1ea1n n\u00ean g\u1eedi m\u1ed9t giao d\u1ecbch",
+		"two_tx": "B\u1ea1n n\u00ean g\u1eedi hai giao d\u1ecbch"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Ngu\u1ed3n kinh ph\u00ed ph\u1ea3i tr\u1ea3"
+			}
+		},
+		"btns": {
+			"pay": "Chi tr\u1ea3"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "C\u1ea7n ph\u1ea3i tr\u1ea3 {{amountOut}} token"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "Chu\u1ed7i c\u00f3 id &quot; {{chainId}} &quot; nh\u01b0 v\u1eady kh\u00f4ng \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3"
+	}
 }

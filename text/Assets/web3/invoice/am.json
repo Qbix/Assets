@@ -1,27 +1,27 @@
 {
-    "title": "ይክፈሉ።",
-    "steps": {
-        "sending_native_coins": "ቤተኛ ሳንቲሞች በመላክ ላይ",
-        "sending_tokens": "ማስመሰያዎች በመላክ ላይ",
-        "swap": "መለዋወጥ",
-        "approve": "አጽድቅ",
-        "one_tx": "አንድ ግብይት መላክ አለቦት",
-        "two_tx": "ሁለት ግብይቶችን መላክ አለብህ"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "ለመክፈል ገንዘቦች"
-            }
-        },
-        "btns": {
-            "pay": "ይክፈሉ።"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "&quot; {{amountOut}} &quot; ማስመሰያዎች መክፈል ያስፈልጋል"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "እንደዚህ ያለ ሰንሰለት መታወቂያ &quot; {{chainId}} &quot; አይደገፍም።"
-    }
+	"title": "\u12ed\u12ad\u1348\u1209\u1362",
+	"steps": {
+		"sending_native_coins": "\u1264\u1270\u129b \u1233\u1295\u1272\u121e\u127d \u1260\u1218\u120b\u12ad \u120b\u12ed",
+		"sending_tokens": "\u121b\u1235\u1218\u1230\u12eb\u12ce\u127d \u1260\u1218\u120b\u12ad \u120b\u12ed",
+		"swap": "\u1218\u1208\u12cb\u12c8\u1325",
+		"approve": "\u12a0\u133d\u12f5\u1245",
+		"one_tx": "\u12a0\u1295\u12f5 \u130d\u1265\u12ed\u1275 \u1218\u120b\u12ad \u12a0\u1208\u1266\u1275",
+		"two_tx": "\u1201\u1208\u1275 \u130d\u1265\u12ed\u1276\u127d\u1295 \u1218\u120b\u12ad \u12a0\u1208\u1265\u1205"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u1208\u1218\u12ad\u1348\u120d \u1308\u1295\u12d8\u1266\u127d"
+			}
+		},
+		"btns": {
+			"pay": "\u12ed\u12ad\u1348\u1209\u1362"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "&quot; {{amountOut}} &quot; \u121b\u1235\u1218\u1230\u12eb\u12ce\u127d \u1218\u12ad\u1348\u120d \u12eb\u1235\u1348\u120d\u130b\u120d"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "\u12a5\u1295\u12f0\u12da\u1205 \u12eb\u1208 \u1230\u1295\u1230\u1208\u1275 \u1218\u1273\u12c8\u1242\u12eb &quot; {{chainId}} &quot; \u12a0\u12ed\u12f0\u1308\u134d\u121d\u1362"
+	}
 }

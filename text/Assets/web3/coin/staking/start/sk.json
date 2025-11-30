@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "rezervný token",
-                        "duration": "Trvanie",
-                        "amount": "Suma"
-                    },
-                    "small": {
-                        "reserveToken": "rezervný token",
-                        "duration": "Trvanie",
-                        "amount": "Suma"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Trvanie",
-                    "amount": "čiastka"
-                },
-                "btns": {
-                    "stake": "Kôl"
-                },
-                "stake": "Kôl",
-                "loading": "Načítava"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "rezervn\u00fd token",
+						"duration": "Trvanie",
+						"amount": "Suma"
+					},
+					"small": {
+						"reserveToken": "rezervn\u00fd token",
+						"duration": "Trvanie",
+						"amount": "Suma"
+					}
+				},
+				"placeholders": {
+					"duration": "Trvanie",
+					"amount": "\u010diastka"
+				},
+				"btns": {
+					"stake": "K\u00f4l"
+				},
+				"stake": "K\u00f4l",
+				"loading": "Na\u010d\u00edtava"
+			}
+		}
+	}
 }

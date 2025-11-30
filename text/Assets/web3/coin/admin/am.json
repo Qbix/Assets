@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "ቆይታ",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "ታዋቂ ማስመሰያ",
-                    "donations": "ልገሳዎች",
-                    "rewardsRateFraction": "ሽልማቶችRateFraction",
-                    "numerator": "አሃዛዊ",
-                    "denominator": "አካታች"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "የሚቆይበት ጊዜ በቀናት ውስጥ",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "ታዋቂ ማስመሰያ",
-                    "donations": "ልገሳዎች",
-                    "rewardsRateFraction": "ሽልማቶችRateFraction",
-                    "numerator": "አሃዛዊ",
-                    "denominator": "አካታች"
-                }
-            },
-            "placeholders": {
-                "optional": "(አማራጭ)",
-                "tuple": "tuple[]",
-                "number": "ቁጥር",
-                "address": "አድራሻ",
-                "fraction": "ክፍልፋይ",
-                "integer": "ኢንቲጀር",
-                "seconds": "ሰከንዶች",
-                "days": "ቀናት",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "ገንዳዎች የሉም"
-            },
-            "btns": {
-                "createPool": "ገንዳ ይፍጠሩ",
-                "createPoolInForm": "ፍጠር"
-            },
-            "createPool": "ገንዳ ይፍጠሩ",
-            "produce": "ማምረት",
-            "loading": "በመጫን ላይ",
-            "viewInstancesList": "ዝርዝር አድስ"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u1246\u12ed\u1273",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u1273\u12cb\u1242 \u121b\u1235\u1218\u1230\u12eb",
+					"donations": "\u120d\u1308\u1233\u12ce\u127d",
+					"rewardsRateFraction": "\u123d\u120d\u121b\u1276\u127dRateFraction",
+					"numerator": "\u12a0\u1203\u12db\u12ca",
+					"denominator": "\u12a0\u12ab\u1273\u127d"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u12e8\u121a\u1246\u12ed\u1260\u1275 \u130a\u12dc \u1260\u1240\u1293\u1275 \u12cd\u1235\u1325",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u1273\u12cb\u1242 \u121b\u1235\u1218\u1230\u12eb",
+					"donations": "\u120d\u1308\u1233\u12ce\u127d",
+					"rewardsRateFraction": "\u123d\u120d\u121b\u1276\u127dRateFraction",
+					"numerator": "\u12a0\u1203\u12db\u12ca",
+					"denominator": "\u12a0\u12ab\u1273\u127d"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u12a0\u121b\u122b\u132d)",
+				"tuple": "tuple[]",
+				"number": "\u1241\u1325\u122d",
+				"address": "\u12a0\u12f5\u122b\u123b",
+				"fraction": "\u12ad\u134d\u120d\u134b\u12ed",
+				"integer": "\u12a2\u1295\u1272\u1300\u122d",
+				"seconds": "\u1230\u12a8\u1295\u12f6\u127d",
+				"days": "\u1240\u1293\u1275",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u1308\u1295\u12f3\u12ce\u127d \u12e8\u1209\u121d"
+			},
+			"btns": {
+				"createPool": "\u1308\u1295\u12f3 \u12ed\u134d\u1320\u1229",
+				"createPoolInForm": "\u134d\u1320\u122d"
+			},
+			"createPool": "\u1308\u1295\u12f3 \u12ed\u134d\u1320\u1229",
+			"produce": "\u121b\u121d\u1228\u1275",
+			"loading": "\u1260\u1218\u132b\u1295 \u120b\u12ed",
+			"viewInstancesList": "\u12dd\u122d\u12dd\u122d \u12a0\u12f5\u1235"
+		}
+	}
 }

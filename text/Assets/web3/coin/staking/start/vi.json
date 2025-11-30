@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "dự trữToken",
-                        "duration": "Khoảng thời gian",
-                        "amount": "Số lượng"
-                    },
-                    "small": {
-                        "reserveToken": "dự trữToken",
-                        "duration": "Khoảng thời gian",
-                        "amount": "Số lượng"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Khoảng thời gian",
-                    "amount": "số lượng"
-                },
-                "btns": {
-                    "stake": "Cổ phần"
-                },
-                "stake": "Cổ phần",
-                "loading": "Đang tải"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "d\u1ef1 tr\u1eefToken",
+						"duration": "Kho\u1ea3ng th\u1eddi gian",
+						"amount": "S\u1ed1 l\u01b0\u1ee3ng"
+					},
+					"small": {
+						"reserveToken": "d\u1ef1 tr\u1eefToken",
+						"duration": "Kho\u1ea3ng th\u1eddi gian",
+						"amount": "S\u1ed1 l\u01b0\u1ee3ng"
+					}
+				},
+				"placeholders": {
+					"duration": "Kho\u1ea3ng th\u1eddi gian",
+					"amount": "s\u1ed1 l\u01b0\u1ee3ng"
+				},
+				"btns": {
+					"stake": "C\u1ed5 ph\u1ea7n"
+				},
+				"stake": "C\u1ed5 ph\u1ea7n",
+				"loading": "\u0110ang t\u1ea3i"
+			}
+		}
+	}
 }

@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "టోకెన్ విక్రయిస్తోంది",
-                        "timestamps": "టైమ్స్",
-                        "prices": "ధరలు",
-                        "endTime": "ముగింపు సమయం",
-                        "thresholds": "థ్రెషోల్డ్స్",
-                        "bonuses": "బోనస్‌లు"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "యజమాని ఉపసంహరించుకోలేరు",
-                            "option1": "ముగింపు సమయం ముగిసిన తర్వాత మాత్రమే యజమాని టోకెన్‌లను ఉపసంహరించుకోవచ్చు",
-                            "option2": "యజమాని ఎప్పుడైనా టోకెన్‌లను ఉపసంహరించుకోవచ్చు"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "సంఘం చిరునామా",
-                    "methodkeccack": "Keccak256 హాష్ ఫంక్షన్",
-                    "roleId": "పాత్ర ID",
-                    "sellingToken": "టోకెన్ చిరునామాను విక్రయిస్తోంది",
-                    "prices": "ETH, ధర",
-                    "thresholds": "# టోకెన్లు",
-                    "bonuses": "అదనపు %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "నిధులు లేవు"
-                },
-                "btns": {
-                    "createFund": "నిధిని సృష్టించండి",
-                    "createFundInForm": "సృష్టించు"
-                },
-                "fundAddress": "ఫండ్ చిరునామా",
-                "createFund": "నిధిని సృష్టించండి",
-                "fundInfo": "సమాచారం",
-                "produce": "ఉత్పత్తి",
-                "loading": "లోడ్",
-                "viewInstancesList": "జాబితాను రిఫ్రెష్ చేయండి"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d \u0c35\u0c3f\u0c15\u0c4d\u0c30\u0c2f\u0c3f\u0c38\u0c4d\u0c24\u0c4b\u0c02\u0c26\u0c3f",
+						"timestamps": "\u0c1f\u0c48\u0c2e\u0c4d\u0c38\u0c4d",
+						"prices": "\u0c27\u0c30\u0c32\u0c41",
+						"endTime": "\u0c2e\u0c41\u0c17\u0c3f\u0c02\u0c2a\u0c41 \u0c38\u0c2e\u0c2f\u0c02",
+						"thresholds": "\u0c25\u0c4d\u0c30\u0c46\u0c37\u0c4b\u0c32\u0c4d\u0c21\u0c4d\u0c38\u0c4d",
+						"bonuses": "\u0c2c\u0c4b\u0c28\u0c38\u0c4d\u200c\u0c32\u0c41"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u0c2f\u0c1c\u0c2e\u0c3e\u0c28\u0c3f \u0c09\u0c2a\u0c38\u0c02\u0c39\u0c30\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c32\u0c47\u0c30\u0c41",
+							"option1": "\u0c2e\u0c41\u0c17\u0c3f\u0c02\u0c2a\u0c41 \u0c38\u0c2e\u0c2f\u0c02 \u0c2e\u0c41\u0c17\u0c3f\u0c38\u0c3f\u0c28 \u0c24\u0c30\u0c4d\u0c35\u0c3e\u0c24 \u0c2e\u0c3e\u0c24\u0c4d\u0c30\u0c2e\u0c47 \u0c2f\u0c1c\u0c2e\u0c3e\u0c28\u0c3f \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d\u200c\u0c32\u0c28\u0c41 \u0c09\u0c2a\u0c38\u0c02\u0c39\u0c30\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41",
+							"option2": "\u0c2f\u0c1c\u0c2e\u0c3e\u0c28\u0c3f \u0c0e\u0c2a\u0c4d\u0c2a\u0c41\u0c21\u0c48\u0c28\u0c3e \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d\u200c\u0c32\u0c28\u0c41 \u0c09\u0c2a\u0c38\u0c02\u0c39\u0c30\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c35\u0c1a\u0c4d\u0c1a\u0c41"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u0c38\u0c02\u0c18\u0c02 \u0c1a\u0c3f\u0c30\u0c41\u0c28\u0c3e\u0c2e\u0c3e",
+					"methodkeccack": "Keccak256 \u0c39\u0c3e\u0c37\u0c4d \u0c2b\u0c02\u0c15\u0c4d\u0c37\u0c28\u0c4d",
+					"roleId": "\u0c2a\u0c3e\u0c24\u0c4d\u0c30 ID",
+					"sellingToken": "\u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d \u0c1a\u0c3f\u0c30\u0c41\u0c28\u0c3e\u0c2e\u0c3e\u0c28\u0c41 \u0c35\u0c3f\u0c15\u0c4d\u0c30\u0c2f\u0c3f\u0c38\u0c4d\u0c24\u0c4b\u0c02\u0c26\u0c3f",
+					"prices": "ETH, \u0c27\u0c30",
+					"thresholds": "# \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d\u0c32\u0c41",
+					"bonuses": "\u0c05\u0c26\u0c28\u0c2a\u0c41 %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u0c28\u0c3f\u0c27\u0c41\u0c32\u0c41 \u0c32\u0c47\u0c35\u0c41"
+				},
+				"btns": {
+					"createFund": "\u0c28\u0c3f\u0c27\u0c3f\u0c28\u0c3f \u0c38\u0c43\u0c37\u0c4d\u0c1f\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f",
+					"createFundInForm": "\u0c38\u0c43\u0c37\u0c4d\u0c1f\u0c3f\u0c02\u0c1a\u0c41"
+				},
+				"fundAddress": "\u0c2b\u0c02\u0c21\u0c4d \u0c1a\u0c3f\u0c30\u0c41\u0c28\u0c3e\u0c2e\u0c3e",
+				"createFund": "\u0c28\u0c3f\u0c27\u0c3f\u0c28\u0c3f \u0c38\u0c43\u0c37\u0c4d\u0c1f\u0c3f\u0c02\u0c1a\u0c02\u0c21\u0c3f",
+				"fundInfo": "\u0c38\u0c2e\u0c3e\u0c1a\u0c3e\u0c30\u0c02",
+				"produce": "\u0c09\u0c24\u0c4d\u0c2a\u0c24\u0c4d\u0c24\u0c3f",
+				"loading": "\u0c32\u0c4b\u0c21\u0c4d",
+				"viewInstancesList": "\u0c1c\u0c3e\u0c2c\u0c3f\u0c24\u0c3e\u0c28\u0c41 \u0c30\u0c3f\u0c2b\u0c4d\u0c30\u0c46\u0c37\u0c4d \u0c1a\u0c47\u0c2f\u0c02\u0c21\u0c3f"
+			}
+		}
+	}
 }

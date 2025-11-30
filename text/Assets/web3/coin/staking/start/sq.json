@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "rezervëToken",
-                        "duration": "Kohëzgjatja",
-                        "amount": "Shuma"
-                    },
-                    "small": {
-                        "reserveToken": "rezervëToken",
-                        "duration": "Kohëzgjatja",
-                        "amount": "Shuma"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Kohëzgjatja",
-                    "amount": "shuma"
-                },
-                "btns": {
-                    "stake": "Kunj"
-                },
-                "stake": "Kunj",
-                "loading": "Po ngarkohet"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "rezerv\u00ebToken",
+						"duration": "Koh\u00ebzgjatja",
+						"amount": "Shuma"
+					},
+					"small": {
+						"reserveToken": "rezerv\u00ebToken",
+						"duration": "Koh\u00ebzgjatja",
+						"amount": "Shuma"
+					}
+				},
+				"placeholders": {
+					"duration": "Koh\u00ebzgjatja",
+					"amount": "shuma"
+				},
+				"btns": {
+					"stake": "Kunj"
+				},
+				"stake": "Kunj",
+				"loading": "Po ngarkohet"
+			}
+		}
+	}
 }

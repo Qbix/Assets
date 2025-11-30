@@ -1,27 +1,27 @@
 {
-    "title": "支付",
-    "steps": {
-        "sending_native_coins": "发送原生代币",
-        "sending_tokens": "发送代币",
-        "swap": "交换",
-        "approve": "批准",
-        "one_tx": "你应该发送一笔交易",
-        "two_tx": "你应该发送两笔交易"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "支付资金"
-            }
-        },
-        "btns": {
-            "pay": "支付"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "需要支付“ {{amountOut}} ”代币"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "不支持 ID 为“ {{chainId}} ” 的此类链"
-    }
+	"title": "\u652f\u4ed8",
+	"steps": {
+		"sending_native_coins": "\u53d1\u9001\u539f\u751f\u4ee3\u5e01",
+		"sending_tokens": "\u53d1\u9001\u4ee3\u5e01",
+		"swap": "\u4ea4\u6362",
+		"approve": "\u6279\u51c6",
+		"one_tx": "\u4f60\u5e94\u8be5\u53d1\u9001\u4e00\u7b14\u4ea4\u6613",
+		"two_tx": "\u4f60\u5e94\u8be5\u53d1\u9001\u4e24\u7b14\u4ea4\u6613"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u652f\u4ed8\u8d44\u91d1"
+			}
+		},
+		"btns": {
+			"pay": "\u652f\u4ed8"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "\u9700\u8981\u652f\u4ed8\u201c {{amountOut}} \u201d\u4ee3\u5e01"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "\u4e0d\u652f\u6301 ID \u4e3a\u201c {{chainId}} \u201d \u7684\u6b64\u7c7b\u94fe"
+	}
 }

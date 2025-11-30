@@ -1,27 +1,27 @@
 {
-    "title": "zaplatiť",
-    "steps": {
-        "sending_native_coins": "Posielanie natívnych mincí",
-        "sending_tokens": "Odosielanie tokenov",
-        "swap": "Vymeňte",
-        "approve": "schváliť",
-        "one_tx": "Mali by ste odoslať jednu transakciu",
-        "two_tx": "Mali by ste odoslať dve transakcie"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Prostriedky na zaplatenie"
-            }
-        },
-        "btns": {
-            "pay": "zaplatiť"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Je potrebné zaplatiť &quot; {{amountOut}} &quot; žetónov"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Takýto reťazec s ID &quot; {{chainId}} &quot; nie je podporovaný"
-    }
+	"title": "zaplati\u0165",
+	"steps": {
+		"sending_native_coins": "Posielanie nat\u00edvnych minc\u00ed",
+		"sending_tokens": "Odosielanie tokenov",
+		"swap": "Vyme\u0148te",
+		"approve": "schv\u00e1li\u0165",
+		"one_tx": "Mali by ste odosla\u0165 jednu transakciu",
+		"two_tx": "Mali by ste odosla\u0165 dve transakcie"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Prostriedky na zaplatenie"
+			}
+		},
+		"btns": {
+			"pay": "zaplati\u0165"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "Je potrebn\u00e9 zaplati\u0165 &quot; {{amountOut}} &quot; \u017eet\u00f3nov"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "Tak\u00fdto re\u0165azec s ID &quot; {{chainId}} &quot; nie je podporovan\u00fd"
+	}
 }

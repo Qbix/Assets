@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Продължителност",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popularToken",
-                    "donations": "дарения",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "числител",
-                    "denominator": "знаменател"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Продължителност в дни",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popularToken",
-                    "donations": "дарения",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "числител",
-                    "denominator": "знаменател"
-                }
-            },
-            "placeholders": {
-                "optional": "(по избор)",
-                "tuple": "кортеж[]",
-                "number": "номер",
-                "address": "адрес",
-                "fraction": "фракция",
-                "integer": "цяло число",
-                "seconds": "секунди",
-                "days": "дни",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Няма басейни"
-            },
-            "btns": {
-                "createPool": "Създаване на басейн",
-                "createPoolInForm": "Създавайте"
-            },
-            "createPool": "Създаване на басейн",
-            "produce": "Продукция",
-            "loading": "Зареждане",
-            "viewInstancesList": "Опресняване на списъка"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u041f\u0440\u043e\u0434\u044a\u043b\u0436\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popularToken",
+					"donations": "\u0434\u0430\u0440\u0435\u043d\u0438\u044f",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b",
+					"denominator": "\u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u041f\u0440\u043e\u0434\u044a\u043b\u0436\u0438\u0442\u0435\u043b\u043d\u043e\u0441\u0442 \u0432 \u0434\u043d\u0438",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popularToken",
+					"donations": "\u0434\u0430\u0440\u0435\u043d\u0438\u044f",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b",
+					"denominator": "\u0437\u043d\u0430\u043c\u0435\u043d\u0430\u0442\u0435\u043b"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u043f\u043e \u0438\u0437\u0431\u043e\u0440)",
+				"tuple": "\u043a\u043e\u0440\u0442\u0435\u0436[]",
+				"number": "\u043d\u043e\u043c\u0435\u0440",
+				"address": "\u0430\u0434\u0440\u0435\u0441",
+				"fraction": "\u0444\u0440\u0430\u043a\u0446\u0438\u044f",
+				"integer": "\u0446\u044f\u043b\u043e \u0447\u0438\u0441\u043b\u043e",
+				"seconds": "\u0441\u0435\u043a\u0443\u043d\u0434\u0438",
+				"days": "\u0434\u043d\u0438",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u041d\u044f\u043c\u0430 \u0431\u0430\u0441\u0435\u0439\u043d\u0438"
+			},
+			"btns": {
+				"createPool": "\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0431\u0430\u0441\u0435\u0439\u043d",
+				"createPoolInForm": "\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435"
+			},
+			"createPool": "\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0431\u0430\u0441\u0435\u0439\u043d",
+			"produce": "\u041f\u0440\u043e\u0434\u0443\u043a\u0446\u0438\u044f",
+			"loading": "\u0417\u0430\u0440\u0435\u0436\u0434\u0430\u043d\u0435",
+			"viewInstancesList": "\u041e\u043f\u0440\u0435\u0441\u043d\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0441\u043f\u0438\u0441\u044a\u043a\u0430"
+		}
+	}
 }

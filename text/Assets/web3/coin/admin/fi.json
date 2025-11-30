@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Kesto",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "suosittu Token",
-                    "donations": "lahjoituksia",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "osoittaja",
-                    "denominator": "nimittäjä"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Kesto päivinä",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "suosittu Token",
-                    "donations": "lahjoituksia",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "osoittaja",
-                    "denominator": "nimittäjä"
-                }
-            },
-            "placeholders": {
-                "optional": "(valinnainen)",
-                "tuple": "monikko[]",
-                "number": "määrä",
-                "address": "osoite",
-                "fraction": "murto-osa",
-                "integer": "kokonaisluku",
-                "seconds": "sekuntia",
-                "days": "päivää",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Ei ole uima-altaita"
-            },
-            "btns": {
-                "createPool": "Luo allas",
-                "createPoolInForm": "Luoda"
-            },
-            "createPool": "Luo allas",
-            "produce": "Tuottaa",
-            "loading": "Ladataan",
-            "viewInstancesList": "Päivitä lista"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Kesto",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "suosittu Token",
+					"donations": "lahjoituksia",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "osoittaja",
+					"denominator": "nimitt\u00e4j\u00e4"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Kesto p\u00e4ivin\u00e4",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "suosittu Token",
+					"donations": "lahjoituksia",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "osoittaja",
+					"denominator": "nimitt\u00e4j\u00e4"
+				}
+			},
+			"placeholders": {
+				"optional": "(valinnainen)",
+				"tuple": "monikko[]",
+				"number": "m\u00e4\u00e4r\u00e4",
+				"address": "osoite",
+				"fraction": "murto-osa",
+				"integer": "kokonaisluku",
+				"seconds": "sekuntia",
+				"days": "p\u00e4iv\u00e4\u00e4",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Ei ole uima-altaita"
+			},
+			"btns": {
+				"createPool": "Luo allas",
+				"createPoolInForm": "Luoda"
+			},
+			"createPool": "Luo allas",
+			"produce": "Tuottaa",
+			"loading": "Ladataan",
+			"viewInstancesList": "P\u00e4ivit\u00e4 lista"
+		}
+	}
 }

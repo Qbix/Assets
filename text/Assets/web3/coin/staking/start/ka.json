@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "rezervToken",
-                        "duration": "ხანგრძლივობა",
-                        "amount": "თანხა"
-                    },
-                    "small": {
-                        "reserveToken": "rezervToken",
-                        "duration": "ხანგრძლივობა",
-                        "amount": "თანხა"
-                    }
-                },
-                "placeholders": {
-                    "duration": "ხანგრძლივობა",
-                    "amount": "თანხა"
-                },
-                "btns": {
-                    "stake": "ფსონი"
-                },
-                "stake": "ფსონი",
-                "loading": "Ჩატვირთვა"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "rezervToken",
+						"duration": "\u10ee\u10d0\u10dc\u10d2\u10e0\u10eb\u10da\u10d8\u10d5\u10dd\u10d1\u10d0",
+						"amount": "\u10d7\u10d0\u10dc\u10ee\u10d0"
+					},
+					"small": {
+						"reserveToken": "rezervToken",
+						"duration": "\u10ee\u10d0\u10dc\u10d2\u10e0\u10eb\u10da\u10d8\u10d5\u10dd\u10d1\u10d0",
+						"amount": "\u10d7\u10d0\u10dc\u10ee\u10d0"
+					}
+				},
+				"placeholders": {
+					"duration": "\u10ee\u10d0\u10dc\u10d2\u10e0\u10eb\u10da\u10d8\u10d5\u10dd\u10d1\u10d0",
+					"amount": "\u10d7\u10d0\u10dc\u10ee\u10d0"
+				},
+				"btns": {
+					"stake": "\u10e4\u10e1\u10dd\u10dc\u10d8"
+				},
+				"stake": "\u10e4\u10e1\u10dd\u10dc\u10d8",
+				"loading": "\u1ca9\u10d0\u10e2\u10d5\u10d8\u10e0\u10d7\u10d5\u10d0"
+			}
+		}
+	}
 }

@@ -1,27 +1,27 @@
 {
-    "title": "A plati",
-    "steps": {
-        "sending_native_coins": "Trimiterea de monede native",
-        "sending_tokens": "Trimiterea de jetoane",
-        "swap": "Schimbați",
-        "approve": "Aproba",
-        "one_tx": "Ar trebui să trimiteți o singură tranzacție",
-        "two_tx": "Ar trebui să trimiteți două tranzacții"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Fonduri de plătit"
-            }
-        },
-        "btns": {
-            "pay": "A plati"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Trebuie să plătiți jetoane „ {{amountOut}} ”."
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Un astfel de lanț cu id-ul „ {{chainId}} ” nu este acceptat"
-    }
+	"title": "A plati",
+	"steps": {
+		"sending_native_coins": "Trimiterea de monede native",
+		"sending_tokens": "Trimiterea de jetoane",
+		"swap": "Schimba\u021bi",
+		"approve": "Aproba",
+		"one_tx": "Ar trebui s\u0103 trimite\u021bi o singur\u0103 tranzac\u021bie",
+		"two_tx": "Ar trebui s\u0103 trimite\u021bi dou\u0103 tranzac\u021bii"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Fonduri de pl\u0103tit"
+			}
+		},
+		"btns": {
+			"pay": "A plati"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "Trebuie s\u0103 pl\u0103ti\u021bi jetoane \u201e {{amountOut}} \u201d."
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "Un astfel de lan\u021b cu id-ul \u201e {{chainId}} \u201d nu este acceptat"
+	}
 }

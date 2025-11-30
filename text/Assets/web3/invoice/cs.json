@@ -1,27 +1,27 @@
 {
-    "title": "Platit",
-    "steps": {
-        "sending_native_coins": "Odesílání nativních mincí",
-        "sending_tokens": "Odesílání tokenů",
-        "swap": "Vyměňte",
-        "approve": "Schvalovat",
-        "one_tx": "Měli byste odeslat jednu transakci",
-        "two_tx": "Měli byste odeslat dvě transakce"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Prostředky k zaplacení"
-            }
-        },
-        "btns": {
-            "pay": "Platit"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "Je třeba zaplatit &quot; {{amountOut}} &quot; tokenů"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Takový řetězec s id &quot; {{chainId}} &quot; není podporován"
-    }
+	"title": "Platit",
+	"steps": {
+		"sending_native_coins": "Odes\u00edl\u00e1n\u00ed nativn\u00edch minc\u00ed",
+		"sending_tokens": "Odes\u00edl\u00e1n\u00ed token\u016f",
+		"swap": "Vym\u011b\u0148te",
+		"approve": "Schvalovat",
+		"one_tx": "M\u011bli byste odeslat jednu transakci",
+		"two_tx": "M\u011bli byste odeslat dv\u011b transakce"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Prost\u0159edky k zaplacen\u00ed"
+			}
+		},
+		"btns": {
+			"pay": "Platit"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "Je t\u0159eba zaplatit &quot; {{amountOut}} &quot; token\u016f"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "Takov\u00fd \u0159et\u011bzec s id &quot; {{chainId}} &quot; nen\u00ed podporov\u00e1n"
+	}
 }

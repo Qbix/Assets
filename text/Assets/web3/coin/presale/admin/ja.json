@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "トークンの販売",
-                        "timestamps": "タイムズ",
-                        "prices": "価格",
-                        "endTime": "終了時間",
-                        "thresholds": "閾値",
-                        "bonuses": "ボーナス"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "オーナーは撤退できない",
-                            "option1": "所有者は終了時間が経過した後にのみトークンを引き出すことができます",
-                            "option2": "所有者はいつでもトークンを引き出すことができます"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "コミュニティアドレス",
-                    "methodkeccack": "Keccak256ハッシュ関数",
-                    "roleId": "ロールID",
-                    "sellingToken": "トークン販売アドレス",
-                    "prices": "ETH、価格",
-                    "thresholds": "トークンの数",
-                    "bonuses": "ボーナス %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "資金がない"
-                },
-                "btns": {
-                    "createFund": "ファンドの作成",
-                    "createFundInForm": "作成する"
-                },
-                "fundAddress": "ファンドアドレス",
-                "createFund": "ファンドの作成",
-                "fundInfo": "情報",
-                "produce": "生産する",
-                "loading": "読み込み中",
-                "viewInstancesList": "リストを更新"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u30c8\u30fc\u30af\u30f3\u306e\u8ca9\u58f2",
+						"timestamps": "\u30bf\u30a4\u30e0\u30ba",
+						"prices": "\u4fa1\u683c",
+						"endTime": "\u7d42\u4e86\u6642\u9593",
+						"thresholds": "\u95be\u5024",
+						"bonuses": "\u30dc\u30fc\u30ca\u30b9"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u30aa\u30fc\u30ca\u30fc\u306f\u64a4\u9000\u3067\u304d\u306a\u3044",
+							"option1": "\u6240\u6709\u8005\u306f\u7d42\u4e86\u6642\u9593\u304c\u7d4c\u904e\u3057\u305f\u5f8c\u306b\u306e\u307f\u30c8\u30fc\u30af\u30f3\u3092\u5f15\u304d\u51fa\u3059\u3053\u3068\u304c\u3067\u304d\u307e\u3059",
+							"option2": "\u6240\u6709\u8005\u306f\u3044\u3064\u3067\u3082\u30c8\u30fc\u30af\u30f3\u3092\u5f15\u304d\u51fa\u3059\u3053\u3068\u304c\u3067\u304d\u307e\u3059"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u30b3\u30df\u30e5\u30cb\u30c6\u30a3\u30a2\u30c9\u30ec\u30b9",
+					"methodkeccack": "Keccak256\u30cf\u30c3\u30b7\u30e5\u95a2\u6570",
+					"roleId": "\u30ed\u30fc\u30ebID",
+					"sellingToken": "\u30c8\u30fc\u30af\u30f3\u8ca9\u58f2\u30a2\u30c9\u30ec\u30b9",
+					"prices": "ETH\u3001\u4fa1\u683c",
+					"thresholds": "\u30c8\u30fc\u30af\u30f3\u306e\u6570",
+					"bonuses": "\u30dc\u30fc\u30ca\u30b9 %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u8cc7\u91d1\u304c\u306a\u3044"
+				},
+				"btns": {
+					"createFund": "\u30d5\u30a1\u30f3\u30c9\u306e\u4f5c\u6210",
+					"createFundInForm": "\u4f5c\u6210\u3059\u308b"
+				},
+				"fundAddress": "\u30d5\u30a1\u30f3\u30c9\u30a2\u30c9\u30ec\u30b9",
+				"createFund": "\u30d5\u30a1\u30f3\u30c9\u306e\u4f5c\u6210",
+				"fundInfo": "\u60c5\u5831",
+				"produce": "\u751f\u7523\u3059\u308b",
+				"loading": "\u8aad\u307f\u8fbc\u307f\u4e2d",
+				"viewInstancesList": "\u30ea\u30b9\u30c8\u3092\u66f4\u65b0"
+			}
+		}
+	}
 }

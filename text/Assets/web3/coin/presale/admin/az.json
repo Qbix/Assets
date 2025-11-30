@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Token satılır",
-                        "timestamps": "Vaxt",
-                        "prices": "Qiymətlər",
-                        "endTime": "Bitmə vaxtı",
-                        "thresholds": "Eşiklər",
-                        "bonuses": "Bonuslar"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Sahibi geri götürə bilməz",
-                            "option1": "Sahibi tokenləri yalnız bitmə vaxtı keçdikdən sonra geri ala bilər",
-                            "option2": "Sahibi istənilən vaxt tokenləri geri ala bilər"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "İcma ünvanı",
-                    "methodkeccack": "Keccak256 hash funksiyası",
-                    "roleId": "Rol ID",
-                    "sellingToken": "Token ünvanı satılır",
-                    "prices": "ETH, Qiymət",
-                    "thresholds": "# token",
-                    "bonuses": "Bonus %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Vəsait yoxdur"
-                },
-                "btns": {
-                    "createFund": "Fond yaradın",
-                    "createFundInForm": "Yaradın"
-                },
-                "fundAddress": "Fondun ünvanı",
-                "createFund": "Fond yaradın",
-                "fundInfo": "Məlumat",
-                "produce": "istehsal",
-                "loading": "Yüklənir",
-                "viewInstancesList": "Siyahını yeniləyin"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Token sat\u0131l\u0131r",
+						"timestamps": "Vaxt",
+						"prices": "Qiym\u0259tl\u0259r",
+						"endTime": "Bitm\u0259 vaxt\u0131",
+						"thresholds": "E\u015fikl\u0259r",
+						"bonuses": "Bonuslar"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Sahibi geri g\u00f6t\u00fcr\u0259 bilm\u0259z",
+							"option1": "Sahibi tokenl\u0259ri yaln\u0131z bitm\u0259 vaxt\u0131 ke\u00e7dikd\u0259n sonra geri ala bil\u0259r",
+							"option2": "Sahibi ist\u0259nil\u0259n vaxt tokenl\u0259ri geri ala bil\u0259r"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u0130cma \u00fcnvan\u0131",
+					"methodkeccack": "Keccak256 hash funksiyas\u0131",
+					"roleId": "Rol ID",
+					"sellingToken": "Token \u00fcnvan\u0131 sat\u0131l\u0131r",
+					"prices": "ETH, Qiym\u0259t",
+					"thresholds": "# token",
+					"bonuses": "Bonus %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "V\u0259sait yoxdur"
+				},
+				"btns": {
+					"createFund": "Fond yarad\u0131n",
+					"createFundInForm": "Yarad\u0131n"
+				},
+				"fundAddress": "Fondun \u00fcnvan\u0131",
+				"createFund": "Fond yarad\u0131n",
+				"fundInfo": "M\u0259lumat",
+				"produce": "istehsal",
+				"loading": "Y\u00fckl\u0259nir",
+				"viewInstancesList": "Siyah\u0131n\u0131 yenil\u0259yin"
+			}
+		}
+	}
 }

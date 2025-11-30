@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "错误",
-        "WalletAbsent": "钱包未连接。",
-        "Rendering": "渲染时出错<span class='url'>{{1}}<\/span>",
-        "PriceRequired": "需要价格！",
-        "NameRequired": "姓名必填！",
-        "PriceInvalid": "价格无效！",
-        "AmountInvalid": "金额无效！",
-        "TransactionFailed": "交易失败",
-        "ChainNotSupported": "不支持所选链。支持链数： {{supportedChain}}",
-        "NeedMetaMaskConnected": "需要连接 MetaMask 才能使用应用程序",
-        "UserNotLoggedInMetaMask": "用户未登录到 MetaMask",
-        "CurrencyNotFound": "找不到货币",
-        "WrongChain": "此 NFT 创建于“ {{chain}} ”之下。请使用这条链。",
-        "NoRecipientSelected": "未选择收件人",
-        "NotEnoughPermissionsWallet": "没有足够的权限读取该用户的钱包",
-        "ThisUserHaveNoWallet": "该用户没有分配钱包",
-        "TheWalletOfThisUserInvalid": "该用户钱包无效",
-        "WalletInvalid": "钱包地址无效",
-        "CantManageFrozenSeries": "你无法管理《冰雪奇缘》系列",
-        "SubscriptionStreamNotPaid": "您尚未付费查看该内容。请点击{{subscriptionUrl}}并订阅相应的计划。"
-    },
-    "admin": {
-        "Title": "资产管理",
-        "SubscriptionTitle": "订阅计划"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "点击支付"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : 处理费用为{{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "感谢您支付给{{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}}订阅{{plan.title}}",
-        "YouSubscribedTo": "您已订阅{{plan.title}}",
-        "Assets\/credits\/alert": "您有与您的帐户相关的警报"
-    },
-    "charge": {
-        "Subject": "您通过“ {{description}} ”从{{call 'publisher.displayName'}}中获得{{displayAmount}}的付款",
-        "HasBeenCharged": "嘿，这只是想让你知道{{1}}已经被{{4}}收了{{3}}的{{2}}"
-    },
-    "charged": {
-        "Subject": "感谢您支付“ {{description}} ”",
-        "HavePaid": "嘿{{1}} ，这只是一个快速确认，您已经成功地为{{4}}支付了{{2}}到{{3}}"
-    },
-    "payment": {
-        "AboutOrder": "订单信息",
-        "PaymentMethod": "付款方式",
-        "ContactInfo": "联系方式",
-        "Pay": "支付",
-        "PaymentSucceeded": "支付成功",
-        "PaymentProcessing.": "您的付款正在处理中",
-        "FailTryAgain": "您的支付失败，请重试",
-        "SomethingWrong": "出了些问题",
-        "PaymentStatus": "支付状态",
-        "PayTo": "支付{{displayName}}",
-        "ChooseCurrency": "选择货币",
-        "YouCanSendUpTo": "您最多可以发送{{amount}} {{symbol}}",
-        "Send": "发送",
-        "EnterAmount": "输入金额"
-    },
-    "credits": {
-        "InviteAcceptedBy": "{{invitedUserName}}接受邀请",
-        "InvitedUserFilledStream": "{{invitedUserName}}满{{FilledStreamTitle}}",
-        "ForFillingStream": "填充用{{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "您有{{amount}}积分可以开始",
-        "PaymentFor": "支付“ {{1}} ”",
-        "PaymentTo": "付款至{{1}}",
-        "PaymentToUser": "付款至{{toUserName}}",
-        "CreatePrivateChat": "与{{toUserName}}私聊",
-        "CreatePaidStream": "创造{{toStreamName}}",
-        "JoinedPaidStream": "对于保留在“ <a data-publisherId='<i translate='no'>999&#39;data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> ”",
-        "CreatedCommunity": "为创建社区“ {{communityId}} ”",
-        "LeftPaidStream": "作为“ <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39; &gt; {{fromStreamTitle}}<\/a> ”中的预订退款",
-        "BoughtCredits": "已购买{{amount}}积分",
-        "BonusCredits": "奖金{{amount}}学分",
-        "BuyAmountCredits": "购买{{amount}}积分",
-        "WatchClip": "观看{{fromStreamTitle}}获得{{amount}}学分",
-        "MissingCredits": "缺少学分",
-        "YouMissingCredits": "您需要额外的{{amount}}学分才能继续。",
-        "BuyCredits": "购买学分",
-        "BuyBonus": "一次购买{{amount}}积分，将获得{{bonus}}积分奖励。",
-        "Buy": "买",
-        "PurchaseCredits": "购买积分",
-        "Credits": "学分",
-        "ErrorInvalidAmount": "金额无效",
-        "ErrorInvalidCurrency": "很遗憾，我们还不支持货币{{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}}学分",
-            "BonusCredits": "{{amount}}学分"
-        }
-    },
-    "history": {
-        "Date": "日期",
-        "Amount": "数量",
-        "Description": "描述",
-        "Client": "客户",
-        "User": "用户",
-        "To": "到",
-        "From": "从",
-        "SeeHistory": "查看{{1}}的付款记录",
-        "HistoryEmpty": "您还没有数据",
-        "PaymentFor": "已发送{{amount}}积分",
-        "PaymentTo": "已发送{{amount}}积分",
-        "PaymentToUser": "已发送{{amount}}积分",
-        "CreatePaidStream": "花费{{amount}}积分",
-        "WatchClip": {
-            "+": "获得{{amount}}学分",
-            "-": "花费{{amount}}积分"
-        },
-        "JoinedPaidStream": {
-            "+": "获得{{amount}}学分",
-            "-": "花费{{amount}}积分"
-        },
-        "LeftPaidStream": {
-            "+": "获得{{amount}}学分",
-            "-": "已发送{{amount}}积分"
-        },
-        "CreatedCommunity": "花费{{amount}}积分",
-        "BoughtCredits": "已购买{{amount}}积分",
-        "BonusCredits": "获得奖励{{amount}}学分",
-        "InviteAcceptedBy": "获得{{amount}}学分",
-        "Streams_user_firstname": "获得{{amount}}学分",
-        "Streams_user_lastname": "获得{{amount}}学分",
-        "Streams_user_icon": "获得{{amount}}学分",
-        "Places_user_location": "获得{{amount}}学分",
-        "Streams_greeting": "获得{{amount}}学分",
-        "YouHaveCreditsToStart": "获得{{amount}}学分",
-        "InvitedUserFilledStream": "获得{{amount}}学分",
-        "ForFillingStream": "获得{{amount}}学分",
-        "CreatePrivateChat": "已花费{{amount}}积分"
-    },
-    "subscriptions": {
-        "infoTitle": "设置支付信息",
-        "confirm": {
-            "title": "开始订阅",
-            "message": "开始定期订阅“ {{title}} ”？",
-            "ok": "好的",
-            "cancel": "取消"
-        },
-        "CreditOrDebitCard": "信用卡或借记卡",
-        "SubscribePayment": "订阅付款",
-        "ImmediatePayment": "立即付款",
-        "ProcessingPayment": "处理付款",
-        "SubscriptionAlreadyPaid": "此订阅已付款",
-        "SubscriptionNotActive": "此订阅无效",
-        "Subscribed": "已订阅",
-        "Unsubscribed": "取消订阅",
-        "Unsubscribe": "退订",
-        "Subscribe": "订阅",
-        "Started": "开始",
-        "EndsIn": "结束于",
-        "NextPay": "下次付款",
-        "Period": "时期",
-        "Price": "价格",
-        "AreYouSureUnsubscribe": "您确定要取消订阅此计划吗？",
-        "YouUnsubscribedFromPlan": "您退订了计划“ {{planTitle}} ”。您不会被收费，但您的订阅将持续到{{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "计划名称",
-            "PricePlaceholder": "价格",
-            "DescriptionPlaceholder": "订阅计划说明",
-            "SavePlan": "保存计划",
-            "NewPlan": "新计划",
-            "SubscriptionTitle": "订阅计划",
-            "AreYouSureDeletePlan": "您确实要删除此计划吗？",
-            "Duration": "期间",
-            "Discount": "折扣",
-            "Interrupt": "打断",
-            "Continue": "继续",
-            "SelectDisplayType": "选择{{displayType}}",
-            "EndDate": "结束日期",
-            "Available": "可用的",
-            "Hidden": "隐",
-            "InviteOnly": "仅限邀请",
-            "CantSubscribeUnlessInvited": "除非你受到邀请，否则你无法订阅此计划"
-        }
-    },
-    "payments": {
-        "infoTitle": "设置支付信息",
-        "BuyAmountCredits": "购买{{amount}}积分",
-        "confirm": {
-            "title": "进行付款",
-            "message": "你同意付{{symbol}} {{amount}}吗？",
-            "ok": "好的",
-            "cancel": "取消"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "学分",
-            "description": "跟踪信用和付款"
-        },
-        "Assets\/plan": {
-            "displayType": "订阅计划",
-            "description": "订阅计划"
-        },
-        "Assets\/subscription": {
-            "displayType": "订阅",
-            "description": "订阅"
-        },
-        "Assets\/product": {
-            "displayType": "产品",
-            "description": "正在销售的产品"
-        },
-        "Assets\/service": {
-            "displayType": "服务",
-            "description": "提供的服务"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "获得{{amount}}学分"
-        },
-        "Assets\/credits\/bought": {
-            "content": "已购买{{amount}}积分"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "奖金{{amount}}学分"
-        },
-        "Assets\/credits\/spent": {
-            "content": "花费{{amount}}积分"
-        },
-        "Assets\/credits\/sent": {
-            "content": "发送{{amount}}积分到{{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "从{{fromUserName}}获得{{amount}}学分"
-        },
-        "Assets\/credits\/alert": {
-            "content": "您的帐户上几乎没有存款。请访问<a href='<i translate='no'>999&#39;&gt; 此链接<\/a>以购买更多积分。"
-        }
-    },
-    "billing": {
-        "Title": "资产计费",
-        "CreditsMinimum": "最低学分",
-        "CreditsToAdd": "要添加的学分",
-        "Save": "节省",
-        "ThisLink": "这个链接",
-        "errors": {
-            "CreditsMinimumNegative": "最低学分不能为负",
-            "CreditsToAddNegative": "添加的学分不能为负"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "新服务",
-            "TitlePlaceholder": "服务名称",
-            "PricePlaceholder": "定价",
-            "LinkPlaceholder": "设置附加信息链接",
-            "DescriptionPlaceholder": "服务说明",
-            "SaveService": "保存服务",
-            "SelectRequiredParticipants": "所需相关参与者",
-            "RequiredParticipantsDesc": "请选择需要使用此服务的相关参与者（例如“狗展”的宠物，或“儿童假期”的儿童等）。如果服务是付费的，则用户还需要为每个相关参与者付费。"
-        },
-        "EditServiceTemplate": {
-            "Title": "编辑服务"
-        },
-        "ManageServiceTemplates": "管理服务模板",
-        "ManageServices": "管理服务",
-        "Free": "自由的",
-        "OptionalContribution": "选择性贡献",
-        "RequiredPayment": "所需付款",
-        "AreYouSureDelete": "您确定要删除此服务吗？",
-        "AmountServicesRelated": "有{{amount}}与此服务相关的可用性。它们也将被删除。"
-    },
-    "transfer": {
-        "SelectRecipient": "选择收件人",
-        "TransactionSuccess": "交易成功",
-        "OrTypeWalletAddress": "或输入收件人钱包地址",
-        "AppCredits": "应用积分"
-    },
-    "NFT": {
-        "Title": "标题",
-        "Name": "姓名",
-        "EnterName": "输入名字",
-        "EnterAuthorWallet": "进入作者钱包",
-        "InformationAboutTitle": "关于{{title}} NFT 的信息",
-        "Description": "描述",
-        "DetailedInformationAboutNFT": "NFT的详细信息",
-        "PresaleStarts": "12 月 23 日开始预售",
-        "OwnerUserNotFound": "此 NFT 的所有者未在我们的应用程序中注册。",
-        "BuyNow": "立即购买",
-        "Buy": "买",
-        "Add": "添加",
-        "Remove": "消除",
-        "NoNFTyet": "还没有 NFT",
-        "Conversation": "对话",
-        "Create": "创造",
-        "CurrentBid": "当前出价",
-        "StartingIn": "开始于",
-        "EndingIn": "结束于",
-        "CreateNFT": "创建 NFT",
-        "TitlePlaceholder": "给你的 NFT 一个标题",
-        "DescriptionPlaceholder": "给你的 NFT 一个描述",
-        "CreateYourNFT": "创建你的 NFT",
-        "Royalties": "版税",
-        "RoyaltyPlaceholder": "选修的。转移前支付给创作者的金额。",
-        "ExpirationDate": "截止日期",
-        "StartingDate": "开始日期",
-        "BidsBelowThisAmount": "低于此金额的出价将不被允许",
-        "MinimumBid": "最低出价",
-        "Author": "作者",
-        "Price": "价格",
-        "Commission": "委员会",
-        "EnterCommission": "输入佣金",
-        "Owner": "所有者",
-        "SelectCategory": "选择类别",
-        "Day": "天",
-        "Days": "天",
-        "Hour": "小时",
-        "Hours": "小时",
-        "Minute": "分钟",
-        "Minutes": "分钟",
-        "Second": "第二",
-        "Seconds": "秒",
-        "SalesCreator": "的销售额将归创作者所有",
-        "Details": "细节",
-        "Bids": "出价",
-        "History": "历史",
-        "LoremIpsum": "Lorem Ipsum 只是印刷和排版行业的虚拟文本。",
-        "PutOnSale": "发售",
-        "PutOffSale": "退出销售",
-        "Transfer": "转移",
-        "Actions": "动作",
-        "Claim": "宣称",
-        "ClaimNFT": "认领 NFT",
-        "Unlocking": "解锁",
-        "Unlock": "开锁",
-        "Update": "更新",
-        "UpdateToken": "更新令牌",
-        "UpdateNFT": "更新 NFT",
-        "CreateToken": "创建代币",
-        "PlaceBid": "出价",
-        "SoldOut": "卖",
-        "NotOnSale": "不出售",
-        "NftName": "NFT名称",
-        "DescribeYourNFT": "请描述你的 NFT",
-        "NFTImage": "NFT 图像",
-        "NFTVideo": "NFT 视频（如果有）",
-        "UploadMovie": "上传影片",
-        "MovieSource": "片源",
-        "MovieURL": "影片网址",
-        "UploadFile": "上传一个文件",
-        "PutOnMarketplace": "投放市场",
-        "InstantPurchase": "输入价格让用户立即购买你的 NFT",
-        "FixedPrice": "固定价格",
-        "TimedAuction": "定时拍卖",
-        "OpenForBids": "公开招标",
-        "PriceOnePiece": "输入一件的价格",
-        "EnterPrice": "输入价格",
-        "EnterMinimumBid": "输入最低出价",
-        "SelectChain": "选择链",
-        "Currency": "货币",
-        "AreYouSureDeleteImage": "您确定要删除图片吗？",
-        "AreYouSureDeleteVideo": "您确定要删除视频吗？",
-        "series": {
-            "Name": "姓名",
-            "Icon": "图标",
-            "Description": "描述",
-            "Author": "作者",
-            "SelectSeries": "选择系列",
-            "Value": "价值",
-            "AreYouSure": "你确定吗？",
-            "AuthorInvalid": "作者地址无效！",
-            "Address": "地址",
-            "CoverImage": "封面图片",
-            "UploadCoverImage": "上传封面图片",
-            "CommissionAddressInvalid": "委托地址无效",
-            "OnSale": "特价中",
-            "OffSale": "下架",
-            "CreateSeries": "创建系列",
-            "UpdateSeries": "更新系列",
-            "SeriesInfo": "系列信息",
-            "SelectAuthor": "选择作者",
-            "NewItem": "新NFT系列",
-            "NamePlaceholder": "输入系列名称",
-            "DescPlaceholder": "输入系列描述",
-            "EndingIn": "结束于"
-        },
-        "contract": {
-            "CreateContract": "创建合约",
-            "SelectContract": "选择合约",
-            "CreateContractFor": "创建合同为{{userName}}",
-            "ContractFor": "签约{{userName}}",
-            "UpdateContract": "更新合约",
-            "TransferOwnership": "所有权转让",
-            "SetBaseURI": "设置基本 URI",
-            "SetSuffix": "设置后缀",
-            "CurrentOwner": "当前所有者",
-            "CurrentBaseURL": "当前 BaseURL",
-            "ContractAddressAbsent": "合同地址不存在",
-            "FactoryAddressAbsent": "没有工厂地址",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "需要标题",
-            "SymbolRequired": "需要符号",
-            "TypeContractName": "合约名称",
-            "TypeContractSymbol": "合约符号（最多 10 个字符）"
-        },
-        "contests": {
-            "Title": "比赛",
-            "NewContest": "新比赛"
-        },
-        "import": {
-            "importNFT": "导入 NFT",
-            "importAttributes": "导入 NFT 属性",
-            "fileNotFound": "抱歉，找不到 CSV 文件。",
-            "fileEmpty": "抱歉，CSV 文件为空。",
-            "userIdNotFound": "用户存在但id为空",
-            "errorLine": "{{1}}行",
-            "fieldNotFound": "未找到必填字段“ {{1}} ”",
-            "displayTypeEmpty": "未找到“ {{1}} ”的显示类型",
-            "taskStreamInvalid": "任务流无效",
-            "instructionsEmpty": "任务流指令为空",
-            "complete": "完全的",
-            "activateUsers": "向用户发送激活消息？",
-            "importProgress": "进步",
-            "importOptions": "选项",
-            "sampleCSV": "下载样本 CSV",
-            "fileLabel": "上传电子表格：",
-            "errorsTitle": "发生错误"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "按 NFT 收藏过滤",
-                "ShowNFTCollection": "在...中显示 NFT 收藏",
-                "AllCollections": "所有系列"
-            },
-            "ByUser": {
-                "AllAuthors": "所有作者",
-                "AllUsers": "每个人",
-                "FilterByAuthors": "按作者过滤"
-            }
-        },
-        "Back": "返回收藏",
-        "attributes": {
-            "Title": "管理属性",
-            "Attributes": "属性",
-            "DisplayTitle": "显示类型",
-            "AddDisplayType": "添加新的显示类型",
-            "NewDisplay": "新展示",
-            "TraitTitle": "特质类型",
-            "AddTraitTitle": "添加新的特征类型",
-            "NewTrait": "新特征类型",
-            "ValueTitle": "价值",
-            "AddValueTitle": "增加新价值",
-            "NewValue": "新价值",
-            "NewAttribute": "新属性",
-            "UpdateAttributes": "更新属性",
-            "SaveAttributes": "保存属性"
-        },
-        "profile": {
-            "LogOut": "登出",
-            "Title": "简介{{userName}}",
-            "Description": "用户详情",
-            "aboutPlaceholder": "编辑简介",
-            "SureLogOut": "您确定要退出吗？",
-            "UploadCoverPhoto": "上传封面照片"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFT合约",
-                        "seriesId": "系列编号",
-                        "owner": "所有者",
-                        "currency": "货币",
-                        "price": "价格",
-                        "beneficiary": "受益人",
-                        "autoindex": "自动索引",
-                        "duration": "期间",
-                        "rateInterval": "速率间隔",
-                        "rateAmount": "费率金额"
-                    },
-                    "small": {
-                        "NFTContract": "NFT合约",
-                        "seriesId": "代币将在这个系列中铸造",
-                        "owner": "实例的所有者，否则将是发件人",
-                        "currency": "购买代币的货币，如果为零 - 对于原生硬币",
-                        "price": "价格",
-                        "beneficiary": "出售代币的受益人，否则将是发件人",
-                        "autoindex": "自动索引",
-                        "duration": "铸造后锁定。零意味着立即得到它。",
-                        "rateInterval": "特购桶间隔",
-                        "rateAmount": "特购桶金额"
-                    }
-                },
-                "placeholders": {
-                    "optional": "（选修的）",
-                    "number": "数字",
-                    "address": "地址",
-                    "fraction": "分数",
-                    "integer": "整数",
-                    "seconds": "秒",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "生产",
-                "viewInstancesList": "刷新列表"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "系列编号",
-                        "account": "帐户",
-                        "amount": "数量"
-                    },
-                    "small": {
-                        "seriesId": "新代币将属于具有此类 ID 的系列",
-                        "account": "新创建的 NFT 的所有者。如果未设置 - 将使用当前钱包",
-                        "amount": "铸币数量 NFT"
-                    }
-                },
-                "placeholders": {
-                    "optional": "（选修的）",
-                    "seriesId": "ID",
-                    "account": "帐户",
-                    "amount": "数量",
-                    "integer": "整数"
-                },
-                "btn": {
-                    "Purchase": "购买",
-                    "SpecialPurchase": "特价采购"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "地址"
-                    },
-                    "small": {
-                        "account": "地址"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "无效地址"
-                },
-                "placeholders": {
-                    "account": "地址"
-                },
-                "addToWhitelist": "添加到白名单",
-                "removeFromWhitelist": "从白名单中删除"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "代币编号",
-                    "custodian": "保管人",
-                    "recipient": "接受者"
-                },
-                "small": {
-                    "tokenId": "token id 什么需要加锁或解锁",
-                    "custodian": "可以解锁的地址",
-                    "recipient": "将接收令牌的地址"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "无效的 tokenId",
-                "invalidCustodian": "保管人无效",
-                "invalidRecipient": "收件人无效"
-            },
-            "placeholders": {
-                "optional": "（选修的）",
-                "tokenId": "ID",
-                "custodian": "地址"
-            },
-            "Lock": "锁",
-            "Unlock": "开锁",
-            "Locked": "锁定",
-            "CustodianAddress": "托管地址",
-            "TokenWasClaimed": "令牌“ {{title}} ”已被认领",
-            "TokenWasLocked": "令牌“ {{title}} ”被锁定",
-            "TokenWasUnlocked": "令牌“ {{title}} ”已解锁"
-        },
-        "GenerateDescription": "或自动生成",
-        "collections": {
-            "Title": "收藏",
-            "EnterTitle": "输入标题",
-            "EnterDescription": "输入描述",
-            "NewCollection": "新系列",
-            "Name": "姓名",
-            "Icon": "图标",
-            "Description": "描述",
-            "Author": "作者",
-            "SelectCollection": "选择收藏",
-            "Value": "价值",
-            "AreYouSure": "你确定吗？",
-            "AuthorInvalid": "作者地址无效！",
-            "Address": "地址",
-            "CoverImage": "封面图片",
-            "UploadIcon": "上传图标",
-            "CommissionAddressInvalid": "委托地址无效",
-            "OnSale": "出售",
-            "OffSale": "下架",
-            "CreateCollection": "创建收藏",
-            "UpdateCollection": "更新集合",
-            "CollectionInfo": "收藏信息",
-            "SelectAuthor": "选择作者",
-            "NewItem": "新 NFT 系列",
-            "NamePlaceholder": "输入集合名称",
-            "DescPlaceholder": "输入集合描述",
-            "EndingIn": "结束于",
-            "SubmitSeries": "提交系列"
-        }
-    },
-    "currencies": {
-        "choose": "选择货币"
-    },
-    "connectedAccount": {
-        "Title": "连接账户",
-        "Success": "成功",
-        "YourAccountCreated": "您的帐户创建成功！",
-        "YourAccountAlreadyCreated": "您的帐户已创建并可以使用"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "储备代币",
-                        "amount": "数量"
-                    },
-                    "small": {
-                        "reserveToken": "储备代币",
-                        "amount": "数量"
-                    }
-                },
-                "placeholders": {
-                    "amount": "数量"
-                },
-                "btns": {
-                    "stake": "赌注"
-                },
-                "stake": "赌注",
-                "loading": "加载中"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "代币Erc20",
-                    "duration": "期间",
-                    "bonusTokenFraction": "奖金代币分数",
-                    "popularToken": "流行代币",
-                    "donations": "捐款",
-                    "rewardsRateFraction": "奖励率分数",
-                    "numerator": "分子",
-                    "denominator": "分母"
-                },
-                "small": {
-                    "tokenErc20": "代币Erc20",
-                    "duration": "持续时间（天）",
-                    "bonusTokenFraction": "奖金代币分数",
-                    "popularToken": "流行代币",
-                    "donations": "捐款",
-                    "rewardsRateFraction": "奖励率分数",
-                    "numerator": "分子",
-                    "denominator": "分母"
-                }
-            },
-            "placeholders": {
-                "optional": "（选修的）",
-                "tuple": "元组[]",
-                "number": "数字",
-                "address": "地址",
-                "fraction": "分数",
-                "integer": "整数",
-                "seconds": "秒",
-                "days": "天",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "没有泳池"
-            },
-            "btns": {
-                "createPool": "创建池",
-                "createPoolInForm": "创造"
-            },
-            "createPool": "创建池",
-            "produce": "生产",
-            "loading": "加载中",
-            "viewInstancesList": "刷新列表"
-        }
-    },
-    "fundrise": {
-        "placeholder": "输入一些关于此贡献的内容..."
-    }
+	"errors": {
+		"Error": "\u9519\u8bef",
+		"WalletAbsent": "\u94b1\u5305\u672a\u8fde\u63a5\u3002",
+		"Rendering": "\u6e32\u67d3\u65f6\u51fa\u9519<span class='url'>{{1}}</span>",
+		"PriceRequired": "\u9700\u8981\u4ef7\u683c\uff01",
+		"NameRequired": "\u59d3\u540d\u5fc5\u586b\uff01",
+		"PriceInvalid": "\u4ef7\u683c\u65e0\u6548\uff01",
+		"AmountInvalid": "\u91d1\u989d\u65e0\u6548\uff01",
+		"TransactionFailed": "\u4ea4\u6613\u5931\u8d25",
+		"ChainNotSupported": "\u4e0d\u652f\u6301\u6240\u9009\u94fe\u3002\u652f\u6301\u94fe\u6570\uff1a {{supportedChain}}",
+		"NeedMetaMaskConnected": "\u9700\u8981\u8fde\u63a5 MetaMask \u624d\u80fd\u4f7f\u7528\u5e94\u7528\u7a0b\u5e8f",
+		"UserNotLoggedInMetaMask": "\u7528\u6237\u672a\u767b\u5f55\u5230 MetaMask",
+		"CurrencyNotFound": "\u627e\u4e0d\u5230\u8d27\u5e01",
+		"WrongChain": "\u6b64 NFT \u521b\u5efa\u4e8e\u201c {{chain}} \u201d\u4e4b\u4e0b\u3002\u8bf7\u4f7f\u7528\u8fd9\u6761\u94fe\u3002",
+		"NoRecipientSelected": "\u672a\u9009\u62e9\u6536\u4ef6\u4eba",
+		"NotEnoughPermissionsWallet": "\u6ca1\u6709\u8db3\u591f\u7684\u6743\u9650\u8bfb\u53d6\u8be5\u7528\u6237\u7684\u94b1\u5305",
+		"ThisUserHaveNoWallet": "\u8be5\u7528\u6237\u6ca1\u6709\u5206\u914d\u94b1\u5305",
+		"TheWalletOfThisUserInvalid": "\u8be5\u7528\u6237\u94b1\u5305\u65e0\u6548",
+		"WalletInvalid": "\u94b1\u5305\u5730\u5740\u65e0\u6548",
+		"CantManageFrozenSeries": "\u4f60\u65e0\u6cd5\u7ba1\u7406\u300a\u51b0\u96ea\u5947\u7f18\u300b\u7cfb\u5217",
+		"SubscriptionStreamNotPaid": "\u60a8\u5c1a\u672a\u4ed8\u8d39\u67e5\u770b\u8be5\u5185\u5bb9\u3002\u8bf7\u70b9\u51fb{{subscriptionUrl}}\u5e76\u8ba2\u9605\u76f8\u5e94\u7684\u8ba1\u5212\u3002"
+	},
+	"admin": {
+		"Title": "\u8d44\u4ea7\u7ba1\u7406",
+		"SubscriptionTitle": "\u8ba2\u9605\u8ba1\u5212"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "\u70b9\u51fb\u652f\u4ed8"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : \u5904\u7406\u8d39\u7528\u4e3a{{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "\u611f\u8c22\u60a8\u652f\u4ed8\u7ed9{{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}}\u8ba2\u9605{{plan.title}}",
+		"YouSubscribedTo": "\u60a8\u5df2\u8ba2\u9605{{plan.title}}",
+		"Assets/credits/alert": "\u60a8\u6709\u4e0e\u60a8\u7684\u5e10\u6237\u76f8\u5173\u7684\u8b66\u62a5"
+	},
+	"charge": {
+		"Subject": "\u60a8\u901a\u8fc7\u201c {{description}} \u201d\u4ece{{call 'publisher.displayName'}}\u4e2d\u83b7\u5f97{{displayAmount}}\u7684\u4ed8\u6b3e",
+		"HasBeenCharged": "\u563f\uff0c\u8fd9\u53ea\u662f\u60f3\u8ba9\u4f60\u77e5\u9053{{1}}\u5df2\u7ecf\u88ab{{4}}\u6536\u4e86{{3}}\u7684{{2}}"
+	},
+	"charged": {
+		"Subject": "\u611f\u8c22\u60a8\u652f\u4ed8\u201c {{description}} \u201d",
+		"HavePaid": "\u563f{{1}} \uff0c\u8fd9\u53ea\u662f\u4e00\u4e2a\u5feb\u901f\u786e\u8ba4\uff0c\u60a8\u5df2\u7ecf\u6210\u529f\u5730\u4e3a{{4}}\u652f\u4ed8\u4e86{{2}}\u5230{{3}}"
+	},
+	"payment": {
+		"AboutOrder": "\u8ba2\u5355\u4fe1\u606f",
+		"PaymentMethod": "\u4ed8\u6b3e\u65b9\u5f0f",
+		"ContactInfo": "\u8054\u7cfb\u65b9\u5f0f",
+		"Pay": "\u652f\u4ed8",
+		"PaymentSucceeded": "\u652f\u4ed8\u6210\u529f",
+		"PaymentProcessing.": "\u60a8\u7684\u4ed8\u6b3e\u6b63\u5728\u5904\u7406\u4e2d",
+		"FailTryAgain": "\u60a8\u7684\u652f\u4ed8\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5",
+		"SomethingWrong": "\u51fa\u4e86\u4e9b\u95ee\u9898",
+		"PaymentStatus": "\u652f\u4ed8\u72b6\u6001",
+		"PayTo": "\u652f\u4ed8{{displayName}}",
+		"ChooseCurrency": "\u9009\u62e9\u8d27\u5e01",
+		"YouCanSendUpTo": "\u60a8\u6700\u591a\u53ef\u4ee5\u53d1\u9001{{amount}} {{symbol}}",
+		"Send": "\u53d1\u9001",
+		"EnterAmount": "\u8f93\u5165\u91d1\u989d"
+	},
+	"credits": {
+		"InviteAcceptedBy": "{{invitedUserName}}\u63a5\u53d7\u9080\u8bf7",
+		"InvitedUserFilledStream": "{{invitedUserName}}\u6ee1{{FilledStreamTitle}}",
+		"ForFillingStream": "\u586b\u5145\u7528{{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "\u60a8\u6709{{amount}}\u79ef\u5206\u53ef\u4ee5\u5f00\u59cb",
+		"PaymentFor": "\u652f\u4ed8\u201c {{1}} \u201d",
+		"PaymentTo": "\u4ed8\u6b3e\u81f3{{1}}",
+		"PaymentToUser": "\u4ed8\u6b3e\u81f3{{toUserName}}",
+		"CreatePrivateChat": "\u4e0e{{toUserName}}\u79c1\u804a",
+		"CreatePaidStream": "\u521b\u9020{{toStreamName}}",
+		"JoinedPaidStream": "\u5bf9\u4e8e\u4fdd\u7559\u5728\u201c <a data-publisherId='<i translate='no'>999&#39;data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> \u201d",
+		"CreatedCommunity": "\u4e3a\u521b\u5efa\u793e\u533a\u201c {{communityId}} \u201d",
+		"LeftPaidStream": "\u4f5c\u4e3a\u201c <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39; &gt; {{fromStreamTitle}}</a> \u201d\u4e2d\u7684\u9884\u8ba2\u9000\u6b3e",
+		"BoughtCredits": "\u5df2\u8d2d\u4e70{{amount}}\u79ef\u5206",
+		"BonusCredits": "\u5956\u91d1{{amount}}\u5b66\u5206",
+		"BuyAmountCredits": "\u8d2d\u4e70{{amount}}\u79ef\u5206",
+		"WatchClip": "\u89c2\u770b{{fromStreamTitle}}\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"MissingCredits": "\u7f3a\u5c11\u5b66\u5206",
+		"YouMissingCredits": "\u60a8\u8fd8\u9700\u8981\u4ef7\u503c{{amount}} {{currency}}\u7684\u79ef\u5206\u624d\u80fd\u7ee7\u7eed\u3002",
+		"BuyCredits": "\u8d2d\u4e70\u5b66\u5206",
+		"BuyBonus": "\u4e00\u6b21\u8d2d\u4e70{{amount}}\u79ef\u5206\uff0c\u5c06\u83b7\u5f97{{bonus}}\u79ef\u5206\u5956\u52b1\u3002",
+		"Buy": "\u4e70",
+		"PurchaseCredits": "\u8d2d\u4e70\u79ef\u5206",
+		"Credits": "\u5b66\u5206",
+		"ErrorInvalidAmount": "\u91d1\u989d\u65e0\u6548",
+		"ErrorInvalidCurrency": "\u5f88\u9057\u61be\uff0c\u6211\u4eec\u8fd8\u4e0d\u652f\u6301\u8d27\u5e01{{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}}\u5b66\u5206",
+			"BonusCredits": "{{amount}}\u5b66\u5206"
+		}
+	},
+	"history": {
+		"Date": "\u65e5\u671f",
+		"Amount": "\u6570\u91cf",
+		"Description": "\u63cf\u8ff0",
+		"Client": "\u5ba2\u6237",
+		"User": "\u7528\u6237",
+		"To": "\u5230",
+		"From": "\u4ece",
+		"SeeHistory": "\u67e5\u770b{{1}}\u7684\u4ed8\u6b3e\u8bb0\u5f55",
+		"HistoryEmpty": "\u60a8\u8fd8\u6ca1\u6709\u6570\u636e",
+		"PaymentFor": "\u5df2\u53d1\u9001{{amount}}\u79ef\u5206",
+		"PaymentTo": "\u5df2\u53d1\u9001{{amount}}\u79ef\u5206",
+		"PaymentToUser": "\u5df2\u53d1\u9001{{amount}}\u79ef\u5206",
+		"CreatePaidStream": "\u82b1\u8d39{{amount}}\u79ef\u5206",
+		"WatchClip": {
+			"+": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+			"-": "\u82b1\u8d39{{amount}}\u79ef\u5206"
+		},
+		"JoinedPaidStream": {
+			"+": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+			"-": "\u82b1\u8d39{{amount}}\u79ef\u5206"
+		},
+		"LeftPaidStream": {
+			"+": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+			"-": "\u5df2\u53d1\u9001{{amount}}\u79ef\u5206"
+		},
+		"CreatedCommunity": "\u82b1\u8d39{{amount}}\u79ef\u5206",
+		"BoughtCredits": "\u5df2\u8d2d\u4e70{{amount}}\u79ef\u5206",
+		"BonusCredits": "\u83b7\u5f97\u5956\u52b1{{amount}}\u5b66\u5206",
+		"InviteAcceptedBy": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"Streams_user_firstname": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"Streams_user_lastname": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"Streams_user_icon": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"Places_user_location": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"Streams_greeting": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"YouHaveCreditsToStart": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"InvitedUserFilledStream": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"ForFillingStream": "\u83b7\u5f97{{amount}}\u5b66\u5206",
+		"CreatePrivateChat": "\u5df2\u82b1\u8d39{{amount}}\u79ef\u5206"
+	},
+	"subscriptions": {
+		"infoTitle": "\u8bbe\u7f6e\u652f\u4ed8\u4fe1\u606f",
+		"confirm": {
+			"title": "\u5f00\u59cb\u8ba2\u9605",
+			"message": "\u5f00\u59cb\u5b9a\u671f\u8ba2\u9605\u201c {{title}} \u201d\uff1f",
+			"ok": "\u597d\u7684",
+			"cancel": "\u53d6\u6d88"
+		},
+		"CreditOrDebitCard": "\u4fe1\u7528\u5361\u6216\u501f\u8bb0\u5361",
+		"SubscribePayment": "\u8ba2\u9605\u4ed8\u6b3e",
+		"ImmediatePayment": "\u7acb\u5373\u4ed8\u6b3e",
+		"ProcessingPayment": "\u5904\u7406\u4ed8\u6b3e",
+		"SubscriptionAlreadyPaid": "\u6b64\u8ba2\u9605\u5df2\u4ed8\u6b3e",
+		"SubscriptionNotActive": "\u6b64\u8ba2\u9605\u65e0\u6548",
+		"Subscribed": "\u5df2\u8ba2\u9605",
+		"Unsubscribed": "\u53d6\u6d88\u8ba2\u9605",
+		"Unsubscribe": "\u9000\u8ba2",
+		"Subscribe": "\u8ba2\u9605",
+		"Started": "\u5f00\u59cb",
+		"EndsIn": "\u7ed3\u675f\u4e8e",
+		"NextPay": "\u4e0b\u6b21\u4ed8\u6b3e",
+		"Period": "\u65f6\u671f",
+		"Price": "\u4ef7\u683c",
+		"AreYouSureUnsubscribe": "\u60a8\u786e\u5b9a\u8981\u53d6\u6d88\u8ba2\u9605\u6b64\u8ba1\u5212\u5417\uff1f",
+		"YouUnsubscribedFromPlan": "\u60a8\u9000\u8ba2\u4e86\u8ba1\u5212\u201c {{planTitle}} \u201d\u3002\u60a8\u4e0d\u4f1a\u88ab\u6536\u8d39\uff0c\u4f46\u60a8\u7684\u8ba2\u9605\u5c06\u6301\u7eed\u5230{{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "\u8ba1\u5212\u540d\u79f0",
+			"PricePlaceholder": "\u4ef7\u683c",
+			"DescriptionPlaceholder": "\u8ba2\u9605\u8ba1\u5212\u8bf4\u660e",
+			"SavePlan": "\u4fdd\u5b58\u8ba1\u5212",
+			"NewPlan": "\u65b0\u8ba1\u5212",
+			"SubscriptionTitle": "\u8ba2\u9605\u8ba1\u5212",
+			"AreYouSureDeletePlan": "\u60a8\u786e\u5b9e\u8981\u5220\u9664\u6b64\u8ba1\u5212\u5417\uff1f",
+			"Duration": "\u671f\u95f4",
+			"Discount": "\u6298\u6263",
+			"Interrupt": "\u6253\u65ad",
+			"Continue": "\u7ee7\u7eed",
+			"SelectDisplayType": "\u9009\u62e9{{displayType}}",
+			"EndDate": "\u7ed3\u675f\u65e5\u671f",
+			"Available": "\u53ef\u7528\u7684",
+			"Hidden": "\u9690",
+			"InviteOnly": "\u4ec5\u9650\u9080\u8bf7",
+			"CantSubscribeUnlessInvited": "\u9664\u975e\u4f60\u53d7\u5230\u9080\u8bf7\uff0c\u5426\u5219\u4f60\u65e0\u6cd5\u8ba2\u9605\u6b64\u8ba1\u5212"
+		}
+	},
+	"payments": {
+		"infoTitle": "\u8bbe\u7f6e\u652f\u4ed8\u4fe1\u606f",
+		"BuyAmountCredits": "\u8d2d\u4e70{{amount}}\u79ef\u5206",
+		"confirm": {
+			"title": "\u8fdb\u884c\u4ed8\u6b3e",
+			"message": "\u4f60\u540c\u610f\u4ed8{{symbol}} {{amount}}\u5417\uff1f",
+			"ok": "\u597d\u7684",
+			"cancel": "\u53d6\u6d88"
+		},
+		"reasons": {
+			"BuyCredits": "\u8d2d\u4e70\u79ef\u5206"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "\u5b66\u5206",
+			"description": "\u8ddf\u8e2a\u4fe1\u7528\u548c\u4ed8\u6b3e"
+		},
+		"Assets/plan": {
+			"displayType": "\u8ba2\u9605\u8ba1\u5212",
+			"description": "\u8ba2\u9605\u8ba1\u5212"
+		},
+		"Assets/subscription": {
+			"displayType": "\u8ba2\u9605",
+			"description": "\u8ba2\u9605"
+		},
+		"Assets/product": {
+			"displayType": "\u4ea7\u54c1",
+			"description": "\u6b63\u5728\u9500\u552e\u7684\u4ea7\u54c1"
+		},
+		"Assets/service": {
+			"displayType": "\u670d\u52a1",
+			"description": "\u63d0\u4f9b\u7684\u670d\u52a1"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "\u83b7\u5f97{{amount}}\u5b66\u5206"
+		},
+		"Assets/credits/bought": {
+			"content": "\u5df2\u8d2d\u4e70{{amount}}\u79ef\u5206"
+		},
+		"Assets/credits/bonus": {
+			"content": "\u5956\u91d1{{amount}}\u5b66\u5206"
+		},
+		"Assets/credits/spent": {
+			"content": "\u82b1\u8d39{{amount}}\u79ef\u5206"
+		},
+		"Assets/credits/sent": {
+			"content": "\u53d1\u9001{{amount}}\u79ef\u5206\u5230{{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "\u4ece{{fromUserName}}\u83b7\u5f97{{amount}}\u5b66\u5206"
+		},
+		"Assets/credits/alert": {
+			"content": "\u60a8\u7684\u5e10\u6237\u4e0a\u51e0\u4e4e\u6ca1\u6709\u5b58\u6b3e\u3002\u8bf7\u8bbf\u95ee<a href='<i translate='no'>999&#39;&gt; \u6b64\u94fe\u63a5</a>\u4ee5\u8d2d\u4e70\u66f4\u591a\u79ef\u5206\u3002"
+		}
+	},
+	"billing": {
+		"Title": "\u8d44\u4ea7\u8ba1\u8d39",
+		"CreditsMinimum": "\u6700\u4f4e\u5b66\u5206",
+		"CreditsToAdd": "\u8981\u6dfb\u52a0\u7684\u5b66\u5206",
+		"Save": "\u8282\u7701",
+		"ThisLink": "\u8fd9\u4e2a\u94fe\u63a5",
+		"errors": {
+			"CreditsMinimumNegative": "\u6700\u4f4e\u5b66\u5206\u4e0d\u80fd\u4e3a\u8d1f",
+			"CreditsToAddNegative": "\u6dfb\u52a0\u7684\u5b66\u5206\u4e0d\u80fd\u4e3a\u8d1f"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "\u65b0\u670d\u52a1",
+			"TitlePlaceholder": "\u670d\u52a1\u540d\u79f0",
+			"PricePlaceholder": "\u5b9a\u4ef7",
+			"LinkPlaceholder": "\u8bbe\u7f6e\u9644\u52a0\u4fe1\u606f\u94fe\u63a5",
+			"DescriptionPlaceholder": "\u670d\u52a1\u8bf4\u660e",
+			"SaveService": "\u4fdd\u5b58\u670d\u52a1",
+			"SelectRequiredParticipants": "\u6240\u9700\u76f8\u5173\u53c2\u4e0e\u8005",
+			"RequiredParticipantsDesc": "\u8bf7\u9009\u62e9\u9700\u8981\u4f7f\u7528\u6b64\u670d\u52a1\u7684\u76f8\u5173\u53c2\u4e0e\u8005\uff08\u4f8b\u5982\u201c\u72d7\u5c55\u201d\u7684\u5ba0\u7269\uff0c\u6216\u201c\u513f\u7ae5\u5047\u671f\u201d\u7684\u513f\u7ae5\u7b49\uff09\u3002\u5982\u679c\u670d\u52a1\u662f\u4ed8\u8d39\u7684\uff0c\u5219\u7528\u6237\u8fd8\u9700\u8981\u4e3a\u6bcf\u4e2a\u76f8\u5173\u53c2\u4e0e\u8005\u4ed8\u8d39\u3002"
+		},
+		"EditServiceTemplate": {
+			"Title": "\u7f16\u8f91\u670d\u52a1"
+		},
+		"ManageServiceTemplates": "\u7ba1\u7406\u670d\u52a1\u6a21\u677f",
+		"ManageServices": "\u7ba1\u7406\u670d\u52a1",
+		"Free": "\u81ea\u7531\u7684",
+		"OptionalContribution": "\u9009\u62e9\u6027\u8d21\u732e",
+		"RequiredPayment": "\u6240\u9700\u4ed8\u6b3e",
+		"AreYouSureDelete": "\u60a8\u786e\u5b9a\u8981\u5220\u9664\u6b64\u670d\u52a1\u5417\uff1f",
+		"AmountServicesRelated": "\u6709{{amount}}\u4e0e\u6b64\u670d\u52a1\u76f8\u5173\u7684\u53ef\u7528\u6027\u3002\u5b83\u4eec\u4e5f\u5c06\u88ab\u5220\u9664\u3002"
+	},
+	"transfer": {
+		"SelectRecipient": "\u9009\u62e9\u6536\u4ef6\u4eba",
+		"TransactionSuccess": "\u4ea4\u6613\u6210\u529f",
+		"OrTypeWalletAddress": "\u6216\u8f93\u5165\u6536\u4ef6\u4eba\u94b1\u5305\u5730\u5740",
+		"AppCredits": "\u5e94\u7528\u79ef\u5206"
+	},
+	"NFT": {
+		"Title": "\u6807\u9898",
+		"Name": "\u59d3\u540d",
+		"EnterName": "\u8f93\u5165\u540d\u5b57",
+		"EnterAuthorWallet": "\u8fdb\u5165\u4f5c\u8005\u94b1\u5305",
+		"InformationAboutTitle": "\u5173\u4e8e{{title}} NFT \u7684\u4fe1\u606f",
+		"Description": "\u63cf\u8ff0",
+		"DetailedInformationAboutNFT": "NFT\u7684\u8be6\u7ec6\u4fe1\u606f",
+		"PresaleStarts": "12 \u6708 23 \u65e5\u5f00\u59cb\u9884\u552e",
+		"OwnerUserNotFound": "\u6b64 NFT \u7684\u6240\u6709\u8005\u672a\u5728\u6211\u4eec\u7684\u5e94\u7528\u7a0b\u5e8f\u4e2d\u6ce8\u518c\u3002",
+		"BuyNow": "\u7acb\u5373\u8d2d\u4e70",
+		"Buy": "\u4e70",
+		"Add": "\u6dfb\u52a0",
+		"Remove": "\u6d88\u9664",
+		"NoNFTyet": "\u8fd8\u6ca1\u6709 NFT",
+		"Conversation": "\u5bf9\u8bdd",
+		"Create": "\u521b\u9020",
+		"CurrentBid": "\u5f53\u524d\u51fa\u4ef7",
+		"StartingIn": "\u5f00\u59cb\u4e8e",
+		"EndingIn": "\u7ed3\u675f\u4e8e",
+		"CreateNFT": "\u521b\u5efa NFT",
+		"TitlePlaceholder": "\u7ed9\u4f60\u7684 NFT \u4e00\u4e2a\u6807\u9898",
+		"DescriptionPlaceholder": "\u7ed9\u4f60\u7684 NFT \u4e00\u4e2a\u63cf\u8ff0",
+		"CreateYourNFT": "\u521b\u5efa\u4f60\u7684 NFT",
+		"Royalties": "\u7248\u7a0e",
+		"RoyaltyPlaceholder": "\u9009\u4fee\u7684\u3002\u8f6c\u79fb\u524d\u652f\u4ed8\u7ed9\u521b\u4f5c\u8005\u7684\u91d1\u989d\u3002",
+		"ExpirationDate": "\u622a\u6b62\u65e5\u671f",
+		"StartingDate": "\u5f00\u59cb\u65e5\u671f",
+		"BidsBelowThisAmount": "\u4f4e\u4e8e\u6b64\u91d1\u989d\u7684\u51fa\u4ef7\u5c06\u4e0d\u88ab\u5141\u8bb8",
+		"MinimumBid": "\u6700\u4f4e\u51fa\u4ef7",
+		"Author": "\u4f5c\u8005",
+		"Price": "\u4ef7\u683c",
+		"Commission": "\u59d4\u5458\u4f1a",
+		"EnterCommission": "\u8f93\u5165\u4f63\u91d1",
+		"Owner": "\u6240\u6709\u8005",
+		"SelectCategory": "\u9009\u62e9\u7c7b\u522b",
+		"Day": "\u5929",
+		"Days": "\u5929",
+		"Hour": "\u5c0f\u65f6",
+		"Hours": "\u5c0f\u65f6",
+		"Minute": "\u5206\u949f",
+		"Minutes": "\u5206\u949f",
+		"Second": "\u7b2c\u4e8c",
+		"Seconds": "\u79d2",
+		"SalesCreator": "\u7684\u9500\u552e\u989d\u5c06\u5f52\u521b\u4f5c\u8005\u6240\u6709",
+		"Details": "\u7ec6\u8282",
+		"Bids": "\u51fa\u4ef7",
+		"History": "\u5386\u53f2",
+		"LoremIpsum": "Lorem Ipsum \u53ea\u662f\u5370\u5237\u548c\u6392\u7248\u884c\u4e1a\u7684\u865a\u62df\u6587\u672c\u3002",
+		"PutOnSale": "\u53d1\u552e",
+		"PutOffSale": "\u9000\u51fa\u9500\u552e",
+		"Transfer": "\u8f6c\u79fb",
+		"Actions": "\u52a8\u4f5c",
+		"Claim": "\u5ba3\u79f0",
+		"ClaimNFT": "\u8ba4\u9886 NFT",
+		"Unlocking": "\u89e3\u9501",
+		"Unlock": "\u5f00\u9501",
+		"Update": "\u66f4\u65b0",
+		"UpdateToken": "\u66f4\u65b0\u4ee4\u724c",
+		"UpdateNFT": "\u66f4\u65b0 NFT",
+		"CreateToken": "\u521b\u5efa\u4ee3\u5e01",
+		"PlaceBid": "\u51fa\u4ef7",
+		"SoldOut": "\u5356",
+		"NotOnSale": "\u4e0d\u51fa\u552e",
+		"NftName": "NFT\u540d\u79f0",
+		"DescribeYourNFT": "\u8bf7\u63cf\u8ff0\u4f60\u7684 NFT",
+		"NFTImage": "NFT \u56fe\u50cf",
+		"NFTVideo": "NFT \u89c6\u9891\uff08\u5982\u679c\u6709\uff09",
+		"UploadMovie": "\u4e0a\u4f20\u5f71\u7247",
+		"MovieSource": "\u7247\u6e90",
+		"MovieURL": "\u5f71\u7247\u7f51\u5740",
+		"UploadFile": "\u4e0a\u4f20\u4e00\u4e2a\u6587\u4ef6",
+		"PutOnMarketplace": "\u6295\u653e\u5e02\u573a",
+		"InstantPurchase": "\u8f93\u5165\u4ef7\u683c\u8ba9\u7528\u6237\u7acb\u5373\u8d2d\u4e70\u4f60\u7684 NFT",
+		"FixedPrice": "\u56fa\u5b9a\u4ef7\u683c",
+		"TimedAuction": "\u5b9a\u65f6\u62cd\u5356",
+		"OpenForBids": "\u516c\u5f00\u62db\u6807",
+		"PriceOnePiece": "\u8f93\u5165\u4e00\u4ef6\u7684\u4ef7\u683c",
+		"EnterPrice": "\u8f93\u5165\u4ef7\u683c",
+		"EnterMinimumBid": "\u8f93\u5165\u6700\u4f4e\u51fa\u4ef7",
+		"SelectChain": "\u9009\u62e9\u94fe",
+		"Currency": "\u8d27\u5e01",
+		"AreYouSureDeleteImage": "\u60a8\u786e\u5b9a\u8981\u5220\u9664\u56fe\u7247\u5417\uff1f",
+		"AreYouSureDeleteVideo": "\u60a8\u786e\u5b9a\u8981\u5220\u9664\u89c6\u9891\u5417\uff1f",
+		"series": {
+			"Name": "\u59d3\u540d",
+			"Icon": "\u56fe\u6807",
+			"Description": "\u63cf\u8ff0",
+			"Author": "\u4f5c\u8005",
+			"SelectSeries": "\u9009\u62e9\u7cfb\u5217",
+			"Value": "\u4ef7\u503c",
+			"AreYouSure": "\u4f60\u786e\u5b9a\u5417\uff1f",
+			"AuthorInvalid": "\u4f5c\u8005\u5730\u5740\u65e0\u6548\uff01",
+			"Address": "\u5730\u5740",
+			"CoverImage": "\u5c01\u9762\u56fe\u7247",
+			"UploadCoverImage": "\u4e0a\u4f20\u5c01\u9762\u56fe\u7247",
+			"CommissionAddressInvalid": "\u59d4\u6258\u5730\u5740\u65e0\u6548",
+			"OnSale": "\u7279\u4ef7\u4e2d",
+			"OffSale": "\u4e0b\u67b6",
+			"CreateSeries": "\u521b\u5efa\u7cfb\u5217",
+			"UpdateSeries": "\u66f4\u65b0\u7cfb\u5217",
+			"SeriesInfo": "\u7cfb\u5217\u4fe1\u606f",
+			"SelectAuthor": "\u9009\u62e9\u4f5c\u8005",
+			"NewItem": "\u65b0NFT\u7cfb\u5217",
+			"NamePlaceholder": "\u8f93\u5165\u7cfb\u5217\u540d\u79f0",
+			"DescPlaceholder": "\u8f93\u5165\u7cfb\u5217\u63cf\u8ff0",
+			"EndingIn": "\u7ed3\u675f\u4e8e"
+		},
+		"contract": {
+			"CreateContract": "\u521b\u5efa\u5408\u7ea6",
+			"SelectContract": "\u9009\u62e9\u5408\u7ea6",
+			"CreateContractFor": "\u521b\u5efa\u5408\u540c\u4e3a{{userName}}",
+			"ContractFor": "\u7b7e\u7ea6{{userName}}",
+			"UpdateContract": "\u66f4\u65b0\u5408\u7ea6",
+			"TransferOwnership": "\u6240\u6709\u6743\u8f6c\u8ba9",
+			"SetBaseURI": "\u8bbe\u7f6e\u57fa\u672c URI",
+			"SetSuffix": "\u8bbe\u7f6e\u540e\u7f00",
+			"CurrentOwner": "\u5f53\u524d\u6240\u6709\u8005",
+			"CurrentBaseURL": "\u5f53\u524d BaseURL",
+			"ContractAddressAbsent": "\u5408\u540c\u5730\u5740\u4e0d\u5b58\u5728",
+			"FactoryAddressAbsent": "\u6ca1\u6709\u5de5\u5382\u5730\u5740",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "\u9700\u8981\u6807\u9898",
+			"SymbolRequired": "\u9700\u8981\u7b26\u53f7",
+			"TypeContractName": "\u5408\u7ea6\u540d\u79f0",
+			"TypeContractSymbol": "\u5408\u7ea6\u7b26\u53f7\uff08\u6700\u591a 10 \u4e2a\u5b57\u7b26\uff09"
+		},
+		"contests": {
+			"Title": "\u6bd4\u8d5b",
+			"NewContest": "\u65b0\u6bd4\u8d5b"
+		},
+		"import": {
+			"importNFT": "\u5bfc\u5165 NFT",
+			"importAttributes": "\u5bfc\u5165 NFT \u5c5e\u6027",
+			"fileNotFound": "\u62b1\u6b49\uff0c\u627e\u4e0d\u5230 CSV \u6587\u4ef6\u3002",
+			"fileEmpty": "\u62b1\u6b49\uff0cCSV \u6587\u4ef6\u4e3a\u7a7a\u3002",
+			"userIdNotFound": "\u7528\u6237\u5b58\u5728\u4f46id\u4e3a\u7a7a",
+			"errorLine": "{{1}}\u884c",
+			"fieldNotFound": "\u672a\u627e\u5230\u5fc5\u586b\u5b57\u6bb5\u201c {{1}} \u201d",
+			"displayTypeEmpty": "\u672a\u627e\u5230\u201c {{1}} \u201d\u7684\u663e\u793a\u7c7b\u578b",
+			"taskStreamInvalid": "\u4efb\u52a1\u6d41\u65e0\u6548",
+			"instructionsEmpty": "\u4efb\u52a1\u6d41\u6307\u4ee4\u4e3a\u7a7a",
+			"complete": "\u5b8c\u5168\u7684",
+			"activateUsers": "\u5411\u7528\u6237\u53d1\u9001\u6fc0\u6d3b\u6d88\u606f\uff1f",
+			"importProgress": "\u8fdb\u6b65",
+			"importOptions": "\u9009\u9879",
+			"sampleCSV": "\u4e0b\u8f7d\u6837\u672c CSV",
+			"fileLabel": "\u4e0a\u4f20\u7535\u5b50\u8868\u683c\uff1a",
+			"errorsTitle": "\u53d1\u751f\u9519\u8bef"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "\u6309 NFT \u6536\u85cf\u8fc7\u6ee4",
+				"ShowNFTCollection": "\u5728...\u4e2d\u663e\u793a NFT \u6536\u85cf",
+				"AllCollections": "\u6240\u6709\u7cfb\u5217"
+			},
+			"ByUser": {
+				"AllAuthors": "\u6240\u6709\u4f5c\u8005",
+				"AllUsers": "\u6bcf\u4e2a\u4eba",
+				"FilterByAuthors": "\u6309\u4f5c\u8005\u8fc7\u6ee4"
+			}
+		},
+		"Back": "\u8fd4\u56de\u6536\u85cf",
+		"attributes": {
+			"Title": "\u7ba1\u7406\u5c5e\u6027",
+			"Attributes": "\u5c5e\u6027",
+			"DisplayTitle": "\u663e\u793a\u7c7b\u578b",
+			"AddDisplayType": "\u6dfb\u52a0\u65b0\u7684\u663e\u793a\u7c7b\u578b",
+			"NewDisplay": "\u65b0\u5c55\u793a",
+			"TraitTitle": "\u7279\u8d28\u7c7b\u578b",
+			"AddTraitTitle": "\u6dfb\u52a0\u65b0\u7684\u7279\u5f81\u7c7b\u578b",
+			"NewTrait": "\u65b0\u7279\u5f81\u7c7b\u578b",
+			"ValueTitle": "\u4ef7\u503c",
+			"AddValueTitle": "\u589e\u52a0\u65b0\u4ef7\u503c",
+			"NewValue": "\u65b0\u4ef7\u503c",
+			"NewAttribute": "\u65b0\u5c5e\u6027",
+			"UpdateAttributes": "\u66f4\u65b0\u5c5e\u6027",
+			"SaveAttributes": "\u4fdd\u5b58\u5c5e\u6027"
+		},
+		"profile": {
+			"LogOut": "\u767b\u51fa",
+			"Title": "\u7b80\u4ecb{{userName}}",
+			"Description": "\u7528\u6237\u8be6\u60c5",
+			"aboutPlaceholder": "\u7f16\u8f91\u7b80\u4ecb",
+			"SureLogOut": "\u60a8\u786e\u5b9a\u8981\u9000\u51fa\u5417\uff1f",
+			"UploadCoverPhoto": "\u4e0a\u4f20\u5c01\u9762\u7167\u7247"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFT\u5408\u7ea6",
+						"seriesId": "\u7cfb\u5217\u7f16\u53f7",
+						"owner": "\u6240\u6709\u8005",
+						"currency": "\u8d27\u5e01",
+						"price": "\u4ef7\u683c",
+						"beneficiary": "\u53d7\u76ca\u4eba",
+						"autoindex": "\u81ea\u52a8\u7d22\u5f15",
+						"duration": "\u671f\u95f4",
+						"rateInterval": "\u901f\u7387\u95f4\u9694",
+						"rateAmount": "\u8d39\u7387\u91d1\u989d"
+					},
+					"small": {
+						"NFTContract": "NFT\u5408\u7ea6",
+						"seriesId": "\u4ee3\u5e01\u5c06\u5728\u8fd9\u4e2a\u7cfb\u5217\u4e2d\u94f8\u9020",
+						"owner": "\u5b9e\u4f8b\u7684\u6240\u6709\u8005\uff0c\u5426\u5219\u5c06\u662f\u53d1\u4ef6\u4eba",
+						"currency": "\u8d2d\u4e70\u4ee3\u5e01\u7684\u8d27\u5e01\uff0c\u5982\u679c\u4e3a\u96f6 - \u5bf9\u4e8e\u539f\u751f\u786c\u5e01",
+						"price": "\u4ef7\u683c",
+						"beneficiary": "\u51fa\u552e\u4ee3\u5e01\u7684\u53d7\u76ca\u4eba\uff0c\u5426\u5219\u5c06\u662f\u53d1\u4ef6\u4eba",
+						"autoindex": "\u81ea\u52a8\u7d22\u5f15",
+						"duration": "\u94f8\u9020\u540e\u9501\u5b9a\u3002\u96f6\u610f\u5473\u7740\u7acb\u5373\u5f97\u5230\u5b83\u3002",
+						"rateInterval": "\u7279\u8d2d\u6876\u95f4\u9694",
+						"rateAmount": "\u7279\u8d2d\u6876\u91d1\u989d"
+					}
+				},
+				"placeholders": {
+					"optional": "\uff08\u9009\u4fee\u7684\uff09",
+					"number": "\u6570\u5b57",
+					"address": "\u5730\u5740",
+					"fraction": "\u5206\u6570",
+					"integer": "\u6574\u6570",
+					"seconds": "\u79d2",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "\u751f\u4ea7",
+				"viewInstancesList": "\u5237\u65b0\u5217\u8868"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "\u7cfb\u5217\u7f16\u53f7",
+						"account": "\u5e10\u6237",
+						"amount": "\u6570\u91cf"
+					},
+					"small": {
+						"seriesId": "\u65b0\u4ee3\u5e01\u5c06\u5c5e\u4e8e\u5177\u6709\u6b64\u7c7b ID \u7684\u7cfb\u5217",
+						"account": "\u65b0\u521b\u5efa\u7684 NFT \u7684\u6240\u6709\u8005\u3002\u5982\u679c\u672a\u8bbe\u7f6e - \u5c06\u4f7f\u7528\u5f53\u524d\u94b1\u5305",
+						"amount": "\u94f8\u5e01\u6570\u91cf NFT"
+					}
+				},
+				"placeholders": {
+					"optional": "\uff08\u9009\u4fee\u7684\uff09",
+					"seriesId": "ID",
+					"account": "\u5e10\u6237",
+					"amount": "\u6570\u91cf",
+					"integer": "\u6574\u6570"
+				},
+				"btn": {
+					"Purchase": "\u8d2d\u4e70",
+					"SpecialPurchase": "\u7279\u4ef7\u91c7\u8d2d"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "\u5730\u5740"
+					},
+					"small": {
+						"account": "\u5730\u5740"
+					}
+				},
+				"errors": {
+					"invalidAddress": "\u65e0\u6548\u5730\u5740"
+				},
+				"placeholders": {
+					"account": "\u5730\u5740"
+				},
+				"addToWhitelist": "\u6dfb\u52a0\u5230\u767d\u540d\u5355",
+				"removeFromWhitelist": "\u4ece\u767d\u540d\u5355\u4e2d\u5220\u9664"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "\u4ee3\u5e01\u7f16\u53f7",
+					"custodian": "\u4fdd\u7ba1\u4eba",
+					"recipient": "\u63a5\u53d7\u8005"
+				},
+				"small": {
+					"tokenId": "token id \u4ec0\u4e48\u9700\u8981\u52a0\u9501\u6216\u89e3\u9501",
+					"custodian": "\u53ef\u4ee5\u89e3\u9501\u7684\u5730\u5740",
+					"recipient": "\u5c06\u63a5\u6536\u4ee4\u724c\u7684\u5730\u5740"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "\u65e0\u6548\u7684 tokenId",
+				"invalidCustodian": "\u4fdd\u7ba1\u4eba\u65e0\u6548",
+				"invalidRecipient": "\u6536\u4ef6\u4eba\u65e0\u6548"
+			},
+			"placeholders": {
+				"optional": "\uff08\u9009\u4fee\u7684\uff09",
+				"tokenId": "ID",
+				"custodian": "\u5730\u5740"
+			},
+			"Lock": "\u9501",
+			"Unlock": "\u5f00\u9501",
+			"Locked": "\u9501\u5b9a",
+			"CustodianAddress": "\u6258\u7ba1\u5730\u5740",
+			"TokenWasClaimed": "\u4ee4\u724c\u201c {{title}} \u201d\u5df2\u88ab\u8ba4\u9886",
+			"TokenWasLocked": "\u4ee4\u724c\u201c {{title}} \u201d\u88ab\u9501\u5b9a",
+			"TokenWasUnlocked": "\u4ee4\u724c\u201c {{title}} \u201d\u5df2\u89e3\u9501"
+		},
+		"GenerateDescription": "\u6216\u81ea\u52a8\u751f\u6210",
+		"collections": {
+			"Title": "\u6536\u85cf",
+			"EnterTitle": "\u8f93\u5165\u6807\u9898",
+			"EnterDescription": "\u8f93\u5165\u63cf\u8ff0",
+			"NewCollection": "\u65b0\u7cfb\u5217",
+			"Name": "\u59d3\u540d",
+			"Icon": "\u56fe\u6807",
+			"Description": "\u63cf\u8ff0",
+			"Author": "\u4f5c\u8005",
+			"SelectCollection": "\u9009\u62e9\u6536\u85cf",
+			"Value": "\u4ef7\u503c",
+			"AreYouSure": "\u4f60\u786e\u5b9a\u5417\uff1f",
+			"AuthorInvalid": "\u4f5c\u8005\u5730\u5740\u65e0\u6548\uff01",
+			"Address": "\u5730\u5740",
+			"CoverImage": "\u5c01\u9762\u56fe\u7247",
+			"UploadIcon": "\u4e0a\u4f20\u56fe\u6807",
+			"CommissionAddressInvalid": "\u59d4\u6258\u5730\u5740\u65e0\u6548",
+			"OnSale": "\u51fa\u552e",
+			"OffSale": "\u4e0b\u67b6",
+			"CreateCollection": "\u521b\u5efa\u6536\u85cf",
+			"UpdateCollection": "\u66f4\u65b0\u96c6\u5408",
+			"CollectionInfo": "\u6536\u85cf\u4fe1\u606f",
+			"SelectAuthor": "\u9009\u62e9\u4f5c\u8005",
+			"NewItem": "\u65b0 NFT \u7cfb\u5217",
+			"NamePlaceholder": "\u8f93\u5165\u96c6\u5408\u540d\u79f0",
+			"DescPlaceholder": "\u8f93\u5165\u96c6\u5408\u63cf\u8ff0",
+			"EndingIn": "\u7ed3\u675f\u4e8e",
+			"SubmitSeries": "\u63d0\u4ea4\u7cfb\u5217"
+		}
+	},
+	"currencies": {
+		"choose": "\u9009\u62e9\u8d27\u5e01"
+	},
+	"connectedAccount": {
+		"Title": "\u8fde\u63a5\u8d26\u6237",
+		"Success": "\u6210\u529f",
+		"YourAccountCreated": "\u60a8\u7684\u5e10\u6237\u521b\u5efa\u6210\u529f\uff01",
+		"YourAccountAlreadyCreated": "\u60a8\u7684\u5e10\u6237\u5df2\u521b\u5efa\u5e76\u53ef\u4ee5\u4f7f\u7528"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u50a8\u5907\u4ee3\u5e01",
+						"amount": "\u6570\u91cf"
+					},
+					"small": {
+						"reserveToken": "\u50a8\u5907\u4ee3\u5e01",
+						"amount": "\u6570\u91cf"
+					}
+				},
+				"placeholders": {
+					"amount": "\u6570\u91cf"
+				},
+				"btns": {
+					"stake": "\u8d4c\u6ce8"
+				},
+				"stake": "\u8d4c\u6ce8",
+				"loading": "\u52a0\u8f7d\u4e2d"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "\u4ee3\u5e01Erc20",
+					"duration": "\u671f\u95f4",
+					"bonusTokenFraction": "\u5956\u91d1\u4ee3\u5e01\u5206\u6570",
+					"popularToken": "\u6d41\u884c\u4ee3\u5e01",
+					"donations": "\u6350\u6b3e",
+					"rewardsRateFraction": "\u5956\u52b1\u7387\u5206\u6570",
+					"numerator": "\u5206\u5b50",
+					"denominator": "\u5206\u6bcd"
+				},
+				"small": {
+					"tokenErc20": "\u4ee3\u5e01Erc20",
+					"duration": "\u6301\u7eed\u65f6\u95f4\uff08\u5929\uff09",
+					"bonusTokenFraction": "\u5956\u91d1\u4ee3\u5e01\u5206\u6570",
+					"popularToken": "\u6d41\u884c\u4ee3\u5e01",
+					"donations": "\u6350\u6b3e",
+					"rewardsRateFraction": "\u5956\u52b1\u7387\u5206\u6570",
+					"numerator": "\u5206\u5b50",
+					"denominator": "\u5206\u6bcd"
+				}
+			},
+			"placeholders": {
+				"optional": "\uff08\u9009\u4fee\u7684\uff09",
+				"tuple": "\u5143\u7ec4[]",
+				"number": "\u6570\u5b57",
+				"address": "\u5730\u5740",
+				"fraction": "\u5206\u6570",
+				"integer": "\u6574\u6570",
+				"seconds": "\u79d2",
+				"days": "\u5929",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u6ca1\u6709\u6cf3\u6c60"
+			},
+			"btns": {
+				"createPool": "\u521b\u5efa\u6c60",
+				"createPoolInForm": "\u521b\u9020"
+			},
+			"createPool": "\u521b\u5efa\u6c60",
+			"produce": "\u751f\u4ea7",
+			"loading": "\u52a0\u8f7d\u4e2d",
+			"viewInstancesList": "\u5237\u65b0\u5217\u8868"
+		}
+	},
+	"fundrise": {
+		"placeholder": "\u8f93\u5165\u4e00\u4e9b\u5173\u4e8e\u6b64\u8d21\u732e\u7684\u5185\u5bb9..."
+	}
 }

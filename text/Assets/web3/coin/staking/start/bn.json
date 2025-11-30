@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "রিজার্ভ টোকেন",
-                        "duration": "সময়কাল",
-                        "amount": "পরিমাণ"
-                    },
-                    "small": {
-                        "reserveToken": "রিজার্ভ টোকেন",
-                        "duration": "সময়কাল",
-                        "amount": "পরিমাণ"
-                    }
-                },
-                "placeholders": {
-                    "duration": "সময়কাল",
-                    "amount": "পরিমাণ"
-                },
-                "btns": {
-                    "stake": "বাজি"
-                },
-                "stake": "বাজি",
-                "loading": "লোড হচ্ছে"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u09b0\u09bf\u099c\u09be\u09b0\u09cd\u09ad \u099f\u09cb\u0995\u09c7\u09a8",
+						"duration": "\u09b8\u09ae\u09af\u09bc\u0995\u09be\u09b2",
+						"amount": "\u09aa\u09b0\u09bf\u09ae\u09be\u09a3"
+					},
+					"small": {
+						"reserveToken": "\u09b0\u09bf\u099c\u09be\u09b0\u09cd\u09ad \u099f\u09cb\u0995\u09c7\u09a8",
+						"duration": "\u09b8\u09ae\u09af\u09bc\u0995\u09be\u09b2",
+						"amount": "\u09aa\u09b0\u09bf\u09ae\u09be\u09a3"
+					}
+				},
+				"placeholders": {
+					"duration": "\u09b8\u09ae\u09af\u09bc\u0995\u09be\u09b2",
+					"amount": "\u09aa\u09b0\u09bf\u09ae\u09be\u09a3"
+				},
+				"btns": {
+					"stake": "\u09ac\u09be\u099c\u09bf"
+				},
+				"stake": "\u09ac\u09be\u099c\u09bf",
+				"loading": "\u09b2\u09cb\u09a1 \u09b9\u099a\u09cd\u099b\u09c7"
+			}
+		}
+	}
 }

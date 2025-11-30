@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "резерви Токен",
-                        "duration": "Времетраење",
-                        "amount": "износ"
-                    },
-                    "small": {
-                        "reserveToken": "резерви Токен",
-                        "duration": "Времетраење",
-                        "amount": "износ"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Времетраење",
-                    "amount": "износ"
-                },
-                "btns": {
-                    "stake": "Влог"
-                },
-                "stake": "Влог",
-                "loading": "Се вчитува"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u0440\u0435\u0437\u0435\u0440\u0432\u0438 \u0422\u043e\u043a\u0435\u043d",
+						"duration": "\u0412\u0440\u0435\u043c\u0435\u0442\u0440\u0430\u0435\u045a\u0435",
+						"amount": "\u0438\u0437\u043d\u043e\u0441"
+					},
+					"small": {
+						"reserveToken": "\u0440\u0435\u0437\u0435\u0440\u0432\u0438 \u0422\u043e\u043a\u0435\u043d",
+						"duration": "\u0412\u0440\u0435\u043c\u0435\u0442\u0440\u0430\u0435\u045a\u0435",
+						"amount": "\u0438\u0437\u043d\u043e\u0441"
+					}
+				},
+				"placeholders": {
+					"duration": "\u0412\u0440\u0435\u043c\u0435\u0442\u0440\u0430\u0435\u045a\u0435",
+					"amount": "\u0438\u0437\u043d\u043e\u0441"
+				},
+				"btns": {
+					"stake": "\u0412\u043b\u043e\u0433"
+				},
+				"stake": "\u0412\u043b\u043e\u0433",
+				"loading": "\u0421\u0435 \u0432\u0447\u0438\u0442\u0443\u0432\u0430"
+			}
+		}
+	}
 }

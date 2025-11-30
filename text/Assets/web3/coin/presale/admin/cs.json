@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Prodej tokenu",
-                        "timestamps": "Times",
-                        "prices": "Ceny",
-                        "endTime": "Čas ukončení",
-                        "thresholds": "Prahové hodnoty",
-                        "bonuses": "Bonusy"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Majitel nemůže odstoupit",
-                            "option1": "Vlastník může vybrat tokeny až po uplynutí endTime",
-                            "option2": "Majitel si může tokeny kdykoli vybrat"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Adresa komunity",
-                    "methodkeccack": "Hashovací funkce Keccak256",
-                    "roleId": "ID role",
-                    "sellingToken": "Adresa prodejního tokenu",
-                    "prices": "ETH, cena",
-                    "thresholds": "# tokenů",
-                    "bonuses": "Bonus %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Nejsou žádné finanční prostředky"
-                },
-                "btns": {
-                    "createFund": "Vytvořit fond",
-                    "createFundInForm": "Vytvořit"
-                },
-                "fundAddress": "Adresa fondu",
-                "createFund": "Vytvořit fond",
-                "fundInfo": "Info",
-                "produce": "Vyrobit",
-                "loading": "načítání",
-                "viewInstancesList": "Obnovit seznam"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Prodej tokenu",
+						"timestamps": "Times",
+						"prices": "Ceny",
+						"endTime": "\u010cas ukon\u010den\u00ed",
+						"thresholds": "Prahov\u00e9 hodnoty",
+						"bonuses": "Bonusy"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Majitel nem\u016f\u017ee odstoupit",
+							"option1": "Vlastn\u00edk m\u016f\u017ee vybrat tokeny a\u017e po uplynut\u00ed endTime",
+							"option2": "Majitel si m\u016f\u017ee tokeny kdykoli vybrat"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "Adresa komunity",
+					"methodkeccack": "Hashovac\u00ed funkce Keccak256",
+					"roleId": "ID role",
+					"sellingToken": "Adresa prodejn\u00edho tokenu",
+					"prices": "ETH, cena",
+					"thresholds": "# token\u016f",
+					"bonuses": "Bonus %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Nejsou \u017e\u00e1dn\u00e9 finan\u010dn\u00ed prost\u0159edky"
+				},
+				"btns": {
+					"createFund": "Vytvo\u0159it fond",
+					"createFundInForm": "Vytvo\u0159it"
+				},
+				"fundAddress": "Adresa fondu",
+				"createFund": "Vytvo\u0159it fond",
+				"fundInfo": "Info",
+				"produce": "Vyrobit",
+				"loading": "na\u010d\u00edt\u00e1n\u00ed",
+				"viewInstancesList": "Obnovit seznam"
+			}
+		}
+	}
 }

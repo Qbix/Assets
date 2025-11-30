@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "אסימון מוכר",
-                        "timestamps": "פִּי",
-                        "prices": "מחירים",
-                        "endTime": "שעת סיום",
-                        "thresholds": "ספים",
-                        "bonuses": "בונוסים"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "הבעלים לא יכול לסגת",
-                            "option1": "הבעלים יכול למשוך אסימונים רק לאחר חלוף זמן הסיום",
-                            "option2": "הבעלים יכול למשוך אסימונים בכל עת"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "כתובת קהילה",
-                    "methodkeccack": "פונקציית Hash Keccak256",
-                    "roleId": "מזהה תפקיד",
-                    "sellingToken": "כתובת אסימון מוכר",
-                    "prices": "ETH, מחיר",
-                    "thresholds": "# של אסימונים",
-                    "bonuses": "% בונוס"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "אין כספים"
-                },
-                "btns": {
-                    "createFund": "צור קרן",
-                    "createFundInForm": "לִיצוֹר"
-                },
-                "fundAddress": "כתובת הקרן",
-                "createFund": "צור קרן",
-                "fundInfo": "מידע",
-                "produce": "ליצר",
-                "loading": "טוען",
-                "viewInstancesList": "רשימת רענון"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u05d0\u05e1\u05d9\u05de\u05d5\u05df \u05de\u05d5\u05db\u05e8",
+						"timestamps": "\u05e4\u05bc\u05b4\u05d9",
+						"prices": "\u05de\u05d7\u05d9\u05e8\u05d9\u05dd",
+						"endTime": "\u05e9\u05e2\u05ea \u05e1\u05d9\u05d5\u05dd",
+						"thresholds": "\u05e1\u05e4\u05d9\u05dd",
+						"bonuses": "\u05d1\u05d5\u05e0\u05d5\u05e1\u05d9\u05dd"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u05d4\u05d1\u05e2\u05dc\u05d9\u05dd \u05dc\u05d0 \u05d9\u05db\u05d5\u05dc \u05dc\u05e1\u05d2\u05ea",
+							"option1": "\u05d4\u05d1\u05e2\u05dc\u05d9\u05dd \u05d9\u05db\u05d5\u05dc \u05dc\u05de\u05e9\u05d5\u05da \u05d0\u05e1\u05d9\u05de\u05d5\u05e0\u05d9\u05dd \u05e8\u05e7 \u05dc\u05d0\u05d7\u05e8 \u05d7\u05dc\u05d5\u05e3 \u05d6\u05de\u05df \u05d4\u05e1\u05d9\u05d5\u05dd",
+							"option2": "\u05d4\u05d1\u05e2\u05dc\u05d9\u05dd \u05d9\u05db\u05d5\u05dc \u05dc\u05de\u05e9\u05d5\u05da \u05d0\u05e1\u05d9\u05de\u05d5\u05e0\u05d9\u05dd \u05d1\u05db\u05dc \u05e2\u05ea"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u05db\u05ea\u05d5\u05d1\u05ea \u05e7\u05d4\u05d9\u05dc\u05d4",
+					"methodkeccack": "\u05e4\u05d5\u05e0\u05e7\u05e6\u05d9\u05d9\u05ea Hash Keccak256",
+					"roleId": "\u05de\u05d6\u05d4\u05d4 \u05ea\u05e4\u05e7\u05d9\u05d3",
+					"sellingToken": "\u05db\u05ea\u05d5\u05d1\u05ea \u05d0\u05e1\u05d9\u05de\u05d5\u05df \u05de\u05d5\u05db\u05e8",
+					"prices": "ETH, \u05de\u05d7\u05d9\u05e8",
+					"thresholds": "# \u05e9\u05dc \u05d0\u05e1\u05d9\u05de\u05d5\u05e0\u05d9\u05dd",
+					"bonuses": "% \u05d1\u05d5\u05e0\u05d5\u05e1"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u05d0\u05d9\u05df \u05db\u05e1\u05e4\u05d9\u05dd"
+				},
+				"btns": {
+					"createFund": "\u05e6\u05d5\u05e8 \u05e7\u05e8\u05df",
+					"createFundInForm": "\u05dc\u05b4\u05d9\u05e6\u05d5\u05b9\u05e8"
+				},
+				"fundAddress": "\u05db\u05ea\u05d5\u05d1\u05ea \u05d4\u05e7\u05e8\u05df",
+				"createFund": "\u05e6\u05d5\u05e8 \u05e7\u05e8\u05df",
+				"fundInfo": "\u05de\u05d9\u05d3\u05e2",
+				"produce": "\u05dc\u05d9\u05e6\u05e8",
+				"loading": "\u05d8\u05d5\u05e2\u05df",
+				"viewInstancesList": "\u05e8\u05e9\u05d9\u05de\u05ea \u05e8\u05e2\u05e0\u05d5\u05df"
+			}
+		}
+	}
 }

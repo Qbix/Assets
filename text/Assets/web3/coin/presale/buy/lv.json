@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Cik daudz ieguldīt?"
-                    },
-                    "placeholders": {
-                        "amount": "Summa {{nativeCoin}}",
-                        "max": "Maks.: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Pirkt",
-                    "execute": "Izpildīt"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "Cik daudz ieguld\u012bt?"
+					},
+					"placeholders": {
+						"amount": "Summa {{nativeCoin}}",
+						"max": "Maks.: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "Pirkt",
+					"execute": "Izpild\u012bt"
+				}
+			}
+		}
+	}
 }

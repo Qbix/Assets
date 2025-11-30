@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "రిజర్వ్ టోకెన్",
-                        "duration": "వ్యవధి",
-                        "amount": "మొత్తం"
-                    },
-                    "small": {
-                        "reserveToken": "రిజర్వ్ టోకెన్",
-                        "duration": "వ్యవధి",
-                        "amount": "మొత్తం"
-                    }
-                },
-                "placeholders": {
-                    "duration": "వ్యవధి",
-                    "amount": "మొత్తం"
-                },
-                "btns": {
-                    "stake": "వాటాను"
-                },
-                "stake": "వాటాను",
-                "loading": "లోడ్"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u0c30\u0c3f\u0c1c\u0c30\u0c4d\u0c35\u0c4d \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d",
+						"duration": "\u0c35\u0c4d\u0c2f\u0c35\u0c27\u0c3f",
+						"amount": "\u0c2e\u0c4a\u0c24\u0c4d\u0c24\u0c02"
+					},
+					"small": {
+						"reserveToken": "\u0c30\u0c3f\u0c1c\u0c30\u0c4d\u0c35\u0c4d \u0c1f\u0c4b\u0c15\u0c46\u0c28\u0c4d",
+						"duration": "\u0c35\u0c4d\u0c2f\u0c35\u0c27\u0c3f",
+						"amount": "\u0c2e\u0c4a\u0c24\u0c4d\u0c24\u0c02"
+					}
+				},
+				"placeholders": {
+					"duration": "\u0c35\u0c4d\u0c2f\u0c35\u0c27\u0c3f",
+					"amount": "\u0c2e\u0c4a\u0c24\u0c4d\u0c24\u0c02"
+				},
+				"btns": {
+					"stake": "\u0c35\u0c3e\u0c1f\u0c3e\u0c28\u0c41"
+				},
+				"stake": "\u0c35\u0c3e\u0c1f\u0c3e\u0c28\u0c41",
+				"loading": "\u0c32\u0c4b\u0c21\u0c4d"
+			}
+		}
+	}
 }

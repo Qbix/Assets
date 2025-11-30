@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Fout",
-        "WalletAbsent": "De portemonnee is niet aangesloten.",
-        "Rendering": "Er zijn fouten opgetreden bij het weergeven van <span class='url'>{{1}}<\/span>",
-        "PriceRequired": "Prijs vereist!",
-        "NameRequired": "Naam (vereist!",
-        "PriceInvalid": "Prijs ongeldig!",
-        "AmountInvalid": "Bedrag ongeldig!",
-        "TransactionFailed": "Transactie mislukt",
-        "ChainNotSupported": "De geselecteerde keten wordt niet ondersteund. Ondersteunde ketting: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Heb MetaMask nodig om met de applicatie te werken",
-        "UserNotLoggedInMetaMask": "De gebruiker is niet aangemeld bij MetaMask",
-        "CurrencyNotFound": "Valuta niet gevonden",
-        "WrongChain": "Deze NFT gemaakt onder &quot; {{chain}} &quot;. Gebruik deze ketting.",
-        "NoRecipientSelected": "Geen ontvanger geselecteerd",
-        "NotEnoughPermissionsWallet": "Onvoldoende rechten om portemonnee van deze gebruiker te lezen",
-        "ThisUserHaveNoWallet": "Deze gebruiker heeft geen portemonnee toegewezen",
-        "TheWalletOfThisUserInvalid": "De portemonnee van deze gebruiker is ongeldig",
-        "WalletInvalid": "Wallet-adres ongeldig",
-        "CantManageFrozenSeries": "U kunt geen bevroren series beheren",
-        "SubscriptionStreamNotPaid": "Je hebt niet betaald om deze inhoud te bekijken. Klik op {{subscriptionUrl}} en abonneer u op het juiste abonnement."
-    },
-    "admin": {
-        "Title": "Activa administratief",
-        "SubscriptionTitle": "Abonnementen"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Tik om te betalen"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : lading verwerkt voor {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Bedankt voor uw betaling aan {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} geabonneerd op {{plan.title}}",
-        "YouSubscribedTo": "U bent geabonneerd op {{plan.title}}",
-        "Assets\/credits\/alert": "U heeft een melding met betrekking tot uw account"
-    },
-    "charge": {
-        "Subject": "U krijgt uitbetaling van {{displayAmount}} van {{call 'publisher.displayName'}} door &quot; {{description}} &quot;",
-        "HasBeenCharged": "Hé, dit is alleen om je te laten weten {{1}} door {{4}} {{2}} voor {{3}} in rekening is gebracht"
-    },
-    "charged": {
-        "Subject": "Bedankt voor uw betaling voor &quot; {{description}} &quot;",
-        "HavePaid": "Hé {{1}} , dit is slechts een snelle bevestiging dat je met succes {{2}} tot {{3}} voor {{4}} hebt betaald"
-    },
-    "payment": {
-        "AboutOrder": "Info over bestelling",
-        "PaymentMethod": "Betalingsmiddel",
-        "ContactInfo": "Contact informatie",
-        "Pay": "Betalen",
-        "PaymentSucceeded": "De betaling is gelukt",
-        "PaymentProcessing.": "Uw betaling wordt verwerkt",
-        "FailTryAgain": "Uw betaling is mislukt, probeer het opnieuw",
-        "SomethingWrong": "Er is iets fout gegaan",
-        "PaymentStatus": "Betalingsstatus",
-        "PayTo": "Betaal {{displayName}}",
-        "ChooseCurrency": "Kies een valuta",
-        "YouCanSendUpTo": "U kunt maximaal {{amount}} {{symbol}} verzenden",
-        "Send": "Versturen",
-        "EnterAmount": "voer een bedrag in"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Uitnodiging geaccepteerd door {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} gevuld {{FilledStreamTitle}}",
-        "ForFillingStream": "Voor vulling {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "Je hebt {{amount}} credits om te beginnen",
-        "PaymentFor": "Betaling voor &quot; {{1}} &quot;",
-        "PaymentTo": "Betaling aan {{1}}",
-        "PaymentToUser": "Betaling aan {{toUserName}}",
-        "CreatePrivateChat": "voor privéchat met {{toUserName}}",
-        "CreatePaidStream": "voor het maken van {{toStreamName}}",
-        "JoinedPaidStream": "voor reservering in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "voor het creëren van gemeenschap &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "als reserveringsterugbetaling in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "{{amount}} credits gekocht",
-        "BonusCredits": "Bonus {{amount}} credits",
-        "BuyAmountCredits": "Koop {{amount}} credits",
-        "WatchClip": "Verdiend {{amount}} credits voor het bekijken van {{fromStreamTitle}}",
-        "MissingCredits": "Ontbrekende tegoeden",
-        "YouMissingCredits": "Je hebt nog eens {{amount}} credits nodig om door te gaan.",
-        "BuyCredits": "Koop tegoed",
-        "BuyBonus": "Als u {{amount}} credits in één keer koopt, krijgt u een bonus van {{bonus}} credits.",
-        "Buy": "Kopen",
-        "PurchaseCredits": "Tegoeden kopen",
-        "Credits": "Credits",
-        "ErrorInvalidAmount": "Bedrag ongeldig",
-        "ErrorInvalidCurrency": "Helaas ondersteunen we nog geen valuta {{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} kredieten",
-            "BonusCredits": "{{amount}} kredieten"
-        }
-    },
-    "history": {
-        "Date": "Datum",
-        "Amount": "Hoeveelheid",
-        "Description": "Beschrijving",
-        "Client": "Cliënt",
-        "User": "Gebruiker",
-        "To": "naar",
-        "From": "van",
-        "SeeHistory": "Zie betalingsgeschiedenis voor {{1}}",
-        "HistoryEmpty": "U heeft nog geen gegevens",
-        "PaymentFor": "{{amount}} credits verzonden",
-        "PaymentTo": "{{amount}} credits verzonden",
-        "PaymentToUser": "{{amount}} credits verzonden",
-        "CreatePaidStream": "{{amount}} credits uitgegeven",
-        "WatchClip": {
-            "+": "{{amount}} punten verdiend",
-            "-": "{{amount}} credits uitgegeven"
-        },
-        "JoinedPaidStream": {
-            "+": "{{amount}} punten verdiend",
-            "-": "{{amount}} credits uitgegeven"
-        },
-        "LeftPaidStream": {
-            "+": "{{amount}} credits ontvangen",
-            "-": "{{amount}} credits verzonden"
-        },
-        "CreatedCommunity": "{{amount}} credits uitgegeven",
-        "BoughtCredits": "{{amount}} credits gekocht",
-        "BonusCredits": "Kreeg bonus {{amount}} credits",
-        "InviteAcceptedBy": "{{amount}} punten verdiend",
-        "Streams_user_firstname": "{{amount}} punten verdiend",
-        "Streams_user_lastname": "{{amount}} punten verdiend",
-        "Streams_user_icon": "{{amount}} punten verdiend",
-        "Places_user_location": "{{amount}} punten verdiend",
-        "Streams_greeting": "{{amount}} punten verdiend",
-        "YouHaveCreditsToStart": "{{amount}} punten verdiend",
-        "InvitedUserFilledStream": "{{amount}} punten verdiend",
-        "ForFillingStream": "{{amount}} punten verdiend",
-        "CreatePrivateChat": "{{amount}} credits uitgegeven"
-    },
-    "subscriptions": {
-        "infoTitle": "Betalingsinformatie instellen",
-        "confirm": {
-            "title": "Abonnement starten",
-            "message": "Een terugkerend abonnement starten op &quot; {{title}} &quot;?",
-            "ok": "OK",
-            "cancel": "Annuleren"
-        },
-        "CreditOrDebitCard": "Creditcard of betaalpas",
-        "SubscribePayment": "Abonneer op betaling",
-        "ImmediatePayment": "Onmiddellijke betaling",
-        "ProcessingPayment": "Betaling verwerken",
-        "SubscriptionAlreadyPaid": "Dit abonnement is al betaald",
-        "SubscriptionNotActive": "Dit abonnement is niet actief",
-        "Subscribed": "Geabonneerd",
-        "Unsubscribed": "Uitgeschreven",
-        "Unsubscribe": "Uitschrijven",
-        "Subscribe": "Abonneren",
-        "Started": "Begonnen",
-        "EndsIn": "Eindigt in",
-        "NextPay": "Volgende betaling",
-        "Period": "Periode",
-        "Price": "Prijs",
-        "AreYouSureUnsubscribe": "Weet u zeker dat u dit abonnement wilt opzeggen?",
-        "YouUnsubscribedFromPlan": "U heeft zich afgemeld voor abonnement &quot; {{planTitle}} &quot;. Er worden geen kosten in rekening gebracht, maar je abonnement loopt door tot {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "plan titel",
-            "PricePlaceholder": "prijs",
-            "DescriptionPlaceholder": "beschrijving abonnementsplan",
-            "SavePlan": "Plan opslaan",
-            "NewPlan": "Nieuw plan",
-            "SubscriptionTitle": "Abonnementsplannen",
-            "AreYouSureDeletePlan": "Weet u zeker dat u dit abonnement wilt verwijderen?",
-            "Duration": "Duur",
-            "Discount": "Korting",
-            "Interrupt": "Onderbreken",
-            "Continue": "Doorgaan",
-            "SelectDisplayType": "Selecteer {{displayType}}",
-            "EndDate": "einddatum",
-            "Available": "Beschikbaar",
-            "Hidden": "Verborgen",
-            "InviteOnly": "Alleen op uitnodiging",
-            "CantSubscribeUnlessInvited": "U kunt zich niet abonneren op dit abonnement, tenzij u bent uitgenodigd"
-        }
-    },
-    "payments": {
-        "infoTitle": "Betalingsinformatie instellen",
-        "BuyAmountCredits": "Koop {{amount}} credits",
-        "confirm": {
-            "title": "Maak een betaling",
-            "message": "Gaat u ermee akkoord om {{symbol}} {{amount}} te betalen?",
-            "ok": "OK",
-            "cancel": "Annuleren"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Credits",
-            "description": "houdt kredieten en betalingen bij"
-        },
-        "Assets\/plan": {
-            "displayType": "Abonnementsplan",
-            "description": "abonnement"
-        },
-        "Assets\/subscription": {
-            "displayType": "Abonnement",
-            "description": "abonnement"
-        },
-        "Assets\/product": {
-            "displayType": "Product",
-            "description": "product wordt verkocht"
-        },
-        "Assets\/service": {
-            "displayType": "Dienst",
-            "description": "dienst wordt aangeboden"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "{{amount}} punten verdiend"
-        },
-        "Assets\/credits\/bought": {
-            "content": "{{amount}} credits gekocht"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bonus {{amount}} credits"
-        },
-        "Assets\/credits\/spent": {
-            "content": "{{amount}} credits uitgegeven"
-        },
-        "Assets\/credits\/sent": {
-            "content": "Verzonden {{amount}} credits naar {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Ontvangen {{amount}} credits van {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Je hebt weinig tegoed op je account. Ga naar <a href='<i translate='no'>999&#39;&gt;deze link<\/a> om meer credits te kopen."
-        }
-    },
-    "billing": {
-        "Title": "Activa facturering",
-        "CreditsMinimum": "Minimale kredieten",
-        "CreditsToAdd": "Credits om toe te voegen",
-        "Save": "Redden",
-        "ThisLink": "deze link",
-        "errors": {
-            "CreditsMinimumNegative": "Het minimum aan credits kan niet negatief zijn",
-            "CreditsToAddNegative": "Tegoeden om toe te voegen kunnen niet negatief zijn"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Nieuwe dienst",
-            "TitlePlaceholder": "Dienst titel",
-            "PricePlaceholder": "Prijs instellen",
-            "LinkPlaceholder": "aanvullende info-link instellen",
-            "DescriptionPlaceholder": "Dienstbeschrijving",
-            "SaveService": "Bewaar dienst",
-            "SelectRequiredParticipants": "Vereiste gerelateerde deelnemers",
-            "RequiredParticipantsDesc": "Selecteer gerelateerde deelnemers die verplicht zijn om deze service te gebruiken (bijvoorbeeld huisdieren voor &quot;Hondenshow&quot;, of kinderen voor &quot;Kindervakantie&quot; enz.). Als de service wordt betaald, moet de gebruiker ook betalen voor alle gerelateerde deelnemers."
-        },
-        "EditServiceTemplate": {
-            "Title": "Dienst bewerken"
-        },
-        "ManageServiceTemplates": "Servicesjablonen beheren",
-        "ManageServices": "Diensten beheren",
-        "Free": "Vrij",
-        "OptionalContribution": "Optionele bijdrage",
-        "RequiredPayment": "Vereiste betaling",
-        "AreYouSureDelete": "Weet u zeker dat u deze service wilt verwijderen?",
-        "AmountServicesRelated": "Er zijn {{amount}} beschikbaarheden met betrekking tot deze service. Ze worden ook verwijderd."
-    },
-    "transfer": {
-        "SelectRecipient": "Selecteer ontvanger",
-        "TransactionSuccess": "Transactie succes",
-        "OrTypeWalletAddress": "OF typ het adres van de portemonnee van de ontvanger",
-        "AppCredits": "App-tegoeden"
-    },
-    "NFT": {
-        "Title": "Titel",
-        "Name": "Naam",
-        "EnterName": "Voer naam in",
-        "EnterAuthorWallet": "Voer de auteursportemonnee in",
-        "InformationAboutTitle": "Informatie over {{title}} NFT",
-        "Description": "Beschrijving",
-        "DetailedInformationAboutNFT": "Gedetailleerde informatie over NFT",
-        "PresaleStarts": "Voorverkoop start 23 december",
-        "OwnerUserNotFound": "Eigenaar van deze NFT is niet geregistreerd in onze applicatie.",
-        "BuyNow": "Koop nu",
-        "Buy": "Kopen",
-        "Add": "Toevoegen",
-        "Remove": "Verwijderen",
-        "NoNFTyet": "Nog geen NFT&#39;s",
-        "Conversation": "Gesprek",
-        "Create": "Creëren",
-        "CurrentBid": "huidig bod",
-        "StartingIn": "Beginnend in",
-        "EndingIn": "Eindigend in",
-        "CreateNFT": "Maak een NFT aan",
-        "TitlePlaceholder": "Geef uw NFT een titel",
-        "DescriptionPlaceholder": "Geef uw NFT een beschrijving",
-        "CreateYourNFT": "Maak uw NFT",
-        "Royalties": "royalty&#39;s",
-        "RoyaltyPlaceholder": "Optioneel. Bedrag betaald aan maker vóór overdracht.",
-        "ExpirationDate": "uiterste houdbaarheidsdatum",
-        "StartingDate": "Begin datum",
-        "BidsBelowThisAmount": "Biedingen onder dit bedrag zijn niet toegestaan",
-        "MinimumBid": "Minimum bod",
-        "Author": "Auteur",
-        "Price": "Prijs",
-        "Commission": "Commissie",
-        "EnterCommission": "Voer commissie in",
-        "Owner": "Eigenaar",
-        "SelectCategory": "Selecteer categorie",
-        "Day": "Dag",
-        "Days": "Dagen",
-        "Hour": "Uur",
-        "Hours": "Uur",
-        "Minute": "Minuut",
-        "Minutes": "Minuten",
-        "Second": "Seconde",
-        "Seconds": "seconden",
-        "SalesCreator": "van de verkoop gaat naar de maker",
-        "Details": "Details",
-        "Bids": "Biedingen",
-        "History": "Geschiedenis",
-        "LoremIpsum": "Lorem Ipsum is slechts een proeftekst uit de drukkerij- en zetindustrie.",
-        "PutOnSale": "In de verkoop gezet",
-        "PutOffSale": "Terugtrekken uit de verkoop",
-        "Transfer": "Overdracht",
-        "Actions": "Acties",
-        "Claim": "Claim",
-        "ClaimNFT": "NFT claimen",
-        "Unlocking": "Ontgrendelen",
-        "Unlock": "Ontgrendelen",
-        "Update": "Update",
-        "UpdateToken": "Token bijwerken",
-        "UpdateNFT": "NFT bijwerken",
-        "CreateToken": "Token maken",
-        "PlaceBid": "Bod plaatsen",
-        "SoldOut": "Verkocht",
-        "NotOnSale": "Niet in de uitverkoop",
-        "NftName": "NFT naam",
-        "DescribeYourNFT": "Beschrijf uw NFT",
-        "NFTImage": "Afbeelding voor NFT",
-        "NFTVideo": "Video voor NFT, indien aanwezig",
-        "UploadMovie": "Filmpje uploaden",
-        "MovieSource": "Film Bron",
-        "MovieURL": "Film-URL",
-        "UploadFile": "Een bestand uploaden",
-        "PutOnMarketplace": "Op marktplaats gezet",
-        "InstantPurchase": "Voer de prijs in zodat gebruikers direct uw NFT kunnen kopen",
-        "FixedPrice": "Vaste prijs",
-        "TimedAuction": "Getimede veiling",
-        "OpenForBids": "Open voor biedingen",
-        "PriceOnePiece": "Prijs per stuk invoeren",
-        "EnterPrice": "Voer prijs in",
-        "EnterMinimumBid": "Voer het minimumbod in",
-        "SelectChain": "Selecteer ketting",
-        "Currency": "Munteenheid",
-        "AreYouSureDeleteImage": "Weet u zeker dat u de afbeelding wilt verwijderen?",
-        "AreYouSureDeleteVideo": "Weet je zeker dat je video wilt verwijderen?",
-        "series": {
-            "Name": "Naam",
-            "Icon": "Icoon",
-            "Description": "Beschrijving",
-            "Author": "Auteur",
-            "SelectSeries": "Selecteer serie",
-            "Value": "Waarde",
-            "AreYouSure": "Weet je het zeker?",
-            "AuthorInvalid": "Auteursadres ongeldig!",
-            "Address": "Adres",
-            "CoverImage": "Omslagfoto",
-            "UploadCoverImage": "Omslagafbeelding uploaden",
-            "CommissionAddressInvalid": "Commissieadres ongeldig",
-            "OnSale": "te koop",
-            "OffSale": "uit de verkoop",
-            "CreateSeries": "Serie maken",
-            "UpdateSeries": "Serie bijwerken",
-            "SeriesInfo": "Serie-info",
-            "SelectAuthor": "Selecteer auteur",
-            "NewItem": "Nieuwe NFT-serie",
-            "NamePlaceholder": "Voer serienaam in",
-            "DescPlaceholder": "Voer een seriebeschrijving in",
-            "EndingIn": "Eindigend in"
-        },
-        "contract": {
-            "CreateContract": "Overeenkomst maken",
-            "SelectContract": "Selecteer contract",
-            "CreateContractFor": "Maak een contract voor {{userName}}",
-            "ContractFor": "Contract voor {{userName}}",
-            "UpdateContract": "Overeenkomst bijwerken",
-            "TransferOwnership": "Eigendom overdragen",
-            "SetBaseURI": "Basis-URI instellen",
-            "SetSuffix": "Achtervoegsel instellen",
-            "CurrentOwner": "Huidige eigenaar",
-            "CurrentBaseURL": "Huidige basis-URL",
-            "ContractAddressAbsent": "Contractadres ontbreekt",
-            "FactoryAddressAbsent": "Fabrieksadres ontbreekt",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Titel vereist",
-            "SymbolRequired": "Symbool vereist",
-            "TypeContractName": "contract naam",
-            "TypeContractSymbol": "contractsymbool (max. 10 tekens)"
-        },
-        "contests": {
-            "Title": "Wedstrijden",
-            "NewContest": "Nieuwe wedstrijd"
-        },
-        "import": {
-            "importNFT": "NFT&#39;s importeren",
-            "importAttributes": "Importeer NFT-attributen",
-            "fileNotFound": "Sorry, CSV-bestand niet gevonden.",
-            "fileEmpty": "Sorry, CSV-bestand is leeg.",
-            "userIdNotFound": "gebruiker bestaat maar id is leeg",
-            "errorLine": "lijn {{1}}",
-            "fieldNotFound": "Verplicht veld &quot; {{1}} &quot; niet gevonden",
-            "displayTypeEmpty": "Weergavetype voor &quot; {{1}} &quot; niet gevonden",
-            "taskStreamInvalid": "taakstroom ongeldig",
-            "instructionsEmpty": "taakstroominstructies leeg",
-            "complete": "Compleet",
-            "activateUsers": "activeringsbericht naar gebruikers sturen?",
-            "importProgress": "Voortgang",
-            "importOptions": "Opties",
-            "sampleCSV": "Voorbeeld CSV downloaden",
-            "fileLabel": "Spreadsheet uploaden:",
-            "errorsTitle": "Er zijn fouten opgetreden"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Filter op NFT-collecties",
-                "ShowNFTCollection": "Toon NFT-collectie in ...",
-                "AllCollections": "Alle collecties"
-            },
-            "ByUser": {
-                "AllAuthors": "Alle auteurs",
-                "AllUsers": "Iedereen",
-                "FilterByAuthors": "Filteren op auteurs"
-            }
-        },
-        "Back": "Terug naar Collectie",
-        "attributes": {
-            "Title": "Attributen beheren",
-            "Attributes": "attributen",
-            "DisplayTitle": "Weergavetype",
-            "AddDisplayType": "Voeg een nieuw weergavetype toe",
-            "NewDisplay": "Nieuwe weergave",
-            "TraitTitle": "Type eigenschap",
-            "AddTraitTitle": "Voeg een nieuw eigenschapstype toe",
-            "NewTrait": "Nieuw eigenschapstype",
-            "ValueTitle": "Waarde",
-            "AddValueTitle": "Nieuwe waarde toevoegen",
-            "NewValue": "Nieuwe waarde",
-            "NewAttribute": "Nieuw kenmerk",
-            "UpdateAttributes": "Attributen bijwerken",
-            "SaveAttributes": "Attributen opslaan"
-        },
-        "profile": {
-            "LogOut": "Uitloggen",
-            "Title": "Profiel voor {{userName}}",
-            "Description": "Gebruikersdetails",
-            "aboutPlaceholder": "Biografie bewerken",
-            "SureLogOut": "Weet je zeker dat je wilt uitloggen?",
-            "UploadCoverPhoto": "Omslagfoto uploaden"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "serie id",
-                        "owner": "Eigenaar",
-                        "currency": "Сurrency",
-                        "price": "Prijs",
-                        "beneficiary": "Begunstigde",
-                        "autoindex": "Auto-index",
-                        "duration": "Duur",
-                        "rateInterval": "Tarief interval",
-                        "rateAmount": "Beoordeel bedrag"
-                    },
-                    "small": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "tokens worden geslagen in deze serie",
-                        "owner": "eigenaar van de instantie, anders wordt het de afzender",
-                        "currency": "Valuta voor gekochte tokens, indien nul - voor native munten",
-                        "price": "Prijs",
-                        "beneficiary": "Begunstigde van de verkoop van tokens, anders is dit de afzender",
-                        "autoindex": "Auto-index",
-                        "duration": "Slot na het slaan. Nul betekent direct ophalen.",
-                        "rateInterval": "emmer interval voor speciale aankoop",
-                        "rateAmount": "emmerbedrag voor speciale aankoop"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(optioneel)",
-                    "number": "nummer",
-                    "address": "adres",
-                    "fraction": "fractie",
-                    "integer": "geheel getal",
-                    "seconds": "seconden",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Produceren",
-                "viewInstancesList": "Ververs lijst"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "Serie-ID",
-                        "account": "Rekening",
-                        "amount": "Hoeveelheid"
-                    },
-                    "small": {
-                        "seriesId": "nieuw token hoort in serie met zo&#39;n ID",
-                        "account": "eigenaar van nieuw gecreëerde NFT. indien niet ingesteld - zal de huidige portemonnee gebruiken",
-                        "amount": "bedrag NFT naar munt"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(optioneel)",
-                    "seriesId": "ID kaart",
-                    "account": "rekening",
-                    "amount": "hoeveelheid",
-                    "integer": "geheel getal"
-                },
-                "btn": {
-                    "Purchase": "Aankoop",
-                    "SpecialPurchase": "Speciale aankoop"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Adres"
-                    },
-                    "small": {
-                        "account": "Adres"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Ongeldig adres"
-                },
-                "placeholders": {
-                    "account": "Adres"
-                },
-                "addToWhitelist": "Toevoegen aan witte lijst",
-                "removeFromWhitelist": "Verwijderen van witte lijst"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "Token-ID",
-                    "custodian": "Conciërge",
-                    "recipient": "Ontvanger"
-                },
-                "small": {
-                    "tokenId": "token-ID wat moet worden vergrendeld of ontgrendeld",
-                    "custodian": "adres dat kan worden ontgrendeld",
-                    "recipient": "adres dat de tokens zal ontvangen"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Ongeldige token-ID",
-                "invalidCustodian": "Ongeldige bewaarder",
-                "invalidRecipient": "Ongeldige ontvanger"
-            },
-            "placeholders": {
-                "optional": "(optioneel)",
-                "tokenId": "ID kaart",
-                "custodian": "adres"
-            },
-            "Lock": "Slot",
-            "Unlock": "Ontgrendelen",
-            "Locked": "Op slot",
-            "CustodianAddress": "Bewaarder adres",
-            "TokenWasClaimed": "Token &quot; {{title}} &quot; werd geclaimd",
-            "TokenWasLocked": "Token &quot; {{title}} &quot; was vergrendeld",
-            "TokenWasUnlocked": "Token &quot; {{title}} &quot; is ontgrendeld"
-        },
-        "GenerateDescription": "of automatisch genereren",
-        "collections": {
-            "Title": "Collecties",
-            "EnterTitle": "titel invoeren",
-            "EnterDescription": "voer beschrijving in",
-            "NewCollection": "Nieuwe collectie",
-            "Name": "Naam",
-            "Icon": "Icoon",
-            "Description": "Beschrijving",
-            "Author": "Auteur",
-            "SelectCollection": "Selecteer collectie",
-            "Value": "Waarde",
-            "AreYouSure": "Weet je het zeker?",
-            "AuthorInvalid": "Auteursadres ongeldig!",
-            "Address": "Adres",
-            "CoverImage": "Omslagfoto",
-            "UploadIcon": "Upload icoon",
-            "CommissionAddressInvalid": "Commissieadres ongeldig",
-            "OnSale": "te koop",
-            "OffSale": "uit de verkoop",
-            "CreateCollection": "Verzameling maken",
-            "UpdateCollection": "Collectie bijwerken",
-            "CollectionInfo": "Collectie-info",
-            "SelectAuthor": "Selecteer auteur",
-            "NewItem": "Nieuwe NFT-collectie",
-            "NamePlaceholder": "Voer de naam van de collectie in",
-            "DescPlaceholder": "Voer een collectiebeschrijving in",
-            "EndingIn": "Eindigend in",
-            "SubmitSeries": "Dien een serie in"
-        }
-    },
-    "currencies": {
-        "choose": "Kies een valuta"
-    },
-    "connectedAccount": {
-        "Title": "Account koppelen",
-        "Success": "Succes",
-        "YourAccountCreated": "Uw account is succesvol aangemaakt!",
-        "YourAccountAlreadyCreated": "Uw account is al aangemaakt en klaar voor gebruik"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Hoeveelheid"
-                    },
-                    "small": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Hoeveelheid"
-                    }
-                },
-                "placeholders": {
-                    "amount": "hoeveelheid"
-                },
-                "btns": {
-                    "stake": "Inzet"
-                },
-                "stake": "Inzet",
-                "loading": "Bezig met laden"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Duur",
-                    "bonusTokenFraction": "bonusTokenFractie",
-                    "popularToken": "populairToken",
-                    "donations": "donaties",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "teller",
-                    "denominator": "noemer"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Duur in dagen",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "populairToken",
-                    "donations": "donaties",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "teller",
-                    "denominator": "noemer"
-                }
-            },
-            "placeholders": {
-                "optional": "(optioneel)",
-                "tuple": "tupel[]",
-                "number": "nummer",
-                "address": "adres",
-                "fraction": "fractie",
-                "integer": "geheel getal",
-                "seconds": "seconden",
-                "days": "dagen",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Er zijn geen zwembaden"
-            },
-            "btns": {
-                "createPool": "Zwembad maken",
-                "createPoolInForm": "Creëren"
-            },
-            "createPool": "Zwembad maken",
-            "produce": "Produceren",
-            "loading": "Bezig met laden",
-            "viewInstancesList": "Ververs lijst"
-        }
-    },
-    "fundrise": {
-        "placeholder": "typ iets over deze bijdrage..."
-    }
+	"errors": {
+		"Error": "Fout",
+		"WalletAbsent": "De portemonnee is niet aangesloten.",
+		"Rendering": "Er zijn fouten opgetreden bij het weergeven van <span class='url'>{{1}}</span>",
+		"PriceRequired": "Prijs vereist!",
+		"NameRequired": "Naam (vereist!",
+		"PriceInvalid": "Prijs ongeldig!",
+		"AmountInvalid": "Bedrag ongeldig!",
+		"TransactionFailed": "Transactie mislukt",
+		"ChainNotSupported": "De geselecteerde keten wordt niet ondersteund. Ondersteunde ketting: {{supportedChain}}",
+		"NeedMetaMaskConnected": "Heb MetaMask nodig om met de applicatie te werken",
+		"UserNotLoggedInMetaMask": "De gebruiker is niet aangemeld bij MetaMask",
+		"CurrencyNotFound": "Valuta niet gevonden",
+		"WrongChain": "Deze NFT gemaakt onder &quot; {{chain}} &quot;. Gebruik deze ketting.",
+		"NoRecipientSelected": "Geen ontvanger geselecteerd",
+		"NotEnoughPermissionsWallet": "Onvoldoende rechten om portemonnee van deze gebruiker te lezen",
+		"ThisUserHaveNoWallet": "Deze gebruiker heeft geen portemonnee toegewezen",
+		"TheWalletOfThisUserInvalid": "De portemonnee van deze gebruiker is ongeldig",
+		"WalletInvalid": "Wallet-adres ongeldig",
+		"CantManageFrozenSeries": "U kunt geen bevroren series beheren",
+		"SubscriptionStreamNotPaid": "Je hebt niet betaald om deze inhoud te bekijken. Klik op {{subscriptionUrl}} en abonneer u op het juiste abonnement."
+	},
+	"admin": {
+		"Title": "Activa administratief",
+		"SubscriptionTitle": "Abonnementen"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Tik om te betalen"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : lading verwerkt voor {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "Bedankt voor uw betaling aan {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} geabonneerd op {{plan.title}}",
+		"YouSubscribedTo": "U bent geabonneerd op {{plan.title}}",
+		"Assets/credits/alert": "U heeft een melding met betrekking tot uw account"
+	},
+	"charge": {
+		"Subject": "U krijgt uitbetaling van {{displayAmount}} van {{call 'publisher.displayName'}} door &quot; {{description}} &quot;",
+		"HasBeenCharged": "H\u00e9, dit is alleen om je te laten weten {{1}} door {{4}} {{2}} voor {{3}} in rekening is gebracht"
+	},
+	"charged": {
+		"Subject": "Bedankt voor uw betaling voor &quot; {{description}} &quot;",
+		"HavePaid": "H\u00e9 {{1}} , dit is slechts een snelle bevestiging dat je met succes {{2}} tot {{3}} voor {{4}} hebt betaald"
+	},
+	"payment": {
+		"AboutOrder": "Info over bestelling",
+		"PaymentMethod": "Betalingsmiddel",
+		"ContactInfo": "Contact informatie",
+		"Pay": "Betalen",
+		"PaymentSucceeded": "De betaling is gelukt",
+		"PaymentProcessing.": "Uw betaling wordt verwerkt",
+		"FailTryAgain": "Uw betaling is mislukt, probeer het opnieuw",
+		"SomethingWrong": "Er is iets fout gegaan",
+		"PaymentStatus": "Betalingsstatus",
+		"PayTo": "Betaal {{displayName}}",
+		"ChooseCurrency": "Kies een valuta",
+		"YouCanSendUpTo": "U kunt maximaal {{amount}} {{symbol}} verzenden",
+		"Send": "Versturen",
+		"EnterAmount": "voer een bedrag in"
+	},
+	"credits": {
+		"InviteAcceptedBy": "Uitnodiging geaccepteerd door {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} gevuld {{FilledStreamTitle}}",
+		"ForFillingStream": "Voor vulling {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "Je hebt {{amount}} credits om te beginnen",
+		"PaymentFor": "Betaling voor &quot; {{1}} &quot;",
+		"PaymentTo": "Betaling aan {{1}}",
+		"PaymentToUser": "Betaling aan {{toUserName}}",
+		"CreatePrivateChat": "voor priv\u00e9chat met {{toUserName}}",
+		"CreatePaidStream": "voor het maken van {{toStreamName}}",
+		"JoinedPaidStream": "voor reservering in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "voor het cre\u00ebren van gemeenschap &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "als reserveringsterugbetaling in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "{{amount}} credits gekocht",
+		"BonusCredits": "Bonus {{amount}} credits",
+		"BuyAmountCredits": "Koop {{amount}} credits",
+		"WatchClip": "Verdiend {{amount}} credits voor het bekijken van {{fromStreamTitle}}",
+		"MissingCredits": "Ontbrekende tegoeden",
+		"YouMissingCredits": "Je hebt {{amount}} {{currency}} extra credits nodig om verder te gaan.",
+		"BuyCredits": "Koop tegoed",
+		"BuyBonus": "Als u {{amount}} credits in \u00e9\u00e9n keer koopt, krijgt u een bonus van {{bonus}} credits.",
+		"Buy": "Kopen",
+		"PurchaseCredits": "Tegoeden kopen",
+		"Credits": "Credits",
+		"ErrorInvalidAmount": "Bedrag ongeldig",
+		"ErrorInvalidCurrency": "Helaas ondersteunen we nog geen valuta {{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} kredieten",
+			"BonusCredits": "{{amount}} kredieten"
+		}
+	},
+	"history": {
+		"Date": "Datum",
+		"Amount": "Hoeveelheid",
+		"Description": "Beschrijving",
+		"Client": "Cli\u00ebnt",
+		"User": "Gebruiker",
+		"To": "naar",
+		"From": "van",
+		"SeeHistory": "Zie betalingsgeschiedenis voor {{1}}",
+		"HistoryEmpty": "U heeft nog geen gegevens",
+		"PaymentFor": "{{amount}} credits verzonden",
+		"PaymentTo": "{{amount}} credits verzonden",
+		"PaymentToUser": "{{amount}} credits verzonden",
+		"CreatePaidStream": "{{amount}} credits uitgegeven",
+		"WatchClip": {
+			"+": "{{amount}} punten verdiend",
+			"-": "{{amount}} credits uitgegeven"
+		},
+		"JoinedPaidStream": {
+			"+": "{{amount}} punten verdiend",
+			"-": "{{amount}} credits uitgegeven"
+		},
+		"LeftPaidStream": {
+			"+": "{{amount}} credits ontvangen",
+			"-": "{{amount}} credits verzonden"
+		},
+		"CreatedCommunity": "{{amount}} credits uitgegeven",
+		"BoughtCredits": "{{amount}} credits gekocht",
+		"BonusCredits": "Kreeg bonus {{amount}} credits",
+		"InviteAcceptedBy": "{{amount}} punten verdiend",
+		"Streams_user_firstname": "{{amount}} punten verdiend",
+		"Streams_user_lastname": "{{amount}} punten verdiend",
+		"Streams_user_icon": "{{amount}} punten verdiend",
+		"Places_user_location": "{{amount}} punten verdiend",
+		"Streams_greeting": "{{amount}} punten verdiend",
+		"YouHaveCreditsToStart": "{{amount}} punten verdiend",
+		"InvitedUserFilledStream": "{{amount}} punten verdiend",
+		"ForFillingStream": "{{amount}} punten verdiend",
+		"CreatePrivateChat": "{{amount}} credits uitgegeven"
+	},
+	"subscriptions": {
+		"infoTitle": "Betalingsinformatie instellen",
+		"confirm": {
+			"title": "Abonnement starten",
+			"message": "Een terugkerend abonnement starten op &quot; {{title}} &quot;?",
+			"ok": "OK",
+			"cancel": "Annuleren"
+		},
+		"CreditOrDebitCard": "Creditcard of betaalpas",
+		"SubscribePayment": "Abonneer op betaling",
+		"ImmediatePayment": "Onmiddellijke betaling",
+		"ProcessingPayment": "Betaling verwerken",
+		"SubscriptionAlreadyPaid": "Dit abonnement is al betaald",
+		"SubscriptionNotActive": "Dit abonnement is niet actief",
+		"Subscribed": "Geabonneerd",
+		"Unsubscribed": "Uitgeschreven",
+		"Unsubscribe": "Uitschrijven",
+		"Subscribe": "Abonneren",
+		"Started": "Begonnen",
+		"EndsIn": "Eindigt in",
+		"NextPay": "Volgende betaling",
+		"Period": "Periode",
+		"Price": "Prijs",
+		"AreYouSureUnsubscribe": "Weet u zeker dat u dit abonnement wilt opzeggen?",
+		"YouUnsubscribedFromPlan": "U heeft zich afgemeld voor abonnement &quot; {{planTitle}} &quot;. Er worden geen kosten in rekening gebracht, maar je abonnement loopt door tot {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "plan titel",
+			"PricePlaceholder": "prijs",
+			"DescriptionPlaceholder": "beschrijving abonnementsplan",
+			"SavePlan": "Plan opslaan",
+			"NewPlan": "Nieuw plan",
+			"SubscriptionTitle": "Abonnementsplannen",
+			"AreYouSureDeletePlan": "Weet u zeker dat u dit abonnement wilt verwijderen?",
+			"Duration": "Duur",
+			"Discount": "Korting",
+			"Interrupt": "Onderbreken",
+			"Continue": "Doorgaan",
+			"SelectDisplayType": "Selecteer {{displayType}}",
+			"EndDate": "einddatum",
+			"Available": "Beschikbaar",
+			"Hidden": "Verborgen",
+			"InviteOnly": "Alleen op uitnodiging",
+			"CantSubscribeUnlessInvited": "U kunt zich niet abonneren op dit abonnement, tenzij u bent uitgenodigd"
+		}
+	},
+	"payments": {
+		"infoTitle": "Betalingsinformatie instellen",
+		"BuyAmountCredits": "Koop {{amount}} credits",
+		"confirm": {
+			"title": "Maak een betaling",
+			"message": "Gaat u ermee akkoord om {{symbol}} {{amount}} te betalen?",
+			"ok": "OK",
+			"cancel": "Annuleren"
+		},
+		"reasons": {
+			"BuyCredits": "Credits kopen"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "Credits",
+			"description": "houdt kredieten en betalingen bij"
+		},
+		"Assets/plan": {
+			"displayType": "Abonnementsplan",
+			"description": "abonnement"
+		},
+		"Assets/subscription": {
+			"displayType": "Abonnement",
+			"description": "abonnement"
+		},
+		"Assets/product": {
+			"displayType": "Product",
+			"description": "product wordt verkocht"
+		},
+		"Assets/service": {
+			"displayType": "Dienst",
+			"description": "dienst wordt aangeboden"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "{{amount}} punten verdiend"
+		},
+		"Assets/credits/bought": {
+			"content": "{{amount}} credits gekocht"
+		},
+		"Assets/credits/bonus": {
+			"content": "Bonus {{amount}} credits"
+		},
+		"Assets/credits/spent": {
+			"content": "{{amount}} credits uitgegeven"
+		},
+		"Assets/credits/sent": {
+			"content": "Verzonden {{amount}} credits naar {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "Ontvangen {{amount}} credits van {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "Je hebt weinig tegoed op je account. Ga naar <a href='<i translate='no'>999&#39;&gt;deze link</a> om meer credits te kopen."
+		}
+	},
+	"billing": {
+		"Title": "Activa facturering",
+		"CreditsMinimum": "Minimale kredieten",
+		"CreditsToAdd": "Credits om toe te voegen",
+		"Save": "Redden",
+		"ThisLink": "deze link",
+		"errors": {
+			"CreditsMinimumNegative": "Het minimum aan credits kan niet negatief zijn",
+			"CreditsToAddNegative": "Tegoeden om toe te voegen kunnen niet negatief zijn"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "Nieuwe dienst",
+			"TitlePlaceholder": "Dienst titel",
+			"PricePlaceholder": "Prijs instellen",
+			"LinkPlaceholder": "aanvullende info-link instellen",
+			"DescriptionPlaceholder": "Dienstbeschrijving",
+			"SaveService": "Bewaar dienst",
+			"SelectRequiredParticipants": "Vereiste gerelateerde deelnemers",
+			"RequiredParticipantsDesc": "Selecteer gerelateerde deelnemers die verplicht zijn om deze service te gebruiken (bijvoorbeeld huisdieren voor &quot;Hondenshow&quot;, of kinderen voor &quot;Kindervakantie&quot; enz.). Als de service wordt betaald, moet de gebruiker ook betalen voor alle gerelateerde deelnemers."
+		},
+		"EditServiceTemplate": {
+			"Title": "Dienst bewerken"
+		},
+		"ManageServiceTemplates": "Servicesjablonen beheren",
+		"ManageServices": "Diensten beheren",
+		"Free": "Vrij",
+		"OptionalContribution": "Optionele bijdrage",
+		"RequiredPayment": "Vereiste betaling",
+		"AreYouSureDelete": "Weet u zeker dat u deze service wilt verwijderen?",
+		"AmountServicesRelated": "Er zijn {{amount}} beschikbaarheden met betrekking tot deze service. Ze worden ook verwijderd."
+	},
+	"transfer": {
+		"SelectRecipient": "Selecteer ontvanger",
+		"TransactionSuccess": "Transactie succes",
+		"OrTypeWalletAddress": "OF typ het adres van de portemonnee van de ontvanger",
+		"AppCredits": "App-tegoeden"
+	},
+	"NFT": {
+		"Title": "Titel",
+		"Name": "Naam",
+		"EnterName": "Voer naam in",
+		"EnterAuthorWallet": "Voer de auteursportemonnee in",
+		"InformationAboutTitle": "Informatie over {{title}} NFT",
+		"Description": "Beschrijving",
+		"DetailedInformationAboutNFT": "Gedetailleerde informatie over NFT",
+		"PresaleStarts": "Voorverkoop start 23 december",
+		"OwnerUserNotFound": "Eigenaar van deze NFT is niet geregistreerd in onze applicatie.",
+		"BuyNow": "Koop nu",
+		"Buy": "Kopen",
+		"Add": "Toevoegen",
+		"Remove": "Verwijderen",
+		"NoNFTyet": "Nog geen NFT&#39;s",
+		"Conversation": "Gesprek",
+		"Create": "Cre\u00ebren",
+		"CurrentBid": "huidig bod",
+		"StartingIn": "Beginnend in",
+		"EndingIn": "Eindigend in",
+		"CreateNFT": "Maak een NFT aan",
+		"TitlePlaceholder": "Geef uw NFT een titel",
+		"DescriptionPlaceholder": "Geef uw NFT een beschrijving",
+		"CreateYourNFT": "Maak uw NFT",
+		"Royalties": "royalty&#39;s",
+		"RoyaltyPlaceholder": "Optioneel. Bedrag betaald aan maker v\u00f3\u00f3r overdracht.",
+		"ExpirationDate": "uiterste houdbaarheidsdatum",
+		"StartingDate": "Begin datum",
+		"BidsBelowThisAmount": "Biedingen onder dit bedrag zijn niet toegestaan",
+		"MinimumBid": "Minimum bod",
+		"Author": "Auteur",
+		"Price": "Prijs",
+		"Commission": "Commissie",
+		"EnterCommission": "Voer commissie in",
+		"Owner": "Eigenaar",
+		"SelectCategory": "Selecteer categorie",
+		"Day": "Dag",
+		"Days": "Dagen",
+		"Hour": "Uur",
+		"Hours": "Uur",
+		"Minute": "Minuut",
+		"Minutes": "Minuten",
+		"Second": "Seconde",
+		"Seconds": "seconden",
+		"SalesCreator": "van de verkoop gaat naar de maker",
+		"Details": "Details",
+		"Bids": "Biedingen",
+		"History": "Geschiedenis",
+		"LoremIpsum": "Lorem Ipsum is slechts een proeftekst uit de drukkerij- en zetindustrie.",
+		"PutOnSale": "In de verkoop gezet",
+		"PutOffSale": "Terugtrekken uit de verkoop",
+		"Transfer": "Overdracht",
+		"Actions": "Acties",
+		"Claim": "Claim",
+		"ClaimNFT": "NFT claimen",
+		"Unlocking": "Ontgrendelen",
+		"Unlock": "Ontgrendelen",
+		"Update": "Update",
+		"UpdateToken": "Token bijwerken",
+		"UpdateNFT": "NFT bijwerken",
+		"CreateToken": "Token maken",
+		"PlaceBid": "Bod plaatsen",
+		"SoldOut": "Verkocht",
+		"NotOnSale": "Niet in de uitverkoop",
+		"NftName": "NFT naam",
+		"DescribeYourNFT": "Beschrijf uw NFT",
+		"NFTImage": "Afbeelding voor NFT",
+		"NFTVideo": "Video voor NFT, indien aanwezig",
+		"UploadMovie": "Filmpje uploaden",
+		"MovieSource": "Film Bron",
+		"MovieURL": "Film-URL",
+		"UploadFile": "Een bestand uploaden",
+		"PutOnMarketplace": "Op marktplaats gezet",
+		"InstantPurchase": "Voer de prijs in zodat gebruikers direct uw NFT kunnen kopen",
+		"FixedPrice": "Vaste prijs",
+		"TimedAuction": "Getimede veiling",
+		"OpenForBids": "Open voor biedingen",
+		"PriceOnePiece": "Prijs per stuk invoeren",
+		"EnterPrice": "Voer prijs in",
+		"EnterMinimumBid": "Voer het minimumbod in",
+		"SelectChain": "Selecteer ketting",
+		"Currency": "Munteenheid",
+		"AreYouSureDeleteImage": "Weet u zeker dat u de afbeelding wilt verwijderen?",
+		"AreYouSureDeleteVideo": "Weet je zeker dat je video wilt verwijderen?",
+		"series": {
+			"Name": "Naam",
+			"Icon": "Icoon",
+			"Description": "Beschrijving",
+			"Author": "Auteur",
+			"SelectSeries": "Selecteer serie",
+			"Value": "Waarde",
+			"AreYouSure": "Weet je het zeker?",
+			"AuthorInvalid": "Auteursadres ongeldig!",
+			"Address": "Adres",
+			"CoverImage": "Omslagfoto",
+			"UploadCoverImage": "Omslagafbeelding uploaden",
+			"CommissionAddressInvalid": "Commissieadres ongeldig",
+			"OnSale": "te koop",
+			"OffSale": "uit de verkoop",
+			"CreateSeries": "Serie maken",
+			"UpdateSeries": "Serie bijwerken",
+			"SeriesInfo": "Serie-info",
+			"SelectAuthor": "Selecteer auteur",
+			"NewItem": "Nieuwe NFT-serie",
+			"NamePlaceholder": "Voer serienaam in",
+			"DescPlaceholder": "Voer een seriebeschrijving in",
+			"EndingIn": "Eindigend in"
+		},
+		"contract": {
+			"CreateContract": "Overeenkomst maken",
+			"SelectContract": "Selecteer contract",
+			"CreateContractFor": "Maak een contract voor {{userName}}",
+			"ContractFor": "Contract voor {{userName}}",
+			"UpdateContract": "Overeenkomst bijwerken",
+			"TransferOwnership": "Eigendom overdragen",
+			"SetBaseURI": "Basis-URI instellen",
+			"SetSuffix": "Achtervoegsel instellen",
+			"CurrentOwner": "Huidige eigenaar",
+			"CurrentBaseURL": "Huidige basis-URL",
+			"ContractAddressAbsent": "Contractadres ontbreekt",
+			"FactoryAddressAbsent": "Fabrieksadres ontbreekt",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "Titel vereist",
+			"SymbolRequired": "Symbool vereist",
+			"TypeContractName": "contract naam",
+			"TypeContractSymbol": "contractsymbool (max. 10 tekens)"
+		},
+		"contests": {
+			"Title": "Wedstrijden",
+			"NewContest": "Nieuwe wedstrijd"
+		},
+		"import": {
+			"importNFT": "NFT&#39;s importeren",
+			"importAttributes": "Importeer NFT-attributen",
+			"fileNotFound": "Sorry, CSV-bestand niet gevonden.",
+			"fileEmpty": "Sorry, CSV-bestand is leeg.",
+			"userIdNotFound": "gebruiker bestaat maar id is leeg",
+			"errorLine": "lijn {{1}}",
+			"fieldNotFound": "Verplicht veld &quot; {{1}} &quot; niet gevonden",
+			"displayTypeEmpty": "Weergavetype voor &quot; {{1}} &quot; niet gevonden",
+			"taskStreamInvalid": "taakstroom ongeldig",
+			"instructionsEmpty": "taakstroominstructies leeg",
+			"complete": "Compleet",
+			"activateUsers": "activeringsbericht naar gebruikers sturen?",
+			"importProgress": "Voortgang",
+			"importOptions": "Opties",
+			"sampleCSV": "Voorbeeld CSV downloaden",
+			"fileLabel": "Spreadsheet uploaden:",
+			"errorsTitle": "Er zijn fouten opgetreden"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "Filter op NFT-collecties",
+				"ShowNFTCollection": "Toon NFT-collectie in ...",
+				"AllCollections": "Alle collecties"
+			},
+			"ByUser": {
+				"AllAuthors": "Alle auteurs",
+				"AllUsers": "Iedereen",
+				"FilterByAuthors": "Filteren op auteurs"
+			}
+		},
+		"Back": "Terug naar Collectie",
+		"attributes": {
+			"Title": "Attributen beheren",
+			"Attributes": "attributen",
+			"DisplayTitle": "Weergavetype",
+			"AddDisplayType": "Voeg een nieuw weergavetype toe",
+			"NewDisplay": "Nieuwe weergave",
+			"TraitTitle": "Type eigenschap",
+			"AddTraitTitle": "Voeg een nieuw eigenschapstype toe",
+			"NewTrait": "Nieuw eigenschapstype",
+			"ValueTitle": "Waarde",
+			"AddValueTitle": "Nieuwe waarde toevoegen",
+			"NewValue": "Nieuwe waarde",
+			"NewAttribute": "Nieuw kenmerk",
+			"UpdateAttributes": "Attributen bijwerken",
+			"SaveAttributes": "Attributen opslaan"
+		},
+		"profile": {
+			"LogOut": "Uitloggen",
+			"Title": "Profiel voor {{userName}}",
+			"Description": "Gebruikersdetails",
+			"aboutPlaceholder": "Biografie bewerken",
+			"SureLogOut": "Weet je zeker dat je wilt uitloggen?",
+			"UploadCoverPhoto": "Omslagfoto uploaden"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFTContract",
+						"seriesId": "serie id",
+						"owner": "Eigenaar",
+						"currency": "\u0421urrency",
+						"price": "Prijs",
+						"beneficiary": "Begunstigde",
+						"autoindex": "Auto-index",
+						"duration": "Duur",
+						"rateInterval": "Tarief interval",
+						"rateAmount": "Beoordeel bedrag"
+					},
+					"small": {
+						"NFTContract": "NFTContract",
+						"seriesId": "tokens worden geslagen in deze serie",
+						"owner": "eigenaar van de instantie, anders wordt het de afzender",
+						"currency": "Valuta voor gekochte tokens, indien nul - voor native munten",
+						"price": "Prijs",
+						"beneficiary": "Begunstigde van de verkoop van tokens, anders is dit de afzender",
+						"autoindex": "Auto-index",
+						"duration": "Slot na het slaan. Nul betekent direct ophalen.",
+						"rateInterval": "emmer interval voor speciale aankoop",
+						"rateAmount": "emmerbedrag voor speciale aankoop"
+					}
+				},
+				"placeholders": {
+					"optional": "(optioneel)",
+					"number": "nummer",
+					"address": "adres",
+					"fraction": "fractie",
+					"integer": "geheel getal",
+					"seconds": "seconden",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "Produceren",
+				"viewInstancesList": "Ververs lijst"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "Serie-ID",
+						"account": "Rekening",
+						"amount": "Hoeveelheid"
+					},
+					"small": {
+						"seriesId": "nieuw token hoort in serie met zo&#39;n ID",
+						"account": "eigenaar van nieuw gecre\u00eberde NFT. indien niet ingesteld - zal de huidige portemonnee gebruiken",
+						"amount": "bedrag NFT naar munt"
+					}
+				},
+				"placeholders": {
+					"optional": "(optioneel)",
+					"seriesId": "ID kaart",
+					"account": "rekening",
+					"amount": "hoeveelheid",
+					"integer": "geheel getal"
+				},
+				"btn": {
+					"Purchase": "Aankoop",
+					"SpecialPurchase": "Speciale aankoop"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "Adres"
+					},
+					"small": {
+						"account": "Adres"
+					}
+				},
+				"errors": {
+					"invalidAddress": "Ongeldig adres"
+				},
+				"placeholders": {
+					"account": "Adres"
+				},
+				"addToWhitelist": "Toevoegen aan witte lijst",
+				"removeFromWhitelist": "Verwijderen van witte lijst"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "Token-ID",
+					"custodian": "Conci\u00ebrge",
+					"recipient": "Ontvanger"
+				},
+				"small": {
+					"tokenId": "token-ID wat moet worden vergrendeld of ontgrendeld",
+					"custodian": "adres dat kan worden ontgrendeld",
+					"recipient": "adres dat de tokens zal ontvangen"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "Ongeldige token-ID",
+				"invalidCustodian": "Ongeldige bewaarder",
+				"invalidRecipient": "Ongeldige ontvanger"
+			},
+			"placeholders": {
+				"optional": "(optioneel)",
+				"tokenId": "ID kaart",
+				"custodian": "adres"
+			},
+			"Lock": "Slot",
+			"Unlock": "Ontgrendelen",
+			"Locked": "Op slot",
+			"CustodianAddress": "Bewaarder adres",
+			"TokenWasClaimed": "Token &quot; {{title}} &quot; werd geclaimd",
+			"TokenWasLocked": "Token &quot; {{title}} &quot; was vergrendeld",
+			"TokenWasUnlocked": "Token &quot; {{title}} &quot; is ontgrendeld"
+		},
+		"GenerateDescription": "of automatisch genereren",
+		"collections": {
+			"Title": "Collecties",
+			"EnterTitle": "titel invoeren",
+			"EnterDescription": "voer beschrijving in",
+			"NewCollection": "Nieuwe collectie",
+			"Name": "Naam",
+			"Icon": "Icoon",
+			"Description": "Beschrijving",
+			"Author": "Auteur",
+			"SelectCollection": "Selecteer collectie",
+			"Value": "Waarde",
+			"AreYouSure": "Weet je het zeker?",
+			"AuthorInvalid": "Auteursadres ongeldig!",
+			"Address": "Adres",
+			"CoverImage": "Omslagfoto",
+			"UploadIcon": "Upload icoon",
+			"CommissionAddressInvalid": "Commissieadres ongeldig",
+			"OnSale": "te koop",
+			"OffSale": "uit de verkoop",
+			"CreateCollection": "Verzameling maken",
+			"UpdateCollection": "Collectie bijwerken",
+			"CollectionInfo": "Collectie-info",
+			"SelectAuthor": "Selecteer auteur",
+			"NewItem": "Nieuwe NFT-collectie",
+			"NamePlaceholder": "Voer de naam van de collectie in",
+			"DescPlaceholder": "Voer een collectiebeschrijving in",
+			"EndingIn": "Eindigend in",
+			"SubmitSeries": "Dien een serie in"
+		}
+	},
+	"currencies": {
+		"choose": "Kies een valuta"
+	},
+	"connectedAccount": {
+		"Title": "Account koppelen",
+		"Success": "Succes",
+		"YourAccountCreated": "Uw account is succesvol aangemaakt!",
+		"YourAccountAlreadyCreated": "Uw account is al aangemaakt en klaar voor gebruik"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "reserveToken",
+						"amount": "Hoeveelheid"
+					},
+					"small": {
+						"reserveToken": "reserveToken",
+						"amount": "Hoeveelheid"
+					}
+				},
+				"placeholders": {
+					"amount": "hoeveelheid"
+				},
+				"btns": {
+					"stake": "Inzet"
+				},
+				"stake": "Inzet",
+				"loading": "Bezig met laden"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Duur",
+					"bonusTokenFraction": "bonusTokenFractie",
+					"popularToken": "populairToken",
+					"donations": "donaties",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "teller",
+					"denominator": "noemer"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Duur in dagen",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "populairToken",
+					"donations": "donaties",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "teller",
+					"denominator": "noemer"
+				}
+			},
+			"placeholders": {
+				"optional": "(optioneel)",
+				"tuple": "tupel[]",
+				"number": "nummer",
+				"address": "adres",
+				"fraction": "fractie",
+				"integer": "geheel getal",
+				"seconds": "seconden",
+				"days": "dagen",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Er zijn geen zwembaden"
+			},
+			"btns": {
+				"createPool": "Zwembad maken",
+				"createPoolInForm": "Cre\u00ebren"
+			},
+			"createPool": "Zwembad maken",
+			"produce": "Produceren",
+			"loading": "Bezig met laden",
+			"viewInstancesList": "Ververs lijst"
+		}
+	},
+	"fundrise": {
+		"placeholder": "typ iets over deze bijdrage..."
+	}
 }

@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Vendendo Token",
-                        "timestamps": "Tempos",
-                        "prices": "Preços",
-                        "endTime": "Fim do tempo",
-                        "thresholds": "Limites",
-                        "bonuses": "Bônus"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Proprietário não pode retirar",
-                            "option1": "O proprietário pode retirar tokens somente após o endTime passar",
-                            "option2": "O proprietário pode retirar tokens a qualquer momento"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Endereço da comunidade",
-                    "methodkeccack": "Função hash Keccak256",
-                    "roleId": "ID da função",
-                    "sellingToken": "Endereço de token de venda",
-                    "prices": "ETH, preço",
-                    "thresholds": "# de tokens",
-                    "bonuses": "% de bônus"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Não há fundos"
-                },
-                "btns": {
-                    "createFund": "Criar Fundo",
-                    "createFundInForm": "Criar"
-                },
-                "fundAddress": "Endereço do fundo",
-                "createFund": "Criar Fundo",
-                "fundInfo": "Informações",
-                "produce": "Produzir",
-                "loading": "Carregando",
-                "viewInstancesList": "Atualizar lista"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Vendendo Token",
+						"timestamps": "Tempos",
+						"prices": "Pre\u00e7os",
+						"endTime": "Fim do tempo",
+						"thresholds": "Limites",
+						"bonuses": "B\u00f4nus"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Propriet\u00e1rio n\u00e3o pode retirar",
+							"option1": "O propriet\u00e1rio pode retirar tokens somente ap\u00f3s o endTime passar",
+							"option2": "O propriet\u00e1rio pode retirar tokens a qualquer momento"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "Endere\u00e7o da comunidade",
+					"methodkeccack": "Fun\u00e7\u00e3o hash Keccak256",
+					"roleId": "ID da fun\u00e7\u00e3o",
+					"sellingToken": "Endere\u00e7o de token de venda",
+					"prices": "ETH, pre\u00e7o",
+					"thresholds": "# de tokens",
+					"bonuses": "% de b\u00f4nus"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "N\u00e3o h\u00e1 fundos"
+				},
+				"btns": {
+					"createFund": "Criar Fundo",
+					"createFundInForm": "Criar"
+				},
+				"fundAddress": "Endere\u00e7o do fundo",
+				"createFund": "Criar Fundo",
+				"fundInfo": "Informa\u00e7\u00f5es",
+				"produce": "Produzir",
+				"loading": "Carregando",
+				"viewInstancesList": "Atualizar lista"
+			}
+		}
+	}
 }

@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "ReserveToken",
-                        "duration": "مدة",
-                        "amount": "كمية"
-                    },
-                    "small": {
-                        "reserveToken": "ReserveToken",
-                        "duration": "مدة",
-                        "amount": "كمية"
-                    }
-                },
-                "placeholders": {
-                    "duration": "مدة",
-                    "amount": "كمية"
-                },
-                "btns": {
-                    "stake": "حصة"
-                },
-                "stake": "حصة",
-                "loading": "تحميل"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "ReserveToken",
+						"duration": "\u0645\u062f\u0629",
+						"amount": "\u0643\u0645\u064a\u0629"
+					},
+					"small": {
+						"reserveToken": "ReserveToken",
+						"duration": "\u0645\u062f\u0629",
+						"amount": "\u0643\u0645\u064a\u0629"
+					}
+				},
+				"placeholders": {
+					"duration": "\u0645\u062f\u0629",
+					"amount": "\u0643\u0645\u064a\u0629"
+				},
+				"btns": {
+					"stake": "\u062d\u0635\u0629"
+				},
+				"stake": "\u062d\u0635\u0629",
+				"loading": "\u062a\u062d\u0645\u064a\u0644"
+			}
+		}
+	}
 }

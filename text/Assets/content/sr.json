@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Грешка",
-        "WalletAbsent": "Новчаник није повезан.",
-        "Rendering": "Било је грешака при приказивању <span class='url'>{{1}}<\/span>",
-        "PriceRequired": "Цена обавезна!",
-        "NameRequired": "Име (обавезно!",
-        "PriceInvalid": "Цена неважећа!",
-        "AmountInvalid": "Износ је неважећи!",
-        "TransactionFailed": "Трансакција није успела",
-        "ChainNotSupported": "Изабрани ланац није подржан. Подржани ланац: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Потребан је МетаМаск повезан за рад са апликацијом",
-        "UserNotLoggedInMetaMask": "Корисник није пријављен на МетаМаск",
-        "CurrencyNotFound": "Валута није пронађена",
-        "WrongChain": "Овај НФТ креиран под &quot; {{chain}} &quot;. Молимо користите овај ланац.",
-        "NoRecipientSelected": "Није изабран прималац",
-        "NotEnoughPermissionsWallet": "Нема довољно дозвола за читање новчаника овог корисника",
-        "ThisUserHaveNoWallet": "Овом кориснику није додељен новчаник",
-        "TheWalletOfThisUserInvalid": "Новчаник овог корисника је неважећи",
-        "WalletInvalid": "Адреса новчаника је неважећа",
-        "CantManageFrozenSeries": "Не можете управљати замрзнутим серијама",
-        "SubscriptionStreamNotPaid": "Нисте платили за гледање овог садржаја. Кликните на {{subscriptionUrl}} и претплатите се на одговарајући план."
-    },
-    "admin": {
-        "Title": "Средства административна",
-        "SubscriptionTitle": "Планови претплате"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Додирните за плаћање"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : наплата обрађена за {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Хвала вам на уплати на {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} претплаћено на {{plan.title}}",
-        "YouSubscribedTo": "Претплаћени сте на {{plan.title}}",
-        "Assets\/credits\/alert": "Имате упозорење у вези са вашим налогом"
-    },
-    "charge": {
-        "Subject": "Добијате уплату од {{displayAmount}} од {{call 'publisher.displayName'}} од &quot; {{description}} &quot;",
-        "HasBeenCharged": "Хеј, ово је само да вас обавестим да је {{1}} наплаћено {{2}} за {{3}} од {{4}}"
-    },
-    "charged": {
-        "Subject": "Хвала вам на уплати за &quot; {{description}} &quot;",
-        "HavePaid": "Хеј {{1}} , ово је само брза потврда да сте успешно платили {{2}} до {{3}} за {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Информације о поруџбини",
-        "PaymentMethod": "Начин плаћања",
-        "ContactInfo": "Контакт информације",
-        "Pay": "Плати",
-        "PaymentSucceeded": "Плаћање је успело",
-        "PaymentProcessing.": "Ваша уплата се обрађује",
-        "FailTryAgain": "Ваша уплата није успела, покушајте поново",
-        "SomethingWrong": "Нешто није у реду",
-        "PaymentStatus": "Статус плаћање",
-        "PayTo": "Плати {{displayName}}",
-        "ChooseCurrency": "Изаберите валуту",
-        "YouCanSendUpTo": "Можете послати до {{amount}} {{symbol}}",
-        "Send": "Пошаљи",
-        "EnterAmount": "унети износ"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Позив је прихватио {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} попуњено {{FilledStreamTitle}}",
-        "ForFillingStream": "За пуњење {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "За почетак имате {{amount}} кредита",
-        "PaymentFor": "Плаћање за &quot; {{1}} &quot;",
-        "PaymentTo": "Плаћање до {{1}}",
-        "PaymentToUser": "Плаћање до {{toUserName}}",
-        "CreatePrivateChat": "за приватно ћаскање са {{toUserName}}",
-        "CreatePaidStream": "за стварање {{toStreamName}}",
-        "JoinedPaidStream": "за резервацију у &quot; <a data-publisherId='<i translate='no'>999 &#39; дата-стреамНаме=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "за стварање заједнице &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "као рефундирање резервације у &quot; <a data-publisherId='<i translate='no'>999 &#39; дата-стреамНаме=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "Купио {{amount}} кредита",
-        "BonusCredits": "Бонус {{amount}} кредита",
-        "BuyAmountCredits": "Купите {{amount}} кредита",
-        "WatchClip": "Зарадио {{amount}} кредита за гледање {{fromStreamTitle}}",
-        "MissingCredits": "Недостају кредити",
-        "YouMissingCredits": "Потребно вам је додатних {{amount}} кредита да бисте наставили.",
-        "BuyCredits": "Купите кредите",
-        "BuyBonus": "Куповина {{amount}} кредита одједном, довешће до бонуса {{bonus}} кредита.",
-        "Buy": "Купи",
-        "PurchaseCredits": "Куповина кредита",
-        "Credits": "Цредитс",
-        "ErrorInvalidAmount": "Износ је неважећи",
-        "ErrorInvalidCurrency": "Нажалост, још увек не подржавамо валуту {{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} кредита",
-            "BonusCredits": "{{amount}} кредита"
-        }
-    },
-    "history": {
-        "Date": "Датум",
-        "Amount": "Износ",
-        "Description": "Опис",
-        "Client": "Клијент",
-        "User": "Корисник",
-        "To": "до",
-        "From": "из",
-        "SeeHistory": "Погледајте историју плаћања за {{1}}",
-        "HistoryEmpty": "Још немате податке",
-        "PaymentFor": "Послато {{amount}} кредита",
-        "PaymentTo": "Послато {{amount}} кредита",
-        "PaymentToUser": "Послато {{amount}} кредита",
-        "CreatePaidStream": "Потрошено {{amount}} кредита",
-        "WatchClip": {
-            "+": "Зарадио {{amount}} кредита",
-            "-": "Потрошено {{amount}} кредита"
-        },
-        "JoinedPaidStream": {
-            "+": "Зарадио {{amount}} кредита",
-            "-": "Потрошено {{amount}} кредита"
-        },
-        "LeftPaidStream": {
-            "+": "Примљено {{amount}} кредита",
-            "-": "Послато {{amount}} кредита"
-        },
-        "CreatedCommunity": "Потрошено {{amount}} кредита",
-        "BoughtCredits": "Купио {{amount}} кредита",
-        "BonusCredits": "Добио бонус {{amount}} кредита",
-        "InviteAcceptedBy": "Зарадио {{amount}} кредита",
-        "Streams_user_firstname": "Зарадио {{amount}} кредита",
-        "Streams_user_lastname": "Зарадио {{amount}} кредита",
-        "Streams_user_icon": "Зарадио {{amount}} кредита",
-        "Places_user_location": "Зарадио {{amount}} кредита",
-        "Streams_greeting": "Зарадио {{amount}} кредита",
-        "YouHaveCreditsToStart": "Зарадио {{amount}} кредита",
-        "InvitedUserFilledStream": "Зарадио {{amount}} кредита",
-        "ForFillingStream": "Зарадио {{amount}} кредита",
-        "CreatePrivateChat": "Потрошено {{amount}} кредита"
-    },
-    "subscriptions": {
-        "infoTitle": "Подесите информације о плаћању",
-        "confirm": {
-            "title": "Покрени претплату",
-            "message": "Започните понављајућу претплату на „ {{title}} “?",
-            "ok": "У реду",
-            "cancel": "Поништити, отказати"
-        },
-        "CreditOrDebitCard": "Кредитна или дебитна картица",
-        "SubscribePayment": "Плаћање претплате",
-        "ImmediatePayment": "Одмах плаћање",
-        "ProcessingPayment": "Обрада плаћања",
-        "SubscriptionAlreadyPaid": "Ова претплата је већ плаћена",
-        "SubscriptionNotActive": "Ова претплата није активна",
-        "Subscribed": "Претплаћени",
-        "Unsubscribed": "Отказано",
-        "Unsubscribe": "Откажи претплату",
-        "Subscribe": "претплатити се",
-        "Started": "Почело",
-        "EndsIn": "Завршава се у",
-        "NextPay": "Следећа уплата",
-        "Period": "Раздобље",
-        "Price": "Цена",
-        "AreYouSureUnsubscribe": "Да ли сте сигурни да желите да опозовете претплату на овај план?",
-        "YouUnsubscribedFromPlan": "Отказали сте претплату на план &quot; {{planTitle}} &quot;. Нећете наплаћивати, али ваша претплата ће се наставити до {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "наслов плана",
-            "PricePlaceholder": "Цена",
-            "DescriptionPlaceholder": "опис претплатничког плана",
-            "SavePlan": "Сачувај план",
-            "NewPlan": "Нови план",
-            "SubscriptionTitle": "Планови претплате",
-            "AreYouSureDeletePlan": "Да ли сте сигурни да желите да избришете овај план?",
-            "Duration": "Трајање",
-            "Discount": "Попуст",
-            "Interrupt": "Прекидати",
-            "Continue": "Настави",
-            "SelectDisplayType": "Изаберите {{displayType}}",
-            "EndDate": "крајњи датум",
-            "Available": "Доступан",
-            "Hidden": "Скривено",
-            "InviteOnly": "Само по позиву",
-            "CantSubscribeUnlessInvited": "Не можете се претплатити на овај план осим ако нисте позвани"
-        }
-    },
-    "payments": {
-        "infoTitle": "Подесите информације о плаћању",
-        "BuyAmountCredits": "Купите {{amount}} кредита",
-        "confirm": {
-            "title": "Извршити уплату",
-            "message": "Да ли се слажете да платите {{symbol}} {{amount}} ?",
-            "ok": "У реду",
-            "cancel": "Поништити, отказати"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Цредитс",
-            "description": "води евиденцију о кредитима и плаћањима"
-        },
-        "Assets\/plan": {
-            "displayType": "План претплате",
-            "description": "претплатнички план"
-        },
-        "Assets\/subscription": {
-            "displayType": "Претплата",
-            "description": "претплата"
-        },
-        "Assets\/product": {
-            "displayType": "Производ",
-            "description": "производ који се продаје"
-        },
-        "Assets\/service": {
-            "displayType": "Услуга",
-            "description": "услуга која се нуди"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "Зарадио {{amount}} кредита"
-        },
-        "Assets\/credits\/bought": {
-            "content": "Купио {{amount}} кредита"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Бонус {{amount}} кредита"
-        },
-        "Assets\/credits\/spent": {
-            "content": "Потрошено {{amount}} кредита"
-        },
-        "Assets\/credits\/sent": {
-            "content": "Послато {{amount}} кредита на {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Примио {{amount}} кредита од {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Имате мало кредита на свом рачуну. Посетите <a href='<i translate='no'>999 &#39;&gt;овај линк<\/a> да бисте купили још кредита."
-        }
-    },
-    "billing": {
-        "Title": "Наплата средстава",
-        "CreditsMinimum": "Минимални кредити",
-        "CreditsToAdd": "Кредити за додавање",
-        "Save": "сачувати",
-        "ThisLink": "овај линк",
-        "errors": {
-            "CreditsMinimumNegative": "Минимум кредита не може бити негативан",
-            "CreditsToAddNegative": "Кредити за додавање не могу бити негативни"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Нова услуга",
-            "TitlePlaceholder": "Назив услуге",
-            "PricePlaceholder": "Поставите цену",
-            "LinkPlaceholder": "поставите везу за додатне информације",
-            "DescriptionPlaceholder": "Опис услуге",
-            "SaveService": "Саве Сервице",
-            "SelectRequiredParticipants": "Обавезни сродни учесници",
-            "RequiredParticipantsDesc": "Молимо изаберите повезане учеснике који су обавезни да користе ову услугу (на пример кућни љубимци за „Изложбу паса“, или деца за „Дечји празник“ итд.). Ако је услуга плаћена, корисник ће морати да плати и за сваког повезаног учесника."
-        },
-        "EditServiceTemplate": {
-            "Title": "Уреди услугу"
-        },
-        "ManageServiceTemplates": "Управљајте предлошцима услуга",
-        "ManageServices": "Управљајте услугама",
-        "Free": "бесплатно",
-        "OptionalContribution": "Факултативни допринос",
-        "RequiredPayment": "Обавезно плаћање",
-        "AreYouSureDelete": "Да ли сте сигурни да желите да избришете ову услугу?",
-        "AmountServicesRelated": "Постоји {{amount}} доступности у вези са овом услугом. Они ће такође бити уклоњени."
-    },
-    "transfer": {
-        "SelectRecipient": "Изаберите примаоца",
-        "TransactionSuccess": "Трансацтион Суццесс",
-        "OrTypeWalletAddress": "ИЛИ унесите адресу новчаника примаоца",
-        "AppCredits": "Апп Цредитс"
-    },
-    "NFT": {
-        "Title": "Наслов",
-        "Name": "Име",
-        "EnterName": "Унесите име",
-        "EnterAuthorWallet": "Унесите новчаник аутора",
-        "InformationAboutTitle": "Информације о {{title}} НФТ",
-        "Description": "Опис",
-        "DetailedInformationAboutNFT": "Детаљне информације о НФТ-у",
-        "PresaleStarts": "Претпродаја почиње 23. децембра",
-        "OwnerUserNotFound": "Власник овог НФТ-а није регистрован у нашој апликацији.",
-        "BuyNow": "Купите сада",
-        "Buy": "Купи",
-        "Add": "Додати",
-        "Remove": "Уклони",
-        "NoNFTyet": "Још нема НФТ-а",
-        "Conversation": "Разговор",
-        "Create": "Креирај",
-        "CurrentBid": "Тренутна понуда",
-        "StartingIn": "Почевши у",
-        "EndingIn": "Завршава",
-        "CreateNFT": "Направите НФТ",
-        "TitlePlaceholder": "Дајте свом НФТ-у наслов",
-        "DescriptionPlaceholder": "Дајте свој НФТ опис",
-        "CreateYourNFT": "Креирајте свој НФТ",
-        "Royalties": "Ауторске накнаде",
-        "RoyaltyPlaceholder": "Опционо. Износ плаћен креатору пре преноса.",
-        "ExpirationDate": "Рок трајања",
-        "StartingDate": "Датум почетка",
-        "BidsBelowThisAmount": "Понуде испод овог износа неће бити дозвољене",
-        "MinimumBid": "Минимална понуда",
-        "Author": "Аутор",
-        "Price": "Цена",
-        "Commission": "Комисија",
-        "EnterCommission": "Унесите провизију",
-        "Owner": "Власник",
-        "SelectCategory": "Изаберите категорију",
-        "Day": "Дан",
-        "Days": "Дани",
-        "Hour": "Сат",
-        "Hours": "Сати",
-        "Minute": "Минута",
-        "Minutes": "Минута",
-        "Second": "Друго",
-        "Seconds": "Секунде",
-        "SalesCreator": "од продаје ће ићи креатору",
-        "Details": "Детаљи",
-        "Bids": "Бидс",
-        "History": "Историја",
-        "LoremIpsum": "Лорем Ипсум је једноставно лажни текст индустрије штампања и куцања.",
-        "PutOnSale": "Ставите на продају",
-        "PutOffSale": "Повући из продаје",
-        "Transfer": "Трансфер",
-        "Actions": "Акције",
-        "Claim": "Потраживање",
-        "ClaimNFT": "Захтевај НФТ",
-        "Unlocking": "Откључавање",
-        "Unlock": "Откључај",
-        "Update": "ажурирање",
-        "UpdateToken": "Упдате Токен",
-        "UpdateNFT": "Ажурирајте НФТ",
-        "CreateToken": "Цреате Токен",
-        "PlaceBid": "Уложи",
-        "SoldOut": "Продат",
-        "NotOnSale": "Није на продају",
-        "NftName": "НФТ име",
-        "DescribeYourNFT": "Молимо опишите свој НФТ",
-        "NFTImage": "Слика за НФТ",
-        "NFTVideo": "Видео за НФТ, ако постоји",
-        "UploadMovie": "Отпреми филм",
-        "MovieSource": "Мовие Соурце",
-        "MovieURL": "УРЛ филма",
-        "UploadFile": "Отпремите датотеку",
-        "PutOnMarketplace": "Ставите на тржиште",
-        "InstantPurchase": "Унесите цену да бисте омогућили корисницима да одмах купе ваш НФТ",
-        "FixedPrice": "Фиксна цена",
-        "TimedAuction": "Временска аукција",
-        "OpenForBids": "Отворено за понуде",
-        "PriceOnePiece": "Унесите цену за један комад",
-        "EnterPrice": "Унесите цену",
-        "EnterMinimumBid": "Унесите минималну понуду",
-        "SelectChain": "Изаберите ланац",
-        "Currency": "Валута",
-        "AreYouSureDeleteImage": "Да ли сте сигурни да желите да уклоните слику?",
-        "AreYouSureDeleteVideo": "Да ли сте сигурни да желите да уклоните видео?",
-        "series": {
-            "Name": "Име",
-            "Icon": "Икона",
-            "Description": "Опис",
-            "Author": "Аутор",
-            "SelectSeries": "Изаберите серију",
-            "Value": "Валуе",
-            "AreYouSure": "Јеси ли сигуран?",
-            "AuthorInvalid": "Адреса аутора је неважећа!",
-            "Address": "Адреса",
-            "CoverImage": "Насловна слика",
-            "UploadCoverImage": "Отпремите насловну слику",
-            "CommissionAddressInvalid": "Адреса комисије неважећа",
-            "OnSale": "на распродаји",
-            "OffSale": "офф сале",
-            "CreateSeries": "Цреате Сериес",
-            "UpdateSeries": "Упдате Сериес",
-            "SeriesInfo": "Информације о серији",
-            "SelectAuthor": "Изаберите аутора",
-            "NewItem": "Нова НФТ серија",
-            "NamePlaceholder": "Унесите назив серије",
-            "DescPlaceholder": "Унесите опис серије",
-            "EndingIn": "Завршава"
-        },
-        "contract": {
-            "CreateContract": "Направите уговор",
-            "SelectContract": "Изаберите уговор",
-            "CreateContractFor": "Направите уговор за {{userName}}",
-            "ContractFor": "Уговор за {{userName}}",
-            "UpdateContract": "Ажурирајте уговор",
-            "TransferOwnership": "Трансфер Овнерсхип",
-            "SetBaseURI": "Поставите основни УРИ",
-            "SetSuffix": "Поставите суфикс",
-            "CurrentOwner": "Тренутни власник",
-            "CurrentBaseURL": "Цуррент БасеУРЛ",
-            "ContractAddressAbsent": "Адреса уговора одсутна",
-            "FactoryAddressAbsent": "Адреса фабрике одсутна",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Наслов је обавезан",
-            "SymbolRequired": "Симбол је обавезан",
-            "TypeContractName": "назив уговора",
-            "TypeContractSymbol": "симбол уговора (макс. 10 знакова)"
-        },
-        "contests": {
-            "Title": "Конкурси",
-            "NewContest": "Нев Цонтест"
-        },
-        "import": {
-            "importNFT": "Увоз НФТ-а",
-            "importAttributes": "Увезите НФТ атрибуте",
-            "fileNotFound": "Жао нам је, ЦСВ датотека није пронађена.",
-            "fileEmpty": "Жао нам је, ЦСВ датотека је празна.",
-            "userIdNotFound": "корисник постоји, али је ИД празан",
-            "errorLine": "ред {{1}}",
-            "fieldNotFound": "Обавезно поље &quot; {{1}} &quot; није пронађено",
-            "displayTypeEmpty": "Тип приказа за &quot; {{1}} &quot; није пронађен",
-            "taskStreamInvalid": "ток задатака је неважећи",
-            "instructionsEmpty": "упутства за ток задатака празна",
-            "complete": "комплетан",
-            "activateUsers": "послати активациону поруку корисницима?",
-            "importProgress": "Напредак",
-            "importOptions": "Опције",
-            "sampleCSV": "Преузмите пример ЦСВ-а",
-            "fileLabel": "Отпреми табелу:",
-            "errorsTitle": "Дошло је до грешака"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Филтрирај према НФТ колекцијама",
-                "ShowNFTCollection": "Прикажи НФТ колекцију у...",
-                "AllCollections": "Све колекције"
-            },
-            "ByUser": {
-                "AllAuthors": "Сви аутори",
-                "AllUsers": "Сви",
-                "FilterByAuthors": "Филтрирај по ауторима"
-            }
-        },
-        "Back": "Назад на колекцију",
-        "attributes": {
-            "Title": "Управљајте атрибутима",
-            "Attributes": "Атрибути",
-            "DisplayTitle": "Тип екрана",
-            "AddDisplayType": "Додајте нови тип приказа",
-            "NewDisplay": "Нови екран",
-            "TraitTitle": "Траит Типе",
-            "AddTraitTitle": "Додајте нови тип особине",
-            "NewTrait": "Нови тип особине",
-            "ValueTitle": "Валуе",
-            "AddValueTitle": "Додајте нову вредност",
-            "NewValue": "Нова вредност",
-            "NewAttribute": "Нови атрибут",
-            "UpdateAttributes": "Ажурирајте атрибуте",
-            "SaveAttributes": "Сачувај атрибуте"
-        },
-        "profile": {
-            "LogOut": "Одјавити се",
-            "Title": "Профил за {{userName}}",
-            "Description": "Подаци о кориснику",
-            "aboutPlaceholder": "Уреди биографију",
-            "SureLogOut": "Да ли сте сигурни да желите да се одјавите?",
-            "UploadCoverPhoto": "Отпремите насловну фотографију"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "НФТЦонтрацт",
-                        "seriesId": "серија Ид",
-                        "owner": "Власник",
-                        "currency": "Цурренци",
-                        "price": "Цена",
-                        "beneficiary": "корисник",
-                        "autoindex": "Аутоиндек",
-                        "duration": "Трајање",
-                        "rateInterval": "Интервал стопе",
-                        "rateAmount": "Стопа износ"
-                    },
-                    "small": {
-                        "NFTContract": "НФТЦонтрацт",
-                        "seriesId": "жетони ће бити ковани у овој серији",
-                        "owner": "власник инстанце, иначе ће бити пошиљалац",
-                        "currency": "Валута за купљене токене, ако је нула - за изворне новчиће",
-                        "price": "Цена",
-                        "beneficiary": "Корисник продаје токена, иначе ће бити пошиљалац",
-                        "autoindex": "Аутоиндек",
-                        "duration": "Закључавање после ковања. Нула значи одмах добити.",
-                        "rateInterval": "интервал кашике за посебну куповину",
-                        "rateAmount": "износ канте за посебну куповину"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(опционо)",
-                    "number": "број",
-                    "address": "адреса",
-                    "fraction": "фракција",
-                    "integer": "цео број",
-                    "seconds": "секунди",
-                    "uint256": "уинт256",
-                    "uint192": "уинт192",
-                    "uint64": "уинт64",
-                    "uint32": "уинт32",
-                    "uint16": "уинт16"
-                },
-                "produce": "Производити",
-                "viewInstancesList": "Освежи листу"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "ИД серије",
-                        "account": "Рачун",
-                        "amount": "Износ"
-                    },
-                    "small": {
-                        "seriesId": "нови токен ће припадати у серију са таквим ИД-ом",
-                        "account": "власник новоствореног НФТ-а. ако није подешен - користиће тренутни новчаник",
-                        "amount": "износ НФТ за исковати"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(опционо)",
-                    "seriesId": "ид",
-                    "account": "рачун",
-                    "amount": "износ",
-                    "integer": "цео број"
-                },
-                "btn": {
-                    "Purchase": "Куповина",
-                    "SpecialPurchase": "Специјална куповина"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Адреса"
-                    },
-                    "small": {
-                        "account": "Адреса"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Погрешна адреса"
-                },
-                "placeholders": {
-                    "account": "Адреса"
-                },
-                "addToWhitelist": "Додај на белу листу",
-                "removeFromWhitelist": "Уклони са беле листе"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "ИД токена",
-                    "custodian": "Цустодиан",
-                    "recipient": "Прималац"
-                },
-                "small": {
-                    "tokenId": "ИД токена шта треба закључати или откључати",
-                    "custodian": "адресу која се може откључати",
-                    "recipient": "адресу која ће примити токене"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Неважећи токенИд",
-                "invalidCustodian": "Неважећи чувар",
-                "invalidRecipient": "Неважећи прималац"
-            },
-            "placeholders": {
-                "optional": "(опционо)",
-                "tokenId": "ид",
-                "custodian": "адреса"
-            },
-            "Lock": "закључати",
-            "Unlock": "Откључај",
-            "Locked": "Закључано",
-            "CustodianAddress": "Адреса чувара",
-            "TokenWasClaimed": "Токен &quot; {{title}} &quot; је заузет",
-            "TokenWasLocked": "Токен &quot; {{title}} &quot; је закључан",
-            "TokenWasUnlocked": "Токен &quot; {{title}} &quot; је откључан"
-        },
-        "GenerateDescription": "или аутоматски генерисати",
-        "collections": {
-            "Title": "Збирке",
-            "EnterTitle": "унесите наслов",
-            "EnterDescription": "унесите опис",
-            "NewCollection": "Нова колекција",
-            "Name": "Име",
-            "Icon": "Икона",
-            "Description": "Опис",
-            "Author": "Аутор",
-            "SelectCollection": "Изаберите колекцију",
-            "Value": "Валуе",
-            "AreYouSure": "Јеси ли сигуран?",
-            "AuthorInvalid": "Адреса аутора је неважећа!",
-            "Address": "Адреса",
-            "CoverImage": "Насловна слика",
-            "UploadIcon": "Икона за отпремање",
-            "CommissionAddressInvalid": "Адреса комисије неважећа",
-            "OnSale": "на распродаји",
-            "OffSale": "офф сале",
-            "CreateCollection": "Направите колекцију",
-            "UpdateCollection": "Упдате Цоллецтион",
-            "CollectionInfo": "Информације о колекцији",
-            "SelectAuthor": "Изаберите аутора",
-            "NewItem": "Нова НФТ колекција",
-            "NamePlaceholder": "Унесите назив колекције",
-            "DescPlaceholder": "Унесите опис колекције",
-            "EndingIn": "Завршава",
-            "SubmitSeries": "Пошаљите серију"
-        }
-    },
-    "currencies": {
-        "choose": "Изаберите валуту"
-    },
-    "connectedAccount": {
-        "Title": "Повежите налог",
-        "Success": "Успех",
-        "YourAccountCreated": "Ваш налог је успешно направљен!",
-        "YourAccountAlreadyCreated": "Ваш налог је већ креиран и спреман за употребу"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "ресервеТокен",
-                        "amount": "Износ"
-                    },
-                    "small": {
-                        "reserveToken": "ресервеТокен",
-                        "amount": "Износ"
-                    }
-                },
-                "placeholders": {
-                    "amount": "износ"
-                },
-                "btns": {
-                    "stake": "Улог"
-                },
-                "stake": "Улог",
-                "loading": "Лоадинг"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "токенЕрц20",
-                    "duration": "Трајање",
-                    "bonusTokenFraction": "бонусТокенФрацтион",
-                    "popularToken": "популарТокен",
-                    "donations": "донације",
-                    "rewardsRateFraction": "ревардсРатеФрацтион",
-                    "numerator": "бројилац",
-                    "denominator": "именилац"
-                },
-                "small": {
-                    "tokenErc20": "токенЕрц20",
-                    "duration": "Трајање у данима",
-                    "bonusTokenFraction": "бонусТокенФрацтион",
-                    "popularToken": "популарТокен",
-                    "donations": "донације",
-                    "rewardsRateFraction": "ревардсРатеФрацтион",
-                    "numerator": "бројилац",
-                    "denominator": "именилац"
-                }
-            },
-            "placeholders": {
-                "optional": "(опционо)",
-                "tuple": "тупле[]",
-                "number": "број",
-                "address": "адреса",
-                "fraction": "фракција",
-                "integer": "цео број",
-                "seconds": "секунди",
-                "days": "дана",
-                "uint256": "уинт256",
-                "uint192": "уинт192",
-                "uint64": "уинт64",
-                "uint32": "уинт32",
-                "uint16": "уинт16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Нема базена"
-            },
-            "btns": {
-                "createPool": "Цреате Поол",
-                "createPoolInForm": "Креирај"
-            },
-            "createPool": "Цреате Поол",
-            "produce": "Производити",
-            "loading": "Лоадинг",
-            "viewInstancesList": "Освежи листу"
-        }
-    },
-    "fundrise": {
-        "placeholder": "откуцај нешто о овом прилогу..."
-    }
+	"errors": {
+		"Error": "\u0413\u0440\u0435\u0448\u043a\u0430",
+		"WalletAbsent": "\u041d\u043e\u0432\u0447\u0430\u043d\u0438\u043a \u043d\u0438\u0458\u0435 \u043f\u043e\u0432\u0435\u0437\u0430\u043d.",
+		"Rendering": "\u0411\u0438\u043b\u043e \u0458\u0435 \u0433\u0440\u0435\u0448\u0430\u043a\u0430 \u043f\u0440\u0438 \u043f\u0440\u0438\u043a\u0430\u0437\u0438\u0432\u0430\u045a\u0443 <span class='url'>{{1}}</span>",
+		"PriceRequired": "\u0426\u0435\u043d\u0430 \u043e\u0431\u0430\u0432\u0435\u0437\u043d\u0430!",
+		"NameRequired": "\u0418\u043c\u0435 (\u043e\u0431\u0430\u0432\u0435\u0437\u043d\u043e!",
+		"PriceInvalid": "\u0426\u0435\u043d\u0430 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0430!",
+		"AmountInvalid": "\u0418\u0437\u043d\u043e\u0441 \u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0438!",
+		"TransactionFailed": "\u0422\u0440\u0430\u043d\u0441\u0430\u043a\u0446\u0438\u0458\u0430 \u043d\u0438\u0458\u0435 \u0443\u0441\u043f\u0435\u043b\u0430",
+		"ChainNotSupported": "\u0418\u0437\u0430\u0431\u0440\u0430\u043d\u0438 \u043b\u0430\u043d\u0430\u0446 \u043d\u0438\u0458\u0435 \u043f\u043e\u0434\u0440\u0436\u0430\u043d. \u041f\u043e\u0434\u0440\u0436\u0430\u043d\u0438 \u043b\u0430\u043d\u0430\u0446: {{supportedChain}}",
+		"NeedMetaMaskConnected": "\u041f\u043e\u0442\u0440\u0435\u0431\u0430\u043d \u0458\u0435 \u041c\u0435\u0442\u0430\u041c\u0430\u0441\u043a \u043f\u043e\u0432\u0435\u0437\u0430\u043d \u0437\u0430 \u0440\u0430\u0434 \u0441\u0430 \u0430\u043f\u043b\u0438\u043a\u0430\u0446\u0438\u0458\u043e\u043c",
+		"UserNotLoggedInMetaMask": "\u041a\u043e\u0440\u0438\u0441\u043d\u0438\u043a \u043d\u0438\u0458\u0435 \u043f\u0440\u0438\u0458\u0430\u0432\u0459\u0435\u043d \u043d\u0430 \u041c\u0435\u0442\u0430\u041c\u0430\u0441\u043a",
+		"CurrencyNotFound": "\u0412\u0430\u043b\u0443\u0442\u0430 \u043d\u0438\u0458\u0435 \u043f\u0440\u043e\u043d\u0430\u0452\u0435\u043d\u0430",
+		"WrongChain": "\u041e\u0432\u0430\u0458 \u041d\u0424\u0422 \u043a\u0440\u0435\u0438\u0440\u0430\u043d \u043f\u043e\u0434 &quot; {{chain}} &quot;. \u041c\u043e\u043b\u0438\u043c\u043e \u043a\u043e\u0440\u0438\u0441\u0442\u0438\u0442\u0435 \u043e\u0432\u0430\u0458 \u043b\u0430\u043d\u0430\u0446.",
+		"NoRecipientSelected": "\u041d\u0438\u0458\u0435 \u0438\u0437\u0430\u0431\u0440\u0430\u043d \u043f\u0440\u0438\u043c\u0430\u043b\u0430\u0446",
+		"NotEnoughPermissionsWallet": "\u041d\u0435\u043c\u0430 \u0434\u043e\u0432\u043e\u0459\u043d\u043e \u0434\u043e\u0437\u0432\u043e\u043b\u0430 \u0437\u0430 \u0447\u0438\u0442\u0430\u045a\u0435 \u043d\u043e\u0432\u0447\u0430\u043d\u0438\u043a\u0430 \u043e\u0432\u043e\u0433 \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u043a\u0430",
+		"ThisUserHaveNoWallet": "\u041e\u0432\u043e\u043c \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u043a\u0443 \u043d\u0438\u0458\u0435 \u0434\u043e\u0434\u0435\u0459\u0435\u043d \u043d\u043e\u0432\u0447\u0430\u043d\u0438\u043a",
+		"TheWalletOfThisUserInvalid": "\u041d\u043e\u0432\u0447\u0430\u043d\u0438\u043a \u043e\u0432\u043e\u0433 \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u043a\u0430 \u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0438",
+		"WalletInvalid": "\u0410\u0434\u0440\u0435\u0441\u0430 \u043d\u043e\u0432\u0447\u0430\u043d\u0438\u043a\u0430 \u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0430",
+		"CantManageFrozenSeries": "\u041d\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u0443\u043f\u0440\u0430\u0432\u0459\u0430\u0442\u0438 \u0437\u0430\u043c\u0440\u0437\u043d\u0443\u0442\u0438\u043c \u0441\u0435\u0440\u0438\u0458\u0430\u043c\u0430",
+		"SubscriptionStreamNotPaid": "\u041d\u0438\u0441\u0442\u0435 \u043f\u043b\u0430\u0442\u0438\u043b\u0438 \u0437\u0430 \u0433\u043b\u0435\u0434\u0430\u045a\u0435 \u043e\u0432\u043e\u0433 \u0441\u0430\u0434\u0440\u0436\u0430\u0458\u0430. \u041a\u043b\u0438\u043a\u043d\u0438\u0442\u0435 \u043d\u0430 {{subscriptionUrl}} \u0438 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0438\u0442\u0435 \u0441\u0435 \u043d\u0430 \u043e\u0434\u0433\u043e\u0432\u0430\u0440\u0430\u0458\u0443\u045b\u0438 \u043f\u043b\u0430\u043d."
+	},
+	"admin": {
+		"Title": "\u0421\u0440\u0435\u0434\u0441\u0442\u0432\u0430 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u0438\u0432\u043d\u0430",
+		"SubscriptionTitle": "\u041f\u043b\u0430\u043d\u043e\u0432\u0438 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0435"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "\u0414\u043e\u0434\u0438\u0440\u043d\u0438\u0442\u0435 \u0437\u0430 \u043f\u043b\u0430\u045b\u0430\u045a\u0435"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : \u043d\u0430\u043f\u043b\u0430\u0442\u0430 \u043e\u0431\u0440\u0430\u0452\u0435\u043d\u0430 \u0437\u0430 {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "\u0425\u0432\u0430\u043b\u0430 \u0432\u0430\u043c \u043d\u0430 \u0443\u043f\u043b\u0430\u0442\u0438 \u043d\u0430 {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u045b\u0435\u043d\u043e \u043d\u0430 {{plan.title}}",
+		"YouSubscribedTo": "\u041f\u0440\u0435\u0442\u043f\u043b\u0430\u045b\u0435\u043d\u0438 \u0441\u0442\u0435 \u043d\u0430 {{plan.title}}",
+		"Assets/credits/alert": "\u0418\u043c\u0430\u0442\u0435 \u0443\u043f\u043e\u0437\u043e\u0440\u0435\u045a\u0435 \u0443 \u0432\u0435\u0437\u0438 \u0441\u0430 \u0432\u0430\u0448\u0438\u043c \u043d\u0430\u043b\u043e\u0433\u043e\u043c"
+	},
+	"charge": {
+		"Subject": "\u0414\u043e\u0431\u0438\u0458\u0430\u0442\u0435 \u0443\u043f\u043b\u0430\u0442\u0443 \u043e\u0434 {{displayAmount}} \u043e\u0434 {{call 'publisher.displayName'}} \u043e\u0434 &quot; {{description}} &quot;",
+		"HasBeenCharged": "\u0425\u0435\u0458, \u043e\u0432\u043e \u0458\u0435 \u0441\u0430\u043c\u043e \u0434\u0430 \u0432\u0430\u0441 \u043e\u0431\u0430\u0432\u0435\u0441\u0442\u0438\u043c \u0434\u0430 \u0458\u0435 {{1}} \u043d\u0430\u043f\u043b\u0430\u045b\u0435\u043d\u043e {{2}} \u0437\u0430 {{3}} \u043e\u0434 {{4}}"
+	},
+	"charged": {
+		"Subject": "\u0425\u0432\u0430\u043b\u0430 \u0432\u0430\u043c \u043d\u0430 \u0443\u043f\u043b\u0430\u0442\u0438 \u0437\u0430 &quot; {{description}} &quot;",
+		"HavePaid": "\u0425\u0435\u0458 {{1}} , \u043e\u0432\u043e \u0458\u0435 \u0441\u0430\u043c\u043e \u0431\u0440\u0437\u0430 \u043f\u043e\u0442\u0432\u0440\u0434\u0430 \u0434\u0430 \u0441\u0442\u0435 \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043f\u043b\u0430\u0442\u0438\u043b\u0438 {{2}} \u0434\u043e {{3}} \u0437\u0430 {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435 \u043e \u043f\u043e\u0440\u0443\u045f\u0431\u0438\u043d\u0438",
+		"PaymentMethod": "\u041d\u0430\u0447\u0438\u043d \u043f\u043b\u0430\u045b\u0430\u045a\u0430",
+		"ContactInfo": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435",
+		"Pay": "\u041f\u043b\u0430\u0442\u0438",
+		"PaymentSucceeded": "\u041f\u043b\u0430\u045b\u0430\u045a\u0435 \u0458\u0435 \u0443\u0441\u043f\u0435\u043b\u043e",
+		"PaymentProcessing.": "\u0412\u0430\u0448\u0430 \u0443\u043f\u043b\u0430\u0442\u0430 \u0441\u0435 \u043e\u0431\u0440\u0430\u0452\u0443\u0458\u0435",
+		"FailTryAgain": "\u0412\u0430\u0448\u0430 \u0443\u043f\u043b\u0430\u0442\u0430 \u043d\u0438\u0458\u0435 \u0443\u0441\u043f\u0435\u043b\u0430, \u043f\u043e\u043a\u0443\u0448\u0430\u0458\u0442\u0435 \u043f\u043e\u043d\u043e\u0432\u043e",
+		"SomethingWrong": "\u041d\u0435\u0448\u0442\u043e \u043d\u0438\u0458\u0435 \u0443 \u0440\u0435\u0434\u0443",
+		"PaymentStatus": "\u0421\u0442\u0430\u0442\u0443\u0441 \u043f\u043b\u0430\u045b\u0430\u045a\u0435",
+		"PayTo": "\u041f\u043b\u0430\u0442\u0438 {{displayName}}",
+		"ChooseCurrency": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0430\u043b\u0443\u0442\u0443",
+		"YouCanSendUpTo": "\u041c\u043e\u0436\u0435\u0442\u0435 \u043f\u043e\u0441\u043b\u0430\u0442\u0438 \u0434\u043e {{amount}} {{symbol}}",
+		"Send": "\u041f\u043e\u0448\u0430\u0459\u0438",
+		"EnterAmount": "\u0443\u043d\u0435\u0442\u0438 \u0438\u0437\u043d\u043e\u0441"
+	},
+	"credits": {
+		"InviteAcceptedBy": "\u041f\u043e\u0437\u0438\u0432 \u0458\u0435 \u043f\u0440\u0438\u0445\u0432\u0430\u0442\u0438\u043e {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} \u043f\u043e\u043f\u0443\u045a\u0435\u043d\u043e {{FilledStreamTitle}}",
+		"ForFillingStream": "\u0417\u0430 \u043f\u0443\u045a\u0435\u045a\u0435 {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "\u0417\u0430 \u043f\u043e\u0447\u0435\u0442\u0430\u043a \u0438\u043c\u0430\u0442\u0435 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"PaymentFor": "\u041f\u043b\u0430\u045b\u0430\u045a\u0435 \u0437\u0430 &quot; {{1}} &quot;",
+		"PaymentTo": "\u041f\u043b\u0430\u045b\u0430\u045a\u0435 \u0434\u043e {{1}}",
+		"PaymentToUser": "\u041f\u043b\u0430\u045b\u0430\u045a\u0435 \u0434\u043e {{toUserName}}",
+		"CreatePrivateChat": "\u0437\u0430 \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u043e \u045b\u0430\u0441\u043a\u0430\u045a\u0435 \u0441\u0430 {{toUserName}}",
+		"CreatePaidStream": "\u0437\u0430 \u0441\u0442\u0432\u0430\u0440\u0430\u045a\u0435 {{toStreamName}}",
+		"JoinedPaidStream": "\u0437\u0430 \u0440\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u0458\u0443 \u0443 &quot; <a data-publisherId='<i translate='no'>999 &#39; \u0434\u0430\u0442\u0430-\u0441\u0442\u0440\u0435\u0430\u043c\u041d\u0430\u043c\u0435=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "\u0437\u0430 \u0441\u0442\u0432\u0430\u0440\u0430\u045a\u0435 \u0437\u0430\u0458\u0435\u0434\u043d\u0438\u0446\u0435 &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "\u043a\u0430\u043e \u0440\u0435\u0444\u0443\u043d\u0434\u0438\u0440\u0430\u045a\u0435 \u0440\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u0458\u0435 \u0443 &quot; <a data-publisherId='<i translate='no'>999 &#39; \u0434\u0430\u0442\u0430-\u0441\u0442\u0440\u0435\u0430\u043c\u041d\u0430\u043c\u0435=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "\u041a\u0443\u043f\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"BonusCredits": "\u0411\u043e\u043d\u0443\u0441 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"BuyAmountCredits": "\u041a\u0443\u043f\u0438\u0442\u0435 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"WatchClip": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430 \u0437\u0430 \u0433\u043b\u0435\u0434\u0430\u045a\u0435 {{fromStreamTitle}}",
+		"MissingCredits": "\u041d\u0435\u0434\u043e\u0441\u0442\u0430\u0458\u0443 \u043a\u0440\u0435\u0434\u0438\u0442\u0438",
+		"YouMissingCredits": "{{currency}} \u0432\u0430\u043c \u0458\u0435 \u0434\u043e\u0434\u0430\u0442\u043d\u0438\u0445 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430 \u0434\u0430 \u0431\u0438\u0441\u0442\u0435 \u043d\u0430\u0441\u0442\u0430\u0432\u0438\u043b\u0438.",
+		"BuyCredits": "\u041a\u0443\u043f\u0438\u0442\u0435 \u043a\u0440\u0435\u0434\u0438\u0442\u0435",
+		"BuyBonus": "\u041a\u0443\u043f\u043e\u0432\u0438\u043d\u0430 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430 \u043e\u0434\u0458\u0435\u0434\u043d\u043e\u043c, \u0434\u043e\u0432\u0435\u0448\u045b\u0435 \u0434\u043e \u0431\u043e\u043d\u0443\u0441\u0430 {{bonus}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430.",
+		"Buy": "\u041a\u0443\u043f\u0438",
+		"PurchaseCredits": "\u041a\u0443\u043f\u043e\u0432\u0438\u043d\u0430 \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"Credits": "\u0426\u0440\u0435\u0434\u0438\u0442\u0441",
+		"ErrorInvalidAmount": "\u0418\u0437\u043d\u043e\u0441 \u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0438",
+		"ErrorInvalidCurrency": "\u041d\u0430\u0436\u0430\u043b\u043e\u0441\u0442, \u0458\u043e\u0448 \u0443\u0432\u0435\u043a \u043d\u0435 \u043f\u043e\u0434\u0440\u0436\u0430\u0432\u0430\u043c\u043e \u0432\u0430\u043b\u0443\u0442\u0443 {{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+			"BonusCredits": "{{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		}
+	},
+	"history": {
+		"Date": "\u0414\u0430\u0442\u0443\u043c",
+		"Amount": "\u0418\u0437\u043d\u043e\u0441",
+		"Description": "\u041e\u043f\u0438\u0441",
+		"Client": "\u041a\u043b\u0438\u0458\u0435\u043d\u0442",
+		"User": "\u041a\u043e\u0440\u0438\u0441\u043d\u0438\u043a",
+		"To": "\u0434\u043e",
+		"From": "\u0438\u0437",
+		"SeeHistory": "\u041f\u043e\u0433\u043b\u0435\u0434\u0430\u0458\u0442\u0435 \u0438\u0441\u0442\u043e\u0440\u0438\u0458\u0443 \u043f\u043b\u0430\u045b\u0430\u045a\u0430 \u0437\u0430 {{1}}",
+		"HistoryEmpty": "\u0408\u043e\u0448 \u043d\u0435\u043c\u0430\u0442\u0435 \u043f\u043e\u0434\u0430\u0442\u043a\u0435",
+		"PaymentFor": "\u041f\u043e\u0441\u043b\u0430\u0442\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"PaymentTo": "\u041f\u043e\u0441\u043b\u0430\u0442\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"PaymentToUser": "\u041f\u043e\u0441\u043b\u0430\u0442\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"CreatePaidStream": "\u041f\u043e\u0442\u0440\u043e\u0448\u0435\u043d\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"WatchClip": {
+			"+": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+			"-": "\u041f\u043e\u0442\u0440\u043e\u0448\u0435\u043d\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		},
+		"JoinedPaidStream": {
+			"+": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+			"-": "\u041f\u043e\u0442\u0440\u043e\u0448\u0435\u043d\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		},
+		"LeftPaidStream": {
+			"+": "\u041f\u0440\u0438\u043c\u0459\u0435\u043d\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+			"-": "\u041f\u043e\u0441\u043b\u0430\u0442\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		},
+		"CreatedCommunity": "\u041f\u043e\u0442\u0440\u043e\u0448\u0435\u043d\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"BoughtCredits": "\u041a\u0443\u043f\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"BonusCredits": "\u0414\u043e\u0431\u0438\u043e \u0431\u043e\u043d\u0443\u0441 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"InviteAcceptedBy": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"Streams_user_firstname": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"Streams_user_lastname": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"Streams_user_icon": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"Places_user_location": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"Streams_greeting": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"YouHaveCreditsToStart": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"InvitedUserFilledStream": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"ForFillingStream": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"CreatePrivateChat": "\u041f\u043e\u0442\u0440\u043e\u0448\u0435\u043d\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+	},
+	"subscriptions": {
+		"infoTitle": "\u041f\u043e\u0434\u0435\u0441\u0438\u0442\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435 \u043e \u043f\u043b\u0430\u045b\u0430\u045a\u0443",
+		"confirm": {
+			"title": "\u041f\u043e\u043a\u0440\u0435\u043d\u0438 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0443",
+			"message": "\u0417\u0430\u043f\u043e\u0447\u043d\u0438\u0442\u0435 \u043f\u043e\u043d\u0430\u0432\u0459\u0430\u0458\u0443\u045b\u0443 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0443 \u043d\u0430 \u201e {{title}} \u201c?",
+			"ok": "\u0423 \u0440\u0435\u0434\u0443",
+			"cancel": "\u041f\u043e\u043d\u0438\u0448\u0442\u0438\u0442\u0438, \u043e\u0442\u043a\u0430\u0437\u0430\u0442\u0438"
+		},
+		"CreditOrDebitCard": "\u041a\u0440\u0435\u0434\u0438\u0442\u043d\u0430 \u0438\u043b\u0438 \u0434\u0435\u0431\u0438\u0442\u043d\u0430 \u043a\u0430\u0440\u0442\u0438\u0446\u0430",
+		"SubscribePayment": "\u041f\u043b\u0430\u045b\u0430\u045a\u0435 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0435",
+		"ImmediatePayment": "\u041e\u0434\u043c\u0430\u0445 \u043f\u043b\u0430\u045b\u0430\u045a\u0435",
+		"ProcessingPayment": "\u041e\u0431\u0440\u0430\u0434\u0430 \u043f\u043b\u0430\u045b\u0430\u045a\u0430",
+		"SubscriptionAlreadyPaid": "\u041e\u0432\u0430 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0430 \u0458\u0435 \u0432\u0435\u045b \u043f\u043b\u0430\u045b\u0435\u043d\u0430",
+		"SubscriptionNotActive": "\u041e\u0432\u0430 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0430 \u043d\u0438\u0458\u0435 \u0430\u043a\u0442\u0438\u0432\u043d\u0430",
+		"Subscribed": "\u041f\u0440\u0435\u0442\u043f\u043b\u0430\u045b\u0435\u043d\u0438",
+		"Unsubscribed": "\u041e\u0442\u043a\u0430\u0437\u0430\u043d\u043e",
+		"Unsubscribe": "\u041e\u0442\u043a\u0430\u0436\u0438 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0443",
+		"Subscribe": "\u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0438\u0442\u0438 \u0441\u0435",
+		"Started": "\u041f\u043e\u0447\u0435\u043b\u043e",
+		"EndsIn": "\u0417\u0430\u0432\u0440\u0448\u0430\u0432\u0430 \u0441\u0435 \u0443",
+		"NextPay": "\u0421\u043b\u0435\u0434\u0435\u045b\u0430 \u0443\u043f\u043b\u0430\u0442\u0430",
+		"Period": "\u0420\u0430\u0437\u0434\u043e\u0431\u0459\u0435",
+		"Price": "\u0426\u0435\u043d\u0430",
+		"AreYouSureUnsubscribe": "\u0414\u0430 \u043b\u0438 \u0441\u0442\u0435 \u0441\u0438\u0433\u0443\u0440\u043d\u0438 \u0434\u0430 \u0436\u0435\u043b\u0438\u0442\u0435 \u0434\u0430 \u043e\u043f\u043e\u0437\u043e\u0432\u0435\u0442\u0435 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0443 \u043d\u0430 \u043e\u0432\u0430\u0458 \u043f\u043b\u0430\u043d?",
+		"YouUnsubscribedFromPlan": "\u041e\u0442\u043a\u0430\u0437\u0430\u043b\u0438 \u0441\u0442\u0435 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0443 \u043d\u0430 \u043f\u043b\u0430\u043d &quot; {{planTitle}} &quot;. \u041d\u0435\u045b\u0435\u0442\u0435 \u043d\u0430\u043f\u043b\u0430\u045b\u0438\u0432\u0430\u0442\u0438, \u0430\u043b\u0438 \u0432\u0430\u0448\u0430 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0430 \u045b\u0435 \u0441\u0435 \u043d\u0430\u0441\u0442\u0430\u0432\u0438\u0442\u0438 \u0434\u043e {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "\u043d\u0430\u0441\u043b\u043e\u0432 \u043f\u043b\u0430\u043d\u0430",
+			"PricePlaceholder": "\u0426\u0435\u043d\u0430",
+			"DescriptionPlaceholder": "\u043e\u043f\u0438\u0441 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u043d\u0438\u0447\u043a\u043e\u0433 \u043f\u043b\u0430\u043d\u0430",
+			"SavePlan": "\u0421\u0430\u0447\u0443\u0432\u0430\u0458 \u043f\u043b\u0430\u043d",
+			"NewPlan": "\u041d\u043e\u0432\u0438 \u043f\u043b\u0430\u043d",
+			"SubscriptionTitle": "\u041f\u043b\u0430\u043d\u043e\u0432\u0438 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0435",
+			"AreYouSureDeletePlan": "\u0414\u0430 \u043b\u0438 \u0441\u0442\u0435 \u0441\u0438\u0433\u0443\u0440\u043d\u0438 \u0434\u0430 \u0436\u0435\u043b\u0438\u0442\u0435 \u0434\u0430 \u0438\u0437\u0431\u0440\u0438\u0448\u0435\u0442\u0435 \u043e\u0432\u0430\u0458 \u043f\u043b\u0430\u043d?",
+			"Duration": "\u0422\u0440\u0430\u0458\u0430\u045a\u0435",
+			"Discount": "\u041f\u043e\u043f\u0443\u0441\u0442",
+			"Interrupt": "\u041f\u0440\u0435\u043a\u0438\u0434\u0430\u0442\u0438",
+			"Continue": "\u041d\u0430\u0441\u0442\u0430\u0432\u0438",
+			"SelectDisplayType": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 {{displayType}}",
+			"EndDate": "\u043a\u0440\u0430\u0458\u045a\u0438 \u0434\u0430\u0442\u0443\u043c",
+			"Available": "\u0414\u043e\u0441\u0442\u0443\u043f\u0430\u043d",
+			"Hidden": "\u0421\u043a\u0440\u0438\u0432\u0435\u043d\u043e",
+			"InviteOnly": "\u0421\u0430\u043c\u043e \u043f\u043e \u043f\u043e\u0437\u0438\u0432\u0443",
+			"CantSubscribeUnlessInvited": "\u041d\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u0441\u0435 \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0438\u0442\u0438 \u043d\u0430 \u043e\u0432\u0430\u0458 \u043f\u043b\u0430\u043d \u043e\u0441\u0438\u043c \u0430\u043a\u043e \u043d\u0438\u0441\u0442\u0435 \u043f\u043e\u0437\u0432\u0430\u043d\u0438"
+		}
+	},
+	"payments": {
+		"infoTitle": "\u041f\u043e\u0434\u0435\u0441\u0438\u0442\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435 \u043e \u043f\u043b\u0430\u045b\u0430\u045a\u0443",
+		"BuyAmountCredits": "\u041a\u0443\u043f\u0438\u0442\u0435 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430",
+		"confirm": {
+			"title": "\u0418\u0437\u0432\u0440\u0448\u0438\u0442\u0438 \u0443\u043f\u043b\u0430\u0442\u0443",
+			"message": "\u0414\u0430 \u043b\u0438 \u0441\u0435 \u0441\u043b\u0430\u0436\u0435\u0442\u0435 \u0434\u0430 \u043f\u043b\u0430\u0442\u0438\u0442\u0435 {{symbol}} {{amount}} ?",
+			"ok": "\u0423 \u0440\u0435\u0434\u0443",
+			"cancel": "\u041f\u043e\u043d\u0438\u0448\u0442\u0438\u0442\u0438, \u043e\u0442\u043a\u0430\u0437\u0430\u0442\u0438"
+		},
+		"reasons": {
+			"BuyCredits": "\u041a\u0443\u043f\u0438 \u043a\u0440\u0435\u0434\u0438\u0442\u0435"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "\u0426\u0440\u0435\u0434\u0438\u0442\u0441",
+			"description": "\u0432\u043e\u0434\u0438 \u0435\u0432\u0438\u0434\u0435\u043d\u0446\u0438\u0458\u0443 \u043e \u043a\u0440\u0435\u0434\u0438\u0442\u0438\u043c\u0430 \u0438 \u043f\u043b\u0430\u045b\u0430\u045a\u0438\u043c\u0430"
+		},
+		"Assets/plan": {
+			"displayType": "\u041f\u043b\u0430\u043d \u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0435",
+			"description": "\u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u043d\u0438\u0447\u043a\u0438 \u043f\u043b\u0430\u043d"
+		},
+		"Assets/subscription": {
+			"displayType": "\u041f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0430",
+			"description": "\u043f\u0440\u0435\u0442\u043f\u043b\u0430\u0442\u0430"
+		},
+		"Assets/product": {
+			"displayType": "\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434",
+			"description": "\u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434 \u043a\u043e\u0458\u0438 \u0441\u0435 \u043f\u0440\u043e\u0434\u0430\u0458\u0435"
+		},
+		"Assets/service": {
+			"displayType": "\u0423\u0441\u043b\u0443\u0433\u0430",
+			"description": "\u0443\u0441\u043b\u0443\u0433\u0430 \u043a\u043e\u0458\u0430 \u0441\u0435 \u043d\u0443\u0434\u0438"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "\u0417\u0430\u0440\u0430\u0434\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		},
+		"Assets/credits/bought": {
+			"content": "\u041a\u0443\u043f\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		},
+		"Assets/credits/bonus": {
+			"content": "\u0411\u043e\u043d\u0443\u0441 {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		},
+		"Assets/credits/spent": {
+			"content": "\u041f\u043e\u0442\u0440\u043e\u0448\u0435\u043d\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430"
+		},
+		"Assets/credits/sent": {
+			"content": "\u041f\u043e\u0441\u043b\u0430\u0442\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430 \u043d\u0430 {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "\u041f\u0440\u0438\u043c\u0438\u043e {{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0430 \u043e\u0434 {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "\u0418\u043c\u0430\u0442\u0435 \u043c\u0430\u043b\u043e \u043a\u0440\u0435\u0434\u0438\u0442\u0430 \u043d\u0430 \u0441\u0432\u043e\u043c \u0440\u0430\u0447\u0443\u043d\u0443. \u041f\u043e\u0441\u0435\u0442\u0438\u0442\u0435 <a href='<i translate='no'>999 &#39;&gt;\u043e\u0432\u0430\u0458 \u043b\u0438\u043d\u043a</a> \u0434\u0430 \u0431\u0438\u0441\u0442\u0435 \u043a\u0443\u043f\u0438\u043b\u0438 \u0458\u043e\u0448 \u043a\u0440\u0435\u0434\u0438\u0442\u0430."
+		}
+	},
+	"billing": {
+		"Title": "\u041d\u0430\u043f\u043b\u0430\u0442\u0430 \u0441\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0430",
+		"CreditsMinimum": "\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u043d\u0438 \u043a\u0440\u0435\u0434\u0438\u0442\u0438",
+		"CreditsToAdd": "\u041a\u0440\u0435\u0434\u0438\u0442\u0438 \u0437\u0430 \u0434\u043e\u0434\u0430\u0432\u0430\u045a\u0435",
+		"Save": "\u0441\u0430\u0447\u0443\u0432\u0430\u0442\u0438",
+		"ThisLink": "\u043e\u0432\u0430\u0458 \u043b\u0438\u043d\u043a",
+		"errors": {
+			"CreditsMinimumNegative": "\u041c\u0438\u043d\u0438\u043c\u0443\u043c \u043a\u0440\u0435\u0434\u0438\u0442\u0430 \u043d\u0435 \u043c\u043e\u0436\u0435 \u0431\u0438\u0442\u0438 \u043d\u0435\u0433\u0430\u0442\u0438\u0432\u0430\u043d",
+			"CreditsToAddNegative": "\u041a\u0440\u0435\u0434\u0438\u0442\u0438 \u0437\u0430 \u0434\u043e\u0434\u0430\u0432\u0430\u045a\u0435 \u043d\u0435 \u043c\u043e\u0433\u0443 \u0431\u0438\u0442\u0438 \u043d\u0435\u0433\u0430\u0442\u0438\u0432\u043d\u0438"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "\u041d\u043e\u0432\u0430 \u0443\u0441\u043b\u0443\u0433\u0430",
+			"TitlePlaceholder": "\u041d\u0430\u0437\u0438\u0432 \u0443\u0441\u043b\u0443\u0433\u0435",
+			"PricePlaceholder": "\u041f\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u0435 \u0446\u0435\u043d\u0443",
+			"LinkPlaceholder": "\u043f\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u0435 \u0432\u0435\u0437\u0443 \u0437\u0430 \u0434\u043e\u0434\u0430\u0442\u043d\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435",
+			"DescriptionPlaceholder": "\u041e\u043f\u0438\u0441 \u0443\u0441\u043b\u0443\u0433\u0435",
+			"SaveService": "\u0421\u0430\u0432\u0435 \u0421\u0435\u0440\u0432\u0438\u0446\u0435",
+			"SelectRequiredParticipants": "\u041e\u0431\u0430\u0432\u0435\u0437\u043d\u0438 \u0441\u0440\u043e\u0434\u043d\u0438 \u0443\u0447\u0435\u0441\u043d\u0438\u0446\u0438",
+			"RequiredParticipantsDesc": "\u041c\u043e\u043b\u0438\u043c\u043e \u0438\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u043f\u043e\u0432\u0435\u0437\u0430\u043d\u0435 \u0443\u0447\u0435\u0441\u043d\u0438\u043a\u0435 \u043a\u043e\u0458\u0438 \u0441\u0443 \u043e\u0431\u0430\u0432\u0435\u0437\u043d\u0438 \u0434\u0430 \u043a\u043e\u0440\u0438\u0441\u0442\u0435 \u043e\u0432\u0443 \u0443\u0441\u043b\u0443\u0433\u0443 (\u043d\u0430 \u043f\u0440\u0438\u043c\u0435\u0440 \u043a\u0443\u045b\u043d\u0438 \u0459\u0443\u0431\u0438\u043c\u0446\u0438 \u0437\u0430 \u201e\u0418\u0437\u043b\u043e\u0436\u0431\u0443 \u043f\u0430\u0441\u0430\u201c, \u0438\u043b\u0438 \u0434\u0435\u0446\u0430 \u0437\u0430 \u201e\u0414\u0435\u0447\u0458\u0438 \u043f\u0440\u0430\u0437\u043d\u0438\u043a\u201c \u0438\u0442\u0434.). \u0410\u043a\u043e \u0458\u0435 \u0443\u0441\u043b\u0443\u0433\u0430 \u043f\u043b\u0430\u045b\u0435\u043d\u0430, \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u043a \u045b\u0435 \u043c\u043e\u0440\u0430\u0442\u0438 \u0434\u0430 \u043f\u043b\u0430\u0442\u0438 \u0438 \u0437\u0430 \u0441\u0432\u0430\u043a\u043e\u0433 \u043f\u043e\u0432\u0435\u0437\u0430\u043d\u043e\u0433 \u0443\u0447\u0435\u0441\u043d\u0438\u043a\u0430."
+		},
+		"EditServiceTemplate": {
+			"Title": "\u0423\u0440\u0435\u0434\u0438 \u0443\u0441\u043b\u0443\u0433\u0443"
+		},
+		"ManageServiceTemplates": "\u0423\u043f\u0440\u0430\u0432\u0459\u0430\u0458\u0442\u0435 \u043f\u0440\u0435\u0434\u043b\u043e\u0448\u0446\u0438\u043c\u0430 \u0443\u0441\u043b\u0443\u0433\u0430",
+		"ManageServices": "\u0423\u043f\u0440\u0430\u0432\u0459\u0430\u0458\u0442\u0435 \u0443\u0441\u043b\u0443\u0433\u0430\u043c\u0430",
+		"Free": "\u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e",
+		"OptionalContribution": "\u0424\u0430\u043a\u0443\u043b\u0442\u0430\u0442\u0438\u0432\u043d\u0438 \u0434\u043e\u043f\u0440\u0438\u043d\u043e\u0441",
+		"RequiredPayment": "\u041e\u0431\u0430\u0432\u0435\u0437\u043d\u043e \u043f\u043b\u0430\u045b\u0430\u045a\u0435",
+		"AreYouSureDelete": "\u0414\u0430 \u043b\u0438 \u0441\u0442\u0435 \u0441\u0438\u0433\u0443\u0440\u043d\u0438 \u0434\u0430 \u0436\u0435\u043b\u0438\u0442\u0435 \u0434\u0430 \u0438\u0437\u0431\u0440\u0438\u0448\u0435\u0442\u0435 \u043e\u0432\u0443 \u0443\u0441\u043b\u0443\u0433\u0443?",
+		"AmountServicesRelated": "\u041f\u043e\u0441\u0442\u043e\u0458\u0438 {{amount}} \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e\u0441\u0442\u0438 \u0443 \u0432\u0435\u0437\u0438 \u0441\u0430 \u043e\u0432\u043e\u043c \u0443\u0441\u043b\u0443\u0433\u043e\u043c. \u041e\u043d\u0438 \u045b\u0435 \u0442\u0430\u043a\u043e\u0452\u0435 \u0431\u0438\u0442\u0438 \u0443\u043a\u043b\u043e\u045a\u0435\u043d\u0438."
+	},
+	"transfer": {
+		"SelectRecipient": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u043f\u0440\u0438\u043c\u0430\u043e\u0446\u0430",
+		"TransactionSuccess": "\u0422\u0440\u0430\u043d\u0441\u0430\u0446\u0442\u0438\u043e\u043d \u0421\u0443\u0446\u0446\u0435\u0441\u0441",
+		"OrTypeWalletAddress": "\u0418\u041b\u0418 \u0443\u043d\u0435\u0441\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441\u0443 \u043d\u043e\u0432\u0447\u0430\u043d\u0438\u043a\u0430 \u043f\u0440\u0438\u043c\u0430\u043e\u0446\u0430",
+		"AppCredits": "\u0410\u043f\u043f \u0426\u0440\u0435\u0434\u0438\u0442\u0441"
+	},
+	"NFT": {
+		"Title": "\u041d\u0430\u0441\u043b\u043e\u0432",
+		"Name": "\u0418\u043c\u0435",
+		"EnterName": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u0438\u043c\u0435",
+		"EnterAuthorWallet": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u043d\u043e\u0432\u0447\u0430\u043d\u0438\u043a \u0430\u0443\u0442\u043e\u0440\u0430",
+		"InformationAboutTitle": "\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435 \u043e {{title}} \u041d\u0424\u0422",
+		"Description": "\u041e\u043f\u0438\u0441",
+		"DetailedInformationAboutNFT": "\u0414\u0435\u0442\u0430\u0459\u043d\u0435 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435 \u043e \u041d\u0424\u0422-\u0443",
+		"PresaleStarts": "\u041f\u0440\u0435\u0442\u043f\u0440\u043e\u0434\u0430\u0458\u0430 \u043f\u043e\u0447\u0438\u045a\u0435 23. \u0434\u0435\u0446\u0435\u043c\u0431\u0440\u0430",
+		"OwnerUserNotFound": "\u0412\u043b\u0430\u0441\u043d\u0438\u043a \u043e\u0432\u043e\u0433 \u041d\u0424\u0422-\u0430 \u043d\u0438\u0458\u0435 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u043e\u0432\u0430\u043d \u0443 \u043d\u0430\u0448\u043e\u0458 \u0430\u043f\u043b\u0438\u043a\u0430\u0446\u0438\u0458\u0438.",
+		"BuyNow": "\u041a\u0443\u043f\u0438\u0442\u0435 \u0441\u0430\u0434\u0430",
+		"Buy": "\u041a\u0443\u043f\u0438",
+		"Add": "\u0414\u043e\u0434\u0430\u0442\u0438",
+		"Remove": "\u0423\u043a\u043b\u043e\u043d\u0438",
+		"NoNFTyet": "\u0408\u043e\u0448 \u043d\u0435\u043c\u0430 \u041d\u0424\u0422-\u0430",
+		"Conversation": "\u0420\u0430\u0437\u0433\u043e\u0432\u043e\u0440",
+		"Create": "\u041a\u0440\u0435\u0438\u0440\u0430\u0458",
+		"CurrentBid": "\u0422\u0440\u0435\u043d\u0443\u0442\u043d\u0430 \u043f\u043e\u043d\u0443\u0434\u0430",
+		"StartingIn": "\u041f\u043e\u0447\u0435\u0432\u0448\u0438 \u0443",
+		"EndingIn": "\u0417\u0430\u0432\u0440\u0448\u0430\u0432\u0430",
+		"CreateNFT": "\u041d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u0435 \u041d\u0424\u0422",
+		"TitlePlaceholder": "\u0414\u0430\u0458\u0442\u0435 \u0441\u0432\u043e\u043c \u041d\u0424\u0422-\u0443 \u043d\u0430\u0441\u043b\u043e\u0432",
+		"DescriptionPlaceholder": "\u0414\u0430\u0458\u0442\u0435 \u0441\u0432\u043e\u0458 \u041d\u0424\u0422 \u043e\u043f\u0438\u0441",
+		"CreateYourNFT": "\u041a\u0440\u0435\u0438\u0440\u0430\u0458\u0442\u0435 \u0441\u0432\u043e\u0458 \u041d\u0424\u0422",
+		"Royalties": "\u0410\u0443\u0442\u043e\u0440\u0441\u043a\u0435 \u043d\u0430\u043a\u043d\u0430\u0434\u0435",
+		"RoyaltyPlaceholder": "\u041e\u043f\u0446\u0438\u043e\u043d\u043e. \u0418\u0437\u043d\u043e\u0441 \u043f\u043b\u0430\u045b\u0435\u043d \u043a\u0440\u0435\u0430\u0442\u043e\u0440\u0443 \u043f\u0440\u0435 \u043f\u0440\u0435\u043d\u043e\u0441\u0430.",
+		"ExpirationDate": "\u0420\u043e\u043a \u0442\u0440\u0430\u0458\u0430\u045a\u0430",
+		"StartingDate": "\u0414\u0430\u0442\u0443\u043c \u043f\u043e\u0447\u0435\u0442\u043a\u0430",
+		"BidsBelowThisAmount": "\u041f\u043e\u043d\u0443\u0434\u0435 \u0438\u0441\u043f\u043e\u0434 \u043e\u0432\u043e\u0433 \u0438\u0437\u043d\u043e\u0441\u0430 \u043d\u0435\u045b\u0435 \u0431\u0438\u0442\u0438 \u0434\u043e\u0437\u0432\u043e\u0459\u0435\u043d\u0435",
+		"MinimumBid": "\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u043d\u0430 \u043f\u043e\u043d\u0443\u0434\u0430",
+		"Author": "\u0410\u0443\u0442\u043e\u0440",
+		"Price": "\u0426\u0435\u043d\u0430",
+		"Commission": "\u041a\u043e\u043c\u0438\u0441\u0438\u0458\u0430",
+		"EnterCommission": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u043f\u0440\u043e\u0432\u0438\u0437\u0438\u0458\u0443",
+		"Owner": "\u0412\u043b\u0430\u0441\u043d\u0438\u043a",
+		"SelectCategory": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0458\u0443",
+		"Day": "\u0414\u0430\u043d",
+		"Days": "\u0414\u0430\u043d\u0438",
+		"Hour": "\u0421\u0430\u0442",
+		"Hours": "\u0421\u0430\u0442\u0438",
+		"Minute": "\u041c\u0438\u043d\u0443\u0442\u0430",
+		"Minutes": "\u041c\u0438\u043d\u0443\u0442\u0430",
+		"Second": "\u0414\u0440\u0443\u0433\u043e",
+		"Seconds": "\u0421\u0435\u043a\u0443\u043d\u0434\u0435",
+		"SalesCreator": "\u043e\u0434 \u043f\u0440\u043e\u0434\u0430\u0458\u0435 \u045b\u0435 \u0438\u045b\u0438 \u043a\u0440\u0435\u0430\u0442\u043e\u0440\u0443",
+		"Details": "\u0414\u0435\u0442\u0430\u0459\u0438",
+		"Bids": "\u0411\u0438\u0434\u0441",
+		"History": "\u0418\u0441\u0442\u043e\u0440\u0438\u0458\u0430",
+		"LoremIpsum": "\u041b\u043e\u0440\u0435\u043c \u0418\u043f\u0441\u0443\u043c \u0458\u0435 \u0458\u0435\u0434\u043d\u043e\u0441\u0442\u0430\u0432\u043d\u043e \u043b\u0430\u0436\u043d\u0438 \u0442\u0435\u043a\u0441\u0442 \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0458\u0435 \u0448\u0442\u0430\u043c\u043f\u0430\u045a\u0430 \u0438 \u043a\u0443\u0446\u0430\u045a\u0430.",
+		"PutOnSale": "\u0421\u0442\u0430\u0432\u0438\u0442\u0435 \u043d\u0430 \u043f\u0440\u043e\u0434\u0430\u0458\u0443",
+		"PutOffSale": "\u041f\u043e\u0432\u0443\u045b\u0438 \u0438\u0437 \u043f\u0440\u043e\u0434\u0430\u0458\u0435",
+		"Transfer": "\u0422\u0440\u0430\u043d\u0441\u0444\u0435\u0440",
+		"Actions": "\u0410\u043a\u0446\u0438\u0458\u0435",
+		"Claim": "\u041f\u043e\u0442\u0440\u0430\u0436\u0438\u0432\u0430\u045a\u0435",
+		"ClaimNFT": "\u0417\u0430\u0445\u0442\u0435\u0432\u0430\u0458 \u041d\u0424\u0422",
+		"Unlocking": "\u041e\u0442\u043a\u0459\u0443\u0447\u0430\u0432\u0430\u045a\u0435",
+		"Unlock": "\u041e\u0442\u043a\u0459\u0443\u0447\u0430\u0458",
+		"Update": "\u0430\u0436\u0443\u0440\u0438\u0440\u0430\u045a\u0435",
+		"UpdateToken": "\u0423\u043f\u0434\u0430\u0442\u0435 \u0422\u043e\u043a\u0435\u043d",
+		"UpdateNFT": "\u0410\u0436\u0443\u0440\u0438\u0440\u0430\u0458\u0442\u0435 \u041d\u0424\u0422",
+		"CreateToken": "\u0426\u0440\u0435\u0430\u0442\u0435 \u0422\u043e\u043a\u0435\u043d",
+		"PlaceBid": "\u0423\u043b\u043e\u0436\u0438",
+		"SoldOut": "\u041f\u0440\u043e\u0434\u0430\u0442",
+		"NotOnSale": "\u041d\u0438\u0458\u0435 \u043d\u0430 \u043f\u0440\u043e\u0434\u0430\u0458\u0443",
+		"NftName": "\u041d\u0424\u0422 \u0438\u043c\u0435",
+		"DescribeYourNFT": "\u041c\u043e\u043b\u0438\u043c\u043e \u043e\u043f\u0438\u0448\u0438\u0442\u0435 \u0441\u0432\u043e\u0458 \u041d\u0424\u0422",
+		"NFTImage": "\u0421\u043b\u0438\u043a\u0430 \u0437\u0430 \u041d\u0424\u0422",
+		"NFTVideo": "\u0412\u0438\u0434\u0435\u043e \u0437\u0430 \u041d\u0424\u0422, \u0430\u043a\u043e \u043f\u043e\u0441\u0442\u043e\u0458\u0438",
+		"UploadMovie": "\u041e\u0442\u043f\u0440\u0435\u043c\u0438 \u0444\u0438\u043b\u043c",
+		"MovieSource": "\u041c\u043e\u0432\u0438\u0435 \u0421\u043e\u0443\u0440\u0446\u0435",
+		"MovieURL": "\u0423\u0420\u041b \u0444\u0438\u043b\u043c\u0430",
+		"UploadFile": "\u041e\u0442\u043f\u0440\u0435\u043c\u0438\u0442\u0435 \u0434\u0430\u0442\u043e\u0442\u0435\u043a\u0443",
+		"PutOnMarketplace": "\u0421\u0442\u0430\u0432\u0438\u0442\u0435 \u043d\u0430 \u0442\u0440\u0436\u0438\u0448\u0442\u0435",
+		"InstantPurchase": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u0446\u0435\u043d\u0443 \u0434\u0430 \u0431\u0438\u0441\u0442\u0435 \u043e\u043c\u043e\u0433\u0443\u045b\u0438\u043b\u0438 \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u0446\u0438\u043c\u0430 \u0434\u0430 \u043e\u0434\u043c\u0430\u0445 \u043a\u0443\u043f\u0435 \u0432\u0430\u0448 \u041d\u0424\u0422",
+		"FixedPrice": "\u0424\u0438\u043a\u0441\u043d\u0430 \u0446\u0435\u043d\u0430",
+		"TimedAuction": "\u0412\u0440\u0435\u043c\u0435\u043d\u0441\u043a\u0430 \u0430\u0443\u043a\u0446\u0438\u0458\u0430",
+		"OpenForBids": "\u041e\u0442\u0432\u043e\u0440\u0435\u043d\u043e \u0437\u0430 \u043f\u043e\u043d\u0443\u0434\u0435",
+		"PriceOnePiece": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u0446\u0435\u043d\u0443 \u0437\u0430 \u0458\u0435\u0434\u0430\u043d \u043a\u043e\u043c\u0430\u0434",
+		"EnterPrice": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u0446\u0435\u043d\u0443",
+		"EnterMinimumBid": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u043d\u0443 \u043f\u043e\u043d\u0443\u0434\u0443",
+		"SelectChain": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u043b\u0430\u043d\u0430\u0446",
+		"Currency": "\u0412\u0430\u043b\u0443\u0442\u0430",
+		"AreYouSureDeleteImage": "\u0414\u0430 \u043b\u0438 \u0441\u0442\u0435 \u0441\u0438\u0433\u0443\u0440\u043d\u0438 \u0434\u0430 \u0436\u0435\u043b\u0438\u0442\u0435 \u0434\u0430 \u0443\u043a\u043b\u043e\u043d\u0438\u0442\u0435 \u0441\u043b\u0438\u043a\u0443?",
+		"AreYouSureDeleteVideo": "\u0414\u0430 \u043b\u0438 \u0441\u0442\u0435 \u0441\u0438\u0433\u0443\u0440\u043d\u0438 \u0434\u0430 \u0436\u0435\u043b\u0438\u0442\u0435 \u0434\u0430 \u0443\u043a\u043b\u043e\u043d\u0438\u0442\u0435 \u0432\u0438\u0434\u0435\u043e?",
+		"series": {
+			"Name": "\u0418\u043c\u0435",
+			"Icon": "\u0418\u043a\u043e\u043d\u0430",
+			"Description": "\u041e\u043f\u0438\u0441",
+			"Author": "\u0410\u0443\u0442\u043e\u0440",
+			"SelectSeries": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0435\u0440\u0438\u0458\u0443",
+			"Value": "\u0412\u0430\u043b\u0443\u0435",
+			"AreYouSure": "\u0408\u0435\u0441\u0438 \u043b\u0438 \u0441\u0438\u0433\u0443\u0440\u0430\u043d?",
+			"AuthorInvalid": "\u0410\u0434\u0440\u0435\u0441\u0430 \u0430\u0443\u0442\u043e\u0440\u0430 \u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0430!",
+			"Address": "\u0410\u0434\u0440\u0435\u0441\u0430",
+			"CoverImage": "\u041d\u0430\u0441\u043b\u043e\u0432\u043d\u0430 \u0441\u043b\u0438\u043a\u0430",
+			"UploadCoverImage": "\u041e\u0442\u043f\u0440\u0435\u043c\u0438\u0442\u0435 \u043d\u0430\u0441\u043b\u043e\u0432\u043d\u0443 \u0441\u043b\u0438\u043a\u0443",
+			"CommissionAddressInvalid": "\u0410\u0434\u0440\u0435\u0441\u0430 \u043a\u043e\u043c\u0438\u0441\u0438\u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0430",
+			"OnSale": "\u043d\u0430 \u0440\u0430\u0441\u043f\u0440\u043e\u0434\u0430\u0458\u0438",
+			"OffSale": "\u043e\u0444\u0444 \u0441\u0430\u043b\u0435",
+			"CreateSeries": "\u0426\u0440\u0435\u0430\u0442\u0435 \u0421\u0435\u0440\u0438\u0435\u0441",
+			"UpdateSeries": "\u0423\u043f\u0434\u0430\u0442\u0435 \u0421\u0435\u0440\u0438\u0435\u0441",
+			"SeriesInfo": "\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435 \u043e \u0441\u0435\u0440\u0438\u0458\u0438",
+			"SelectAuthor": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u0430\u0443\u0442\u043e\u0440\u0430",
+			"NewItem": "\u041d\u043e\u0432\u0430 \u041d\u0424\u0422 \u0441\u0435\u0440\u0438\u0458\u0430",
+			"NamePlaceholder": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u043d\u0430\u0437\u0438\u0432 \u0441\u0435\u0440\u0438\u0458\u0435",
+			"DescPlaceholder": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u043e\u043f\u0438\u0441 \u0441\u0435\u0440\u0438\u0458\u0435",
+			"EndingIn": "\u0417\u0430\u0432\u0440\u0448\u0430\u0432\u0430"
+		},
+		"contract": {
+			"CreateContract": "\u041d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u0435 \u0443\u0433\u043e\u0432\u043e\u0440",
+			"SelectContract": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u0443\u0433\u043e\u0432\u043e\u0440",
+			"CreateContractFor": "\u041d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u0435 \u0443\u0433\u043e\u0432\u043e\u0440 \u0437\u0430 {{userName}}",
+			"ContractFor": "\u0423\u0433\u043e\u0432\u043e\u0440 \u0437\u0430 {{userName}}",
+			"UpdateContract": "\u0410\u0436\u0443\u0440\u0438\u0440\u0430\u0458\u0442\u0435 \u0443\u0433\u043e\u0432\u043e\u0440",
+			"TransferOwnership": "\u0422\u0440\u0430\u043d\u0441\u0444\u0435\u0440 \u041e\u0432\u043d\u0435\u0440\u0441\u0445\u0438\u043f",
+			"SetBaseURI": "\u041f\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u0435 \u043e\u0441\u043d\u043e\u0432\u043d\u0438 \u0423\u0420\u0418",
+			"SetSuffix": "\u041f\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u0435 \u0441\u0443\u0444\u0438\u043a\u0441",
+			"CurrentOwner": "\u0422\u0440\u0435\u043d\u0443\u0442\u043d\u0438 \u0432\u043b\u0430\u0441\u043d\u0438\u043a",
+			"CurrentBaseURL": "\u0426\u0443\u0440\u0440\u0435\u043d\u0442 \u0411\u0430\u0441\u0435\u0423\u0420\u041b",
+			"ContractAddressAbsent": "\u0410\u0434\u0440\u0435\u0441\u0430 \u0443\u0433\u043e\u0432\u043e\u0440\u0430 \u043e\u0434\u0441\u0443\u0442\u043d\u0430",
+			"FactoryAddressAbsent": "\u0410\u0434\u0440\u0435\u0441\u0430 \u0444\u0430\u0431\u0440\u0438\u043a\u0435 \u043e\u0434\u0441\u0443\u0442\u043d\u0430",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "\u041d\u0430\u0441\u043b\u043e\u0432 \u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d",
+			"SymbolRequired": "\u0421\u0438\u043c\u0431\u043e\u043b \u0458\u0435 \u043e\u0431\u0430\u0432\u0435\u0437\u0430\u043d",
+			"TypeContractName": "\u043d\u0430\u0437\u0438\u0432 \u0443\u0433\u043e\u0432\u043e\u0440\u0430",
+			"TypeContractSymbol": "\u0441\u0438\u043c\u0431\u043e\u043b \u0443\u0433\u043e\u0432\u043e\u0440\u0430 (\u043c\u0430\u043a\u0441. 10 \u0437\u043d\u0430\u043a\u043e\u0432\u0430)"
+		},
+		"contests": {
+			"Title": "\u041a\u043e\u043d\u043a\u0443\u0440\u0441\u0438",
+			"NewContest": "\u041d\u0435\u0432 \u0426\u043e\u043d\u0442\u0435\u0441\u0442"
+		},
+		"import": {
+			"importNFT": "\u0423\u0432\u043e\u0437 \u041d\u0424\u0422-\u0430",
+			"importAttributes": "\u0423\u0432\u0435\u0437\u0438\u0442\u0435 \u041d\u0424\u0422 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0435",
+			"fileNotFound": "\u0416\u0430\u043e \u043d\u0430\u043c \u0458\u0435, \u0426\u0421\u0412 \u0434\u0430\u0442\u043e\u0442\u0435\u043a\u0430 \u043d\u0438\u0458\u0435 \u043f\u0440\u043e\u043d\u0430\u0452\u0435\u043d\u0430.",
+			"fileEmpty": "\u0416\u0430\u043e \u043d\u0430\u043c \u0458\u0435, \u0426\u0421\u0412 \u0434\u0430\u0442\u043e\u0442\u0435\u043a\u0430 \u0458\u0435 \u043f\u0440\u0430\u0437\u043d\u0430.",
+			"userIdNotFound": "\u043a\u043e\u0440\u0438\u0441\u043d\u0438\u043a \u043f\u043e\u0441\u0442\u043e\u0458\u0438, \u0430\u043b\u0438 \u0458\u0435 \u0418\u0414 \u043f\u0440\u0430\u0437\u0430\u043d",
+			"errorLine": "\u0440\u0435\u0434 {{1}}",
+			"fieldNotFound": "\u041e\u0431\u0430\u0432\u0435\u0437\u043d\u043e \u043f\u043e\u0459\u0435 &quot; {{1}} &quot; \u043d\u0438\u0458\u0435 \u043f\u0440\u043e\u043d\u0430\u0452\u0435\u043d\u043e",
+			"displayTypeEmpty": "\u0422\u0438\u043f \u043f\u0440\u0438\u043a\u0430\u0437\u0430 \u0437\u0430 &quot; {{1}} &quot; \u043d\u0438\u0458\u0435 \u043f\u0440\u043e\u043d\u0430\u0452\u0435\u043d",
+			"taskStreamInvalid": "\u0442\u043e\u043a \u0437\u0430\u0434\u0430\u0442\u0430\u043a\u0430 \u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0438",
+			"instructionsEmpty": "\u0443\u043f\u0443\u0442\u0441\u0442\u0432\u0430 \u0437\u0430 \u0442\u043e\u043a \u0437\u0430\u0434\u0430\u0442\u0430\u043a\u0430 \u043f\u0440\u0430\u0437\u043d\u0430",
+			"complete": "\u043a\u043e\u043c\u043f\u043b\u0435\u0442\u0430\u043d",
+			"activateUsers": "\u043f\u043e\u0441\u043b\u0430\u0442\u0438 \u0430\u043a\u0442\u0438\u0432\u0430\u0446\u0438\u043e\u043d\u0443 \u043f\u043e\u0440\u0443\u043a\u0443 \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u0446\u0438\u043c\u0430?",
+			"importProgress": "\u041d\u0430\u043f\u0440\u0435\u0434\u0430\u043a",
+			"importOptions": "\u041e\u043f\u0446\u0438\u0458\u0435",
+			"sampleCSV": "\u041f\u0440\u0435\u0443\u0437\u043c\u0438\u0442\u0435 \u043f\u0440\u0438\u043c\u0435\u0440 \u0426\u0421\u0412-\u0430",
+			"fileLabel": "\u041e\u0442\u043f\u0440\u0435\u043c\u0438 \u0442\u0430\u0431\u0435\u043b\u0443:",
+			"errorsTitle": "\u0414\u043e\u0448\u043b\u043e \u0458\u0435 \u0434\u043e \u0433\u0440\u0435\u0448\u0430\u043a\u0430"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "\u0424\u0438\u043b\u0442\u0440\u0438\u0440\u0430\u0458 \u043f\u0440\u0435\u043c\u0430 \u041d\u0424\u0422 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0430\u043c\u0430",
+				"ShowNFTCollection": "\u041f\u0440\u0438\u043a\u0430\u0436\u0438 \u041d\u0424\u0422 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0443 \u0443...",
+				"AllCollections": "\u0421\u0432\u0435 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0435"
+			},
+			"ByUser": {
+				"AllAuthors": "\u0421\u0432\u0438 \u0430\u0443\u0442\u043e\u0440\u0438",
+				"AllUsers": "\u0421\u0432\u0438",
+				"FilterByAuthors": "\u0424\u0438\u043b\u0442\u0440\u0438\u0440\u0430\u0458 \u043f\u043e \u0430\u0443\u0442\u043e\u0440\u0438\u043c\u0430"
+			}
+		},
+		"Back": "\u041d\u0430\u0437\u0430\u0434 \u043d\u0430 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0443",
+		"attributes": {
+			"Title": "\u0423\u043f\u0440\u0430\u0432\u0459\u0430\u0458\u0442\u0435 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0438\u043c\u0430",
+			"Attributes": "\u0410\u0442\u0440\u0438\u0431\u0443\u0442\u0438",
+			"DisplayTitle": "\u0422\u0438\u043f \u0435\u043a\u0440\u0430\u043d\u0430",
+			"AddDisplayType": "\u0414\u043e\u0434\u0430\u0458\u0442\u0435 \u043d\u043e\u0432\u0438 \u0442\u0438\u043f \u043f\u0440\u0438\u043a\u0430\u0437\u0430",
+			"NewDisplay": "\u041d\u043e\u0432\u0438 \u0435\u043a\u0440\u0430\u043d",
+			"TraitTitle": "\u0422\u0440\u0430\u0438\u0442 \u0422\u0438\u043f\u0435",
+			"AddTraitTitle": "\u0414\u043e\u0434\u0430\u0458\u0442\u0435 \u043d\u043e\u0432\u0438 \u0442\u0438\u043f \u043e\u0441\u043e\u0431\u0438\u043d\u0435",
+			"NewTrait": "\u041d\u043e\u0432\u0438 \u0442\u0438\u043f \u043e\u0441\u043e\u0431\u0438\u043d\u0435",
+			"ValueTitle": "\u0412\u0430\u043b\u0443\u0435",
+			"AddValueTitle": "\u0414\u043e\u0434\u0430\u0458\u0442\u0435 \u043d\u043e\u0432\u0443 \u0432\u0440\u0435\u0434\u043d\u043e\u0441\u0442",
+			"NewValue": "\u041d\u043e\u0432\u0430 \u0432\u0440\u0435\u0434\u043d\u043e\u0441\u0442",
+			"NewAttribute": "\u041d\u043e\u0432\u0438 \u0430\u0442\u0440\u0438\u0431\u0443\u0442",
+			"UpdateAttributes": "\u0410\u0436\u0443\u0440\u0438\u0440\u0430\u0458\u0442\u0435 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0435",
+			"SaveAttributes": "\u0421\u0430\u0447\u0443\u0432\u0430\u0458 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0435"
+		},
+		"profile": {
+			"LogOut": "\u041e\u0434\u0458\u0430\u0432\u0438\u0442\u0438 \u0441\u0435",
+			"Title": "\u041f\u0440\u043e\u0444\u0438\u043b \u0437\u0430 {{userName}}",
+			"Description": "\u041f\u043e\u0434\u0430\u0446\u0438 \u043e \u043a\u043e\u0440\u0438\u0441\u043d\u0438\u043a\u0443",
+			"aboutPlaceholder": "\u0423\u0440\u0435\u0434\u0438 \u0431\u0438\u043e\u0433\u0440\u0430\u0444\u0438\u0458\u0443",
+			"SureLogOut": "\u0414\u0430 \u043b\u0438 \u0441\u0442\u0435 \u0441\u0438\u0433\u0443\u0440\u043d\u0438 \u0434\u0430 \u0436\u0435\u043b\u0438\u0442\u0435 \u0434\u0430 \u0441\u0435 \u043e\u0434\u0458\u0430\u0432\u0438\u0442\u0435?",
+			"UploadCoverPhoto": "\u041e\u0442\u043f\u0440\u0435\u043c\u0438\u0442\u0435 \u043d\u0430\u0441\u043b\u043e\u0432\u043d\u0443 \u0444\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0458\u0443"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "\u041d\u0424\u0422\u0426\u043e\u043d\u0442\u0440\u0430\u0446\u0442",
+						"seriesId": "\u0441\u0435\u0440\u0438\u0458\u0430 \u0418\u0434",
+						"owner": "\u0412\u043b\u0430\u0441\u043d\u0438\u043a",
+						"currency": "\u0426\u0443\u0440\u0440\u0435\u043d\u0446\u0438",
+						"price": "\u0426\u0435\u043d\u0430",
+						"beneficiary": "\u043a\u043e\u0440\u0438\u0441\u043d\u0438\u043a",
+						"autoindex": "\u0410\u0443\u0442\u043e\u0438\u043d\u0434\u0435\u043a",
+						"duration": "\u0422\u0440\u0430\u0458\u0430\u045a\u0435",
+						"rateInterval": "\u0418\u043d\u0442\u0435\u0440\u0432\u0430\u043b \u0441\u0442\u043e\u043f\u0435",
+						"rateAmount": "\u0421\u0442\u043e\u043f\u0430 \u0438\u0437\u043d\u043e\u0441"
+					},
+					"small": {
+						"NFTContract": "\u041d\u0424\u0422\u0426\u043e\u043d\u0442\u0440\u0430\u0446\u0442",
+						"seriesId": "\u0436\u0435\u0442\u043e\u043d\u0438 \u045b\u0435 \u0431\u0438\u0442\u0438 \u043a\u043e\u0432\u0430\u043d\u0438 \u0443 \u043e\u0432\u043e\u0458 \u0441\u0435\u0440\u0438\u0458\u0438",
+						"owner": "\u0432\u043b\u0430\u0441\u043d\u0438\u043a \u0438\u043d\u0441\u0442\u0430\u043d\u0446\u0435, \u0438\u043d\u0430\u0447\u0435 \u045b\u0435 \u0431\u0438\u0442\u0438 \u043f\u043e\u0448\u0438\u0459\u0430\u043b\u0430\u0446",
+						"currency": "\u0412\u0430\u043b\u0443\u0442\u0430 \u0437\u0430 \u043a\u0443\u043f\u0459\u0435\u043d\u0435 \u0442\u043e\u043a\u0435\u043d\u0435, \u0430\u043a\u043e \u0458\u0435 \u043d\u0443\u043b\u0430 - \u0437\u0430 \u0438\u0437\u0432\u043e\u0440\u043d\u0435 \u043d\u043e\u0432\u0447\u0438\u045b\u0435",
+						"price": "\u0426\u0435\u043d\u0430",
+						"beneficiary": "\u041a\u043e\u0440\u0438\u0441\u043d\u0438\u043a \u043f\u0440\u043e\u0434\u0430\u0458\u0435 \u0442\u043e\u043a\u0435\u043d\u0430, \u0438\u043d\u0430\u0447\u0435 \u045b\u0435 \u0431\u0438\u0442\u0438 \u043f\u043e\u0448\u0438\u0459\u0430\u043b\u0430\u0446",
+						"autoindex": "\u0410\u0443\u0442\u043e\u0438\u043d\u0434\u0435\u043a",
+						"duration": "\u0417\u0430\u043a\u0459\u0443\u0447\u0430\u0432\u0430\u045a\u0435 \u043f\u043e\u0441\u043b\u0435 \u043a\u043e\u0432\u0430\u045a\u0430. \u041d\u0443\u043b\u0430 \u0437\u043d\u0430\u0447\u0438 \u043e\u0434\u043c\u0430\u0445 \u0434\u043e\u0431\u0438\u0442\u0438.",
+						"rateInterval": "\u0438\u043d\u0442\u0435\u0440\u0432\u0430\u043b \u043a\u0430\u0448\u0438\u043a\u0435 \u0437\u0430 \u043f\u043e\u0441\u0435\u0431\u043d\u0443 \u043a\u0443\u043f\u043e\u0432\u0438\u043d\u0443",
+						"rateAmount": "\u0438\u0437\u043d\u043e\u0441 \u043a\u0430\u043d\u0442\u0435 \u0437\u0430 \u043f\u043e\u0441\u0435\u0431\u043d\u0443 \u043a\u0443\u043f\u043e\u0432\u0438\u043d\u0443"
+					}
+				},
+				"placeholders": {
+					"optional": "(\u043e\u043f\u0446\u0438\u043e\u043d\u043e)",
+					"number": "\u0431\u0440\u043e\u0458",
+					"address": "\u0430\u0434\u0440\u0435\u0441\u0430",
+					"fraction": "\u0444\u0440\u0430\u043a\u0446\u0438\u0458\u0430",
+					"integer": "\u0446\u0435\u043e \u0431\u0440\u043e\u0458",
+					"seconds": "\u0441\u0435\u043a\u0443\u043d\u0434\u0438",
+					"uint256": "\u0443\u0438\u043d\u0442256",
+					"uint192": "\u0443\u0438\u043d\u0442192",
+					"uint64": "\u0443\u0438\u043d\u044264",
+					"uint32": "\u0443\u0438\u043d\u044232",
+					"uint16": "\u0443\u0438\u043d\u044216"
+				},
+				"produce": "\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0438",
+				"viewInstancesList": "\u041e\u0441\u0432\u0435\u0436\u0438 \u043b\u0438\u0441\u0442\u0443"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "\u0418\u0414 \u0441\u0435\u0440\u0438\u0458\u0435",
+						"account": "\u0420\u0430\u0447\u0443\u043d",
+						"amount": "\u0418\u0437\u043d\u043e\u0441"
+					},
+					"small": {
+						"seriesId": "\u043d\u043e\u0432\u0438 \u0442\u043e\u043a\u0435\u043d \u045b\u0435 \u043f\u0440\u0438\u043f\u0430\u0434\u0430\u0442\u0438 \u0443 \u0441\u0435\u0440\u0438\u0458\u0443 \u0441\u0430 \u0442\u0430\u043a\u0432\u0438\u043c \u0418\u0414-\u043e\u043c",
+						"account": "\u0432\u043b\u0430\u0441\u043d\u0438\u043a \u043d\u043e\u0432\u043e\u0441\u0442\u0432\u043e\u0440\u0435\u043d\u043e\u0433 \u041d\u0424\u0422-\u0430. \u0430\u043a\u043e \u043d\u0438\u0458\u0435 \u043f\u043e\u0434\u0435\u0448\u0435\u043d - \u043a\u043e\u0440\u0438\u0441\u0442\u0438\u045b\u0435 \u0442\u0440\u0435\u043d\u0443\u0442\u043d\u0438 \u043d\u043e\u0432\u0447\u0430\u043d\u0438\u043a",
+						"amount": "\u0438\u0437\u043d\u043e\u0441 \u041d\u0424\u0422 \u0437\u0430 \u0438\u0441\u043a\u043e\u0432\u0430\u0442\u0438"
+					}
+				},
+				"placeholders": {
+					"optional": "(\u043e\u043f\u0446\u0438\u043e\u043d\u043e)",
+					"seriesId": "\u0438\u0434",
+					"account": "\u0440\u0430\u0447\u0443\u043d",
+					"amount": "\u0438\u0437\u043d\u043e\u0441",
+					"integer": "\u0446\u0435\u043e \u0431\u0440\u043e\u0458"
+				},
+				"btn": {
+					"Purchase": "\u041a\u0443\u043f\u043e\u0432\u0438\u043d\u0430",
+					"SpecialPurchase": "\u0421\u043f\u0435\u0446\u0438\u0458\u0430\u043b\u043d\u0430 \u043a\u0443\u043f\u043e\u0432\u0438\u043d\u0430"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "\u0410\u0434\u0440\u0435\u0441\u0430"
+					},
+					"small": {
+						"account": "\u0410\u0434\u0440\u0435\u0441\u0430"
+					}
+				},
+				"errors": {
+					"invalidAddress": "\u041f\u043e\u0433\u0440\u0435\u0448\u043d\u0430 \u0430\u0434\u0440\u0435\u0441\u0430"
+				},
+				"placeholders": {
+					"account": "\u0410\u0434\u0440\u0435\u0441\u0430"
+				},
+				"addToWhitelist": "\u0414\u043e\u0434\u0430\u0458 \u043d\u0430 \u0431\u0435\u043b\u0443 \u043b\u0438\u0441\u0442\u0443",
+				"removeFromWhitelist": "\u0423\u043a\u043b\u043e\u043d\u0438 \u0441\u0430 \u0431\u0435\u043b\u0435 \u043b\u0438\u0441\u0442\u0435"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "\u0418\u0414 \u0442\u043e\u043a\u0435\u043d\u0430",
+					"custodian": "\u0426\u0443\u0441\u0442\u043e\u0434\u0438\u0430\u043d",
+					"recipient": "\u041f\u0440\u0438\u043c\u0430\u043b\u0430\u0446"
+				},
+				"small": {
+					"tokenId": "\u0418\u0414 \u0442\u043e\u043a\u0435\u043d\u0430 \u0448\u0442\u0430 \u0442\u0440\u0435\u0431\u0430 \u0437\u0430\u043a\u0459\u0443\u0447\u0430\u0442\u0438 \u0438\u043b\u0438 \u043e\u0442\u043a\u0459\u0443\u0447\u0430\u0442\u0438",
+					"custodian": "\u0430\u0434\u0440\u0435\u0441\u0443 \u043a\u043e\u0458\u0430 \u0441\u0435 \u043c\u043e\u0436\u0435 \u043e\u0442\u043a\u0459\u0443\u0447\u0430\u0442\u0438",
+					"recipient": "\u0430\u0434\u0440\u0435\u0441\u0443 \u043a\u043e\u0458\u0430 \u045b\u0435 \u043f\u0440\u0438\u043c\u0438\u0442\u0438 \u0442\u043e\u043a\u0435\u043d\u0435"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "\u041d\u0435\u0432\u0430\u0436\u0435\u045b\u0438 \u0442\u043e\u043a\u0435\u043d\u0418\u0434",
+				"invalidCustodian": "\u041d\u0435\u0432\u0430\u0436\u0435\u045b\u0438 \u0447\u0443\u0432\u0430\u0440",
+				"invalidRecipient": "\u041d\u0435\u0432\u0430\u0436\u0435\u045b\u0438 \u043f\u0440\u0438\u043c\u0430\u043b\u0430\u0446"
+			},
+			"placeholders": {
+				"optional": "(\u043e\u043f\u0446\u0438\u043e\u043d\u043e)",
+				"tokenId": "\u0438\u0434",
+				"custodian": "\u0430\u0434\u0440\u0435\u0441\u0430"
+			},
+			"Lock": "\u0437\u0430\u043a\u0459\u0443\u0447\u0430\u0442\u0438",
+			"Unlock": "\u041e\u0442\u043a\u0459\u0443\u0447\u0430\u0458",
+			"Locked": "\u0417\u0430\u043a\u0459\u0443\u0447\u0430\u043d\u043e",
+			"CustodianAddress": "\u0410\u0434\u0440\u0435\u0441\u0430 \u0447\u0443\u0432\u0430\u0440\u0430",
+			"TokenWasClaimed": "\u0422\u043e\u043a\u0435\u043d &quot; {{title}} &quot; \u0458\u0435 \u0437\u0430\u0443\u0437\u0435\u0442",
+			"TokenWasLocked": "\u0422\u043e\u043a\u0435\u043d &quot; {{title}} &quot; \u0458\u0435 \u0437\u0430\u043a\u0459\u0443\u0447\u0430\u043d",
+			"TokenWasUnlocked": "\u0422\u043e\u043a\u0435\u043d &quot; {{title}} &quot; \u0458\u0435 \u043e\u0442\u043a\u0459\u0443\u0447\u0430\u043d"
+		},
+		"GenerateDescription": "\u0438\u043b\u0438 \u0430\u0443\u0442\u043e\u043c\u0430\u0442\u0441\u043a\u0438 \u0433\u0435\u043d\u0435\u0440\u0438\u0441\u0430\u0442\u0438",
+		"collections": {
+			"Title": "\u0417\u0431\u0438\u0440\u043a\u0435",
+			"EnterTitle": "\u0443\u043d\u0435\u0441\u0438\u0442\u0435 \u043d\u0430\u0441\u043b\u043e\u0432",
+			"EnterDescription": "\u0443\u043d\u0435\u0441\u0438\u0442\u0435 \u043e\u043f\u0438\u0441",
+			"NewCollection": "\u041d\u043e\u0432\u0430 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0430",
+			"Name": "\u0418\u043c\u0435",
+			"Icon": "\u0418\u043a\u043e\u043d\u0430",
+			"Description": "\u041e\u043f\u0438\u0441",
+			"Author": "\u0410\u0443\u0442\u043e\u0440",
+			"SelectCollection": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0443",
+			"Value": "\u0412\u0430\u043b\u0443\u0435",
+			"AreYouSure": "\u0408\u0435\u0441\u0438 \u043b\u0438 \u0441\u0438\u0433\u0443\u0440\u0430\u043d?",
+			"AuthorInvalid": "\u0410\u0434\u0440\u0435\u0441\u0430 \u0430\u0443\u0442\u043e\u0440\u0430 \u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0430!",
+			"Address": "\u0410\u0434\u0440\u0435\u0441\u0430",
+			"CoverImage": "\u041d\u0430\u0441\u043b\u043e\u0432\u043d\u0430 \u0441\u043b\u0438\u043a\u0430",
+			"UploadIcon": "\u0418\u043a\u043e\u043d\u0430 \u0437\u0430 \u043e\u0442\u043f\u0440\u0435\u043c\u0430\u045a\u0435",
+			"CommissionAddressInvalid": "\u0410\u0434\u0440\u0435\u0441\u0430 \u043a\u043e\u043c\u0438\u0441\u0438\u0458\u0435 \u043d\u0435\u0432\u0430\u0436\u0435\u045b\u0430",
+			"OnSale": "\u043d\u0430 \u0440\u0430\u0441\u043f\u0440\u043e\u0434\u0430\u0458\u0438",
+			"OffSale": "\u043e\u0444\u0444 \u0441\u0430\u043b\u0435",
+			"CreateCollection": "\u041d\u0430\u043f\u0440\u0430\u0432\u0438\u0442\u0435 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0443",
+			"UpdateCollection": "\u0423\u043f\u0434\u0430\u0442\u0435 \u0426\u043e\u043b\u043b\u0435\u0446\u0442\u0438\u043e\u043d",
+			"CollectionInfo": "\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0458\u0435 \u043e \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0438",
+			"SelectAuthor": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u0430\u0443\u0442\u043e\u0440\u0430",
+			"NewItem": "\u041d\u043e\u0432\u0430 \u041d\u0424\u0422 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0430",
+			"NamePlaceholder": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u043d\u0430\u0437\u0438\u0432 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0435",
+			"DescPlaceholder": "\u0423\u043d\u0435\u0441\u0438\u0442\u0435 \u043e\u043f\u0438\u0441 \u043a\u043e\u043b\u0435\u043a\u0446\u0438\u0458\u0435",
+			"EndingIn": "\u0417\u0430\u0432\u0440\u0448\u0430\u0432\u0430",
+			"SubmitSeries": "\u041f\u043e\u0448\u0430\u0459\u0438\u0442\u0435 \u0441\u0435\u0440\u0438\u0458\u0443"
+		}
+	},
+	"currencies": {
+		"choose": "\u0418\u0437\u0430\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0430\u043b\u0443\u0442\u0443"
+	},
+	"connectedAccount": {
+		"Title": "\u041f\u043e\u0432\u0435\u0436\u0438\u0442\u0435 \u043d\u0430\u043b\u043e\u0433",
+		"Success": "\u0423\u0441\u043f\u0435\u0445",
+		"YourAccountCreated": "\u0412\u0430\u0448 \u043d\u0430\u043b\u043e\u0433 \u0458\u0435 \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043d\u0430\u043f\u0440\u0430\u0432\u0459\u0435\u043d!",
+		"YourAccountAlreadyCreated": "\u0412\u0430\u0448 \u043d\u0430\u043b\u043e\u0433 \u0458\u0435 \u0432\u0435\u045b \u043a\u0440\u0435\u0438\u0440\u0430\u043d \u0438 \u0441\u043f\u0440\u0435\u043c\u0430\u043d \u0437\u0430 \u0443\u043f\u043e\u0442\u0440\u0435\u0431\u0443"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u0440\u0435\u0441\u0435\u0440\u0432\u0435\u0422\u043e\u043a\u0435\u043d",
+						"amount": "\u0418\u0437\u043d\u043e\u0441"
+					},
+					"small": {
+						"reserveToken": "\u0440\u0435\u0441\u0435\u0440\u0432\u0435\u0422\u043e\u043a\u0435\u043d",
+						"amount": "\u0418\u0437\u043d\u043e\u0441"
+					}
+				},
+				"placeholders": {
+					"amount": "\u0438\u0437\u043d\u043e\u0441"
+				},
+				"btns": {
+					"stake": "\u0423\u043b\u043e\u0433"
+				},
+				"stake": "\u0423\u043b\u043e\u0433",
+				"loading": "\u041b\u043e\u0430\u0434\u0438\u043d\u0433"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "\u0442\u043e\u043a\u0435\u043d\u0415\u0440\u044620",
+					"duration": "\u0422\u0440\u0430\u0458\u0430\u045a\u0435",
+					"bonusTokenFraction": "\u0431\u043e\u043d\u0443\u0441\u0422\u043e\u043a\u0435\u043d\u0424\u0440\u0430\u0446\u0442\u0438\u043e\u043d",
+					"popularToken": "\u043f\u043e\u043f\u0443\u043b\u0430\u0440\u0422\u043e\u043a\u0435\u043d",
+					"donations": "\u0434\u043e\u043d\u0430\u0446\u0438\u0458\u0435",
+					"rewardsRateFraction": "\u0440\u0435\u0432\u0430\u0440\u0434\u0441\u0420\u0430\u0442\u0435\u0424\u0440\u0430\u0446\u0442\u0438\u043e\u043d",
+					"numerator": "\u0431\u0440\u043e\u0458\u0438\u043b\u0430\u0446",
+					"denominator": "\u0438\u043c\u0435\u043d\u0438\u043b\u0430\u0446"
+				},
+				"small": {
+					"tokenErc20": "\u0442\u043e\u043a\u0435\u043d\u0415\u0440\u044620",
+					"duration": "\u0422\u0440\u0430\u0458\u0430\u045a\u0435 \u0443 \u0434\u0430\u043d\u0438\u043c\u0430",
+					"bonusTokenFraction": "\u0431\u043e\u043d\u0443\u0441\u0422\u043e\u043a\u0435\u043d\u0424\u0440\u0430\u0446\u0442\u0438\u043e\u043d",
+					"popularToken": "\u043f\u043e\u043f\u0443\u043b\u0430\u0440\u0422\u043e\u043a\u0435\u043d",
+					"donations": "\u0434\u043e\u043d\u0430\u0446\u0438\u0458\u0435",
+					"rewardsRateFraction": "\u0440\u0435\u0432\u0430\u0440\u0434\u0441\u0420\u0430\u0442\u0435\u0424\u0440\u0430\u0446\u0442\u0438\u043e\u043d",
+					"numerator": "\u0431\u0440\u043e\u0458\u0438\u043b\u0430\u0446",
+					"denominator": "\u0438\u043c\u0435\u043d\u0438\u043b\u0430\u0446"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u043e\u043f\u0446\u0438\u043e\u043d\u043e)",
+				"tuple": "\u0442\u0443\u043f\u043b\u0435[]",
+				"number": "\u0431\u0440\u043e\u0458",
+				"address": "\u0430\u0434\u0440\u0435\u0441\u0430",
+				"fraction": "\u0444\u0440\u0430\u043a\u0446\u0438\u0458\u0430",
+				"integer": "\u0446\u0435\u043e \u0431\u0440\u043e\u0458",
+				"seconds": "\u0441\u0435\u043a\u0443\u043d\u0434\u0438",
+				"days": "\u0434\u0430\u043d\u0430",
+				"uint256": "\u0443\u0438\u043d\u0442256",
+				"uint192": "\u0443\u0438\u043d\u0442192",
+				"uint64": "\u0443\u0438\u043d\u044264",
+				"uint32": "\u0443\u0438\u043d\u044232",
+				"uint16": "\u0443\u0438\u043d\u044216"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u041d\u0435\u043c\u0430 \u0431\u0430\u0437\u0435\u043d\u0430"
+			},
+			"btns": {
+				"createPool": "\u0426\u0440\u0435\u0430\u0442\u0435 \u041f\u043e\u043e\u043b",
+				"createPoolInForm": "\u041a\u0440\u0435\u0438\u0440\u0430\u0458"
+			},
+			"createPool": "\u0426\u0440\u0435\u0430\u0442\u0435 \u041f\u043e\u043e\u043b",
+			"produce": "\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0438",
+			"loading": "\u041b\u043e\u0430\u0434\u0438\u043d\u0433",
+			"viewInstancesList": "\u041e\u0441\u0432\u0435\u0436\u0438 \u043b\u0438\u0441\u0442\u0443"
+		}
+	},
+	"fundrise": {
+		"placeholder": "\u043e\u0442\u043a\u0443\u0446\u0430\u0458 \u043d\u0435\u0448\u0442\u043e \u043e \u043e\u0432\u043e\u043c \u043f\u0440\u0438\u043b\u043e\u0433\u0443..."
+	}
 }

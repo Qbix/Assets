@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "ٹوکن فروخت کرنا",
-                        "timestamps": "اوقات",
-                        "prices": "قیمتیں",
-                        "endTime": "آخر وقت",
-                        "thresholds": "دہلیز",
-                        "bonuses": "بونس"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "مالک واپس نہیں لے سکتا",
-                            "option1": "اختتامی وقت گزرنے کے بعد ہی مالک ٹوکن واپس لے سکتا ہے۔",
-                            "option2": "مالک کسی بھی وقت ٹوکن واپس لے سکتا ہے۔"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "کمیونٹی کا پتہ",
-                    "methodkeccack": "Keccak256 ہیش فنکشن",
-                    "roleId": "کردار کی شناخت",
-                    "sellingToken": "ٹوکن ایڈریس فروخت کرنا",
-                    "prices": "ای ٹی ایچ، قیمت",
-                    "thresholds": "# ٹوکنز",
-                    "bonuses": "اضافی انعام ٪"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "فنڈز نہیں ہیں۔"
-                },
-                "btns": {
-                    "createFund": "فنڈ بنائیں",
-                    "createFundInForm": "بنانا"
-                },
-                "fundAddress": "فنڈ کا پتہ",
-                "createFund": "فنڈ بنائیں",
-                "fundInfo": "معلومات",
-                "produce": "پیدا کرنا",
-                "loading": "لوڈ ہو رہا ہے۔",
-                "viewInstancesList": "فہرست کو تازہ کریں۔"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u0679\u0648\u06a9\u0646 \u0641\u0631\u0648\u062e\u062a \u06a9\u0631\u0646\u0627",
+						"timestamps": "\u0627\u0648\u0642\u0627\u062a",
+						"prices": "\u0642\u06cc\u0645\u062a\u06cc\u06ba",
+						"endTime": "\u0622\u062e\u0631 \u0648\u0642\u062a",
+						"thresholds": "\u062f\u06c1\u0644\u06cc\u0632",
+						"bonuses": "\u0628\u0648\u0646\u0633"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u0645\u0627\u0644\u06a9 \u0648\u0627\u067e\u0633 \u0646\u06c1\u06cc\u06ba \u0644\u06d2 \u0633\u06a9\u062a\u0627",
+							"option1": "\u0627\u062e\u062a\u062a\u0627\u0645\u06cc \u0648\u0642\u062a \u06af\u0632\u0631\u0646\u06d2 \u06a9\u06d2 \u0628\u0639\u062f \u06c1\u06cc \u0645\u0627\u0644\u06a9 \u0679\u0648\u06a9\u0646 \u0648\u0627\u067e\u0633 \u0644\u06d2 \u0633\u06a9\u062a\u0627 \u06c1\u06d2\u06d4",
+							"option2": "\u0645\u0627\u0644\u06a9 \u06a9\u0633\u06cc \u0628\u06be\u06cc \u0648\u0642\u062a \u0679\u0648\u06a9\u0646 \u0648\u0627\u067e\u0633 \u0644\u06d2 \u0633\u06a9\u062a\u0627 \u06c1\u06d2\u06d4"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u06a9\u0645\u06cc\u0648\u0646\u0679\u06cc \u06a9\u0627 \u067e\u062a\u06c1",
+					"methodkeccack": "Keccak256 \u06c1\u06cc\u0634 \u0641\u0646\u06a9\u0634\u0646",
+					"roleId": "\u06a9\u0631\u062f\u0627\u0631 \u06a9\u06cc \u0634\u0646\u0627\u062e\u062a",
+					"sellingToken": "\u0679\u0648\u06a9\u0646 \u0627\u06cc\u0688\u0631\u06cc\u0633 \u0641\u0631\u0648\u062e\u062a \u06a9\u0631\u0646\u0627",
+					"prices": "\u0627\u06cc \u0679\u06cc \u0627\u06cc\u0686\u060c \u0642\u06cc\u0645\u062a",
+					"thresholds": "# \u0679\u0648\u06a9\u0646\u0632",
+					"bonuses": "\u0627\u0636\u0627\u0641\u06cc \u0627\u0646\u0639\u0627\u0645 \u066a"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u0641\u0646\u0688\u0632 \u0646\u06c1\u06cc\u06ba \u06c1\u06cc\u06ba\u06d4"
+				},
+				"btns": {
+					"createFund": "\u0641\u0646\u0688 \u0628\u0646\u0627\u0626\u06cc\u06ba",
+					"createFundInForm": "\u0628\u0646\u0627\u0646\u0627"
+				},
+				"fundAddress": "\u0641\u0646\u0688 \u06a9\u0627 \u067e\u062a\u06c1",
+				"createFund": "\u0641\u0646\u0688 \u0628\u0646\u0627\u0626\u06cc\u06ba",
+				"fundInfo": "\u0645\u0639\u0644\u0648\u0645\u0627\u062a",
+				"produce": "\u067e\u06cc\u062f\u0627 \u06a9\u0631\u0646\u0627",
+				"loading": "\u0644\u0648\u0688 \u06c1\u0648 \u0631\u06c1\u0627 \u06c1\u06d2\u06d4",
+				"viewInstancesList": "\u0641\u06c1\u0631\u0633\u062a \u06a9\u0648 \u062a\u0627\u0632\u06c1 \u06a9\u0631\u06cc\u06ba\u06d4"
+			}
+		}
+	}
 }

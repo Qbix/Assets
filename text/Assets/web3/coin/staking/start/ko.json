@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "예비 토큰",
-                        "duration": "지속",
-                        "amount": "양"
-                    },
-                    "small": {
-                        "reserveToken": "예비 토큰",
-                        "duration": "지속",
-                        "amount": "양"
-                    }
-                },
-                "placeholders": {
-                    "duration": "지속",
-                    "amount": "양"
-                },
-                "btns": {
-                    "stake": "말뚝"
-                },
-                "stake": "말뚝",
-                "loading": "로드 중"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\uc608\ube44 \ud1a0\ud070",
+						"duration": "\uc9c0\uc18d",
+						"amount": "\uc591"
+					},
+					"small": {
+						"reserveToken": "\uc608\ube44 \ud1a0\ud070",
+						"duration": "\uc9c0\uc18d",
+						"amount": "\uc591"
+					}
+				},
+				"placeholders": {
+					"duration": "\uc9c0\uc18d",
+					"amount": "\uc591"
+				},
+				"btns": {
+					"stake": "\ub9d0\ub69d"
+				},
+				"stake": "\ub9d0\ub69d",
+				"loading": "\ub85c\ub4dc \uc911"
+			}
+		}
+	}
 }

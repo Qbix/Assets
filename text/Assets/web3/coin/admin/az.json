@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Müddət",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "populyar Token",
-                    "donations": "ianələr",
-                    "rewardsRateFraction": "mükafatlarRateFraction",
-                    "numerator": "hesablayıcı",
-                    "denominator": "məxrəc"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Müddət günlərlə",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "populyar Token",
-                    "donations": "ianələr",
-                    "rewardsRateFraction": "mükafatlarRateFraction",
-                    "numerator": "hesablayıcı",
-                    "denominator": "məxrəc"
-                }
-            },
-            "placeholders": {
-                "optional": "(isteğe bağlı)",
-                "tuple": "tuple[]",
-                "number": "nömrə",
-                "address": "ünvanı",
-                "fraction": "kəsr",
-                "integer": "tam",
-                "seconds": "saniyə",
-                "days": "günlər",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Hovuzlar yoxdur"
-            },
-            "btns": {
-                "createPool": "Hovuz yaradın",
-                "createPoolInForm": "Yaradın"
-            },
-            "createPool": "Hovuz yaradın",
-            "produce": "istehsal",
-            "loading": "Yüklənir",
-            "viewInstancesList": "Siyahını yeniləyin"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "M\u00fcdd\u0259t",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "populyar Token",
+					"donations": "ian\u0259l\u0259r",
+					"rewardsRateFraction": "m\u00fckafatlarRateFraction",
+					"numerator": "hesablay\u0131c\u0131",
+					"denominator": "m\u0259xr\u0259c"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "M\u00fcdd\u0259t g\u00fcnl\u0259rl\u0259",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "populyar Token",
+					"donations": "ian\u0259l\u0259r",
+					"rewardsRateFraction": "m\u00fckafatlarRateFraction",
+					"numerator": "hesablay\u0131c\u0131",
+					"denominator": "m\u0259xr\u0259c"
+				}
+			},
+			"placeholders": {
+				"optional": "(iste\u011fe ba\u011fl\u0131)",
+				"tuple": "tuple[]",
+				"number": "n\u00f6mr\u0259",
+				"address": "\u00fcnvan\u0131",
+				"fraction": "k\u0259sr",
+				"integer": "tam",
+				"seconds": "saniy\u0259",
+				"days": "g\u00fcnl\u0259r",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Hovuzlar yoxdur"
+			},
+			"btns": {
+				"createPool": "Hovuz yarad\u0131n",
+				"createPoolInForm": "Yarad\u0131n"
+			},
+			"createPool": "Hovuz yarad\u0131n",
+			"produce": "istehsal",
+			"loading": "Y\u00fckl\u0259nir",
+			"viewInstancesList": "Siyah\u0131n\u0131 yenil\u0259yin"
+		}
+	}
 }

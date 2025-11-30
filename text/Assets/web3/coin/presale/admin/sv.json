@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Säljer Token",
-                        "timestamps": "Tider",
-                        "prices": "Priser",
-                        "endTime": "Sluttid",
-                        "thresholds": "Trösklar",
-                        "bonuses": "Bonusar"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Ägaren kan inte dra sig ur",
-                            "option1": "Ägaren kan ta ut tokens först efter att sluttiden har passerat",
-                            "option2": "Ägaren kan ta ut tokens när som helst"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Gemenskapsadress",
-                    "methodkeccack": "Keccak256 hashfunktion",
-                    "roleId": "Roll-ID",
-                    "sellingToken": "Sälj Token-adress",
-                    "prices": "ETH, Pris",
-                    "thresholds": "# av tokens",
-                    "bonuses": "Bonus %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Det finns inga medel"
-                },
-                "btns": {
-                    "createFund": "Skapa fond",
-                    "createFundInForm": "Skapa"
-                },
-                "fundAddress": "Fondens adress",
-                "createFund": "Skapa fond",
-                "fundInfo": "Info",
-                "produce": "Producera",
-                "loading": "Läser in",
-                "viewInstancesList": "Uppdatera listan"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "S\u00e4ljer Token",
+						"timestamps": "Tider",
+						"prices": "Priser",
+						"endTime": "Sluttid",
+						"thresholds": "Tr\u00f6sklar",
+						"bonuses": "Bonusar"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u00c4garen kan inte dra sig ur",
+							"option1": "\u00c4garen kan ta ut tokens f\u00f6rst efter att sluttiden har passerat",
+							"option2": "\u00c4garen kan ta ut tokens n\u00e4r som helst"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "Gemenskapsadress",
+					"methodkeccack": "Keccak256 hashfunktion",
+					"roleId": "Roll-ID",
+					"sellingToken": "S\u00e4lj Token-adress",
+					"prices": "ETH, Pris",
+					"thresholds": "# av tokens",
+					"bonuses": "Bonus %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Det finns inga medel"
+				},
+				"btns": {
+					"createFund": "Skapa fond",
+					"createFundInForm": "Skapa"
+				},
+				"fundAddress": "Fondens adress",
+				"createFund": "Skapa fond",
+				"fundInfo": "Info",
+				"produce": "Producera",
+				"loading": "L\u00e4ser in",
+				"viewInstancesList": "Uppdatera listan"
+			}
+		}
+	}
 }

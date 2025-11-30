@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "מֶשֶׁך",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "פופולריToken",
-                    "donations": "תרומות",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "מוֹנֶה",
-                    "denominator": "מְכַנֶה"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "משך ימים",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "פופולריToken",
-                    "donations": "תרומות",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "מוֹנֶה",
-                    "denominator": "מְכַנֶה"
-                }
-            },
-            "placeholders": {
-                "optional": "(אופציונאלי)",
-                "tuple": "tuple[]",
-                "number": "מספר",
-                "address": "כתובת",
-                "fraction": "שבריר",
-                "integer": "מספר שלם",
-                "seconds": "שניות",
-                "days": "ימים",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "אין בריכות"
-            },
-            "btns": {
-                "createPool": "צור מאגר",
-                "createPoolInForm": "לִיצוֹר"
-            },
-            "createPool": "צור מאגר",
-            "produce": "ליצר",
-            "loading": "טוען",
-            "viewInstancesList": "רשימת רענון"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u05de\u05b6\u05e9\u05c1\u05b6\u05da",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u05e4\u05d5\u05e4\u05d5\u05dc\u05e8\u05d9Token",
+					"donations": "\u05ea\u05e8\u05d5\u05de\u05d5\u05ea",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u05de\u05d5\u05b9\u05e0\u05b6\u05d4",
+					"denominator": "\u05de\u05b0\u05db\u05b7\u05e0\u05b6\u05d4"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u05de\u05e9\u05da \u05d9\u05de\u05d9\u05dd",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u05e4\u05d5\u05e4\u05d5\u05dc\u05e8\u05d9Token",
+					"donations": "\u05ea\u05e8\u05d5\u05de\u05d5\u05ea",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u05de\u05d5\u05b9\u05e0\u05b6\u05d4",
+					"denominator": "\u05de\u05b0\u05db\u05b7\u05e0\u05b6\u05d4"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u05d0\u05d5\u05e4\u05e6\u05d9\u05d5\u05e0\u05d0\u05dc\u05d9)",
+				"tuple": "tuple[]",
+				"number": "\u05de\u05e1\u05e4\u05e8",
+				"address": "\u05db\u05ea\u05d5\u05d1\u05ea",
+				"fraction": "\u05e9\u05d1\u05e8\u05d9\u05e8",
+				"integer": "\u05de\u05e1\u05e4\u05e8 \u05e9\u05dc\u05dd",
+				"seconds": "\u05e9\u05e0\u05d9\u05d5\u05ea",
+				"days": "\u05d9\u05de\u05d9\u05dd",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u05d0\u05d9\u05df \u05d1\u05e8\u05d9\u05db\u05d5\u05ea"
+			},
+			"btns": {
+				"createPool": "\u05e6\u05d5\u05e8 \u05de\u05d0\u05d2\u05e8",
+				"createPoolInForm": "\u05dc\u05b4\u05d9\u05e6\u05d5\u05b9\u05e8"
+			},
+			"createPool": "\u05e6\u05d5\u05e8 \u05de\u05d0\u05d2\u05e8",
+			"produce": "\u05dc\u05d9\u05e6\u05e8",
+			"loading": "\u05d8\u05d5\u05e2\u05df",
+			"viewInstancesList": "\u05e8\u05e9\u05d9\u05de\u05ea \u05e8\u05e2\u05e0\u05d5\u05df"
+		}
+	}
 }

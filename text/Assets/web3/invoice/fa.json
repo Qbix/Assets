@@ -1,27 +1,27 @@
 {
-    "title": "پرداخت",
-    "steps": {
-        "sending_native_coins": "ارسال سکه های بومی",
-        "sending_tokens": "ارسال توکن",
-        "swap": "تعویض کنید",
-        "approve": "تایید",
-        "one_tx": "شما باید یک تراکنش ارسال کنید",
-        "two_tx": "شما باید دو تراکنش ارسال کنید"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "وجوه برای پرداخت"
-            }
-        },
-        "btns": {
-            "pay": "پرداخت"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "نیاز به پرداخت &quot; {{amountOut}} &quot; توکن"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "چنین زنجیره ای با شناسه &quot; {{chainId}} &quot; پشتیبانی نمی شود"
-    }
+	"title": "\u067e\u0631\u062f\u0627\u062e\u062a",
+	"steps": {
+		"sending_native_coins": "\u0627\u0631\u0633\u0627\u0644 \u0633\u06a9\u0647 \u0647\u0627\u06cc \u0628\u0648\u0645\u06cc",
+		"sending_tokens": "\u0627\u0631\u0633\u0627\u0644 \u062a\u0648\u06a9\u0646",
+		"swap": "\u062a\u0639\u0648\u06cc\u0636 \u06a9\u0646\u06cc\u062f",
+		"approve": "\u062a\u0627\u06cc\u06cc\u062f",
+		"one_tx": "\u0634\u0645\u0627 \u0628\u0627\u06cc\u062f \u06cc\u06a9 \u062a\u0631\u0627\u06a9\u0646\u0634 \u0627\u0631\u0633\u0627\u0644 \u06a9\u0646\u06cc\u062f",
+		"two_tx": "\u0634\u0645\u0627 \u0628\u0627\u06cc\u062f \u062f\u0648 \u062a\u0631\u0627\u06a9\u0646\u0634 \u0627\u0631\u0633\u0627\u0644 \u06a9\u0646\u06cc\u062f"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u0648\u062c\u0648\u0647 \u0628\u0631\u0627\u06cc \u067e\u0631\u062f\u0627\u062e\u062a"
+			}
+		},
+		"btns": {
+			"pay": "\u067e\u0631\u062f\u0627\u062e\u062a"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "\u0646\u06cc\u0627\u0632 \u0628\u0647 \u067e\u0631\u062f\u0627\u062e\u062a &quot; {{amountOut}} &quot; \u062a\u0648\u06a9\u0646"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "\u0686\u0646\u06cc\u0646 \u0632\u0646\u062c\u06cc\u0631\u0647 \u0627\u06cc \u0628\u0627 \u0634\u0646\u0627\u0633\u0647 &quot; {{chainId}} &quot; \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0646\u0645\u06cc \u0634\u0648\u062f"
+	}
 }

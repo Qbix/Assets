@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Token Satışı",
-                        "timestamps": "Zamanlar",
-                        "prices": "Fiyat:% s",
-                        "endTime": "Bitiş zamanı",
-                        "thresholds": "Eşikler",
-                        "bonuses": "Bonuslar"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Sahibi geri çekilemez",
-                            "option1": "Sahip, jetonları yalnızca endTime geçtikten sonra çekebilir",
-                            "option2": "Sahibi dilediği zaman jetonları geri çekebilir"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Topluluk adresi",
-                    "methodkeccack": "Keccak256 karma işlevi",
-                    "roleId": "Rol Kimliği",
-                    "sellingToken": "Token adresinin satışı",
-                    "prices": "ETH, Fiyat",
-                    "thresholds": "jeton sayısı",
-                    "bonuses": "Bonus yüzdesi"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Fon yok"
-                },
-                "btns": {
-                    "createFund": "Fon Oluştur",
-                    "createFundInForm": "Yaratmak"
-                },
-                "fundAddress": "Fon adresi",
-                "createFund": "Fon Oluştur",
-                "fundInfo": "Bilgi",
-                "produce": "Üretmek",
-                "loading": "Yükleniyor",
-                "viewInstancesList": "Listeyi Yenile"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "Token Sat\u0131\u015f\u0131",
+						"timestamps": "Zamanlar",
+						"prices": "Fiyat:% s",
+						"endTime": "Biti\u015f zaman\u0131",
+						"thresholds": "E\u015fikler",
+						"bonuses": "Bonuslar"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Sahibi geri \u00e7ekilemez",
+							"option1": "Sahip, jetonlar\u0131 yaln\u0131zca endTime ge\u00e7tikten sonra \u00e7ekebilir",
+							"option2": "Sahibi diledi\u011fi zaman jetonlar\u0131 geri \u00e7ekebilir"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "Topluluk adresi",
+					"methodkeccack": "Keccak256 karma i\u015flevi",
+					"roleId": "Rol Kimli\u011fi",
+					"sellingToken": "Token adresinin sat\u0131\u015f\u0131",
+					"prices": "ETH, Fiyat",
+					"thresholds": "jeton say\u0131s\u0131",
+					"bonuses": "Bonus y\u00fczdesi"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Fon yok"
+				},
+				"btns": {
+					"createFund": "Fon Olu\u015ftur",
+					"createFundInForm": "Yaratmak"
+				},
+				"fundAddress": "Fon adresi",
+				"createFund": "Fon Olu\u015ftur",
+				"fundInfo": "Bilgi",
+				"produce": "\u00dcretmek",
+				"loading": "Y\u00fckleniyor",
+				"viewInstancesList": "Listeyi Yenile"
+			}
+		}
+	}
 }

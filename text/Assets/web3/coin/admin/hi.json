@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "टोकनErc20",
-                    "duration": "अवधि",
-                    "bonusTokenFraction": "बोनसटोकनअंश",
-                    "popularToken": "लोकप्रियटोकन",
-                    "donations": "दान",
-                    "rewardsRateFraction": "पुरस्कारदरअंश",
-                    "numerator": "मीटर",
-                    "denominator": "भाजक"
-                },
-                "small": {
-                    "tokenErc20": "टोकनErc20",
-                    "duration": "दिनों में अवधि",
-                    "bonusTokenFraction": "बोनसटोकनअंश",
-                    "popularToken": "लोकप्रियटोकन",
-                    "donations": "दान",
-                    "rewardsRateFraction": "पुरस्कारदरअंश",
-                    "numerator": "मीटर",
-                    "denominator": "भाजक"
-                }
-            },
-            "placeholders": {
-                "optional": "(वैकल्पिक)",
-                "tuple": "टपल[]",
-                "number": "संख्या",
-                "address": "पता",
-                "fraction": "अंश",
-                "integer": "पूर्णांक",
-                "seconds": "सेकंड",
-                "days": "दिन",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "वहाँ कोई पूल नहीं है"
-            },
-            "btns": {
-                "createPool": "पूल बनाएं",
-                "createPoolInForm": "बनाएं"
-            },
-            "createPool": "पूल बनाएं",
-            "produce": "उत्पादन करना",
-            "loading": "लोड हो रहा है",
-            "viewInstancesList": "सूची रीफ़्रेश करें"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "\u091f\u094b\u0915\u0928Erc20",
+					"duration": "\u0905\u0935\u0927\u093f",
+					"bonusTokenFraction": "\u092c\u094b\u0928\u0938\u091f\u094b\u0915\u0928\u0905\u0902\u0936",
+					"popularToken": "\u0932\u094b\u0915\u092a\u094d\u0930\u093f\u092f\u091f\u094b\u0915\u0928",
+					"donations": "\u0926\u093e\u0928",
+					"rewardsRateFraction": "\u092a\u0941\u0930\u0938\u094d\u0915\u093e\u0930\u0926\u0930\u0905\u0902\u0936",
+					"numerator": "\u092e\u0940\u091f\u0930",
+					"denominator": "\u092d\u093e\u091c\u0915"
+				},
+				"small": {
+					"tokenErc20": "\u091f\u094b\u0915\u0928Erc20",
+					"duration": "\u0926\u093f\u0928\u094b\u0902 \u092e\u0947\u0902 \u0905\u0935\u0927\u093f",
+					"bonusTokenFraction": "\u092c\u094b\u0928\u0938\u091f\u094b\u0915\u0928\u0905\u0902\u0936",
+					"popularToken": "\u0932\u094b\u0915\u092a\u094d\u0930\u093f\u092f\u091f\u094b\u0915\u0928",
+					"donations": "\u0926\u093e\u0928",
+					"rewardsRateFraction": "\u092a\u0941\u0930\u0938\u094d\u0915\u093e\u0930\u0926\u0930\u0905\u0902\u0936",
+					"numerator": "\u092e\u0940\u091f\u0930",
+					"denominator": "\u092d\u093e\u091c\u0915"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u0935\u0948\u0915\u0932\u094d\u092a\u093f\u0915)",
+				"tuple": "\u091f\u092a\u0932[]",
+				"number": "\u0938\u0902\u0916\u094d\u092f\u093e",
+				"address": "\u092a\u0924\u093e",
+				"fraction": "\u0905\u0902\u0936",
+				"integer": "\u092a\u0942\u0930\u094d\u0923\u093e\u0902\u0915",
+				"seconds": "\u0938\u0947\u0915\u0902\u0921",
+				"days": "\u0926\u093f\u0928",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u0935\u0939\u093e\u0901 \u0915\u094b\u0908 \u092a\u0942\u0932 \u0928\u0939\u0940\u0902 \u0939\u0948"
+			},
+			"btns": {
+				"createPool": "\u092a\u0942\u0932 \u092c\u0928\u093e\u090f\u0902",
+				"createPoolInForm": "\u092c\u0928\u093e\u090f\u0902"
+			},
+			"createPool": "\u092a\u0942\u0932 \u092c\u0928\u093e\u090f\u0902",
+			"produce": "\u0909\u0924\u094d\u092a\u093e\u0926\u0928 \u0915\u0930\u0928\u093e",
+			"loading": "\u0932\u094b\u0921 \u0939\u094b \u0930\u0939\u093e \u0939\u0948",
+			"viewInstancesList": "\u0938\u0942\u091a\u0940 \u0930\u0940\u092b\u093c\u094d\u0930\u0947\u0936 \u0915\u0930\u0947\u0902"
+		}
+	}
 }

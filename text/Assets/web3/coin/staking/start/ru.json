@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "резервный токен",
-                        "duration": "Продолжительность",
-                        "amount": "Количество"
-                    },
-                    "small": {
-                        "reserveToken": "резервный токен",
-                        "duration": "Продолжительность",
-                        "amount": "Количество"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Продолжительность",
-                    "amount": "количество"
-                },
-                "btns": {
-                    "stake": "Ставка"
-                },
-                "stake": "Ставка",
-                "loading": "Загрузка"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "\u0440\u0435\u0437\u0435\u0440\u0432\u043d\u044b\u0439 \u0442\u043e\u043a\u0435\u043d",
+						"duration": "\u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
+						"amount": "\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e"
+					},
+					"small": {
+						"reserveToken": "\u0440\u0435\u0437\u0435\u0440\u0432\u043d\u044b\u0439 \u0442\u043e\u043a\u0435\u043d",
+						"duration": "\u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
+						"amount": "\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e"
+					}
+				},
+				"placeholders": {
+					"duration": "\u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c",
+					"amount": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e"
+				},
+				"btns": {
+					"stake": "\u0421\u0442\u0430\u0432\u043a\u0430"
+				},
+				"stake": "\u0421\u0442\u0430\u0432\u043a\u0430",
+				"loading": "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430"
+			}
+		}
+	}
 }

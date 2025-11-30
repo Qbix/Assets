@@ -1,27 +1,27 @@
 {
-    "title": "Pá",
-    "steps": {
-        "sending_native_coins": "Boinn dúchais a sheoladh",
-        "sending_tokens": "Comharthaí a sheoladh",
-        "swap": "Babhtáil",
-        "approve": "Cheadaigh",
-        "one_tx": "Ba cheart duit idirbheart amháin a sheoladh",
-        "two_tx": "Ba cheart duit dhá idirbheart a sheoladh"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "Cistí le híoc"
-            }
-        },
-        "btns": {
-            "pay": "Pá"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "An riachtanas is gá comharthaí &quot; {{amountOut}} &quot; a íoc"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "Ní thacaítear le slabhra den sórt sin le id &quot; {{chainId}} &quot;"
-    }
+	"title": "P\u00e1",
+	"steps": {
+		"sending_native_coins": "Boinn d\u00fachais a sheoladh",
+		"sending_tokens": "Comhartha\u00ed a sheoladh",
+		"swap": "Babht\u00e1il",
+		"approve": "Cheadaigh",
+		"one_tx": "Ba cheart duit idirbheart amh\u00e1in a sheoladh",
+		"two_tx": "Ba cheart duit dh\u00e1 idirbheart a sheoladh"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "Cist\u00ed le h\u00edoc"
+			}
+		},
+		"btns": {
+			"pay": "P\u00e1"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "An riachtanas is g\u00e1 comhartha\u00ed &quot; {{amountOut}} &quot; a \u00edoc"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "N\u00ed thaca\u00edtear le slabhra den s\u00f3rt sin le id &quot; {{chainId}} &quot;"
+	}
 }

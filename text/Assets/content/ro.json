@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Eroare",
-        "WalletAbsent": "Portofelul nu este conectat.",
-        "Rendering": "Au apărut erori la redarea <span class='url'>{{1}}<\/span>",
-        "PriceRequired": "Preț necesar!",
-        "NameRequired": "Nume (obligatoriu!",
-        "PriceInvalid": "Pret invalid!",
-        "AmountInvalid": "Suma nevalidă!",
-        "TransactionFailed": "Tranzactie nereusita",
-        "ChainNotSupported": "Lanțul selectat nu este acceptat. Lanț suportat: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Trebuie conectat MetaMask pentru a funcționa cu aplicația",
-        "UserNotLoggedInMetaMask": "Utilizatorul nu este autentificat la MetaMask",
-        "CurrencyNotFound": "Moneda nu a fost găsită",
-        "WrongChain": "Acest NFT creat sub „ {{chain}} ”. Vă rugăm să utilizați acest lanț.",
-        "NoRecipientSelected": "Niciun destinatar selectat",
-        "NotEnoughPermissionsWallet": "Nu există suficiente permisiuni pentru a citi portofelul acestui utilizator",
-        "ThisUserHaveNoWallet": "Acest utilizator nu are portofel alocat",
-        "TheWalletOfThisUserInvalid": "Portofelul acestui utilizator este invalid",
-        "WalletInvalid": "Adresa portofel nevalidă",
-        "CantManageFrozenSeries": "Nu poți gestiona seriale înghețate",
-        "SubscriptionStreamNotPaid": "Nu ați plătit pentru a vedea acest conținut. Faceți clic pe {{subscriptionUrl}} și abonați-vă la planul corespunzător."
-    },
-    "admin": {
-        "Title": "Active administrative",
-        "SubscriptionTitle": "Abonamente"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Atingeți pentru a plăti"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : taxa procesată pentru {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Vă mulțumim pentru plata către {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} s-au abonat la {{plan.title}}",
-        "YouSubscribedTo": "Ați fost abonat la {{plan.title}}",
-        "Assets\/credits\/alert": "Ai o alertă legată de contul tău"
-    },
-    "charge": {
-        "Subject": "Primiți o plată de {{displayAmount}} din {{call 'publisher.displayName'}} prin „ {{description}} ”",
-        "HasBeenCharged": "Hei, asta este doar pentru a vă anunța că {{1}} a fost taxat {{2}} pentru {{3}} până la {{4}}"
-    },
-    "charged": {
-        "Subject": "Vă mulțumim pentru plata pentru „ {{description}} ”",
-        "HavePaid": "Bună {{1}} , aceasta este doar o confirmare rapidă că ați plătit cu succes de la {{2}} la {{3}} pentru {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Informatii despre comanda",
-        "PaymentMethod": "Modalitate de plată",
-        "ContactInfo": "Informatii de contact",
-        "Pay": "A plati",
-        "PaymentSucceeded": "Plata a reușit",
-        "PaymentProcessing.": "Plata dvs. este în curs de procesare",
-        "FailTryAgain": "Plata dvs. nu a avut succes, vă rugăm să încercați din nou",
-        "SomethingWrong": "Ceva n-a mers bine",
-        "PaymentStatus": "Starea plății",
-        "PayTo": "Plătește {{displayName}}",
-        "ChooseCurrency": "Alegeți o monedă",
-        "YouCanSendUpTo": "Puteți trimite până la {{amount}} {{symbol}}",
-        "Send": "Trimite",
-        "EnterAmount": "introduceți suma"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Invitație acceptată de {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} umplut {{FilledStreamTitle}}",
-        "ForFillingStream": "Pentru umplerea {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "Ai {{amount}} de credite pentru a începe",
-        "PaymentFor": "Plata pentru &quot; {{1}} &quot;",
-        "PaymentTo": "Plata la {{1}}",
-        "PaymentToUser": "Plata la {{toUserName}}",
-        "CreatePrivateChat": "pentru chat privat cu {{toUserName}}",
-        "CreatePaidStream": "pentru a crea {{toStreamName}}",
-        "JoinedPaidStream": "pentru rezervare în &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "pentru crearea comunității &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "ca rambursare a rezervării în „ <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "A cumpărat {{amount}} de credite",
-        "BonusCredits": "Bonus {{amount}} credite",
-        "BuyAmountCredits": "Cumpărați {{amount}} de credite",
-        "WatchClip": "A câștigat {{amount}} de credite pentru vizionarea {{fromStreamTitle}}",
-        "MissingCredits": "Credite lipsă",
-        "YouMissingCredits": "Aveți nevoie de {{amount}} de credite suplimentare pentru a continua.",
-        "BuyCredits": "Cumpărați credite",
-        "BuyBonus": "Cumpărând {{amount}} de credite simultan, va duce la un bonus de {{bonus}} de credite.",
-        "Buy": "Cumpără",
-        "PurchaseCredits": "Cumpărați credite",
-        "Credits": "credite",
-        "ErrorInvalidAmount": "Suma nevalidă",
-        "ErrorInvalidCurrency": "Din păcate, nu acceptăm încă moneda {{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} credite",
-            "BonusCredits": "{{amount}} credite"
-        }
-    },
-    "history": {
-        "Date": "Data",
-        "Amount": "Cantitate",
-        "Description": "Descriere",
-        "Client": "Client",
-        "User": "Utilizator",
-        "To": "la",
-        "From": "din",
-        "SeeHistory": "Vedeți istoricul plăților pentru {{1}}",
-        "HistoryEmpty": "Nu aveți încă date",
-        "PaymentFor": "A trimis {{amount}} de credite",
-        "PaymentTo": "A trimis {{amount}} de credite",
-        "PaymentToUser": "A trimis {{amount}} de credite",
-        "CreatePaidStream": "A cheltuit {{amount}} de credite",
-        "WatchClip": {
-            "+": "A câștigat {{amount}} de credite",
-            "-": "A cheltuit {{amount}} de credite"
-        },
-        "JoinedPaidStream": {
-            "+": "A câștigat {{amount}} de credite",
-            "-": "A cheltuit {{amount}} de credite"
-        },
-        "LeftPaidStream": {
-            "+": "A primit {{amount}} de credite",
-            "-": "A trimis {{amount}} de credite"
-        },
-        "CreatedCommunity": "A cheltuit {{amount}} de credite",
-        "BoughtCredits": "A cumpărat {{amount}} de credite",
-        "BonusCredits": "Am primit bonus {{amount}} de credite",
-        "InviteAcceptedBy": "A câștigat {{amount}} de credite",
-        "Streams_user_firstname": "A câștigat {{amount}} de credite",
-        "Streams_user_lastname": "A câștigat {{amount}} de credite",
-        "Streams_user_icon": "A câștigat {{amount}} de credite",
-        "Places_user_location": "A câștigat {{amount}} de credite",
-        "Streams_greeting": "A câștigat {{amount}} de credite",
-        "YouHaveCreditsToStart": "A câștigat {{amount}} de credite",
-        "InvitedUserFilledStream": "A câștigat {{amount}} de credite",
-        "ForFillingStream": "A câștigat {{amount}} de credite",
-        "CreatePrivateChat": "A cheltuit {{amount}} de credite"
-    },
-    "subscriptions": {
-        "infoTitle": "Setați informațiile de plată",
-        "confirm": {
-            "title": "Începeți abonamentul",
-            "message": "Începeți un abonament recurent la „ {{title}} ”?",
-            "ok": "Bine",
-            "cancel": "Anulare"
-        },
-        "CreditOrDebitCard": "Card de credit sau debit",
-        "SubscribePayment": "Plata abonamentului",
-        "ImmediatePayment": "Plată imediată",
-        "ProcessingPayment": "Procesarea plății",
-        "SubscriptionAlreadyPaid": "Acest abonament a fost deja plătit",
-        "SubscriptionNotActive": "Acest abonament nu este activ",
-        "Subscribed": "Abonat",
-        "Unsubscribed": "Dezabonat",
-        "Unsubscribe": "Dezabonați-vă",
-        "Subscribe": "Abonati-va",
-        "Started": "A început",
-        "EndsIn": "se termină în",
-        "NextPay": "Următoarea plată",
-        "Period": "Perioadă",
-        "Price": "Preț",
-        "AreYouSureUnsubscribe": "Sigur doriți să vă dezabonați de acest plan?",
-        "YouUnsubscribedFromPlan": "V-ați dezabonat de la planul „ {{planTitle}} ”. Nu veți fi taxat, dar abonamentul va continua până la {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "titlul planului",
-            "PricePlaceholder": "Preț",
-            "DescriptionPlaceholder": "descrierea planului de abonament",
-            "SavePlan": "Salvați planul",
-            "NewPlan": "Plan nou",
-            "SubscriptionTitle": "Abonamente",
-            "AreYouSureDeletePlan": "Sigur doriți să ștergeți acest plan?",
-            "Duration": "Durată",
-            "Discount": "Reducere",
-            "Interrupt": "Întrerupe",
-            "Continue": "Continua",
-            "SelectDisplayType": "Selectați {{displayType}}",
-            "EndDate": "Data de încheiere",
-            "Available": "Disponibil",
-            "Hidden": "Ascuns",
-            "InviteOnly": "Numai pe invitație",
-            "CantSubscribeUnlessInvited": "Nu vă puteți abona la acest plan decât dacă ați fost invitat"
-        }
-    },
-    "payments": {
-        "infoTitle": "Setați informațiile de plată",
-        "BuyAmountCredits": "Cumpărați {{amount}} de credite",
-        "confirm": {
-            "title": "Fa o plata",
-            "message": "Sunteți de acord să plătiți {{symbol}} {{amount}} ?",
-            "ok": "Bine",
-            "cancel": "Anulare"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "credite",
-            "description": "ține evidența creditelor și plăților"
-        },
-        "Assets\/plan": {
-            "displayType": "Planul de abonament",
-            "description": "plan de abonament"
-        },
-        "Assets\/subscription": {
-            "displayType": "Abonament",
-            "description": "abonament"
-        },
-        "Assets\/product": {
-            "displayType": "Produs",
-            "description": "produsul care se vinde"
-        },
-        "Assets\/service": {
-            "displayType": "Serviciu",
-            "description": "serviciul care este oferit"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "A câștigat {{amount}} de credite"
-        },
-        "Assets\/credits\/bought": {
-            "content": "A cumpărat {{amount}} de credite"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bonus {{amount}} credite"
-        },
-        "Assets\/credits\/spent": {
-            "content": "A cheltuit {{amount}} de credite"
-        },
-        "Assets\/credits\/sent": {
-            "content": "A trimis {{amount}} de credite la {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "A primit {{amount}} de credite din {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Aveți puține credite în cont. Vă rugăm să vizitați <a href='<i translate='no'>999 &#39;&gt;acest link<\/a> pentru a cumpăra mai multe credite."
-        }
-    },
-    "billing": {
-        "Title": "Facturarea activelor",
-        "CreditsMinimum": "Credite minime",
-        "CreditsToAdd": "Credite de adăugat",
-        "Save": "Salvați",
-        "ThisLink": "acest link",
-        "errors": {
-            "CreditsMinimumNegative": "Creditele minime nu pot fi negative",
-            "CreditsToAddNegative": "Creditele de adăugat nu pot fi negative"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Serviciu nou",
-            "TitlePlaceholder": "Titlul serviciului",
-            "PricePlaceholder": "Preț stabilit",
-            "LinkPlaceholder": "setați linkul de informații suplimentare",
-            "DescriptionPlaceholder": "Descrierea serviciului",
-            "SaveService": "Salvare serviciu",
-            "SelectRequiredParticipants": "Participanți înrudiți necesari",
-            "RequiredParticipantsDesc": "Vă rugăm să selectați participanții înrudiți care trebuie să utilizeze acest serviciu (de exemplu, animale de companie pentru „Expoziție pentru câini”, sau copii pentru „Vărbătoarea copiilor” etc.). Dacă serviciul este plătit, utilizatorul va trebui să plătească și pentru fiecare participant înrudit."
-        },
-        "EditServiceTemplate": {
-            "Title": "Serviciu de editare"
-        },
-        "ManageServiceTemplates": "Gestionați șabloane de servicii",
-        "ManageServices": "Gestionați Serviciile",
-        "Free": "Gratuit",
-        "OptionalContribution": "Contribuție opțională",
-        "RequiredPayment": "Plata obligatorie",
-        "AreYouSureDelete": "Sigur doriți să ștergeți acest serviciu?",
-        "AmountServicesRelated": "Există {{amount}} de disponibilități legate de acest serviciu. De asemenea, vor fi eliminate."
-    },
-    "transfer": {
-        "SelectRecipient": "Selectați destinatarul",
-        "TransactionSuccess": "Tranzacție de succes",
-        "OrTypeWalletAddress": "SAU introduceți adresa portofelului destinatarului",
-        "AppCredits": "Credite pentru aplicații"
-    },
-    "NFT": {
-        "Title": "Titlu",
-        "Name": "Nume",
-        "EnterName": "Introdu numele",
-        "EnterAuthorWallet": "Introduceți portofelul autorului",
-        "InformationAboutTitle": "Informații despre {{title}} NFT",
-        "Description": "Descriere",
-        "DetailedInformationAboutNFT": "Informații detaliate despre NFT",
-        "PresaleStarts": "Prevânzarea începe pe 23 decembrie",
-        "OwnerUserNotFound": "Proprietarul acestui NFT nu este înregistrat în aplicația noastră.",
-        "BuyNow": "Cumpără acum",
-        "Buy": "Cumpără",
-        "Add": "Adăuga",
-        "Remove": "Elimina",
-        "NoNFTyet": "Nu există încă NFT",
-        "Conversation": "Conversaţie",
-        "Create": "Crea",
-        "CurrentBid": "Oferta curentă",
-        "StartingIn": "Începând în",
-        "EndingIn": "Se termina in",
-        "CreateNFT": "Creați un NFT",
-        "TitlePlaceholder": "Dă-ți NFT un titlu",
-        "DescriptionPlaceholder": "Dă-ți NFT o descriere",
-        "CreateYourNFT": "Creați-vă NFT",
-        "Royalties": "Redevențe",
-        "RoyaltyPlaceholder": "Opțional. Suma plătită creatorului înainte de transfer.",
-        "ExpirationDate": "Data expirării",
-        "StartingDate": "Data de început",
-        "BidsBelowThisAmount": "Ofertele sub această sumă nu vor fi permise",
-        "MinimumBid": "Oferta minima",
-        "Author": "Autor",
-        "Price": "Preț",
-        "Commission": "Comision",
-        "EnterCommission": "Intră comision",
-        "Owner": "Proprietar",
-        "SelectCategory": "Selecteaza categoria",
-        "Day": "Zi",
-        "Days": "Zile",
-        "Hour": "Ora",
-        "Hours": "Ore",
-        "Minute": "Minut",
-        "Minutes": "Minute",
-        "Second": "Al doilea",
-        "Seconds": "secunde",
-        "SalesCreator": "din vânzări va merge către creator",
-        "Details": "Detalii",
-        "Bids": "Oferte",
-        "History": "Istorie",
-        "LoremIpsum": "Lorem Ipsum este pur și simplu un text fals al industriei de tipărire și de tipărire.",
-        "PutOnSale": "Pune la vânzare",
-        "PutOffSale": "Retrageți de la vânzare",
-        "Transfer": "Transfer",
-        "Actions": "Acțiuni",
-        "Claim": "Revendicare",
-        "ClaimNFT": "Revendicați NFT",
-        "Unlocking": "Deblocare",
-        "Unlock": "Deblocați",
-        "Update": "Actualizați",
-        "UpdateToken": "Token de actualizare",
-        "UpdateNFT": "Actualizați NFT",
-        "CreateToken": "Creați token",
-        "PlaceBid": "Plasați oferta",
-        "SoldOut": "Vândut",
-        "NotOnSale": "Nu se vinde",
-        "NftName": "Nume NFT",
-        "DescribeYourNFT": "Vă rugăm să descrieți NFT-ul dvs",
-        "NFTImage": "Imagine pentru NFT",
-        "NFTVideo": "Video pentru NFT, dacă există",
-        "UploadMovie": "Încărcați film",
-        "MovieSource": "Sursa filmului",
-        "MovieURL": "Adresa URL a filmului",
-        "UploadFile": "Incarca un fisier",
-        "PutOnMarketplace": "Pune pe piață",
-        "InstantPurchase": "Introduceți prețul pentru a permite utilizatorilor să achiziționeze instantaneu NFT-ul dvs",
-        "FixedPrice": "Preț fix",
-        "TimedAuction": "Licitație programată",
-        "OpenForBids": "Deschis pentru licitații",
-        "PriceOnePiece": "Introduceți prețul pentru o bucată",
-        "EnterPrice": "Introduceți prețul",
-        "EnterMinimumBid": "Introduceți suma licitată minimă",
-        "SelectChain": "Selectați lanțul",
-        "Currency": "Valută",
-        "AreYouSureDeleteImage": "Sigur doriți să eliminați imaginea?",
-        "AreYouSureDeleteVideo": "Sigur doriți să eliminați videoclipul?",
-        "series": {
-            "Name": "Nume",
-            "Icon": "Pictogramă",
-            "Description": "Descriere",
-            "Author": "Autor",
-            "SelectSeries": "Selectați seria",
-            "Value": "Valoare",
-            "AreYouSure": "Esti sigur?",
-            "AuthorInvalid": "Adresa autorului este nevalidă!",
-            "Address": "Abordare",
-            "CoverImage": "Imagine de copertă",
-            "UploadCoverImage": "Încărcați imaginea de copertă",
-            "CommissionAddressInvalid": "Adresa comisiei este nevalidă",
-            "OnSale": "de vanzare",
-            "OffSale": "din vânzare",
-            "CreateSeries": "Creați o serie",
-            "UpdateSeries": "Seria de actualizare",
-            "SeriesInfo": "Informații seriale",
-            "SelectAuthor": "Selectați autorul",
-            "NewItem": "Noua serie NFT",
-            "NamePlaceholder": "Introduceți numele seriei",
-            "DescPlaceholder": "Introduceți descrierea seriei",
-            "EndingIn": "Se termina in"
-        },
-        "contract": {
-            "CreateContract": "Creați contract",
-            "SelectContract": "Selectați contractul",
-            "CreateContractFor": "Creați contract pentru {{userName}}",
-            "ContractFor": "Contract pentru {{userName}}",
-            "UpdateContract": "Actualizare contract",
-            "TransferOwnership": "Transferați proprietatea",
-            "SetBaseURI": "Setați URI de bază",
-            "SetSuffix": "Setați sufixul",
-            "CurrentOwner": "Actual proprietar",
-            "CurrentBaseURL": "URL de bază curent",
-            "ContractAddressAbsent": "Adresa contractului lipsă",
-            "FactoryAddressAbsent": "Adresa fabricii lipsește",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Titlul necesar",
-            "SymbolRequired": "Simbol necesar",
-            "TypeContractName": "denumirea contractului",
-            "TypeContractSymbol": "simbol contract (maxim 10 caractere)"
-        },
-        "contests": {
-            "Title": "Concursuri",
-            "NewContest": "Concurs nou"
-        },
-        "import": {
-            "importNFT": "Importul NFT-urilor",
-            "importAttributes": "Importați atribute NFT",
-            "fileNotFound": "Ne pare rău, fișierul CSV nu a fost găsit.",
-            "fileEmpty": "Ne pare rău, fișierul CSV este gol.",
-            "userIdNotFound": "utilizator există, dar id-ul este gol",
-            "errorLine": "linia {{1}}",
-            "fieldNotFound": "Câmpul obligatoriu &quot; {{1}} &quot; nu a fost găsit",
-            "displayTypeEmpty": "Tipul de afișare pentru „ {{1}} ” nu a fost găsit",
-            "taskStreamInvalid": "flux de activități nevalid",
-            "instructionsEmpty": "instrucțiunile fluxului de activități sunt goale",
-            "complete": "Complet",
-            "activateUsers": "trimite mesaj de activare utilizatorilor?",
-            "importProgress": "Progres",
-            "importOptions": "Opțiuni",
-            "sampleCSV": "Descărcați exemplu de CSV",
-            "fileLabel": "Încărcați foaie de calcul:",
-            "errorsTitle": "Au apărut erori"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Filtrați după colecțiile NFT",
-                "ShowNFTCollection": "Afișați colecția NFT în...",
-                "AllCollections": "Toate colecțiile"
-            },
-            "ByUser": {
-                "AllAuthors": "Toți autorii",
-                "AllUsers": "Toata lumea",
-                "FilterByAuthors": "Filtrați după autori"
-            }
-        },
-        "Back": "Înapoi la colecție",
-        "attributes": {
-            "Title": "Gestionați atributele",
-            "Attributes": "Atribute",
-            "DisplayTitle": "Tip de afișare",
-            "AddDisplayType": "Adăugați un nou tip de afișare",
-            "NewDisplay": "Afișaj nou",
-            "TraitTitle": "Tip de trăsătură",
-            "AddTraitTitle": "Adăugați un nou tip de trăsătură",
-            "NewTrait": "Nou tip de trăsătură",
-            "ValueTitle": "Valoare",
-            "AddValueTitle": "Adăugați o nouă valoare",
-            "NewValue": "Valoare nouă",
-            "NewAttribute": "Atribut nou",
-            "UpdateAttributes": "Actualizare atribute",
-            "SaveAttributes": "Salvați atribute"
-        },
-        "profile": {
-            "LogOut": "Deconectați-vă",
-            "Title": "Profil pentru {{userName}}",
-            "Description": "Detalii utilizator",
-            "aboutPlaceholder": "Editează biografia",
-            "SureLogOut": "Sunteți sigur că doriți să vă deconectați?",
-            "UploadCoverPhoto": "Încărcați o fotografie de copertă"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "seria Id",
-                        "owner": "Proprietar",
-                        "currency": "Moneda",
-                        "price": "Preț",
-                        "beneficiary": "Beneficiar",
-                        "autoindex": "Autoindex",
-                        "duration": "Durată",
-                        "rateInterval": "Intervalul ratei",
-                        "rateAmount": "Suma ratei"
-                    },
-                    "small": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "jetoanele vor fi bătute în această serie",
-                        "owner": "proprietarul de exemplu, altfel va fi expeditorul",
-                        "currency": "Moneda pentru jetoanele achiziționate, dacă zero - pentru monedele native",
-                        "price": "Preț",
-                        "beneficiary": "Beneficiar al vânzării de jetoane, în caz contrar va fi expeditor",
-                        "autoindex": "Autoindex",
-                        "duration": "Blocare după batere. Zero înseamnă să-l primești imediat.",
-                        "rateInterval": "interval de găleată pentru achiziție specială",
-                        "rateAmount": "suma de găleată pentru achiziție specială"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(optional)",
-                    "number": "număr",
-                    "address": "abordare",
-                    "fraction": "fracțiune",
-                    "integer": "întreg",
-                    "seconds": "secunde",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Legume şi fructe",
-                "viewInstancesList": "Actualizează lista"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "ID-ul seriei",
-                        "account": "Cont",
-                        "amount": "Cantitate"
-                    },
-                    "small": {
-                        "seriesId": "noul jeton va aparține în serie cu un astfel de ID",
-                        "account": "proprietarul NFT nou creat. dacă nu este setat - va folosi portofelul actual",
-                        "amount": "suma NFT la monet"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(optional)",
-                    "seriesId": "id",
-                    "account": "cont",
-                    "amount": "Cantitate",
-                    "integer": "întreg"
-                },
-                "btn": {
-                    "Purchase": "Cumpărare",
-                    "SpecialPurchase": "Achizitie speciala"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Abordare"
-                    },
-                    "small": {
-                        "account": "Abordare"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Adresă invalidă"
-                },
-                "placeholders": {
-                    "account": "Abordare"
-                },
-                "addToWhitelist": "Adăugați la lista albă",
-                "removeFromWhitelist": "Eliminați din lista albă"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "ID-ul simbolului",
-                    "custodian": "Custode",
-                    "recipient": "Destinatar"
-                },
-                "small": {
-                    "tokenId": "token id ce trebuie să blocați sau să deblocați",
-                    "custodian": "adresa care poate fi deblocată",
-                    "recipient": "adresa care va primi jetoanele"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "TokenId nevalid",
-                "invalidCustodian": "Custode invalid",
-                "invalidRecipient": "Destinatar nevalid"
-            },
-            "placeholders": {
-                "optional": "(optional)",
-                "tokenId": "id",
-                "custodian": "abordare"
-            },
-            "Lock": "Lacăt",
-            "Unlock": "Deblocați",
-            "Locked": "Blocat",
-            "CustodianAddress": "Adresa custodei",
-            "TokenWasClaimed": "Jetonul „ {{title}} ” a fost revendicat",
-            "TokenWasLocked": "Jetonul „ {{title}} ” a fost blocat",
-            "TokenWasUnlocked": "Tokenul „ {{title}} ” a fost deblocat"
-        },
-        "GenerateDescription": "sau auto-generare",
-        "collections": {
-            "Title": "Colecții",
-            "EnterTitle": "introduceți titlul",
-            "EnterDescription": "introduceți descrierea",
-            "NewCollection": "Colecție nouă",
-            "Name": "Nume",
-            "Icon": "Pictogramă",
-            "Description": "Descriere",
-            "Author": "Autor",
-            "SelectCollection": "Selectați colecția",
-            "Value": "Valoare",
-            "AreYouSure": "Esti sigur?",
-            "AuthorInvalid": "Adresa autorului este nevalidă!",
-            "Address": "Abordare",
-            "CoverImage": "Imagine de copertă",
-            "UploadIcon": "Pictograma de încărcare",
-            "CommissionAddressInvalid": "Adresa comisiei este nevalidă",
-            "OnSale": "de vanzare",
-            "OffSale": "din vânzare",
-            "CreateCollection": "Creați o colecție",
-            "UpdateCollection": "Actualizați colecția",
-            "CollectionInfo": "Informații de colecție",
-            "SelectAuthor": "Selectați autorul",
-            "NewItem": "Noua colecție NFT",
-            "NamePlaceholder": "Introduceți numele colecției",
-            "DescPlaceholder": "Introduceți descrierea colecției",
-            "EndingIn": "Se termina in",
-            "SubmitSeries": "Trimiteți o serie"
-        }
-    },
-    "currencies": {
-        "choose": "Alegeți o monedă"
-    },
-    "connectedAccount": {
-        "Title": "Conectați contul",
-        "Success": "Succes",
-        "YourAccountCreated": "Contul dvs. a fost creat cu succes!",
-        "YourAccountAlreadyCreated": "Contul dvs. este deja creat și gata de utilizare"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Cantitate"
-                    },
-                    "small": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Cantitate"
-                    }
-                },
-                "placeholders": {
-                    "amount": "Cantitate"
-                },
-                "btns": {
-                    "stake": "Miză"
-                },
-                "stake": "Miză",
-                "loading": "Se încarcă"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Durată",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popularToken",
-                    "donations": "donatii",
-                    "rewardsRateFraction": "recompenseRateFracție",
-                    "numerator": "numărător",
-                    "denominator": "numitor"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Durata in zile",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "popularToken",
-                    "donations": "donatii",
-                    "rewardsRateFraction": "recompenseRateFracție",
-                    "numerator": "numărător",
-                    "denominator": "numitor"
-                }
-            },
-            "placeholders": {
-                "optional": "(optional)",
-                "tuple": "tuplu[]",
-                "number": "număr",
-                "address": "abordare",
-                "fraction": "fracțiune",
-                "integer": "întreg",
-                "seconds": "secunde",
-                "days": "zile",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Nu există piscine"
-            },
-            "btns": {
-                "createPool": "Creați pool",
-                "createPoolInForm": "Crea"
-            },
-            "createPool": "Creați pool",
-            "produce": "Legume şi fructe",
-            "loading": "Se încarcă",
-            "viewInstancesList": "Actualizează lista"
-        }
-    },
-    "fundrise": {
-        "placeholder": "scrie ceva despre această contribuție..."
-    }
+	"errors": {
+		"Error": "Eroare",
+		"WalletAbsent": "Portofelul nu este conectat.",
+		"Rendering": "Au ap\u0103rut erori la redarea <span class='url'>{{1}}</span>",
+		"PriceRequired": "Pre\u021b necesar!",
+		"NameRequired": "Nume (obligatoriu!",
+		"PriceInvalid": "Pret invalid!",
+		"AmountInvalid": "Suma nevalid\u0103!",
+		"TransactionFailed": "Tranzactie nereusita",
+		"ChainNotSupported": "Lan\u021bul selectat nu este acceptat. Lan\u021b suportat: {{supportedChain}}",
+		"NeedMetaMaskConnected": "Trebuie conectat MetaMask pentru a func\u021biona cu aplica\u021bia",
+		"UserNotLoggedInMetaMask": "Utilizatorul nu este autentificat la MetaMask",
+		"CurrencyNotFound": "Moneda nu a fost g\u0103sit\u0103",
+		"WrongChain": "Acest NFT creat sub \u201e {{chain}} \u201d. V\u0103 rug\u0103m s\u0103 utiliza\u021bi acest lan\u021b.",
+		"NoRecipientSelected": "Niciun destinatar selectat",
+		"NotEnoughPermissionsWallet": "Nu exist\u0103 suficiente permisiuni pentru a citi portofelul acestui utilizator",
+		"ThisUserHaveNoWallet": "Acest utilizator nu are portofel alocat",
+		"TheWalletOfThisUserInvalid": "Portofelul acestui utilizator este invalid",
+		"WalletInvalid": "Adresa portofel nevalid\u0103",
+		"CantManageFrozenSeries": "Nu po\u021bi gestiona seriale \u00eenghe\u021bate",
+		"SubscriptionStreamNotPaid": "Nu a\u021bi pl\u0103tit pentru a vedea acest con\u021binut. Face\u021bi clic pe {{subscriptionUrl}} \u0219i abona\u021bi-v\u0103 la planul corespunz\u0103tor."
+	},
+	"admin": {
+		"Title": "Active administrative",
+		"SubscriptionTitle": "Abonamente"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Atinge\u021bi pentru a pl\u0103ti"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : taxa procesat\u0103 pentru {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "V\u0103 mul\u021bumim pentru plata c\u0103tre {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} s-au abonat la {{plan.title}}",
+		"YouSubscribedTo": "A\u021bi fost abonat la {{plan.title}}",
+		"Assets/credits/alert": "Ai o alert\u0103 legat\u0103 de contul t\u0103u"
+	},
+	"charge": {
+		"Subject": "Primi\u021bi o plat\u0103 de {{displayAmount}} din {{call 'publisher.displayName'}} prin \u201e {{description}} \u201d",
+		"HasBeenCharged": "Hei, asta este doar pentru a v\u0103 anun\u021ba c\u0103 {{1}} a fost taxat {{2}} pentru {{3}} p\u00e2n\u0103 la {{4}}"
+	},
+	"charged": {
+		"Subject": "V\u0103 mul\u021bumim pentru plata pentru \u201e {{description}} \u201d",
+		"HavePaid": "Bun\u0103 {{1}} , aceasta este doar o confirmare rapid\u0103 c\u0103 a\u021bi pl\u0103tit cu succes de la {{2}} la {{3}} pentru {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "Informatii despre comanda",
+		"PaymentMethod": "Modalitate de plat\u0103",
+		"ContactInfo": "Informatii de contact",
+		"Pay": "A plati",
+		"PaymentSucceeded": "Plata a reu\u0219it",
+		"PaymentProcessing.": "Plata dvs. este \u00een curs de procesare",
+		"FailTryAgain": "Plata dvs. nu a avut succes, v\u0103 rug\u0103m s\u0103 \u00eencerca\u021bi din nou",
+		"SomethingWrong": "Ceva n-a mers bine",
+		"PaymentStatus": "Starea pl\u0103\u021bii",
+		"PayTo": "Pl\u0103te\u0219te {{displayName}}",
+		"ChooseCurrency": "Alege\u021bi o moned\u0103",
+		"YouCanSendUpTo": "Pute\u021bi trimite p\u00e2n\u0103 la {{amount}} {{symbol}}",
+		"Send": "Trimite",
+		"EnterAmount": "introduce\u021bi suma"
+	},
+	"credits": {
+		"InviteAcceptedBy": "Invita\u021bie acceptat\u0103 de {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} umplut {{FilledStreamTitle}}",
+		"ForFillingStream": "Pentru umplerea {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "Ai {{amount}} de credite pentru a \u00eencepe",
+		"PaymentFor": "Plata pentru &quot; {{1}} &quot;",
+		"PaymentTo": "Plata la {{1}}",
+		"PaymentToUser": "Plata la {{toUserName}}",
+		"CreatePrivateChat": "pentru chat privat cu {{toUserName}}",
+		"CreatePaidStream": "pentru a crea {{toStreamName}}",
+		"JoinedPaidStream": "pentru rezervare \u00een &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "pentru crearea comunit\u0103\u021bii &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "ca rambursare a rezerv\u0103rii \u00een \u201e <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "A cump\u0103rat {{amount}} de credite",
+		"BonusCredits": "Bonus {{amount}} credite",
+		"BuyAmountCredits": "Cump\u0103ra\u021bi {{amount}} de credite",
+		"WatchClip": "A c\u00e2\u0219tigat {{amount}} de credite pentru vizionarea {{fromStreamTitle}}",
+		"MissingCredits": "Credite lips\u0103",
+		"YouMissingCredits": "Ai nevoie de credite suplimentare \u00een valoare {{currency}} {{amount}} pentru a continua.",
+		"BuyCredits": "Cump\u0103ra\u021bi credite",
+		"BuyBonus": "Cump\u0103r\u00e2nd {{amount}} de credite simultan, va duce la un bonus de {{bonus}} de credite.",
+		"Buy": "Cump\u0103r\u0103",
+		"PurchaseCredits": "Cump\u0103ra\u021bi credite",
+		"Credits": "credite",
+		"ErrorInvalidAmount": "Suma nevalid\u0103",
+		"ErrorInvalidCurrency": "Din p\u0103cate, nu accept\u0103m \u00eenc\u0103 moneda {{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} credite",
+			"BonusCredits": "{{amount}} credite"
+		}
+	},
+	"history": {
+		"Date": "Data",
+		"Amount": "Cantitate",
+		"Description": "Descriere",
+		"Client": "Client",
+		"User": "Utilizator",
+		"To": "la",
+		"From": "din",
+		"SeeHistory": "Vede\u021bi istoricul pl\u0103\u021bilor pentru {{1}}",
+		"HistoryEmpty": "Nu ave\u021bi \u00eenc\u0103 date",
+		"PaymentFor": "A trimis {{amount}} de credite",
+		"PaymentTo": "A trimis {{amount}} de credite",
+		"PaymentToUser": "A trimis {{amount}} de credite",
+		"CreatePaidStream": "A cheltuit {{amount}} de credite",
+		"WatchClip": {
+			"+": "A c\u00e2\u0219tigat {{amount}} de credite",
+			"-": "A cheltuit {{amount}} de credite"
+		},
+		"JoinedPaidStream": {
+			"+": "A c\u00e2\u0219tigat {{amount}} de credite",
+			"-": "A cheltuit {{amount}} de credite"
+		},
+		"LeftPaidStream": {
+			"+": "A primit {{amount}} de credite",
+			"-": "A trimis {{amount}} de credite"
+		},
+		"CreatedCommunity": "A cheltuit {{amount}} de credite",
+		"BoughtCredits": "A cump\u0103rat {{amount}} de credite",
+		"BonusCredits": "Am primit bonus {{amount}} de credite",
+		"InviteAcceptedBy": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"Streams_user_firstname": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"Streams_user_lastname": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"Streams_user_icon": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"Places_user_location": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"Streams_greeting": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"YouHaveCreditsToStart": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"InvitedUserFilledStream": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"ForFillingStream": "A c\u00e2\u0219tigat {{amount}} de credite",
+		"CreatePrivateChat": "A cheltuit {{amount}} de credite"
+	},
+	"subscriptions": {
+		"infoTitle": "Seta\u021bi informa\u021biile de plat\u0103",
+		"confirm": {
+			"title": "\u00cencepe\u021bi abonamentul",
+			"message": "\u00cencepe\u021bi un abonament recurent la \u201e {{title}} \u201d?",
+			"ok": "Bine",
+			"cancel": "Anulare"
+		},
+		"CreditOrDebitCard": "Card de credit sau debit",
+		"SubscribePayment": "Plata abonamentului",
+		"ImmediatePayment": "Plat\u0103 imediat\u0103",
+		"ProcessingPayment": "Procesarea pl\u0103\u021bii",
+		"SubscriptionAlreadyPaid": "Acest abonament a fost deja pl\u0103tit",
+		"SubscriptionNotActive": "Acest abonament nu este activ",
+		"Subscribed": "Abonat",
+		"Unsubscribed": "Dezabonat",
+		"Unsubscribe": "Dezabona\u021bi-v\u0103",
+		"Subscribe": "Abonati-va",
+		"Started": "A \u00eenceput",
+		"EndsIn": "se termin\u0103 \u00een",
+		"NextPay": "Urm\u0103toarea plat\u0103",
+		"Period": "Perioad\u0103",
+		"Price": "Pre\u021b",
+		"AreYouSureUnsubscribe": "Sigur dori\u021bi s\u0103 v\u0103 dezabona\u021bi de acest plan?",
+		"YouUnsubscribedFromPlan": "V-a\u021bi dezabonat de la planul \u201e {{planTitle}} \u201d. Nu ve\u021bi fi taxat, dar abonamentul va continua p\u00e2n\u0103 la {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "titlul planului",
+			"PricePlaceholder": "Pre\u021b",
+			"DescriptionPlaceholder": "descrierea planului de abonament",
+			"SavePlan": "Salva\u021bi planul",
+			"NewPlan": "Plan nou",
+			"SubscriptionTitle": "Abonamente",
+			"AreYouSureDeletePlan": "Sigur dori\u021bi s\u0103 \u0219terge\u021bi acest plan?",
+			"Duration": "Durat\u0103",
+			"Discount": "Reducere",
+			"Interrupt": "\u00centrerupe",
+			"Continue": "Continua",
+			"SelectDisplayType": "Selecta\u021bi {{displayType}}",
+			"EndDate": "Data de \u00eencheiere",
+			"Available": "Disponibil",
+			"Hidden": "Ascuns",
+			"InviteOnly": "Numai pe invita\u021bie",
+			"CantSubscribeUnlessInvited": "Nu v\u0103 pute\u021bi abona la acest plan dec\u00e2t dac\u0103 a\u021bi fost invitat"
+		}
+	},
+	"payments": {
+		"infoTitle": "Seta\u021bi informa\u021biile de plat\u0103",
+		"BuyAmountCredits": "Cump\u0103ra\u021bi {{amount}} de credite",
+		"confirm": {
+			"title": "Fa o plata",
+			"message": "Sunte\u021bi de acord s\u0103 pl\u0103ti\u021bi {{symbol}} {{amount}} ?",
+			"ok": "Bine",
+			"cancel": "Anulare"
+		},
+		"reasons": {
+			"BuyCredits": "Cump\u0103r\u0103 credite"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "credite",
+			"description": "\u021bine eviden\u021ba creditelor \u0219i pl\u0103\u021bilor"
+		},
+		"Assets/plan": {
+			"displayType": "Planul de abonament",
+			"description": "plan de abonament"
+		},
+		"Assets/subscription": {
+			"displayType": "Abonament",
+			"description": "abonament"
+		},
+		"Assets/product": {
+			"displayType": "Produs",
+			"description": "produsul care se vinde"
+		},
+		"Assets/service": {
+			"displayType": "Serviciu",
+			"description": "serviciul care este oferit"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "A c\u00e2\u0219tigat {{amount}} de credite"
+		},
+		"Assets/credits/bought": {
+			"content": "A cump\u0103rat {{amount}} de credite"
+		},
+		"Assets/credits/bonus": {
+			"content": "Bonus {{amount}} credite"
+		},
+		"Assets/credits/spent": {
+			"content": "A cheltuit {{amount}} de credite"
+		},
+		"Assets/credits/sent": {
+			"content": "A trimis {{amount}} de credite la {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "A primit {{amount}} de credite din {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "Ave\u021bi pu\u021bine credite \u00een cont. V\u0103 rug\u0103m s\u0103 vizita\u021bi <a href='<i translate='no'>999 &#39;&gt;acest link</a> pentru a cump\u0103ra mai multe credite."
+		}
+	},
+	"billing": {
+		"Title": "Facturarea activelor",
+		"CreditsMinimum": "Credite minime",
+		"CreditsToAdd": "Credite de ad\u0103ugat",
+		"Save": "Salva\u021bi",
+		"ThisLink": "acest link",
+		"errors": {
+			"CreditsMinimumNegative": "Creditele minime nu pot fi negative",
+			"CreditsToAddNegative": "Creditele de ad\u0103ugat nu pot fi negative"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "Serviciu nou",
+			"TitlePlaceholder": "Titlul serviciului",
+			"PricePlaceholder": "Pre\u021b stabilit",
+			"LinkPlaceholder": "seta\u021bi linkul de informa\u021bii suplimentare",
+			"DescriptionPlaceholder": "Descrierea serviciului",
+			"SaveService": "Salvare serviciu",
+			"SelectRequiredParticipants": "Participan\u021bi \u00eenrudi\u021bi necesari",
+			"RequiredParticipantsDesc": "V\u0103 rug\u0103m s\u0103 selecta\u021bi participan\u021bii \u00eenrudi\u021bi care trebuie s\u0103 utilizeze acest serviciu (de exemplu, animale de companie pentru \u201eExpozi\u021bie pentru c\u00e2ini\u201d, sau copii pentru \u201eV\u0103rb\u0103toarea copiilor\u201d etc.). Dac\u0103 serviciul este pl\u0103tit, utilizatorul va trebui s\u0103 pl\u0103teasc\u0103 \u0219i pentru fiecare participant \u00eenrudit."
+		},
+		"EditServiceTemplate": {
+			"Title": "Serviciu de editare"
+		},
+		"ManageServiceTemplates": "Gestiona\u021bi \u0219abloane de servicii",
+		"ManageServices": "Gestiona\u021bi Serviciile",
+		"Free": "Gratuit",
+		"OptionalContribution": "Contribu\u021bie op\u021bional\u0103",
+		"RequiredPayment": "Plata obligatorie",
+		"AreYouSureDelete": "Sigur dori\u021bi s\u0103 \u0219terge\u021bi acest serviciu?",
+		"AmountServicesRelated": "Exist\u0103 {{amount}} de disponibilit\u0103\u021bi legate de acest serviciu. De asemenea, vor fi eliminate."
+	},
+	"transfer": {
+		"SelectRecipient": "Selecta\u021bi destinatarul",
+		"TransactionSuccess": "Tranzac\u021bie de succes",
+		"OrTypeWalletAddress": "SAU introduce\u021bi adresa portofelului destinatarului",
+		"AppCredits": "Credite pentru aplica\u021bii"
+	},
+	"NFT": {
+		"Title": "Titlu",
+		"Name": "Nume",
+		"EnterName": "Introdu numele",
+		"EnterAuthorWallet": "Introduce\u021bi portofelul autorului",
+		"InformationAboutTitle": "Informa\u021bii despre {{title}} NFT",
+		"Description": "Descriere",
+		"DetailedInformationAboutNFT": "Informa\u021bii detaliate despre NFT",
+		"PresaleStarts": "Prev\u00e2nzarea \u00eencepe pe 23 decembrie",
+		"OwnerUserNotFound": "Proprietarul acestui NFT nu este \u00eenregistrat \u00een aplica\u021bia noastr\u0103.",
+		"BuyNow": "Cump\u0103r\u0103 acum",
+		"Buy": "Cump\u0103r\u0103",
+		"Add": "Ad\u0103uga",
+		"Remove": "Elimina",
+		"NoNFTyet": "Nu exist\u0103 \u00eenc\u0103 NFT",
+		"Conversation": "Conversa\u0163ie",
+		"Create": "Crea",
+		"CurrentBid": "Oferta curent\u0103",
+		"StartingIn": "\u00cencep\u00e2nd \u00een",
+		"EndingIn": "Se termina in",
+		"CreateNFT": "Crea\u021bi un NFT",
+		"TitlePlaceholder": "D\u0103-\u021bi NFT un titlu",
+		"DescriptionPlaceholder": "D\u0103-\u021bi NFT o descriere",
+		"CreateYourNFT": "Crea\u021bi-v\u0103 NFT",
+		"Royalties": "Redeven\u021be",
+		"RoyaltyPlaceholder": "Op\u021bional. Suma pl\u0103tit\u0103 creatorului \u00eenainte de transfer.",
+		"ExpirationDate": "Data expir\u0103rii",
+		"StartingDate": "Data de \u00eenceput",
+		"BidsBelowThisAmount": "Ofertele sub aceast\u0103 sum\u0103 nu vor fi permise",
+		"MinimumBid": "Oferta minima",
+		"Author": "Autor",
+		"Price": "Pre\u021b",
+		"Commission": "Comision",
+		"EnterCommission": "Intr\u0103 comision",
+		"Owner": "Proprietar",
+		"SelectCategory": "Selecteaza categoria",
+		"Day": "Zi",
+		"Days": "Zile",
+		"Hour": "Ora",
+		"Hours": "Ore",
+		"Minute": "Minut",
+		"Minutes": "Minute",
+		"Second": "Al doilea",
+		"Seconds": "secunde",
+		"SalesCreator": "din v\u00e2nz\u0103ri va merge c\u0103tre creator",
+		"Details": "Detalii",
+		"Bids": "Oferte",
+		"History": "Istorie",
+		"LoremIpsum": "Lorem Ipsum este pur \u0219i simplu un text fals al industriei de tip\u0103rire \u0219i de tip\u0103rire.",
+		"PutOnSale": "Pune la v\u00e2nzare",
+		"PutOffSale": "Retrage\u021bi de la v\u00e2nzare",
+		"Transfer": "Transfer",
+		"Actions": "Ac\u021biuni",
+		"Claim": "Revendicare",
+		"ClaimNFT": "Revendica\u021bi NFT",
+		"Unlocking": "Deblocare",
+		"Unlock": "Debloca\u021bi",
+		"Update": "Actualiza\u021bi",
+		"UpdateToken": "Token de actualizare",
+		"UpdateNFT": "Actualiza\u021bi NFT",
+		"CreateToken": "Crea\u021bi token",
+		"PlaceBid": "Plasa\u021bi oferta",
+		"SoldOut": "V\u00e2ndut",
+		"NotOnSale": "Nu se vinde",
+		"NftName": "Nume NFT",
+		"DescribeYourNFT": "V\u0103 rug\u0103m s\u0103 descrie\u021bi NFT-ul dvs",
+		"NFTImage": "Imagine pentru NFT",
+		"NFTVideo": "Video pentru NFT, dac\u0103 exist\u0103",
+		"UploadMovie": "\u00cenc\u0103rca\u021bi film",
+		"MovieSource": "Sursa filmului",
+		"MovieURL": "Adresa URL a filmului",
+		"UploadFile": "Incarca un fisier",
+		"PutOnMarketplace": "Pune pe pia\u021b\u0103",
+		"InstantPurchase": "Introduce\u021bi pre\u021bul pentru a permite utilizatorilor s\u0103 achizi\u021bioneze instantaneu NFT-ul dvs",
+		"FixedPrice": "Pre\u021b fix",
+		"TimedAuction": "Licita\u021bie programat\u0103",
+		"OpenForBids": "Deschis pentru licita\u021bii",
+		"PriceOnePiece": "Introduce\u021bi pre\u021bul pentru o bucat\u0103",
+		"EnterPrice": "Introduce\u021bi pre\u021bul",
+		"EnterMinimumBid": "Introduce\u021bi suma licitat\u0103 minim\u0103",
+		"SelectChain": "Selecta\u021bi lan\u021bul",
+		"Currency": "Valut\u0103",
+		"AreYouSureDeleteImage": "Sigur dori\u021bi s\u0103 elimina\u021bi imaginea?",
+		"AreYouSureDeleteVideo": "Sigur dori\u021bi s\u0103 elimina\u021bi videoclipul?",
+		"series": {
+			"Name": "Nume",
+			"Icon": "Pictogram\u0103",
+			"Description": "Descriere",
+			"Author": "Autor",
+			"SelectSeries": "Selecta\u021bi seria",
+			"Value": "Valoare",
+			"AreYouSure": "Esti sigur?",
+			"AuthorInvalid": "Adresa autorului este nevalid\u0103!",
+			"Address": "Abordare",
+			"CoverImage": "Imagine de copert\u0103",
+			"UploadCoverImage": "\u00cenc\u0103rca\u021bi imaginea de copert\u0103",
+			"CommissionAddressInvalid": "Adresa comisiei este nevalid\u0103",
+			"OnSale": "de vanzare",
+			"OffSale": "din v\u00e2nzare",
+			"CreateSeries": "Crea\u021bi o serie",
+			"UpdateSeries": "Seria de actualizare",
+			"SeriesInfo": "Informa\u021bii seriale",
+			"SelectAuthor": "Selecta\u021bi autorul",
+			"NewItem": "Noua serie NFT",
+			"NamePlaceholder": "Introduce\u021bi numele seriei",
+			"DescPlaceholder": "Introduce\u021bi descrierea seriei",
+			"EndingIn": "Se termina in"
+		},
+		"contract": {
+			"CreateContract": "Crea\u021bi contract",
+			"SelectContract": "Selecta\u021bi contractul",
+			"CreateContractFor": "Crea\u021bi contract pentru {{userName}}",
+			"ContractFor": "Contract pentru {{userName}}",
+			"UpdateContract": "Actualizare contract",
+			"TransferOwnership": "Transfera\u021bi proprietatea",
+			"SetBaseURI": "Seta\u021bi URI de baz\u0103",
+			"SetSuffix": "Seta\u021bi sufixul",
+			"CurrentOwner": "Actual proprietar",
+			"CurrentBaseURL": "URL de baz\u0103 curent",
+			"ContractAddressAbsent": "Adresa contractului lips\u0103",
+			"FactoryAddressAbsent": "Adresa fabricii lipse\u0219te",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "Titlul necesar",
+			"SymbolRequired": "Simbol necesar",
+			"TypeContractName": "denumirea contractului",
+			"TypeContractSymbol": "simbol contract (maxim 10 caractere)"
+		},
+		"contests": {
+			"Title": "Concursuri",
+			"NewContest": "Concurs nou"
+		},
+		"import": {
+			"importNFT": "Importul NFT-urilor",
+			"importAttributes": "Importa\u021bi atribute NFT",
+			"fileNotFound": "Ne pare r\u0103u, fi\u0219ierul CSV nu a fost g\u0103sit.",
+			"fileEmpty": "Ne pare r\u0103u, fi\u0219ierul CSV este gol.",
+			"userIdNotFound": "utilizator exist\u0103, dar id-ul este gol",
+			"errorLine": "linia {{1}}",
+			"fieldNotFound": "C\u00e2mpul obligatoriu &quot; {{1}} &quot; nu a fost g\u0103sit",
+			"displayTypeEmpty": "Tipul de afi\u0219are pentru \u201e {{1}} \u201d nu a fost g\u0103sit",
+			"taskStreamInvalid": "flux de activit\u0103\u021bi nevalid",
+			"instructionsEmpty": "instruc\u021biunile fluxului de activit\u0103\u021bi sunt goale",
+			"complete": "Complet",
+			"activateUsers": "trimite mesaj de activare utilizatorilor?",
+			"importProgress": "Progres",
+			"importOptions": "Op\u021biuni",
+			"sampleCSV": "Desc\u0103rca\u021bi exemplu de CSV",
+			"fileLabel": "\u00cenc\u0103rca\u021bi foaie de calcul:",
+			"errorsTitle": "Au ap\u0103rut erori"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "Filtra\u021bi dup\u0103 colec\u021biile NFT",
+				"ShowNFTCollection": "Afi\u0219a\u021bi colec\u021bia NFT \u00een...",
+				"AllCollections": "Toate colec\u021biile"
+			},
+			"ByUser": {
+				"AllAuthors": "To\u021bi autorii",
+				"AllUsers": "Toata lumea",
+				"FilterByAuthors": "Filtra\u021bi dup\u0103 autori"
+			}
+		},
+		"Back": "\u00cenapoi la colec\u021bie",
+		"attributes": {
+			"Title": "Gestiona\u021bi atributele",
+			"Attributes": "Atribute",
+			"DisplayTitle": "Tip de afi\u0219are",
+			"AddDisplayType": "Ad\u0103uga\u021bi un nou tip de afi\u0219are",
+			"NewDisplay": "Afi\u0219aj nou",
+			"TraitTitle": "Tip de tr\u0103s\u0103tur\u0103",
+			"AddTraitTitle": "Ad\u0103uga\u021bi un nou tip de tr\u0103s\u0103tur\u0103",
+			"NewTrait": "Nou tip de tr\u0103s\u0103tur\u0103",
+			"ValueTitle": "Valoare",
+			"AddValueTitle": "Ad\u0103uga\u021bi o nou\u0103 valoare",
+			"NewValue": "Valoare nou\u0103",
+			"NewAttribute": "Atribut nou",
+			"UpdateAttributes": "Actualizare atribute",
+			"SaveAttributes": "Salva\u021bi atribute"
+		},
+		"profile": {
+			"LogOut": "Deconecta\u021bi-v\u0103",
+			"Title": "Profil pentru {{userName}}",
+			"Description": "Detalii utilizator",
+			"aboutPlaceholder": "Editeaz\u0103 biografia",
+			"SureLogOut": "Sunte\u021bi sigur c\u0103 dori\u021bi s\u0103 v\u0103 deconecta\u021bi?",
+			"UploadCoverPhoto": "\u00cenc\u0103rca\u021bi o fotografie de copert\u0103"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFTContract",
+						"seriesId": "seria Id",
+						"owner": "Proprietar",
+						"currency": "Moneda",
+						"price": "Pre\u021b",
+						"beneficiary": "Beneficiar",
+						"autoindex": "Autoindex",
+						"duration": "Durat\u0103",
+						"rateInterval": "Intervalul ratei",
+						"rateAmount": "Suma ratei"
+					},
+					"small": {
+						"NFTContract": "NFTContract",
+						"seriesId": "jetoanele vor fi b\u0103tute \u00een aceast\u0103 serie",
+						"owner": "proprietarul de exemplu, altfel va fi expeditorul",
+						"currency": "Moneda pentru jetoanele achizi\u021bionate, dac\u0103 zero - pentru monedele native",
+						"price": "Pre\u021b",
+						"beneficiary": "Beneficiar al v\u00e2nz\u0103rii de jetoane, \u00een caz contrar va fi expeditor",
+						"autoindex": "Autoindex",
+						"duration": "Blocare dup\u0103 batere. Zero \u00eenseamn\u0103 s\u0103-l prime\u0219ti imediat.",
+						"rateInterval": "interval de g\u0103leat\u0103 pentru achizi\u021bie special\u0103",
+						"rateAmount": "suma de g\u0103leat\u0103 pentru achizi\u021bie special\u0103"
+					}
+				},
+				"placeholders": {
+					"optional": "(optional)",
+					"number": "num\u0103r",
+					"address": "abordare",
+					"fraction": "frac\u021biune",
+					"integer": "\u00eentreg",
+					"seconds": "secunde",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "Legume \u015fi fructe",
+				"viewInstancesList": "Actualizeaz\u0103 lista"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "ID-ul seriei",
+						"account": "Cont",
+						"amount": "Cantitate"
+					},
+					"small": {
+						"seriesId": "noul jeton va apar\u021bine \u00een serie cu un astfel de ID",
+						"account": "proprietarul NFT nou creat. dac\u0103 nu este setat - va folosi portofelul actual",
+						"amount": "suma NFT la monet"
+					}
+				},
+				"placeholders": {
+					"optional": "(optional)",
+					"seriesId": "id",
+					"account": "cont",
+					"amount": "Cantitate",
+					"integer": "\u00eentreg"
+				},
+				"btn": {
+					"Purchase": "Cump\u0103rare",
+					"SpecialPurchase": "Achizitie speciala"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "Abordare"
+					},
+					"small": {
+						"account": "Abordare"
+					}
+				},
+				"errors": {
+					"invalidAddress": "Adres\u0103 invalid\u0103"
+				},
+				"placeholders": {
+					"account": "Abordare"
+				},
+				"addToWhitelist": "Ad\u0103uga\u021bi la lista alb\u0103",
+				"removeFromWhitelist": "Elimina\u021bi din lista alb\u0103"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "ID-ul simbolului",
+					"custodian": "Custode",
+					"recipient": "Destinatar"
+				},
+				"small": {
+					"tokenId": "token id ce trebuie s\u0103 bloca\u021bi sau s\u0103 debloca\u021bi",
+					"custodian": "adresa care poate fi deblocat\u0103",
+					"recipient": "adresa care va primi jetoanele"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "TokenId nevalid",
+				"invalidCustodian": "Custode invalid",
+				"invalidRecipient": "Destinatar nevalid"
+			},
+			"placeholders": {
+				"optional": "(optional)",
+				"tokenId": "id",
+				"custodian": "abordare"
+			},
+			"Lock": "Lac\u0103t",
+			"Unlock": "Debloca\u021bi",
+			"Locked": "Blocat",
+			"CustodianAddress": "Adresa custodei",
+			"TokenWasClaimed": "Jetonul \u201e {{title}} \u201d a fost revendicat",
+			"TokenWasLocked": "Jetonul \u201e {{title}} \u201d a fost blocat",
+			"TokenWasUnlocked": "Tokenul \u201e {{title}} \u201d a fost deblocat"
+		},
+		"GenerateDescription": "sau auto-generare",
+		"collections": {
+			"Title": "Colec\u021bii",
+			"EnterTitle": "introduce\u021bi titlul",
+			"EnterDescription": "introduce\u021bi descrierea",
+			"NewCollection": "Colec\u021bie nou\u0103",
+			"Name": "Nume",
+			"Icon": "Pictogram\u0103",
+			"Description": "Descriere",
+			"Author": "Autor",
+			"SelectCollection": "Selecta\u021bi colec\u021bia",
+			"Value": "Valoare",
+			"AreYouSure": "Esti sigur?",
+			"AuthorInvalid": "Adresa autorului este nevalid\u0103!",
+			"Address": "Abordare",
+			"CoverImage": "Imagine de copert\u0103",
+			"UploadIcon": "Pictograma de \u00eenc\u0103rcare",
+			"CommissionAddressInvalid": "Adresa comisiei este nevalid\u0103",
+			"OnSale": "de vanzare",
+			"OffSale": "din v\u00e2nzare",
+			"CreateCollection": "Crea\u021bi o colec\u021bie",
+			"UpdateCollection": "Actualiza\u021bi colec\u021bia",
+			"CollectionInfo": "Informa\u021bii de colec\u021bie",
+			"SelectAuthor": "Selecta\u021bi autorul",
+			"NewItem": "Noua colec\u021bie NFT",
+			"NamePlaceholder": "Introduce\u021bi numele colec\u021biei",
+			"DescPlaceholder": "Introduce\u021bi descrierea colec\u021biei",
+			"EndingIn": "Se termina in",
+			"SubmitSeries": "Trimite\u021bi o serie"
+		}
+	},
+	"currencies": {
+		"choose": "Alege\u021bi o moned\u0103"
+	},
+	"connectedAccount": {
+		"Title": "Conecta\u021bi contul",
+		"Success": "Succes",
+		"YourAccountCreated": "Contul dvs. a fost creat cu succes!",
+		"YourAccountAlreadyCreated": "Contul dvs. este deja creat \u0219i gata de utilizare"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "reserveToken",
+						"amount": "Cantitate"
+					},
+					"small": {
+						"reserveToken": "reserveToken",
+						"amount": "Cantitate"
+					}
+				},
+				"placeholders": {
+					"amount": "Cantitate"
+				},
+				"btns": {
+					"stake": "Miz\u0103"
+				},
+				"stake": "Miz\u0103",
+				"loading": "Se \u00eencarc\u0103"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Durat\u0103",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popularToken",
+					"donations": "donatii",
+					"rewardsRateFraction": "recompenseRateFrac\u021bie",
+					"numerator": "num\u0103r\u0103tor",
+					"denominator": "numitor"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Durata in zile",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popularToken",
+					"donations": "donatii",
+					"rewardsRateFraction": "recompenseRateFrac\u021bie",
+					"numerator": "num\u0103r\u0103tor",
+					"denominator": "numitor"
+				}
+			},
+			"placeholders": {
+				"optional": "(optional)",
+				"tuple": "tuplu[]",
+				"number": "num\u0103r",
+				"address": "abordare",
+				"fraction": "frac\u021biune",
+				"integer": "\u00eentreg",
+				"seconds": "secunde",
+				"days": "zile",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Nu exist\u0103 piscine"
+			},
+			"btns": {
+				"createPool": "Crea\u021bi pool",
+				"createPoolInForm": "Crea"
+			},
+			"createPool": "Crea\u021bi pool",
+			"produce": "Legume \u015fi fructe",
+			"loading": "Se \u00eencarc\u0103",
+			"viewInstancesList": "Actualizeaz\u0103 lista"
+		}
+	},
+	"fundrise": {
+		"placeholder": "scrie ceva despre aceast\u0103 contribu\u021bie..."
+	}
 }

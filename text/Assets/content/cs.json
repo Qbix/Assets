@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Chyba",
-        "WalletAbsent": "Peněženka není připojena.",
-        "Rendering": "Při vykreslování <span class='url'>{{1}}<\/span> došlo k chybám",
-        "PriceRequired": "Požadovaná cena!",
-        "NameRequired": "Jméno (vyžadováno!",
-        "PriceInvalid": "Cena neplatná!",
-        "AmountInvalid": "Částka je neplatná!",
-        "TransactionFailed": "Transakce selhala",
-        "ChainNotSupported": "Vybraný řetězec není podporován. Podporovaný řetěz: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Pro práci s aplikací potřebujete připojenou MetaMask",
-        "UserNotLoggedInMetaMask": "Uživatel není přihlášen do MetaMask",
-        "CurrencyNotFound": "Měna nenalezena",
-        "WrongChain": "Tento NFT vytvořen pod &quot; {{chain}} &quot;. Použijte prosím tento řetěz.",
-        "NoRecipientSelected": "Není vybrán žádný příjemce",
-        "NotEnoughPermissionsWallet": "Nemáte dostatečná oprávnění ke čtení peněženky tohoto uživatele",
-        "ThisUserHaveNoWallet": "Tento uživatel nemá přiřazenou žádnou peněženku",
-        "TheWalletOfThisUserInvalid": "Peněženka tohoto uživatele je neplatná",
-        "WalletInvalid": "Adresa peněženky je neplatná",
-        "CantManageFrozenSeries": "Nemůžete spravovat zmrazené série",
-        "SubscriptionStreamNotPaid": "Za zobrazení tohoto obsahu jste nezaplatili. Klikněte prosím na {{subscriptionUrl}} a přihlaste se k odběru příslušného plánu."
-    },
-    "admin": {
-        "Title": "Správa majetku",
-        "SubscriptionTitle": "Plány předplatného"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Zaplaťte klepnutím"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : zpracována platba za {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Děkujeme za vaši platbu na {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} přihlášených k {{plan.title}}",
-        "YouSubscribedTo": "Byli jste přihlášeni k odběru {{plan.title}}",
-        "Assets\/credits\/alert": "Máte upozornění související s vaším účtem"
-    },
-    "charge": {
-        "Subject": "Dostanete platbu {{displayAmount}} z {{call 'publisher.displayName'}} od &quot; {{description}} &quot;",
-        "HasBeenCharged": "Hej, to je jen proto, abychom vás informovali, že {{1}} bylo účtováno {{2}} za {{3}} na {{4}}"
-    },
-    "charged": {
-        "Subject": "Děkujeme za vaši platbu za &quot; {{description}} &quot;",
-        "HavePaid": "Hej {{1}} , toto je jen rychlé potvrzení, že jste úspěšně zaplatili {{2}} až {{3}} za {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Info o objednávce",
-        "PaymentMethod": "Způsob platby",
-        "ContactInfo": "Kontaktní informace",
-        "Pay": "Platit",
-        "PaymentSucceeded": "Platba proběhla úspěšně",
-        "PaymentProcessing.": "Vaše platba se zpracovává",
-        "FailTryAgain": "Vaše platba nebyla úspěšná, zkuste to prosím znovu",
-        "SomethingWrong": "Něco se pokazilo",
-        "PaymentStatus": "Status platby",
-        "PayTo": "Zaplaťte {{displayName}}",
-        "ChooseCurrency": "Vyberte měnu",
-        "YouCanSendUpTo": "Můžete poslat až {{amount}} {{symbol}}",
-        "Send": "Poslat",
-        "EnterAmount": "vložit sumu"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Pozvánka přijata {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} naplněno {{FilledStreamTitle}}",
-        "ForFillingStream": "Za plnění {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "Do začátku máte {{amount}} kreditů",
-        "PaymentFor": "Platba za &quot; {{1}} &quot;",
-        "PaymentTo": "Platba do {{1}}",
-        "PaymentToUser": "Platba do {{toUserName}}",
-        "CreatePrivateChat": "pro soukromý chat s {{toUserName}}",
-        "CreatePaidStream": "za vytvoření {{toStreamName}}",
-        "JoinedPaidStream": "pro rezervaci v &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "za vytvoření komunity &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "jako refundace rezervace v &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "Koupeno {{amount}} kreditů",
-        "BonusCredits": "Bonus {{amount}} kreditů",
-        "BuyAmountCredits": "Koupit {{amount}} kreditů",
-        "WatchClip": "Získali jste {{amount}} kreditů za zhlédnutí {{fromStreamTitle}}",
-        "MissingCredits": "Chybějící kredity",
-        "YouMissingCredits": "Abyste mohli pokračovat, potřebujete dalších {{amount}} kreditů.",
-        "BuyCredits": "Koupit kredity",
-        "BuyBonus": "Nákup {{amount}} kreditů najednou povede k bonusu {{bonus}} kreditů.",
-        "Buy": "Koupit",
-        "PurchaseCredits": "Nákupní kredity",
-        "Credits": "Kredity",
-        "ErrorInvalidAmount": "Částka je neplatná",
-        "ErrorInvalidCurrency": "Bohužel zatím nepodporujeme měnu {{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} kreditů",
-            "BonusCredits": "{{amount}} kreditů"
-        }
-    },
-    "history": {
-        "Date": "datum",
-        "Amount": "Množství",
-        "Description": "Popis",
-        "Client": "Klient",
-        "User": "Uživatel",
-        "To": "na",
-        "From": "z",
-        "SeeHistory": "Podívejte se na historii plateb {{1}}",
-        "HistoryEmpty": "Zatím nemáte žádná data",
-        "PaymentFor": "Posláno {{amount}} kreditů",
-        "PaymentTo": "Posláno {{amount}} kreditů",
-        "PaymentToUser": "Posláno {{amount}} kreditů",
-        "CreatePaidStream": "Utraceno {{amount}} kreditů",
-        "WatchClip": {
-            "+": "Získal {{amount}} kreditů",
-            "-": "Utraceno {{amount}} kreditů"
-        },
-        "JoinedPaidStream": {
-            "+": "Získal {{amount}} kreditů",
-            "-": "Utraceno {{amount}} kreditů"
-        },
-        "LeftPaidStream": {
-            "+": "Obdržel {{amount}} kreditů",
-            "-": "Posláno {{amount}} kreditů"
-        },
-        "CreatedCommunity": "Utraceno {{amount}} kreditů",
-        "BoughtCredits": "Koupeno {{amount}} kreditů",
-        "BonusCredits": "Získal bonus {{amount}} kreditů",
-        "InviteAcceptedBy": "Získal {{amount}} kreditů",
-        "Streams_user_firstname": "Získal {{amount}} kreditů",
-        "Streams_user_lastname": "Získal {{amount}} kreditů",
-        "Streams_user_icon": "Získal {{amount}} kreditů",
-        "Places_user_location": "Získal {{amount}} kreditů",
-        "Streams_greeting": "Získal {{amount}} kreditů",
-        "YouHaveCreditsToStart": "Získal {{amount}} kreditů",
-        "InvitedUserFilledStream": "Získal {{amount}} kreditů",
-        "ForFillingStream": "Získal {{amount}} kreditů",
-        "CreatePrivateChat": "Utraceno {{amount}} kreditů"
-    },
-    "subscriptions": {
-        "infoTitle": "Nastavte platební údaje",
-        "confirm": {
-            "title": "Spusťte předplatné",
-            "message": "Zahájit opakované předplatné &quot; {{title}} &quot;?",
-            "ok": "OK",
-            "cancel": "zrušení"
-        },
-        "CreditOrDebitCard": "Kreditní nebo debetní karta",
-        "SubscribePayment": "Předplatitelská platba",
-        "ImmediatePayment": "Okamžitá platba",
-        "ProcessingPayment": "Zpracování platby",
-        "SubscriptionAlreadyPaid": "Toto předplatné je již zaplaceno",
-        "SubscriptionNotActive": "Toto předplatné není aktivní",
-        "Subscribed": "Předplaceno",
-        "Unsubscribed": "Neodebíraný",
-        "Unsubscribe": "Odhlásit odběr",
-        "Subscribe": "předplatit",
-        "Started": "Zahájeno",
-        "EndsIn": "Končí za",
-        "NextPay": "Další platba",
-        "Period": "Doba",
-        "Price": "Cena",
-        "AreYouSureUnsubscribe": "Opravdu chcete zrušit odběr tohoto plánu?",
-        "YouUnsubscribedFromPlan": "Odhlásili jste se z tarifu „ {{planTitle}} “. Nebude vám nic účtováno, ale vaše předplatné bude pokračovat až do {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "název plánu",
-            "PricePlaceholder": "cena",
-            "DescriptionPlaceholder": "popis plánu předplatného",
-            "SavePlan": "Uložit plán",
-            "NewPlan": "Nový plán",
-            "SubscriptionTitle": "Plány předplatného",
-            "AreYouSureDeletePlan": "Opravdu chcete tento plán smazat?",
-            "Duration": "Doba trvání",
-            "Discount": "Sleva",
-            "Interrupt": "Přerušit",
-            "Continue": "Pokračovat",
-            "SelectDisplayType": "Vyberte {{displayType}}",
-            "EndDate": "datum ukončení",
-            "Available": "K dispozici",
-            "Hidden": "Skrytý",
-            "InviteOnly": "Pouze pro pozvání",
-            "CantSubscribeUnlessInvited": "K odběru tohoto plánu se nemůžete přihlásit, pokud jste nebyli pozváni"
-        }
-    },
-    "payments": {
-        "infoTitle": "Nastavte platební údaje",
-        "BuyAmountCredits": "Koupit {{amount}} kreditů",
-        "confirm": {
-            "title": "Zaplatit",
-            "message": "Souhlasíte se zaplacením {{symbol}} {{amount}} ?",
-            "ok": "OK",
-            "cancel": "zrušení"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Kredity",
-            "description": "sleduje kredity a platby"
-        },
-        "Assets\/plan": {
-            "displayType": "Předplatitelský plán",
-            "description": "plán předplatného"
-        },
-        "Assets\/subscription": {
-            "displayType": "Předplatné",
-            "description": "předplatné"
-        },
-        "Assets\/product": {
-            "displayType": "Produkt",
-            "description": "prodávaný produkt"
-        },
-        "Assets\/service": {
-            "displayType": "Servis",
-            "description": "nabízená služba"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "Získal {{amount}} kreditů"
-        },
-        "Assets\/credits\/bought": {
-            "content": "Koupeno {{amount}} kreditů"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bonus {{amount}} kreditů"
-        },
-        "Assets\/credits\/spent": {
-            "content": "Utraceno {{amount}} kreditů"
-        },
-        "Assets\/credits\/sent": {
-            "content": "Posláno {{amount}} kreditů {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Obdržel {{amount}} kreditů z {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Na účtu máte málo kreditů. Navštivte prosím <a href='<i translate='no'>999 &#39;&gt;tento odkaz<\/a> pro nákup dalších kreditů."
-        }
-    },
-    "billing": {
-        "Title": "Fakturace majetku",
-        "CreditsMinimum": "Minimální kredity",
-        "CreditsToAdd": "Kredity k přidání",
-        "Save": "Uložit",
-        "ThisLink": "tento odkaz",
-        "errors": {
-            "CreditsMinimumNegative": "Minimální počet kreditů nesmí být záporný",
-            "CreditsToAddNegative": "Kredity k přidání nesmí být záporné"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Nová služba",
-            "TitlePlaceholder": "Název služby",
-            "PricePlaceholder": "Nastavit cenu",
-            "LinkPlaceholder": "nastavit odkaz na další informace",
-            "DescriptionPlaceholder": "Popis služby",
-            "SaveService": "Uložit službu",
-            "SelectRequiredParticipants": "Povinní související účastníci",
-            "RequiredParticipantsDesc": "Vyberte prosím příbuzné účastníky, kteří jsou povinni tuto službu využívat (například domácí mazlíčci pro &quot;Výstavu psů&quot; nebo děti pro &quot;Dětské prázdniny&quot; atd.). Pokud je služba placená, uživatel bude muset zaplatit také za každého souvisejícího účastníka."
-        },
-        "EditServiceTemplate": {
-            "Title": "Upravit službu"
-        },
-        "ManageServiceTemplates": "Správa šablon služeb",
-        "ManageServices": "Správa služeb",
-        "Free": "Volný, uvolnit",
-        "OptionalContribution": "Nepovinný příspěvek",
-        "RequiredPayment": "Požadovaná platba",
-        "AreYouSureDelete": "Opravdu chcete tuto službu smazat?",
-        "AmountServicesRelated": "S touto službou souvisí {{amount}} nabídek. Budou také odstraněny."
-    },
-    "transfer": {
-        "SelectRecipient": "Vyberte příjemce",
-        "TransactionSuccess": "Úspěch transakce",
-        "OrTypeWalletAddress": "NEBO zadejte adresu peněženky příjemce",
-        "AppCredits": "Kredity aplikace"
-    },
-    "NFT": {
-        "Title": "Titul",
-        "Name": "název",
-        "EnterName": "Napište jméno",
-        "EnterAuthorWallet": "Zadejte autorskou peněženku",
-        "InformationAboutTitle": "Informace o {{title}} NFT",
-        "Description": "Popis",
-        "DetailedInformationAboutNFT": "Podrobné informace o NFT",
-        "PresaleStarts": "Předprodej začíná 23. prosince",
-        "OwnerUserNotFound": "Vlastník tohoto NFT není registrován v naší aplikaci.",
-        "BuyNow": "Kup nyní",
-        "Buy": "Koupit",
-        "Add": "Přidat",
-        "Remove": "Odstranit",
-        "NoNFTyet": "Zatím žádné NFT",
-        "Conversation": "Konverzace",
-        "Create": "Vytvořit",
-        "CurrentBid": "Aktuální nabídka",
-        "StartingIn": "Začíná v",
-        "EndingIn": "Končí v",
-        "CreateNFT": "Vytvořte NFT",
-        "TitlePlaceholder": "Dejte svému NFT titul",
-        "DescriptionPlaceholder": "Popište svůj NFT",
-        "CreateYourNFT": "Vytvořte si NFT",
-        "Royalties": "Autorské poplatky",
-        "RoyaltyPlaceholder": "Volitelný. Částka zaplacená tvůrci před převodem.",
-        "ExpirationDate": "Datum spotřeby",
-        "StartingDate": "Datum zahájení",
-        "BidsBelowThisAmount": "Nabídky pod tuto částku nebudou povoleny",
-        "MinimumBid": "Minimální nabídka",
-        "Author": "Autor",
-        "Price": "Cena",
-        "Commission": "Komise",
-        "EnterCommission": "Zadejte provizi",
-        "Owner": "Majitel",
-        "SelectCategory": "Vyberte kategorii",
-        "Day": "Den",
-        "Days": "Dny",
-        "Hour": "Hodina",
-        "Hours": "hodiny",
-        "Minute": "Minuta",
-        "Minutes": "Minut",
-        "Second": "Druhý",
-        "Seconds": "Sekundy",
-        "SalesCreator": "z prodeje půjde tvůrci",
-        "Details": "Podrobnosti",
-        "Bids": "Nabídky",
-        "History": "Dějiny",
-        "LoremIpsum": "Lorem Ipsum je prostě fiktivní text tiskařského a sazebního průmyslu.",
-        "PutOnSale": "Dát do prodeje",
-        "PutOffSale": "Stáhnout z prodeje",
-        "Transfer": "Převod",
-        "Actions": "Akce",
-        "Claim": "Nárok",
-        "ClaimNFT": "Nárokovat NFT",
-        "Unlocking": "Odemykání",
-        "Unlock": "Odemknout",
-        "Update": "Aktualizace",
-        "UpdateToken": "Aktualizovat token",
-        "UpdateNFT": "Aktualizujte NFT",
-        "CreateToken": "Vytvořit token",
-        "PlaceBid": "Vsadit",
-        "SoldOut": "Prodáno",
-        "NotOnSale": "Není v prodeji",
-        "NftName": "Název NFT",
-        "DescribeYourNFT": "Popište prosím své NFT",
-        "NFTImage": "Obrázek pro NFT",
-        "NFTVideo": "Video pro NFT, pokud existuje",
-        "UploadMovie": "Nahrát film",
-        "MovieSource": "Zdroj filmu",
-        "MovieURL": "Adresa URL filmu",
-        "UploadFile": "Nahrát soubor",
-        "PutOnMarketplace": "Dát na tržiště",
-        "InstantPurchase": "Zadejte cenu, aby uživatelé mohli okamžitě zakoupit váš NFT",
-        "FixedPrice": "Pevná cena",
-        "TimedAuction": "Časovaná aukce",
-        "OpenForBids": "Otevřeno pro nabídky",
-        "PriceOnePiece": "Zadejte cenu za jeden kus",
-        "EnterPrice": "Zadejte cenu",
-        "EnterMinimumBid": "Zadejte Minimální nabídku",
-        "SelectChain": "Vyberte řetěz",
-        "Currency": "Měna",
-        "AreYouSureDeleteImage": "Opravdu chcete odstranit obrázek?",
-        "AreYouSureDeleteVideo": "Opravdu chcete odstranit video?",
-        "series": {
-            "Name": "název",
-            "Icon": "Ikona",
-            "Description": "Popis",
-            "Author": "Autor",
-            "SelectSeries": "Vyberte sérii",
-            "Value": "Hodnota",
-            "AreYouSure": "Jsi si jistá?",
-            "AuthorInvalid": "Neplatná adresa autora!",
-            "Address": "Adresa",
-            "CoverImage": "Titulní obrázek",
-            "UploadCoverImage": "Nahrajte úvodní obrázek",
-            "CommissionAddressInvalid": "Adresa provize je neplatná",
-            "OnSale": "na prodej",
-            "OffSale": "mimo prodej",
-            "CreateSeries": "Vytvořit sérii",
-            "UpdateSeries": "Aktualizovat řadu",
-            "SeriesInfo": "Informace o sérii",
-            "SelectAuthor": "Vyberte autora",
-            "NewItem": "Nová řada NFT",
-            "NamePlaceholder": "Zadejte název série",
-            "DescPlaceholder": "Zadejte popis série",
-            "EndingIn": "Končí v"
-        },
-        "contract": {
-            "CreateContract": "Vytvořit smlouvu",
-            "SelectContract": "Vyberte smlouvu",
-            "CreateContractFor": "Vytvořte smlouvu na {{userName}}",
-            "ContractFor": "Smlouva na {{userName}}",
-            "UpdateContract": "Aktualizovat smlouvu",
-            "TransferOwnership": "Převod vlastnictví",
-            "SetBaseURI": "Nastavit základní URI",
-            "SetSuffix": "Nastavit příponu",
-            "CurrentOwner": "Současný vlastník",
-            "CurrentBaseURL": "Aktuální BaseURL",
-            "ContractAddressAbsent": "Chybí adresa smlouvy",
-            "FactoryAddressAbsent": "Adresa továrny chybí",
-            "ContractName": "{{contractName}} ( {{contractSymbol}} {{chainNetwork}}",
-            "TitleRequired": "Je vyžadován titul",
-            "SymbolRequired": "Je vyžadován symbol",
-            "TypeContractName": "název smlouvy",
-            "TypeContractSymbol": "symbol smlouvy (max 10 znaků)"
-        },
-        "contests": {
-            "Title": "Soutěže",
-            "NewContest": "Nová soutěž"
-        },
-        "import": {
-            "importNFT": "Import NFT",
-            "importAttributes": "Import atributů NFT",
-            "fileNotFound": "Litujeme, soubor CSV nebyl nalezen.",
-            "fileEmpty": "Litujeme, soubor CSV je prázdný.",
-            "userIdNotFound": "uživatel existuje, ale ID je prázdné",
-            "errorLine": "řádek {{1}}",
-            "fieldNotFound": "Povinné pole &quot; {{1}} &quot; nebylo nalezeno",
-            "displayTypeEmpty": "Typ zobrazení pro &quot; {{1}} &quot; nebyl nalezen",
-            "taskStreamInvalid": "tok úkolů je neplatný",
-            "instructionsEmpty": "instrukce toku úloh jsou prázdné",
-            "complete": "Kompletní",
-            "activateUsers": "odeslat uživatelům aktivační zprávu?",
-            "importProgress": "Pokrok",
-            "importOptions": "Možnosti",
-            "sampleCSV": "Stáhněte si ukázkový CSV",
-            "fileLabel": "Nahrát tabulku:",
-            "errorsTitle": "Došlo k chybám"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Filtrujte podle sbírek NFT",
-                "ShowNFTCollection": "Zobrazit sbírku NFT v...",
-                "AllCollections": "Všechny sbírky"
-            },
-            "ByUser": {
-                "AllAuthors": "Všichni autoři",
-                "AllUsers": "Každý",
-                "FilterByAuthors": "Filtrovat podle autorů"
-            }
-        },
-        "Back": "Zpět do sbírky",
-        "attributes": {
-            "Title": "Správa atributů",
-            "Attributes": "Atributy",
-            "DisplayTitle": "Typ displeje",
-            "AddDisplayType": "Přidat nový typ zobrazení",
-            "NewDisplay": "Nový displej",
-            "TraitTitle": "Typ vlastnosti",
-            "AddTraitTitle": "Přidat nový typ vlastnosti",
-            "NewTrait": "Nový typ vlastnosti",
-            "ValueTitle": "Hodnota",
-            "AddValueTitle": "Přidejte novou hodnotu",
-            "NewValue": "Nová hodnota",
-            "NewAttribute": "Nový atribut",
-            "UpdateAttributes": "Aktualizovat atributy",
-            "SaveAttributes": "Uložit atributy"
-        },
-        "profile": {
-            "LogOut": "Odhlásit se",
-            "Title": "Profil za {{userName}}",
-            "Description": "Podrobnosti o uživateli",
-            "aboutPlaceholder": "Upravit Bio",
-            "SureLogOut": "Opravdu se chcete odhlásit?",
-            "UploadCoverPhoto": "Nahrajte titulní fotografii"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "série Id",
-                        "owner": "Majitel",
-                        "currency": "Měna",
-                        "price": "Cena",
-                        "beneficiary": "Příjemce",
-                        "autoindex": "Autoindex",
-                        "duration": "Doba trvání",
-                        "rateInterval": "Interval sazby",
-                        "rateAmount": "Výše sazby"
-                    },
-                    "small": {
-                        "NFTContract": "NFTContract",
-                        "seriesId": "žetony budou raženy v této sérii",
-                        "owner": "vlastník instance, jinak bude odesílatel",
-                        "currency": "Měna pro zakoupené tokeny, pokud je nula - pro nativní mince",
-                        "price": "Cena",
-                        "beneficiary": "Příjemce prodeje tokenů, jinak bude odesílatel",
-                        "autoindex": "Autoindex",
-                        "duration": "Zámek po ražbě. Nula znamená získat okamžitě.",
-                        "rateInterval": "interval kbelíku pro speciální nákup",
-                        "rateAmount": "částka kbelíku pro speciální nákup"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(volitelný)",
-                    "number": "číslo",
-                    "address": "adresa",
-                    "fraction": "zlomek",
-                    "integer": "celé číslo",
-                    "seconds": "sekundy",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Vyrobit",
-                "viewInstancesList": "Obnovit seznam"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "ID řady",
-                        "account": "Účet",
-                        "amount": "Množství"
-                    },
-                    "small": {
-                        "seriesId": "nový token bude patřit do série s takovým ID",
-                        "account": "vlastník nově vytvořené NFT. pokud není nastaveno - použije aktuální peněženku",
-                        "amount": "množství NFT k mincovně"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(volitelný)",
-                    "seriesId": "id",
-                    "account": "účet",
-                    "amount": "množství",
-                    "integer": "celé číslo"
-                },
-                "btn": {
-                    "Purchase": "Nákup",
-                    "SpecialPurchase": "Speciální nákup"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Adresa"
-                    },
-                    "small": {
-                        "account": "Adresa"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Neplatná adresa"
-                },
-                "placeholders": {
-                    "account": "Adresa"
-                },
-                "addToWhitelist": "Přidat do seznamu povolených",
-                "removeFromWhitelist": "Odebrat z bílé listiny"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "ID tokenu",
-                    "custodian": "Kustod",
-                    "recipient": "Příjemce"
-                },
-                "small": {
-                    "tokenId": "token id, co je třeba zamknout nebo odemknout",
-                    "custodian": "adresu, kterou lze odemknout",
-                    "recipient": "adresu, na kterou budou tokeny přijímány"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Neplatné ID tokenu",
-                "invalidCustodian": "Neplatný správce",
-                "invalidRecipient": "Neplatný příjemce"
-            },
-            "placeholders": {
-                "optional": "(volitelný)",
-                "tokenId": "id",
-                "custodian": "adresa"
-            },
-            "Lock": "Zámek",
-            "Unlock": "Odemknout",
-            "Locked": "Zamčeno",
-            "CustodianAddress": "Adresa správce",
-            "TokenWasClaimed": "Byl nárokován token „ {{title}} “.",
-            "TokenWasLocked": "Token &quot; {{title}} &quot; byl uzamčen",
-            "TokenWasUnlocked": "Token &quot; {{title}} &quot; byl odemčen"
-        },
-        "GenerateDescription": "nebo automaticky generovat",
-        "collections": {
-            "Title": "Sbírky",
-            "EnterTitle": "zadejte název",
-            "EnterDescription": "zadejte popis",
-            "NewCollection": "Nová kolekce",
-            "Name": "název",
-            "Icon": "Ikona",
-            "Description": "Popis",
-            "Author": "Autor",
-            "SelectCollection": "Vyberte kolekci",
-            "Value": "Hodnota",
-            "AreYouSure": "Jsi si jistá?",
-            "AuthorInvalid": "Neplatná adresa autora!",
-            "Address": "Adresa",
-            "CoverImage": "Titulní obrázek",
-            "UploadIcon": "Ikona nahrávání",
-            "CommissionAddressInvalid": "Adresa provize je neplatná",
-            "OnSale": "na prodej",
-            "OffSale": "mimo prodej",
-            "CreateCollection": "Vytvořit sbírku",
-            "UpdateCollection": "Aktualizovat sbírku",
-            "CollectionInfo": "Informace o sbírce",
-            "SelectAuthor": "Vyberte autora",
-            "NewItem": "Nová kolekce NFT",
-            "NamePlaceholder": "Zadejte název sbírky",
-            "DescPlaceholder": "Zadejte popis sbírky",
-            "EndingIn": "Končí v",
-            "SubmitSeries": "Odeslat seriál"
-        }
-    },
-    "currencies": {
-        "choose": "Vyberte měnu"
-    },
-    "connectedAccount": {
-        "Title": "Připojit účet",
-        "Success": "Úspěch",
-        "YourAccountCreated": "Váš účet byl úspěšně vytvořen!",
-        "YourAccountAlreadyCreated": "Váš účet je již vytvořen a připraven k použití"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "ReserveToken",
-                        "amount": "Množství"
-                    },
-                    "small": {
-                        "reserveToken": "ReserveToken",
-                        "amount": "Množství"
-                    }
-                },
-                "placeholders": {
-                    "amount": "množství"
-                },
-                "btns": {
-                    "stake": "Kůl"
-                },
-                "stake": "Kůl",
-                "loading": "načítání"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Doba trvání",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "populární token",
-                    "donations": "dary",
-                    "rewardsRateFraction": "odměnyRateFraction",
-                    "numerator": "čitatel",
-                    "denominator": "jmenovatel"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Doba trvání ve dnech",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "populární token",
-                    "donations": "dary",
-                    "rewardsRateFraction": "odměnyRateFraction",
-                    "numerator": "čitatel",
-                    "denominator": "jmenovatel"
-                }
-            },
-            "placeholders": {
-                "optional": "(volitelný)",
-                "tuple": "n-tice[]",
-                "number": "číslo",
-                "address": "adresa",
-                "fraction": "zlomek",
-                "integer": "celé číslo",
-                "seconds": "sekundy",
-                "days": "dní",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Nejsou zde žádné bazény"
-            },
-            "btns": {
-                "createPool": "Vytvořit bazén",
-                "createPoolInForm": "Vytvořit"
-            },
-            "createPool": "Vytvořit bazén",
-            "produce": "Vyrobit",
-            "loading": "načítání",
-            "viewInstancesList": "Obnovit seznam"
-        }
-    },
-    "fundrise": {
-        "placeholder": "napište něco o tomto příspěvku..."
-    }
+	"errors": {
+		"Error": "Chyba",
+		"WalletAbsent": "Pen\u011b\u017eenka nen\u00ed p\u0159ipojena.",
+		"Rendering": "P\u0159i vykreslov\u00e1n\u00ed <span class='url'>{{1}}</span> do\u0161lo k chyb\u00e1m",
+		"PriceRequired": "Po\u017eadovan\u00e1 cena!",
+		"NameRequired": "Jm\u00e9no (vy\u017eadov\u00e1no!",
+		"PriceInvalid": "Cena neplatn\u00e1!",
+		"AmountInvalid": "\u010c\u00e1stka je neplatn\u00e1!",
+		"TransactionFailed": "Transakce selhala",
+		"ChainNotSupported": "Vybran\u00fd \u0159et\u011bzec nen\u00ed podporov\u00e1n. Podporovan\u00fd \u0159et\u011bz: {{supportedChain}}",
+		"NeedMetaMaskConnected": "Pro pr\u00e1ci s aplikac\u00ed pot\u0159ebujete p\u0159ipojenou MetaMask",
+		"UserNotLoggedInMetaMask": "U\u017eivatel nen\u00ed p\u0159ihl\u00e1\u0161en do MetaMask",
+		"CurrencyNotFound": "M\u011bna nenalezena",
+		"WrongChain": "Tento NFT vytvo\u0159en pod &quot; {{chain}} &quot;. Pou\u017eijte pros\u00edm tento \u0159et\u011bz.",
+		"NoRecipientSelected": "Nen\u00ed vybr\u00e1n \u017e\u00e1dn\u00fd p\u0159\u00edjemce",
+		"NotEnoughPermissionsWallet": "Nem\u00e1te dostate\u010dn\u00e1 opr\u00e1vn\u011bn\u00ed ke \u010dten\u00ed pen\u011b\u017eenky tohoto u\u017eivatele",
+		"ThisUserHaveNoWallet": "Tento u\u017eivatel nem\u00e1 p\u0159i\u0159azenou \u017e\u00e1dnou pen\u011b\u017eenku",
+		"TheWalletOfThisUserInvalid": "Pen\u011b\u017eenka tohoto u\u017eivatele je neplatn\u00e1",
+		"WalletInvalid": "Adresa pen\u011b\u017eenky je neplatn\u00e1",
+		"CantManageFrozenSeries": "Nem\u016f\u017eete spravovat zmrazen\u00e9 s\u00e9rie",
+		"SubscriptionStreamNotPaid": "Za zobrazen\u00ed tohoto obsahu jste nezaplatili. Klikn\u011bte pros\u00edm na {{subscriptionUrl}} a p\u0159ihlaste se k odb\u011bru p\u0159\u00edslu\u0161n\u00e9ho pl\u00e1nu."
+	},
+	"admin": {
+		"Title": "Spr\u00e1va majetku",
+		"SubscriptionTitle": "Pl\u00e1ny p\u0159edplatn\u00e9ho"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Zapla\u0165te klepnut\u00edm"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : zpracov\u00e1na platba za {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "D\u011bkujeme za va\u0161i platbu na {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} p\u0159ihl\u00e1\u0161en\u00fdch k {{plan.title}}",
+		"YouSubscribedTo": "Byli jste p\u0159ihl\u00e1\u0161eni k odb\u011bru {{plan.title}}",
+		"Assets/credits/alert": "M\u00e1te upozorn\u011bn\u00ed souvisej\u00edc\u00ed s va\u0161\u00edm \u00fa\u010dtem"
+	},
+	"charge": {
+		"Subject": "Dostanete platbu {{displayAmount}} z {{call 'publisher.displayName'}} od &quot; {{description}} &quot;",
+		"HasBeenCharged": "Hej, to je jen proto, abychom v\u00e1s informovali, \u017ee {{1}} bylo \u00fa\u010dtov\u00e1no {{2}} za {{3}} na {{4}}"
+	},
+	"charged": {
+		"Subject": "D\u011bkujeme za va\u0161i platbu za &quot; {{description}} &quot;",
+		"HavePaid": "Hej {{1}} , toto je jen rychl\u00e9 potvrzen\u00ed, \u017ee jste \u00fasp\u011b\u0161n\u011b zaplatili {{2}} a\u017e {{3}} za {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "Info o objedn\u00e1vce",
+		"PaymentMethod": "Zp\u016fsob platby",
+		"ContactInfo": "Kontaktn\u00ed informace",
+		"Pay": "Platit",
+		"PaymentSucceeded": "Platba prob\u011bhla \u00fasp\u011b\u0161n\u011b",
+		"PaymentProcessing.": "Va\u0161e platba se zpracov\u00e1v\u00e1",
+		"FailTryAgain": "Va\u0161e platba nebyla \u00fasp\u011b\u0161n\u00e1, zkuste to pros\u00edm znovu",
+		"SomethingWrong": "N\u011bco se pokazilo",
+		"PaymentStatus": "Status platby",
+		"PayTo": "Zapla\u0165te {{displayName}}",
+		"ChooseCurrency": "Vyberte m\u011bnu",
+		"YouCanSendUpTo": "M\u016f\u017eete poslat a\u017e {{amount}} {{symbol}}",
+		"Send": "Poslat",
+		"EnterAmount": "vlo\u017eit sumu"
+	},
+	"credits": {
+		"InviteAcceptedBy": "Pozv\u00e1nka p\u0159ijata {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} napln\u011bno {{FilledStreamTitle}}",
+		"ForFillingStream": "Za pln\u011bn\u00ed {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "Do za\u010d\u00e1tku m\u00e1te {{amount}} kredit\u016f",
+		"PaymentFor": "Platba za &quot; {{1}} &quot;",
+		"PaymentTo": "Platba do {{1}}",
+		"PaymentToUser": "Platba do {{toUserName}}",
+		"CreatePrivateChat": "pro soukrom\u00fd chat s {{toUserName}}",
+		"CreatePaidStream": "za vytvo\u0159en\u00ed {{toStreamName}}",
+		"JoinedPaidStream": "pro rezervaci v &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "za vytvo\u0159en\u00ed komunity &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "jako refundace rezervace v &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "Koupeno {{amount}} kredit\u016f",
+		"BonusCredits": "Bonus {{amount}} kredit\u016f",
+		"BuyAmountCredits": "Koupit {{amount}} kredit\u016f",
+		"WatchClip": "Z\u00edskali jste {{amount}} kredit\u016f za zhl\u00e9dnut\u00ed {{fromStreamTitle}}",
+		"MissingCredits": "Chyb\u011bj\u00edc\u00ed kredity",
+		"YouMissingCredits": "Pro pokra\u010dov\u00e1n\u00ed pot\u0159ebujete dal\u0161\u00edch {{amount}} {{currency}} kredit\u016f.",
+		"BuyCredits": "Koupit kredity",
+		"BuyBonus": "N\u00e1kup {{amount}} kredit\u016f najednou povede k bonusu {{bonus}} kredit\u016f.",
+		"Buy": "Koupit",
+		"PurchaseCredits": "N\u00e1kupn\u00ed kredity",
+		"Credits": "Kredity",
+		"ErrorInvalidAmount": "\u010c\u00e1stka je neplatn\u00e1",
+		"ErrorInvalidCurrency": "Bohu\u017eel zat\u00edm nepodporujeme m\u011bnu {{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} kredit\u016f",
+			"BonusCredits": "{{amount}} kredit\u016f"
+		}
+	},
+	"history": {
+		"Date": "datum",
+		"Amount": "Mno\u017estv\u00ed",
+		"Description": "Popis",
+		"Client": "Klient",
+		"User": "U\u017eivatel",
+		"To": "na",
+		"From": "z",
+		"SeeHistory": "Pod\u00edvejte se na historii plateb {{1}}",
+		"HistoryEmpty": "Zat\u00edm nem\u00e1te \u017e\u00e1dn\u00e1 data",
+		"PaymentFor": "Posl\u00e1no {{amount}} kredit\u016f",
+		"PaymentTo": "Posl\u00e1no {{amount}} kredit\u016f",
+		"PaymentToUser": "Posl\u00e1no {{amount}} kredit\u016f",
+		"CreatePaidStream": "Utraceno {{amount}} kredit\u016f",
+		"WatchClip": {
+			"+": "Z\u00edskal {{amount}} kredit\u016f",
+			"-": "Utraceno {{amount}} kredit\u016f"
+		},
+		"JoinedPaidStream": {
+			"+": "Z\u00edskal {{amount}} kredit\u016f",
+			"-": "Utraceno {{amount}} kredit\u016f"
+		},
+		"LeftPaidStream": {
+			"+": "Obdr\u017eel {{amount}} kredit\u016f",
+			"-": "Posl\u00e1no {{amount}} kredit\u016f"
+		},
+		"CreatedCommunity": "Utraceno {{amount}} kredit\u016f",
+		"BoughtCredits": "Koupeno {{amount}} kredit\u016f",
+		"BonusCredits": "Z\u00edskal bonus {{amount}} kredit\u016f",
+		"InviteAcceptedBy": "Z\u00edskal {{amount}} kredit\u016f",
+		"Streams_user_firstname": "Z\u00edskal {{amount}} kredit\u016f",
+		"Streams_user_lastname": "Z\u00edskal {{amount}} kredit\u016f",
+		"Streams_user_icon": "Z\u00edskal {{amount}} kredit\u016f",
+		"Places_user_location": "Z\u00edskal {{amount}} kredit\u016f",
+		"Streams_greeting": "Z\u00edskal {{amount}} kredit\u016f",
+		"YouHaveCreditsToStart": "Z\u00edskal {{amount}} kredit\u016f",
+		"InvitedUserFilledStream": "Z\u00edskal {{amount}} kredit\u016f",
+		"ForFillingStream": "Z\u00edskal {{amount}} kredit\u016f",
+		"CreatePrivateChat": "Utraceno {{amount}} kredit\u016f"
+	},
+	"subscriptions": {
+		"infoTitle": "Nastavte platebn\u00ed \u00fadaje",
+		"confirm": {
+			"title": "Spus\u0165te p\u0159edplatn\u00e9",
+			"message": "Zah\u00e1jit opakovan\u00e9 p\u0159edplatn\u00e9 &quot; {{title}} &quot;?",
+			"ok": "OK",
+			"cancel": "zru\u0161en\u00ed"
+		},
+		"CreditOrDebitCard": "Kreditn\u00ed nebo debetn\u00ed karta",
+		"SubscribePayment": "P\u0159edplatitelsk\u00e1 platba",
+		"ImmediatePayment": "Okam\u017eit\u00e1 platba",
+		"ProcessingPayment": "Zpracov\u00e1n\u00ed platby",
+		"SubscriptionAlreadyPaid": "Toto p\u0159edplatn\u00e9 je ji\u017e zaplaceno",
+		"SubscriptionNotActive": "Toto p\u0159edplatn\u00e9 nen\u00ed aktivn\u00ed",
+		"Subscribed": "P\u0159edplaceno",
+		"Unsubscribed": "Neodeb\u00edran\u00fd",
+		"Unsubscribe": "Odhl\u00e1sit odb\u011br",
+		"Subscribe": "p\u0159edplatit",
+		"Started": "Zah\u00e1jeno",
+		"EndsIn": "Kon\u010d\u00ed za",
+		"NextPay": "Dal\u0161\u00ed platba",
+		"Period": "Doba",
+		"Price": "Cena",
+		"AreYouSureUnsubscribe": "Opravdu chcete zru\u0161it odb\u011br tohoto pl\u00e1nu?",
+		"YouUnsubscribedFromPlan": "Odhl\u00e1sili jste se z tarifu \u201e {{planTitle}} \u201c. Nebude v\u00e1m nic \u00fa\u010dtov\u00e1no, ale va\u0161e p\u0159edplatn\u00e9 bude pokra\u010dovat a\u017e do {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "n\u00e1zev pl\u00e1nu",
+			"PricePlaceholder": "cena",
+			"DescriptionPlaceholder": "popis pl\u00e1nu p\u0159edplatn\u00e9ho",
+			"SavePlan": "Ulo\u017eit pl\u00e1n",
+			"NewPlan": "Nov\u00fd pl\u00e1n",
+			"SubscriptionTitle": "Pl\u00e1ny p\u0159edplatn\u00e9ho",
+			"AreYouSureDeletePlan": "Opravdu chcete tento pl\u00e1n smazat?",
+			"Duration": "Doba trv\u00e1n\u00ed",
+			"Discount": "Sleva",
+			"Interrupt": "P\u0159eru\u0161it",
+			"Continue": "Pokra\u010dovat",
+			"SelectDisplayType": "Vyberte {{displayType}}",
+			"EndDate": "datum ukon\u010den\u00ed",
+			"Available": "K dispozici",
+			"Hidden": "Skryt\u00fd",
+			"InviteOnly": "Pouze pro pozv\u00e1n\u00ed",
+			"CantSubscribeUnlessInvited": "K odb\u011bru tohoto pl\u00e1nu se nem\u016f\u017eete p\u0159ihl\u00e1sit, pokud jste nebyli pozv\u00e1ni"
+		}
+	},
+	"payments": {
+		"infoTitle": "Nastavte platebn\u00ed \u00fadaje",
+		"BuyAmountCredits": "Koupit {{amount}} kredit\u016f",
+		"confirm": {
+			"title": "Zaplatit",
+			"message": "Souhlas\u00edte se zaplacen\u00edm {{symbol}} {{amount}} ?",
+			"ok": "OK",
+			"cancel": "zru\u0161en\u00ed"
+		},
+		"reasons": {
+			"BuyCredits": "Koupit kredity"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "Kredity",
+			"description": "sleduje kredity a platby"
+		},
+		"Assets/plan": {
+			"displayType": "P\u0159edplatitelsk\u00fd pl\u00e1n",
+			"description": "pl\u00e1n p\u0159edplatn\u00e9ho"
+		},
+		"Assets/subscription": {
+			"displayType": "P\u0159edplatn\u00e9",
+			"description": "p\u0159edplatn\u00e9"
+		},
+		"Assets/product": {
+			"displayType": "Produkt",
+			"description": "prod\u00e1van\u00fd produkt"
+		},
+		"Assets/service": {
+			"displayType": "Servis",
+			"description": "nab\u00edzen\u00e1 slu\u017eba"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "Z\u00edskal {{amount}} kredit\u016f"
+		},
+		"Assets/credits/bought": {
+			"content": "Koupeno {{amount}} kredit\u016f"
+		},
+		"Assets/credits/bonus": {
+			"content": "Bonus {{amount}} kredit\u016f"
+		},
+		"Assets/credits/spent": {
+			"content": "Utraceno {{amount}} kredit\u016f"
+		},
+		"Assets/credits/sent": {
+			"content": "Posl\u00e1no {{amount}} kredit\u016f {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "Obdr\u017eel {{amount}} kredit\u016f z {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "Na \u00fa\u010dtu m\u00e1te m\u00e1lo kredit\u016f. Nav\u0161tivte pros\u00edm <a href='<i translate='no'>999 &#39;&gt;tento odkaz</a> pro n\u00e1kup dal\u0161\u00edch kredit\u016f."
+		}
+	},
+	"billing": {
+		"Title": "Fakturace majetku",
+		"CreditsMinimum": "Minim\u00e1ln\u00ed kredity",
+		"CreditsToAdd": "Kredity k p\u0159id\u00e1n\u00ed",
+		"Save": "Ulo\u017eit",
+		"ThisLink": "tento odkaz",
+		"errors": {
+			"CreditsMinimumNegative": "Minim\u00e1ln\u00ed po\u010det kredit\u016f nesm\u00ed b\u00fdt z\u00e1porn\u00fd",
+			"CreditsToAddNegative": "Kredity k p\u0159id\u00e1n\u00ed nesm\u00ed b\u00fdt z\u00e1porn\u00e9"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "Nov\u00e1 slu\u017eba",
+			"TitlePlaceholder": "N\u00e1zev slu\u017eby",
+			"PricePlaceholder": "Nastavit cenu",
+			"LinkPlaceholder": "nastavit odkaz na dal\u0161\u00ed informace",
+			"DescriptionPlaceholder": "Popis slu\u017eby",
+			"SaveService": "Ulo\u017eit slu\u017ebu",
+			"SelectRequiredParticipants": "Povinn\u00ed souvisej\u00edc\u00ed \u00fa\u010dastn\u00edci",
+			"RequiredParticipantsDesc": "Vyberte pros\u00edm p\u0159\u00edbuzn\u00e9 \u00fa\u010dastn\u00edky, kte\u0159\u00ed jsou povinni tuto slu\u017ebu vyu\u017e\u00edvat (nap\u0159\u00edklad dom\u00e1c\u00ed mazl\u00ed\u010dci pro &quot;V\u00fdstavu ps\u016f&quot; nebo d\u011bti pro &quot;D\u011btsk\u00e9 pr\u00e1zdniny&quot; atd.). Pokud je slu\u017eba placen\u00e1, u\u017eivatel bude muset zaplatit tak\u00e9 za ka\u017ed\u00e9ho souvisej\u00edc\u00edho \u00fa\u010dastn\u00edka."
+		},
+		"EditServiceTemplate": {
+			"Title": "Upravit slu\u017ebu"
+		},
+		"ManageServiceTemplates": "Spr\u00e1va \u0161ablon slu\u017eeb",
+		"ManageServices": "Spr\u00e1va slu\u017eeb",
+		"Free": "Voln\u00fd, uvolnit",
+		"OptionalContribution": "Nepovinn\u00fd p\u0159\u00edsp\u011bvek",
+		"RequiredPayment": "Po\u017eadovan\u00e1 platba",
+		"AreYouSureDelete": "Opravdu chcete tuto slu\u017ebu smazat?",
+		"AmountServicesRelated": "S touto slu\u017ebou souvis\u00ed {{amount}} nab\u00eddek. Budou tak\u00e9 odstran\u011bny."
+	},
+	"transfer": {
+		"SelectRecipient": "Vyberte p\u0159\u00edjemce",
+		"TransactionSuccess": "\u00dasp\u011bch transakce",
+		"OrTypeWalletAddress": "NEBO zadejte adresu pen\u011b\u017eenky p\u0159\u00edjemce",
+		"AppCredits": "Kredity aplikace"
+	},
+	"NFT": {
+		"Title": "Titul",
+		"Name": "n\u00e1zev",
+		"EnterName": "Napi\u0161te jm\u00e9no",
+		"EnterAuthorWallet": "Zadejte autorskou pen\u011b\u017eenku",
+		"InformationAboutTitle": "Informace o {{title}} NFT",
+		"Description": "Popis",
+		"DetailedInformationAboutNFT": "Podrobn\u00e9 informace o NFT",
+		"PresaleStarts": "P\u0159edprodej za\u010d\u00edn\u00e1 23. prosince",
+		"OwnerUserNotFound": "Vlastn\u00edk tohoto NFT nen\u00ed registrov\u00e1n v na\u0161\u00ed aplikaci.",
+		"BuyNow": "Kup nyn\u00ed",
+		"Buy": "Koupit",
+		"Add": "P\u0159idat",
+		"Remove": "Odstranit",
+		"NoNFTyet": "Zat\u00edm \u017e\u00e1dn\u00e9 NFT",
+		"Conversation": "Konverzace",
+		"Create": "Vytvo\u0159it",
+		"CurrentBid": "Aktu\u00e1ln\u00ed nab\u00eddka",
+		"StartingIn": "Za\u010d\u00edn\u00e1 v",
+		"EndingIn": "Kon\u010d\u00ed v",
+		"CreateNFT": "Vytvo\u0159te NFT",
+		"TitlePlaceholder": "Dejte sv\u00e9mu NFT titul",
+		"DescriptionPlaceholder": "Popi\u0161te sv\u016fj NFT",
+		"CreateYourNFT": "Vytvo\u0159te si NFT",
+		"Royalties": "Autorsk\u00e9 poplatky",
+		"RoyaltyPlaceholder": "Voliteln\u00fd. \u010c\u00e1stka zaplacen\u00e1 tv\u016frci p\u0159ed p\u0159evodem.",
+		"ExpirationDate": "Datum spot\u0159eby",
+		"StartingDate": "Datum zah\u00e1jen\u00ed",
+		"BidsBelowThisAmount": "Nab\u00eddky pod tuto \u010d\u00e1stku nebudou povoleny",
+		"MinimumBid": "Minim\u00e1ln\u00ed nab\u00eddka",
+		"Author": "Autor",
+		"Price": "Cena",
+		"Commission": "Komise",
+		"EnterCommission": "Zadejte provizi",
+		"Owner": "Majitel",
+		"SelectCategory": "Vyberte kategorii",
+		"Day": "Den",
+		"Days": "Dny",
+		"Hour": "Hodina",
+		"Hours": "hodiny",
+		"Minute": "Minuta",
+		"Minutes": "Minut",
+		"Second": "Druh\u00fd",
+		"Seconds": "Sekundy",
+		"SalesCreator": "z prodeje p\u016fjde tv\u016frci",
+		"Details": "Podrobnosti",
+		"Bids": "Nab\u00eddky",
+		"History": "D\u011bjiny",
+		"LoremIpsum": "Lorem Ipsum je prost\u011b fiktivn\u00ed text tiska\u0159sk\u00e9ho a sazebn\u00edho pr\u016fmyslu.",
+		"PutOnSale": "D\u00e1t do prodeje",
+		"PutOffSale": "St\u00e1hnout z prodeje",
+		"Transfer": "P\u0159evod",
+		"Actions": "Akce",
+		"Claim": "N\u00e1rok",
+		"ClaimNFT": "N\u00e1rokovat NFT",
+		"Unlocking": "Odemyk\u00e1n\u00ed",
+		"Unlock": "Odemknout",
+		"Update": "Aktualizace",
+		"UpdateToken": "Aktualizovat token",
+		"UpdateNFT": "Aktualizujte NFT",
+		"CreateToken": "Vytvo\u0159it token",
+		"PlaceBid": "Vsadit",
+		"SoldOut": "Prod\u00e1no",
+		"NotOnSale": "Nen\u00ed v prodeji",
+		"NftName": "N\u00e1zev NFT",
+		"DescribeYourNFT": "Popi\u0161te pros\u00edm sv\u00e9 NFT",
+		"NFTImage": "Obr\u00e1zek pro NFT",
+		"NFTVideo": "Video pro NFT, pokud existuje",
+		"UploadMovie": "Nahr\u00e1t film",
+		"MovieSource": "Zdroj filmu",
+		"MovieURL": "Adresa URL filmu",
+		"UploadFile": "Nahr\u00e1t soubor",
+		"PutOnMarketplace": "D\u00e1t na tr\u017ei\u0161t\u011b",
+		"InstantPurchase": "Zadejte cenu, aby u\u017eivatel\u00e9 mohli okam\u017eit\u011b zakoupit v\u00e1\u0161 NFT",
+		"FixedPrice": "Pevn\u00e1 cena",
+		"TimedAuction": "\u010casovan\u00e1 aukce",
+		"OpenForBids": "Otev\u0159eno pro nab\u00eddky",
+		"PriceOnePiece": "Zadejte cenu za jeden kus",
+		"EnterPrice": "Zadejte cenu",
+		"EnterMinimumBid": "Zadejte Minim\u00e1ln\u00ed nab\u00eddku",
+		"SelectChain": "Vyberte \u0159et\u011bz",
+		"Currency": "M\u011bna",
+		"AreYouSureDeleteImage": "Opravdu chcete odstranit obr\u00e1zek?",
+		"AreYouSureDeleteVideo": "Opravdu chcete odstranit video?",
+		"series": {
+			"Name": "n\u00e1zev",
+			"Icon": "Ikona",
+			"Description": "Popis",
+			"Author": "Autor",
+			"SelectSeries": "Vyberte s\u00e9rii",
+			"Value": "Hodnota",
+			"AreYouSure": "Jsi si jist\u00e1?",
+			"AuthorInvalid": "Neplatn\u00e1 adresa autora!",
+			"Address": "Adresa",
+			"CoverImage": "Tituln\u00ed obr\u00e1zek",
+			"UploadCoverImage": "Nahrajte \u00favodn\u00ed obr\u00e1zek",
+			"CommissionAddressInvalid": "Adresa provize je neplatn\u00e1",
+			"OnSale": "na prodej",
+			"OffSale": "mimo prodej",
+			"CreateSeries": "Vytvo\u0159it s\u00e9rii",
+			"UpdateSeries": "Aktualizovat \u0159adu",
+			"SeriesInfo": "Informace o s\u00e9rii",
+			"SelectAuthor": "Vyberte autora",
+			"NewItem": "Nov\u00e1 \u0159ada NFT",
+			"NamePlaceholder": "Zadejte n\u00e1zev s\u00e9rie",
+			"DescPlaceholder": "Zadejte popis s\u00e9rie",
+			"EndingIn": "Kon\u010d\u00ed v"
+		},
+		"contract": {
+			"CreateContract": "Vytvo\u0159it smlouvu",
+			"SelectContract": "Vyberte smlouvu",
+			"CreateContractFor": "Vytvo\u0159te smlouvu na {{userName}}",
+			"ContractFor": "Smlouva na {{userName}}",
+			"UpdateContract": "Aktualizovat smlouvu",
+			"TransferOwnership": "P\u0159evod vlastnictv\u00ed",
+			"SetBaseURI": "Nastavit z\u00e1kladn\u00ed URI",
+			"SetSuffix": "Nastavit p\u0159\u00edponu",
+			"CurrentOwner": "Sou\u010dasn\u00fd vlastn\u00edk",
+			"CurrentBaseURL": "Aktu\u00e1ln\u00ed BaseURL",
+			"ContractAddressAbsent": "Chyb\u00ed adresa smlouvy",
+			"FactoryAddressAbsent": "Adresa tov\u00e1rny chyb\u00ed",
+			"ContractName": "{{contractName}} ( {{contractSymbol}} {{chainNetwork}}",
+			"TitleRequired": "Je vy\u017eadov\u00e1n titul",
+			"SymbolRequired": "Je vy\u017eadov\u00e1n symbol",
+			"TypeContractName": "n\u00e1zev smlouvy",
+			"TypeContractSymbol": "symbol smlouvy (max 10 znak\u016f)"
+		},
+		"contests": {
+			"Title": "Sout\u011b\u017ee",
+			"NewContest": "Nov\u00e1 sout\u011b\u017e"
+		},
+		"import": {
+			"importNFT": "Import NFT",
+			"importAttributes": "Import atribut\u016f NFT",
+			"fileNotFound": "Litujeme, soubor CSV nebyl nalezen.",
+			"fileEmpty": "Litujeme, soubor CSV je pr\u00e1zdn\u00fd.",
+			"userIdNotFound": "u\u017eivatel existuje, ale ID je pr\u00e1zdn\u00e9",
+			"errorLine": "\u0159\u00e1dek {{1}}",
+			"fieldNotFound": "Povinn\u00e9 pole &quot; {{1}} &quot; nebylo nalezeno",
+			"displayTypeEmpty": "Typ zobrazen\u00ed pro &quot; {{1}} &quot; nebyl nalezen",
+			"taskStreamInvalid": "tok \u00fakol\u016f je neplatn\u00fd",
+			"instructionsEmpty": "instrukce toku \u00faloh jsou pr\u00e1zdn\u00e9",
+			"complete": "Kompletn\u00ed",
+			"activateUsers": "odeslat u\u017eivatel\u016fm aktiva\u010dn\u00ed zpr\u00e1vu?",
+			"importProgress": "Pokrok",
+			"importOptions": "Mo\u017enosti",
+			"sampleCSV": "St\u00e1hn\u011bte si uk\u00e1zkov\u00fd CSV",
+			"fileLabel": "Nahr\u00e1t tabulku:",
+			"errorsTitle": "Do\u0161lo k chyb\u00e1m"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "Filtrujte podle sb\u00edrek NFT",
+				"ShowNFTCollection": "Zobrazit sb\u00edrku NFT v...",
+				"AllCollections": "V\u0161echny sb\u00edrky"
+			},
+			"ByUser": {
+				"AllAuthors": "V\u0161ichni auto\u0159i",
+				"AllUsers": "Ka\u017ed\u00fd",
+				"FilterByAuthors": "Filtrovat podle autor\u016f"
+			}
+		},
+		"Back": "Zp\u011bt do sb\u00edrky",
+		"attributes": {
+			"Title": "Spr\u00e1va atribut\u016f",
+			"Attributes": "Atributy",
+			"DisplayTitle": "Typ displeje",
+			"AddDisplayType": "P\u0159idat nov\u00fd typ zobrazen\u00ed",
+			"NewDisplay": "Nov\u00fd displej",
+			"TraitTitle": "Typ vlastnosti",
+			"AddTraitTitle": "P\u0159idat nov\u00fd typ vlastnosti",
+			"NewTrait": "Nov\u00fd typ vlastnosti",
+			"ValueTitle": "Hodnota",
+			"AddValueTitle": "P\u0159idejte novou hodnotu",
+			"NewValue": "Nov\u00e1 hodnota",
+			"NewAttribute": "Nov\u00fd atribut",
+			"UpdateAttributes": "Aktualizovat atributy",
+			"SaveAttributes": "Ulo\u017eit atributy"
+		},
+		"profile": {
+			"LogOut": "Odhl\u00e1sit se",
+			"Title": "Profil za {{userName}}",
+			"Description": "Podrobnosti o u\u017eivateli",
+			"aboutPlaceholder": "Upravit Bio",
+			"SureLogOut": "Opravdu se chcete odhl\u00e1sit?",
+			"UploadCoverPhoto": "Nahrajte tituln\u00ed fotografii"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFTContract",
+						"seriesId": "s\u00e9rie Id",
+						"owner": "Majitel",
+						"currency": "M\u011bna",
+						"price": "Cena",
+						"beneficiary": "P\u0159\u00edjemce",
+						"autoindex": "Autoindex",
+						"duration": "Doba trv\u00e1n\u00ed",
+						"rateInterval": "Interval sazby",
+						"rateAmount": "V\u00fd\u0161e sazby"
+					},
+					"small": {
+						"NFTContract": "NFTContract",
+						"seriesId": "\u017eetony budou ra\u017eeny v t\u00e9to s\u00e9rii",
+						"owner": "vlastn\u00edk instance, jinak bude odes\u00edlatel",
+						"currency": "M\u011bna pro zakoupen\u00e9 tokeny, pokud je nula - pro nativn\u00ed mince",
+						"price": "Cena",
+						"beneficiary": "P\u0159\u00edjemce prodeje token\u016f, jinak bude odes\u00edlatel",
+						"autoindex": "Autoindex",
+						"duration": "Z\u00e1mek po ra\u017eb\u011b. Nula znamen\u00e1 z\u00edskat okam\u017eit\u011b.",
+						"rateInterval": "interval kbel\u00edku pro speci\u00e1ln\u00ed n\u00e1kup",
+						"rateAmount": "\u010d\u00e1stka kbel\u00edku pro speci\u00e1ln\u00ed n\u00e1kup"
+					}
+				},
+				"placeholders": {
+					"optional": "(voliteln\u00fd)",
+					"number": "\u010d\u00edslo",
+					"address": "adresa",
+					"fraction": "zlomek",
+					"integer": "cel\u00e9 \u010d\u00edslo",
+					"seconds": "sekundy",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "Vyrobit",
+				"viewInstancesList": "Obnovit seznam"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "ID \u0159ady",
+						"account": "\u00da\u010det",
+						"amount": "Mno\u017estv\u00ed"
+					},
+					"small": {
+						"seriesId": "nov\u00fd token bude pat\u0159it do s\u00e9rie s takov\u00fdm ID",
+						"account": "vlastn\u00edk nov\u011b vytvo\u0159en\u00e9 NFT. pokud nen\u00ed nastaveno - pou\u017eije aktu\u00e1ln\u00ed pen\u011b\u017eenku",
+						"amount": "mno\u017estv\u00ed NFT k mincovn\u011b"
+					}
+				},
+				"placeholders": {
+					"optional": "(voliteln\u00fd)",
+					"seriesId": "id",
+					"account": "\u00fa\u010det",
+					"amount": "mno\u017estv\u00ed",
+					"integer": "cel\u00e9 \u010d\u00edslo"
+				},
+				"btn": {
+					"Purchase": "N\u00e1kup",
+					"SpecialPurchase": "Speci\u00e1ln\u00ed n\u00e1kup"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "Adresa"
+					},
+					"small": {
+						"account": "Adresa"
+					}
+				},
+				"errors": {
+					"invalidAddress": "Neplatn\u00e1 adresa"
+				},
+				"placeholders": {
+					"account": "Adresa"
+				},
+				"addToWhitelist": "P\u0159idat do seznamu povolen\u00fdch",
+				"removeFromWhitelist": "Odebrat z b\u00edl\u00e9 listiny"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "ID tokenu",
+					"custodian": "Kustod",
+					"recipient": "P\u0159\u00edjemce"
+				},
+				"small": {
+					"tokenId": "token id, co je t\u0159eba zamknout nebo odemknout",
+					"custodian": "adresu, kterou lze odemknout",
+					"recipient": "adresu, na kterou budou tokeny p\u0159ij\u00edm\u00e1ny"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "Neplatn\u00e9 ID tokenu",
+				"invalidCustodian": "Neplatn\u00fd spr\u00e1vce",
+				"invalidRecipient": "Neplatn\u00fd p\u0159\u00edjemce"
+			},
+			"placeholders": {
+				"optional": "(voliteln\u00fd)",
+				"tokenId": "id",
+				"custodian": "adresa"
+			},
+			"Lock": "Z\u00e1mek",
+			"Unlock": "Odemknout",
+			"Locked": "Zam\u010deno",
+			"CustodianAddress": "Adresa spr\u00e1vce",
+			"TokenWasClaimed": "Byl n\u00e1rokov\u00e1n token \u201e {{title}} \u201c.",
+			"TokenWasLocked": "Token &quot; {{title}} &quot; byl uzam\u010den",
+			"TokenWasUnlocked": "Token &quot; {{title}} &quot; byl odem\u010den"
+		},
+		"GenerateDescription": "nebo automaticky generovat",
+		"collections": {
+			"Title": "Sb\u00edrky",
+			"EnterTitle": "zadejte n\u00e1zev",
+			"EnterDescription": "zadejte popis",
+			"NewCollection": "Nov\u00e1 kolekce",
+			"Name": "n\u00e1zev",
+			"Icon": "Ikona",
+			"Description": "Popis",
+			"Author": "Autor",
+			"SelectCollection": "Vyberte kolekci",
+			"Value": "Hodnota",
+			"AreYouSure": "Jsi si jist\u00e1?",
+			"AuthorInvalid": "Neplatn\u00e1 adresa autora!",
+			"Address": "Adresa",
+			"CoverImage": "Tituln\u00ed obr\u00e1zek",
+			"UploadIcon": "Ikona nahr\u00e1v\u00e1n\u00ed",
+			"CommissionAddressInvalid": "Adresa provize je neplatn\u00e1",
+			"OnSale": "na prodej",
+			"OffSale": "mimo prodej",
+			"CreateCollection": "Vytvo\u0159it sb\u00edrku",
+			"UpdateCollection": "Aktualizovat sb\u00edrku",
+			"CollectionInfo": "Informace o sb\u00edrce",
+			"SelectAuthor": "Vyberte autora",
+			"NewItem": "Nov\u00e1 kolekce NFT",
+			"NamePlaceholder": "Zadejte n\u00e1zev sb\u00edrky",
+			"DescPlaceholder": "Zadejte popis sb\u00edrky",
+			"EndingIn": "Kon\u010d\u00ed v",
+			"SubmitSeries": "Odeslat seri\u00e1l"
+		}
+	},
+	"currencies": {
+		"choose": "Vyberte m\u011bnu"
+	},
+	"connectedAccount": {
+		"Title": "P\u0159ipojit \u00fa\u010det",
+		"Success": "\u00dasp\u011bch",
+		"YourAccountCreated": "V\u00e1\u0161 \u00fa\u010det byl \u00fasp\u011b\u0161n\u011b vytvo\u0159en!",
+		"YourAccountAlreadyCreated": "V\u00e1\u0161 \u00fa\u010det je ji\u017e vytvo\u0159en a p\u0159ipraven k pou\u017eit\u00ed"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "ReserveToken",
+						"amount": "Mno\u017estv\u00ed"
+					},
+					"small": {
+						"reserveToken": "ReserveToken",
+						"amount": "Mno\u017estv\u00ed"
+					}
+				},
+				"placeholders": {
+					"amount": "mno\u017estv\u00ed"
+				},
+				"btns": {
+					"stake": "K\u016fl"
+				},
+				"stake": "K\u016fl",
+				"loading": "na\u010d\u00edt\u00e1n\u00ed"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Doba trv\u00e1n\u00ed",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popul\u00e1rn\u00ed token",
+					"donations": "dary",
+					"rewardsRateFraction": "odm\u011bnyRateFraction",
+					"numerator": "\u010ditatel",
+					"denominator": "jmenovatel"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Doba trv\u00e1n\u00ed ve dnech",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "popul\u00e1rn\u00ed token",
+					"donations": "dary",
+					"rewardsRateFraction": "odm\u011bnyRateFraction",
+					"numerator": "\u010ditatel",
+					"denominator": "jmenovatel"
+				}
+			},
+			"placeholders": {
+				"optional": "(voliteln\u00fd)",
+				"tuple": "n-tice[]",
+				"number": "\u010d\u00edslo",
+				"address": "adresa",
+				"fraction": "zlomek",
+				"integer": "cel\u00e9 \u010d\u00edslo",
+				"seconds": "sekundy",
+				"days": "dn\u00ed",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Nejsou zde \u017e\u00e1dn\u00e9 baz\u00e9ny"
+			},
+			"btns": {
+				"createPool": "Vytvo\u0159it baz\u00e9n",
+				"createPoolInForm": "Vytvo\u0159it"
+			},
+			"createPool": "Vytvo\u0159it baz\u00e9n",
+			"produce": "Vyrobit",
+			"loading": "na\u010d\u00edt\u00e1n\u00ed",
+			"viewInstancesList": "Obnovit seznam"
+		}
+	},
+	"fundrise": {
+		"placeholder": "napi\u0161te n\u011bco o tomto p\u0159\u00edsp\u011bvku..."
+	}
 }

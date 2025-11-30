@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Villa",
-        "WalletAbsent": "Veskið ekki tengt.",
-        "Rendering": "Það komu upp villur við flutning <span class='url'>{{1}}<\/span>",
-        "PriceRequired": "Verð krafist!",
-        "NameRequired": "Nafn áskilið!",
-        "PriceInvalid": "Verð ógilt!",
-        "AmountInvalid": "Upphæð ógild!",
-        "TransactionFailed": "Færsla mistókst",
-        "ChainNotSupported": "Valin keðja er ekki studd. Stuðningur keðja: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Þarftu MetaMask tengdan til að vinna með forriti",
-        "UserNotLoggedInMetaMask": "Notandi er ekki skráður inn á MetaMask",
-        "CurrencyNotFound": "Gjaldmiðill fannst ekki",
-        "WrongChain": "Þetta NFT búið til undir &quot; {{chain}} &quot;. Vinsamlegast notaðu þessa keðju.",
-        "NoRecipientSelected": "Enginn viðtakandi valinn",
-        "NotEnoughPermissionsWallet": "Ekki nægar heimildir til að lesa veski þessa notanda",
-        "ThisUserHaveNoWallet": "Þessi notandi hefur ekkert veski úthlutað",
-        "TheWalletOfThisUserInvalid": "Veski þessa notanda ógilt",
-        "WalletInvalid": "Veski heimilisfang ógilt",
-        "CantManageFrozenSeries": "Þú getur ekki stjórnað frystum seríum",
-        "SubscriptionStreamNotPaid": "Þú hefur ekki borgað fyrir að skoða þetta efni. Vinsamlegast smelltu á {{subscriptionUrl}} og gerðu áskrifandi að viðeigandi áætlun."
-    },
-    "admin": {
-        "Title": "Umsýslu eigna",
-        "SubscriptionTitle": "Áskriftaráætlanir"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Bankaðu til að borga"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : gjald afgreitt fyrir {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Þakka þér fyrir greiðsluna í {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} áskrifendur að {{plan.title}}",
-        "YouSubscribedTo": "Þú hefur verið áskrifandi að {{plan.title}}",
-        "Assets\/credits\/alert": "Þú ert með viðvörun sem tengist reikningnum þínum"
-    },
-    "charge": {
-        "Subject": "Þú færð greiðslu upp á {{displayAmount}} frá {{call 'publisher.displayName'}} með &quot; {{description}} &quot;",
-        "HasBeenCharged": "Hey, þetta er bara til að láta þig vita að {{1}} hefur verið rukkað {{2}} fyrir {{3}} fyrir {{4}}"
-    },
-    "charged": {
-        "Subject": "Þakka þér fyrir greiðsluna fyrir &quot; {{description}} &quot;",
-        "HavePaid": "Hey {{1}} , þetta er bara fljótleg staðfesting á því að þú hafir borgað {{2}} til {{3}} fyrir {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Upplýsingar um pöntun",
-        "PaymentMethod": "Greiðslumáti",
-        "ContactInfo": "Upplýsingar um tengilið",
-        "Pay": "Borga",
-        "PaymentSucceeded": "Greiðsla tókst",
-        "PaymentProcessing.": "Greiðsla þín er í vinnslu",
-        "FailTryAgain": "Greiðslan þín tókst ekki, vinsamlegast reyndu aftur",
-        "SomethingWrong": "Eitthvað fór úrskeiðis",
-        "PaymentStatus": "Greiðslustaða",
-        "PayTo": "Borgaðu {{displayName}}",
-        "ChooseCurrency": "Veldu gjaldmiðil",
-        "YouCanSendUpTo": "Þú getur sent allt að {{amount}} {{symbol}}",
-        "Send": "Senda",
-        "EnterAmount": "sláðu inn upphæð"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Boð samþykkt af {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} fyllt {{FilledStreamTitle}}",
-        "ForFillingStream": "Til að fylla {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "Þú hefur {{amount}} einingar til að byrja",
-        "PaymentFor": "Greiðsla fyrir &quot; {{1}} &quot;",
-        "PaymentTo": "Greiðsla í {{1}}",
-        "PaymentToUser": "Greiðsla í {{toUserName}}",
-        "CreatePrivateChat": "fyrir einkaspjall við {{toUserName}}",
-        "CreatePaidStream": "fyrir að búa til {{toStreamName}}",
-        "JoinedPaidStream": "fyrir pöntun í &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "til að búa til samfélag &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "sem pöntunarendurgreiðsla í &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "Keypti {{amount}} einingar",
-        "BonusCredits": "Bónus {{amount}} einingar",
-        "BuyAmountCredits": "Kauptu {{amount}} einingar",
-        "WatchClip": "Fékk {{amount}} einingar fyrir að horfa á {{fromStreamTitle}}",
-        "MissingCredits": "Vantar inneignir",
-        "YouMissingCredits": "Þú þarft {{amount}} einingar til viðbótar til að halda áfram.",
-        "BuyCredits": "Kaupa inneign",
-        "BuyBonus": "Að kaupa {{amount}} einingar í einu mun leiða til {{bonus}} einingar bónus.",
-        "Buy": "Kaupa",
-        "PurchaseCredits": "Kaupa inneign",
-        "Credits": "Inneign",
-        "ErrorInvalidAmount": "Upphæð ógild",
-        "ErrorInvalidCurrency": "Því miður styðjum við ekki gjaldmiðil {{currency}} ennþá",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} einingar",
-            "BonusCredits": "{{amount}} einingar"
-        }
-    },
-    "history": {
-        "Date": "Dagsetning",
-        "Amount": "Magn",
-        "Description": "Lýsing",
-        "Client": "Viðskiptavinur",
-        "User": "Notandi",
-        "To": "til",
-        "From": "frá",
-        "SeeHistory": "Sjá greiðslusögu fyrir {{1}}",
-        "HistoryEmpty": "Þú hefur engin gögn ennþá",
-        "PaymentFor": "Sendi {{amount}} einingar",
-        "PaymentTo": "Sendi {{amount}} einingar",
-        "PaymentToUser": "Sendi {{amount}} einingar",
-        "CreatePaidStream": "Eyddi {{amount}} einingum",
-        "WatchClip": {
-            "+": "Hlaut {{amount}} einingar",
-            "-": "Eyddi {{amount}} einingum"
-        },
-        "JoinedPaidStream": {
-            "+": "Hlaut {{amount}} einingar",
-            "-": "Eyddi {{amount}} einingum"
-        },
-        "LeftPaidStream": {
-            "+": "Hlaut {{amount}} einingar",
-            "-": "Sendi {{amount}} einingar"
-        },
-        "CreatedCommunity": "Eyddi {{amount}} einingum",
-        "BoughtCredits": "Keypti {{amount}} einingar",
-        "BonusCredits": "Fékk bónus {{amount}} einingar",
-        "InviteAcceptedBy": "Hlaut {{amount}} einingar",
-        "Streams_user_firstname": "Hlaut {{amount}} einingar",
-        "Streams_user_lastname": "Hlaut {{amount}} einingar",
-        "Streams_user_icon": "Hlaut {{amount}} einingar",
-        "Places_user_location": "Hlaut {{amount}} einingar",
-        "Streams_greeting": "Hlaut {{amount}} einingar",
-        "YouHaveCreditsToStart": "Hlaut {{amount}} einingar",
-        "InvitedUserFilledStream": "Hlaut {{amount}} einingar",
-        "ForFillingStream": "Hlaut {{amount}} einingar",
-        "CreatePrivateChat": "Eyddi {{amount}} einingum"
-    },
-    "subscriptions": {
-        "infoTitle": "Stilltu greiðsluupplýsingar",
-        "confirm": {
-            "title": "Byrjaðu áskrift",
-            "message": "Byrja á endurtekinni áskrift að &quot; {{title}} &quot;?",
-            "ok": "Allt í lagi",
-            "cancel": "Hætta við"
-        },
-        "CreditOrDebitCard": "Kredit- eða debetkort",
-        "SubscribePayment": "Gerast áskrifandi Greiðsla",
-        "ImmediatePayment": "Greiðsla strax",
-        "ProcessingPayment": "Afgreiðsla greiðslu",
-        "SubscriptionAlreadyPaid": "Þessi áskrift hefur þegar verið greidd",
-        "SubscriptionNotActive": "Þessi áskrift er ekki virk",
-        "Subscribed": "Gerður áskrifandi",
-        "Unsubscribed": "Hætti áskrift",
-        "Unsubscribe": "Hætta áskrift",
-        "Subscribe": "Gerast áskrifandi",
-        "Started": "Byrjað",
-        "EndsIn": "Endar í",
-        "NextPay": "Næsta greiðsla",
-        "Period": "Tímabil",
-        "Price": "Verð",
-        "AreYouSureUnsubscribe": "Ertu viss um að þú viljir segja upp áskriftinni að þessari áætlun?",
-        "YouUnsubscribedFromPlan": "Þú hættir áskrift að áætlun &quot; {{planTitle}} &quot;. Þú munt ekki rukka, en áskriftin þín heldur áfram til {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "áætlunarheiti",
-            "PricePlaceholder": "verð",
-            "DescriptionPlaceholder": "lýsing á áskriftaráætlun",
-            "SavePlan": "Vista áætlun",
-            "NewPlan": "Nýtt plan",
-            "SubscriptionTitle": "Áskriftaráætlanir",
-            "AreYouSureDeletePlan": "Ertu viss um að þú viljir eyða þessari áætlun?",
-            "Duration": "Lengd",
-            "Discount": "Afsláttur",
-            "Interrupt": "Trufla",
-            "Continue": "Halda áfram",
-            "SelectDisplayType": "Veldu {{displayType}}",
-            "EndDate": "loka dagsetning",
-            "Available": "Í boði",
-            "Hidden": "Falinn",
-            "InviteOnly": "Aðeins boðið",
-            "CantSubscribeUnlessInvited": "Þú getur ekki gerst áskrifandi að þessari áætlun nema þér hafi verið boðið"
-        }
-    },
-    "payments": {
-        "infoTitle": "Stilltu greiðsluupplýsingar",
-        "BuyAmountCredits": "Kauptu {{amount}} einingar",
-        "confirm": {
-            "title": "Greiða",
-            "message": "Samþykkir þú að borga {{symbol}} {{amount}} ?",
-            "ok": "Allt í lagi",
-            "cancel": "Hætta við"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Inneign",
-            "description": "heldur utan um inneignir og greiðslur"
-        },
-        "Assets\/plan": {
-            "displayType": "Áskriftaráætlun",
-            "description": "áskriftaráætlun"
-        },
-        "Assets\/subscription": {
-            "displayType": "Áskrift",
-            "description": "Áskrift"
-        },
-        "Assets\/product": {
-            "displayType": "Vara",
-            "description": "vara sem verið er að selja"
-        },
-        "Assets\/service": {
-            "displayType": "Þjónusta",
-            "description": "þjónusta sem boðið er upp á"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "Hlaut {{amount}} einingar"
-        },
-        "Assets\/credits\/bought": {
-            "content": "Keypti {{amount}} einingar"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Bónus {{amount}} einingar"
-        },
-        "Assets\/credits\/spent": {
-            "content": "Eyddi {{amount}} einingum"
-        },
-        "Assets\/credits\/sent": {
-            "content": "Sendi {{amount}} einingar til {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Fékk {{amount}} einingar frá {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Þú átt litla inneign á reikningnum þínum. Vinsamlegast farðu á <a href='<i translate='no'>999 &#39;&gt;þennan hlekk<\/a> til að kaupa fleiri inneign."
-        }
-    },
-    "billing": {
-        "Title": "Innheimta eigna",
-        "CreditsMinimum": "Lágmarkseiningar",
-        "CreditsToAdd": "Inneign til að bæta við",
-        "Save": "Vista",
-        "ThisLink": "þennan hlekk",
-        "errors": {
-            "CreditsMinimumNegative": "Lágmark inneignar getur ekki verið neikvætt",
-            "CreditsToAddNegative": "Inneign til að bæta við getur ekki verið neikvæð"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Ný þjónusta",
-            "TitlePlaceholder": "Þjónustuheiti",
-            "PricePlaceholder": "Sett verð",
-            "LinkPlaceholder": "stilltu viðbótarupplýsingahlekk",
-            "DescriptionPlaceholder": "Þjónustulýsing",
-            "SaveService": "Vista þjónustu",
-            "SelectRequiredParticipants": "Nauðsynlegir tengdir þátttakendur",
-            "RequiredParticipantsDesc": "Vinsamlegast veldu tengda þátttakendur sem eru nauðsynlegir til að nota þessa þjónustu (til dæmis gæludýr fyrir &quot;Hundasýningu&quot;, eða börn fyrir &quot;frí fyrir börn&quot; o.s.frv.). Ef þjónusta er greidd þarf notandi einnig að greiða fyrir hvern tengdan þátttakanda."
-        },
-        "EditServiceTemplate": {
-            "Title": "Breyta þjónustu"
-        },
-        "ManageServiceTemplates": "Stjórna þjónustusniðmátum",
-        "ManageServices": "Stjórna þjónustu",
-        "Free": "Ókeypis",
-        "OptionalContribution": "Valfrjálst framlag",
-        "RequiredPayment": "Áskilið greiðslu",
-        "AreYouSureDelete": "Ertu viss um að þú viljir eyða þessari þjónustu?",
-        "AmountServicesRelated": "Það eru {{amount}} tiltækileikar sem tengjast þessari þjónustu. Þeir verða einnig fjarlægðir."
-    },
-    "transfer": {
-        "SelectRecipient": "Veldu viðtakanda",
-        "TransactionSuccess": "Viðskiptaárangur",
-        "OrTypeWalletAddress": "EÐA sláðu inn veskis heimilisfang viðtakanda",
-        "AppCredits": "App inneign"
-    },
-    "NFT": {
-        "Title": "Titill",
-        "Name": "Nafn",
-        "EnterName": "Sláðu inn nafn",
-        "EnterAuthorWallet": "Sláðu inn höfundarveski",
-        "InformationAboutTitle": "Upplýsingar um {{title}} NFT",
-        "Description": "Lýsing",
-        "DetailedInformationAboutNFT": "Ítarlegar upplýsingar um NFT",
-        "PresaleStarts": "Forsala hefst 23. des",
-        "OwnerUserNotFound": "Eigandi þessa NFT er ekki skráður í umsókn okkar.",
-        "BuyNow": "Kaupa núna",
-        "Buy": "Kaupa",
-        "Add": "Bæta við",
-        "Remove": "Fjarlægja",
-        "NoNFTyet": "Engar NFTs ennþá",
-        "Conversation": "Samtal",
-        "Create": "Búa til",
-        "CurrentBid": "Núverandi tilboð",
-        "StartingIn": "Byrjar inn",
-        "EndingIn": "Endar á",
-        "CreateNFT": "Búðu til NFT",
-        "TitlePlaceholder": "Gefðu NFT þínum titil",
-        "DescriptionPlaceholder": "Gefðu NFT þínum lýsingu",
-        "CreateYourNFT": "Búðu til NFT þinn",
-        "Royalties": "Þóknanir",
-        "RoyaltyPlaceholder": "Valfrjálst. Upphæð greidd til höfundar fyrir millifærslu.",
-        "ExpirationDate": "Gildistími",
-        "StartingDate": "Upphafsdagur",
-        "BidsBelowThisAmount": "Tilboð undir þessari upphæð verða ekki leyfð",
-        "MinimumBid": "Lágmarkstilboð",
-        "Author": "Höfundur",
-        "Price": "Verð",
-        "Commission": "Framkvæmdastjórn",
-        "EnterCommission": "Sláðu inn þóknun",
-        "Owner": "Eigandi",
-        "SelectCategory": "Veldu flokk",
-        "Day": "Dagur",
-        "Days": "Dagar",
-        "Hour": "Klukkutími",
-        "Hours": "Klukkutímar",
-        "Minute": "Mínúta",
-        "Minutes": "Fundargerð",
-        "Second": "Í öðru lagi",
-        "Seconds": "Sekúndur",
-        "SalesCreator": "af sölu mun fara til skapara",
-        "Details": "Upplýsingar",
-        "Bids": "Tilboð",
-        "History": "Saga",
-        "LoremIpsum": "Lorem Ipsum er einfaldlega blekktur texti prent- og setningariðnaðarins.",
-        "PutOnSale": "Setja í sölu",
-        "PutOffSale": "Draga úr sölu",
-        "Transfer": "Flytja",
-        "Actions": "Aðgerðir",
-        "Claim": "Krafa",
-        "ClaimNFT": "Krefjast NFT",
-        "Unlocking": "Aflæsing",
-        "Unlock": "Opnaðu",
-        "Update": "Uppfærsla",
-        "UpdateToken": "Uppfærðu táknið",
-        "UpdateNFT": "Uppfærðu NFT",
-        "CreateToken": "Búðu til tákn",
-        "PlaceBid": "Veðja",
-        "SoldOut": "Seldur",
-        "NotOnSale": "Ekki til sölu",
-        "NftName": "NFT nafn",
-        "DescribeYourNFT": "Vinsamlegast lýstu NFT þínum",
-        "NFTImage": "Mynd fyrir NFT",
-        "NFTVideo": "Myndband fyrir NFT, ef eitthvað er",
-        "UploadMovie": "Sækja kvikmynd",
-        "MovieSource": "Kvikmyndaheimild",
-        "MovieURL": "Vefslóð kvikmyndar",
-        "UploadFile": "Hladdu upp skrá",
-        "PutOnMarketplace": "Sett á markaðstorg",
-        "InstantPurchase": "Sláðu inn verð til að leyfa notendum að kaupa NFT strax",
-        "FixedPrice": "Fast verð",
-        "TimedAuction": "Tímasett uppboð",
-        "OpenForBids": "Opið fyrir tilboðum",
-        "PriceOnePiece": "Færið inn verð fyrir eitt stykki",
-        "EnterPrice": "Sláðu inn verð",
-        "EnterMinimumBid": "Sláðu inn lágmarkstilboð",
-        "SelectChain": "Veldu keðju",
-        "Currency": "Gjaldmiðill",
-        "AreYouSureDeleteImage": "Ertu viss um að þú viljir fjarlægja mynd?",
-        "AreYouSureDeleteVideo": "Ertu viss um að þú viljir fjarlægja myndskeið?",
-        "series": {
-            "Name": "Nafn",
-            "Icon": "Táknmynd",
-            "Description": "Lýsing",
-            "Author": "Höfundur",
-            "SelectSeries": "Veldu röð",
-            "Value": "Gildi",
-            "AreYouSure": "Ertu viss?",
-            "AuthorInvalid": "Heimilisfang höfundar ógilt!",
-            "Address": "Heimilisfang",
-            "CoverImage": "Forsíðumynd",
-            "UploadCoverImage": "Hladdu upp forsíðumynd",
-            "CommissionAddressInvalid": "Heimilisfang framkvæmdastjórnar ógilt",
-            "OnSale": "á útsölu",
-            "OffSale": "útsölu",
-            "CreateSeries": "Búa til röð",
-            "UpdateSeries": "Uppfærsluröð",
-            "SeriesInfo": "Upplýsingar um röð",
-            "SelectAuthor": "Veldu höfund",
-            "NewItem": "Ný NFT sería",
-            "NamePlaceholder": "Sláðu inn heiti röð",
-            "DescPlaceholder": "Sláðu inn röð lýsingu",
-            "EndingIn": "Endar í"
-        },
-        "contract": {
-            "CreateContract": "Búa til samning",
-            "SelectContract": "Veldu samning",
-            "CreateContractFor": "Búðu til samning fyrir {{userName}}",
-            "ContractFor": "Samningur fyrir {{userName}}",
-            "UpdateContract": "Uppfæra samning",
-            "TransferOwnership": "Flytja eignarhald",
-            "SetBaseURI": "Stilltu grunn URI",
-            "SetSuffix": "Stilltu viðskeyti",
-            "CurrentOwner": "Núverandi eigandi",
-            "CurrentBaseURL": "Núverandi grunnurl",
-            "ContractAddressAbsent": "Heimilisfang samnings er ekki til",
-            "FactoryAddressAbsent": "Heimilisfang verksmiðju fjarverandi",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Titill áskilinn",
-            "SymbolRequired": "Tákn áskilið",
-            "TypeContractName": "nafn samnings",
-            "TypeContractSymbol": "samningstákn (hámark 10 stafir)"
-        },
-        "contests": {
-            "Title": "Keppni",
-            "NewContest": "Ný keppni"
-        },
-        "import": {
-            "importNFT": "Flytur inn NFT",
-            "importAttributes": "Flytja inn NFT eiginleika",
-            "fileNotFound": "Því miður, CSV skrá fannst ekki.",
-            "fileEmpty": "Því miður er CSV skráin tóm.",
-            "userIdNotFound": "notandi er til en auðkennið er tómt",
-            "errorLine": "lína {{1}}",
-            "fieldNotFound": "Áskilinn reitur &quot; {{1}} &quot; fannst ekki",
-            "displayTypeEmpty": "Skjárgerð fyrir &quot; {{1}} &quot; fannst ekki",
-            "taskStreamInvalid": "verkefnastraumur ógildur",
-            "instructionsEmpty": "verkstraumsleiðbeiningar tómar",
-            "complete": "Heill",
-            "activateUsers": "senda virkjunarskilaboð til notenda?",
-            "importProgress": "Framfarir",
-            "importOptions": "Valmöguleikar",
-            "sampleCSV": "Sækja sýnishorn af CSV",
-            "fileLabel": "Hlaða upp töflureikni:",
-            "errorsTitle": "Villur komu upp"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Sía eftir NFT söfnum",
-                "ShowNFTCollection": "Sýna NFT safn í ...",
-                "AllCollections": "Öll söfn"
-            },
-            "ByUser": {
-                "AllAuthors": "Allir höfundar",
-                "AllUsers": "Allir",
-                "FilterByAuthors": "Sía eftir höfundum"
-            }
-        },
-        "Back": "Aftur í safn",
-        "attributes": {
-            "Title": "Stjórna eiginleikum",
-            "Attributes": "Eiginleikar",
-            "DisplayTitle": "Skjár Tegund",
-            "AddDisplayType": "Bæta við nýrri skjátegund",
-            "NewDisplay": "Nýr skjár",
-            "TraitTitle": "Tegund eiginleika",
-            "AddTraitTitle": "Bættu við nýrri eiginleikategund",
-            "NewTrait": "Ný einkennistegund",
-            "ValueTitle": "Gildi",
-            "AddValueTitle": "Bættu við nýju gildi",
-            "NewValue": "Nýtt gildi",
-            "NewAttribute": "Nýr eiginleiki",
-            "UpdateAttributes": "Uppfærðu eiginleika",
-            "SaveAttributes": "Vista eiginleika"
-        },
-        "profile": {
-            "LogOut": "Að skrá þig út",
-            "Title": "Prófíll fyrir {{userName}}",
-            "Description": "Upplýsingar um notanda",
-            "aboutPlaceholder": "Breyta ævisögu",
-            "SureLogOut": "Ertu viss um að þú viljir skrá þig út?",
-            "UploadCoverPhoto": "Hladdu inn forsíðumynd"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "NFT samningur",
-                        "seriesId": "röð auðkenni",
-                        "owner": "Eigandi",
-                        "currency": "Gjaldmiðill",
-                        "price": "Verð",
-                        "beneficiary": "Styrkþegi",
-                        "autoindex": "Autoindex",
-                        "duration": "Lengd",
-                        "rateInterval": "Gengisbil",
-                        "rateAmount": "Gjaldupphæð"
-                    },
-                    "small": {
-                        "NFTContract": "NFT samningur",
-                        "seriesId": "tákn verða slegin í þessari röð",
-                        "owner": "eigandi dæmis, annars verður sendandi",
-                        "currency": "Gjaldmiðill fyrir keypta tákn, ef núll - fyrir innfædda mynt",
-                        "price": "Verð",
-                        "beneficiary": "Styrkþegi sölu tákna, annars verður sendandi",
-                        "autoindex": "Autoindex",
-                        "duration": "Læsing eftir myntun. Núll þýðir að fá það strax.",
-                        "rateInterval": "fötubil fyrir sérstök kaup",
-                        "rateAmount": "fötuupphæð fyrir sérstök kaup"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(valfrjálst)",
-                    "number": "númer",
-                    "address": "heimilisfang",
-                    "fraction": "brot",
-                    "integer": "heiltala",
-                    "seconds": "sekúndur",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Framleiða",
-                "viewInstancesList": "Endurnýja lista"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "Auðkenni röð",
-                        "account": "Reikningur",
-                        "amount": "Magn"
-                    },
-                    "small": {
-                        "seriesId": "nýtt tákn mun tilheyra í röð með slíku auðkenni",
-                        "account": "eigandi nýstofnaðs NFT. ef ekki stillt - mun nota núverandi veski",
-                        "amount": "magn NFT til myntu"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(valfrjálst)",
-                    "seriesId": "kt",
-                    "account": "reikning",
-                    "amount": "magn",
-                    "integer": "heiltala"
-                },
-                "btn": {
-                    "Purchase": "Kaup",
-                    "SpecialPurchase": "Sérstök kaup"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Heimilisfang"
-                    },
-                    "small": {
-                        "account": "Heimilisfang"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Ógilt heimilisfang"
-                },
-                "placeholders": {
-                    "account": "Heimilisfang"
-                },
-                "addToWhitelist": "Bæta við hvítalista",
-                "removeFromWhitelist": "Fjarlægja af hvítlista"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "Auðkenni tákns",
-                    "custodian": "Forráðamaður",
-                    "recipient": "Viðtakandi"
-                },
-                "small": {
-                    "tokenId": "auðkenni sem þarf að læsa eða opna",
-                    "custodian": "heimilisfang sem hægt er að opna",
-                    "recipient": "heimilisfang sem mun taka við táknunum"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Ógilt auðkenni",
-                "invalidCustodian": "Ógildur vörsluaðili",
-                "invalidRecipient": "Ógildur viðtakandi"
-            },
-            "placeholders": {
-                "optional": "(valfrjálst)",
-                "tokenId": "kt",
-                "custodian": "heimilisfang"
-            },
-            "Lock": "Læsa",
-            "Unlock": "Opnaðu",
-            "Locked": "Læst",
-            "CustodianAddress": "Heimilisfang vörsluaðila",
-            "TokenWasClaimed": "Tákn &quot; {{title}} &quot; var krafist",
-            "TokenWasLocked": "Tákn &quot; {{title}} &quot; var læst",
-            "TokenWasUnlocked": "Táknið &quot; {{title}} &quot; var opnað"
-        },
-        "GenerateDescription": "eða búa til sjálfvirkt",
-        "collections": {
-            "Title": "Söfn",
-            "EnterTitle": "sláðu inn titil",
-            "EnterDescription": "sláðu inn lýsingu",
-            "NewCollection": "Nýtt safn",
-            "Name": "Nafn",
-            "Icon": "Táknmynd",
-            "Description": "Lýsing",
-            "Author": "Höfundur",
-            "SelectCollection": "Veldu safn",
-            "Value": "Gildi",
-            "AreYouSure": "Ertu viss?",
-            "AuthorInvalid": "Heimilisfang höfundar ógilt!",
-            "Address": "Heimilisfang",
-            "CoverImage": "Forsíðumynd",
-            "UploadIcon": "Hlaða upp táknmynd",
-            "CommissionAddressInvalid": "Heimilisfang framkvæmdastjórnar ógilt",
-            "OnSale": "á útsölu",
-            "OffSale": "útsölu",
-            "CreateCollection": "Búðu til safn",
-            "UpdateCollection": "Uppfæra safn",
-            "CollectionInfo": "Safnupplýsingar",
-            "SelectAuthor": "Veldu höfund",
-            "NewItem": "Nýtt NFT safn",
-            "NamePlaceholder": "Sláðu inn nafn safns",
-            "DescPlaceholder": "Sláðu inn safnlýsingu",
-            "EndingIn": "Endar í",
-            "SubmitSeries": "Sendu inn röð"
-        }
-    },
-    "currencies": {
-        "choose": "Veldu gjaldmiðil"
-    },
-    "connectedAccount": {
-        "Title": "Tengdu reikning",
-        "Success": "Árangur",
-        "YourAccountCreated": "Reikningurinn þinn var búinn til!",
-        "YourAccountAlreadyCreated": "Reikningurinn þinn er þegar búinn til og tilbúinn til notkunar"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Magn"
-                    },
-                    "small": {
-                        "reserveToken": "reserveToken",
-                        "amount": "Magn"
-                    }
-                },
-                "placeholders": {
-                    "amount": "magn"
-                },
-                "btns": {
-                    "stake": "Hlutur"
-                },
-                "stake": "Hlutur",
-                "loading": "Hleðsla"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Lengd",
-                    "bonusTokenFraction": "bónusTokenFraction",
-                    "popularToken": "vinsælt Token",
-                    "donations": "framlög",
-                    "rewardsRateFraction": "verðlaunRateFraction",
-                    "numerator": "teljara",
-                    "denominator": "nefnara"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Lengd í dögum",
-                    "bonusTokenFraction": "bónusTokenFraction",
-                    "popularToken": "vinsælt Token",
-                    "donations": "framlög",
-                    "rewardsRateFraction": "verðlaunRateFraction",
-                    "numerator": "teljara",
-                    "denominator": "nefnara"
-                }
-            },
-            "placeholders": {
-                "optional": "(valfrjálst)",
-                "tuple": "tuple[]",
-                "number": "númer",
-                "address": "heimilisfang",
-                "fraction": "brot",
-                "integer": "heiltala",
-                "seconds": "sekúndur",
-                "days": "daga",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Það eru engar sundlaugar"
-            },
-            "btns": {
-                "createPool": "Búðu til sundlaug",
-                "createPoolInForm": "Búa til"
-            },
-            "createPool": "Búðu til sundlaug",
-            "produce": "Framleiða",
-            "loading": "Hleðsla",
-            "viewInstancesList": "Endurnýja lista"
-        }
-    },
-    "fundrise": {
-        "placeholder": "skrifaðu eitthvað um þetta framlag..."
-    }
+	"errors": {
+		"Error": "Villa",
+		"WalletAbsent": "Veski\u00f0 ekki tengt.",
+		"Rendering": "\u00dea\u00f0 komu upp villur vi\u00f0 flutning <span class='url'>{{1}}</span>",
+		"PriceRequired": "Ver\u00f0 krafist!",
+		"NameRequired": "Nafn \u00e1skili\u00f0!",
+		"PriceInvalid": "Ver\u00f0 \u00f3gilt!",
+		"AmountInvalid": "Upph\u00e6\u00f0 \u00f3gild!",
+		"TransactionFailed": "F\u00e6rsla mist\u00f3kst",
+		"ChainNotSupported": "Valin ke\u00f0ja er ekki studd. Stu\u00f0ningur ke\u00f0ja: {{supportedChain}}",
+		"NeedMetaMaskConnected": "\u00dearftu MetaMask tengdan til a\u00f0 vinna me\u00f0 forriti",
+		"UserNotLoggedInMetaMask": "Notandi er ekki skr\u00e1\u00f0ur inn \u00e1 MetaMask",
+		"CurrencyNotFound": "Gjaldmi\u00f0ill fannst ekki",
+		"WrongChain": "\u00deetta NFT b\u00fai\u00f0 til undir &quot; {{chain}} &quot;. Vinsamlegast nota\u00f0u \u00feessa ke\u00f0ju.",
+		"NoRecipientSelected": "Enginn vi\u00f0takandi valinn",
+		"NotEnoughPermissionsWallet": "Ekki n\u00e6gar heimildir til a\u00f0 lesa veski \u00feessa notanda",
+		"ThisUserHaveNoWallet": "\u00deessi notandi hefur ekkert veski \u00fathluta\u00f0",
+		"TheWalletOfThisUserInvalid": "Veski \u00feessa notanda \u00f3gilt",
+		"WalletInvalid": "Veski heimilisfang \u00f3gilt",
+		"CantManageFrozenSeries": "\u00de\u00fa getur ekki stj\u00f3rna\u00f0 frystum ser\u00edum",
+		"SubscriptionStreamNotPaid": "\u00de\u00fa hefur ekki borga\u00f0 fyrir a\u00f0 sko\u00f0a \u00feetta efni. Vinsamlegast smelltu \u00e1 {{subscriptionUrl}} og ger\u00f0u \u00e1skrifandi a\u00f0 vi\u00f0eigandi \u00e1\u00e6tlun."
+	},
+	"admin": {
+		"Title": "Ums\u00fdslu eigna",
+		"SubscriptionTitle": "\u00c1skriftar\u00e1\u00e6tlanir"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Banka\u00f0u til a\u00f0 borga"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : gjald afgreitt fyrir {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "\u00deakka \u00fe\u00e9r fyrir grei\u00f0sluna \u00ed {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} \u00e1skrifendur a\u00f0 {{plan.title}}",
+		"YouSubscribedTo": "\u00de\u00fa hefur veri\u00f0 \u00e1skrifandi a\u00f0 {{plan.title}}",
+		"Assets/credits/alert": "\u00de\u00fa ert me\u00f0 vi\u00f0v\u00f6run sem tengist reikningnum \u00fe\u00ednum"
+	},
+	"charge": {
+		"Subject": "\u00de\u00fa f\u00e6r\u00f0 grei\u00f0slu upp \u00e1 {{displayAmount}} fr\u00e1 {{call 'publisher.displayName'}} me\u00f0 &quot; {{description}} &quot;",
+		"HasBeenCharged": "Hey, \u00feetta er bara til a\u00f0 l\u00e1ta \u00feig vita a\u00f0 {{1}} hefur veri\u00f0 rukka\u00f0 {{2}} fyrir {{3}} fyrir {{4}}"
+	},
+	"charged": {
+		"Subject": "\u00deakka \u00fe\u00e9r fyrir grei\u00f0sluna fyrir &quot; {{description}} &quot;",
+		"HavePaid": "Hey {{1}} , \u00feetta er bara flj\u00f3tleg sta\u00f0festing \u00e1 \u00fev\u00ed a\u00f0 \u00fe\u00fa hafir borga\u00f0 {{2}} til {{3}} fyrir {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "Uppl\u00fdsingar um p\u00f6ntun",
+		"PaymentMethod": "Grei\u00f0slum\u00e1ti",
+		"ContactInfo": "Uppl\u00fdsingar um tengili\u00f0",
+		"Pay": "Borga",
+		"PaymentSucceeded": "Grei\u00f0sla t\u00f3kst",
+		"PaymentProcessing.": "Grei\u00f0sla \u00fe\u00edn er \u00ed vinnslu",
+		"FailTryAgain": "Grei\u00f0slan \u00fe\u00edn t\u00f3kst ekki, vinsamlegast reyndu aftur",
+		"SomethingWrong": "Eitthva\u00f0 f\u00f3r \u00farskei\u00f0is",
+		"PaymentStatus": "Grei\u00f0slusta\u00f0a",
+		"PayTo": "Borga\u00f0u {{displayName}}",
+		"ChooseCurrency": "Veldu gjaldmi\u00f0il",
+		"YouCanSendUpTo": "\u00de\u00fa getur sent allt a\u00f0 {{amount}} {{symbol}}",
+		"Send": "Senda",
+		"EnterAmount": "sl\u00e1\u00f0u inn upph\u00e6\u00f0"
+	},
+	"credits": {
+		"InviteAcceptedBy": "Bo\u00f0 sam\u00feykkt af {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} fyllt {{FilledStreamTitle}}",
+		"ForFillingStream": "Til a\u00f0 fylla {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "\u00de\u00fa hefur {{amount}} einingar til a\u00f0 byrja",
+		"PaymentFor": "Grei\u00f0sla fyrir &quot; {{1}} &quot;",
+		"PaymentTo": "Grei\u00f0sla \u00ed {{1}}",
+		"PaymentToUser": "Grei\u00f0sla \u00ed {{toUserName}}",
+		"CreatePrivateChat": "fyrir einkaspjall vi\u00f0 {{toUserName}}",
+		"CreatePaidStream": "fyrir a\u00f0 b\u00faa til {{toStreamName}}",
+		"JoinedPaidStream": "fyrir p\u00f6ntun \u00ed &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "til a\u00f0 b\u00faa til samf\u00e9lag &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "sem p\u00f6ntunarendurgrei\u00f0sla \u00ed &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "Keypti {{amount}} einingar",
+		"BonusCredits": "B\u00f3nus {{amount}} einingar",
+		"BuyAmountCredits": "Kauptu {{amount}} einingar",
+		"WatchClip": "F\u00e9kk {{amount}} einingar fyrir a\u00f0 horfa \u00e1 {{fromStreamTitle}}",
+		"MissingCredits": "Vantar inneignir",
+		"YouMissingCredits": "\u00de\u00fa \u00fearft aukalega {{amount}} {{currency}} til a\u00f0 halda \u00e1fram.",
+		"BuyCredits": "Kaupa inneign",
+		"BuyBonus": "A\u00f0 kaupa {{amount}} einingar \u00ed einu mun lei\u00f0a til {{bonus}} einingar b\u00f3nus.",
+		"Buy": "Kaupa",
+		"PurchaseCredits": "Kaupa inneign",
+		"Credits": "Inneign",
+		"ErrorInvalidAmount": "Upph\u00e6\u00f0 \u00f3gild",
+		"ErrorInvalidCurrency": "\u00dev\u00ed mi\u00f0ur sty\u00f0jum vi\u00f0 ekki gjaldmi\u00f0il {{currency}} enn\u00fe\u00e1",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} einingar",
+			"BonusCredits": "{{amount}} einingar"
+		}
+	},
+	"history": {
+		"Date": "Dagsetning",
+		"Amount": "Magn",
+		"Description": "L\u00fdsing",
+		"Client": "Vi\u00f0skiptavinur",
+		"User": "Notandi",
+		"To": "til",
+		"From": "fr\u00e1",
+		"SeeHistory": "Sj\u00e1 grei\u00f0slus\u00f6gu fyrir {{1}}",
+		"HistoryEmpty": "\u00de\u00fa hefur engin g\u00f6gn enn\u00fe\u00e1",
+		"PaymentFor": "Sendi {{amount}} einingar",
+		"PaymentTo": "Sendi {{amount}} einingar",
+		"PaymentToUser": "Sendi {{amount}} einingar",
+		"CreatePaidStream": "Eyddi {{amount}} einingum",
+		"WatchClip": {
+			"+": "Hlaut {{amount}} einingar",
+			"-": "Eyddi {{amount}} einingum"
+		},
+		"JoinedPaidStream": {
+			"+": "Hlaut {{amount}} einingar",
+			"-": "Eyddi {{amount}} einingum"
+		},
+		"LeftPaidStream": {
+			"+": "Hlaut {{amount}} einingar",
+			"-": "Sendi {{amount}} einingar"
+		},
+		"CreatedCommunity": "Eyddi {{amount}} einingum",
+		"BoughtCredits": "Keypti {{amount}} einingar",
+		"BonusCredits": "F\u00e9kk b\u00f3nus {{amount}} einingar",
+		"InviteAcceptedBy": "Hlaut {{amount}} einingar",
+		"Streams_user_firstname": "Hlaut {{amount}} einingar",
+		"Streams_user_lastname": "Hlaut {{amount}} einingar",
+		"Streams_user_icon": "Hlaut {{amount}} einingar",
+		"Places_user_location": "Hlaut {{amount}} einingar",
+		"Streams_greeting": "Hlaut {{amount}} einingar",
+		"YouHaveCreditsToStart": "Hlaut {{amount}} einingar",
+		"InvitedUserFilledStream": "Hlaut {{amount}} einingar",
+		"ForFillingStream": "Hlaut {{amount}} einingar",
+		"CreatePrivateChat": "Eyddi {{amount}} einingum"
+	},
+	"subscriptions": {
+		"infoTitle": "Stilltu grei\u00f0sluuppl\u00fdsingar",
+		"confirm": {
+			"title": "Byrja\u00f0u \u00e1skrift",
+			"message": "Byrja \u00e1 endurtekinni \u00e1skrift a\u00f0 &quot; {{title}} &quot;?",
+			"ok": "Allt \u00ed lagi",
+			"cancel": "H\u00e6tta vi\u00f0"
+		},
+		"CreditOrDebitCard": "Kredit- e\u00f0a debetkort",
+		"SubscribePayment": "Gerast \u00e1skrifandi Grei\u00f0sla",
+		"ImmediatePayment": "Grei\u00f0sla strax",
+		"ProcessingPayment": "Afgrei\u00f0sla grei\u00f0slu",
+		"SubscriptionAlreadyPaid": "\u00deessi \u00e1skrift hefur \u00feegar veri\u00f0 greidd",
+		"SubscriptionNotActive": "\u00deessi \u00e1skrift er ekki virk",
+		"Subscribed": "Ger\u00f0ur \u00e1skrifandi",
+		"Unsubscribed": "H\u00e6tti \u00e1skrift",
+		"Unsubscribe": "H\u00e6tta \u00e1skrift",
+		"Subscribe": "Gerast \u00e1skrifandi",
+		"Started": "Byrja\u00f0",
+		"EndsIn": "Endar \u00ed",
+		"NextPay": "N\u00e6sta grei\u00f0sla",
+		"Period": "T\u00edmabil",
+		"Price": "Ver\u00f0",
+		"AreYouSureUnsubscribe": "Ertu viss um a\u00f0 \u00fe\u00fa viljir segja upp \u00e1skriftinni a\u00f0 \u00feessari \u00e1\u00e6tlun?",
+		"YouUnsubscribedFromPlan": "\u00de\u00fa h\u00e6ttir \u00e1skrift a\u00f0 \u00e1\u00e6tlun &quot; {{planTitle}} &quot;. \u00de\u00fa munt ekki rukka, en \u00e1skriftin \u00fe\u00edn heldur \u00e1fram til {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "\u00e1\u00e6tlunarheiti",
+			"PricePlaceholder": "ver\u00f0",
+			"DescriptionPlaceholder": "l\u00fdsing \u00e1 \u00e1skriftar\u00e1\u00e6tlun",
+			"SavePlan": "Vista \u00e1\u00e6tlun",
+			"NewPlan": "N\u00fdtt plan",
+			"SubscriptionTitle": "\u00c1skriftar\u00e1\u00e6tlanir",
+			"AreYouSureDeletePlan": "Ertu viss um a\u00f0 \u00fe\u00fa viljir ey\u00f0a \u00feessari \u00e1\u00e6tlun?",
+			"Duration": "Lengd",
+			"Discount": "Afsl\u00e1ttur",
+			"Interrupt": "Trufla",
+			"Continue": "Halda \u00e1fram",
+			"SelectDisplayType": "Veldu {{displayType}}",
+			"EndDate": "loka dagsetning",
+			"Available": "\u00cd bo\u00f0i",
+			"Hidden": "Falinn",
+			"InviteOnly": "A\u00f0eins bo\u00f0i\u00f0",
+			"CantSubscribeUnlessInvited": "\u00de\u00fa getur ekki gerst \u00e1skrifandi a\u00f0 \u00feessari \u00e1\u00e6tlun nema \u00fe\u00e9r hafi veri\u00f0 bo\u00f0i\u00f0"
+		}
+	},
+	"payments": {
+		"infoTitle": "Stilltu grei\u00f0sluuppl\u00fdsingar",
+		"BuyAmountCredits": "Kauptu {{amount}} einingar",
+		"confirm": {
+			"title": "Grei\u00f0a",
+			"message": "Sam\u00feykkir \u00fe\u00fa a\u00f0 borga {{symbol}} {{amount}} ?",
+			"ok": "Allt \u00ed lagi",
+			"cancel": "H\u00e6tta vi\u00f0"
+		},
+		"reasons": {
+			"BuyCredits": "Kaupa inneignir"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "Inneign",
+			"description": "heldur utan um inneignir og grei\u00f0slur"
+		},
+		"Assets/plan": {
+			"displayType": "\u00c1skriftar\u00e1\u00e6tlun",
+			"description": "\u00e1skriftar\u00e1\u00e6tlun"
+		},
+		"Assets/subscription": {
+			"displayType": "\u00c1skrift",
+			"description": "\u00c1skrift"
+		},
+		"Assets/product": {
+			"displayType": "Vara",
+			"description": "vara sem veri\u00f0 er a\u00f0 selja"
+		},
+		"Assets/service": {
+			"displayType": "\u00dej\u00f3nusta",
+			"description": "\u00fej\u00f3nusta sem bo\u00f0i\u00f0 er upp \u00e1"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "Hlaut {{amount}} einingar"
+		},
+		"Assets/credits/bought": {
+			"content": "Keypti {{amount}} einingar"
+		},
+		"Assets/credits/bonus": {
+			"content": "B\u00f3nus {{amount}} einingar"
+		},
+		"Assets/credits/spent": {
+			"content": "Eyddi {{amount}} einingum"
+		},
+		"Assets/credits/sent": {
+			"content": "Sendi {{amount}} einingar til {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "F\u00e9kk {{amount}} einingar fr\u00e1 {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "\u00de\u00fa \u00e1tt litla inneign \u00e1 reikningnum \u00fe\u00ednum. Vinsamlegast far\u00f0u \u00e1 <a href='<i translate='no'>999 &#39;&gt;\u00feennan hlekk</a> til a\u00f0 kaupa fleiri inneign."
+		}
+	},
+	"billing": {
+		"Title": "Innheimta eigna",
+		"CreditsMinimum": "L\u00e1gmarkseiningar",
+		"CreditsToAdd": "Inneign til a\u00f0 b\u00e6ta vi\u00f0",
+		"Save": "Vista",
+		"ThisLink": "\u00feennan hlekk",
+		"errors": {
+			"CreditsMinimumNegative": "L\u00e1gmark inneignar getur ekki veri\u00f0 neikv\u00e6tt",
+			"CreditsToAddNegative": "Inneign til a\u00f0 b\u00e6ta vi\u00f0 getur ekki veri\u00f0 neikv\u00e6\u00f0"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "N\u00fd \u00fej\u00f3nusta",
+			"TitlePlaceholder": "\u00dej\u00f3nustuheiti",
+			"PricePlaceholder": "Sett ver\u00f0",
+			"LinkPlaceholder": "stilltu vi\u00f0b\u00f3taruppl\u00fdsingahlekk",
+			"DescriptionPlaceholder": "\u00dej\u00f3nustul\u00fdsing",
+			"SaveService": "Vista \u00fej\u00f3nustu",
+			"SelectRequiredParticipants": "Nau\u00f0synlegir tengdir \u00fe\u00e1tttakendur",
+			"RequiredParticipantsDesc": "Vinsamlegast veldu tengda \u00fe\u00e1tttakendur sem eru nau\u00f0synlegir til a\u00f0 nota \u00feessa \u00fej\u00f3nustu (til d\u00e6mis g\u00e6lud\u00fdr fyrir &quot;Hundas\u00fdningu&quot;, e\u00f0a b\u00f6rn fyrir &quot;fr\u00ed fyrir b\u00f6rn&quot; o.s.frv.). Ef \u00fej\u00f3nusta er greidd \u00fearf notandi einnig a\u00f0 grei\u00f0a fyrir hvern tengdan \u00fe\u00e1tttakanda."
+		},
+		"EditServiceTemplate": {
+			"Title": "Breyta \u00fej\u00f3nustu"
+		},
+		"ManageServiceTemplates": "Stj\u00f3rna \u00fej\u00f3nustusni\u00f0m\u00e1tum",
+		"ManageServices": "Stj\u00f3rna \u00fej\u00f3nustu",
+		"Free": "\u00d3keypis",
+		"OptionalContribution": "Valfrj\u00e1lst framlag",
+		"RequiredPayment": "\u00c1skili\u00f0 grei\u00f0slu",
+		"AreYouSureDelete": "Ertu viss um a\u00f0 \u00fe\u00fa viljir ey\u00f0a \u00feessari \u00fej\u00f3nustu?",
+		"AmountServicesRelated": "\u00dea\u00f0 eru {{amount}} tilt\u00e6kileikar sem tengjast \u00feessari \u00fej\u00f3nustu. \u00deeir ver\u00f0a einnig fjarl\u00e6g\u00f0ir."
+	},
+	"transfer": {
+		"SelectRecipient": "Veldu vi\u00f0takanda",
+		"TransactionSuccess": "Vi\u00f0skipta\u00e1rangur",
+		"OrTypeWalletAddress": "E\u00d0A sl\u00e1\u00f0u inn veskis heimilisfang vi\u00f0takanda",
+		"AppCredits": "App inneign"
+	},
+	"NFT": {
+		"Title": "Titill",
+		"Name": "Nafn",
+		"EnterName": "Sl\u00e1\u00f0u inn nafn",
+		"EnterAuthorWallet": "Sl\u00e1\u00f0u inn h\u00f6fundarveski",
+		"InformationAboutTitle": "Uppl\u00fdsingar um {{title}} NFT",
+		"Description": "L\u00fdsing",
+		"DetailedInformationAboutNFT": "\u00cdtarlegar uppl\u00fdsingar um NFT",
+		"PresaleStarts": "Forsala hefst 23. des",
+		"OwnerUserNotFound": "Eigandi \u00feessa NFT er ekki skr\u00e1\u00f0ur \u00ed ums\u00f3kn okkar.",
+		"BuyNow": "Kaupa n\u00fana",
+		"Buy": "Kaupa",
+		"Add": "B\u00e6ta vi\u00f0",
+		"Remove": "Fjarl\u00e6gja",
+		"NoNFTyet": "Engar NFTs enn\u00fe\u00e1",
+		"Conversation": "Samtal",
+		"Create": "B\u00faa til",
+		"CurrentBid": "N\u00faverandi tilbo\u00f0",
+		"StartingIn": "Byrjar inn",
+		"EndingIn": "Endar \u00e1",
+		"CreateNFT": "B\u00fa\u00f0u til NFT",
+		"TitlePlaceholder": "Gef\u00f0u NFT \u00fe\u00ednum titil",
+		"DescriptionPlaceholder": "Gef\u00f0u NFT \u00fe\u00ednum l\u00fdsingu",
+		"CreateYourNFT": "B\u00fa\u00f0u til NFT \u00feinn",
+		"Royalties": "\u00de\u00f3knanir",
+		"RoyaltyPlaceholder": "Valfrj\u00e1lst. Upph\u00e6\u00f0 greidd til h\u00f6fundar fyrir millif\u00e6rslu.",
+		"ExpirationDate": "Gildist\u00edmi",
+		"StartingDate": "Upphafsdagur",
+		"BidsBelowThisAmount": "Tilbo\u00f0 undir \u00feessari upph\u00e6\u00f0 ver\u00f0a ekki leyf\u00f0",
+		"MinimumBid": "L\u00e1gmarkstilbo\u00f0",
+		"Author": "H\u00f6fundur",
+		"Price": "Ver\u00f0",
+		"Commission": "Framkv\u00e6mdastj\u00f3rn",
+		"EnterCommission": "Sl\u00e1\u00f0u inn \u00fe\u00f3knun",
+		"Owner": "Eigandi",
+		"SelectCategory": "Veldu flokk",
+		"Day": "Dagur",
+		"Days": "Dagar",
+		"Hour": "Klukkut\u00edmi",
+		"Hours": "Klukkut\u00edmar",
+		"Minute": "M\u00edn\u00fata",
+		"Minutes": "Fundarger\u00f0",
+		"Second": "\u00cd \u00f6\u00f0ru lagi",
+		"Seconds": "Sek\u00fandur",
+		"SalesCreator": "af s\u00f6lu mun fara til skapara",
+		"Details": "Uppl\u00fdsingar",
+		"Bids": "Tilbo\u00f0",
+		"History": "Saga",
+		"LoremIpsum": "Lorem Ipsum er einfaldlega blekktur texti prent- og setningari\u00f0na\u00f0arins.",
+		"PutOnSale": "Setja \u00ed s\u00f6lu",
+		"PutOffSale": "Draga \u00far s\u00f6lu",
+		"Transfer": "Flytja",
+		"Actions": "A\u00f0ger\u00f0ir",
+		"Claim": "Krafa",
+		"ClaimNFT": "Krefjast NFT",
+		"Unlocking": "Afl\u00e6sing",
+		"Unlock": "Opna\u00f0u",
+		"Update": "Uppf\u00e6rsla",
+		"UpdateToken": "Uppf\u00e6r\u00f0u t\u00e1kni\u00f0",
+		"UpdateNFT": "Uppf\u00e6r\u00f0u NFT",
+		"CreateToken": "B\u00fa\u00f0u til t\u00e1kn",
+		"PlaceBid": "Ve\u00f0ja",
+		"SoldOut": "Seldur",
+		"NotOnSale": "Ekki til s\u00f6lu",
+		"NftName": "NFT nafn",
+		"DescribeYourNFT": "Vinsamlegast l\u00fdstu NFT \u00fe\u00ednum",
+		"NFTImage": "Mynd fyrir NFT",
+		"NFTVideo": "Myndband fyrir NFT, ef eitthva\u00f0 er",
+		"UploadMovie": "S\u00e6kja kvikmynd",
+		"MovieSource": "Kvikmyndaheimild",
+		"MovieURL": "Vefsl\u00f3\u00f0 kvikmyndar",
+		"UploadFile": "Hladdu upp skr\u00e1",
+		"PutOnMarketplace": "Sett \u00e1 marka\u00f0storg",
+		"InstantPurchase": "Sl\u00e1\u00f0u inn ver\u00f0 til a\u00f0 leyfa notendum a\u00f0 kaupa NFT strax",
+		"FixedPrice": "Fast ver\u00f0",
+		"TimedAuction": "T\u00edmasett uppbo\u00f0",
+		"OpenForBids": "Opi\u00f0 fyrir tilbo\u00f0um",
+		"PriceOnePiece": "F\u00e6ri\u00f0 inn ver\u00f0 fyrir eitt stykki",
+		"EnterPrice": "Sl\u00e1\u00f0u inn ver\u00f0",
+		"EnterMinimumBid": "Sl\u00e1\u00f0u inn l\u00e1gmarkstilbo\u00f0",
+		"SelectChain": "Veldu ke\u00f0ju",
+		"Currency": "Gjaldmi\u00f0ill",
+		"AreYouSureDeleteImage": "Ertu viss um a\u00f0 \u00fe\u00fa viljir fjarl\u00e6gja mynd?",
+		"AreYouSureDeleteVideo": "Ertu viss um a\u00f0 \u00fe\u00fa viljir fjarl\u00e6gja myndskei\u00f0?",
+		"series": {
+			"Name": "Nafn",
+			"Icon": "T\u00e1knmynd",
+			"Description": "L\u00fdsing",
+			"Author": "H\u00f6fundur",
+			"SelectSeries": "Veldu r\u00f6\u00f0",
+			"Value": "Gildi",
+			"AreYouSure": "Ertu viss?",
+			"AuthorInvalid": "Heimilisfang h\u00f6fundar \u00f3gilt!",
+			"Address": "Heimilisfang",
+			"CoverImage": "Fors\u00ed\u00f0umynd",
+			"UploadCoverImage": "Hladdu upp fors\u00ed\u00f0umynd",
+			"CommissionAddressInvalid": "Heimilisfang framkv\u00e6mdastj\u00f3rnar \u00f3gilt",
+			"OnSale": "\u00e1 \u00fats\u00f6lu",
+			"OffSale": "\u00fats\u00f6lu",
+			"CreateSeries": "B\u00faa til r\u00f6\u00f0",
+			"UpdateSeries": "Uppf\u00e6rslur\u00f6\u00f0",
+			"SeriesInfo": "Uppl\u00fdsingar um r\u00f6\u00f0",
+			"SelectAuthor": "Veldu h\u00f6fund",
+			"NewItem": "N\u00fd NFT ser\u00eda",
+			"NamePlaceholder": "Sl\u00e1\u00f0u inn heiti r\u00f6\u00f0",
+			"DescPlaceholder": "Sl\u00e1\u00f0u inn r\u00f6\u00f0 l\u00fdsingu",
+			"EndingIn": "Endar \u00ed"
+		},
+		"contract": {
+			"CreateContract": "B\u00faa til samning",
+			"SelectContract": "Veldu samning",
+			"CreateContractFor": "B\u00fa\u00f0u til samning fyrir {{userName}}",
+			"ContractFor": "Samningur fyrir {{userName}}",
+			"UpdateContract": "Uppf\u00e6ra samning",
+			"TransferOwnership": "Flytja eignarhald",
+			"SetBaseURI": "Stilltu grunn URI",
+			"SetSuffix": "Stilltu vi\u00f0skeyti",
+			"CurrentOwner": "N\u00faverandi eigandi",
+			"CurrentBaseURL": "N\u00faverandi grunnurl",
+			"ContractAddressAbsent": "Heimilisfang samnings er ekki til",
+			"FactoryAddressAbsent": "Heimilisfang verksmi\u00f0ju fjarverandi",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "Titill \u00e1skilinn",
+			"SymbolRequired": "T\u00e1kn \u00e1skili\u00f0",
+			"TypeContractName": "nafn samnings",
+			"TypeContractSymbol": "samningst\u00e1kn (h\u00e1mark 10 stafir)"
+		},
+		"contests": {
+			"Title": "Keppni",
+			"NewContest": "N\u00fd keppni"
+		},
+		"import": {
+			"importNFT": "Flytur inn NFT",
+			"importAttributes": "Flytja inn NFT eiginleika",
+			"fileNotFound": "\u00dev\u00ed mi\u00f0ur, CSV skr\u00e1 fannst ekki.",
+			"fileEmpty": "\u00dev\u00ed mi\u00f0ur er CSV skr\u00e1in t\u00f3m.",
+			"userIdNotFound": "notandi er til en au\u00f0kenni\u00f0 er t\u00f3mt",
+			"errorLine": "l\u00edna {{1}}",
+			"fieldNotFound": "\u00c1skilinn reitur &quot; {{1}} &quot; fannst ekki",
+			"displayTypeEmpty": "Skj\u00e1rger\u00f0 fyrir &quot; {{1}} &quot; fannst ekki",
+			"taskStreamInvalid": "verkefnastraumur \u00f3gildur",
+			"instructionsEmpty": "verkstraumslei\u00f0beiningar t\u00f3mar",
+			"complete": "Heill",
+			"activateUsers": "senda virkjunarskilabo\u00f0 til notenda?",
+			"importProgress": "Framfarir",
+			"importOptions": "Valm\u00f6guleikar",
+			"sampleCSV": "S\u00e6kja s\u00fdnishorn af CSV",
+			"fileLabel": "Hla\u00f0a upp t\u00f6flureikni:",
+			"errorsTitle": "Villur komu upp"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "S\u00eda eftir NFT s\u00f6fnum",
+				"ShowNFTCollection": "S\u00fdna NFT safn \u00ed ...",
+				"AllCollections": "\u00d6ll s\u00f6fn"
+			},
+			"ByUser": {
+				"AllAuthors": "Allir h\u00f6fundar",
+				"AllUsers": "Allir",
+				"FilterByAuthors": "S\u00eda eftir h\u00f6fundum"
+			}
+		},
+		"Back": "Aftur \u00ed safn",
+		"attributes": {
+			"Title": "Stj\u00f3rna eiginleikum",
+			"Attributes": "Eiginleikar",
+			"DisplayTitle": "Skj\u00e1r Tegund",
+			"AddDisplayType": "B\u00e6ta vi\u00f0 n\u00fdrri skj\u00e1tegund",
+			"NewDisplay": "N\u00fdr skj\u00e1r",
+			"TraitTitle": "Tegund eiginleika",
+			"AddTraitTitle": "B\u00e6ttu vi\u00f0 n\u00fdrri eiginleikategund",
+			"NewTrait": "N\u00fd einkennistegund",
+			"ValueTitle": "Gildi",
+			"AddValueTitle": "B\u00e6ttu vi\u00f0 n\u00fdju gildi",
+			"NewValue": "N\u00fdtt gildi",
+			"NewAttribute": "N\u00fdr eiginleiki",
+			"UpdateAttributes": "Uppf\u00e6r\u00f0u eiginleika",
+			"SaveAttributes": "Vista eiginleika"
+		},
+		"profile": {
+			"LogOut": "A\u00f0 skr\u00e1 \u00feig \u00fat",
+			"Title": "Pr\u00f3f\u00edll fyrir {{userName}}",
+			"Description": "Uppl\u00fdsingar um notanda",
+			"aboutPlaceholder": "Breyta \u00e6vis\u00f6gu",
+			"SureLogOut": "Ertu viss um a\u00f0 \u00fe\u00fa viljir skr\u00e1 \u00feig \u00fat?",
+			"UploadCoverPhoto": "Hladdu inn fors\u00ed\u00f0umynd"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "NFT samningur",
+						"seriesId": "r\u00f6\u00f0 au\u00f0kenni",
+						"owner": "Eigandi",
+						"currency": "Gjaldmi\u00f0ill",
+						"price": "Ver\u00f0",
+						"beneficiary": "Styrk\u00feegi",
+						"autoindex": "Autoindex",
+						"duration": "Lengd",
+						"rateInterval": "Gengisbil",
+						"rateAmount": "Gjaldupph\u00e6\u00f0"
+					},
+					"small": {
+						"NFTContract": "NFT samningur",
+						"seriesId": "t\u00e1kn ver\u00f0a slegin \u00ed \u00feessari r\u00f6\u00f0",
+						"owner": "eigandi d\u00e6mis, annars ver\u00f0ur sendandi",
+						"currency": "Gjaldmi\u00f0ill fyrir keypta t\u00e1kn, ef n\u00fall - fyrir innf\u00e6dda mynt",
+						"price": "Ver\u00f0",
+						"beneficiary": "Styrk\u00feegi s\u00f6lu t\u00e1kna, annars ver\u00f0ur sendandi",
+						"autoindex": "Autoindex",
+						"duration": "L\u00e6sing eftir myntun. N\u00fall \u00fe\u00fd\u00f0ir a\u00f0 f\u00e1 \u00fea\u00f0 strax.",
+						"rateInterval": "f\u00f6tubil fyrir s\u00e9rst\u00f6k kaup",
+						"rateAmount": "f\u00f6tuupph\u00e6\u00f0 fyrir s\u00e9rst\u00f6k kaup"
+					}
+				},
+				"placeholders": {
+					"optional": "(valfrj\u00e1lst)",
+					"number": "n\u00famer",
+					"address": "heimilisfang",
+					"fraction": "brot",
+					"integer": "heiltala",
+					"seconds": "sek\u00fandur",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "Framlei\u00f0a",
+				"viewInstancesList": "Endurn\u00fdja lista"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "Au\u00f0kenni r\u00f6\u00f0",
+						"account": "Reikningur",
+						"amount": "Magn"
+					},
+					"small": {
+						"seriesId": "n\u00fdtt t\u00e1kn mun tilheyra \u00ed r\u00f6\u00f0 me\u00f0 sl\u00edku au\u00f0kenni",
+						"account": "eigandi n\u00fdstofna\u00f0s NFT. ef ekki stillt - mun nota n\u00faverandi veski",
+						"amount": "magn NFT til myntu"
+					}
+				},
+				"placeholders": {
+					"optional": "(valfrj\u00e1lst)",
+					"seriesId": "kt",
+					"account": "reikning",
+					"amount": "magn",
+					"integer": "heiltala"
+				},
+				"btn": {
+					"Purchase": "Kaup",
+					"SpecialPurchase": "S\u00e9rst\u00f6k kaup"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "Heimilisfang"
+					},
+					"small": {
+						"account": "Heimilisfang"
+					}
+				},
+				"errors": {
+					"invalidAddress": "\u00d3gilt heimilisfang"
+				},
+				"placeholders": {
+					"account": "Heimilisfang"
+				},
+				"addToWhitelist": "B\u00e6ta vi\u00f0 hv\u00edtalista",
+				"removeFromWhitelist": "Fjarl\u00e6gja af hv\u00edtlista"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "Au\u00f0kenni t\u00e1kns",
+					"custodian": "Forr\u00e1\u00f0ama\u00f0ur",
+					"recipient": "Vi\u00f0takandi"
+				},
+				"small": {
+					"tokenId": "au\u00f0kenni sem \u00fearf a\u00f0 l\u00e6sa e\u00f0a opna",
+					"custodian": "heimilisfang sem h\u00e6gt er a\u00f0 opna",
+					"recipient": "heimilisfang sem mun taka vi\u00f0 t\u00e1knunum"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "\u00d3gilt au\u00f0kenni",
+				"invalidCustodian": "\u00d3gildur v\u00f6rslua\u00f0ili",
+				"invalidRecipient": "\u00d3gildur vi\u00f0takandi"
+			},
+			"placeholders": {
+				"optional": "(valfrj\u00e1lst)",
+				"tokenId": "kt",
+				"custodian": "heimilisfang"
+			},
+			"Lock": "L\u00e6sa",
+			"Unlock": "Opna\u00f0u",
+			"Locked": "L\u00e6st",
+			"CustodianAddress": "Heimilisfang v\u00f6rslua\u00f0ila",
+			"TokenWasClaimed": "T\u00e1kn &quot; {{title}} &quot; var krafist",
+			"TokenWasLocked": "T\u00e1kn &quot; {{title}} &quot; var l\u00e6st",
+			"TokenWasUnlocked": "T\u00e1kni\u00f0 &quot; {{title}} &quot; var opna\u00f0"
+		},
+		"GenerateDescription": "e\u00f0a b\u00faa til sj\u00e1lfvirkt",
+		"collections": {
+			"Title": "S\u00f6fn",
+			"EnterTitle": "sl\u00e1\u00f0u inn titil",
+			"EnterDescription": "sl\u00e1\u00f0u inn l\u00fdsingu",
+			"NewCollection": "N\u00fdtt safn",
+			"Name": "Nafn",
+			"Icon": "T\u00e1knmynd",
+			"Description": "L\u00fdsing",
+			"Author": "H\u00f6fundur",
+			"SelectCollection": "Veldu safn",
+			"Value": "Gildi",
+			"AreYouSure": "Ertu viss?",
+			"AuthorInvalid": "Heimilisfang h\u00f6fundar \u00f3gilt!",
+			"Address": "Heimilisfang",
+			"CoverImage": "Fors\u00ed\u00f0umynd",
+			"UploadIcon": "Hla\u00f0a upp t\u00e1knmynd",
+			"CommissionAddressInvalid": "Heimilisfang framkv\u00e6mdastj\u00f3rnar \u00f3gilt",
+			"OnSale": "\u00e1 \u00fats\u00f6lu",
+			"OffSale": "\u00fats\u00f6lu",
+			"CreateCollection": "B\u00fa\u00f0u til safn",
+			"UpdateCollection": "Uppf\u00e6ra safn",
+			"CollectionInfo": "Safnuppl\u00fdsingar",
+			"SelectAuthor": "Veldu h\u00f6fund",
+			"NewItem": "N\u00fdtt NFT safn",
+			"NamePlaceholder": "Sl\u00e1\u00f0u inn nafn safns",
+			"DescPlaceholder": "Sl\u00e1\u00f0u inn safnl\u00fdsingu",
+			"EndingIn": "Endar \u00ed",
+			"SubmitSeries": "Sendu inn r\u00f6\u00f0"
+		}
+	},
+	"currencies": {
+		"choose": "Veldu gjaldmi\u00f0il"
+	},
+	"connectedAccount": {
+		"Title": "Tengdu reikning",
+		"Success": "\u00c1rangur",
+		"YourAccountCreated": "Reikningurinn \u00feinn var b\u00fainn til!",
+		"YourAccountAlreadyCreated": "Reikningurinn \u00feinn er \u00feegar b\u00fainn til og tilb\u00fainn til notkunar"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "reserveToken",
+						"amount": "Magn"
+					},
+					"small": {
+						"reserveToken": "reserveToken",
+						"amount": "Magn"
+					}
+				},
+				"placeholders": {
+					"amount": "magn"
+				},
+				"btns": {
+					"stake": "Hlutur"
+				},
+				"stake": "Hlutur",
+				"loading": "Hle\u00f0sla"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Lengd",
+					"bonusTokenFraction": "b\u00f3nusTokenFraction",
+					"popularToken": "vins\u00e6lt Token",
+					"donations": "framl\u00f6g",
+					"rewardsRateFraction": "ver\u00f0launRateFraction",
+					"numerator": "teljara",
+					"denominator": "nefnara"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Lengd \u00ed d\u00f6gum",
+					"bonusTokenFraction": "b\u00f3nusTokenFraction",
+					"popularToken": "vins\u00e6lt Token",
+					"donations": "framl\u00f6g",
+					"rewardsRateFraction": "ver\u00f0launRateFraction",
+					"numerator": "teljara",
+					"denominator": "nefnara"
+				}
+			},
+			"placeholders": {
+				"optional": "(valfrj\u00e1lst)",
+				"tuple": "tuple[]",
+				"number": "n\u00famer",
+				"address": "heimilisfang",
+				"fraction": "brot",
+				"integer": "heiltala",
+				"seconds": "sek\u00fandur",
+				"days": "daga",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u00dea\u00f0 eru engar sundlaugar"
+			},
+			"btns": {
+				"createPool": "B\u00fa\u00f0u til sundlaug",
+				"createPoolInForm": "B\u00faa til"
+			},
+			"createPool": "B\u00fa\u00f0u til sundlaug",
+			"produce": "Framlei\u00f0a",
+			"loading": "Hle\u00f0sla",
+			"viewInstancesList": "Endurn\u00fdja lista"
+		}
+	},
+	"fundrise": {
+		"placeholder": "skrifa\u00f0u eitthva\u00f0 um \u00feetta framlag..."
+	}
 }

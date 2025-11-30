@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "rezervToken",
-                        "duration": "Διάρκεια",
-                        "amount": "Ποσό"
-                    },
-                    "small": {
-                        "reserveToken": "rezervToken",
-                        "duration": "Διάρκεια",
-                        "amount": "Ποσό"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Διάρκεια",
-                    "amount": "ποσό"
-                },
-                "btns": {
-                    "stake": "Στοίχημα"
-                },
-                "stake": "Στοίχημα",
-                "loading": "Φόρτωση"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "rezervToken",
+						"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1",
+						"amount": "\u03a0\u03bf\u03c3\u03cc"
+					},
+					"small": {
+						"reserveToken": "rezervToken",
+						"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1",
+						"amount": "\u03a0\u03bf\u03c3\u03cc"
+					}
+				},
+				"placeholders": {
+					"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1",
+					"amount": "\u03c0\u03bf\u03c3\u03cc"
+				},
+				"btns": {
+					"stake": "\u03a3\u03c4\u03bf\u03af\u03c7\u03b7\u03bc\u03b1"
+				},
+				"stake": "\u03a3\u03c4\u03bf\u03af\u03c7\u03b7\u03bc\u03b1",
+				"loading": "\u03a6\u03cc\u03c1\u03c4\u03c9\u03c3\u03b7"
+			}
+		}
+	}
 }

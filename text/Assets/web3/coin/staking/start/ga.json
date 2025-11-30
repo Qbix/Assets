@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "cúlchiste",
-                        "duration": "Fad",
-                        "amount": "Méid"
-                    },
-                    "small": {
-                        "reserveToken": "cúlchiste",
-                        "duration": "Fad",
-                        "amount": "Méid"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Fad",
-                    "amount": "méid"
-                },
-                "btns": {
-                    "stake": "Geall"
-                },
-                "stake": "Geall",
-                "loading": "Ag lódáil"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "c\u00falchiste",
+						"duration": "Fad",
+						"amount": "M\u00e9id"
+					},
+					"small": {
+						"reserveToken": "c\u00falchiste",
+						"duration": "Fad",
+						"amount": "M\u00e9id"
+					}
+				},
+				"placeholders": {
+					"duration": "Fad",
+					"amount": "m\u00e9id"
+				},
+				"btns": {
+					"stake": "Geall"
+				},
+				"stake": "Geall",
+				"loading": "Ag l\u00f3d\u00e1il"
+			}
+		}
+	}
 }

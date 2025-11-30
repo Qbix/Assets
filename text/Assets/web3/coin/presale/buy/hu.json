@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Mennyit kell befektetni?"
-                    },
-                    "placeholders": {
-                        "amount": "Összege {{nativeCoin}}",
-                        "max": "Max: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "megvesz",
-                    "execute": "Végrehajtás"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "Mennyit kell befektetni?"
+					},
+					"placeholders": {
+						"amount": "\u00d6sszege {{nativeCoin}}",
+						"max": "Max: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "megvesz",
+					"execute": "V\u00e9grehajt\u00e1s"
+				}
+			}
+		}
+	}
 }

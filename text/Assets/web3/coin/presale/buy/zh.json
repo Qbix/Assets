@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "投资多少？"
-                    },
-                    "placeholders": {
-                        "amount": "数量{{nativeCoin}}",
-                        "max": "最大： {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "买",
-                    "execute": "执行"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "\u6295\u8d44\u591a\u5c11\uff1f"
+					},
+					"placeholders": {
+						"amount": "\u6570\u91cf{{nativeCoin}}",
+						"max": "\u6700\u5927\uff1a {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "\u4e70",
+					"execute": "\u6267\u884c"
+				}
+			}
+		}
+	}
 }

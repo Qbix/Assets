@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "reserveToken",
-                        "duration": "Varighed",
-                        "amount": "Beløb"
-                    },
-                    "small": {
-                        "reserveToken": "reserveToken",
-                        "duration": "Varighed",
-                        "amount": "Beløb"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Varighed",
-                    "amount": "beløb"
-                },
-                "btns": {
-                    "stake": "Indsats"
-                },
-                "stake": "Indsats",
-                "loading": "Indlæser"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "reserveToken",
+						"duration": "Varighed",
+						"amount": "Bel\u00f8b"
+					},
+					"small": {
+						"reserveToken": "reserveToken",
+						"duration": "Varighed",
+						"amount": "Bel\u00f8b"
+					}
+				},
+				"placeholders": {
+					"duration": "Varighed",
+					"amount": "bel\u00f8b"
+				},
+				"btns": {
+					"stake": "Indsats"
+				},
+				"stake": "Indsats",
+				"loading": "Indl\u00e6ser"
+			}
+		}
+	}
 }

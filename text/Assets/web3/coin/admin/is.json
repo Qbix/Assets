@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Lengd",
-                    "bonusTokenFraction": "bónusTokenFraction",
-                    "popularToken": "vinsælt Token",
-                    "donations": "framlög",
-                    "rewardsRateFraction": "verðlaunRateFraction",
-                    "numerator": "teljara",
-                    "denominator": "nefnara"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Lengd í dögum",
-                    "bonusTokenFraction": "bónusTokenFraction",
-                    "popularToken": "vinsælt Token",
-                    "donations": "framlög",
-                    "rewardsRateFraction": "verðlaunRateFraction",
-                    "numerator": "teljara",
-                    "denominator": "nefnara"
-                }
-            },
-            "placeholders": {
-                "optional": "(valfrjálst)",
-                "tuple": "tuple[]",
-                "number": "númer",
-                "address": "heimilisfang",
-                "fraction": "brot",
-                "integer": "heiltala",
-                "seconds": "sekúndur",
-                "days": "daga",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Það eru engar sundlaugar"
-            },
-            "btns": {
-                "createPool": "Búðu til sundlaug",
-                "createPoolInForm": "Búa til"
-            },
-            "createPool": "Búðu til sundlaug",
-            "produce": "Framleiða",
-            "loading": "Hleðsla",
-            "viewInstancesList": "Endurnýja lista"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Lengd",
+					"bonusTokenFraction": "b\u00f3nusTokenFraction",
+					"popularToken": "vins\u00e6lt Token",
+					"donations": "framl\u00f6g",
+					"rewardsRateFraction": "ver\u00f0launRateFraction",
+					"numerator": "teljara",
+					"denominator": "nefnara"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Lengd \u00ed d\u00f6gum",
+					"bonusTokenFraction": "b\u00f3nusTokenFraction",
+					"popularToken": "vins\u00e6lt Token",
+					"donations": "framl\u00f6g",
+					"rewardsRateFraction": "ver\u00f0launRateFraction",
+					"numerator": "teljara",
+					"denominator": "nefnara"
+				}
+			},
+			"placeholders": {
+				"optional": "(valfrj\u00e1lst)",
+				"tuple": "tuple[]",
+				"number": "n\u00famer",
+				"address": "heimilisfang",
+				"fraction": "brot",
+				"integer": "heiltala",
+				"seconds": "sek\u00fandur",
+				"days": "daga",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u00dea\u00f0 eru engar sundlaugar"
+			},
+			"btns": {
+				"createPool": "B\u00fa\u00f0u til sundlaug",
+				"createPoolInForm": "B\u00faa til"
+			},
+			"createPool": "B\u00fa\u00f0u til sundlaug",
+			"produce": "Framlei\u00f0a",
+			"loading": "Hle\u00f0sla",
+			"viewInstancesList": "Endurn\u00fdja lista"
+		}
+	}
 }

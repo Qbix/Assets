@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Lỗi",
-        "WalletAbsent": "Ví không được kết nối.",
-        "Rendering": "Đã xảy ra lỗi khi kết xuất <span class='url'>{{1}}<\/span>",
-        "PriceRequired": "Giá yêu cầu!",
-        "NameRequired": "Tên cần thiết!",
-        "PriceInvalid": "Giá không hợp lệ!",
-        "AmountInvalid": "Số tiền không hợp lệ!",
-        "TransactionFailed": "Giao dịch không thành công",
-        "ChainNotSupported": "Chuỗi đã chọn không được hỗ trợ. Chuỗi được hỗ trợ: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Cần kết nối MetaMask để hoạt động với ứng dụng",
-        "UserNotLoggedInMetaMask": "Người dùng chưa đăng nhập vào MetaMask",
-        "CurrencyNotFound": "Không tìm thấy tiền tệ",
-        "WrongChain": "NFT này được tạo theo &quot; {{chain}} &quot;. Hãy sử dụng chuỗi này.",
-        "NoRecipientSelected": "Không có người nhận nào được chọn",
-        "NotEnoughPermissionsWallet": "Không đủ quyền để đọc ví của người dùng này",
-        "ThisUserHaveNoWallet": "Người dùng này không có ví được chỉ định",
-        "TheWalletOfThisUserInvalid": "Ví của người dùng này không hợp lệ",
-        "WalletInvalid": "Địa chỉ ví không hợp lệ",
-        "CantManageFrozenSeries": "Bạn không thể quản lý sê-ri bị đóng băng",
-        "SubscriptionStreamNotPaid": "Bạn chưa trả tiền để xem nội dung này. Hãy nhấn {{subscriptionUrl}} và đăng ký gói phù hợp."
-    },
-    "admin": {
-        "Title": "quản lý tài sản",
-        "SubscriptionTitle": "kế hoạch đăng ký"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Nhấn để thanh toán"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : phí được xử lý cho {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Cảm ơn bạn đã thanh toán cho {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} đã đăng ký thành {{plan.title}}",
-        "YouSubscribedTo": "Bạn đã đăng ký {{plan.title}}",
-        "Assets\/credits\/alert": "Bạn có cảnh báo liên quan đến tài khoản của mình"
-    },
-    "charge": {
-        "Subject": "Bạn nhận được khoản thanh toán {{displayAmount}} từ {{call 'publisher.displayName'}} bằng &quot; {{description}} &quot;",
-        "HasBeenCharged": "Này, đây chỉ là để cho bạn {{4}} {{1}} đã bị 1002 tính phí {{2}} cho {{3}}"
-    },
-    "charged": {
-        "Subject": "Cảm ơn bạn đã thanh toán cho &quot; {{description}} &quot;",
-        "HavePaid": "Xin chào {{1}} , đây chỉ là xác nhận nhanh rằng bạn đã thanh toán thành công {{2}} đến {{3}} cho {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Thông tin về đơn hàng",
-        "PaymentMethod": "Phương thức thanh toán",
-        "ContactInfo": "Thông tin liên lạc",
-        "Pay": "Chi trả",
-        "PaymentSucceeded": "Thanh toán thành công",
-        "PaymentProcessing.": "Thanh toán của bạn đang được xử lý",
-        "FailTryAgain": "Thanh toán của bạn không thành công, vui lòng thử lại",
-        "SomethingWrong": "Đã xảy ra sự cố",
-        "PaymentStatus": "Tình trạng thanh toán",
-        "PayTo": "trả {{displayName}}",
-        "ChooseCurrency": "Chọn một loại tiền tệ",
-        "YouCanSendUpTo": "Bạn có thể gửi tới {{amount}} {{symbol}}",
-        "Send": "Gửi",
-        "EnterAmount": "nhập số tiền"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Lời mời được chấp nhận bởi {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} lấp đầy {{FilledStreamTitle}}",
-        "ForFillingStream": "Để điền {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "Bạn có {{amount}} tín dụng để bắt đầu",
-        "PaymentFor": "Thanh toán cho &quot; {{1}} &quot;",
-        "PaymentTo": "Thanh toán tới {{1}}",
-        "PaymentToUser": "Thanh toán tới {{toUserName}}",
-        "CreatePrivateChat": "để chat riêng với {{toUserName}}",
-        "CreatePaidStream": "để tạo {{toStreamName}}",
-        "JoinedPaidStream": "đặt trước trong &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "để tạo cộng đồng &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "dưới dạng hoàn tiền đặt trước trong &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "Đã mua {{amount}} tín dụng",
-        "BonusCredits": "Thưởng {{amount}} tín dụng",
-        "BuyAmountCredits": "Mua {{amount}} tín dụng",
-        "WatchClip": "Kiếm được {{amount}} tín dụng để xem {{fromStreamTitle}}",
-        "MissingCredits": "Thiếu tín dụng",
-        "YouMissingCredits": "Bạn cần thêm {{amount}} tín dụng để tiếp tục.",
-        "BuyCredits": "Mua thẻ tín dụng",
-        "BuyBonus": "Mua {{amount}} tín dụng cùng một lúc, sẽ dẫn đến {{bonus}} tín dụng tiền thưởng.",
-        "Buy": "Mua",
-        "PurchaseCredits": "Mua tín dụng",
-        "Credits": "Tín dụng",
-        "ErrorInvalidAmount": "Số tiền không hợp lệ",
-        "ErrorInvalidCurrency": "Rất tiếc, chúng tôi chưa hỗ trợ đơn vị tiền tệ {{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} tín chỉ",
-            "BonusCredits": "{{amount}} tín chỉ"
-        }
-    },
-    "history": {
-        "Date": "Ngày",
-        "Amount": "Số lượng",
-        "Description": "Sự miêu tả",
-        "Client": "Khách hàng",
-        "User": "Người dùng",
-        "To": "ĐẾN",
-        "From": "từ",
-        "SeeHistory": "Xem lịch sử thanh toán cho {{1}}",
-        "HistoryEmpty": "Bạn chưa có dữ liệu",
-        "PaymentFor": "Đã gửi {{amount}} tín dụng",
-        "PaymentTo": "Đã gửi {{amount}} tín dụng",
-        "PaymentToUser": "Đã gửi {{amount}} tín dụng",
-        "CreatePaidStream": "Đã chi {{amount}} tín dụng",
-        "WatchClip": {
-            "+": "Kiếm được {{amount}} tín dụng",
-            "-": "Đã chi {{amount}} tín dụng"
-        },
-        "JoinedPaidStream": {
-            "+": "Kiếm được {{amount}} tín dụng",
-            "-": "Đã chi {{amount}} tín dụng"
-        },
-        "LeftPaidStream": {
-            "+": "Đã nhận được {{amount}} tín dụng",
-            "-": "Đã gửi {{amount}} tín dụng"
-        },
-        "CreatedCommunity": "Đã chi {{amount}} tín dụng",
-        "BoughtCredits": "Đã mua {{amount}} tín dụng",
-        "BonusCredits": "Có tiền thưởng {{amount}} tín dụng",
-        "InviteAcceptedBy": "Kiếm được {{amount}} tín dụng",
-        "Streams_user_firstname": "Kiếm được {{amount}} tín dụng",
-        "Streams_user_lastname": "Kiếm được {{amount}} tín dụng",
-        "Streams_user_icon": "Kiếm được {{amount}} tín dụng",
-        "Places_user_location": "Kiếm được {{amount}} tín dụng",
-        "Streams_greeting": "Kiếm được {{amount}} tín dụng",
-        "YouHaveCreditsToStart": "Kiếm được {{amount}} tín dụng",
-        "InvitedUserFilledStream": "Kiếm được {{amount}} tín dụng",
-        "ForFillingStream": "Kiếm được {{amount}} tín dụng",
-        "CreatePrivateChat": "Đã chi {{amount}} tín dụng"
-    },
-    "subscriptions": {
-        "infoTitle": "Đặt thông tin thanh toán",
-        "confirm": {
-            "title": "Bắt đầu đăng ký",
-            "message": "Bắt đầu đăng ký định kỳ tới &quot; {{title}} &quot;?",
-            "ok": "ĐƯỢC RỒI",
-            "cancel": "Hủy bỏ"
-        },
-        "CreditOrDebitCard": "Thẻ tín dụng hoặc thẻ ghi nợ",
-        "SubscribePayment": "đăng ký thanh toán",
-        "ImmediatePayment": "Thanh toán ngay",
-        "ProcessingPayment": "xử lý thanh toán",
-        "SubscriptionAlreadyPaid": "Đăng ký này đã được thanh toán",
-        "SubscriptionNotActive": "Đăng ký này không hoạt động",
-        "Subscribed": "đã đăng ký",
-        "Unsubscribed": "hủy đăng ký",
-        "Unsubscribe": "hủy đăng ký",
-        "Subscribe": "Đặt mua",
-        "Started": "Đã bắt đầu",
-        "EndsIn": "Kết thúc ở",
-        "NextPay": "Thanh toán tiếp theo",
-        "Period": "Giai đoạn",
-        "Price": "Giá",
-        "AreYouSureUnsubscribe": "Bạn có chắc chắn muốn hủy đăng ký gói này không?",
-        "YouUnsubscribedFromPlan": "Bạn đã hủy đăng ký gói &quot; {{planTitle}} &quot;. Bạn sẽ không bị tính phí, nhưng đăng ký của bạn sẽ tiếp tục cho đến {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "tiêu đề kế hoạch",
-            "PricePlaceholder": "giá",
-            "DescriptionPlaceholder": "mô tả kế hoạch đăng ký",
-            "SavePlan": "Lưu kế hoạch",
-            "NewPlan": "Kế hoạch mới",
-            "SubscriptionTitle": "gói đăng ký",
-            "AreYouSureDeletePlan": "Bạn có chắc chắn muốn xóa kế hoạch này không?",
-            "Duration": "Khoảng thời gian",
-            "Discount": "Giảm giá",
-            "Interrupt": "Ngắt",
-            "Continue": "Tiếp tục",
-            "SelectDisplayType": "Chọn {{displayType}}",
-            "EndDate": "ngày cuối",
-            "Available": "Có sẵn",
-            "Hidden": "Ẩn giấu",
-            "InviteOnly": "Chỉ mời",
-            "CantSubscribeUnlessInvited": "Bạn không thể đăng ký gói này trừ khi bạn được mời"
-        }
-    },
-    "payments": {
-        "infoTitle": "Đặt thông tin thanh toán",
-        "BuyAmountCredits": "Mua {{amount}} tín dụng",
-        "confirm": {
-            "title": "Thực hiện thanh toán",
-            "message": "Bạn có đồng ý trả {{symbol}} {{amount}} không?",
-            "ok": "ĐƯỢC RỒI",
-            "cancel": "Hủy bỏ"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Tín dụng",
-            "description": "theo dõi các khoản tín dụng và thanh toán"
-        },
-        "Assets\/plan": {
-            "displayType": "Kế hoạch thuê bao",
-            "description": "kế hoạch thuê bao"
-        },
-        "Assets\/subscription": {
-            "displayType": "Đăng ký",
-            "description": "đăng ký"
-        },
-        "Assets\/product": {
-            "displayType": "Sản phẩm",
-            "description": "sản phẩm đang được bán"
-        },
-        "Assets\/service": {
-            "displayType": "Dịch vụ",
-            "description": "dịch vụ đang được cung cấp"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "Kiếm được {{amount}} tín dụng"
-        },
-        "Assets\/credits\/bought": {
-            "content": "Đã mua {{amount}} tín dụng"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Thưởng {{amount}} tín dụng"
-        },
-        "Assets\/credits\/spent": {
-            "content": "Đã chi {{amount}} tín dụng"
-        },
-        "Assets\/credits\/sent": {
-            "content": "Đã gửi tín dụng {{amount}} đến {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Đã nhận được {{amount}} tín dụng từ {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Bạn có ít tín dụng trên tài khoản của mình. Vui lòng truy cập <a href='<i translate='no'>999&#39;&gt;liên kết này<\/a> để mua thêm tín dụng."
-        }
-    },
-    "billing": {
-        "Title": "thanh toán tài sản",
-        "CreditsMinimum": "tín dụng tối thiểu",
-        "CreditsToAdd": "Tín dụng để thêm",
-        "Save": "Cứu",
-        "ThisLink": "liên kết này",
-        "errors": {
-            "CreditsMinimumNegative": "Số tín dụng tối thiểu không được âm",
-            "CreditsToAddNegative": "Tín dụng để thêm không được âm"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Dịch vụ mới",
-            "TitlePlaceholder": "tiêu đề dịch vụ",
-            "PricePlaceholder": "Đặt giá",
-            "LinkPlaceholder": "đặt liên kết thông tin bổ sung",
-            "DescriptionPlaceholder": "Dịch vụ Mô tả",
-            "SaveService": "Lưu dịch vụ",
-            "SelectRequiredParticipants": "Người tham gia liên quan bắt buộc",
-            "RequiredParticipantsDesc": "Vui lòng chọn những người tham gia có liên quan được yêu cầu sử dụng dịch vụ này (ví dụ: thú cưng cho &quot;Buổi trình diễn chó&quot; hoặc trẻ em cho &quot;Ngày lễ của trẻ em&quot;, v.v.). Nếu dịch vụ được trả tiền, người dùng cũng sẽ phải trả tiền cho từng người tham gia có liên quan."
-        },
-        "EditServiceTemplate": {
-            "Title": "Chỉnh sửa dịch vụ"
-        },
-        "ManageServiceTemplates": "Quản lý mẫu dịch vụ",
-        "ManageServices": "Quản lý dịch vụ",
-        "Free": "Miễn phí",
-        "OptionalContribution": "đóng góp tùy chọn",
-        "RequiredPayment": "thanh toán bắt buộc",
-        "AreYouSureDelete": "Bạn có chắc chắn muốn xóa dịch vụ này không?",
-        "AmountServicesRelated": "Có {{amount}} khả dụng liên quan đến dịch vụ này. Họ cũng sẽ được gỡ bỏ."
-    },
-    "transfer": {
-        "SelectRecipient": "Chọn người nhận",
-        "TransactionSuccess": "Giao dịch thành công",
-        "OrTypeWalletAddress": "HOẶC nhập địa chỉ ví của người nhận",
-        "AppCredits": "Tín dụng ứng dụng"
-    },
-    "NFT": {
-        "Title": "Tiêu đề",
-        "Name": "Tên",
-        "EnterName": "Nhập tên",
-        "EnterAuthorWallet": "Nhập ví tác giả",
-        "InformationAboutTitle": "Thông tin về {{title}} NFT",
-        "Description": "Sự miêu tả",
-        "DetailedInformationAboutNFT": "Thông tin chi tiết về NFT",
-        "PresaleStarts": "Bắt đầu bán trước ngày 23 tháng 12",
-        "OwnerUserNotFound": "Chủ sở hữu của NFT này chưa được đăng ký trong ứng dụng của chúng tôi.",
-        "BuyNow": "Mua ngay",
-        "Buy": "Mua",
-        "Add": "Thêm vào",
-        "Remove": "Di dời",
-        "NoNFTyet": "Chưa có NFT nào",
-        "Conversation": "Cuộc hội thoại",
-        "Create": "Tạo nên",
-        "CurrentBid": "giá thầu hiện tại",
-        "StartingIn": "bắt đầu từ",
-        "EndingIn": "kết thúc trong",
-        "CreateNFT": "Tạo NFT",
-        "TitlePlaceholder": "Đặt tiêu đề cho NFT của bạn",
-        "DescriptionPlaceholder": "Cung cấp cho NFT của bạn một mô tả",
-        "CreateYourNFT": "Tạo NFT của bạn",
-        "Royalties": "tiền bản quyền",
-        "RoyaltyPlaceholder": "Không bắt buộc. Số tiền đã trả cho người sáng tạo trước khi chuyển.",
-        "ExpirationDate": "Ngày hết hạn",
-        "StartingDate": "Ngày bắt đầu",
-        "BidsBelowThisAmount": "Giá thầu dưới số tiền này sẽ không được phép",
-        "MinimumBid": "Giá tối thiểu",
-        "Author": "Tác giả",
-        "Price": "Giá",
-        "Commission": "Nhiệm vụ",
-        "EnterCommission": "Nhập tiền hoa hồng",
-        "Owner": "Người sở hữu",
-        "SelectCategory": "Chọn danh mục",
-        "Day": "Ngày",
-        "Days": "ngày",
-        "Hour": "Giờ",
-        "Hours": "Giờ",
-        "Minute": "Phút",
-        "Minutes": "Phút",
-        "Second": "Thứ hai",
-        "Seconds": "giây",
-        "SalesCreator": "doanh thu sẽ thuộc về người sáng tạo",
-        "Details": "Chi tiết",
-        "Bids": "giá thầu",
-        "History": "Lịch sử",
-        "LoremIpsum": "Lorem Ipsum chỉ đơn giản là văn bản giả của ngành công nghiệp in ấn và sắp chữ.",
-        "PutOnSale": "Đưa vào bán",
-        "PutOffSale": "Rút khỏi bán",
-        "Transfer": "Chuyển khoản",
-        "Actions": "hành động",
-        "Claim": "Khẳng định",
-        "ClaimNFT": "Yêu cầu NFT",
-        "Unlocking": "Mở khóa",
-        "Unlock": "mở khóa",
-        "Update": "Cập nhật",
-        "UpdateToken": "Cập nhật mã thông báo",
-        "UpdateNFT": "Cập nhật NFT",
-        "CreateToken": "Tạo mã thông báo",
-        "PlaceBid": "Đặt giá thầu",
-        "SoldOut": "Đã bán",
-        "NotOnSale": "Không Giảm Giá",
-        "NftName": "tên NFT",
-        "DescribeYourNFT": "Vui lòng mô tả NFT của bạn",
-        "NFTImage": "Hình ảnh cho NFT",
-        "NFTVideo": "Video cho NFT, nếu có",
-        "UploadMovie": "tải phim lên",
-        "MovieSource": "Nguồn Phim",
-        "MovieURL": "URL phim",
-        "UploadFile": "Tải lên một tài liệu",
-        "PutOnMarketplace": "Đưa ra thị trường",
-        "InstantPurchase": "Nhập giá để cho phép người dùng mua ngay NFT của bạn",
-        "FixedPrice": "Giá cố định",
-        "TimedAuction": "đấu giá theo thời gian",
-        "OpenForBids": "mở cho giá thầu",
-        "PriceOnePiece": "Nhập giá cho một mảnh",
-        "EnterPrice": "Nhập giá",
-        "EnterMinimumBid": "Nhập Giá thầu tối thiểu",
-        "SelectChain": "Chọn chuỗi",
-        "Currency": "Tiền tệ",
-        "AreYouSureDeleteImage": "Bạn có chắc chắn muốn xóa hình ảnh không?",
-        "AreYouSureDeleteVideo": "Bạn có chắc chắn muốn xóa video không?",
-        "series": {
-            "Name": "Tên",
-            "Icon": "Biểu tượng",
-            "Description": "Sự miêu tả",
-            "Author": "Tác giả",
-            "SelectSeries": "Chọn sê-ri",
-            "Value": "Giá trị",
-            "AreYouSure": "Bạn có chắc không?",
-            "AuthorInvalid": "Địa chỉ tác giả không hợp lệ!",
-            "Address": "Địa chỉ",
-            "CoverImage": "ảnh bìa",
-            "UploadCoverImage": "Tải ảnh bìa lên",
-            "CommissionAddressInvalid": "Địa chỉ hoa hồng không hợp lệ",
-            "OnSale": "giảm giá",
-            "OffSale": "giảm giá",
-            "CreateSeries": "Tạo sê-ri",
-            "UpdateSeries": "Dòng cập nhật",
-            "SeriesInfo": "Thông tin sê-ri",
-            "SelectAuthor": "Chọn tác giả",
-            "NewItem": "Dòng NFT mới",
-            "NamePlaceholder": "Nhập tên sê-ri",
-            "DescPlaceholder": "Nhập mô tả sê-ri",
-            "EndingIn": "kết thúc trong"
-        },
-        "contract": {
-            "CreateContract": "Tạo hợp đồng",
-            "SelectContract": "Chọn hợp đồng",
-            "CreateContractFor": "Tạo hợp đồng cho {{userName}}",
-            "ContractFor": "Hợp đồng cho {{userName}}",
-            "UpdateContract": "Cập nhật hợp đồng",
-            "TransferOwnership": "Chuyển nhượng quyền sở hữu",
-            "SetBaseURI": "Đặt URI cơ sở",
-            "SetSuffix": "Đặt hậu tố",
-            "CurrentOwner": "Người chủ hiện tại",
-            "CurrentBaseURL": "BaseURL hiện tại",
-            "ContractAddressAbsent": "Địa chỉ hợp đồng vắng mặt",
-            "FactoryAddressAbsent": "địa chỉ nhà máy vắng mặt",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "tiêu đề bắt buộc",
-            "SymbolRequired": "Yêu cầu ký hiệu",
-            "TypeContractName": "tên hợp đồng",
-            "TypeContractSymbol": "ký hiệu hợp đồng (tối đa 10 ký tự)"
-        },
-        "contests": {
-            "Title": "cuộc thi",
-            "NewContest": "Cuộc thi mới"
-        },
-        "import": {
-            "importNFT": "Nhập khẩu NFT",
-            "importAttributes": "Nhập thuộc tính NFT",
-            "fileNotFound": "Rất tiếc, không tìm thấy tệp CSV.",
-            "fileEmpty": "Rất tiếc, tệp CSV trống.",
-            "userIdNotFound": "người dùng tồn tại nhưng id trống",
-            "errorLine": "dòng {{1}}",
-            "fieldNotFound": "Không tìm thấy trường bắt buộc &quot; {{1}} &quot;",
-            "displayTypeEmpty": "Không tìm thấy loại hiển thị cho &quot; {{1}} &quot;",
-            "taskStreamInvalid": "luồng nhiệm vụ không hợp lệ",
-            "instructionsEmpty": "hướng dẫn luồng nhiệm vụ trống",
-            "complete": "Hoàn thành",
-            "activateUsers": "gửi tin nhắn kích hoạt cho người dùng?",
-            "importProgress": "Tiến triển",
-            "importOptions": "Tùy chọn",
-            "sampleCSV": "Tải xuống CSV mẫu",
-            "fileLabel": "Tải lên bảng tính:",
-            "errorsTitle": "Đã xảy ra lỗi"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Lọc theo Bộ sưu tập NFT",
-                "ShowNFTCollection": "Hiển thị bộ sưu tập NFT trong ...",
-                "AllCollections": "Tất cả bộ sưu tập"
-            },
-            "ByUser": {
-                "AllAuthors": "Tất cả các tác giả",
-                "AllUsers": "Mọi người",
-                "FilterByAuthors": "Lọc theo tác giả"
-            }
-        },
-        "Back": "Quay lại Bộ sưu tập",
-        "attributes": {
-            "Title": "Quản lý thuộc tính",
-            "Attributes": "Thuộc tính",
-            "DisplayTitle": "Loại màn hình",
-            "AddDisplayType": "Thêm kiểu hiển thị mới",
-            "NewDisplay": "Màn hình mới",
-            "TraitTitle": "Loại đặc điểm",
-            "AddTraitTitle": "Thêm loại đặc điểm mới",
-            "NewTrait": "Loại đặc điểm mới",
-            "ValueTitle": "Giá trị",
-            "AddValueTitle": "Thêm giá trị mới",
-            "NewValue": "Giá trị mới",
-            "NewAttribute": "Thuộc tính mới",
-            "UpdateAttributes": "Cập nhật thuộc tính",
-            "SaveAttributes": "Lưu thuộc tính"
-        },
-        "profile": {
-            "LogOut": "Đăng xuất",
-            "Title": "Hồ sơ cho {{userName}}",
-            "Description": "Chi tiết người dùng",
-            "aboutPlaceholder": "Chỉnh sửa tiểu sử",
-            "SureLogOut": "Bạn có chắc chắn bạn muốn thoát?",
-            "UploadCoverPhoto": "Tải ảnh bìa lên"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "Hợp đồng NFT",
-                        "seriesId": "mã sê-ri",
-                        "owner": "Người sở hữu",
-                        "currency": "tiền tệ",
-                        "price": "Giá",
-                        "beneficiary": "người thụ hưởng",
-                        "autoindex": "lập chỉ mục tự động",
-                        "duration": "Khoảng thời gian",
-                        "rateInterval": "khoảng tỷ lệ",
-                        "rateAmount": "Tỷ lệ số tiền"
-                    },
-                    "small": {
-                        "NFTContract": "Hợp đồng NFT",
-                        "seriesId": "mã thông báo sẽ được đúc trong chuỗi này",
-                        "owner": "chủ sở hữu của ví dụ, nếu không sẽ là người gửi",
-                        "currency": "Đơn vị tiền tệ cho mã thông báo đã mua, nếu bằng 0 - đối với tiền bản địa",
-                        "price": "Giá",
-                        "beneficiary": "Người thụ hưởng việc bán mã thông báo, nếu không sẽ là người gửi",
-                        "autoindex": "lập chỉ mục tự động",
-                        "duration": "Khóa sau khi đúc. Không có nghĩa là có được nó ngay lập tức.",
-                        "rateInterval": "khoảng thời gian xô để mua đặc biệt",
-                        "rateAmount": "số lượng thùng để mua đặc biệt"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(không bắt buộc)",
-                    "number": "con số",
-                    "address": "Địa chỉ",
-                    "fraction": "phân số",
-                    "integer": "số nguyên",
-                    "seconds": "giây",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Sản xuất",
-                "viewInstancesList": "Làm mới danh sách"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "Mã sê-ri",
-                        "account": "Tài khoản",
-                        "amount": "Số lượng"
-                    },
-                    "small": {
-                        "seriesId": "mã thông báo mới sẽ thuộc chuỗi có ID như vậy",
-                        "account": "chủ sở hữu của NFT mới được tạo. nếu không được đặt - sẽ sử dụng ví hiện tại",
-                        "amount": "số lượng NFT để đúc"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(không bắt buộc)",
-                    "seriesId": "nhận dạng",
-                    "account": "tài khoản",
-                    "amount": "số lượng",
-                    "integer": "số nguyên"
-                },
-                "btn": {
-                    "Purchase": "Mua",
-                    "SpecialPurchase": "mua hàng đặc biệt"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Địa chỉ"
-                    },
-                    "small": {
-                        "account": "Địa chỉ"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Địa chỉ không hợp lệ"
-                },
-                "placeholders": {
-                    "account": "Địa chỉ"
-                },
-                "addToWhitelist": "Thêm vào danh sách trắng",
-                "removeFromWhitelist": "Xóa khỏi danh sách trắng"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "ID mã thông báo",
-                    "custodian": "giám hộ",
-                    "recipient": "Người nhận"
-                },
-                "small": {
-                    "tokenId": "id mã thông báo cần khóa hoặc mở khóa",
-                    "custodian": "địa chỉ có thể mở khóa",
-                    "recipient": "địa chỉ sẽ nhận mã thông báo"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Id mã thông báo không hợp lệ",
-                "invalidCustodian": "Người giám hộ không hợp lệ",
-                "invalidRecipient": "Người nhận không hợp lệ"
-            },
-            "placeholders": {
-                "optional": "(không bắt buộc)",
-                "tokenId": "nhận dạng",
-                "custodian": "Địa chỉ"
-            },
-            "Lock": "Khóa",
-            "Unlock": "mở khóa",
-            "Locked": "Đã khóa",
-            "CustodianAddress": "địa chỉ người giám hộ",
-            "TokenWasClaimed": "Mã thông báo &quot; {{title}} &quot; đã được yêu cầu",
-            "TokenWasLocked": "Token &quot; {{title}} &quot; đã bị khóa",
-            "TokenWasUnlocked": "Mã thông báo &quot; {{title}} &quot; đã được mở khóa"
-        },
-        "GenerateDescription": "hoặc tự động tạo",
-        "collections": {
-            "Title": "bộ sưu tập",
-            "EnterTitle": "nhập tiêu đề",
-            "EnterDescription": "Nhập mô tả",
-            "NewCollection": "Bộ sưu tập mới",
-            "Name": "Tên",
-            "Icon": "Biểu tượng",
-            "Description": "Sự miêu tả",
-            "Author": "Tác giả",
-            "SelectCollection": "Chọn bộ sưu tập",
-            "Value": "Giá trị",
-            "AreYouSure": "Bạn có chắc không?",
-            "AuthorInvalid": "Địa chỉ tác giả không hợp lệ!",
-            "Address": "Địa chỉ",
-            "CoverImage": "ảnh bìa",
-            "UploadIcon": "Biểu tượng tải lên",
-            "CommissionAddressInvalid": "Địa chỉ hoa hồng không hợp lệ",
-            "OnSale": "giảm giá",
-            "OffSale": "giảm giá",
-            "CreateCollection": "Tạo bộ sưu tập",
-            "UpdateCollection": "Cập nhật bộ sưu tập",
-            "CollectionInfo": "Thông tin bộ sưu tập",
-            "SelectAuthor": "Chọn tác giả",
-            "NewItem": "Bộ sưu tập NFT mới",
-            "NamePlaceholder": "Nhập tên bộ sưu tập",
-            "DescPlaceholder": "Nhập mô tả bộ sưu tập",
-            "EndingIn": "kết thúc trong",
-            "SubmitSeries": "Gửi một sê-ri"
-        }
-    },
-    "currencies": {
-        "choose": "Chọn một loại tiền tệ"
-    },
-    "connectedAccount": {
-        "Title": "Kết nối tài khoản",
-        "Success": "Thành công",
-        "YourAccountCreated": "Tài khoản của bạn được tạo thành công!",
-        "YourAccountAlreadyCreated": "Tài khoản của bạn đã được tạo và sẵn sàng để sử dụng"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "dự trữToken",
-                        "amount": "Số lượng"
-                    },
-                    "small": {
-                        "reserveToken": "dự trữToken",
-                        "amount": "Số lượng"
-                    }
-                },
-                "placeholders": {
-                    "amount": "số lượng"
-                },
-                "btns": {
-                    "stake": "Cổ phần"
-                },
-                "stake": "Cổ phần",
-                "loading": "Đang tải"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "mã thông báoErc20",
-                    "duration": "Khoảng thời gian",
-                    "bonusTokenFraction": "tiền thưởngTokenPhân số",
-                    "popularToken": "phổ biếnToken",
-                    "donations": "Quyên góp",
-                    "rewardsRateFraction": "phần thưởngTỷ lệPhân số",
-                    "numerator": "tử số",
-                    "denominator": "mẫu số"
-                },
-                "small": {
-                    "tokenErc20": "mã thông báoErc20",
-                    "duration": "Thời lượng tính bằng ngày",
-                    "bonusTokenFraction": "tiền thưởngTokenPhân số",
-                    "popularToken": "phổ biếnToken",
-                    "donations": "Quyên góp",
-                    "rewardsRateFraction": "phần thưởngTỷ lệPhân số",
-                    "numerator": "tử số",
-                    "denominator": "mẫu số"
-                }
-            },
-            "placeholders": {
-                "optional": "(không bắt buộc)",
-                "tuple": "bộ []",
-                "number": "con số",
-                "address": "Địa chỉ",
-                "fraction": "phân số",
-                "integer": "số nguyên",
-                "seconds": "giây",
-                "days": "ngày",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Không có hồ bơi"
-            },
-            "btns": {
-                "createPool": "Tạo hồ bơi",
-                "createPoolInForm": "Tạo nên"
-            },
-            "createPool": "Tạo hồ bơi",
-            "produce": "Sản xuất",
-            "loading": "Đang tải",
-            "viewInstancesList": "Làm mới danh sách"
-        }
-    },
-    "fundrise": {
-        "placeholder": "gõ điều gì đó về sự đóng góp này..."
-    }
+	"errors": {
+		"Error": "L\u1ed7i",
+		"WalletAbsent": "V\u00ed kh\u00f4ng \u0111\u01b0\u1ee3c k\u1ebft n\u1ed1i.",
+		"Rendering": "\u0110\u00e3 x\u1ea3y ra l\u1ed7i khi k\u1ebft xu\u1ea5t <span class='url'>{{1}}</span>",
+		"PriceRequired": "Gi\u00e1 y\u00eau c\u1ea7u!",
+		"NameRequired": "T\u00ean c\u1ea7n thi\u1ebft!",
+		"PriceInvalid": "Gi\u00e1 kh\u00f4ng h\u1ee3p l\u1ec7!",
+		"AmountInvalid": "S\u1ed1 ti\u1ec1n kh\u00f4ng h\u1ee3p l\u1ec7!",
+		"TransactionFailed": "Giao d\u1ecbch kh\u00f4ng th\u00e0nh c\u00f4ng",
+		"ChainNotSupported": "Chu\u1ed7i \u0111\u00e3 ch\u1ecdn kh\u00f4ng \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3. Chu\u1ed7i \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3: {{supportedChain}}",
+		"NeedMetaMaskConnected": "C\u1ea7n k\u1ebft n\u1ed1i MetaMask \u0111\u1ec3 ho\u1ea1t \u0111\u1ed9ng v\u1edbi \u1ee9ng d\u1ee5ng",
+		"UserNotLoggedInMetaMask": "Ng\u01b0\u1eddi d\u00f9ng ch\u01b0a \u0111\u0103ng nh\u1eadp v\u00e0o MetaMask",
+		"CurrencyNotFound": "Kh\u00f4ng t\u00ecm th\u1ea5y ti\u1ec1n t\u1ec7",
+		"WrongChain": "NFT n\u00e0y \u0111\u01b0\u1ee3c t\u1ea1o theo &quot; {{chain}} &quot;. H\u00e3y s\u1eed d\u1ee5ng chu\u1ed7i n\u00e0y.",
+		"NoRecipientSelected": "Kh\u00f4ng c\u00f3 ng\u01b0\u1eddi nh\u1eadn n\u00e0o \u0111\u01b0\u1ee3c ch\u1ecdn",
+		"NotEnoughPermissionsWallet": "Kh\u00f4ng \u0111\u1ee7 quy\u1ec1n \u0111\u1ec3 \u0111\u1ecdc v\u00ed c\u1ee7a ng\u01b0\u1eddi d\u00f9ng n\u00e0y",
+		"ThisUserHaveNoWallet": "Ng\u01b0\u1eddi d\u00f9ng n\u00e0y kh\u00f4ng c\u00f3 v\u00ed \u0111\u01b0\u1ee3c ch\u1ec9 \u0111\u1ecbnh",
+		"TheWalletOfThisUserInvalid": "V\u00ed c\u1ee7a ng\u01b0\u1eddi d\u00f9ng n\u00e0y kh\u00f4ng h\u1ee3p l\u1ec7",
+		"WalletInvalid": "\u0110\u1ecba ch\u1ec9 v\u00ed kh\u00f4ng h\u1ee3p l\u1ec7",
+		"CantManageFrozenSeries": "B\u1ea1n kh\u00f4ng th\u1ec3 qu\u1ea3n l\u00fd s\u00ea-ri b\u1ecb \u0111\u00f3ng b\u0103ng",
+		"SubscriptionStreamNotPaid": "B\u1ea1n ch\u01b0a tr\u1ea3 ti\u1ec1n \u0111\u1ec3 xem n\u1ed9i dung n\u00e0y. H\u00e3y nh\u1ea5n {{subscriptionUrl}} v\u00e0 \u0111\u0103ng k\u00fd g\u00f3i ph\u00f9 h\u1ee3p."
+	},
+	"admin": {
+		"Title": "qu\u1ea3n l\u00fd t\u00e0i s\u1ea3n",
+		"SubscriptionTitle": "k\u1ebf ho\u1ea1ch \u0111\u0103ng k\u00fd"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "Nh\u1ea5n \u0111\u1ec3 thanh to\u00e1n"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : ph\u00ed \u0111\u01b0\u1ee3c x\u1eed l\u00fd cho {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "C\u1ea3m \u01a1n b\u1ea1n \u0111\u00e3 thanh to\u00e1n cho {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} \u0111\u00e3 \u0111\u0103ng k\u00fd th\u00e0nh {{plan.title}}",
+		"YouSubscribedTo": "B\u1ea1n \u0111\u00e3 \u0111\u0103ng k\u00fd {{plan.title}}",
+		"Assets/credits/alert": "B\u1ea1n c\u00f3 c\u1ea3nh b\u00e1o li\u00ean quan \u0111\u1ebfn t\u00e0i kho\u1ea3n c\u1ee7a m\u00ecnh"
+	},
+	"charge": {
+		"Subject": "B\u1ea1n nh\u1eadn \u0111\u01b0\u1ee3c kho\u1ea3n thanh to\u00e1n {{displayAmount}} t\u1eeb {{call 'publisher.displayName'}} b\u1eb1ng &quot; {{description}} &quot;",
+		"HasBeenCharged": "N\u00e0y, \u0111\u00e2y ch\u1ec9 l\u00e0 \u0111\u1ec3 cho b\u1ea1n {{4}} {{1}} \u0111\u00e3 b\u1ecb 1002 t\u00ednh ph\u00ed {{2}} cho {{3}}"
+	},
+	"charged": {
+		"Subject": "C\u1ea3m \u01a1n b\u1ea1n \u0111\u00e3 thanh to\u00e1n cho &quot; {{description}} &quot;",
+		"HavePaid": "Xin ch\u00e0o {{1}} , \u0111\u00e2y ch\u1ec9 l\u00e0 x\u00e1c nh\u1eadn nhanh r\u1eb1ng b\u1ea1n \u0111\u00e3 thanh to\u00e1n th\u00e0nh c\u00f4ng {{2}} \u0111\u1ebfn {{3}} cho {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "Th\u00f4ng tin v\u1ec1 \u0111\u01a1n h\u00e0ng",
+		"PaymentMethod": "Ph\u01b0\u01a1ng th\u1ee9c thanh to\u00e1n",
+		"ContactInfo": "Th\u00f4ng tin li\u00ean l\u1ea1c",
+		"Pay": "Chi tr\u1ea3",
+		"PaymentSucceeded": "Thanh to\u00e1n th\u00e0nh c\u00f4ng",
+		"PaymentProcessing.": "Thanh to\u00e1n c\u1ee7a b\u1ea1n \u0111ang \u0111\u01b0\u1ee3c x\u1eed l\u00fd",
+		"FailTryAgain": "Thanh to\u00e1n c\u1ee7a b\u1ea1n kh\u00f4ng th\u00e0nh c\u00f4ng, vui l\u00f2ng th\u1eed l\u1ea1i",
+		"SomethingWrong": "\u0110\u00e3 x\u1ea3y ra s\u1ef1 c\u1ed1",
+		"PaymentStatus": "T\u00ecnh tr\u1ea1ng thanh to\u00e1n",
+		"PayTo": "tr\u1ea3 {{displayName}}",
+		"ChooseCurrency": "Ch\u1ecdn m\u1ed9t lo\u1ea1i ti\u1ec1n t\u1ec7",
+		"YouCanSendUpTo": "B\u1ea1n c\u00f3 th\u1ec3 g\u1eedi t\u1edbi {{amount}} {{symbol}}",
+		"Send": "G\u1eedi",
+		"EnterAmount": "nh\u1eadp s\u1ed1 ti\u1ec1n"
+	},
+	"credits": {
+		"InviteAcceptedBy": "L\u1eddi m\u1eddi \u0111\u01b0\u1ee3c ch\u1ea5p nh\u1eadn b\u1edfi {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} l\u1ea5p \u0111\u1ea7y {{FilledStreamTitle}}",
+		"ForFillingStream": "\u0110\u1ec3 \u0111i\u1ec1n {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "B\u1ea1n c\u00f3 {{amount}} t\u00edn d\u1ee5ng \u0111\u1ec3 b\u1eaft \u0111\u1ea7u",
+		"PaymentFor": "Thanh to\u00e1n cho &quot; {{1}} &quot;",
+		"PaymentTo": "Thanh to\u00e1n t\u1edbi {{1}}",
+		"PaymentToUser": "Thanh to\u00e1n t\u1edbi {{toUserName}}",
+		"CreatePrivateChat": "\u0111\u1ec3 chat ri\u00eang v\u1edbi {{toUserName}}",
+		"CreatePaidStream": "\u0111\u1ec3 t\u1ea1o {{toStreamName}}",
+		"JoinedPaidStream": "\u0111\u1eb7t tr\u01b0\u1edbc trong &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "\u0111\u1ec3 t\u1ea1o c\u1ed9ng \u0111\u1ed3ng &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "d\u01b0\u1edbi d\u1ea1ng ho\u00e0n ti\u1ec1n \u0111\u1eb7t tr\u01b0\u1edbc trong &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "\u0110\u00e3 mua {{amount}} t\u00edn d\u1ee5ng",
+		"BonusCredits": "Th\u01b0\u1edfng {{amount}} t\u00edn d\u1ee5ng",
+		"BuyAmountCredits": "Mua {{amount}} t\u00edn d\u1ee5ng",
+		"WatchClip": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng \u0111\u1ec3 xem {{fromStreamTitle}}",
+		"MissingCredits": "Thi\u1ebfu t\u00edn d\u1ee5ng",
+		"YouMissingCredits": "B\u1ea1n c\u1ea7n th\u00eam {{amount}} {{currency}} \u0111i\u1ec3m t\u00edn d\u1ee5ng \u0111\u1ec3 ti\u1ebfp t\u1ee5c.",
+		"BuyCredits": "Mua th\u1ebb t\u00edn d\u1ee5ng",
+		"BuyBonus": "Mua {{amount}} t\u00edn d\u1ee5ng c\u00f9ng m\u1ed9t l\u00fac, s\u1ebd d\u1eabn \u0111\u1ebfn {{bonus}} t\u00edn d\u1ee5ng ti\u1ec1n th\u01b0\u1edfng.",
+		"Buy": "Mua",
+		"PurchaseCredits": "Mua t\u00edn d\u1ee5ng",
+		"Credits": "T\u00edn d\u1ee5ng",
+		"ErrorInvalidAmount": "S\u1ed1 ti\u1ec1n kh\u00f4ng h\u1ee3p l\u1ec7",
+		"ErrorInvalidCurrency": "R\u1ea5t ti\u1ebfc, ch\u00fang t\u00f4i ch\u01b0a h\u1ed7 tr\u1ee3 \u0111\u01a1n v\u1ecb ti\u1ec1n t\u1ec7 {{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} t\u00edn ch\u1ec9",
+			"BonusCredits": "{{amount}} t\u00edn ch\u1ec9"
+		}
+	},
+	"history": {
+		"Date": "Ng\u00e0y",
+		"Amount": "S\u1ed1 l\u01b0\u1ee3ng",
+		"Description": "S\u1ef1 mi\u00eau t\u1ea3",
+		"Client": "Kh\u00e1ch h\u00e0ng",
+		"User": "Ng\u01b0\u1eddi d\u00f9ng",
+		"To": "\u0110\u1ebeN",
+		"From": "t\u1eeb",
+		"SeeHistory": "Xem l\u1ecbch s\u1eed thanh to\u00e1n cho {{1}}",
+		"HistoryEmpty": "B\u1ea1n ch\u01b0a c\u00f3 d\u1eef li\u1ec7u",
+		"PaymentFor": "\u0110\u00e3 g\u1eedi {{amount}} t\u00edn d\u1ee5ng",
+		"PaymentTo": "\u0110\u00e3 g\u1eedi {{amount}} t\u00edn d\u1ee5ng",
+		"PaymentToUser": "\u0110\u00e3 g\u1eedi {{amount}} t\u00edn d\u1ee5ng",
+		"CreatePaidStream": "\u0110\u00e3 chi {{amount}} t\u00edn d\u1ee5ng",
+		"WatchClip": {
+			"+": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+			"-": "\u0110\u00e3 chi {{amount}} t\u00edn d\u1ee5ng"
+		},
+		"JoinedPaidStream": {
+			"+": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+			"-": "\u0110\u00e3 chi {{amount}} t\u00edn d\u1ee5ng"
+		},
+		"LeftPaidStream": {
+			"+": "\u0110\u00e3 nh\u1eadn \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+			"-": "\u0110\u00e3 g\u1eedi {{amount}} t\u00edn d\u1ee5ng"
+		},
+		"CreatedCommunity": "\u0110\u00e3 chi {{amount}} t\u00edn d\u1ee5ng",
+		"BoughtCredits": "\u0110\u00e3 mua {{amount}} t\u00edn d\u1ee5ng",
+		"BonusCredits": "C\u00f3 ti\u1ec1n th\u01b0\u1edfng {{amount}} t\u00edn d\u1ee5ng",
+		"InviteAcceptedBy": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"Streams_user_firstname": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"Streams_user_lastname": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"Streams_user_icon": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"Places_user_location": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"Streams_greeting": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"YouHaveCreditsToStart": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"InvitedUserFilledStream": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"ForFillingStream": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng",
+		"CreatePrivateChat": "\u0110\u00e3 chi {{amount}} t\u00edn d\u1ee5ng"
+	},
+	"subscriptions": {
+		"infoTitle": "\u0110\u1eb7t th\u00f4ng tin thanh to\u00e1n",
+		"confirm": {
+			"title": "B\u1eaft \u0111\u1ea7u \u0111\u0103ng k\u00fd",
+			"message": "B\u1eaft \u0111\u1ea7u \u0111\u0103ng k\u00fd \u0111\u1ecbnh k\u1ef3 t\u1edbi &quot; {{title}} &quot;?",
+			"ok": "\u0110\u01af\u1ee2C R\u1ed2I",
+			"cancel": "H\u1ee7y b\u1ecf"
+		},
+		"CreditOrDebitCard": "Th\u1ebb t\u00edn d\u1ee5ng ho\u1eb7c th\u1ebb ghi n\u1ee3",
+		"SubscribePayment": "\u0111\u0103ng k\u00fd thanh to\u00e1n",
+		"ImmediatePayment": "Thanh to\u00e1n ngay",
+		"ProcessingPayment": "x\u1eed l\u00fd thanh to\u00e1n",
+		"SubscriptionAlreadyPaid": "\u0110\u0103ng k\u00fd n\u00e0y \u0111\u00e3 \u0111\u01b0\u1ee3c thanh to\u00e1n",
+		"SubscriptionNotActive": "\u0110\u0103ng k\u00fd n\u00e0y kh\u00f4ng ho\u1ea1t \u0111\u1ed9ng",
+		"Subscribed": "\u0111\u00e3 \u0111\u0103ng k\u00fd",
+		"Unsubscribed": "h\u1ee7y \u0111\u0103ng k\u00fd",
+		"Unsubscribe": "h\u1ee7y \u0111\u0103ng k\u00fd",
+		"Subscribe": "\u0110\u1eb7t mua",
+		"Started": "\u0110\u00e3 b\u1eaft \u0111\u1ea7u",
+		"EndsIn": "K\u1ebft th\u00fac \u1edf",
+		"NextPay": "Thanh to\u00e1n ti\u1ebfp theo",
+		"Period": "Giai \u0111o\u1ea1n",
+		"Price": "Gi\u00e1",
+		"AreYouSureUnsubscribe": "B\u1ea1n c\u00f3 ch\u1eafc ch\u1eafn mu\u1ed1n h\u1ee7y \u0111\u0103ng k\u00fd g\u00f3i n\u00e0y kh\u00f4ng?",
+		"YouUnsubscribedFromPlan": "B\u1ea1n \u0111\u00e3 h\u1ee7y \u0111\u0103ng k\u00fd g\u00f3i &quot; {{planTitle}} &quot;. B\u1ea1n s\u1ebd kh\u00f4ng b\u1ecb t\u00ednh ph\u00ed, nh\u01b0ng \u0111\u0103ng k\u00fd c\u1ee7a b\u1ea1n s\u1ebd ti\u1ebfp t\u1ee5c cho \u0111\u1ebfn {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "ti\u00eau \u0111\u1ec1 k\u1ebf ho\u1ea1ch",
+			"PricePlaceholder": "gi\u00e1",
+			"DescriptionPlaceholder": "m\u00f4 t\u1ea3 k\u1ebf ho\u1ea1ch \u0111\u0103ng k\u00fd",
+			"SavePlan": "L\u01b0u k\u1ebf ho\u1ea1ch",
+			"NewPlan": "K\u1ebf ho\u1ea1ch m\u1edbi",
+			"SubscriptionTitle": "g\u00f3i \u0111\u0103ng k\u00fd",
+			"AreYouSureDeletePlan": "B\u1ea1n c\u00f3 ch\u1eafc ch\u1eafn mu\u1ed1n x\u00f3a k\u1ebf ho\u1ea1ch n\u00e0y kh\u00f4ng?",
+			"Duration": "Kho\u1ea3ng th\u1eddi gian",
+			"Discount": "Gi\u1ea3m gi\u00e1",
+			"Interrupt": "Ng\u1eaft",
+			"Continue": "Ti\u1ebfp t\u1ee5c",
+			"SelectDisplayType": "Ch\u1ecdn {{displayType}}",
+			"EndDate": "ng\u00e0y cu\u1ed1i",
+			"Available": "C\u00f3 s\u1eb5n",
+			"Hidden": "\u1ea8n gi\u1ea5u",
+			"InviteOnly": "Ch\u1ec9 m\u1eddi",
+			"CantSubscribeUnlessInvited": "B\u1ea1n kh\u00f4ng th\u1ec3 \u0111\u0103ng k\u00fd g\u00f3i n\u00e0y tr\u1eeb khi b\u1ea1n \u0111\u01b0\u1ee3c m\u1eddi"
+		}
+	},
+	"payments": {
+		"infoTitle": "\u0110\u1eb7t th\u00f4ng tin thanh to\u00e1n",
+		"BuyAmountCredits": "Mua {{amount}} t\u00edn d\u1ee5ng",
+		"confirm": {
+			"title": "Th\u1ef1c hi\u1ec7n thanh to\u00e1n",
+			"message": "B\u1ea1n c\u00f3 \u0111\u1ed3ng \u00fd tr\u1ea3 {{symbol}} {{amount}} kh\u00f4ng?",
+			"ok": "\u0110\u01af\u1ee2C R\u1ed2I",
+			"cancel": "H\u1ee7y b\u1ecf"
+		},
+		"reasons": {
+			"BuyCredits": "Mua t\u00edn d\u1ee5ng"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "T\u00edn d\u1ee5ng",
+			"description": "theo d\u00f5i c\u00e1c kho\u1ea3n t\u00edn d\u1ee5ng v\u00e0 thanh to\u00e1n"
+		},
+		"Assets/plan": {
+			"displayType": "K\u1ebf ho\u1ea1ch thu\u00ea bao",
+			"description": "k\u1ebf ho\u1ea1ch thu\u00ea bao"
+		},
+		"Assets/subscription": {
+			"displayType": "\u0110\u0103ng k\u00fd",
+			"description": "\u0111\u0103ng k\u00fd"
+		},
+		"Assets/product": {
+			"displayType": "S\u1ea3n ph\u1ea9m",
+			"description": "s\u1ea3n ph\u1ea9m \u0111ang \u0111\u01b0\u1ee3c b\u00e1n"
+		},
+		"Assets/service": {
+			"displayType": "D\u1ecbch v\u1ee5",
+			"description": "d\u1ecbch v\u1ee5 \u0111ang \u0111\u01b0\u1ee3c cung c\u1ea5p"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "Ki\u1ebfm \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng"
+		},
+		"Assets/credits/bought": {
+			"content": "\u0110\u00e3 mua {{amount}} t\u00edn d\u1ee5ng"
+		},
+		"Assets/credits/bonus": {
+			"content": "Th\u01b0\u1edfng {{amount}} t\u00edn d\u1ee5ng"
+		},
+		"Assets/credits/spent": {
+			"content": "\u0110\u00e3 chi {{amount}} t\u00edn d\u1ee5ng"
+		},
+		"Assets/credits/sent": {
+			"content": "\u0110\u00e3 g\u1eedi t\u00edn d\u1ee5ng {{amount}} \u0111\u1ebfn {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "\u0110\u00e3 nh\u1eadn \u0111\u01b0\u1ee3c {{amount}} t\u00edn d\u1ee5ng t\u1eeb {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "B\u1ea1n c\u00f3 \u00edt t\u00edn d\u1ee5ng tr\u00ean t\u00e0i kho\u1ea3n c\u1ee7a m\u00ecnh. Vui l\u00f2ng truy c\u1eadp <a href='<i translate='no'>999&#39;&gt;li\u00ean k\u1ebft n\u00e0y</a> \u0111\u1ec3 mua th\u00eam t\u00edn d\u1ee5ng."
+		}
+	},
+	"billing": {
+		"Title": "thanh to\u00e1n t\u00e0i s\u1ea3n",
+		"CreditsMinimum": "t\u00edn d\u1ee5ng t\u1ed1i thi\u1ec3u",
+		"CreditsToAdd": "T\u00edn d\u1ee5ng \u0111\u1ec3 th\u00eam",
+		"Save": "C\u1ee9u",
+		"ThisLink": "li\u00ean k\u1ebft n\u00e0y",
+		"errors": {
+			"CreditsMinimumNegative": "S\u1ed1 t\u00edn d\u1ee5ng t\u1ed1i thi\u1ec3u kh\u00f4ng \u0111\u01b0\u1ee3c \u00e2m",
+			"CreditsToAddNegative": "T\u00edn d\u1ee5ng \u0111\u1ec3 th\u00eam kh\u00f4ng \u0111\u01b0\u1ee3c \u00e2m"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "D\u1ecbch v\u1ee5 m\u1edbi",
+			"TitlePlaceholder": "ti\u00eau \u0111\u1ec1 d\u1ecbch v\u1ee5",
+			"PricePlaceholder": "\u0110\u1eb7t gi\u00e1",
+			"LinkPlaceholder": "\u0111\u1eb7t li\u00ean k\u1ebft th\u00f4ng tin b\u1ed5 sung",
+			"DescriptionPlaceholder": "D\u1ecbch v\u1ee5 M\u00f4 t\u1ea3",
+			"SaveService": "L\u01b0u d\u1ecbch v\u1ee5",
+			"SelectRequiredParticipants": "Ng\u01b0\u1eddi tham gia li\u00ean quan b\u1eaft bu\u1ed9c",
+			"RequiredParticipantsDesc": "Vui l\u00f2ng ch\u1ecdn nh\u1eefng ng\u01b0\u1eddi tham gia c\u00f3 li\u00ean quan \u0111\u01b0\u1ee3c y\u00eau c\u1ea7u s\u1eed d\u1ee5ng d\u1ecbch v\u1ee5 n\u00e0y (v\u00ed d\u1ee5: th\u00fa c\u01b0ng cho &quot;Bu\u1ed5i tr\u00ecnh di\u1ec5n ch\u00f3&quot; ho\u1eb7c tr\u1ebb em cho &quot;Ng\u00e0y l\u1ec5 c\u1ee7a tr\u1ebb em&quot;, v.v.). N\u1ebfu d\u1ecbch v\u1ee5 \u0111\u01b0\u1ee3c tr\u1ea3 ti\u1ec1n, ng\u01b0\u1eddi d\u00f9ng c\u0169ng s\u1ebd ph\u1ea3i tr\u1ea3 ti\u1ec1n cho t\u1eebng ng\u01b0\u1eddi tham gia c\u00f3 li\u00ean quan."
+		},
+		"EditServiceTemplate": {
+			"Title": "Ch\u1ec9nh s\u1eeda d\u1ecbch v\u1ee5"
+		},
+		"ManageServiceTemplates": "Qu\u1ea3n l\u00fd m\u1eabu d\u1ecbch v\u1ee5",
+		"ManageServices": "Qu\u1ea3n l\u00fd d\u1ecbch v\u1ee5",
+		"Free": "Mi\u1ec5n ph\u00ed",
+		"OptionalContribution": "\u0111\u00f3ng g\u00f3p t\u00f9y ch\u1ecdn",
+		"RequiredPayment": "thanh to\u00e1n b\u1eaft bu\u1ed9c",
+		"AreYouSureDelete": "B\u1ea1n c\u00f3 ch\u1eafc ch\u1eafn mu\u1ed1n x\u00f3a d\u1ecbch v\u1ee5 n\u00e0y kh\u00f4ng?",
+		"AmountServicesRelated": "C\u00f3 {{amount}} kh\u1ea3 d\u1ee5ng li\u00ean quan \u0111\u1ebfn d\u1ecbch v\u1ee5 n\u00e0y. H\u1ecd c\u0169ng s\u1ebd \u0111\u01b0\u1ee3c g\u1ee1 b\u1ecf."
+	},
+	"transfer": {
+		"SelectRecipient": "Ch\u1ecdn ng\u01b0\u1eddi nh\u1eadn",
+		"TransactionSuccess": "Giao d\u1ecbch th\u00e0nh c\u00f4ng",
+		"OrTypeWalletAddress": "HO\u1eb6C nh\u1eadp \u0111\u1ecba ch\u1ec9 v\u00ed c\u1ee7a ng\u01b0\u1eddi nh\u1eadn",
+		"AppCredits": "T\u00edn d\u1ee5ng \u1ee9ng d\u1ee5ng"
+	},
+	"NFT": {
+		"Title": "Ti\u00eau \u0111\u1ec1",
+		"Name": "T\u00ean",
+		"EnterName": "Nh\u1eadp t\u00ean",
+		"EnterAuthorWallet": "Nh\u1eadp v\u00ed t\u00e1c gi\u1ea3",
+		"InformationAboutTitle": "Th\u00f4ng tin v\u1ec1 {{title}} NFT",
+		"Description": "S\u1ef1 mi\u00eau t\u1ea3",
+		"DetailedInformationAboutNFT": "Th\u00f4ng tin chi ti\u1ebft v\u1ec1 NFT",
+		"PresaleStarts": "B\u1eaft \u0111\u1ea7u b\u00e1n tr\u01b0\u1edbc ng\u00e0y 23 th\u00e1ng 12",
+		"OwnerUserNotFound": "Ch\u1ee7 s\u1edf h\u1eefu c\u1ee7a NFT n\u00e0y ch\u01b0a \u0111\u01b0\u1ee3c \u0111\u0103ng k\u00fd trong \u1ee9ng d\u1ee5ng c\u1ee7a ch\u00fang t\u00f4i.",
+		"BuyNow": "Mua ngay",
+		"Buy": "Mua",
+		"Add": "Th\u00eam v\u00e0o",
+		"Remove": "Di d\u1eddi",
+		"NoNFTyet": "Ch\u01b0a c\u00f3 NFT n\u00e0o",
+		"Conversation": "Cu\u1ed9c h\u1ed9i tho\u1ea1i",
+		"Create": "T\u1ea1o n\u00ean",
+		"CurrentBid": "gi\u00e1 th\u1ea7u hi\u1ec7n t\u1ea1i",
+		"StartingIn": "b\u1eaft \u0111\u1ea7u t\u1eeb",
+		"EndingIn": "k\u1ebft th\u00fac trong",
+		"CreateNFT": "T\u1ea1o NFT",
+		"TitlePlaceholder": "\u0110\u1eb7t ti\u00eau \u0111\u1ec1 cho NFT c\u1ee7a b\u1ea1n",
+		"DescriptionPlaceholder": "Cung c\u1ea5p cho NFT c\u1ee7a b\u1ea1n m\u1ed9t m\u00f4 t\u1ea3",
+		"CreateYourNFT": "T\u1ea1o NFT c\u1ee7a b\u1ea1n",
+		"Royalties": "ti\u1ec1n b\u1ea3n quy\u1ec1n",
+		"RoyaltyPlaceholder": "Kh\u00f4ng b\u1eaft bu\u1ed9c. S\u1ed1 ti\u1ec1n \u0111\u00e3 tr\u1ea3 cho ng\u01b0\u1eddi s\u00e1ng t\u1ea1o tr\u01b0\u1edbc khi chuy\u1ec3n.",
+		"ExpirationDate": "Ng\u00e0y h\u1ebft h\u1ea1n",
+		"StartingDate": "Ng\u00e0y b\u1eaft \u0111\u1ea7u",
+		"BidsBelowThisAmount": "Gi\u00e1 th\u1ea7u d\u01b0\u1edbi s\u1ed1 ti\u1ec1n n\u00e0y s\u1ebd kh\u00f4ng \u0111\u01b0\u1ee3c ph\u00e9p",
+		"MinimumBid": "Gi\u00e1 t\u1ed1i thi\u1ec3u",
+		"Author": "T\u00e1c gi\u1ea3",
+		"Price": "Gi\u00e1",
+		"Commission": "Nhi\u1ec7m v\u1ee5",
+		"EnterCommission": "Nh\u1eadp ti\u1ec1n hoa h\u1ed3ng",
+		"Owner": "Ng\u01b0\u1eddi s\u1edf h\u1eefu",
+		"SelectCategory": "Ch\u1ecdn danh m\u1ee5c",
+		"Day": "Ng\u00e0y",
+		"Days": "ng\u00e0y",
+		"Hour": "Gi\u1edd",
+		"Hours": "Gi\u1edd",
+		"Minute": "Ph\u00fat",
+		"Minutes": "Ph\u00fat",
+		"Second": "Th\u1ee9 hai",
+		"Seconds": "gi\u00e2y",
+		"SalesCreator": "doanh thu s\u1ebd thu\u1ed9c v\u1ec1 ng\u01b0\u1eddi s\u00e1ng t\u1ea1o",
+		"Details": "Chi ti\u1ebft",
+		"Bids": "gi\u00e1 th\u1ea7u",
+		"History": "L\u1ecbch s\u1eed",
+		"LoremIpsum": "Lorem Ipsum ch\u1ec9 \u0111\u01a1n gi\u1ea3n l\u00e0 v\u0103n b\u1ea3n gi\u1ea3 c\u1ee7a ng\u00e0nh c\u00f4ng nghi\u1ec7p in \u1ea5n v\u00e0 s\u1eafp ch\u1eef.",
+		"PutOnSale": "\u0110\u01b0a v\u00e0o b\u00e1n",
+		"PutOffSale": "R\u00fat kh\u1ecfi b\u00e1n",
+		"Transfer": "Chuy\u1ec3n kho\u1ea3n",
+		"Actions": "h\u00e0nh \u0111\u1ed9ng",
+		"Claim": "Kh\u1eb3ng \u0111\u1ecbnh",
+		"ClaimNFT": "Y\u00eau c\u1ea7u NFT",
+		"Unlocking": "M\u1edf kh\u00f3a",
+		"Unlock": "m\u1edf kh\u00f3a",
+		"Update": "C\u1eadp nh\u1eadt",
+		"UpdateToken": "C\u1eadp nh\u1eadt m\u00e3 th\u00f4ng b\u00e1o",
+		"UpdateNFT": "C\u1eadp nh\u1eadt NFT",
+		"CreateToken": "T\u1ea1o m\u00e3 th\u00f4ng b\u00e1o",
+		"PlaceBid": "\u0110\u1eb7t gi\u00e1 th\u1ea7u",
+		"SoldOut": "\u0110\u00e3 b\u00e1n",
+		"NotOnSale": "Kh\u00f4ng Gi\u1ea3m Gi\u00e1",
+		"NftName": "t\u00ean NFT",
+		"DescribeYourNFT": "Vui l\u00f2ng m\u00f4 t\u1ea3 NFT c\u1ee7a b\u1ea1n",
+		"NFTImage": "H\u00ecnh \u1ea3nh cho NFT",
+		"NFTVideo": "Video cho NFT, n\u1ebfu c\u00f3",
+		"UploadMovie": "t\u1ea3i phim l\u00ean",
+		"MovieSource": "Ngu\u1ed3n Phim",
+		"MovieURL": "URL phim",
+		"UploadFile": "T\u1ea3i l\u00ean m\u1ed9t t\u00e0i li\u1ec7u",
+		"PutOnMarketplace": "\u0110\u01b0a ra th\u1ecb tr\u01b0\u1eddng",
+		"InstantPurchase": "Nh\u1eadp gi\u00e1 \u0111\u1ec3 cho ph\u00e9p ng\u01b0\u1eddi d\u00f9ng mua ngay NFT c\u1ee7a b\u1ea1n",
+		"FixedPrice": "Gi\u00e1 c\u1ed1 \u0111\u1ecbnh",
+		"TimedAuction": "\u0111\u1ea5u gi\u00e1 theo th\u1eddi gian",
+		"OpenForBids": "m\u1edf cho gi\u00e1 th\u1ea7u",
+		"PriceOnePiece": "Nh\u1eadp gi\u00e1 cho m\u1ed9t m\u1ea3nh",
+		"EnterPrice": "Nh\u1eadp gi\u00e1",
+		"EnterMinimumBid": "Nh\u1eadp Gi\u00e1 th\u1ea7u t\u1ed1i thi\u1ec3u",
+		"SelectChain": "Ch\u1ecdn chu\u1ed7i",
+		"Currency": "Ti\u1ec1n t\u1ec7",
+		"AreYouSureDeleteImage": "B\u1ea1n c\u00f3 ch\u1eafc ch\u1eafn mu\u1ed1n x\u00f3a h\u00ecnh \u1ea3nh kh\u00f4ng?",
+		"AreYouSureDeleteVideo": "B\u1ea1n c\u00f3 ch\u1eafc ch\u1eafn mu\u1ed1n x\u00f3a video kh\u00f4ng?",
+		"series": {
+			"Name": "T\u00ean",
+			"Icon": "Bi\u1ec3u t\u01b0\u1ee3ng",
+			"Description": "S\u1ef1 mi\u00eau t\u1ea3",
+			"Author": "T\u00e1c gi\u1ea3",
+			"SelectSeries": "Ch\u1ecdn s\u00ea-ri",
+			"Value": "Gi\u00e1 tr\u1ecb",
+			"AreYouSure": "B\u1ea1n c\u00f3 ch\u1eafc kh\u00f4ng?",
+			"AuthorInvalid": "\u0110\u1ecba ch\u1ec9 t\u00e1c gi\u1ea3 kh\u00f4ng h\u1ee3p l\u1ec7!",
+			"Address": "\u0110\u1ecba ch\u1ec9",
+			"CoverImage": "\u1ea3nh b\u00eca",
+			"UploadCoverImage": "T\u1ea3i \u1ea3nh b\u00eca l\u00ean",
+			"CommissionAddressInvalid": "\u0110\u1ecba ch\u1ec9 hoa h\u1ed3ng kh\u00f4ng h\u1ee3p l\u1ec7",
+			"OnSale": "gi\u1ea3m gi\u00e1",
+			"OffSale": "gi\u1ea3m gi\u00e1",
+			"CreateSeries": "T\u1ea1o s\u00ea-ri",
+			"UpdateSeries": "D\u00f2ng c\u1eadp nh\u1eadt",
+			"SeriesInfo": "Th\u00f4ng tin s\u00ea-ri",
+			"SelectAuthor": "Ch\u1ecdn t\u00e1c gi\u1ea3",
+			"NewItem": "D\u00f2ng NFT m\u1edbi",
+			"NamePlaceholder": "Nh\u1eadp t\u00ean s\u00ea-ri",
+			"DescPlaceholder": "Nh\u1eadp m\u00f4 t\u1ea3 s\u00ea-ri",
+			"EndingIn": "k\u1ebft th\u00fac trong"
+		},
+		"contract": {
+			"CreateContract": "T\u1ea1o h\u1ee3p \u0111\u1ed3ng",
+			"SelectContract": "Ch\u1ecdn h\u1ee3p \u0111\u1ed3ng",
+			"CreateContractFor": "T\u1ea1o h\u1ee3p \u0111\u1ed3ng cho {{userName}}",
+			"ContractFor": "H\u1ee3p \u0111\u1ed3ng cho {{userName}}",
+			"UpdateContract": "C\u1eadp nh\u1eadt h\u1ee3p \u0111\u1ed3ng",
+			"TransferOwnership": "Chuy\u1ec3n nh\u01b0\u1ee3ng quy\u1ec1n s\u1edf h\u1eefu",
+			"SetBaseURI": "\u0110\u1eb7t URI c\u01a1 s\u1edf",
+			"SetSuffix": "\u0110\u1eb7t h\u1eadu t\u1ed1",
+			"CurrentOwner": "Ng\u01b0\u1eddi ch\u1ee7 hi\u1ec7n t\u1ea1i",
+			"CurrentBaseURL": "BaseURL hi\u1ec7n t\u1ea1i",
+			"ContractAddressAbsent": "\u0110\u1ecba ch\u1ec9 h\u1ee3p \u0111\u1ed3ng v\u1eafng m\u1eb7t",
+			"FactoryAddressAbsent": "\u0111\u1ecba ch\u1ec9 nh\u00e0 m\u00e1y v\u1eafng m\u1eb7t",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "ti\u00eau \u0111\u1ec1 b\u1eaft bu\u1ed9c",
+			"SymbolRequired": "Y\u00eau c\u1ea7u k\u00fd hi\u1ec7u",
+			"TypeContractName": "t\u00ean h\u1ee3p \u0111\u1ed3ng",
+			"TypeContractSymbol": "k\u00fd hi\u1ec7u h\u1ee3p \u0111\u1ed3ng (t\u1ed1i \u0111a 10 k\u00fd t\u1ef1)"
+		},
+		"contests": {
+			"Title": "cu\u1ed9c thi",
+			"NewContest": "Cu\u1ed9c thi m\u1edbi"
+		},
+		"import": {
+			"importNFT": "Nh\u1eadp kh\u1ea9u NFT",
+			"importAttributes": "Nh\u1eadp thu\u1ed9c t\u00ednh NFT",
+			"fileNotFound": "R\u1ea5t ti\u1ebfc, kh\u00f4ng t\u00ecm th\u1ea5y t\u1ec7p CSV.",
+			"fileEmpty": "R\u1ea5t ti\u1ebfc, t\u1ec7p CSV tr\u1ed1ng.",
+			"userIdNotFound": "ng\u01b0\u1eddi d\u00f9ng t\u1ed3n t\u1ea1i nh\u01b0ng id tr\u1ed1ng",
+			"errorLine": "d\u00f2ng {{1}}",
+			"fieldNotFound": "Kh\u00f4ng t\u00ecm th\u1ea5y tr\u01b0\u1eddng b\u1eaft bu\u1ed9c &quot; {{1}} &quot;",
+			"displayTypeEmpty": "Kh\u00f4ng t\u00ecm th\u1ea5y lo\u1ea1i hi\u1ec3n th\u1ecb cho &quot; {{1}} &quot;",
+			"taskStreamInvalid": "lu\u1ed3ng nhi\u1ec7m v\u1ee5 kh\u00f4ng h\u1ee3p l\u1ec7",
+			"instructionsEmpty": "h\u01b0\u1edbng d\u1eabn lu\u1ed3ng nhi\u1ec7m v\u1ee5 tr\u1ed1ng",
+			"complete": "Ho\u00e0n th\u00e0nh",
+			"activateUsers": "g\u1eedi tin nh\u1eafn k\u00edch ho\u1ea1t cho ng\u01b0\u1eddi d\u00f9ng?",
+			"importProgress": "Ti\u1ebfn tri\u1ec3n",
+			"importOptions": "T\u00f9y ch\u1ecdn",
+			"sampleCSV": "T\u1ea3i xu\u1ed1ng CSV m\u1eabu",
+			"fileLabel": "T\u1ea3i l\u00ean b\u1ea3ng t\u00ednh:",
+			"errorsTitle": "\u0110\u00e3 x\u1ea3y ra l\u1ed7i"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "L\u1ecdc theo B\u1ed9 s\u01b0u t\u1eadp NFT",
+				"ShowNFTCollection": "Hi\u1ec3n th\u1ecb b\u1ed9 s\u01b0u t\u1eadp NFT trong ...",
+				"AllCollections": "T\u1ea5t c\u1ea3 b\u1ed9 s\u01b0u t\u1eadp"
+			},
+			"ByUser": {
+				"AllAuthors": "T\u1ea5t c\u1ea3 c\u00e1c t\u00e1c gi\u1ea3",
+				"AllUsers": "M\u1ecdi ng\u01b0\u1eddi",
+				"FilterByAuthors": "L\u1ecdc theo t\u00e1c gi\u1ea3"
+			}
+		},
+		"Back": "Quay l\u1ea1i B\u1ed9 s\u01b0u t\u1eadp",
+		"attributes": {
+			"Title": "Qu\u1ea3n l\u00fd thu\u1ed9c t\u00ednh",
+			"Attributes": "Thu\u1ed9c t\u00ednh",
+			"DisplayTitle": "Lo\u1ea1i m\u00e0n h\u00ecnh",
+			"AddDisplayType": "Th\u00eam ki\u1ec3u hi\u1ec3n th\u1ecb m\u1edbi",
+			"NewDisplay": "M\u00e0n h\u00ecnh m\u1edbi",
+			"TraitTitle": "Lo\u1ea1i \u0111\u1eb7c \u0111i\u1ec3m",
+			"AddTraitTitle": "Th\u00eam lo\u1ea1i \u0111\u1eb7c \u0111i\u1ec3m m\u1edbi",
+			"NewTrait": "Lo\u1ea1i \u0111\u1eb7c \u0111i\u1ec3m m\u1edbi",
+			"ValueTitle": "Gi\u00e1 tr\u1ecb",
+			"AddValueTitle": "Th\u00eam gi\u00e1 tr\u1ecb m\u1edbi",
+			"NewValue": "Gi\u00e1 tr\u1ecb m\u1edbi",
+			"NewAttribute": "Thu\u1ed9c t\u00ednh m\u1edbi",
+			"UpdateAttributes": "C\u1eadp nh\u1eadt thu\u1ed9c t\u00ednh",
+			"SaveAttributes": "L\u01b0u thu\u1ed9c t\u00ednh"
+		},
+		"profile": {
+			"LogOut": "\u0110\u0103ng xu\u1ea5t",
+			"Title": "H\u1ed3 s\u01a1 cho {{userName}}",
+			"Description": "Chi ti\u1ebft ng\u01b0\u1eddi d\u00f9ng",
+			"aboutPlaceholder": "Ch\u1ec9nh s\u1eeda ti\u1ec3u s\u1eed",
+			"SureLogOut": "B\u1ea1n c\u00f3 ch\u1eafc ch\u1eafn b\u1ea1n mu\u1ed1n tho\u00e1t?",
+			"UploadCoverPhoto": "T\u1ea3i \u1ea3nh b\u00eca l\u00ean"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "H\u1ee3p \u0111\u1ed3ng NFT",
+						"seriesId": "m\u00e3 s\u00ea-ri",
+						"owner": "Ng\u01b0\u1eddi s\u1edf h\u1eefu",
+						"currency": "ti\u1ec1n t\u1ec7",
+						"price": "Gi\u00e1",
+						"beneficiary": "ng\u01b0\u1eddi th\u1ee5 h\u01b0\u1edfng",
+						"autoindex": "l\u1eadp ch\u1ec9 m\u1ee5c t\u1ef1 \u0111\u1ed9ng",
+						"duration": "Kho\u1ea3ng th\u1eddi gian",
+						"rateInterval": "kho\u1ea3ng t\u1ef7 l\u1ec7",
+						"rateAmount": "T\u1ef7 l\u1ec7 s\u1ed1 ti\u1ec1n"
+					},
+					"small": {
+						"NFTContract": "H\u1ee3p \u0111\u1ed3ng NFT",
+						"seriesId": "m\u00e3 th\u00f4ng b\u00e1o s\u1ebd \u0111\u01b0\u1ee3c \u0111\u00fac trong chu\u1ed7i n\u00e0y",
+						"owner": "ch\u1ee7 s\u1edf h\u1eefu c\u1ee7a v\u00ed d\u1ee5, n\u1ebfu kh\u00f4ng s\u1ebd l\u00e0 ng\u01b0\u1eddi g\u1eedi",
+						"currency": "\u0110\u01a1n v\u1ecb ti\u1ec1n t\u1ec7 cho m\u00e3 th\u00f4ng b\u00e1o \u0111\u00e3 mua, n\u1ebfu b\u1eb1ng 0 - \u0111\u1ed1i v\u1edbi ti\u1ec1n b\u1ea3n \u0111\u1ecba",
+						"price": "Gi\u00e1",
+						"beneficiary": "Ng\u01b0\u1eddi th\u1ee5 h\u01b0\u1edfng vi\u1ec7c b\u00e1n m\u00e3 th\u00f4ng b\u00e1o, n\u1ebfu kh\u00f4ng s\u1ebd l\u00e0 ng\u01b0\u1eddi g\u1eedi",
+						"autoindex": "l\u1eadp ch\u1ec9 m\u1ee5c t\u1ef1 \u0111\u1ed9ng",
+						"duration": "Kh\u00f3a sau khi \u0111\u00fac. Kh\u00f4ng c\u00f3 ngh\u0129a l\u00e0 c\u00f3 \u0111\u01b0\u1ee3c n\u00f3 ngay l\u1eadp t\u1ee9c.",
+						"rateInterval": "kho\u1ea3ng th\u1eddi gian x\u00f4 \u0111\u1ec3 mua \u0111\u1eb7c bi\u1ec7t",
+						"rateAmount": "s\u1ed1 l\u01b0\u1ee3ng th\u00f9ng \u0111\u1ec3 mua \u0111\u1eb7c bi\u1ec7t"
+					}
+				},
+				"placeholders": {
+					"optional": "(kh\u00f4ng b\u1eaft bu\u1ed9c)",
+					"number": "con s\u1ed1",
+					"address": "\u0110\u1ecba ch\u1ec9",
+					"fraction": "ph\u00e2n s\u1ed1",
+					"integer": "s\u1ed1 nguy\u00ean",
+					"seconds": "gi\u00e2y",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "S\u1ea3n xu\u1ea5t",
+				"viewInstancesList": "L\u00e0m m\u1edbi danh s\u00e1ch"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "M\u00e3 s\u00ea-ri",
+						"account": "T\u00e0i kho\u1ea3n",
+						"amount": "S\u1ed1 l\u01b0\u1ee3ng"
+					},
+					"small": {
+						"seriesId": "m\u00e3 th\u00f4ng b\u00e1o m\u1edbi s\u1ebd thu\u1ed9c chu\u1ed7i c\u00f3 ID nh\u01b0 v\u1eady",
+						"account": "ch\u1ee7 s\u1edf h\u1eefu c\u1ee7a NFT m\u1edbi \u0111\u01b0\u1ee3c t\u1ea1o. n\u1ebfu kh\u00f4ng \u0111\u01b0\u1ee3c \u0111\u1eb7t - s\u1ebd s\u1eed d\u1ee5ng v\u00ed hi\u1ec7n t\u1ea1i",
+						"amount": "s\u1ed1 l\u01b0\u1ee3ng NFT \u0111\u1ec3 \u0111\u00fac"
+					}
+				},
+				"placeholders": {
+					"optional": "(kh\u00f4ng b\u1eaft bu\u1ed9c)",
+					"seriesId": "nh\u1eadn d\u1ea1ng",
+					"account": "t\u00e0i kho\u1ea3n",
+					"amount": "s\u1ed1 l\u01b0\u1ee3ng",
+					"integer": "s\u1ed1 nguy\u00ean"
+				},
+				"btn": {
+					"Purchase": "Mua",
+					"SpecialPurchase": "mua h\u00e0ng \u0111\u1eb7c bi\u1ec7t"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "\u0110\u1ecba ch\u1ec9"
+					},
+					"small": {
+						"account": "\u0110\u1ecba ch\u1ec9"
+					}
+				},
+				"errors": {
+					"invalidAddress": "\u0110\u1ecba ch\u1ec9 kh\u00f4ng h\u1ee3p l\u1ec7"
+				},
+				"placeholders": {
+					"account": "\u0110\u1ecba ch\u1ec9"
+				},
+				"addToWhitelist": "Th\u00eam v\u00e0o danh s\u00e1ch tr\u1eafng",
+				"removeFromWhitelist": "X\u00f3a kh\u1ecfi danh s\u00e1ch tr\u1eafng"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "ID m\u00e3 th\u00f4ng b\u00e1o",
+					"custodian": "gi\u00e1m h\u1ed9",
+					"recipient": "Ng\u01b0\u1eddi nh\u1eadn"
+				},
+				"small": {
+					"tokenId": "id m\u00e3 th\u00f4ng b\u00e1o c\u1ea7n kh\u00f3a ho\u1eb7c m\u1edf kh\u00f3a",
+					"custodian": "\u0111\u1ecba ch\u1ec9 c\u00f3 th\u1ec3 m\u1edf kh\u00f3a",
+					"recipient": "\u0111\u1ecba ch\u1ec9 s\u1ebd nh\u1eadn m\u00e3 th\u00f4ng b\u00e1o"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "Id m\u00e3 th\u00f4ng b\u00e1o kh\u00f4ng h\u1ee3p l\u1ec7",
+				"invalidCustodian": "Ng\u01b0\u1eddi gi\u00e1m h\u1ed9 kh\u00f4ng h\u1ee3p l\u1ec7",
+				"invalidRecipient": "Ng\u01b0\u1eddi nh\u1eadn kh\u00f4ng h\u1ee3p l\u1ec7"
+			},
+			"placeholders": {
+				"optional": "(kh\u00f4ng b\u1eaft bu\u1ed9c)",
+				"tokenId": "nh\u1eadn d\u1ea1ng",
+				"custodian": "\u0110\u1ecba ch\u1ec9"
+			},
+			"Lock": "Kho\u0301a",
+			"Unlock": "m\u1edf kh\u00f3a",
+			"Locked": "\u0110\u00e3 kh\u00f3a",
+			"CustodianAddress": "\u0111\u1ecba ch\u1ec9 ng\u01b0\u1eddi gi\u00e1m h\u1ed9",
+			"TokenWasClaimed": "M\u00e3 th\u00f4ng b\u00e1o &quot; {{title}} &quot; \u0111\u00e3 \u0111\u01b0\u1ee3c y\u00eau c\u1ea7u",
+			"TokenWasLocked": "Token &quot; {{title}} &quot; \u0111\u00e3 b\u1ecb kh\u00f3a",
+			"TokenWasUnlocked": "M\u00e3 th\u00f4ng b\u00e1o &quot; {{title}} &quot; \u0111\u00e3 \u0111\u01b0\u1ee3c m\u1edf kh\u00f3a"
+		},
+		"GenerateDescription": "ho\u1eb7c t\u1ef1 \u0111\u1ed9ng t\u1ea1o",
+		"collections": {
+			"Title": "b\u1ed9 s\u01b0u t\u1eadp",
+			"EnterTitle": "nh\u1eadp ti\u00eau \u0111\u1ec1",
+			"EnterDescription": "Nh\u1eadp m\u00f4 t\u1ea3",
+			"NewCollection": "B\u1ed9 s\u01b0u t\u1eadp m\u1edbi",
+			"Name": "T\u00ean",
+			"Icon": "Bi\u1ec3u t\u01b0\u1ee3ng",
+			"Description": "S\u1ef1 mi\u00eau t\u1ea3",
+			"Author": "T\u00e1c gi\u1ea3",
+			"SelectCollection": "Ch\u1ecdn b\u1ed9 s\u01b0u t\u1eadp",
+			"Value": "Gi\u00e1 tr\u1ecb",
+			"AreYouSure": "B\u1ea1n c\u00f3 ch\u1eafc kh\u00f4ng?",
+			"AuthorInvalid": "\u0110\u1ecba ch\u1ec9 t\u00e1c gi\u1ea3 kh\u00f4ng h\u1ee3p l\u1ec7!",
+			"Address": "\u0110\u1ecba ch\u1ec9",
+			"CoverImage": "\u1ea3nh b\u00eca",
+			"UploadIcon": "Bi\u1ec3u t\u01b0\u1ee3ng t\u1ea3i l\u00ean",
+			"CommissionAddressInvalid": "\u0110\u1ecba ch\u1ec9 hoa h\u1ed3ng kh\u00f4ng h\u1ee3p l\u1ec7",
+			"OnSale": "gi\u1ea3m gi\u00e1",
+			"OffSale": "gi\u1ea3m gi\u00e1",
+			"CreateCollection": "T\u1ea1o b\u1ed9 s\u01b0u t\u1eadp",
+			"UpdateCollection": "C\u1eadp nh\u1eadt b\u1ed9 s\u01b0u t\u1eadp",
+			"CollectionInfo": "Th\u00f4ng tin b\u1ed9 s\u01b0u t\u1eadp",
+			"SelectAuthor": "Ch\u1ecdn t\u00e1c gi\u1ea3",
+			"NewItem": "B\u1ed9 s\u01b0u t\u1eadp NFT m\u1edbi",
+			"NamePlaceholder": "Nh\u1eadp t\u00ean b\u1ed9 s\u01b0u t\u1eadp",
+			"DescPlaceholder": "Nh\u1eadp m\u00f4 t\u1ea3 b\u1ed9 s\u01b0u t\u1eadp",
+			"EndingIn": "k\u1ebft th\u00fac trong",
+			"SubmitSeries": "G\u1eedi m\u1ed9t s\u00ea-ri"
+		}
+	},
+	"currencies": {
+		"choose": "Ch\u1ecdn m\u1ed9t lo\u1ea1i ti\u1ec1n t\u1ec7"
+	},
+	"connectedAccount": {
+		"Title": "K\u1ebft n\u1ed1i t\u00e0i kho\u1ea3n",
+		"Success": "Th\u00e0nh c\u00f4ng",
+		"YourAccountCreated": "T\u00e0i kho\u1ea3n c\u1ee7a b\u1ea1n \u0111\u01b0\u1ee3c t\u1ea1o th\u00e0nh c\u00f4ng!",
+		"YourAccountAlreadyCreated": "T\u00e0i kho\u1ea3n c\u1ee7a b\u1ea1n \u0111\u00e3 \u0111\u01b0\u1ee3c t\u1ea1o v\u00e0 s\u1eb5n s\u00e0ng \u0111\u1ec3 s\u1eed d\u1ee5ng"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "d\u1ef1 tr\u1eefToken",
+						"amount": "S\u1ed1 l\u01b0\u1ee3ng"
+					},
+					"small": {
+						"reserveToken": "d\u1ef1 tr\u1eefToken",
+						"amount": "S\u1ed1 l\u01b0\u1ee3ng"
+					}
+				},
+				"placeholders": {
+					"amount": "s\u1ed1 l\u01b0\u1ee3ng"
+				},
+				"btns": {
+					"stake": "C\u1ed5 ph\u1ea7n"
+				},
+				"stake": "C\u1ed5 ph\u1ea7n",
+				"loading": "\u0110ang t\u1ea3i"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "m\u00e3 th\u00f4ng b\u00e1oErc20",
+					"duration": "Kho\u1ea3ng th\u1eddi gian",
+					"bonusTokenFraction": "ti\u1ec1n th\u01b0\u1edfngTokenPh\u00e2n s\u1ed1",
+					"popularToken": "ph\u1ed5 bi\u1ebfnToken",
+					"donations": "Quy\u00ean g\u00f3p",
+					"rewardsRateFraction": "ph\u1ea7n th\u01b0\u1edfngT\u1ef7 l\u1ec7Ph\u00e2n s\u1ed1",
+					"numerator": "t\u1eed s\u1ed1",
+					"denominator": "m\u1eabu s\u1ed1"
+				},
+				"small": {
+					"tokenErc20": "m\u00e3 th\u00f4ng b\u00e1oErc20",
+					"duration": "Th\u1eddi l\u01b0\u1ee3ng t\u00ednh b\u1eb1ng ng\u00e0y",
+					"bonusTokenFraction": "ti\u1ec1n th\u01b0\u1edfngTokenPh\u00e2n s\u1ed1",
+					"popularToken": "ph\u1ed5 bi\u1ebfnToken",
+					"donations": "Quy\u00ean g\u00f3p",
+					"rewardsRateFraction": "ph\u1ea7n th\u01b0\u1edfngT\u1ef7 l\u1ec7Ph\u00e2n s\u1ed1",
+					"numerator": "t\u1eed s\u1ed1",
+					"denominator": "m\u1eabu s\u1ed1"
+				}
+			},
+			"placeholders": {
+				"optional": "(kh\u00f4ng b\u1eaft bu\u1ed9c)",
+				"tuple": "b\u1ed9 []",
+				"number": "con s\u1ed1",
+				"address": "\u0110\u1ecba ch\u1ec9",
+				"fraction": "ph\u00e2n s\u1ed1",
+				"integer": "s\u1ed1 nguy\u00ean",
+				"seconds": "gi\u00e2y",
+				"days": "ng\u00e0y",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Kh\u00f4ng c\u00f3 h\u1ed3 b\u01a1i"
+			},
+			"btns": {
+				"createPool": "T\u1ea1o h\u1ed3 b\u01a1i",
+				"createPoolInForm": "T\u1ea1o n\u00ean"
+			},
+			"createPool": "T\u1ea1o h\u1ed3 b\u01a1i",
+			"produce": "S\u1ea3n xu\u1ea5t",
+			"loading": "\u0110ang t\u1ea3i",
+			"viewInstancesList": "L\u00e0m m\u1edbi danh s\u00e1ch"
+		}
+	},
+	"fundrise": {
+		"placeholder": "g\u00f5 \u0111i\u1ec1u g\u00ec \u0111\u00f3 v\u1ec1 s\u1ef1 \u0111\u00f3ng g\u00f3p n\u00e0y..."
+	}
 }

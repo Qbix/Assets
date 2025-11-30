@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "Sælger Token",
-                        "timestamps": "Tider",
-                        "prices": "Priser",
-                        "endTime": "Sluttid",
-                        "thresholds": "Tærskler",
-                        "bonuses": "Bonusser"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "Ejer kan ikke trække sig tilbage",
-                            "option1": "Ejeren kan kun trække tokens tilbage efter sluttiden er gået",
-                            "option2": "Ejeren kan trække tokens tilbage når som helst"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "Fællesskabsadresse",
-                    "methodkeccack": "Keccak256 hash funktion",
-                    "roleId": "Rolle-id",
-                    "sellingToken": "Sælger Token-adresse",
-                    "prices": "ETH, Pris",
-                    "thresholds": "# af tokens",
-                    "bonuses": "Bonus %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "Der er ingen midler"
-                },
-                "btns": {
-                    "createFund": "Opret fond",
-                    "createFundInForm": "skab"
-                },
-                "fundAddress": "Fondens adresse",
-                "createFund": "Opret fond",
-                "fundInfo": "Info",
-                "produce": "Fremstille",
-                "loading": "Indlæser",
-                "viewInstancesList": "Opdater liste"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "S\u00e6lger Token",
+						"timestamps": "Tider",
+						"prices": "Priser",
+						"endTime": "Sluttid",
+						"thresholds": "T\u00e6rskler",
+						"bonuses": "Bonusser"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "Ejer kan ikke tr\u00e6kke sig tilbage",
+							"option1": "Ejeren kan kun tr\u00e6kke tokens tilbage efter sluttiden er g\u00e5et",
+							"option2": "Ejeren kan tr\u00e6kke tokens tilbage n\u00e5r som helst"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "F\u00e6llesskabsadresse",
+					"methodkeccack": "Keccak256 hash funktion",
+					"roleId": "Rolle-id",
+					"sellingToken": "S\u00e6lger Token-adresse",
+					"prices": "ETH, Pris",
+					"thresholds": "# af tokens",
+					"bonuses": "Bonus %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "Der er ingen midler"
+				},
+				"btns": {
+					"createFund": "Opret fond",
+					"createFundInForm": "skab"
+				},
+				"fundAddress": "Fondens adresse",
+				"createFund": "Opret fond",
+				"fundInfo": "Info",
+				"produce": "Fremstille",
+				"loading": "Indl\u00e6ser",
+				"viewInstancesList": "Opdater liste"
+			}
+		}
+	}
 }

@@ -1,27 +1,27 @@
 {
-    "title": "वेतन",
-    "steps": {
-        "sending_native_coins": "देशी सिक्के भेजना",
-        "sending_tokens": "टोकन भेजना",
-        "swap": "बदलना",
-        "approve": "मंज़ूरी देना",
-        "one_tx": "आपको एक लेनदेन भेजना चाहिए",
-        "two_tx": "आपको दो लेनदेन भेजने चाहिए"
-    },
-    "form": {
-        "fields": {
-            "labels": {
-                "funds_to_pay": "भुगतान हेतु निधि"
-            }
-        },
-        "btns": {
-            "pay": "वेतन"
-        }
-    },
-    "msgs": {
-        "need_to_pay": "&quot; {{amountOut}} &quot; टोकन का भुगतान करना होगा"
-    },
-    "errmsgs": {
-        "chain_is_not_supported": "&quot; {{chainId}} &quot; आईडी वाली ऐसी श्रृंखला समर्थित नहीं है"
-    }
+	"title": "\u0935\u0947\u0924\u0928",
+	"steps": {
+		"sending_native_coins": "\u0926\u0947\u0936\u0940 \u0938\u093f\u0915\u094d\u0915\u0947 \u092d\u0947\u091c\u0928\u093e",
+		"sending_tokens": "\u091f\u094b\u0915\u0928 \u092d\u0947\u091c\u0928\u093e",
+		"swap": "\u092c\u0926\u0932\u0928\u093e",
+		"approve": "\u092e\u0902\u091c\u093c\u0942\u0930\u0940 \u0926\u0947\u0928\u093e",
+		"one_tx": "\u0906\u092a\u0915\u094b \u090f\u0915 \u0932\u0947\u0928\u0926\u0947\u0928 \u092d\u0947\u091c\u0928\u093e \u091a\u093e\u0939\u093f\u090f",
+		"two_tx": "\u0906\u092a\u0915\u094b \u0926\u094b \u0932\u0947\u0928\u0926\u0947\u0928 \u092d\u0947\u091c\u0928\u0947 \u091a\u093e\u0939\u093f\u090f"
+	},
+	"form": {
+		"fields": {
+			"labels": {
+				"funds_to_pay": "\u092d\u0941\u0917\u0924\u093e\u0928 \u0939\u0947\u0924\u0941 \u0928\u093f\u0927\u093f"
+			}
+		},
+		"btns": {
+			"pay": "\u0935\u0947\u0924\u0928"
+		}
+	},
+	"msgs": {
+		"need_to_pay": "&quot; {{amountOut}} &quot; \u091f\u094b\u0915\u0928 \u0915\u093e \u092d\u0941\u0917\u0924\u093e\u0928 \u0915\u0930\u0928\u093e \u0939\u094b\u0917\u093e"
+	},
+	"errmsgs": {
+		"chain_is_not_supported": "&quot; {{chainId}} &quot; \u0906\u0908\u0921\u0940 \u0935\u093e\u0932\u0940 \u0910\u0938\u0940 \u0936\u094d\u0930\u0943\u0902\u0916\u0932\u093e \u0938\u092e\u0930\u094d\u0925\u093f\u0924 \u0928\u0939\u0940\u0902 \u0939\u0948"
+	}
 }

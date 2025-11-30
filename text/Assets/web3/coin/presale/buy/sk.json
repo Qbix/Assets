@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Koľko investovať?"
-                    },
-                    "placeholders": {
-                        "amount": "Suma {{nativeCoin}}",
-                        "max": "Max: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Kúpiť",
-                    "execute": "Vykonať"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "Ko\u013eko investova\u0165?"
+					},
+					"placeholders": {
+						"amount": "Suma {{nativeCoin}}",
+						"max": "Max: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "K\u00fapi\u0165",
+					"execute": "Vykona\u0165"
+				}
+			}
+		}
+	}
 }

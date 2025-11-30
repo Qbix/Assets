@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Quant invertir?"
-                    },
-                    "placeholders": {
-                        "amount": "Import de {{nativeCoin}}",
-                        "max": "Màxim: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Compra",
-                    "execute": "Executar"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "Quant invertir?"
+					},
+					"placeholders": {
+						"amount": "Import de {{nativeCoin}}",
+						"max": "M\u00e0xim: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "Compra",
+					"execute": "Executar"
+				}
+			}
+		}
+	}
 }

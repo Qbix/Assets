@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "Колькі інвеставаць?"
-                    },
-                    "placeholders": {
-                        "amount": "Сума {{nativeCoin}}",
-                        "max": "Макс.: {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "Купіць",
-                    "execute": "Выканаць"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "\u041a\u043e\u043b\u044c\u043a\u0456 \u0456\u043d\u0432\u0435\u0441\u0442\u0430\u0432\u0430\u0446\u044c?"
+					},
+					"placeholders": {
+						"amount": "\u0421\u0443\u043c\u0430 {{nativeCoin}}",
+						"max": "\u041c\u0430\u043a\u0441.: {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "\u041a\u0443\u043f\u0456\u0446\u044c",
+					"execute": "\u0412\u044b\u043a\u0430\u043d\u0430\u0446\u044c"
+				}
+			}
+		}
+	}
 }

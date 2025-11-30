@@ -1,29 +1,29 @@
 {
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "rezervo ženklas",
-                        "duration": "Trukmė",
-                        "amount": "Suma"
-                    },
-                    "small": {
-                        "reserveToken": "rezervo ženklas",
-                        "duration": "Trukmė",
-                        "amount": "Suma"
-                    }
-                },
-                "placeholders": {
-                    "duration": "Trukmė",
-                    "amount": "suma"
-                },
-                "btns": {
-                    "stake": "Stalas"
-                },
-                "stake": "Stalas",
-                "loading": "Įkeliama"
-            }
-        }
-    }
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "rezervo \u017eenklas",
+						"duration": "Trukm\u0117",
+						"amount": "Suma"
+					},
+					"small": {
+						"reserveToken": "rezervo \u017eenklas",
+						"duration": "Trukm\u0117",
+						"amount": "Suma"
+					}
+				},
+				"placeholders": {
+					"duration": "Trukm\u0117",
+					"amount": "suma"
+				},
+				"btns": {
+					"stake": "Stalas"
+				},
+				"stake": "Stalas",
+				"loading": "\u012ekeliama"
+			}
+		}
+	}
 }

@@ -1,696 +1,699 @@
 {
-    "errors": {
-        "Error": "Λάθος",
-        "WalletAbsent": "Το πορτοφόλι δεν είναι συνδεδεμένο.",
-        "Rendering": "Παρουσιάστηκαν σφάλματα κατά την απόδοση <span class='url'>{{1}}<\/span>",
-        "PriceRequired": "Απαιτείται τιμή!",
-        "NameRequired": "Ονομα (απαιτείται!",
-        "PriceInvalid": "Άκυρη τιμή!",
-        "AmountInvalid": "Μη έγκυρο ποσό!",
-        "TransactionFailed": "Η συναλλαγή απέτυχε",
-        "ChainNotSupported": "Η επιλεγμένη αλυσίδα δεν υποστηρίζεται. Υποστηριζόμενη αλυσίδα: {{supportedChain}}",
-        "NeedMetaMaskConnected": "Χρειάζεστε MetaMask συνδεδεμένο για να εργαστείτε με την εφαρμογή",
-        "UserNotLoggedInMetaMask": "Ο χρήστης δεν είναι συνδεδεμένος στο MetaMask",
-        "CurrencyNotFound": "Το νόμισμα δεν βρέθηκε",
-        "WrongChain": "Αυτό το NFT δημιουργήθηκε με &quot; {{chain}} &quot;. Χρησιμοποιήστε αυτήν την αλυσίδα.",
-        "NoRecipientSelected": "Δεν έχει επιλεγεί παραλήπτης",
-        "NotEnoughPermissionsWallet": "Δεν υπάρχουν αρκετά δικαιώματα για την ανάγνωση του πορτοφολιού αυτού του χρήστη",
-        "ThisUserHaveNoWallet": "Σε αυτόν τον χρήστη δεν έχει εκχωρηθεί πορτοφόλι",
-        "TheWalletOfThisUserInvalid": "Το πορτοφόλι αυτού του χρήστη δεν είναι έγκυρο",
-        "WalletInvalid": "Μη έγκυρη διεύθυνση πορτοφολιού",
-        "CantManageFrozenSeries": "Δεν μπορείς να διαχειριστείς παγωμένη σειρά",
-        "SubscriptionStreamNotPaid": "Δεν έχετε πληρώσει για να δείτε αυτό το περιεχόμενο. Κάντε κλικ {{subscriptionUrl}} και εγγραφείτε στο κατάλληλο πρόγραμμα."
-    },
-    "admin": {
-        "Title": "Περιουσιακά στοιχεία διοικητικά",
-        "SubscriptionTitle": "Σχέδια συνδρομής"
-    },
-    "browsertab": {
-        "html": "{{button}}",
-        "button": "Πατήστε για πληρωμή"
-    },
-    "notifications": {
-        "ChargeProcessedFor": "{{call 'publisher.displayName'}} : χρέωση {{call 'user.displayName'}}",
-        "ThankYouForYourPayment": "Σας ευχαριστούμε για την πληρωμή σας στο {{call 'publisher.displayName'}}",
-        "SubscribedTo": "{{call 'user.displayName'}} εγγεγραμμένοι σε {{plan.title}}",
-        "YouSubscribedTo": "Έχετε εγγραφεί στο {{plan.title}}",
-        "Assets\/credits\/alert": "Έχετε ειδοποίηση που σχετίζεται με τον λογαριασμό σας"
-    },
-    "charge": {
-        "Subject": "Λαμβάνετε πληρωμή {{displayAmount}} από {{call 'publisher.displayName'}} με &quot; {{description}} &quot;",
-        "HasBeenCharged": "Γεια σας, αυτό είναι απλώς για να σας ενημερώσω ότι {{1}} χρεώθηκε {{2}} για {{3}} από {{4}}"
-    },
-    "charged": {
-        "Subject": "Σας ευχαριστούμε για την πληρωμή σας για το &quot; {{description}} &quot;",
-        "HavePaid": "Γεια σου {{1}} , αυτή είναι απλώς μια γρήγορη επιβεβαίωση ότι πλήρωσες με επιτυχία {{2}} έως {{3}} για {{4}}"
-    },
-    "payment": {
-        "AboutOrder": "Πληροφορίες για την παραγγελία",
-        "PaymentMethod": "Μέθοδος πληρωμής",
-        "ContactInfo": "Πληροφορίες επαφής",
-        "Pay": "Πληρωμή",
-        "PaymentSucceeded": "Η πληρωμή ολοκληρώθηκε",
-        "PaymentProcessing.": "Η πληρωμή σας είναι υπό επεξεργασία",
-        "FailTryAgain": "Η πληρωμή σας δεν ήταν επιτυχής, δοκιμάστε ξανά",
-        "SomethingWrong": "Κάτι πήγε στραβά",
-        "PaymentStatus": "Κατάσταση πληρωμής",
-        "PayTo": "Πληρώστε {{displayName}}",
-        "ChooseCurrency": "Επιλέξτε ένα νόμισμα",
-        "YouCanSendUpTo": "Μπορείτε να στείλετε έως και {{amount}} {{symbol}}",
-        "Send": "Στείλετε",
-        "EnterAmount": "Εισάγετε το ποσό"
-    },
-    "credits": {
-        "InviteAcceptedBy": "Η πρόσκληση έγινε αποδεκτή από το {{invitedUserName}}",
-        "InvitedUserFilledStream": "{{invitedUserName}} συμπλήρωσαν {{FilledStreamTitle}}",
-        "ForFillingStream": "Για συμπλήρωση {{FilledStreamTitle}}",
-        "YouHaveCreditsToStart": "Έχετε {{amount}} μονάδες για να ξεκινήσετε",
-        "PaymentFor": "Πληρωμή για &quot; {{1}} &quot;",
-        "PaymentTo": "Πληρωμή στο {{1}}",
-        "PaymentToUser": "Πληρωμή στο {{toUserName}}",
-        "CreatePrivateChat": "για ιδιωτική συνομιλία με το {{toUserName}}",
-        "CreatePaidStream": "για τη δημιουργία {{toStreamName}}",
-        "JoinedPaidStream": "για κράτηση σε &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}<\/a> &quot;",
-        "CreatedCommunity": "για τη δημιουργία κοινότητας &quot; {{communityId}} &quot;",
-        "LeftPaidStream": "ως επιστροφή χρημάτων κράτησης σε &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}<\/a> &quot;",
-        "BoughtCredits": "Αγόρασε {{amount}} μονάδες",
-        "BonusCredits": "Μπόνους {{amount}} μονάδες",
-        "BuyAmountCredits": "Αγοράστε {{amount}} μονάδες",
-        "WatchClip": "Κέρδισε {{amount}} μονάδες παρακολουθώντας {{fromStreamTitle}}",
-        "MissingCredits": "Πιστώσεις που λείπουν",
-        "YouMissingCredits": "Χρειάζεστε επιπλέον {{amount}} μονάδες για να συνεχίσετε.",
-        "BuyCredits": "Αγοράστε πιστώσεις",
-        "BuyBonus": "Η αγορά {{amount}} μονάδων ταυτόχρονα, θα οδηγήσει σε μπόνους {{bonus}} μονάδων.",
-        "Buy": "Αγορά",
-        "PurchaseCredits": "Αγορά πιστώσεων",
-        "Credits": "Πιστώσεις",
-        "ErrorInvalidAmount": "Μη έγκυρο ποσό",
-        "ErrorInvalidCurrency": "Δυστυχώς, δεν υποστηρίζουμε ακόμη το νόμισμα {{currency}}",
-        "forMessages": {
-            "BoughtCredits": "{{amount}} μονάδες",
-            "BonusCredits": "{{amount}} μονάδες"
-        }
-    },
-    "history": {
-        "Date": "Ημερομηνία",
-        "Amount": "Ποσό",
-        "Description": "Περιγραφή",
-        "Client": "Πελάτης",
-        "User": "Χρήστης",
-        "To": "προς την",
-        "From": "από",
-        "SeeHistory": "Δείτε το ιστορικό πληρωμών για {{1}}",
-        "HistoryEmpty": "Δεν έχετε ακόμη δεδομένα",
-        "PaymentFor": "Έστειλε {{amount}} μονάδες",
-        "PaymentTo": "Έστειλε {{amount}} μονάδες",
-        "PaymentToUser": "Έστειλε {{amount}} μονάδες",
-        "CreatePaidStream": "Δαπάνησε {{amount}} μονάδες",
-        "WatchClip": {
-            "+": "Κέρδισε {{amount}} μονάδες",
-            "-": "Δαπάνησε {{amount}} μονάδες"
-        },
-        "JoinedPaidStream": {
-            "+": "Κέρδισε {{amount}} μονάδες",
-            "-": "Δαπάνησε {{amount}} μονάδες"
-        },
-        "LeftPaidStream": {
-            "+": "Έλαβε {{amount}} μονάδες",
-            "-": "Έστειλε {{amount}} μονάδες"
-        },
-        "CreatedCommunity": "Δαπάνησε {{amount}} μονάδες",
-        "BoughtCredits": "Αγόρασε {{amount}} μονάδες",
-        "BonusCredits": "Πήρε μπόνους {{amount}} μονάδες",
-        "InviteAcceptedBy": "Κέρδισε {{amount}} μονάδες",
-        "Streams_user_firstname": "Κέρδισε {{amount}} μονάδες",
-        "Streams_user_lastname": "Κέρδισε {{amount}} μονάδες",
-        "Streams_user_icon": "Κέρδισε {{amount}} μονάδες",
-        "Places_user_location": "Κέρδισε {{amount}} μονάδες",
-        "Streams_greeting": "Κέρδισε {{amount}} μονάδες",
-        "YouHaveCreditsToStart": "Κέρδισε {{amount}} μονάδες",
-        "InvitedUserFilledStream": "Κέρδισε {{amount}} μονάδες",
-        "ForFillingStream": "Κέρδισε {{amount}} μονάδες",
-        "CreatePrivateChat": "Δαπάνησε {{amount}} μονάδες"
-    },
-    "subscriptions": {
-        "infoTitle": "Ορισμός πληροφοριών πληρωμής",
-        "confirm": {
-            "title": "Έναρξη Συνδρομής",
-            "message": "Ξεκινήστε μια επαναλαμβανόμενη συνδρομή στο &quot; {{title}} &quot;;",
-            "ok": "Εντάξει",
-            "cancel": "Ματαίωση"
-        },
-        "CreditOrDebitCard": "Πιστωτική ή χρεωστική κάρτα",
-        "SubscribePayment": "Εγγραφή πληρωμής",
-        "ImmediatePayment": "Άμεση Πληρωμή",
-        "ProcessingPayment": "Επεξεργασία πληρωμής",
-        "SubscriptionAlreadyPaid": "Αυτή η συνδρομή έχει ήδη πληρωθεί",
-        "SubscriptionNotActive": "Αυτή η συνδρομή δεν είναι ενεργή",
-        "Subscribed": "Εγγεγραμμένος",
-        "Unsubscribed": "Καταργήθηκε η εγγραφή",
-        "Unsubscribe": "Απεγγραφή",
-        "Subscribe": "Εγγραφείτε",
-        "Started": "Ξεκίνησε",
-        "EndsIn": "Τελειώνει σε",
-        "NextPay": "Επόμενη πληρωμή",
-        "Period": "Περίοδος",
-        "Price": "Τιμή",
-        "AreYouSureUnsubscribe": "Είστε βέβαιοι ότι θέλετε να καταργήσετε την εγγραφή αυτού του προγράμματος;",
-        "YouUnsubscribedFromPlan": "Καταργήσατε την εγγραφή σας από το πρόγραμμα &quot; {{planTitle}} &quot;. Δεν θα χρεωθείτε, αλλά η συνδρομή σας θα συνεχιστεί μέχρι {{endsIn}}",
-        "plan": {
-            "TitlePlaceholder": "τίτλος σχεδίου",
-            "PricePlaceholder": "τιμή",
-            "DescriptionPlaceholder": "περιγραφή του προγράμματος συνδρομής",
-            "SavePlan": "Αποθήκευση σχεδίου",
-            "NewPlan": "Νέο Σχέδιο",
-            "SubscriptionTitle": "Σχέδια συνδρομής",
-            "AreYouSureDeletePlan": "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το σχέδιο;",
-            "Duration": "Διάρκεια",
-            "Discount": "Εκπτωση",
-            "Interrupt": "Διακοπή",
-            "Continue": "Να συνεχίσει",
-            "SelectDisplayType": "Επιλέξτε {{displayType}}",
-            "EndDate": "ημερομηνία λήξης",
-            "Available": "Διαθέσιμος",
-            "Hidden": "Κεκρυμμένος",
-            "InviteOnly": "Μόνο πρόσκληση",
-            "CantSubscribeUnlessInvited": "Δεν μπορείτε να εγγραφείτε σε αυτό το πρόγραμμα αν δεν προσκληθείτε"
-        }
-    },
-    "payments": {
-        "infoTitle": "Ορισμός πληροφοριών πληρωμής",
-        "BuyAmountCredits": "Αγοράστε {{amount}} μονάδες",
-        "confirm": {
-            "title": "Κάνω μια πληρωμή",
-            "message": "Συμφωνείτε να πληρώσετε {{symbol}} {{amount}} ;",
-            "ok": "Εντάξει",
-            "cancel": "Ματαίωση"
-        }
-    },
-    "types": {
-        "Assets\/credits": {
-            "displayType": "Πιστώσεις",
-            "description": "παρακολουθεί τις πιστώσεις και τις πληρωμές"
-        },
-        "Assets\/plan": {
-            "displayType": "Σχέδιο Συνδρομής",
-            "description": "πρόγραμμα συνδρομής"
-        },
-        "Assets\/subscription": {
-            "displayType": "Συνδρομή",
-            "description": "συνδρομή"
-        },
-        "Assets\/product": {
-            "displayType": "Προϊόν",
-            "description": "προϊόν που πωλείται"
-        },
-        "Assets\/service": {
-            "displayType": "Υπηρεσία",
-            "description": "υπηρεσία που προσφέρεται"
-        }
-    },
-    "messages": {
-        "Assets\/credits\/earned": {
-            "content": "Κέρδισε {{amount}} μονάδες"
-        },
-        "Assets\/credits\/bought": {
-            "content": "Αγόρασε {{amount}} μονάδες"
-        },
-        "Assets\/credits\/bonus": {
-            "content": "Μπόνους {{amount}} μονάδες"
-        },
-        "Assets\/credits\/spent": {
-            "content": "Δαπάνησε {{amount}} μονάδες"
-        },
-        "Assets\/credits\/sent": {
-            "content": "Έστειλε {{amount}} μονάδες σε {{toUserName}}"
-        },
-        "Assets\/credits\/received": {
-            "content": "Έλαβε {{amount}} μονάδες από {{fromUserName}}"
-        },
-        "Assets\/credits\/alert": {
-            "content": "Έχετε μικρές πιστώσεις στον λογαριασμό σας. Επισκεφτείτε <a href='<i translate='no'>τον σύνδεσμο 999 &#39;&gt;<\/a> για να αγοράσετε περισσότερες πιστώσεις."
-        }
-    },
-    "billing": {
-        "Title": "Τιμολόγηση περιουσιακών στοιχείων",
-        "CreditsMinimum": "Ελάχιστες πιστώσεις",
-        "CreditsToAdd": "Πιστώσεις για προσθήκη",
-        "Save": "Αποθηκεύσετε",
-        "ThisLink": "αυτός ο σύνδεσμος",
-        "errors": {
-            "CreditsMinimumNegative": "Οι ελάχιστες πιστώσεις δεν μπορούν να είναι αρνητικές",
-            "CreditsToAddNegative": "Οι πιστώσεις προς προσθήκη δεν μπορούν να είναι αρνητικές"
-        }
-    },
-    "services": {
-        "NewServiceTemplate": {
-            "Title": "Νέα Υπηρεσία",
-            "TitlePlaceholder": "Τίτλος υπηρεσίας",
-            "PricePlaceholder": "Ορισμός τιμής",
-            "LinkPlaceholder": "ορίστε σύνδεσμο πρόσθετων πληροφοριών",
-            "DescriptionPlaceholder": "Περιγραφή υπηρεσίας",
-            "SaveService": "Αποθήκευση υπηρεσίας",
-            "SelectRequiredParticipants": "Απαιτούνται σχετικοί συμμετέχοντες",
-            "RequiredParticipantsDesc": "Παρακαλούμε επιλέξτε τους σχετικούς συμμετέχοντες που απαιτούνται για τη χρήση αυτής της υπηρεσίας (για παράδειγμα κατοικίδια για &quot;Συλίσια παράσταση&quot; ή παιδιά για &quot;Παιδικές διακοπές&quot; κ.λπ.). Εάν η υπηρεσία πληρώνεται, ο χρήστης θα πρέπει να πληρώσει επίσης για κάθε συνδεδεμένο συμμετέχοντα."
-        },
-        "EditServiceTemplate": {
-            "Title": "Υπηρεσία επεξεργασίας"
-        },
-        "ManageServiceTemplates": "Διαχείριση προτύπων υπηρεσιών",
-        "ManageServices": "Διαχείριση Υπηρεσιών",
-        "Free": "Ελεύθερος",
-        "OptionalContribution": "Προαιρετική συνεισφορά",
-        "RequiredPayment": "Απαιτούμενη πληρωμή",
-        "AreYouSureDelete": "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτήν την υπηρεσία;",
-        "AmountServicesRelated": "Υπάρχουν {{amount}} διαθεσιμότητες που σχετίζονται με αυτήν την υπηρεσία. Θα αφαιρεθούν επίσης."
-    },
-    "transfer": {
-        "SelectRecipient": "Επιλέξτε παραλήπτη",
-        "TransactionSuccess": "Επιτυχία συναλλαγής",
-        "OrTypeWalletAddress": "Ή πληκτρολογήστε διεύθυνση πορτοφολιού παραλήπτη",
-        "AppCredits": "Πιστώσεις εφαρμογών"
-    },
-    "NFT": {
-        "Title": "Τίτλος",
-        "Name": "Ονομα",
-        "EnterName": "Εισαγάγετε όνομα",
-        "EnterAuthorWallet": "Εισαγάγετε το πορτοφόλι του συγγραφέα",
-        "InformationAboutTitle": "Πληροφορίες για το {{title}} NFT",
-        "Description": "Περιγραφή",
-        "DetailedInformationAboutNFT": "Αναλυτικές πληροφορίες για το NFT",
-        "PresaleStarts": "Η προπώληση ξεκινά στις 23 Δεκεμβρίου",
-        "OwnerUserNotFound": "Ο κάτοχος αυτού του NFT δεν είναι εγγεγραμμένος στην αίτησή μας.",
-        "BuyNow": "Αγορασε τωρα",
-        "Buy": "Αγορά",
-        "Add": "Προσθήκη",
-        "Remove": "Αφαιρώ",
-        "NoNFTyet": "Δεν υπάρχουν ακόμη NFT",
-        "Conversation": "Συνομιλία",
-        "Create": "Δημιουργώ",
-        "CurrentBid": "Τρέχουσα προσφορά",
-        "StartingIn": "Ξεκινώντας μέσα",
-        "EndingIn": "Τελειωνει σε",
-        "CreateNFT": "Δημιουργήστε ένα NFT",
-        "TitlePlaceholder": "Δώστε έναν τίτλο στο NFT σας",
-        "DescriptionPlaceholder": "Δώστε μια περιγραφή του NFT σας",
-        "CreateYourNFT": "Δημιουργήστε το NFT σας",
-        "Royalties": "Δικαιώματα",
-        "RoyaltyPlaceholder": "Προαιρετικός. Ποσό που καταβλήθηκε στον δημιουργό πριν από τη μεταφορά.",
-        "ExpirationDate": "Ημερομηνία λήξης",
-        "StartingDate": "Ημερομηνία έναρξης",
-        "BidsBelowThisAmount": "Δεν θα επιτρέπονται προσφορές κάτω από αυτό το ποσό",
-        "MinimumBid": "Ελάχιστη προσφορά",
-        "Author": "Συγγραφέας",
-        "Price": "Τιμή",
-        "Commission": "Επιτροπή",
-        "EnterCommission": "Εισαγάγετε την προμήθεια",
-        "Owner": "Ιδιοκτήτης",
-        "SelectCategory": "Επιλέξτε Κατηγορία",
-        "Day": "Ημέρα",
-        "Days": "Ημέρες",
-        "Hour": "Ωρα",
-        "Hours": "Ωρες",
-        "Minute": "Λεπτό",
-        "Minutes": "Λεπτά",
-        "Second": "Δεύτερος",
-        "Seconds": "Δευτερόλεπτα",
-        "SalesCreator": "των πωλήσεων θα πάνε στον δημιουργό",
-        "Details": "Λεπτομέριες",
-        "Bids": "Προσφορές",
-        "History": "Ιστορία",
-        "LoremIpsum": "Το Lorem Ipsum είναι απλώς εικονικό κείμενο της βιομηχανίας εκτύπωσης και στοιχειοθεσίας.",
-        "PutOnSale": "Βάλτε προς πώληση",
-        "PutOffSale": "Απόσυρση από την πώληση",
-        "Transfer": "ΜΕΤΑΦΟΡΑ",
-        "Actions": "Ενέργειες",
-        "Claim": "Απαίτηση",
-        "ClaimNFT": "Αξίωση NFT",
-        "Unlocking": "Ξεκλείδωμα",
-        "Unlock": "Ξεκλείδωμα",
-        "Update": "Εκσυγχρονίζω",
-        "UpdateToken": "Ενημέρωση διακριτικού",
-        "UpdateNFT": "Ενημέρωση NFT",
-        "CreateToken": "Δημιουργία διακριτικού",
-        "PlaceBid": "Τοποθετήστε την προσφορά",
-        "SoldOut": "Πωληθεί",
-        "NotOnSale": "Δεν πωλείται",
-        "NftName": "Όνομα NFT",
-        "DescribeYourNFT": "Περιγράψτε το NFT σας",
-        "NFTImage": "Εικόνα για NFT",
-        "NFTVideo": "Βίντεο για NFT, εάν υπάρχει",
-        "UploadMovie": "Ανεβάστε ταινία",
-        "MovieSource": "Πηγή ταινίας",
-        "MovieURL": "URL ταινίας",
-        "UploadFile": "Ανέβασε ένα αρχείο",
-        "PutOnMarketplace": "Διαθέστε στην αγορά",
-        "InstantPurchase": "Εισαγάγετε την τιμή για να επιτρέψετε στους χρήστες να αγοράσουν άμεσα το NFT σας",
-        "FixedPrice": "Σταθερή τιμή",
-        "TimedAuction": "Χρονική δημοπρασία",
-        "OpenForBids": "Ανοιχτό για προσφορές",
-        "PriceOnePiece": "Εισαγάγετε τιμή για ένα τεμάχιο",
-        "EnterPrice": "Εισαγάγετε τιμή",
-        "EnterMinimumBid": "Εισαγάγετε την ελάχιστη προσφορά",
-        "SelectChain": "Επιλέξτε αλυσίδα",
-        "Currency": "Νόμισμα",
-        "AreYouSureDeleteImage": "Είστε βέβαιοι ότι θέλετε να αφαιρέσετε την εικόνα;",
-        "AreYouSureDeleteVideo": "Είστε βέβαιοι ότι θέλετε να καταργήσετε το βίντεο;",
-        "series": {
-            "Name": "Ονομα",
-            "Icon": "Εικόνισμα",
-            "Description": "Περιγραφή",
-            "Author": "Συγγραφέας",
-            "SelectSeries": "Επιλέξτε σειρά",
-            "Value": "αξία",
-            "AreYouSure": "Είσαι σίγουρος?",
-            "AuthorInvalid": "Η διεύθυνση συγγραφέα δεν είναι έγκυρη!",
-            "Address": "Διεύθυνση",
-            "CoverImage": "Εικόνα εξωφύλλου",
-            "UploadCoverImage": "Μεταφόρτωση εικόνας εξωφύλλου",
-            "CommissionAddressInvalid": "Η διεύθυνση της Επιτροπής δεν είναι έγκυρη",
-            "OnSale": "σε έκπτωση",
-            "OffSale": "εκτός πώλησης",
-            "CreateSeries": "Δημιουργία σειράς",
-            "UpdateSeries": "Ενημέρωση σειράς",
-            "SeriesInfo": "Πληροφορίες σειράς",
-            "SelectAuthor": "Επιλέξτε συγγραφέα",
-            "NewItem": "Νέα σειρά NFT",
-            "NamePlaceholder": "Εισαγάγετε το όνομα της σειράς",
-            "DescPlaceholder": "Εισαγάγετε την περιγραφή της σειράς",
-            "EndingIn": "Τελειωνει σε"
-        },
-        "contract": {
-            "CreateContract": "Δημιουργία συμβολαίου",
-            "SelectContract": "Επιλέξτε σύμβαση",
-            "CreateContractFor": "Δημιουργία συμβολαίου για {{userName}}",
-            "ContractFor": "Συμβόλαιο για {{userName}}",
-            "UpdateContract": "Ενημέρωση σύμβασης",
-            "TransferOwnership": "Μεταβίβαση ιδιοκτησίας",
-            "SetBaseURI": "Ορισμός URI βάσης",
-            "SetSuffix": "Σύνολο επίθημα",
-            "CurrentOwner": "Τρέχων Ιδιοκτήτης",
-            "CurrentBaseURL": "Τρέχον BaseURL",
-            "ContractAddressAbsent": "Η διεύθυνση της σύμβασης απουσιάζει",
-            "FactoryAddressAbsent": "Η διεύθυνση εργοστασίου απουσιάζει",
-            "ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
-            "TitleRequired": "Απαιτείται τίτλος",
-            "SymbolRequired": "Απαιτείται σύμβολο",
-            "TypeContractName": "όνομα της σύμβασης",
-            "TypeContractSymbol": "σύμβολο συμβολαίου (μέγιστο 10 χαρακτήρες)"
-        },
-        "contests": {
-            "Title": "Διαγωνισμοί",
-            "NewContest": "Νέος Διαγωνισμός"
-        },
-        "import": {
-            "importNFT": "Εισαγωγή NFT&#39;s",
-            "importAttributes": "Εισαγωγή χαρακτηριστικών NFT",
-            "fileNotFound": "Λυπούμαστε, το αρχείο CSV δεν βρέθηκε.",
-            "fileEmpty": "Λυπούμαστε, το αρχείο CSV είναι κενό.",
-            "userIdNotFound": "χρήστης υπάρχει αλλά το αναγνωριστικό είναι κενό",
-            "errorLine": "γραμμή {{1}}",
-            "fieldNotFound": "Το υποχρεωτικό πεδίο &quot; {{1}} &quot; δεν βρέθηκε",
-            "displayTypeEmpty": "Ο τύπος οθόνης για &quot; {{1}} &quot; δεν βρέθηκε",
-            "taskStreamInvalid": "Μη έγκυρη ροή εργασιών",
-            "instructionsEmpty": "κενές οι οδηγίες ροής εργασιών",
-            "complete": "Πλήρης",
-            "activateUsers": "αποστολή μηνύματος ενεργοποίησης στους χρήστες;",
-            "importProgress": "Πρόοδος",
-            "importOptions": "Επιλογές",
-            "sampleCSV": "Λήψη δείγματος CSV",
-            "fileLabel": "Μεταφόρτωση υπολογιστικού φύλλου:",
-            "errorsTitle": "Παρουσιάστηκαν σφάλματα"
-        },
-        "filter": {
-            "ByCategory": {
-                "FilterByNFTCollections": "Φιλτράρισμα κατά συλλογές NFT",
-                "ShowNFTCollection": "Εμφάνιση συλλογής NFT σε...",
-                "AllCollections": "Όλες οι Συλλογές"
-            },
-            "ByUser": {
-                "AllAuthors": "Όλοι οι Συγγραφείς",
-                "AllUsers": "Ολοι",
-                "FilterByAuthors": "Φιλτράρισμα κατά συγγραφείς"
-            }
-        },
-        "Back": "Επιστροφή στη Συλλογή",
-        "attributes": {
-            "Title": "Διαχείριση χαρακτηριστικών",
-            "Attributes": "Γνωρίσματα",
-            "DisplayTitle": "Τύπος οθόνης",
-            "AddDisplayType": "Προσθήκη νέου τύπου εμφάνισης",
-            "NewDisplay": "Νέα οθόνη",
-            "TraitTitle": "Τύπος χαρακτηριστικού",
-            "AddTraitTitle": "Προσθήκη νέου τύπου χαρακτηριστικού",
-            "NewTrait": "Νέος τύπος χαρακτηριστικού",
-            "ValueTitle": "αξία",
-            "AddValueTitle": "Προσθέστε νέα αξία",
-            "NewValue": "Νέα Αξία",
-            "NewAttribute": "Νέα Ιδιότητα",
-            "UpdateAttributes": "Ενημέρωση χαρακτηριστικών",
-            "SaveAttributes": "Αποθήκευση χαρακτηριστικών"
-        },
-        "profile": {
-            "LogOut": "Αποσύνδεση",
-            "Title": "Προφίλ για {{userName}}",
-            "Description": "Στοιχεία χρήστη",
-            "aboutPlaceholder": "Επεξεργασία βιογραφικού",
-            "SureLogOut": "Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε;",
-            "UploadCoverPhoto": "Ανεβάστε φωτογραφία εξωφύλλου"
-        },
-        "sales": {
-            "factory": {
-                "form": {
-                    "labels": {
-                        "NFTContract": "Σύμβαση NFTC",
-                        "seriesId": "σειρά ID",
-                        "owner": "Ιδιοκτήτης",
-                        "currency": "Νόμισμα",
-                        "price": "Τιμή",
-                        "beneficiary": "Δικαιούχος",
-                        "autoindex": "Αυτόματος ευρετήριο",
-                        "duration": "Διάρκεια",
-                        "rateInterval": "Χρονικό διάστημα",
-                        "rateAmount": "Βαθμολογήστε το ποσό"
-                    },
-                    "small": {
-                        "NFTContract": "Σύμβαση NFTC",
-                        "seriesId": "μάρκες θα κόβονται σε αυτή τη σειρά",
-                        "owner": "κάτοχος του παραδείγματος, διαφορετικά θα γίνει αποστολέας",
-                        "currency": "Νόμισμα για μάρκες που αγοράσατε, εάν είναι μηδέν - για εγγενή νομίσματα",
-                        "price": "Τιμή",
-                        "beneficiary": "Δικαιούχος πώλησης μάρκες, διαφορετικά θα είναι ο αποστολέας",
-                        "autoindex": "Αυτόματος ευρετήριο",
-                        "duration": "Κλείδωμα μετά την κοπή. Μηδέν σημαίνει να το αποκτήσεις αμέσως.",
-                        "rateInterval": "διάστημα κάδου για ειδική αγορά",
-                        "rateAmount": "ποσό κουβά για ειδική αγορά"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(προαιρετικός)",
-                    "number": "αριθμός",
-                    "address": "διεύθυνση",
-                    "fraction": "κλάσμα",
-                    "integer": "ακέραιος αριθμός",
-                    "seconds": "δευτερόλεπτα",
-                    "uint256": "uint256",
-                    "uint192": "uint192",
-                    "uint64": "uint64",
-                    "uint32": "uint32",
-                    "uint16": "uint16"
-                },
-                "produce": "Παράγω",
-                "viewInstancesList": "Ανανέωση λίστας"
-            },
-            "instance": {
-                "form": {
-                    "labels": {
-                        "seriesId": "Αναγνωριστικό σειράς",
-                        "account": "λογαριασμός",
-                        "amount": "Ποσό"
-                    },
-                    "small": {
-                        "seriesId": "το νέο διακριτικό θα ανήκει σε σειρά με τέτοιο αναγνωριστικό",
-                        "account": "κάτοχος του νεοσύστατου NFT. εάν δεν έχει οριστεί - θα χρησιμοποιήσει το τρέχον πορτοφόλι",
-                        "amount": "ποσότητα NFT σε μέντα"
-                    }
-                },
-                "placeholders": {
-                    "optional": "(προαιρετικός)",
-                    "seriesId": "ταυτότητα",
-                    "account": "λογαριασμός",
-                    "amount": "ποσό",
-                    "integer": "ακέραιος αριθμός"
-                },
-                "btn": {
-                    "Purchase": "Αγορά",
-                    "SpecialPurchase": "Ειδική αγορά"
-                }
-            },
-            "whitelist": {
-                "form": {
-                    "labels": {
-                        "account": "Διεύθυνση"
-                    },
-                    "small": {
-                        "account": "Διεύθυνση"
-                    }
-                },
-                "errors": {
-                    "invalidAddress": "Μη έγκυρη διεύθυνση"
-                },
-                "placeholders": {
-                    "account": "Διεύθυνση"
-                },
-                "addToWhitelist": "Προσθήκη στη λίστα επιτρεπόμενων",
-                "removeFromWhitelist": "Αφαίρεση από τη λίστα επιτρεπόμενων"
-            }
-        },
-        "locked": {
-            "form": {
-                "labels": {
-                    "tokenId": "Token ID",
-                    "custodian": "Φύλακας",
-                    "recipient": "Παραλήπτης"
-                },
-                "small": {
-                    "tokenId": "αναγνωριστικό διακριτικού τι πρέπει να κλειδώσετε ή να ξεκλειδώσετε",
-                    "custodian": "διεύθυνση που μπορεί να ξεκλειδώσει",
-                    "recipient": "διεύθυνση που θα λάβει τα διακριτικά"
-                }
-            },
-            "errors": {
-                "invalidTokenId": "Μη έγκυρο αναγνωριστικό διακριτικού",
-                "invalidCustodian": "Μη έγκυρος θεματοφύλακας",
-                "invalidRecipient": "Μη έγκυρος παραλήπτης"
-            },
-            "placeholders": {
-                "optional": "(προαιρετικός)",
-                "tokenId": "ταυτότητα",
-                "custodian": "διεύθυνση"
-            },
-            "Lock": "Κλειδαριά",
-            "Unlock": "Ξεκλείδωμα",
-            "Locked": "Κλειδωμένο",
-            "CustodianAddress": "Διεύθυνση θεματοφύλακα",
-            "TokenWasClaimed": "Το διακριτικό &quot; {{title}} &quot; αξιώθηκε",
-            "TokenWasLocked": "Token &quot; {{title}} &quot; ήταν κλειδωμένο",
-            "TokenWasUnlocked": "Το Token &quot; {{title}} &quot; ξεκλειδώθηκε"
-        },
-        "GenerateDescription": "ή αυτόματη δημιουργία",
-        "collections": {
-            "Title": "Συλλογές",
-            "EnterTitle": "εισάγετε τίτλο",
-            "EnterDescription": "εισάγετε περιγραφή",
-            "NewCollection": "Νέα συλλογή",
-            "Name": "Ονομα",
-            "Icon": "Εικόνισμα",
-            "Description": "Περιγραφή",
-            "Author": "Συγγραφέας",
-            "SelectCollection": "Επιλέξτε συλλογή",
-            "Value": "αξία",
-            "AreYouSure": "Είσαι σίγουρος?",
-            "AuthorInvalid": "Μη έγκυρη διεύθυνση συντάκτη!",
-            "Address": "Διεύθυνση",
-            "CoverImage": "Εικόνα εξωφύλλου",
-            "UploadIcon": "Μεταφόρτωση εικονίδιο",
-            "CommissionAddressInvalid": "Η διεύθυνση της Επιτροπής δεν είναι έγκυρη",
-            "OnSale": "σε έκπτωση",
-            "OffSale": "εκτός πώλησης",
-            "CreateCollection": "Δημιουργία συλλογής",
-            "UpdateCollection": "Ενημέρωση συλλογής",
-            "CollectionInfo": "Πληροφορίες συλλογής",
-            "SelectAuthor": "Επιλέξτε συγγραφέα",
-            "NewItem": "Νέα συλλογή NFT",
-            "NamePlaceholder": "Εισαγάγετε το όνομα της συλλογής",
-            "DescPlaceholder": "Εισαγάγετε την περιγραφή της συλλογής",
-            "EndingIn": "Τελειωνει σε",
-            "SubmitSeries": "Υποβάλετε μια σειρά"
-        }
-    },
-    "currencies": {
-        "choose": "Επιλέξτε ένα νόμισμα"
-    },
-    "connectedAccount": {
-        "Title": "Σύνδεση λογαριασμού",
-        "Success": "Επιτυχία",
-        "YourAccountCreated": "Ο λογαριασμός σας δημιουργήθηκε με επιτυχία!",
-        "YourAccountAlreadyCreated": "Ο λογαριασμός σας έχει ήδη δημιουργηθεί και είναι έτοιμος για χρήση"
-    },
-    "coin": {
-        "staking": {
-            "start": {
-                "form": {
-                    "labels": {
-                        "reserveToken": "rezervToken",
-                        "amount": "Ποσό"
-                    },
-                    "small": {
-                        "reserveToken": "rezervToken",
-                        "amount": "Ποσό"
-                    }
-                },
-                "placeholders": {
-                    "amount": "ποσό"
-                },
-                "btns": {
-                    "stake": "Στοίχημα"
-                },
-                "stake": "Στοίχημα",
-                "loading": "Φόρτωση"
-            }
-        },
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Διάρκεια",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "δημοφιλέςToken",
-                    "donations": "δωρεές",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "αριθμητής",
-                    "denominator": "παρονομαστής"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Διάρκεια σε ημέρες",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "δημοφιλέςToken",
-                    "donations": "δωρεές",
-                    "rewardsRateFraction": "rewardsRateFraction",
-                    "numerator": "αριθμητής",
-                    "denominator": "παρονομαστής"
-                }
-            },
-            "placeholders": {
-                "optional": "(προαιρετικός)",
-                "tuple": "πλειάδα[]",
-                "number": "αριθμός",
-                "address": "διεύθυνση",
-                "fraction": "κλάσμα",
-                "integer": "ακέραιος αριθμός",
-                "seconds": "δευτερόλεπτα",
-                "days": "ημέρες",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Δεν υπάρχουν πισίνες"
-            },
-            "btns": {
-                "createPool": "Δημιουργία πισίνας",
-                "createPoolInForm": "Δημιουργώ"
-            },
-            "createPool": "Δημιουργία πισίνας",
-            "produce": "Παράγω",
-            "loading": "Φόρτωση",
-            "viewInstancesList": "Ανανέωση λίστας"
-        }
-    },
-    "fundrise": {
-        "placeholder": "πληκτρολογήστε κάτι για αυτήν τη συνεισφορά..."
-    }
+	"errors": {
+		"Error": "\u039b\u03ac\u03b8\u03bf\u03c2",
+		"WalletAbsent": "\u03a4\u03bf \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03cc\u03bb\u03b9 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03c3\u03c5\u03bd\u03b4\u03b5\u03b4\u03b5\u03bc\u03ad\u03bd\u03bf.",
+		"Rendering": "\u03a0\u03b1\u03c1\u03bf\u03c5\u03c3\u03b9\u03ac\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd \u03c3\u03c6\u03ac\u03bb\u03bc\u03b1\u03c4\u03b1 \u03ba\u03b1\u03c4\u03ac \u03c4\u03b7\u03bd \u03b1\u03c0\u03cc\u03b4\u03bf\u03c3\u03b7 <span class='url'>{{1}}</span>",
+		"PriceRequired": "\u0391\u03c0\u03b1\u03b9\u03c4\u03b5\u03af\u03c4\u03b1\u03b9 \u03c4\u03b9\u03bc\u03ae!",
+		"NameRequired": "\u039f\u03bd\u03bf\u03bc\u03b1 (\u03b1\u03c0\u03b1\u03b9\u03c4\u03b5\u03af\u03c4\u03b1\u03b9!",
+		"PriceInvalid": "\u0386\u03ba\u03c5\u03c1\u03b7 \u03c4\u03b9\u03bc\u03ae!",
+		"AmountInvalid": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03bf \u03c0\u03bf\u03c3\u03cc!",
+		"TransactionFailed": "\u0397 \u03c3\u03c5\u03bd\u03b1\u03bb\u03bb\u03b1\u03b3\u03ae \u03b1\u03c0\u03ad\u03c4\u03c5\u03c7\u03b5",
+		"ChainNotSupported": "\u0397 \u03b5\u03c0\u03b9\u03bb\u03b5\u03b3\u03bc\u03ad\u03bd\u03b7 \u03b1\u03bb\u03c5\u03c3\u03af\u03b4\u03b1 \u03b4\u03b5\u03bd \u03c5\u03c0\u03bf\u03c3\u03c4\u03b7\u03c1\u03af\u03b6\u03b5\u03c4\u03b1\u03b9. \u03a5\u03c0\u03bf\u03c3\u03c4\u03b7\u03c1\u03b9\u03b6\u03cc\u03bc\u03b5\u03bd\u03b7 \u03b1\u03bb\u03c5\u03c3\u03af\u03b4\u03b1: {{supportedChain}}",
+		"NeedMetaMaskConnected": "\u03a7\u03c1\u03b5\u03b9\u03ac\u03b6\u03b5\u03c3\u03c4\u03b5 MetaMask \u03c3\u03c5\u03bd\u03b4\u03b5\u03b4\u03b5\u03bc\u03ad\u03bd\u03bf \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b5\u03c1\u03b3\u03b1\u03c3\u03c4\u03b5\u03af\u03c4\u03b5 \u03bc\u03b5 \u03c4\u03b7\u03bd \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae",
+		"UserNotLoggedInMetaMask": "\u039f \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7\u03c2 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03c3\u03c5\u03bd\u03b4\u03b5\u03b4\u03b5\u03bc\u03ad\u03bd\u03bf\u03c2 \u03c3\u03c4\u03bf MetaMask",
+		"CurrencyNotFound": "\u03a4\u03bf \u03bd\u03cc\u03bc\u03b9\u03c3\u03bc\u03b1 \u03b4\u03b5\u03bd \u03b2\u03c1\u03ad\u03b8\u03b7\u03ba\u03b5",
+		"WrongChain": "\u0391\u03c5\u03c4\u03cc \u03c4\u03bf NFT \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03b8\u03b7\u03ba\u03b5 \u03bc\u03b5 &quot; {{chain}} &quot;. \u03a7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03c4\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7\u03bd \u03b1\u03bb\u03c5\u03c3\u03af\u03b4\u03b1.",
+		"NoRecipientSelected": "\u0394\u03b5\u03bd \u03ad\u03c7\u03b5\u03b9 \u03b5\u03c0\u03b9\u03bb\u03b5\u03b3\u03b5\u03af \u03c0\u03b1\u03c1\u03b1\u03bb\u03ae\u03c0\u03c4\u03b7\u03c2",
+		"NotEnoughPermissionsWallet": "\u0394\u03b5\u03bd \u03c5\u03c0\u03ac\u03c1\u03c7\u03bf\u03c5\u03bd \u03b1\u03c1\u03ba\u03b5\u03c4\u03ac \u03b4\u03b9\u03ba\u03b1\u03b9\u03ce\u03bc\u03b1\u03c4\u03b1 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03bd\u03ac\u03b3\u03bd\u03c9\u03c3\u03b7 \u03c4\u03bf\u03c5 \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03bf\u03bb\u03b9\u03bf\u03cd \u03b1\u03c5\u03c4\u03bf\u03cd \u03c4\u03bf\u03c5 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7",
+		"ThisUserHaveNoWallet": "\u03a3\u03b5 \u03b1\u03c5\u03c4\u03cc\u03bd \u03c4\u03bf\u03bd \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7 \u03b4\u03b5\u03bd \u03ad\u03c7\u03b5\u03b9 \u03b5\u03ba\u03c7\u03c9\u03c1\u03b7\u03b8\u03b5\u03af \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03cc\u03bb\u03b9",
+		"TheWalletOfThisUserInvalid": "\u03a4\u03bf \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03cc\u03bb\u03b9 \u03b1\u03c5\u03c4\u03bf\u03cd \u03c4\u03bf\u03c5 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03b3\u03ba\u03c5\u03c1\u03bf",
+		"WalletInvalid": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03b7 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03bf\u03bb\u03b9\u03bf\u03cd",
+		"CantManageFrozenSeries": "\u0394\u03b5\u03bd \u03bc\u03c0\u03bf\u03c1\u03b5\u03af\u03c2 \u03bd\u03b1 \u03b4\u03b9\u03b1\u03c7\u03b5\u03b9\u03c1\u03b9\u03c3\u03c4\u03b5\u03af\u03c2 \u03c0\u03b1\u03b3\u03c9\u03bc\u03ad\u03bd\u03b7 \u03c3\u03b5\u03b9\u03c1\u03ac",
+		"SubscriptionStreamNotPaid": "\u0394\u03b5\u03bd \u03ad\u03c7\u03b5\u03c4\u03b5 \u03c0\u03bb\u03b7\u03c1\u03ce\u03c3\u03b5\u03b9 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b4\u03b5\u03af\u03c4\u03b5 \u03b1\u03c5\u03c4\u03cc \u03c4\u03bf \u03c0\u03b5\u03c1\u03b9\u03b5\u03c7\u03cc\u03bc\u03b5\u03bd\u03bf. \u039a\u03ac\u03bd\u03c4\u03b5 \u03ba\u03bb\u03b9\u03ba {{subscriptionUrl}} \u03ba\u03b1\u03b9 \u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03c4\u03b5 \u03c3\u03c4\u03bf \u03ba\u03b1\u03c4\u03ac\u03bb\u03bb\u03b7\u03bb\u03bf \u03c0\u03c1\u03cc\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1."
+	},
+	"admin": {
+		"Title": "\u03a0\u03b5\u03c1\u03b9\u03bf\u03c5\u03c3\u03b9\u03b1\u03ba\u03ac \u03c3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03b1 \u03b4\u03b9\u03bf\u03b9\u03ba\u03b7\u03c4\u03b9\u03ba\u03ac",
+		"SubscriptionTitle": "\u03a3\u03c7\u03ad\u03b4\u03b9\u03b1 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae\u03c2"
+	},
+	"browsertab": {
+		"html": "{{button}}",
+		"button": "\u03a0\u03b1\u03c4\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae"
+	},
+	"notifications": {
+		"ChargeProcessedFor": "{{call 'publisher.displayName'}} : \u03c7\u03c1\u03ad\u03c9\u03c3\u03b7 {{call 'user.displayName'}}",
+		"ThankYouForYourPayment": "\u03a3\u03b1\u03c2 \u03b5\u03c5\u03c7\u03b1\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03bc\u03b5 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03c3\u03b1\u03c2 \u03c3\u03c4\u03bf {{call 'publisher.displayName'}}",
+		"SubscribedTo": "{{call 'user.displayName'}} \u03b5\u03b3\u03b3\u03b5\u03b3\u03c1\u03b1\u03bc\u03bc\u03ad\u03bd\u03bf\u03b9 \u03c3\u03b5 {{plan.title}}",
+		"YouSubscribedTo": "\u0388\u03c7\u03b5\u03c4\u03b5 \u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03af \u03c3\u03c4\u03bf {{plan.title}}",
+		"Assets/credits/alert": "\u0388\u03c7\u03b5\u03c4\u03b5 \u03b5\u03b9\u03b4\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u03c0\u03bf\u03c5 \u03c3\u03c7\u03b5\u03c4\u03af\u03b6\u03b5\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03c4\u03bf\u03bd \u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc \u03c3\u03b1\u03c2"
+	},
+	"charge": {
+		"Subject": "\u039b\u03b1\u03bc\u03b2\u03ac\u03bd\u03b5\u03c4\u03b5 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae {{displayAmount}} \u03b1\u03c0\u03cc {{call 'publisher.displayName'}} \u03bc\u03b5 &quot; {{description}} &quot;",
+		"HasBeenCharged": "\u0393\u03b5\u03b9\u03b1 \u03c3\u03b1\u03c2, \u03b1\u03c5\u03c4\u03cc \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ce\u03c2 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03b1\u03c2 \u03b5\u03bd\u03b7\u03bc\u03b5\u03c1\u03ce\u03c3\u03c9 \u03cc\u03c4\u03b9 {{1}} \u03c7\u03c1\u03b5\u03ce\u03b8\u03b7\u03ba\u03b5 {{2}} \u03b3\u03b9\u03b1 {{3}} \u03b1\u03c0\u03cc {{4}}"
+	},
+	"charged": {
+		"Subject": "\u03a3\u03b1\u03c2 \u03b5\u03c5\u03c7\u03b1\u03c1\u03b9\u03c3\u03c4\u03bf\u03cd\u03bc\u03b5 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03c3\u03b1\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03bf &quot; {{description}} &quot;",
+		"HavePaid": "\u0393\u03b5\u03b9\u03b1 \u03c3\u03bf\u03c5 {{1}} , \u03b1\u03c5\u03c4\u03ae \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ce\u03c2 \u03bc\u03b9\u03b1 \u03b3\u03c1\u03ae\u03b3\u03bf\u03c1\u03b7 \u03b5\u03c0\u03b9\u03b2\u03b5\u03b2\u03b1\u03af\u03c9\u03c3\u03b7 \u03cc\u03c4\u03b9 \u03c0\u03bb\u03ae\u03c1\u03c9\u03c3\u03b5\u03c2 \u03bc\u03b5 \u03b5\u03c0\u03b9\u03c4\u03c5\u03c7\u03af\u03b1 {{2}} \u03ad\u03c9\u03c2 {{3}} \u03b3\u03b9\u03b1 {{4}}"
+	},
+	"payment": {
+		"AboutOrder": "\u03a0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03b1\u03c1\u03b1\u03b3\u03b3\u03b5\u03bb\u03af\u03b1",
+		"PaymentMethod": "\u039c\u03ad\u03b8\u03bf\u03b4\u03bf\u03c2 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2",
+		"ContactInfo": "\u03a0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03b5\u03c0\u03b1\u03c6\u03ae\u03c2",
+		"Pay": "\u03a0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae",
+		"PaymentSucceeded": "\u0397 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03bf\u03bb\u03bf\u03ba\u03bb\u03b7\u03c1\u03ce\u03b8\u03b7\u03ba\u03b5",
+		"PaymentProcessing.": "\u0397 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03c3\u03b1\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03c5\u03c0\u03cc \u03b5\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1",
+		"FailTryAgain": "\u0397 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03c3\u03b1\u03c2 \u03b4\u03b5\u03bd \u03ae\u03c4\u03b1\u03bd \u03b5\u03c0\u03b9\u03c4\u03c5\u03c7\u03ae\u03c2, \u03b4\u03bf\u03ba\u03b9\u03bc\u03ac\u03c3\u03c4\u03b5 \u03be\u03b1\u03bd\u03ac",
+		"SomethingWrong": "\u039a\u03ac\u03c4\u03b9 \u03c0\u03ae\u03b3\u03b5 \u03c3\u03c4\u03c1\u03b1\u03b2\u03ac",
+		"PaymentStatus": "\u039a\u03b1\u03c4\u03ac\u03c3\u03c4\u03b1\u03c3\u03b7 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2",
+		"PayTo": "\u03a0\u03bb\u03b7\u03c1\u03ce\u03c3\u03c4\u03b5 {{displayName}}",
+		"ChooseCurrency": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03ad\u03bd\u03b1 \u03bd\u03cc\u03bc\u03b9\u03c3\u03bc\u03b1",
+		"YouCanSendUpTo": "\u039c\u03c0\u03bf\u03c1\u03b5\u03af\u03c4\u03b5 \u03bd\u03b1 \u03c3\u03c4\u03b5\u03af\u03bb\u03b5\u03c4\u03b5 \u03ad\u03c9\u03c2 \u03ba\u03b1\u03b9 {{amount}} {{symbol}}",
+		"Send": "\u03a3\u03c4\u03b5\u03af\u03bb\u03b5\u03c4\u03b5",
+		"EnterAmount": "\u0395\u03b9\u03c3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03bf \u03c0\u03bf\u03c3\u03cc"
+	},
+	"credits": {
+		"InviteAcceptedBy": "\u0397 \u03c0\u03c1\u03cc\u03c3\u03ba\u03bb\u03b7\u03c3\u03b7 \u03ad\u03b3\u03b9\u03bd\u03b5 \u03b1\u03c0\u03bf\u03b4\u03b5\u03ba\u03c4\u03ae \u03b1\u03c0\u03cc \u03c4\u03bf {{invitedUserName}}",
+		"InvitedUserFilledStream": "{{invitedUserName}} \u03c3\u03c5\u03bc\u03c0\u03bb\u03ae\u03c1\u03c9\u03c3\u03b1\u03bd {{FilledStreamTitle}}",
+		"ForFillingStream": "\u0393\u03b9\u03b1 \u03c3\u03c5\u03bc\u03c0\u03bb\u03ae\u03c1\u03c9\u03c3\u03b7 {{FilledStreamTitle}}",
+		"YouHaveCreditsToStart": "\u0388\u03c7\u03b5\u03c4\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03be\u03b5\u03ba\u03b9\u03bd\u03ae\u03c3\u03b5\u03c4\u03b5",
+		"PaymentFor": "\u03a0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03b3\u03b9\u03b1 &quot; {{1}} &quot;",
+		"PaymentTo": "\u03a0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03c3\u03c4\u03bf {{1}}",
+		"PaymentToUser": "\u03a0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae \u03c3\u03c4\u03bf {{toUserName}}",
+		"CreatePrivateChat": "\u03b3\u03b9\u03b1 \u03b9\u03b4\u03b9\u03c9\u03c4\u03b9\u03ba\u03ae \u03c3\u03c5\u03bd\u03bf\u03bc\u03b9\u03bb\u03af\u03b1 \u03bc\u03b5 \u03c4\u03bf {{toUserName}}",
+		"CreatePaidStream": "\u03b3\u03b9\u03b1 \u03c4\u03b7 \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 {{toStreamName}}",
+		"JoinedPaidStream": "\u03b3\u03b9\u03b1 \u03ba\u03c1\u03ac\u03c4\u03b7\u03c3\u03b7 \u03c3\u03b5 &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
+		"CreatedCommunity": "\u03b3\u03b9\u03b1 \u03c4\u03b7 \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03ba\u03bf\u03b9\u03bd\u03cc\u03c4\u03b7\u03c4\u03b1\u03c2 &quot; {{communityId}} &quot;",
+		"LeftPaidStream": "\u03c9\u03c2 \u03b5\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae \u03c7\u03c1\u03b7\u03bc\u03ac\u03c4\u03c9\u03bd \u03ba\u03c1\u03ac\u03c4\u03b7\u03c3\u03b7\u03c2 \u03c3\u03b5 &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"BoughtCredits": "\u0391\u03b3\u03cc\u03c1\u03b1\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"BonusCredits": "\u039c\u03c0\u03cc\u03bd\u03bf\u03c5\u03c2 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"BuyAmountCredits": "\u0391\u03b3\u03bf\u03c1\u03ac\u03c3\u03c4\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"WatchClip": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2 \u03c0\u03b1\u03c1\u03b1\u03ba\u03bf\u03bb\u03bf\u03c5\u03b8\u03ce\u03bd\u03c4\u03b1\u03c2 {{fromStreamTitle}}",
+		"MissingCredits": "\u03a0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03c0\u03bf\u03c5 \u03bb\u03b5\u03af\u03c0\u03bf\u03c5\u03bd",
+		"YouMissingCredits": "\u03a7\u03c1\u03b5\u03b9\u03ac\u03b6\u03b5\u03c3\u03c4\u03b5 \u03b5\u03c0\u03b9\u03c0\u03bb\u03ad\u03bf\u03bd {{amount}} {{currency}} \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03c5\u03bd\u03b5\u03c7\u03af\u03c3\u03b5\u03c4\u03b5.",
+		"BuyCredits": "\u0391\u03b3\u03bf\u03c1\u03ac\u03c3\u03c4\u03b5 \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2",
+		"BuyBonus": "\u0397 \u03b1\u03b3\u03bf\u03c1\u03ac {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03c9\u03bd \u03c4\u03b1\u03c5\u03c4\u03cc\u03c7\u03c1\u03bf\u03bd\u03b1, \u03b8\u03b1 \u03bf\u03b4\u03b7\u03b3\u03ae\u03c3\u03b5\u03b9 \u03c3\u03b5 \u03bc\u03c0\u03cc\u03bd\u03bf\u03c5\u03c2 {{bonus}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03c9\u03bd.",
+		"Buy": "\u0391\u03b3\u03bf\u03c1\u03ac",
+		"PurchaseCredits": "\u0391\u03b3\u03bf\u03c1\u03ac \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03c9\u03bd",
+		"Credits": "\u03a0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2",
+		"ErrorInvalidAmount": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03bf \u03c0\u03bf\u03c3\u03cc",
+		"ErrorInvalidCurrency": "\u0394\u03c5\u03c3\u03c4\u03c5\u03c7\u03ce\u03c2, \u03b4\u03b5\u03bd \u03c5\u03c0\u03bf\u03c3\u03c4\u03b7\u03c1\u03af\u03b6\u03bf\u03c5\u03bc\u03b5 \u03b1\u03ba\u03cc\u03bc\u03b7 \u03c4\u03bf \u03bd\u03cc\u03bc\u03b9\u03c3\u03bc\u03b1 {{currency}}",
+		"forMessages": {
+			"BoughtCredits": "{{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+			"BonusCredits": "{{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		}
+	},
+	"history": {
+		"Date": "\u0397\u03bc\u03b5\u03c1\u03bf\u03bc\u03b7\u03bd\u03af\u03b1",
+		"Amount": "\u03a0\u03bf\u03c3\u03cc",
+		"Description": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae",
+		"Client": "\u03a0\u03b5\u03bb\u03ac\u03c4\u03b7\u03c2",
+		"User": "\u03a7\u03c1\u03ae\u03c3\u03c4\u03b7\u03c2",
+		"To": "\u03c0\u03c1\u03bf\u03c2 \u03c4\u03b7\u03bd",
+		"From": "\u03b1\u03c0\u03cc",
+		"SeeHistory": "\u0394\u03b5\u03af\u03c4\u03b5 \u03c4\u03bf \u03b9\u03c3\u03c4\u03bf\u03c1\u03b9\u03ba\u03cc \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ce\u03bd \u03b3\u03b9\u03b1 {{1}}",
+		"HistoryEmpty": "\u0394\u03b5\u03bd \u03ad\u03c7\u03b5\u03c4\u03b5 \u03b1\u03ba\u03cc\u03bc\u03b7 \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03b1",
+		"PaymentFor": "\u0388\u03c3\u03c4\u03b5\u03b9\u03bb\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"PaymentTo": "\u0388\u03c3\u03c4\u03b5\u03b9\u03bb\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"PaymentToUser": "\u0388\u03c3\u03c4\u03b5\u03b9\u03bb\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"CreatePaidStream": "\u0394\u03b1\u03c0\u03ac\u03bd\u03b7\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"WatchClip": {
+			"+": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+			"-": "\u0394\u03b1\u03c0\u03ac\u03bd\u03b7\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		},
+		"JoinedPaidStream": {
+			"+": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+			"-": "\u0394\u03b1\u03c0\u03ac\u03bd\u03b7\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		},
+		"LeftPaidStream": {
+			"+": "\u0388\u03bb\u03b1\u03b2\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+			"-": "\u0388\u03c3\u03c4\u03b5\u03b9\u03bb\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		},
+		"CreatedCommunity": "\u0394\u03b1\u03c0\u03ac\u03bd\u03b7\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"BoughtCredits": "\u0391\u03b3\u03cc\u03c1\u03b1\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"BonusCredits": "\u03a0\u03ae\u03c1\u03b5 \u03bc\u03c0\u03cc\u03bd\u03bf\u03c5\u03c2 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"InviteAcceptedBy": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"Streams_user_firstname": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"Streams_user_lastname": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"Streams_user_icon": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"Places_user_location": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"Streams_greeting": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"YouHaveCreditsToStart": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"InvitedUserFilledStream": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"ForFillingStream": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"CreatePrivateChat": "\u0394\u03b1\u03c0\u03ac\u03bd\u03b7\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+	},
+	"subscriptions": {
+		"infoTitle": "\u039f\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2 \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03b9\u03ce\u03bd \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2",
+		"confirm": {
+			"title": "\u0388\u03bd\u03b1\u03c1\u03be\u03b7 \u03a3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae\u03c2",
+			"message": "\u039e\u03b5\u03ba\u03b9\u03bd\u03ae\u03c3\u03c4\u03b5 \u03bc\u03b9\u03b1 \u03b5\u03c0\u03b1\u03bd\u03b1\u03bb\u03b1\u03bc\u03b2\u03b1\u03bd\u03cc\u03bc\u03b5\u03bd\u03b7 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae \u03c3\u03c4\u03bf &quot; {{title}} &quot;;",
+			"ok": "\u0395\u03bd\u03c4\u03ac\u03be\u03b5\u03b9",
+			"cancel": "\u039c\u03b1\u03c4\u03b1\u03af\u03c9\u03c3\u03b7"
+		},
+		"CreditOrDebitCard": "\u03a0\u03b9\u03c3\u03c4\u03c9\u03c4\u03b9\u03ba\u03ae \u03ae \u03c7\u03c1\u03b5\u03c9\u03c3\u03c4\u03b9\u03ba\u03ae \u03ba\u03ac\u03c1\u03c4\u03b1",
+		"SubscribePayment": "\u0395\u03b3\u03b3\u03c1\u03b1\u03c6\u03ae \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2",
+		"ImmediatePayment": "\u0386\u03bc\u03b5\u03c3\u03b7 \u03a0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae",
+		"ProcessingPayment": "\u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2",
+		"SubscriptionAlreadyPaid": "\u0391\u03c5\u03c4\u03ae \u03b7 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae \u03ad\u03c7\u03b5\u03b9 \u03ae\u03b4\u03b7 \u03c0\u03bb\u03b7\u03c1\u03c9\u03b8\u03b5\u03af",
+		"SubscriptionNotActive": "\u0391\u03c5\u03c4\u03ae \u03b7 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03b5\u03bd\u03b5\u03c1\u03b3\u03ae",
+		"Subscribed": "\u0395\u03b3\u03b3\u03b5\u03b3\u03c1\u03b1\u03bc\u03bc\u03ad\u03bd\u03bf\u03c2",
+		"Unsubscribed": "\u039a\u03b1\u03c4\u03b1\u03c1\u03b3\u03ae\u03b8\u03b7\u03ba\u03b5 \u03b7 \u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ae",
+		"Unsubscribe": "\u0391\u03c0\u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ae",
+		"Subscribe": "\u0395\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03c4\u03b5",
+		"Started": "\u039e\u03b5\u03ba\u03af\u03bd\u03b7\u03c3\u03b5",
+		"EndsIn": "\u03a4\u03b5\u03bb\u03b5\u03b9\u03ce\u03bd\u03b5\u03b9 \u03c3\u03b5",
+		"NextPay": "\u0395\u03c0\u03cc\u03bc\u03b5\u03bd\u03b7 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae",
+		"Period": "\u03a0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf\u03c2",
+		"Price": "\u03a4\u03b9\u03bc\u03ae",
+		"AreYouSureUnsubscribe": "\u0395\u03af\u03c3\u03c4\u03b5 \u03b2\u03ad\u03b2\u03b1\u03b9\u03bf\u03b9 \u03cc\u03c4\u03b9 \u03b8\u03ad\u03bb\u03b5\u03c4\u03b5 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03c1\u03b3\u03ae\u03c3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ae \u03b1\u03c5\u03c4\u03bf\u03cd \u03c4\u03bf\u03c5 \u03c0\u03c1\u03bf\u03b3\u03c1\u03ac\u03bc\u03bc\u03b1\u03c4\u03bf\u03c2;",
+		"YouUnsubscribedFromPlan": "\u039a\u03b1\u03c4\u03b1\u03c1\u03b3\u03ae\u03c3\u03b1\u03c4\u03b5 \u03c4\u03b7\u03bd \u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ae \u03c3\u03b1\u03c2 \u03b1\u03c0\u03cc \u03c4\u03bf \u03c0\u03c1\u03cc\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1 &quot; {{planTitle}} &quot;. \u0394\u03b5\u03bd \u03b8\u03b1 \u03c7\u03c1\u03b5\u03c9\u03b8\u03b5\u03af\u03c4\u03b5, \u03b1\u03bb\u03bb\u03ac \u03b7 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae \u03c3\u03b1\u03c2 \u03b8\u03b1 \u03c3\u03c5\u03bd\u03b5\u03c7\u03b9\u03c3\u03c4\u03b5\u03af \u03bc\u03ad\u03c7\u03c1\u03b9 {{endsIn}}",
+		"plan": {
+			"TitlePlaceholder": "\u03c4\u03af\u03c4\u03bb\u03bf\u03c2 \u03c3\u03c7\u03b5\u03b4\u03af\u03bf\u03c5",
+			"PricePlaceholder": "\u03c4\u03b9\u03bc\u03ae",
+			"DescriptionPlaceholder": "\u03c0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c4\u03bf\u03c5 \u03c0\u03c1\u03bf\u03b3\u03c1\u03ac\u03bc\u03bc\u03b1\u03c4\u03bf\u03c2 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae\u03c2",
+			"SavePlan": "\u0391\u03c0\u03bf\u03b8\u03ae\u03ba\u03b5\u03c5\u03c3\u03b7 \u03c3\u03c7\u03b5\u03b4\u03af\u03bf\u03c5",
+			"NewPlan": "\u039d\u03ad\u03bf \u03a3\u03c7\u03ad\u03b4\u03b9\u03bf",
+			"SubscriptionTitle": "\u03a3\u03c7\u03ad\u03b4\u03b9\u03b1 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae\u03c2",
+			"AreYouSureDeletePlan": "\u0395\u03af\u03c3\u03c4\u03b5 \u03b2\u03ad\u03b2\u03b1\u03b9\u03bf\u03b9 \u03cc\u03c4\u03b9 \u03b8\u03ad\u03bb\u03b5\u03c4\u03b5 \u03bd\u03b1 \u03b4\u03b9\u03b1\u03b3\u03c1\u03ac\u03c8\u03b5\u03c4\u03b5 \u03b1\u03c5\u03c4\u03cc \u03c4\u03bf \u03c3\u03c7\u03ad\u03b4\u03b9\u03bf;",
+			"Duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1",
+			"Discount": "\u0395\u03ba\u03c0\u03c4\u03c9\u03c3\u03b7",
+			"Interrupt": "\u0394\u03b9\u03b1\u03ba\u03bf\u03c0\u03ae",
+			"Continue": "\u039d\u03b1 \u03c3\u03c5\u03bd\u03b5\u03c7\u03af\u03c3\u03b5\u03b9",
+			"SelectDisplayType": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 {{displayType}}",
+			"EndDate": "\u03b7\u03bc\u03b5\u03c1\u03bf\u03bc\u03b7\u03bd\u03af\u03b1 \u03bb\u03ae\u03be\u03b7\u03c2",
+			"Available": "\u0394\u03b9\u03b1\u03b8\u03ad\u03c3\u03b9\u03bc\u03bf\u03c2",
+			"Hidden": "\u039a\u03b5\u03ba\u03c1\u03c5\u03bc\u03bc\u03ad\u03bd\u03bf\u03c2",
+			"InviteOnly": "\u039c\u03cc\u03bd\u03bf \u03c0\u03c1\u03cc\u03c3\u03ba\u03bb\u03b7\u03c3\u03b7",
+			"CantSubscribeUnlessInvited": "\u0394\u03b5\u03bd \u03bc\u03c0\u03bf\u03c1\u03b5\u03af\u03c4\u03b5 \u03bd\u03b1 \u03b5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03c4\u03b5 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03cc \u03c4\u03bf \u03c0\u03c1\u03cc\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1 \u03b1\u03bd \u03b4\u03b5\u03bd \u03c0\u03c1\u03bf\u03c3\u03ba\u03bb\u03b7\u03b8\u03b5\u03af\u03c4\u03b5"
+		}
+	},
+	"payments": {
+		"infoTitle": "\u039f\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2 \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03b9\u03ce\u03bd \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae\u03c2",
+		"BuyAmountCredits": "\u0391\u03b3\u03bf\u03c1\u03ac\u03c3\u03c4\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2",
+		"confirm": {
+			"title": "\u039a\u03ac\u03bd\u03c9 \u03bc\u03b9\u03b1 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae",
+			"message": "\u03a3\u03c5\u03bc\u03c6\u03c9\u03bd\u03b5\u03af\u03c4\u03b5 \u03bd\u03b1 \u03c0\u03bb\u03b7\u03c1\u03ce\u03c3\u03b5\u03c4\u03b5 {{symbol}} {{amount}} ;",
+			"ok": "\u0395\u03bd\u03c4\u03ac\u03be\u03b5\u03b9",
+			"cancel": "\u039c\u03b1\u03c4\u03b1\u03af\u03c9\u03c3\u03b7"
+		},
+		"reasons": {
+			"BuyCredits": "\u0391\u03b3\u03bf\u03c1\u03ac\u03c3\u03c4\u03b5 \u03a0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2"
+		}
+	},
+	"types": {
+		"Assets/credits": {
+			"displayType": "\u03a0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2",
+			"description": "\u03c0\u03b1\u03c1\u03b1\u03ba\u03bf\u03bb\u03bf\u03c5\u03b8\u03b5\u03af \u03c4\u03b9\u03c2 \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03b9\u03c2 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ad\u03c2"
+		},
+		"Assets/plan": {
+			"displayType": "\u03a3\u03c7\u03ad\u03b4\u03b9\u03bf \u03a3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae\u03c2",
+			"description": "\u03c0\u03c1\u03cc\u03b3\u03c1\u03b1\u03bc\u03bc\u03b1 \u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae\u03c2"
+		},
+		"Assets/subscription": {
+			"displayType": "\u03a3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae",
+			"description": "\u03c3\u03c5\u03bd\u03b4\u03c1\u03bf\u03bc\u03ae"
+		},
+		"Assets/product": {
+			"displayType": "\u03a0\u03c1\u03bf\u03ca\u03cc\u03bd",
+			"description": "\u03c0\u03c1\u03bf\u03ca\u03cc\u03bd \u03c0\u03bf\u03c5 \u03c0\u03c9\u03bb\u03b5\u03af\u03c4\u03b1\u03b9"
+		},
+		"Assets/service": {
+			"displayType": "\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1",
+			"description": "\u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1 \u03c0\u03bf\u03c5 \u03c0\u03c1\u03bf\u03c3\u03c6\u03ad\u03c1\u03b5\u03c4\u03b1\u03b9"
+		}
+	},
+	"messages": {
+		"Assets/credits/earned": {
+			"content": "\u039a\u03ad\u03c1\u03b4\u03b9\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		},
+		"Assets/credits/bought": {
+			"content": "\u0391\u03b3\u03cc\u03c1\u03b1\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		},
+		"Assets/credits/bonus": {
+			"content": "\u039c\u03c0\u03cc\u03bd\u03bf\u03c5\u03c2 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		},
+		"Assets/credits/spent": {
+			"content": "\u0394\u03b1\u03c0\u03ac\u03bd\u03b7\u03c3\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2"
+		},
+		"Assets/credits/sent": {
+			"content": "\u0388\u03c3\u03c4\u03b5\u03b9\u03bb\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2 \u03c3\u03b5 {{toUserName}}"
+		},
+		"Assets/credits/received": {
+			"content": "\u0388\u03bb\u03b1\u03b2\u03b5 {{amount}} \u03bc\u03bf\u03bd\u03ac\u03b4\u03b5\u03c2 \u03b1\u03c0\u03cc {{fromUserName}}"
+		},
+		"Assets/credits/alert": {
+			"content": "\u0388\u03c7\u03b5\u03c4\u03b5 \u03bc\u03b9\u03ba\u03c1\u03ad\u03c2 \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03c3\u03c4\u03bf\u03bd \u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc \u03c3\u03b1\u03c2. \u0395\u03c0\u03b9\u03c3\u03ba\u03b5\u03c6\u03c4\u03b5\u03af\u03c4\u03b5 <a href='<i translate='no'>\u03c4\u03bf\u03bd \u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03bc\u03bf 999 &#39;&gt;</a> \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b1\u03b3\u03bf\u03c1\u03ac\u03c3\u03b5\u03c4\u03b5 \u03c0\u03b5\u03c1\u03b9\u03c3\u03c3\u03cc\u03c4\u03b5\u03c1\u03b5\u03c2 \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2."
+		}
+	},
+	"billing": {
+		"Title": "\u03a4\u03b9\u03bc\u03bf\u03bb\u03cc\u03b3\u03b7\u03c3\u03b7 \u03c0\u03b5\u03c1\u03b9\u03bf\u03c5\u03c3\u03b9\u03b1\u03ba\u03ce\u03bd \u03c3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03c9\u03bd",
+		"CreditsMinimum": "\u0395\u03bb\u03ac\u03c7\u03b9\u03c3\u03c4\u03b5\u03c2 \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2",
+		"CreditsToAdd": "\u03a0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03b3\u03b9\u03b1 \u03c0\u03c1\u03bf\u03c3\u03b8\u03ae\u03ba\u03b7",
+		"Save": "\u0391\u03c0\u03bf\u03b8\u03b7\u03ba\u03b5\u03cd\u03c3\u03b5\u03c4\u03b5",
+		"ThisLink": "\u03b1\u03c5\u03c4\u03cc\u03c2 \u03bf \u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03bc\u03bf\u03c2",
+		"errors": {
+			"CreditsMinimumNegative": "\u039f\u03b9 \u03b5\u03bb\u03ac\u03c7\u03b9\u03c3\u03c4\u03b5\u03c2 \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03b4\u03b5\u03bd \u03bc\u03c0\u03bf\u03c1\u03bf\u03cd\u03bd \u03bd\u03b1 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c1\u03bd\u03b7\u03c4\u03b9\u03ba\u03ad\u03c2",
+			"CreditsToAddNegative": "\u039f\u03b9 \u03c0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03c0\u03c1\u03bf\u03c2 \u03c0\u03c1\u03bf\u03c3\u03b8\u03ae\u03ba\u03b7 \u03b4\u03b5\u03bd \u03bc\u03c0\u03bf\u03c1\u03bf\u03cd\u03bd \u03bd\u03b1 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c1\u03bd\u03b7\u03c4\u03b9\u03ba\u03ad\u03c2"
+		}
+	},
+	"services": {
+		"NewServiceTemplate": {
+			"Title": "\u039d\u03ad\u03b1 \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1",
+			"TitlePlaceholder": "\u03a4\u03af\u03c4\u03bb\u03bf\u03c2 \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1\u03c2",
+			"PricePlaceholder": "\u039f\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2 \u03c4\u03b9\u03bc\u03ae\u03c2",
+			"LinkPlaceholder": "\u03bf\u03c1\u03af\u03c3\u03c4\u03b5 \u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03bc\u03bf \u03c0\u03c1\u03cc\u03c3\u03b8\u03b5\u03c4\u03c9\u03bd \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03b9\u03ce\u03bd",
+			"DescriptionPlaceholder": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1\u03c2",
+			"SaveService": "\u0391\u03c0\u03bf\u03b8\u03ae\u03ba\u03b5\u03c5\u03c3\u03b7 \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1\u03c2",
+			"SelectRequiredParticipants": "\u0391\u03c0\u03b1\u03b9\u03c4\u03bf\u03cd\u03bd\u03c4\u03b1\u03b9 \u03c3\u03c7\u03b5\u03c4\u03b9\u03ba\u03bf\u03af \u03c3\u03c5\u03bc\u03bc\u03b5\u03c4\u03ad\u03c7\u03bf\u03bd\u03c4\u03b5\u03c2",
+			"RequiredParticipantsDesc": "\u03a0\u03b1\u03c1\u03b1\u03ba\u03b1\u03bb\u03bf\u03cd\u03bc\u03b5 \u03b5\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03c4\u03bf\u03c5\u03c2 \u03c3\u03c7\u03b5\u03c4\u03b9\u03ba\u03bf\u03cd\u03c2 \u03c3\u03c5\u03bc\u03bc\u03b5\u03c4\u03ad\u03c7\u03bf\u03bd\u03c4\u03b5\u03c2 \u03c0\u03bf\u03c5 \u03b1\u03c0\u03b1\u03b9\u03c4\u03bf\u03cd\u03bd\u03c4\u03b1\u03b9 \u03b3\u03b9\u03b1 \u03c4\u03b7 \u03c7\u03c1\u03ae\u03c3\u03b7 \u03b1\u03c5\u03c4\u03ae\u03c2 \u03c4\u03b7\u03c2 \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1\u03c2 (\u03b3\u03b9\u03b1 \u03c0\u03b1\u03c1\u03ac\u03b4\u03b5\u03b9\u03b3\u03bc\u03b1 \u03ba\u03b1\u03c4\u03bf\u03b9\u03ba\u03af\u03b4\u03b9\u03b1 \u03b3\u03b9\u03b1 &quot;\u03a3\u03c5\u03bb\u03af\u03c3\u03b9\u03b1 \u03c0\u03b1\u03c1\u03ac\u03c3\u03c4\u03b1\u03c3\u03b7&quot; \u03ae \u03c0\u03b1\u03b9\u03b4\u03b9\u03ac \u03b3\u03b9\u03b1 &quot;\u03a0\u03b1\u03b9\u03b4\u03b9\u03ba\u03ad\u03c2 \u03b4\u03b9\u03b1\u03ba\u03bf\u03c0\u03ad\u03c2&quot; \u03ba.\u03bb\u03c0.). \u0395\u03ac\u03bd \u03b7 \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1 \u03c0\u03bb\u03b7\u03c1\u03ce\u03bd\u03b5\u03c4\u03b1\u03b9, \u03bf \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7\u03c2 \u03b8\u03b1 \u03c0\u03c1\u03ad\u03c0\u03b5\u03b9 \u03bd\u03b1 \u03c0\u03bb\u03b7\u03c1\u03ce\u03c3\u03b5\u03b9 \u03b5\u03c0\u03af\u03c3\u03b7\u03c2 \u03b3\u03b9\u03b1 \u03ba\u03ac\u03b8\u03b5 \u03c3\u03c5\u03bd\u03b4\u03b5\u03b4\u03b5\u03bc\u03ad\u03bd\u03bf \u03c3\u03c5\u03bc\u03bc\u03b5\u03c4\u03ad\u03c7\u03bf\u03bd\u03c4\u03b1."
+		},
+		"EditServiceTemplate": {
+			"Title": "\u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1 \u03b5\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2"
+		},
+		"ManageServiceTemplates": "\u0394\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7 \u03c0\u03c1\u03bf\u03c4\u03cd\u03c0\u03c9\u03bd \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03b9\u03ce\u03bd",
+		"ManageServices": "\u0394\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7 \u03a5\u03c0\u03b7\u03c1\u03b5\u03c3\u03b9\u03ce\u03bd",
+		"Free": "\u0395\u03bb\u03b5\u03cd\u03b8\u03b5\u03c1\u03bf\u03c2",
+		"OptionalContribution": "\u03a0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03ae \u03c3\u03c5\u03bd\u03b5\u03b9\u03c3\u03c6\u03bf\u03c1\u03ac",
+		"RequiredPayment": "\u0391\u03c0\u03b1\u03b9\u03c4\u03bf\u03cd\u03bc\u03b5\u03bd\u03b7 \u03c0\u03bb\u03b7\u03c1\u03c9\u03bc\u03ae",
+		"AreYouSureDelete": "\u0395\u03af\u03c3\u03c4\u03b5 \u03b2\u03ad\u03b2\u03b1\u03b9\u03bf\u03b9 \u03cc\u03c4\u03b9 \u03b8\u03ad\u03bb\u03b5\u03c4\u03b5 \u03bd\u03b1 \u03b4\u03b9\u03b1\u03b3\u03c1\u03ac\u03c8\u03b5\u03c4\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7\u03bd \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1;",
+		"AmountServicesRelated": "\u03a5\u03c0\u03ac\u03c1\u03c7\u03bf\u03c5\u03bd {{amount}} \u03b4\u03b9\u03b1\u03b8\u03b5\u03c3\u03b9\u03bc\u03cc\u03c4\u03b7\u03c4\u03b5\u03c2 \u03c0\u03bf\u03c5 \u03c3\u03c7\u03b5\u03c4\u03af\u03b6\u03bf\u03bd\u03c4\u03b1\u03b9 \u03bc\u03b5 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7\u03bd \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03af\u03b1. \u0398\u03b1 \u03b1\u03c6\u03b1\u03b9\u03c1\u03b5\u03b8\u03bf\u03cd\u03bd \u03b5\u03c0\u03af\u03c3\u03b7\u03c2."
+	},
+	"transfer": {
+		"SelectRecipient": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03c0\u03b1\u03c1\u03b1\u03bb\u03ae\u03c0\u03c4\u03b7",
+		"TransactionSuccess": "\u0395\u03c0\u03b9\u03c4\u03c5\u03c7\u03af\u03b1 \u03c3\u03c5\u03bd\u03b1\u03bb\u03bb\u03b1\u03b3\u03ae\u03c2",
+		"OrTypeWalletAddress": "\u0389 \u03c0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03bf\u03bb\u03b9\u03bf\u03cd \u03c0\u03b1\u03c1\u03b1\u03bb\u03ae\u03c0\u03c4\u03b7",
+		"AppCredits": "\u03a0\u03b9\u03c3\u03c4\u03ce\u03c3\u03b5\u03b9\u03c2 \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ce\u03bd"
+	},
+	"NFT": {
+		"Title": "\u03a4\u03af\u03c4\u03bb\u03bf\u03c2",
+		"Name": "\u039f\u03bd\u03bf\u03bc\u03b1",
+		"EnterName": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03cc\u03bd\u03bf\u03bc\u03b1",
+		"EnterAuthorWallet": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03bf \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03cc\u03bb\u03b9 \u03c4\u03bf\u03c5 \u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1",
+		"InformationAboutTitle": "\u03a0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03bf {{title}} NFT",
+		"Description": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae",
+		"DetailedInformationAboutNFT": "\u0391\u03bd\u03b1\u03bb\u03c5\u03c4\u03b9\u03ba\u03ad\u03c2 \u03c0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03bf NFT",
+		"PresaleStarts": "\u0397 \u03c0\u03c1\u03bf\u03c0\u03ce\u03bb\u03b7\u03c3\u03b7 \u03be\u03b5\u03ba\u03b9\u03bd\u03ac \u03c3\u03c4\u03b9\u03c2 23 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5",
+		"OwnerUserNotFound": "\u039f \u03ba\u03ac\u03c4\u03bf\u03c7\u03bf\u03c2 \u03b1\u03c5\u03c4\u03bf\u03cd \u03c4\u03bf\u03c5 NFT \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03b5\u03b3\u03b3\u03b5\u03b3\u03c1\u03b1\u03bc\u03bc\u03ad\u03bd\u03bf\u03c2 \u03c3\u03c4\u03b7\u03bd \u03b1\u03af\u03c4\u03b7\u03c3\u03ae \u03bc\u03b1\u03c2.",
+		"BuyNow": "\u0391\u03b3\u03bf\u03c1\u03b1\u03c3\u03b5 \u03c4\u03c9\u03c1\u03b1",
+		"Buy": "\u0391\u03b3\u03bf\u03c1\u03ac",
+		"Add": "\u03a0\u03c1\u03bf\u03c3\u03b8\u03ae\u03ba\u03b7",
+		"Remove": "\u0391\u03c6\u03b1\u03b9\u03c1\u03ce",
+		"NoNFTyet": "\u0394\u03b5\u03bd \u03c5\u03c0\u03ac\u03c1\u03c7\u03bf\u03c5\u03bd \u03b1\u03ba\u03cc\u03bc\u03b7 NFT",
+		"Conversation": "\u03a3\u03c5\u03bd\u03bf\u03bc\u03b9\u03bb\u03af\u03b1",
+		"Create": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ce",
+		"CurrentBid": "\u03a4\u03c1\u03ad\u03c7\u03bf\u03c5\u03c3\u03b1 \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac",
+		"StartingIn": "\u039e\u03b5\u03ba\u03b9\u03bd\u03ce\u03bd\u03c4\u03b1\u03c2 \u03bc\u03ad\u03c3\u03b1",
+		"EndingIn": "\u03a4\u03b5\u03bb\u03b5\u03b9\u03c9\u03bd\u03b5\u03b9 \u03c3\u03b5",
+		"CreateNFT": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03c3\u03c4\u03b5 \u03ad\u03bd\u03b1 NFT",
+		"TitlePlaceholder": "\u0394\u03ce\u03c3\u03c4\u03b5 \u03ad\u03bd\u03b1\u03bd \u03c4\u03af\u03c4\u03bb\u03bf \u03c3\u03c4\u03bf NFT \u03c3\u03b1\u03c2",
+		"DescriptionPlaceholder": "\u0394\u03ce\u03c3\u03c4\u03b5 \u03bc\u03b9\u03b1 \u03c0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c4\u03bf\u03c5 NFT \u03c3\u03b1\u03c2",
+		"CreateYourNFT": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03c3\u03c4\u03b5 \u03c4\u03bf NFT \u03c3\u03b1\u03c2",
+		"Royalties": "\u0394\u03b9\u03ba\u03b1\u03b9\u03ce\u03bc\u03b1\u03c4\u03b1",
+		"RoyaltyPlaceholder": "\u03a0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2. \u03a0\u03bf\u03c3\u03cc \u03c0\u03bf\u03c5 \u03ba\u03b1\u03c4\u03b1\u03b2\u03bb\u03ae\u03b8\u03b7\u03ba\u03b5 \u03c3\u03c4\u03bf\u03bd \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03cc \u03c0\u03c1\u03b9\u03bd \u03b1\u03c0\u03cc \u03c4\u03b7 \u03bc\u03b5\u03c4\u03b1\u03c6\u03bf\u03c1\u03ac.",
+		"ExpirationDate": "\u0397\u03bc\u03b5\u03c1\u03bf\u03bc\u03b7\u03bd\u03af\u03b1 \u03bb\u03ae\u03be\u03b7\u03c2",
+		"StartingDate": "\u0397\u03bc\u03b5\u03c1\u03bf\u03bc\u03b7\u03bd\u03af\u03b1 \u03ad\u03bd\u03b1\u03c1\u03be\u03b7\u03c2",
+		"BidsBelowThisAmount": "\u0394\u03b5\u03bd \u03b8\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c0\u03bf\u03bd\u03c4\u03b1\u03b9 \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ad\u03c2 \u03ba\u03ac\u03c4\u03c9 \u03b1\u03c0\u03cc \u03b1\u03c5\u03c4\u03cc \u03c4\u03bf \u03c0\u03bf\u03c3\u03cc",
+		"MinimumBid": "\u0395\u03bb\u03ac\u03c7\u03b9\u03c3\u03c4\u03b7 \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac",
+		"Author": "\u03a3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1\u03c2",
+		"Price": "\u03a4\u03b9\u03bc\u03ae",
+		"Commission": "\u0395\u03c0\u03b9\u03c4\u03c1\u03bf\u03c0\u03ae",
+		"EnterCommission": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1",
+		"Owner": "\u0399\u03b4\u03b9\u03bf\u03ba\u03c4\u03ae\u03c4\u03b7\u03c2",
+		"SelectCategory": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u039a\u03b1\u03c4\u03b7\u03b3\u03bf\u03c1\u03af\u03b1",
+		"Day": "\u0397\u03bc\u03ad\u03c1\u03b1",
+		"Days": "\u0397\u03bc\u03ad\u03c1\u03b5\u03c2",
+		"Hour": "\u03a9\u03c1\u03b1",
+		"Hours": "\u03a9\u03c1\u03b5\u03c2",
+		"Minute": "\u039b\u03b5\u03c0\u03c4\u03cc",
+		"Minutes": "\u039b\u03b5\u03c0\u03c4\u03ac",
+		"Second": "\u0394\u03b5\u03cd\u03c4\u03b5\u03c1\u03bf\u03c2",
+		"Seconds": "\u0394\u03b5\u03c5\u03c4\u03b5\u03c1\u03cc\u03bb\u03b5\u03c0\u03c4\u03b1",
+		"SalesCreator": "\u03c4\u03c9\u03bd \u03c0\u03c9\u03bb\u03ae\u03c3\u03b5\u03c9\u03bd \u03b8\u03b1 \u03c0\u03ac\u03bd\u03b5 \u03c3\u03c4\u03bf\u03bd \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03cc",
+		"Details": "\u039b\u03b5\u03c0\u03c4\u03bf\u03bc\u03ad\u03c1\u03b9\u03b5\u03c2",
+		"Bids": "\u03a0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ad\u03c2",
+		"History": "\u0399\u03c3\u03c4\u03bf\u03c1\u03af\u03b1",
+		"LoremIpsum": "\u03a4\u03bf Lorem Ipsum \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c0\u03bb\u03ce\u03c2 \u03b5\u03b9\u03ba\u03bf\u03bd\u03b9\u03ba\u03cc \u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf \u03c4\u03b7\u03c2 \u03b2\u03b9\u03bf\u03bc\u03b7\u03c7\u03b1\u03bd\u03af\u03b1\u03c2 \u03b5\u03ba\u03c4\u03cd\u03c0\u03c9\u03c3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03c3\u03c4\u03bf\u03b9\u03c7\u03b5\u03b9\u03bf\u03b8\u03b5\u03c3\u03af\u03b1\u03c2.",
+		"PutOnSale": "\u0392\u03ac\u03bb\u03c4\u03b5 \u03c0\u03c1\u03bf\u03c2 \u03c0\u03ce\u03bb\u03b7\u03c3\u03b7",
+		"PutOffSale": "\u0391\u03c0\u03cc\u03c3\u03c5\u03c1\u03c3\u03b7 \u03b1\u03c0\u03cc \u03c4\u03b7\u03bd \u03c0\u03ce\u03bb\u03b7\u03c3\u03b7",
+		"Transfer": "\u039c\u0395\u03a4\u0391\u03a6\u039f\u03a1\u0391",
+		"Actions": "\u0395\u03bd\u03ad\u03c1\u03b3\u03b5\u03b9\u03b5\u03c2",
+		"Claim": "\u0391\u03c0\u03b1\u03af\u03c4\u03b7\u03c3\u03b7",
+		"ClaimNFT": "\u0391\u03be\u03af\u03c9\u03c3\u03b7 NFT",
+		"Unlocking": "\u039e\u03b5\u03ba\u03bb\u03b5\u03af\u03b4\u03c9\u03bc\u03b1",
+		"Unlock": "\u039e\u03b5\u03ba\u03bb\u03b5\u03af\u03b4\u03c9\u03bc\u03b1",
+		"Update": "\u0395\u03ba\u03c3\u03c5\u03b3\u03c7\u03c1\u03bf\u03bd\u03af\u03b6\u03c9",
+		"UpdateToken": "\u0395\u03bd\u03b7\u03bc\u03ad\u03c1\u03c9\u03c3\u03b7 \u03b4\u03b9\u03b1\u03ba\u03c1\u03b9\u03c4\u03b9\u03ba\u03bf\u03cd",
+		"UpdateNFT": "\u0395\u03bd\u03b7\u03bc\u03ad\u03c1\u03c9\u03c3\u03b7 NFT",
+		"CreateToken": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03b4\u03b9\u03b1\u03ba\u03c1\u03b9\u03c4\u03b9\u03ba\u03bf\u03cd",
+		"PlaceBid": "\u03a4\u03bf\u03c0\u03bf\u03b8\u03b5\u03c4\u03ae\u03c3\u03c4\u03b5 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac",
+		"SoldOut": "\u03a0\u03c9\u03bb\u03b7\u03b8\u03b5\u03af",
+		"NotOnSale": "\u0394\u03b5\u03bd \u03c0\u03c9\u03bb\u03b5\u03af\u03c4\u03b1\u03b9",
+		"NftName": "\u038c\u03bd\u03bf\u03bc\u03b1 NFT",
+		"DescribeYourNFT": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03ac\u03c8\u03c4\u03b5 \u03c4\u03bf NFT \u03c3\u03b1\u03c2",
+		"NFTImage": "\u0395\u03b9\u03ba\u03cc\u03bd\u03b1 \u03b3\u03b9\u03b1 NFT",
+		"NFTVideo": "\u0392\u03af\u03bd\u03c4\u03b5\u03bf \u03b3\u03b9\u03b1 NFT, \u03b5\u03ac\u03bd \u03c5\u03c0\u03ac\u03c1\u03c7\u03b5\u03b9",
+		"UploadMovie": "\u0391\u03bd\u03b5\u03b2\u03ac\u03c3\u03c4\u03b5 \u03c4\u03b1\u03b9\u03bd\u03af\u03b1",
+		"MovieSource": "\u03a0\u03b7\u03b3\u03ae \u03c4\u03b1\u03b9\u03bd\u03af\u03b1\u03c2",
+		"MovieURL": "URL \u03c4\u03b1\u03b9\u03bd\u03af\u03b1\u03c2",
+		"UploadFile": "\u0391\u03bd\u03ad\u03b2\u03b1\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03b1\u03c1\u03c7\u03b5\u03af\u03bf",
+		"PutOnMarketplace": "\u0394\u03b9\u03b1\u03b8\u03ad\u03c3\u03c4\u03b5 \u03c3\u03c4\u03b7\u03bd \u03b1\u03b3\u03bf\u03c1\u03ac",
+		"InstantPurchase": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03c4\u03b9\u03bc\u03ae \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03ad\u03c8\u03b5\u03c4\u03b5 \u03c3\u03c4\u03bf\u03c5\u03c2 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b5\u03c2 \u03bd\u03b1 \u03b1\u03b3\u03bf\u03c1\u03ac\u03c3\u03bf\u03c5\u03bd \u03ac\u03bc\u03b5\u03c3\u03b1 \u03c4\u03bf NFT \u03c3\u03b1\u03c2",
+		"FixedPrice": "\u03a3\u03c4\u03b1\u03b8\u03b5\u03c1\u03ae \u03c4\u03b9\u03bc\u03ae",
+		"TimedAuction": "\u03a7\u03c1\u03bf\u03bd\u03b9\u03ba\u03ae \u03b4\u03b7\u03bc\u03bf\u03c0\u03c1\u03b1\u03c3\u03af\u03b1",
+		"OpenForBids": "\u0391\u03bd\u03bf\u03b9\u03c7\u03c4\u03cc \u03b3\u03b9\u03b1 \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ad\u03c2",
+		"PriceOnePiece": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03b9\u03bc\u03ae \u03b3\u03b9\u03b1 \u03ad\u03bd\u03b1 \u03c4\u03b5\u03bc\u03ac\u03c7\u03b9\u03bf",
+		"EnterPrice": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03b9\u03bc\u03ae",
+		"EnterMinimumBid": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03b5\u03bb\u03ac\u03c7\u03b9\u03c3\u03c4\u03b7 \u03c0\u03c1\u03bf\u03c3\u03c6\u03bf\u03c1\u03ac",
+		"SelectChain": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03b1\u03bb\u03c5\u03c3\u03af\u03b4\u03b1",
+		"Currency": "\u039d\u03cc\u03bc\u03b9\u03c3\u03bc\u03b1",
+		"AreYouSureDeleteImage": "\u0395\u03af\u03c3\u03c4\u03b5 \u03b2\u03ad\u03b2\u03b1\u03b9\u03bf\u03b9 \u03cc\u03c4\u03b9 \u03b8\u03ad\u03bb\u03b5\u03c4\u03b5 \u03bd\u03b1 \u03b1\u03c6\u03b1\u03b9\u03c1\u03ad\u03c3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03b5\u03b9\u03ba\u03cc\u03bd\u03b1;",
+		"AreYouSureDeleteVideo": "\u0395\u03af\u03c3\u03c4\u03b5 \u03b2\u03ad\u03b2\u03b1\u03b9\u03bf\u03b9 \u03cc\u03c4\u03b9 \u03b8\u03ad\u03bb\u03b5\u03c4\u03b5 \u03bd\u03b1 \u03ba\u03b1\u03c4\u03b1\u03c1\u03b3\u03ae\u03c3\u03b5\u03c4\u03b5 \u03c4\u03bf \u03b2\u03af\u03bd\u03c4\u03b5\u03bf;",
+		"series": {
+			"Name": "\u039f\u03bd\u03bf\u03bc\u03b1",
+			"Icon": "\u0395\u03b9\u03ba\u03cc\u03bd\u03b9\u03c3\u03bc\u03b1",
+			"Description": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae",
+			"Author": "\u03a3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1\u03c2",
+			"SelectSeries": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03c3\u03b5\u03b9\u03c1\u03ac",
+			"Value": "\u03b1\u03be\u03af\u03b1",
+			"AreYouSure": "\u0395\u03af\u03c3\u03b1\u03b9 \u03c3\u03af\u03b3\u03bf\u03c5\u03c1\u03bf\u03c2?",
+			"AuthorInvalid": "\u0397 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03b3\u03ba\u03c5\u03c1\u03b7!",
+			"Address": "\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7",
+			"CoverImage": "\u0395\u03b9\u03ba\u03cc\u03bd\u03b1 \u03b5\u03be\u03c9\u03c6\u03cd\u03bb\u03bb\u03bf\u03c5",
+			"UploadCoverImage": "\u039c\u03b5\u03c4\u03b1\u03c6\u03cc\u03c1\u03c4\u03c9\u03c3\u03b7 \u03b5\u03b9\u03ba\u03cc\u03bd\u03b1\u03c2 \u03b5\u03be\u03c9\u03c6\u03cd\u03bb\u03bb\u03bf\u03c5",
+			"CommissionAddressInvalid": "\u0397 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c4\u03b7\u03c2 \u0395\u03c0\u03b9\u03c4\u03c1\u03bf\u03c0\u03ae\u03c2 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03b3\u03ba\u03c5\u03c1\u03b7",
+			"OnSale": "\u03c3\u03b5 \u03ad\u03ba\u03c0\u03c4\u03c9\u03c3\u03b7",
+			"OffSale": "\u03b5\u03ba\u03c4\u03cc\u03c2 \u03c0\u03ce\u03bb\u03b7\u03c3\u03b7\u03c2",
+			"CreateSeries": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c3\u03b5\u03b9\u03c1\u03ac\u03c2",
+			"UpdateSeries": "\u0395\u03bd\u03b7\u03bc\u03ad\u03c1\u03c9\u03c3\u03b7 \u03c3\u03b5\u03b9\u03c1\u03ac\u03c2",
+			"SeriesInfo": "\u03a0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03c3\u03b5\u03b9\u03c1\u03ac\u03c2",
+			"SelectAuthor": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1",
+			"NewItem": "\u039d\u03ad\u03b1 \u03c3\u03b5\u03b9\u03c1\u03ac NFT",
+			"NamePlaceholder": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03bf \u03cc\u03bd\u03bf\u03bc\u03b1 \u03c4\u03b7\u03c2 \u03c3\u03b5\u03b9\u03c1\u03ac\u03c2",
+			"DescPlaceholder": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03c0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c4\u03b7\u03c2 \u03c3\u03b5\u03b9\u03c1\u03ac\u03c2",
+			"EndingIn": "\u03a4\u03b5\u03bb\u03b5\u03b9\u03c9\u03bd\u03b5\u03b9 \u03c3\u03b5"
+		},
+		"contract": {
+			"CreateContract": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c3\u03c5\u03bc\u03b2\u03bf\u03bb\u03b1\u03af\u03bf\u03c5",
+			"SelectContract": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7",
+			"CreateContractFor": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c3\u03c5\u03bc\u03b2\u03bf\u03bb\u03b1\u03af\u03bf\u03c5 \u03b3\u03b9\u03b1 {{userName}}",
+			"ContractFor": "\u03a3\u03c5\u03bc\u03b2\u03cc\u03bb\u03b1\u03b9\u03bf \u03b3\u03b9\u03b1 {{userName}}",
+			"UpdateContract": "\u0395\u03bd\u03b7\u03bc\u03ad\u03c1\u03c9\u03c3\u03b7 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2",
+			"TransferOwnership": "\u039c\u03b5\u03c4\u03b1\u03b2\u03af\u03b2\u03b1\u03c3\u03b7 \u03b9\u03b4\u03b9\u03bf\u03ba\u03c4\u03b7\u03c3\u03af\u03b1\u03c2",
+			"SetBaseURI": "\u039f\u03c1\u03b9\u03c3\u03bc\u03cc\u03c2 URI \u03b2\u03ac\u03c3\u03b7\u03c2",
+			"SetSuffix": "\u03a3\u03cd\u03bd\u03bf\u03bb\u03bf \u03b5\u03c0\u03af\u03b8\u03b7\u03bc\u03b1",
+			"CurrentOwner": "\u03a4\u03c1\u03ad\u03c7\u03c9\u03bd \u0399\u03b4\u03b9\u03bf\u03ba\u03c4\u03ae\u03c4\u03b7\u03c2",
+			"CurrentBaseURL": "\u03a4\u03c1\u03ad\u03c7\u03bf\u03bd BaseURL",
+			"ContractAddressAbsent": "\u0397 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b1\u03c0\u03bf\u03c5\u03c3\u03b9\u03ac\u03b6\u03b5\u03b9",
+			"FactoryAddressAbsent": "\u0397 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03b5\u03c1\u03b3\u03bf\u03c3\u03c4\u03b1\u03c3\u03af\u03bf\u03c5 \u03b1\u03c0\u03bf\u03c5\u03c3\u03b9\u03ac\u03b6\u03b5\u03b9",
+			"ContractName": "{{contractName}} - {{contractSymbol}} ( {{chainNetwork}} )",
+			"TitleRequired": "\u0391\u03c0\u03b1\u03b9\u03c4\u03b5\u03af\u03c4\u03b1\u03b9 \u03c4\u03af\u03c4\u03bb\u03bf\u03c2",
+			"SymbolRequired": "\u0391\u03c0\u03b1\u03b9\u03c4\u03b5\u03af\u03c4\u03b1\u03b9 \u03c3\u03cd\u03bc\u03b2\u03bf\u03bb\u03bf",
+			"TypeContractName": "\u03cc\u03bd\u03bf\u03bc\u03b1 \u03c4\u03b7\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2",
+			"TypeContractSymbol": "\u03c3\u03cd\u03bc\u03b2\u03bf\u03bb\u03bf \u03c3\u03c5\u03bc\u03b2\u03bf\u03bb\u03b1\u03af\u03bf\u03c5 (\u03bc\u03ad\u03b3\u03b9\u03c3\u03c4\u03bf 10 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03ae\u03c1\u03b5\u03c2)"
+		},
+		"contests": {
+			"Title": "\u0394\u03b9\u03b1\u03b3\u03c9\u03bd\u03b9\u03c3\u03bc\u03bf\u03af",
+			"NewContest": "\u039d\u03ad\u03bf\u03c2 \u0394\u03b9\u03b1\u03b3\u03c9\u03bd\u03b9\u03c3\u03bc\u03cc\u03c2"
+		},
+		"import": {
+			"importNFT": "\u0395\u03b9\u03c3\u03b1\u03b3\u03c9\u03b3\u03ae NFT&#39;s",
+			"importAttributes": "\u0395\u03b9\u03c3\u03b1\u03b3\u03c9\u03b3\u03ae \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd NFT",
+			"fileNotFound": "\u039b\u03c5\u03c0\u03bf\u03cd\u03bc\u03b1\u03c3\u03c4\u03b5, \u03c4\u03bf \u03b1\u03c1\u03c7\u03b5\u03af\u03bf CSV \u03b4\u03b5\u03bd \u03b2\u03c1\u03ad\u03b8\u03b7\u03ba\u03b5.",
+			"fileEmpty": "\u039b\u03c5\u03c0\u03bf\u03cd\u03bc\u03b1\u03c3\u03c4\u03b5, \u03c4\u03bf \u03b1\u03c1\u03c7\u03b5\u03af\u03bf CSV \u03b5\u03af\u03bd\u03b1\u03b9 \u03ba\u03b5\u03bd\u03cc.",
+			"userIdNotFound": "\u03c7\u03c1\u03ae\u03c3\u03c4\u03b7\u03c2 \u03c5\u03c0\u03ac\u03c1\u03c7\u03b5\u03b9 \u03b1\u03bb\u03bb\u03ac \u03c4\u03bf \u03b1\u03bd\u03b1\u03b3\u03bd\u03c9\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03cc \u03b5\u03af\u03bd\u03b1\u03b9 \u03ba\u03b5\u03bd\u03cc",
+			"errorLine": "\u03b3\u03c1\u03b1\u03bc\u03bc\u03ae {{1}}",
+			"fieldNotFound": "\u03a4\u03bf \u03c5\u03c0\u03bf\u03c7\u03c1\u03b5\u03c9\u03c4\u03b9\u03ba\u03cc \u03c0\u03b5\u03b4\u03af\u03bf &quot; {{1}} &quot; \u03b4\u03b5\u03bd \u03b2\u03c1\u03ad\u03b8\u03b7\u03ba\u03b5",
+			"displayTypeEmpty": "\u039f \u03c4\u03cd\u03c0\u03bf\u03c2 \u03bf\u03b8\u03cc\u03bd\u03b7\u03c2 \u03b3\u03b9\u03b1 &quot; {{1}} &quot; \u03b4\u03b5\u03bd \u03b2\u03c1\u03ad\u03b8\u03b7\u03ba\u03b5",
+			"taskStreamInvalid": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03b7 \u03c1\u03bf\u03ae \u03b5\u03c1\u03b3\u03b1\u03c3\u03b9\u03ce\u03bd",
+			"instructionsEmpty": "\u03ba\u03b5\u03bd\u03ad\u03c2 \u03bf\u03b9 \u03bf\u03b4\u03b7\u03b3\u03af\u03b5\u03c2 \u03c1\u03bf\u03ae\u03c2 \u03b5\u03c1\u03b3\u03b1\u03c3\u03b9\u03ce\u03bd",
+			"complete": "\u03a0\u03bb\u03ae\u03c1\u03b7\u03c2",
+			"activateUsers": "\u03b1\u03c0\u03bf\u03c3\u03c4\u03bf\u03bb\u03ae \u03bc\u03b7\u03bd\u03cd\u03bc\u03b1\u03c4\u03bf\u03c2 \u03b5\u03bd\u03b5\u03c1\u03b3\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7\u03c2 \u03c3\u03c4\u03bf\u03c5\u03c2 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b5\u03c2;",
+			"importProgress": "\u03a0\u03c1\u03cc\u03bf\u03b4\u03bf\u03c2",
+			"importOptions": "\u0395\u03c0\u03b9\u03bb\u03bf\u03b3\u03ad\u03c2",
+			"sampleCSV": "\u039b\u03ae\u03c8\u03b7 \u03b4\u03b5\u03af\u03b3\u03bc\u03b1\u03c4\u03bf\u03c2 CSV",
+			"fileLabel": "\u039c\u03b5\u03c4\u03b1\u03c6\u03cc\u03c1\u03c4\u03c9\u03c3\u03b7 \u03c5\u03c0\u03bf\u03bb\u03bf\u03b3\u03b9\u03c3\u03c4\u03b9\u03ba\u03bf\u03cd \u03c6\u03cd\u03bb\u03bb\u03bf\u03c5:",
+			"errorsTitle": "\u03a0\u03b1\u03c1\u03bf\u03c5\u03c3\u03b9\u03ac\u03c3\u03c4\u03b7\u03ba\u03b1\u03bd \u03c3\u03c6\u03ac\u03bb\u03bc\u03b1\u03c4\u03b1"
+		},
+		"filter": {
+			"ByCategory": {
+				"FilterByNFTCollections": "\u03a6\u03b9\u03bb\u03c4\u03c1\u03ac\u03c1\u03b9\u03c3\u03bc\u03b1 \u03ba\u03b1\u03c4\u03ac \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ad\u03c2 NFT",
+				"ShowNFTCollection": "\u0395\u03bc\u03c6\u03ac\u03bd\u03b9\u03c3\u03b7 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae\u03c2 NFT \u03c3\u03b5...",
+				"AllCollections": "\u038c\u03bb\u03b5\u03c2 \u03bf\u03b9 \u03a3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ad\u03c2"
+			},
+			"ByUser": {
+				"AllAuthors": "\u038c\u03bb\u03bf\u03b9 \u03bf\u03b9 \u03a3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03c2",
+				"AllUsers": "\u039f\u03bb\u03bf\u03b9",
+				"FilterByAuthors": "\u03a6\u03b9\u03bb\u03c4\u03c1\u03ac\u03c1\u03b9\u03c3\u03bc\u03b1 \u03ba\u03b1\u03c4\u03ac \u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03b5\u03af\u03c2"
+			}
+		},
+		"Back": "\u0395\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae \u03c3\u03c4\u03b7 \u03a3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae",
+		"attributes": {
+			"Title": "\u0394\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd",
+			"Attributes": "\u0393\u03bd\u03c9\u03c1\u03af\u03c3\u03bc\u03b1\u03c4\u03b1",
+			"DisplayTitle": "\u03a4\u03cd\u03c0\u03bf\u03c2 \u03bf\u03b8\u03cc\u03bd\u03b7\u03c2",
+			"AddDisplayType": "\u03a0\u03c1\u03bf\u03c3\u03b8\u03ae\u03ba\u03b7 \u03bd\u03ad\u03bf\u03c5 \u03c4\u03cd\u03c0\u03bf\u03c5 \u03b5\u03bc\u03c6\u03ac\u03bd\u03b9\u03c3\u03b7\u03c2",
+			"NewDisplay": "\u039d\u03ad\u03b1 \u03bf\u03b8\u03cc\u03bd\u03b7",
+			"TraitTitle": "\u03a4\u03cd\u03c0\u03bf\u03c2 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03bf\u03cd",
+			"AddTraitTitle": "\u03a0\u03c1\u03bf\u03c3\u03b8\u03ae\u03ba\u03b7 \u03bd\u03ad\u03bf\u03c5 \u03c4\u03cd\u03c0\u03bf\u03c5 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03bf\u03cd",
+			"NewTrait": "\u039d\u03ad\u03bf\u03c2 \u03c4\u03cd\u03c0\u03bf\u03c2 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03bf\u03cd",
+			"ValueTitle": "\u03b1\u03be\u03af\u03b1",
+			"AddValueTitle": "\u03a0\u03c1\u03bf\u03c3\u03b8\u03ad\u03c3\u03c4\u03b5 \u03bd\u03ad\u03b1 \u03b1\u03be\u03af\u03b1",
+			"NewValue": "\u039d\u03ad\u03b1 \u0391\u03be\u03af\u03b1",
+			"NewAttribute": "\u039d\u03ad\u03b1 \u0399\u03b4\u03b9\u03cc\u03c4\u03b7\u03c4\u03b1",
+			"UpdateAttributes": "\u0395\u03bd\u03b7\u03bc\u03ad\u03c1\u03c9\u03c3\u03b7 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd",
+			"SaveAttributes": "\u0391\u03c0\u03bf\u03b8\u03ae\u03ba\u03b5\u03c5\u03c3\u03b7 \u03c7\u03b1\u03c1\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03ce\u03bd"
+		},
+		"profile": {
+			"LogOut": "\u0391\u03c0\u03bf\u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7",
+			"Title": "\u03a0\u03c1\u03bf\u03c6\u03af\u03bb \u03b3\u03b9\u03b1 {{userName}}",
+			"Description": "\u03a3\u03c4\u03bf\u03b9\u03c7\u03b5\u03af\u03b1 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7",
+			"aboutPlaceholder": "\u0395\u03c0\u03b5\u03be\u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1 \u03b2\u03b9\u03bf\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03bf\u03cd",
+			"SureLogOut": "\u0395\u03af\u03c3\u03c4\u03b5 \u03b2\u03ad\u03b2\u03b1\u03b9\u03bf\u03b9 \u03cc\u03c4\u03b9 \u03b8\u03ad\u03bb\u03b5\u03c4\u03b5 \u03bd\u03b1 \u03b1\u03c0\u03bf\u03c3\u03c5\u03bd\u03b4\u03b5\u03b8\u03b5\u03af\u03c4\u03b5;",
+			"UploadCoverPhoto": "\u0391\u03bd\u03b5\u03b2\u03ac\u03c3\u03c4\u03b5 \u03c6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1 \u03b5\u03be\u03c9\u03c6\u03cd\u03bb\u03bb\u03bf\u03c5"
+		},
+		"sales": {
+			"factory": {
+				"form": {
+					"labels": {
+						"NFTContract": "\u03a3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7 NFTC",
+						"seriesId": "\u03c3\u03b5\u03b9\u03c1\u03ac ID",
+						"owner": "\u0399\u03b4\u03b9\u03bf\u03ba\u03c4\u03ae\u03c4\u03b7\u03c2",
+						"currency": "\u039d\u03cc\u03bc\u03b9\u03c3\u03bc\u03b1",
+						"price": "\u03a4\u03b9\u03bc\u03ae",
+						"beneficiary": "\u0394\u03b9\u03ba\u03b1\u03b9\u03bf\u03cd\u03c7\u03bf\u03c2",
+						"autoindex": "\u0391\u03c5\u03c4\u03cc\u03bc\u03b1\u03c4\u03bf\u03c2 \u03b5\u03c5\u03c1\u03b5\u03c4\u03ae\u03c1\u03b9\u03bf",
+						"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1",
+						"rateInterval": "\u03a7\u03c1\u03bf\u03bd\u03b9\u03ba\u03cc \u03b4\u03b9\u03ac\u03c3\u03c4\u03b7\u03bc\u03b1",
+						"rateAmount": "\u0392\u03b1\u03b8\u03bc\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03c4\u03bf \u03c0\u03bf\u03c3\u03cc"
+					},
+					"small": {
+						"NFTContract": "\u03a3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7 NFTC",
+						"seriesId": "\u03bc\u03ac\u03c1\u03ba\u03b5\u03c2 \u03b8\u03b1 \u03ba\u03cc\u03b2\u03bf\u03bd\u03c4\u03b1\u03b9 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03ae \u03c4\u03b7 \u03c3\u03b5\u03b9\u03c1\u03ac",
+						"owner": "\u03ba\u03ac\u03c4\u03bf\u03c7\u03bf\u03c2 \u03c4\u03bf\u03c5 \u03c0\u03b1\u03c1\u03b1\u03b4\u03b5\u03af\u03b3\u03bc\u03b1\u03c4\u03bf\u03c2, \u03b4\u03b9\u03b1\u03c6\u03bf\u03c1\u03b5\u03c4\u03b9\u03ba\u03ac \u03b8\u03b1 \u03b3\u03af\u03bd\u03b5\u03b9 \u03b1\u03c0\u03bf\u03c3\u03c4\u03bf\u03bb\u03ad\u03b1\u03c2",
+						"currency": "\u039d\u03cc\u03bc\u03b9\u03c3\u03bc\u03b1 \u03b3\u03b9\u03b1 \u03bc\u03ac\u03c1\u03ba\u03b5\u03c2 \u03c0\u03bf\u03c5 \u03b1\u03b3\u03bf\u03c1\u03ac\u03c3\u03b1\u03c4\u03b5, \u03b5\u03ac\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03bc\u03b7\u03b4\u03ad\u03bd - \u03b3\u03b9\u03b1 \u03b5\u03b3\u03b3\u03b5\u03bd\u03ae \u03bd\u03bf\u03bc\u03af\u03c3\u03bc\u03b1\u03c4\u03b1",
+						"price": "\u03a4\u03b9\u03bc\u03ae",
+						"beneficiary": "\u0394\u03b9\u03ba\u03b1\u03b9\u03bf\u03cd\u03c7\u03bf\u03c2 \u03c0\u03ce\u03bb\u03b7\u03c3\u03b7\u03c2 \u03bc\u03ac\u03c1\u03ba\u03b5\u03c2, \u03b4\u03b9\u03b1\u03c6\u03bf\u03c1\u03b5\u03c4\u03b9\u03ba\u03ac \u03b8\u03b1 \u03b5\u03af\u03bd\u03b1\u03b9 \u03bf \u03b1\u03c0\u03bf\u03c3\u03c4\u03bf\u03bb\u03ad\u03b1\u03c2",
+						"autoindex": "\u0391\u03c5\u03c4\u03cc\u03bc\u03b1\u03c4\u03bf\u03c2 \u03b5\u03c5\u03c1\u03b5\u03c4\u03ae\u03c1\u03b9\u03bf",
+						"duration": "\u039a\u03bb\u03b5\u03af\u03b4\u03c9\u03bc\u03b1 \u03bc\u03b5\u03c4\u03ac \u03c4\u03b7\u03bd \u03ba\u03bf\u03c0\u03ae. \u039c\u03b7\u03b4\u03ad\u03bd \u03c3\u03b7\u03bc\u03b1\u03af\u03bd\u03b5\u03b9 \u03bd\u03b1 \u03c4\u03bf \u03b1\u03c0\u03bf\u03ba\u03c4\u03ae\u03c3\u03b5\u03b9\u03c2 \u03b1\u03bc\u03ad\u03c3\u03c9\u03c2.",
+						"rateInterval": "\u03b4\u03b9\u03ac\u03c3\u03c4\u03b7\u03bc\u03b1 \u03ba\u03ac\u03b4\u03bf\u03c5 \u03b3\u03b9\u03b1 \u03b5\u03b9\u03b4\u03b9\u03ba\u03ae \u03b1\u03b3\u03bf\u03c1\u03ac",
+						"rateAmount": "\u03c0\u03bf\u03c3\u03cc \u03ba\u03bf\u03c5\u03b2\u03ac \u03b3\u03b9\u03b1 \u03b5\u03b9\u03b4\u03b9\u03ba\u03ae \u03b1\u03b3\u03bf\u03c1\u03ac"
+					}
+				},
+				"placeholders": {
+					"optional": "(\u03c0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2)",
+					"number": "\u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2",
+					"address": "\u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7",
+					"fraction": "\u03ba\u03bb\u03ac\u03c3\u03bc\u03b1",
+					"integer": "\u03b1\u03ba\u03ad\u03c1\u03b1\u03b9\u03bf\u03c2 \u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2",
+					"seconds": "\u03b4\u03b5\u03c5\u03c4\u03b5\u03c1\u03cc\u03bb\u03b5\u03c0\u03c4\u03b1",
+					"uint256": "uint256",
+					"uint192": "uint192",
+					"uint64": "uint64",
+					"uint32": "uint32",
+					"uint16": "uint16"
+				},
+				"produce": "\u03a0\u03b1\u03c1\u03ac\u03b3\u03c9",
+				"viewInstancesList": "\u0391\u03bd\u03b1\u03bd\u03ad\u03c9\u03c3\u03b7 \u03bb\u03af\u03c3\u03c4\u03b1\u03c2"
+			},
+			"instance": {
+				"form": {
+					"labels": {
+						"seriesId": "\u0391\u03bd\u03b1\u03b3\u03bd\u03c9\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03cc \u03c3\u03b5\u03b9\u03c1\u03ac\u03c2",
+						"account": "\u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc\u03c2",
+						"amount": "\u03a0\u03bf\u03c3\u03cc"
+					},
+					"small": {
+						"seriesId": "\u03c4\u03bf \u03bd\u03ad\u03bf \u03b4\u03b9\u03b1\u03ba\u03c1\u03b9\u03c4\u03b9\u03ba\u03cc \u03b8\u03b1 \u03b1\u03bd\u03ae\u03ba\u03b5\u03b9 \u03c3\u03b5 \u03c3\u03b5\u03b9\u03c1\u03ac \u03bc\u03b5 \u03c4\u03ad\u03c4\u03bf\u03b9\u03bf \u03b1\u03bd\u03b1\u03b3\u03bd\u03c9\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03cc",
+						"account": "\u03ba\u03ac\u03c4\u03bf\u03c7\u03bf\u03c2 \u03c4\u03bf\u03c5 \u03bd\u03b5\u03bf\u03c3\u03cd\u03c3\u03c4\u03b1\u03c4\u03bf\u03c5 NFT. \u03b5\u03ac\u03bd \u03b4\u03b5\u03bd \u03ad\u03c7\u03b5\u03b9 \u03bf\u03c1\u03b9\u03c3\u03c4\u03b5\u03af - \u03b8\u03b1 \u03c7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03b5\u03b9 \u03c4\u03bf \u03c4\u03c1\u03ad\u03c7\u03bf\u03bd \u03c0\u03bf\u03c1\u03c4\u03bf\u03c6\u03cc\u03bb\u03b9",
+						"amount": "\u03c0\u03bf\u03c3\u03cc\u03c4\u03b7\u03c4\u03b1 NFT \u03c3\u03b5 \u03bc\u03ad\u03bd\u03c4\u03b1"
+					}
+				},
+				"placeholders": {
+					"optional": "(\u03c0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2)",
+					"seriesId": "\u03c4\u03b1\u03c5\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1",
+					"account": "\u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc\u03c2",
+					"amount": "\u03c0\u03bf\u03c3\u03cc",
+					"integer": "\u03b1\u03ba\u03ad\u03c1\u03b1\u03b9\u03bf\u03c2 \u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2"
+				},
+				"btn": {
+					"Purchase": "\u0391\u03b3\u03bf\u03c1\u03ac",
+					"SpecialPurchase": "\u0395\u03b9\u03b4\u03b9\u03ba\u03ae \u03b1\u03b3\u03bf\u03c1\u03ac"
+				}
+			},
+			"whitelist": {
+				"form": {
+					"labels": {
+						"account": "\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7"
+					},
+					"small": {
+						"account": "\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7"
+					}
+				},
+				"errors": {
+					"invalidAddress": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03b7 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7"
+				},
+				"placeholders": {
+					"account": "\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7"
+				},
+				"addToWhitelist": "\u03a0\u03c1\u03bf\u03c3\u03b8\u03ae\u03ba\u03b7 \u03c3\u03c4\u03b7 \u03bb\u03af\u03c3\u03c4\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03b5\u03c0\u03cc\u03bc\u03b5\u03bd\u03c9\u03bd",
+				"removeFromWhitelist": "\u0391\u03c6\u03b1\u03af\u03c1\u03b5\u03c3\u03b7 \u03b1\u03c0\u03cc \u03c4\u03b7 \u03bb\u03af\u03c3\u03c4\u03b1 \u03b5\u03c0\u03b9\u03c4\u03c1\u03b5\u03c0\u03cc\u03bc\u03b5\u03bd\u03c9\u03bd"
+			}
+		},
+		"locked": {
+			"form": {
+				"labels": {
+					"tokenId": "Token ID",
+					"custodian": "\u03a6\u03cd\u03bb\u03b1\u03ba\u03b1\u03c2",
+					"recipient": "\u03a0\u03b1\u03c1\u03b1\u03bb\u03ae\u03c0\u03c4\u03b7\u03c2"
+				},
+				"small": {
+					"tokenId": "\u03b1\u03bd\u03b1\u03b3\u03bd\u03c9\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03cc \u03b4\u03b9\u03b1\u03ba\u03c1\u03b9\u03c4\u03b9\u03ba\u03bf\u03cd \u03c4\u03b9 \u03c0\u03c1\u03ad\u03c0\u03b5\u03b9 \u03bd\u03b1 \u03ba\u03bb\u03b5\u03b9\u03b4\u03ce\u03c3\u03b5\u03c4\u03b5 \u03ae \u03bd\u03b1 \u03be\u03b5\u03ba\u03bb\u03b5\u03b9\u03b4\u03ce\u03c3\u03b5\u03c4\u03b5",
+					"custodian": "\u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c0\u03bf\u03c5 \u03bc\u03c0\u03bf\u03c1\u03b5\u03af \u03bd\u03b1 \u03be\u03b5\u03ba\u03bb\u03b5\u03b9\u03b4\u03ce\u03c3\u03b5\u03b9",
+					"recipient": "\u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c0\u03bf\u03c5 \u03b8\u03b1 \u03bb\u03ac\u03b2\u03b5\u03b9 \u03c4\u03b1 \u03b4\u03b9\u03b1\u03ba\u03c1\u03b9\u03c4\u03b9\u03ba\u03ac"
+				}
+			},
+			"errors": {
+				"invalidTokenId": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03bf \u03b1\u03bd\u03b1\u03b3\u03bd\u03c9\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03cc \u03b4\u03b9\u03b1\u03ba\u03c1\u03b9\u03c4\u03b9\u03ba\u03bf\u03cd",
+				"invalidCustodian": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03bf\u03c2 \u03b8\u03b5\u03bc\u03b1\u03c4\u03bf\u03c6\u03cd\u03bb\u03b1\u03ba\u03b1\u03c2",
+				"invalidRecipient": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03bf\u03c2 \u03c0\u03b1\u03c1\u03b1\u03bb\u03ae\u03c0\u03c4\u03b7\u03c2"
+			},
+			"placeholders": {
+				"optional": "(\u03c0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2)",
+				"tokenId": "\u03c4\u03b1\u03c5\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1",
+				"custodian": "\u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7"
+			},
+			"Lock": "\u039a\u03bb\u03b5\u03b9\u03b4\u03b1\u03c1\u03b9\u03ac",
+			"Unlock": "\u039e\u03b5\u03ba\u03bb\u03b5\u03af\u03b4\u03c9\u03bc\u03b1",
+			"Locked": "\u039a\u03bb\u03b5\u03b9\u03b4\u03c9\u03bc\u03ad\u03bd\u03bf",
+			"CustodianAddress": "\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03b8\u03b5\u03bc\u03b1\u03c4\u03bf\u03c6\u03cd\u03bb\u03b1\u03ba\u03b1",
+			"TokenWasClaimed": "\u03a4\u03bf \u03b4\u03b9\u03b1\u03ba\u03c1\u03b9\u03c4\u03b9\u03ba\u03cc &quot; {{title}} &quot; \u03b1\u03be\u03b9\u03ce\u03b8\u03b7\u03ba\u03b5",
+			"TokenWasLocked": "Token &quot; {{title}} &quot; \u03ae\u03c4\u03b1\u03bd \u03ba\u03bb\u03b5\u03b9\u03b4\u03c9\u03bc\u03ad\u03bd\u03bf",
+			"TokenWasUnlocked": "\u03a4\u03bf Token &quot; {{title}} &quot; \u03be\u03b5\u03ba\u03bb\u03b5\u03b9\u03b4\u03ce\u03b8\u03b7\u03ba\u03b5"
+		},
+		"GenerateDescription": "\u03ae \u03b1\u03c5\u03c4\u03cc\u03bc\u03b1\u03c4\u03b7 \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1",
+		"collections": {
+			"Title": "\u03a3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ad\u03c2",
+			"EnterTitle": "\u03b5\u03b9\u03c3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03af\u03c4\u03bb\u03bf",
+			"EnterDescription": "\u03b5\u03b9\u03c3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae",
+			"NewCollection": "\u039d\u03ad\u03b1 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae",
+			"Name": "\u039f\u03bd\u03bf\u03bc\u03b1",
+			"Icon": "\u0395\u03b9\u03ba\u03cc\u03bd\u03b9\u03c3\u03bc\u03b1",
+			"Description": "\u03a0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae",
+			"Author": "\u03a3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1\u03c2",
+			"SelectCollection": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae",
+			"Value": "\u03b1\u03be\u03af\u03b1",
+			"AreYouSure": "\u0395\u03af\u03c3\u03b1\u03b9 \u03c3\u03af\u03b3\u03bf\u03c5\u03c1\u03bf\u03c2?",
+			"AuthorInvalid": "\u039c\u03b7 \u03ad\u03b3\u03ba\u03c5\u03c1\u03b7 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c3\u03c5\u03bd\u03c4\u03ac\u03ba\u03c4\u03b7!",
+			"Address": "\u0394\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7",
+			"CoverImage": "\u0395\u03b9\u03ba\u03cc\u03bd\u03b1 \u03b5\u03be\u03c9\u03c6\u03cd\u03bb\u03bb\u03bf\u03c5",
+			"UploadIcon": "\u039c\u03b5\u03c4\u03b1\u03c6\u03cc\u03c1\u03c4\u03c9\u03c3\u03b7 \u03b5\u03b9\u03ba\u03bf\u03bd\u03af\u03b4\u03b9\u03bf",
+			"CommissionAddressInvalid": "\u0397 \u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7 \u03c4\u03b7\u03c2 \u0395\u03c0\u03b9\u03c4\u03c1\u03bf\u03c0\u03ae\u03c2 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03b3\u03ba\u03c5\u03c1\u03b7",
+			"OnSale": "\u03c3\u03b5 \u03ad\u03ba\u03c0\u03c4\u03c9\u03c3\u03b7",
+			"OffSale": "\u03b5\u03ba\u03c4\u03cc\u03c2 \u03c0\u03ce\u03bb\u03b7\u03c3\u03b7\u03c2",
+			"CreateCollection": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae\u03c2",
+			"UpdateCollection": "\u0395\u03bd\u03b7\u03bc\u03ad\u03c1\u03c9\u03c3\u03b7 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae\u03c2",
+			"CollectionInfo": "\u03a0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae\u03c2",
+			"SelectAuthor": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03c3\u03c5\u03b3\u03b3\u03c1\u03b1\u03c6\u03ad\u03b1",
+			"NewItem": "\u039d\u03ad\u03b1 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae NFT",
+			"NamePlaceholder": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03bf \u03cc\u03bd\u03bf\u03bc\u03b1 \u03c4\u03b7\u03c2 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae\u03c2",
+			"DescPlaceholder": "\u0395\u03b9\u03c3\u03b1\u03b3\u03ac\u03b3\u03b5\u03c4\u03b5 \u03c4\u03b7\u03bd \u03c0\u03b5\u03c1\u03b9\u03b3\u03c1\u03b1\u03c6\u03ae \u03c4\u03b7\u03c2 \u03c3\u03c5\u03bb\u03bb\u03bf\u03b3\u03ae\u03c2",
+			"EndingIn": "\u03a4\u03b5\u03bb\u03b5\u03b9\u03c9\u03bd\u03b5\u03b9 \u03c3\u03b5",
+			"SubmitSeries": "\u03a5\u03c0\u03bf\u03b2\u03ac\u03bb\u03b5\u03c4\u03b5 \u03bc\u03b9\u03b1 \u03c3\u03b5\u03b9\u03c1\u03ac"
+		}
+	},
+	"currencies": {
+		"choose": "\u0395\u03c0\u03b9\u03bb\u03ad\u03be\u03c4\u03b5 \u03ad\u03bd\u03b1 \u03bd\u03cc\u03bc\u03b9\u03c3\u03bc\u03b1"
+	},
+	"connectedAccount": {
+		"Title": "\u03a3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7 \u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03bf\u03cd",
+		"Success": "\u0395\u03c0\u03b9\u03c4\u03c5\u03c7\u03af\u03b1",
+		"YourAccountCreated": "\u039f \u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc\u03c2 \u03c3\u03b1\u03c2 \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ae\u03b8\u03b7\u03ba\u03b5 \u03bc\u03b5 \u03b5\u03c0\u03b9\u03c4\u03c5\u03c7\u03af\u03b1!",
+		"YourAccountAlreadyCreated": "\u039f \u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc\u03c2 \u03c3\u03b1\u03c2 \u03ad\u03c7\u03b5\u03b9 \u03ae\u03b4\u03b7 \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03b7\u03b8\u03b5\u03af \u03ba\u03b1\u03b9 \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2 \u03b3\u03b9\u03b1 \u03c7\u03c1\u03ae\u03c3\u03b7"
+	},
+	"coin": {
+		"staking": {
+			"start": {
+				"form": {
+					"labels": {
+						"reserveToken": "rezervToken",
+						"amount": "\u03a0\u03bf\u03c3\u03cc"
+					},
+					"small": {
+						"reserveToken": "rezervToken",
+						"amount": "\u03a0\u03bf\u03c3\u03cc"
+					}
+				},
+				"placeholders": {
+					"amount": "\u03c0\u03bf\u03c3\u03cc"
+				},
+				"btns": {
+					"stake": "\u03a3\u03c4\u03bf\u03af\u03c7\u03b7\u03bc\u03b1"
+				},
+				"stake": "\u03a3\u03c4\u03bf\u03af\u03c7\u03b7\u03bc\u03b1",
+				"loading": "\u03a6\u03cc\u03c1\u03c4\u03c9\u03c3\u03b7"
+			}
+		},
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u03b4\u03b7\u03bc\u03bf\u03c6\u03b9\u03bb\u03ad\u03c2Token",
+					"donations": "\u03b4\u03c9\u03c1\u03b5\u03ad\u03c2",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u03b1\u03c1\u03b9\u03b8\u03bc\u03b7\u03c4\u03ae\u03c2",
+					"denominator": "\u03c0\u03b1\u03c1\u03bf\u03bd\u03bf\u03bc\u03b1\u03c3\u03c4\u03ae\u03c2"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "\u0394\u03b9\u03ac\u03c1\u03ba\u03b5\u03b9\u03b1 \u03c3\u03b5 \u03b7\u03bc\u03ad\u03c1\u03b5\u03c2",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "\u03b4\u03b7\u03bc\u03bf\u03c6\u03b9\u03bb\u03ad\u03c2Token",
+					"donations": "\u03b4\u03c9\u03c1\u03b5\u03ad\u03c2",
+					"rewardsRateFraction": "rewardsRateFraction",
+					"numerator": "\u03b1\u03c1\u03b9\u03b8\u03bc\u03b7\u03c4\u03ae\u03c2",
+					"denominator": "\u03c0\u03b1\u03c1\u03bf\u03bd\u03bf\u03bc\u03b1\u03c3\u03c4\u03ae\u03c2"
+				}
+			},
+			"placeholders": {
+				"optional": "(\u03c0\u03c1\u03bf\u03b1\u03b9\u03c1\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2)",
+				"tuple": "\u03c0\u03bb\u03b5\u03b9\u03ac\u03b4\u03b1[]",
+				"number": "\u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2",
+				"address": "\u03b4\u03b9\u03b5\u03cd\u03b8\u03c5\u03bd\u03c3\u03b7",
+				"fraction": "\u03ba\u03bb\u03ac\u03c3\u03bc\u03b1",
+				"integer": "\u03b1\u03ba\u03ad\u03c1\u03b1\u03b9\u03bf\u03c2 \u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2",
+				"seconds": "\u03b4\u03b5\u03c5\u03c4\u03b5\u03c1\u03cc\u03bb\u03b5\u03c0\u03c4\u03b1",
+				"days": "\u03b7\u03bc\u03ad\u03c1\u03b5\u03c2",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "\u0394\u03b5\u03bd \u03c5\u03c0\u03ac\u03c1\u03c7\u03bf\u03c5\u03bd \u03c0\u03b9\u03c3\u03af\u03bd\u03b5\u03c2"
+			},
+			"btns": {
+				"createPool": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c0\u03b9\u03c3\u03af\u03bd\u03b1\u03c2",
+				"createPoolInForm": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03ce"
+			},
+			"createPool": "\u0394\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c0\u03b9\u03c3\u03af\u03bd\u03b1\u03c2",
+			"produce": "\u03a0\u03b1\u03c1\u03ac\u03b3\u03c9",
+			"loading": "\u03a6\u03cc\u03c1\u03c4\u03c9\u03c3\u03b7",
+			"viewInstancesList": "\u0391\u03bd\u03b1\u03bd\u03ad\u03c9\u03c3\u03b7 \u03bb\u03af\u03c3\u03c4\u03b1\u03c2"
+		}
+	},
+	"fundrise": {
+		"placeholder": "\u03c0\u03bb\u03b7\u03ba\u03c4\u03c1\u03bf\u03bb\u03bf\u03b3\u03ae\u03c3\u03c4\u03b5 \u03ba\u03ac\u03c4\u03b9 \u03b3\u03b9\u03b1 \u03b1\u03c5\u03c4\u03ae\u03bd \u03c4\u03b7 \u03c3\u03c5\u03bd\u03b5\u03b9\u03c3\u03c6\u03bf\u03c1\u03ac..."
+	}
 }

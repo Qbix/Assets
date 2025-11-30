@@ -1,47 +1,47 @@
 {
-    "coin": {
-        "presale": {
-            "admin": {
-                "form": {
-                    "labels": {
-                        "sellingToken": "ტოკენის გაყიდვა",
-                        "timestamps": "ჯერ",
-                        "prices": "ფასები",
-                        "endTime": "Დროის დასასრული",
-                        "thresholds": "ზღურბლები",
-                        "bonuses": "ბონუსები"
-                    },
-                    "fields": {
-                        "ownerWithdrawOptions": {
-                            "option0": "მფლობელს არ შეუძლია გაყვანა",
-                            "option1": "მფლობელს შეუძლია ტოკენების გატანა მხოლოდ endTime-ის გასვლის შემდეგ",
-                            "option2": "მფლობელს შეუძლია ტოკენების გატანა ნებისმიერ დროს"
-                        }
-                    }
-                },
-                "placeholders": {
-                    "communityAddress": "საზოგადოების მისამართი",
-                    "methodkeccack": "Keccak256 ჰეშის ფუნქცია",
-                    "roleId": "როლის ID",
-                    "sellingToken": "იყიდება Token მისამართი",
-                    "prices": "ETH, ფასი",
-                    "thresholds": "# ჟეტონები",
-                    "bonuses": "ბონუსი %"
-                },
-                "errmsgs": {
-                    "ThereAreNoFunds": "თანხები არ არის"
-                },
-                "btns": {
-                    "createFund": "ფონდის შექმნა",
-                    "createFundInForm": "Შექმნა"
-                },
-                "fundAddress": "ფონდის მისამართი",
-                "createFund": "ფონდის შექმნა",
-                "fundInfo": "ინფორმაცია",
-                "produce": "აწარმოე",
-                "loading": "Ჩატვირთვა",
-                "viewInstancesList": "Განახლებული სია"
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"admin": {
+				"form": {
+					"labels": {
+						"sellingToken": "\u10e2\u10dd\u10d9\u10d4\u10dc\u10d8\u10e1 \u10d2\u10d0\u10e7\u10d8\u10d3\u10d5\u10d0",
+						"timestamps": "\u10ef\u10d4\u10e0",
+						"prices": "\u10e4\u10d0\u10e1\u10d4\u10d1\u10d8",
+						"endTime": "\u1c93\u10e0\u10dd\u10d8\u10e1 \u10d3\u10d0\u10e1\u10d0\u10e1\u10e0\u10e3\u10da\u10d8",
+						"thresholds": "\u10d6\u10e6\u10e3\u10e0\u10d1\u10da\u10d4\u10d1\u10d8",
+						"bonuses": "\u10d1\u10dd\u10dc\u10e3\u10e1\u10d4\u10d1\u10d8"
+					},
+					"fields": {
+						"ownerWithdrawOptions": {
+							"option0": "\u10db\u10e4\u10da\u10dd\u10d1\u10d4\u10da\u10e1 \u10d0\u10e0 \u10e8\u10d4\u10e3\u10eb\u10da\u10d8\u10d0 \u10d2\u10d0\u10e7\u10d5\u10d0\u10dc\u10d0",
+							"option1": "\u10db\u10e4\u10da\u10dd\u10d1\u10d4\u10da\u10e1 \u10e8\u10d4\u10e3\u10eb\u10da\u10d8\u10d0 \u10e2\u10dd\u10d9\u10d4\u10dc\u10d4\u10d1\u10d8\u10e1 \u10d2\u10d0\u10e2\u10d0\u10dc\u10d0 \u10db\u10ee\u10dd\u10da\u10dd\u10d3 endTime-\u10d8\u10e1 \u10d2\u10d0\u10e1\u10d5\u10da\u10d8\u10e1 \u10e8\u10d4\u10db\u10d3\u10d4\u10d2",
+							"option2": "\u10db\u10e4\u10da\u10dd\u10d1\u10d4\u10da\u10e1 \u10e8\u10d4\u10e3\u10eb\u10da\u10d8\u10d0 \u10e2\u10dd\u10d9\u10d4\u10dc\u10d4\u10d1\u10d8\u10e1 \u10d2\u10d0\u10e2\u10d0\u10dc\u10d0 \u10dc\u10d4\u10d1\u10d8\u10e1\u10db\u10d8\u10d4\u10e0 \u10d3\u10e0\u10dd\u10e1"
+						}
+					}
+				},
+				"placeholders": {
+					"communityAddress": "\u10e1\u10d0\u10d6\u10dd\u10d2\u10d0\u10d3\u10dd\u10d4\u10d1\u10d8\u10e1 \u10db\u10d8\u10e1\u10d0\u10db\u10d0\u10e0\u10d7\u10d8",
+					"methodkeccack": "Keccak256 \u10f0\u10d4\u10e8\u10d8\u10e1 \u10e4\u10e3\u10dc\u10e5\u10ea\u10d8\u10d0",
+					"roleId": "\u10e0\u10dd\u10da\u10d8\u10e1 ID",
+					"sellingToken": "\u10d8\u10e7\u10d8\u10d3\u10d4\u10d1\u10d0 Token \u10db\u10d8\u10e1\u10d0\u10db\u10d0\u10e0\u10d7\u10d8",
+					"prices": "ETH, \u10e4\u10d0\u10e1\u10d8",
+					"thresholds": "# \u10df\u10d4\u10e2\u10dd\u10dc\u10d4\u10d1\u10d8",
+					"bonuses": "\u10d1\u10dd\u10dc\u10e3\u10e1\u10d8 %"
+				},
+				"errmsgs": {
+					"ThereAreNoFunds": "\u10d7\u10d0\u10dc\u10ee\u10d4\u10d1\u10d8 \u10d0\u10e0 \u10d0\u10e0\u10d8\u10e1"
+				},
+				"btns": {
+					"createFund": "\u10e4\u10dd\u10dc\u10d3\u10d8\u10e1 \u10e8\u10d4\u10e5\u10db\u10dc\u10d0",
+					"createFundInForm": "\u1ca8\u10d4\u10e5\u10db\u10dc\u10d0"
+				},
+				"fundAddress": "\u10e4\u10dd\u10dc\u10d3\u10d8\u10e1 \u10db\u10d8\u10e1\u10d0\u10db\u10d0\u10e0\u10d7\u10d8",
+				"createFund": "\u10e4\u10dd\u10dc\u10d3\u10d8\u10e1 \u10e8\u10d4\u10e5\u10db\u10dc\u10d0",
+				"fundInfo": "\u10d8\u10dc\u10e4\u10dd\u10e0\u10db\u10d0\u10ea\u10d8\u10d0",
+				"produce": "\u10d0\u10ec\u10d0\u10e0\u10db\u10dd\u10d4",
+				"loading": "\u1ca9\u10d0\u10e2\u10d5\u10d8\u10e0\u10d7\u10d5\u10d0",
+				"viewInstancesList": "\u1c92\u10d0\u10dc\u10d0\u10ee\u10da\u10d4\u10d1\u10e3\u10da\u10d8 \u10e1\u10d8\u10d0"
+			}
+		}
+	}
 }

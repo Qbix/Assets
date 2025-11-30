@@ -1,21 +1,21 @@
 {
-    "coin": {
-        "presale": {
-            "buy": {
-                "form": {
-                    "labels": {
-                        "amount": "ምን ያህል ኢንቨስት ማድረግ?"
-                    },
-                    "placeholders": {
-                        "amount": "መጠን {{nativeCoin}}",
-                        "max": "ከፍተኛ {{nativeCoinBalance}}"
-                    }
-                },
-                "btns": {
-                    "buy": "ግዛ",
-                    "execute": "ማስፈጸም"
-                }
-            }
-        }
-    }
+	"coin": {
+		"presale": {
+			"buy": {
+				"form": {
+					"labels": {
+						"amount": "\u121d\u1295 \u12eb\u1205\u120d \u12a2\u1295\u1268\u1235\u1275 \u121b\u12f5\u1228\u130d?"
+					},
+					"placeholders": {
+						"amount": "\u1218\u1320\u1295 {{nativeCoin}}",
+						"max": "\u12a8\u134d\u1270\u129b {{nativeCoinBalance}}"
+					}
+				},
+				"btns": {
+					"buy": "\u130d\u12db",
+					"execute": "\u121b\u1235\u1348\u1338\u121d"
+				}
+			}
+		}
+	}
 }

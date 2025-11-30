@@ -1,54 +1,54 @@
 {
-    "coin": {
-        "admin": {
-            "form": {
-                "labels": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Duración",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "token popular",
-                    "donations": "doazóns",
-                    "rewardsRateFraction": "RewardsRateFraction",
-                    "numerator": "numerador",
-                    "denominator": "denominador"
-                },
-                "small": {
-                    "tokenErc20": "tokenErc20",
-                    "duration": "Duración en días",
-                    "bonusTokenFraction": "bonusTokenFraction",
-                    "popularToken": "token popular",
-                    "donations": "doazóns",
-                    "rewardsRateFraction": "RewardsRateFraction",
-                    "numerator": "numerador",
-                    "denominator": "denominador"
-                }
-            },
-            "placeholders": {
-                "optional": "(opcional)",
-                "tuple": "tupla[]",
-                "number": "número",
-                "address": "enderezo",
-                "fraction": "fracción",
-                "integer": "enteiro",
-                "seconds": "segundos",
-                "days": "días",
-                "uint256": "uint256",
-                "uint192": "uint192",
-                "uint64": "uint64",
-                "uint32": "uint32",
-                "uint16": "uint16"
-            },
-            "errmsgs": {
-                "ThereAreNoPools": "Non hai piscinas"
-            },
-            "btns": {
-                "createPool": "Crear piscina",
-                "createPoolInForm": "Crear"
-            },
-            "createPool": "Crear piscina",
-            "produce": "Producir",
-            "loading": "Cargando",
-            "viewInstancesList": "Lista de actualización"
-        }
-    }
+	"coin": {
+		"admin": {
+			"form": {
+				"labels": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Duraci\u00f3n",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "token popular",
+					"donations": "doaz\u00f3ns",
+					"rewardsRateFraction": "RewardsRateFraction",
+					"numerator": "numerador",
+					"denominator": "denominador"
+				},
+				"small": {
+					"tokenErc20": "tokenErc20",
+					"duration": "Duraci\u00f3n en d\u00edas",
+					"bonusTokenFraction": "bonusTokenFraction",
+					"popularToken": "token popular",
+					"donations": "doaz\u00f3ns",
+					"rewardsRateFraction": "RewardsRateFraction",
+					"numerator": "numerador",
+					"denominator": "denominador"
+				}
+			},
+			"placeholders": {
+				"optional": "(opcional)",
+				"tuple": "tupla[]",
+				"number": "n\u00famero",
+				"address": "enderezo",
+				"fraction": "fracci\u00f3n",
+				"integer": "enteiro",
+				"seconds": "segundos",
+				"days": "d\u00edas",
+				"uint256": "uint256",
+				"uint192": "uint192",
+				"uint64": "uint64",
+				"uint32": "uint32",
+				"uint16": "uint16"
+			},
+			"errmsgs": {
+				"ThereAreNoPools": "Non hai piscinas"
+			},
+			"btns": {
+				"createPool": "Crear piscina",
+				"createPoolInForm": "Crear"
+			},
+			"createPool": "Crear piscina",
+			"produce": "Producir",
+			"loading": "Cargando",
+			"viewInstancesList": "Lista de actualizaci\u00f3n"
+		}
+	}
 }
