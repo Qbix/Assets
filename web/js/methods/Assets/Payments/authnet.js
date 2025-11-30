@@ -18,7 +18,7 @@ Q.exports(function(Assets, priv){
         Q.Assets.Payments.checkLoaded();
 
         var o = Q.extend({},
-            Q.Assets.texts.payments,
+            Q.text.Assets.payments,
             Q.Assets.Payments.authnet.options,
             options
         );
@@ -55,7 +55,7 @@ Q.exports(function(Assets, priv){
                             name: o.name,
                             symbol: Q.Assets.Currencies.symbols.USD
                         });
-                        Q.extend(o, Q.Assets.texts.payments.confirm);
+                        Q.extend(o, Q.text.Assets.payments.confirm);
                         Q.confirm(message, function (result) {
                             if (!result) return;
                             Q.Assets.Payments.pay('authnet', o, callback);

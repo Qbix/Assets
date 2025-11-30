@@ -448,7 +448,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	static function log ($title, $message=null) {
 		Q::log(date('Y-m-d H:i:s').': '.$title, 'stripe');
 		if ($message) {
-			Q::log($message, $key, array(
+			Q::log($message, 'stripe', array(
 				"maxLength" => 10000
 			));
 		}

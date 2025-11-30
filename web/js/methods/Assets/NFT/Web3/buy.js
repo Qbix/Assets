@@ -11,8 +11,8 @@ Q.exports(function(){
    	return function Assets_NFT_Web3_buy(tokenId, chain, currency, callback) {
         if (window.ethereum.chainId !== chain.chainId) {
                 Q.handle(callback, null, [true]);
-                return Q.alert(Q.Assets.texts.NFT.WrongChain.interpolate({chain: chain.name}), {
-                    title: Q.Assets.texts.errors.Error
+                return Q.alert(Q.text.Assets.NFT.WrongChain.interpolate({chain: chain.name}), {
+                    title: Q.text.Assets.errors.Error
                 });
             }
             var _waitTransaction = function (transactionRequest) {
@@ -29,7 +29,7 @@ Q.exports(function(){
                     }
                 }, function (err) {
                     Q.alert(err.reason, {
-                        title: Q.Assets.texts.errors.Error
+                        title: Q.text.Assets.errors.Error
                     });
                     Q.handle(callback, null, [err.reason]);
                 });

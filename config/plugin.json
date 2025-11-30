@@ -429,6 +429,9 @@
 				"appearance": { /* stripe param allow to change themes and styles of stripe content */
 					"theme": "stripe"
 				}
+			},
+			"reasons": {
+				"BoughtCredits": true
 			}
 		},
 		"credits": {

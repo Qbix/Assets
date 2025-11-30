@@ -21,8 +21,9 @@ function Assets_after_Assets_charge($params)
 	));
 
 	// check Assets/credits/bonus
+	$reason = Q::ifset($params, 'options', 'reason', null);
 	if ($reason == 'BoughtCredits') {
-		Assets_Credits::awardBonus(null, $amount, $userId);
+		Assets_Credits::awardBonus(null, $amount, $user->id);
 	}
 
 	$text = Q_Text::get('Assets/content', array('language' => Users::getLanguage($user->id)));

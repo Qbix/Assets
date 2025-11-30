@@ -97,6 +97,7 @@ abstract class Assets extends Base_Assets
 	 * @param {Users_User} [$options.user=Users::loggedInUser()] Which user to charge
 	 * @param {string} [$options.communityId] Which community's credits to grant on success
 	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or subscription stream
+	 * @param {string} [$options.reason] Business reason or semantic label.
 	 * @param {string} [$options.description=null] Description for the customer
 	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
 	 * @throws \Stripe\Error\Card
@@ -345,9 +346,9 @@ abstract class Assets extends Base_Assets
 			return; // no payment defined
 		}
 
-		$type     = $payment['type']     ?? null;
-		$amount   = floatval($payment['amount'] ?? 0);
-		$currency = $payment['currency'] ?? 'credits';
+		$type     = isset($payment['type']) ? $payment['type'] : null;
+		$amount   = floatval(isset($payment['amount']) ? $payment['amount'] : 0);
+		$currency = isset($payment['currency']) ? $payment['currency'] : 'credits';
 
 		if ($type === 'optional') {
 			return; // optional means no enforcement

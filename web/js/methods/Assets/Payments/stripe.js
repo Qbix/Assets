@@ -8,13 +8,13 @@ Q.exports(function(Assets, priv){
     *  @param {Number} options.amount the amount to pay.
     *  @param {String} [options.currency="usd"] the currency to pay in.
     *  @param {String} [options.description] Operation code which detailed text can be fetch from lang json (Assets/content/payments).
-    *  @param {object} [options.metadata] Data to pass to payment gateway to get them back and save to message instructions
+    *  @param {boolean} [options.reason] Specify a reason for this payment, from Assets/payments/reasons config
     *  @param {Function} [callback] The function to call, receives (err, paymentSlot)
     */
     return function stripe(options, callback) {
          Q.Assets.Payments.load(function _continue() {
             options = Q.extend({},
-                Q.Assets.texts.payments,
+                Q.text.Assets.payments,
                 Q.Assets.Payments.stripe.options,
                 options
             );

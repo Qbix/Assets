@@ -209,21 +209,21 @@ var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 			var message = "";
 			switch (paymentIntent.status) {
 				case "succeeded":
-					message = Q.Assets.texts.payment.PaymentSucceeded;
+					message = Q.text.Assets.payment.PaymentSucceeded;
 					break;
 				case "processing":
-					message = Q.Assets.texts.payment.PaymentProcessing;
+					message = Q.text.Assets.payment.PaymentProcessing;
 					break;
 				case "requires_payment_method":
-					message = Q.Assets.texts.payment.FailTryAgain;
+					message = Q.text.Assets.payment.FailTryAgain;
 					break;
 				default:
-					message = Q.Assets.texts.payment.SomethingWrong;
+					message = Q.text.Assets.payment.SomethingWrong;
 					break;
 			}
 
 			Q.Dialogs.push({
-				title: Q.Assets.texts.payment.PaymentStatus,
+				title: Q.text.Assets.payment.PaymentStatus,
 				className: "Assets_Payment_status",
 				content: message,
 				onActivate: function (dialog) {
@@ -674,7 +674,7 @@ Q.onInit.add(function () {
 			return console.warn("Assets/text: " + msg);
 		}
 
-		Assets.texts = text;
+		Q.text.Assets = text;
 	});
 
 	Q.extend(Q.Users.Web3.chains, Q.Assets.Web3.chains);

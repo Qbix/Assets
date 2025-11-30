@@ -11,11 +11,11 @@ Q.exports(function(Assets, priv){
     * @static
     *  @param {Object} [options] Any additional options to pass to the stripe checkout config, and also:
     *  @param {Float} options.amount the amount to pay.
-    *  @param {String} options.description Payment description.
-    *  @param {Object} options.metadata Data to pass to payment gateway to get them back and save to message instructions
     *  @param {String} [options.currency="usd"] the currency to pay in.
+    *  @param {String} options.description Payment description.
     *  @param {String} [options.assetsPaymentsDialogClass] to add to dialog classes list
     *  @param {String} [options.authorize] authorize the card to be charged later, always charges 0 now regardles of amount
+    *  @param {boolean} [options.reason] Specify a reason for this payment, from Assets/payments/reasons config
     *  @param {Function} [callback]
     */
     return function standardStripe(options, callback) {
@@ -23,6 +23,14 @@ Q.exports(function(Assets, priv){
 
         var paymentRequestButton, paymentElement;
         var customClassName = Q.getObject("assetsPaymentsDialogClass", options);
+
+        options = Q.extend({}, options);
+        if (options.reason && !options.description) {
+            options.description = Q.text.Assets.credits.BuyCredits.interpolate({
+                amount: options.amount,
+                currency: options.currency
+            });
+        }
 
         var _renderTemplate = function (dialog) {
 
@@ -38,7 +46,7 @@ Q.exports(function(Assets, priv){
                 var $payButton = $("button[name=pay]", dialog);
 
                 // same button label
-                $payButton.text(Q.Assets.texts.payment.Pay + ' ' + currencySymbol + amount.toFixed(2));
+                $payButton.text(Q.text.Assets.payment.Pay + ' ' + currencySymbol + amount.toFixed(2));
 
                 var pipeElements = new Q.Pipe(['paymentRequest', 'payment'], function (params) {
                     dialog.removeClass("Assets_stripe_payment_loading");
@@ -192,10 +200,11 @@ Q.exports(function(Assets, priv){
             var fields = {
                 amount: options.amount,
                 currency: options.currency,
-                metadata: options.metadata
+                metadata: options.metadata,
+                reason: options.reason
             };
             if (options.authorize) {
-                fields.authorize = true;
+                fields.authorize = 1;
                 fields.amount = 0;
             }
 

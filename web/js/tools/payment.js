@@ -16,6 +16,7 @@
  *  @param {string} [options.name=Users::communityName()] The name of the organization the user will be paying
  *  @param {string} [options.image] The url pointing to a square image of your brand or product. The recommended minimum size is 128x128px.
  *  @param {string} [options.description=null] A short name or description of the product or service being purchased.
+ *  @param {boolean} [options.reason] Specify a reason for this payment, from Assets/payments/reasons config
  *  @param {boolean} [options.allowRememberMe=true] Specify whether to include the option to "Remember Me" for future purchases (true or false).
  *  @param {boolean} [options.billingAddress=false] Specify whether to include the option to set billing address.
  *  @param {boolean} [options.shippingAddress=false] Specify whether to include the option to set shipping address.
@@ -57,7 +58,8 @@ Q.Tool.define("Assets/payment", function (options) {
 	}, {
 		fields: {
 			payments: state.payments,
-			currency: state.currency
+			currency: state.currency,
+			reason: state.reason
 		}
 	});
 

@@ -8,6 +8,7 @@
  *  @param {string} $options.amount the amount to pay (required for PaymentIntent)
  *  @param {double} [$options.currency="usd"] the currency to pay in. (authnet supports only "usd")
  *  @param {bool}   [$options.authorize=false] if true, generate a SetupIntent instead of PaymentIntent
+ *  @param {bool}   [$options.reason] key into possible reasons in "Assets"/"payments"/"reasons"
  */
 function Assets_payment_response_intent($options)
 {
@@ -16,7 +17,7 @@ function Assets_payment_response_intent($options)
 
 	// Are we creating a SetupIntent?
 	// setup=true means no amount is required and NO charge is created now.
-	$authorize = filter_var(Q::ifset($_REQUEST, 'authorize', false), FILTER_VALIDATE_BOOLEAN);
+	$authorize = filter_var(Q::ifset($options, 'authorize', false), FILTER_VALIDATE_BOOLEAN);
 
 	if (!$authorize) {
 		// For a normal PaymentIntent, amount is required
@@ -28,11 +29,21 @@ function Assets_payment_response_intent($options)
 
 	// Prepare metadata for Stripe
 	$user = Users::loggedInUser();
-	$metadata = Q::ifset($options, 'metadata', array());
+	$metadata = array();
 	$metadata['token'] = uniqid();
 	$metadata['app'] = Q::app();
 	$metadata['userId'] = $user ? $user->id : '';
 	$metadata['sessionId'] = Q_Session::id();
+	if (!empty($options['reason'])) {
+		if (!Q_Config::get('Assets', 'payments', 'reasons', $options['reason'], null)) {
+			throw new Q_Exception_WrongValue(array(
+				'field' => 'reason',
+				'range' => 'a reason from Assets/payments/reasons config',
+				'value' => $options['reason']
+			));
+		}
+		$metadata['reason'] = $options['reason'];
+	}
 
 	// Initialize Stripe wrapper
 	$stripe = Assets_Payments::adapter('stripe');

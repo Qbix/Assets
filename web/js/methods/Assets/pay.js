@@ -61,11 +61,17 @@ Q.exports(function (Assets, priv) {
 					metadata.streamName  = options.toStream.streamName  || "";
 				}
 
+				var rate = Q.getObject(['exchange', options.currency], Q.Assets.Credits);
+				if (!rate) {
+					return Q.alert(Q.text.Assets.credits.ErrorInvalidCurrency.interpolate({
+						currency: currency
+					}));
+				}
+
 				Q.Assets.Credits.buy({
 					missing: true,
-					amount: details.needCredits,
+					amount: details.needCredits * rate,
 					metadata: metadata,
-
 					onSuccess: function () {
 						// retry after buying credits
 						Q.Assets.pay(options);

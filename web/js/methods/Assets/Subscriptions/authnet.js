@@ -14,7 +14,7 @@ Q.exports(function(){
     */
     return function authnet(options, callback) {
         var o = Q.extend({},
-            Q.Assets.texts.subscriptions,
+            Q.text.Assets.subscriptions,
             Q.Assets.Subscriptions.authnet.options,
             options
         );
@@ -51,7 +51,7 @@ Q.exports(function(){
                             title: plan.fields.title,
                             name: o.name
                         });
-                        Q.extend(o, Q.Assets.texts.subscriptions.confirm);
+                        Q.extend(o, Q.text.Assets.subscriptions.confirm);
                         Q.confirm(message, function (result) {
                             if (!result) return;
                             Q.Assets.Subscriptions.subscribe('authnet', o, callback);
