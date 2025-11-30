@@ -262,7 +262,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} [$fromUserId=null] null = logged user
 	 * @param {array} [$more] An array supplying more information
 	 * @param {array} [$more.items] an array of items, each with "publisherId", "streamName" and "amount"
-	 * @param {boolean} [$more.forcePayment=false] If true and not enough credits, try to top up via real money
+	 * @param {boolean} [$more.autoCharge=false] If true and not enough credits, try to top up via real money
 	 * @param {string} [$more.toPublisherId]  Stream publisher for which the payment is made
 	 * @param {string} [$more.toStreamName]   Stream name for which the payment is made
 	 * @param {string} [$more.fromPublisherId] Publisher of the consuming stream
@@ -319,7 +319,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------------
 		if ($currentCredits < $amount) {
 
-			if (empty($more['forcePayment'])) {
+			if (empty($more['autoCharge'])) {
 				$from_stream->executeRollback();
 				throw new Assets_Exception_NotEnoughCredits(array(
 					'missing' => $amount - $currentCredits
@@ -329,7 +329,7 @@ class Assets_Credits extends Base_Assets_Credits
 			$missingCredits = $amount - $currentCredits;
 
 			try {
-				Assets::forcePayment($missingCredits, $reason, array(
+				Assets::autoCharge($missingCredits, $reason, array(
 					"userId"   => $fromUserId,
 					"currency" => "credits",
 					"payments" => Q::ifset($more, "payments", "stripe"),
@@ -344,7 +344,7 @@ class Assets_Credits extends Base_Assets_Credits
 			}
 
 			// retry
-			$more["forcePayment"] = false;
+			$more["autoCharge"] = false;
 			$from_stream->executeCommit(); 
 			return self::transfer($communityId, $amount, $reason, $toUserId, $fromUserId, $more);
 		}
@@ -438,7 +438,7 @@ class Assets_Credits extends Base_Assets_Credits
 
 	/**
 	 * Spend credits from the logged-in user on a value-producing stream.
-	 * This supports automatic top-ups (real money) via forcePayment(),
+	 * This supports automatic top-ups (real money) via autoCharge(),
 	 * itemized spending, and the standard Qbix credit accounting model.
 	 *
 	 * @method spend
@@ -448,7 +448,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $reason Semantic reason for the spend.
 	 * @param {string} $fromUserId User spending the credits.
 	 * @param {array} [$options] Extra metadata:
-	 *     @param {boolean} [$options.forcePayment=false]
+	 *     @param {boolean} [$options.autoCharge=false]
 	 *         If true and user lacks credits, auto top-up via real money.
 	 *     @param {string} [$options.payments="stripe"]
 	 *         Payment gateway key.
@@ -488,7 +488,7 @@ class Assets_Credits extends Base_Assets_Credits
 		));
 		$currentCredits = floatval($fromStream->getAttribute("amount"));
 
-		$force   = isset($options["forcePayment"]) ? $options["forcePayment"] : false;
+		$force   = isset($options["autoCharge"]) ? $options["autoCharge"] : false;
 		$gateway = isset($options["payments"]) ? $options["payments"] : "stripe";
 
 		//--------------------------------------------------------------------
@@ -506,7 +506,7 @@ class Assets_Credits extends Base_Assets_Credits
 			$missing = $amountCredits - $currentCredits;
 
 			try {
-				Assets::forcePayment($missing, $reason, array(
+				Assets::autoCharge($missing, $reason, array(
 					"userId"   => $fromUserId,
 					"currency" => "credits",
 					"payments" => $gateway,
@@ -521,7 +521,7 @@ class Assets_Credits extends Base_Assets_Credits
 			}
 
 			// retry spend, after top-up
-			$options["forcePayment"] = false;
+			$options["autoCharge"] = false;
 			$fromStream->executeCommit();
 			return self::spend($communityId, $amountCredits, $reason, $fromUserId, $options);
 		}

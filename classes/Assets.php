@@ -209,7 +209,7 @@ abstract class Assets extends Base_Assets
 
 		$currency = isset($options["currency"]) ? $options["currency"] : "USD";
 		$gateway  = isset($options["payments"]) ? $options["payments"] : "stripe";
-		$force    = isset($options["forcePayment"]) ? $options["forcePayment"] : false;
+		$force    = isset($options["autoCharge"]) ? $options["autoCharge"] : false;
 
 		$toPublisher = isset($options["toPublisherId"]) ? $options["toPublisherId"] : null;
 		$toStream    = isset($options["toStreamName"]) ? $options["toStreamName"] : null;
@@ -235,10 +235,10 @@ abstract class Assets extends Base_Assets
 
 			if ($force) {
 
-				// Auto-top-up using forcePayment,
-				// passing currency="credits" so forcePayment resolves real currency internally.
+				// Auto-top-up using autoCharge,
+				// passing currency="credits" so autoCharge resolves real currency internally.
 				try {
-					Assets::forcePayment(
+					Assets::autoCharge(
 						$missingCredits,         // amount in credits
 						$reason,
 						array(
@@ -259,8 +259,8 @@ abstract class Assets extends Base_Assets
 					);
 				}
 
-				// Retry with forcePayment disabled
-				$options["forcePayment"] = false;
+				// Retry with autoCharge disabled
+				$options["autoCharge"] = false;
 				return Assets::pay($communityId, $userId, $amount, $reason, $options);
 			}
 
@@ -435,7 +435,7 @@ abstract class Assets extends Base_Assets
 	 *   (2) quota limits,
 	 *   (3) payment gateway success.
 	 *
-	 * @method forcePayment
+	 * @method autoCharge
 	 * @static
 	 * @param {float}  $amount  Amount in the given currency.
 	 * @param {string} $reason  Business reason or semantic label.
@@ -444,7 +444,7 @@ abstract class Assets extends Base_Assets
 	 *     @param {string} [$options.payments="stripe"] Payment processor key.
 	 *     @param {string} [$options.userId] User performing the payment.
 	 *     @param {string} [$options.resourceId=""] Quota resource bucket.
-	 *     @param {string} [$options.quotaName="forcePayment"] Quota name.
+	 *     @param {string} [$options.quotaName="autoCharge"] Quota name.
 	 *     @param {int}    [$options.units] Explicit quota units, otherwise auto.
 	 *     @param {array}  [$options.metadata] Arbitrary metadata.
 	 *
@@ -452,7 +452,7 @@ abstract class Assets extends Base_Assets
 	 * @throws Exception
 	 * @return bool
 	 */
-	static function forcePayment($amount, $reason, $options = array())
+	static function autoCharge($amount, $reason, $options = array())
 	{
 		// Validate amount
 		$amount = floatval($amount);
@@ -502,7 +502,7 @@ abstract class Assets extends Base_Assets
 		// At this point, $amount is a real money amount in $currency.
 
 		// Quota parameters
-		$quotaName  = Q::ifset($options, 'quotaName',  'forcePayment');
+		$quotaName  = Q::ifset($options, 'quotaName',  'autoCharge');
 		$resourceId = Q::ifset($options, 'resourceId', '');
 
 		// Quota units: if not provided, convert real currency -> USD (only as a universal quota baseline)

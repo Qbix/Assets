@@ -89,7 +89,7 @@ while (1) {
 					"amount" => $plan->getAttribute('amount'),
 					"currency" => $plan->getAttribute('currency', 'USD'),
 					"toStream" => $plan,
-					"forcePayment" => true
+					"autoCharge" => true
 				));
 
 				$status = Q_response::getSlot('status');

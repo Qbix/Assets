@@ -18,7 +18,7 @@
  * @param {Array} [$_REQUEST.items] Itemized list: each item has {publisherId, streamName, amount}.
  * @param {String} [$_REQUEST.reason] Reason for payment
  * @param {String} [$params.userId] Override userId
- * @param {boolean} [$params.forcePayment=false] Auto-charge if needed
+ * @param {boolean} [$params.autoCharge=false] Auto-charge if needed
  */
 function Assets_pay_post($params = array())
 {
@@ -35,7 +35,7 @@ function Assets_pay_post($params = array())
 	$payments = Q::ifset($req, "payments", "stripe");
 	$amount   = floatval($req['amount']);
 	$reason   = Q::ifset($req, 'reason', null);
-	$force    = Q::ifset($params, "forcePayment", false);
+	$force    = Q::ifset($params, "autoCharge", false);
 
 	// Detect stream destination
 	$toPublisherId = Q::ifset($req, 'toStream', 'publisherId', null);
@@ -58,7 +58,7 @@ function Assets_pay_post($params = array())
 		array(
 			"currency"      => $currency,
 			"payments"      => $payments,
-			"forcePayment"  => $force,
+			"autoCharge"  => $force,
 			"toUserId"      => $toUserId,
 			"toPublisherId" => $toPublisherId,
 			"toStreamName"  => $toStreamName,

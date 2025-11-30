@@ -11,7 +11,7 @@ Q.exports(function (Assets, priv) {
 	 * @param {string} [options.reason] Reason for payment
 	 * @param {object|Streams_Stream} [options.toStream] Valuable stream or stream info
 	 * @param {Array} [options.items] Array of objects with {publisherId, streamName, amount}
-	 * @param {boolean} [options.forcePayment=false] request server to forcePayment
+	 * @param {boolean} [options.autoCharge=false] request server to automatically charge to cover missing credits
 	 * @param {function} [options.onSuccess]
 	 * @param {function} [options.onFailure]
 	 */
@@ -89,7 +89,7 @@ Q.exports(function (Assets, priv) {
 				toStream: options.toStream,
 				reason:   options.reason,
 				items:    options.items,
-				forcePayment: options.forcePayment
+				autoCharge: options.autoCharge
 			}
 		});
 	};

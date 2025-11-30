@@ -44,12 +44,12 @@ function Assets_subscription_post($params = array())
 		throw new Exception($text["subscriptions"]["SubscriptionAlreadyPaid"]);
 	}
 
-	$forcePayment = filter_var(Q::ifset($req, "immediatePayment", false), FILTER_VALIDATE_BOOLEAN);
+	$autoCharge = filter_var(Q::ifset($req, "immediatePayment", false), FILTER_VALIDATE_BOOLEAN);
 	Q::event("Assets/credits/post", array(
 		"amount" => $plan->getAttribute('amount'),
 		"currency" => $plan->getAttribute('currency', 'USD'),
 		"toStream" => $plan,
-		"forcePayment" => $forcePayment
+		"autoCharge" => $autoCharge
 	));
 
 	$subscriptionStream = Assets_Subscription::getStream($plan);
