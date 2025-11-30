@@ -25,8 +25,8 @@ Q.exports(function(Assets, priv){
         var customClassName = Q.getObject("assetsPaymentsDialogClass", options);
 
         options = Q.extend({}, options);
-        if (options.reason && !options.description) {
-            options.description = Q.text.Assets.credits.BuyCredits.interpolate({
+        if (options.reason) {
+            options.description = Q.text.Assets.payments.reasons[options.reason].interpolate({
                 amount: options.amount,
                 currency: options.currency
             });

@@ -14,7 +14,6 @@ Q.exports(function(Assets, priv){
     return function stripe(options, callback) {
          Q.Assets.Payments.load(function _continue() {
             options = Q.extend({},
-                Q.text.Assets.payments,
                 Q.Assets.Payments.stripe.options,
                 options
             );
