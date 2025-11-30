@@ -1,4 +1,4 @@
-Q.exports(function(priv){
+Q.exports(function(Assets, priv){
     /**
     * Show a stripe dialog where the user can choose their payment profile
     * and then charge that payment profile.
@@ -12,34 +12,34 @@ Q.exports(function(priv){
     *  @param {Function} [callback] The function to call, receives (err, paymentSlot)
     */
     return function stripe(options, callback) {
-        Q.Assets.Payments.checkLoaded();
+         Q.Assets.Payments.load(function _continue() {
+            options = Q.extend({},
+                Q.Assets.texts.payments,
+                Q.Assets.Payments.stripe.options,
+                options
+            );
+            if (!options.amount) {
+                var err = _error("Assets.Payments.stripe: amount is required");
+                return Q.handle(callback, null, [err]);
+            }
 
-        options = Q.extend({},
-            Q.Assets.texts.payments,
-            Q.Assets.Payments.stripe.options,
-            options
-        );
-        if (!options.amount) {
-            var err = _error("Assets.Payments.stripe: amount is required");
-            return Q.handle(callback, null, [err]);
-        }
+            if (!Q.Users.loggedInUser) {
+                return Q.Users.login({
+                    onSuccess: function () {
+                        Q.handle(window.location.href);
+                    }
+                });
+            }
 
-        if (!Q.Users.loggedInUser) {
-            return Q.Users.login({
-                onSuccess: function () {
-                    Q.handle(window.location.href);
-                }
-            });
-        }
+            options.userId = options.userId || Q.Users.loggedInUserId();
+            options.currency = (options.currency || 'USD').toUpperCase();
 
-        options.userId = options.userId || Q.Users.loggedInUserId();
-        options.currency = (options.currency || 'USD').toUpperCase();
-
-        if (Q.info.isCordova && (window.location.href.indexOf('browsertab=yes') === -1)) {
-            priv._redirectToBrowserTab(options);
-        } else {
-            Q.Assets.Payments.standardStripe(options, callback);
-        }
+            if (Q.info.isCordova && (window.location.href.indexOf('browsertab=yes') === -1)) {
+                priv._redirectToBrowserTab(options);
+            } else {
+                Q.Assets.Payments.standardStripe(options, callback);
+            }
+        });
     }
 
 })

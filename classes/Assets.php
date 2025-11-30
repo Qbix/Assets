@@ -82,34 +82,41 @@ abstract class Assets extends Base_Assets
 			return $ob->getClean();
 		}
 	}
-	
+
 	/**
 	 * Makes a one-time charge on a customer account using a payments processor
 	 * @method charge
 	 * @static
 	 * @param {string} $payments The type of payments processor, could be "Authnet" or "Stripe"
 	 * @param {string} $amount specify the amount
-	 * @param {string} [$currency='USD'] set the currency, which will affect the amount
+	 * @param {string} [$currency="USD"] set the currency, which will affect the amount
 	 * @param {array} [$options=array()] Any additional options
-	 * @param {string} [$options.chargeId] Payment id to set as id field of Assets_Charge table, If this defined it means
-	 * that payment already processed and hence no need to call $adapter->charge
- 	 * @param {Users_User} [$options.user=Users::loggedInUser()] Can set which user to charge
-	 * @param {string} [$options.communityId] Can set which community's credits to grant on a successful charge. Defaults to main community.
-	 * @param {Streams_Stream} [$options.stream=null] if this charge is related to an Assets/product, Assets/service or Assets/subscription stream
-	 * @param {string} [$options.description=null] description of the charge, to be sent to customer
-	 * @param {string} [$options.metadata=null] any additional metadata to store with the charge
+	 * @param {string} [$options.chargeId] Payment id to set as id field of Assets_Charge table.
+	 *  If this is defined it means payment already processed (for example from webhook)
+	 *  and hence no need to call $adapter->charge
+	 * @param {Users_User} [$options.user=Users::loggedInUser()] Which user to charge
+	 * @param {string} [$options.communityId] Which community's credits to grant on success
+	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or subscription stream
+	 * @param {string} [$options.description=null] Description for the customer
+	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
 	 * @throws \Stripe\Error\Card
 	 * @throws Assets_Exception_DuplicateTransaction
 	 * @throws Assets_Exception_HeldForReview
 	 * @throws Assets_Exception_ChargeFailed
-	 * @return {Assets_Charge} the saved database row corresponding to the charge
+	 * @return {Assets_Charge} The saved database row for the charge
 	 */
 	static function charge($payments, $amount, $currency = 'USD', $options = array())
 	{
+		/* normalize currency to uppercase, handle null/empty strings */
+		if (!$currency) {
+			$currency = 'USD';
+		}
 		$currency = strtoupper($currency);
+
 		$user = Q::ifset($options, 'user', Users::loggedInUser(false));
 		$communityId = Q::ifset($options, 'communityId', Users::communityId());
-		$chargeId = Q::ifset($options, "chargeId", null);
+		$chargeId = Q::ifset($options, 'chargeId', null);
+
 		$className = 'Assets_Payments_' . ucfirst($payments);
 
 		/**
@@ -117,35 +124,44 @@ abstract class Assets extends Base_Assets
 		 * @param {Assets_Payments} adapter
 		 * @param {array} options
 		 */
-		Q::event('Assets/charge', @compact('adapter', 'options'), 'before');
+		Q::event('Assets/charge', @compact(
+			'adapter', 'options', 'payments', 'amount', 'currency'
+		), 'before');
 
-		// if charge id defined it means already paid, for example from webhook
 		if ($chargeId) {
+			/* already paid; adapter not needed */
 			$adapter = null;
-			$customerId = Q::ifset($options, "customerId", null);
+			$customerId = Q::ifset($options, 'customerId', null);
 		} else {
+			// create adapter and perform actual charge
 			$adapter = new $className((array)$options);
 			$customerId = $adapter->charge($amount, $currency, $options);
 		}
 
+		// create charge row
 		$charge = new Assets_Charge();
 		$charge->userId = $user->id;
+
 		if ($chargeId) {
 			$charge->id = $chargeId;
-			// check if charge with this id already exists
 			if ($charge->retrieve()) {
-				return null;
+				// prevent duplicate DB row
+				return $charge;
 			}
 		}
+
 		$charge->description = 'BoughtCredits';
+
+		/* store metadata */
 		$attributes = array(
-			"payments" => $payments,
-			"customerId" => $customerId,
-			"amount" => sprintf("%0.2f", $amount),
-			"currency" => $currency,
-			"communityId" => $communityId,
-			"credits" =>  Assets_Credits::convert($amount, $currency, "credits")
+			'payments'    => $payments,
+			'customerId'  => $customerId,
+			'amount'      => sprintf('%0.2f', $amount),
+			'currency'    => $currency,
+			'communityId' => $communityId,
+			'credits'     => Assets_Credits::convert($amount, $currency, 'credits')
 		);
+
 		$charge->attributes = Q::json_encode($attributes);
 		$charge->save();
 
@@ -161,36 +177,225 @@ abstract class Assets extends Base_Assets
 		 * @param {string} payments
 		 * @param {array} options
 		 */
-		Q::event('Assets/charge', @compact(
-			'payments', 'amount', 'currency',
-			'user', 'communityId', 'charge', 'options', 'payments',
-		), 'after');
+		Q::event(
+			'Assets/charge',
+			@compact(
+				'payments', 'amount', 'currency',
+				'user', 'communityId', 'charge', 'options'
+			),
+			'after'
+		);
 
 		return $charge;
 	}
+		
+	/**
+	 * Unified credits payment engine.
+	 * Handles credit spending, transfers, optional auto top-ups, and itemized pays.
+	 *
+	 * @method pay
+	 * @static
+	 * @param {string|null} $communityId
+	 * @param {string} $userId
+	 * @param {number} $amount Amount in the original currency
+	 * @param {string} $reason
+	 * @param {array} [$options]
+	 * @return array ("success" => bool, "details" => array)
+	 */
+	static function pay($communityId, $userId, $amount, $reason, $options = array())
+	{
+		$communityId = $communityId ? $communityId : Users::communityId();
+		$user        = Users::fetch($userId, true);
 
-	static function checkPaid(& $stream, $user) {
-		$communityId = $stream->getAttribute("communityId");
-		$allowed = Q_Config::expect('Assets', 'canCheckPaid');
-		$roles = Users::roles($communityId, $allowed);
+		$currency = isset($options["currency"]) ? $options["currency"] : "USD";
+		$gateway  = isset($options["payments"]) ? $options["payments"] : "stripe";
+		$force    = isset($options["forcePayment"]) ? $options["forcePayment"] : false;
 
-		// if current user is a publisher or participant of app/admins or Calendars/admin
-		if ($stream->publisherId === $user->id || count($roles)) {
-			return;
+		$toPublisher = isset($options["toPublisherId"]) ? $options["toPublisherId"] : null;
+		$toStream    = isset($options["toStreamName"]) ? $options["toStreamName"] : null;
+		$toUser      = isset($options["toUserId"]) ? $options["toUserId"] : null;
+
+		$items       = isset($options["items"]) ? $options["items"] : null;
+
+		if (!$reason) {
+			return array(
+				"success" => false,
+				"details" => array("error" => "Missing reason")
+			);
 		}
 
+		// 1. Convert original currency → credits
+		$needCredits     = Assets_Credits::convert($amount, $currency, "credits");
+		$currentCredits  = Assets_Credits::amount($communityId, $userId);
+
+		// 2. Not enough credits?
+		if ($currentCredits < $needCredits) {
+
+			$missingCredits = $needCredits - $currentCredits;
+
+			if ($force) {
+
+				// Auto-top-up using forcePayment,
+				// passing currency="credits" so forcePayment resolves real currency internally.
+				try {
+					Assets::forcePayment(
+						$missingCredits,         // amount in credits
+						$reason,
+						array(
+							"userId"   => $userId,
+							"currency" => "credits",    // << key change: allow internal conversion
+							"payments" => $gateway,
+							"metadata" => isset($options["metadata"]) ? $options["metadata"] : array()
+						)
+					);
+				} catch (Exception $e) {
+					return array(
+						"success" => false,
+						"details" => array(
+							"credits"     => $currentCredits,
+							"needCredits" => $needCredits,
+							"error"       => $e->getMessage()
+						)
+					);
+				}
+
+				// Retry with forcePayment disabled
+				$options["forcePayment"] = false;
+				return Assets::pay($communityId, $userId, $amount, $reason, $options);
+			}
+
+			// Not enough credits, no auto top-up allowed
+			return array(
+				"success" => false,
+				"details" => array(
+					"credits"     => $currentCredits,
+					"needCredits" => $needCredits
+				)
+			);
+		}
+
+		// 3. We have enough credits — prepare opts
+		$opts = array_merge($options, array(
+			"amount"   => $needCredits,
+			"payments" => $gateway
+		));
+
+		// 4. Spend or transfer
+		if ($toPublisher && $toStream) {
+			Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
+
+		} else if ($toUser) {
+			Assets_Credits::transfer($communityId, $needCredits, $reason, $toUser, $userId, $opts);
+
+		} else {
+			return array(
+				"success" => false,
+				"details" => array("error" => "No valid payment target")
+			);
+		}
+
+		// 5. Success
+		return array(
+			"success" => true,
+			"details" => array(
+				"credits"     => $currentCredits,
+				"needCredits" => $needCredits
+			)
+		);
+	}
+
+	/**
+	 * Server-authoritative payment verification for an event.
+	 * Exemptions:
+	 * - Stream publisher
+	 * - Users with write-level "close" (admins)
+	 * Everyone else must pay the full amount:
+	 * base stream fee + (fee × number of related participants registered by user).
+	 *
+	 * @method checkPaid
+	 * @static
+	 * @param {Streams_Stream} $stream The stream whose payment rules apply
+	 * @param {array} [$options=array()] Additional options
+	 * @param {Users_User} [$options.user=null] User object to check; defaults to logged-in user
+	 * @throws Q_Exception_PaymentRequired If the user has not paid enough
+	 */
+	static function checkPaid($stream, $options)
+	{
+		if (!empty($options['user'])) {
+			$user = $options['user'];
+		} else {
+			$user = Users::loggedInUser(true);
+		}
+
+		// ------------------------------------------------------------------
+		// Exemptions: publisher and admins
+		// ------------------------------------------------------------------
+		if ($user->id === $stream->publisherId) {
+			return; // event creator attends for free
+		}
+		if ($stream->testWriteLevel('close')) {
+			return; // community/event admin attends for free
+		}
+
+		// ------------------------------------------------------------------
+		// Payment structure
+		// ------------------------------------------------------------------
 		$payment = $stream->getAttribute('payment');
-		if (!$payment || $payment['type'] !== 'required') {
-			return;
+		if (!$payment) {
+			return; // no payment defined
 		}
-		$assets = new Assets_Charge();
-		$assets->publisherId = $stream->publisherId;
-		$assets->streamName = $stream->name;
-		$assets->userId = $user->id;
-		$assets = $assets->retrieve();
-		if (!$assets) {
+
+		$type     = $payment['type']     ?? null;
+		$amount   = floatval($payment['amount'] ?? 0);
+		$currency = $payment['currency'] ?? 'credits';
+
+		if ($type === 'optional') {
+			return; // optional means no enforcement
+		}
+		if ($type !== 'required') {
+			return; // unknown types behave as no enforcement
+		}
+
+		// ------------------------------------------------------------------
+		// Step 1: convert base fee → credits
+		// ------------------------------------------------------------------
+		$baseCredits = Assets_Credits::convert($amount, $currency, 'credits');
+
+		// ------------------------------------------------------------------
+		// Step 2: count related participants for whom this user pays
+		// ------------------------------------------------------------------
+		$totalCreditsOwed = $baseCredits;
+
+		$related = $stream->getAttribute('relatedParticipants');
+		if (is_array($related)) {
+			foreach ($related as $relationType => $info) {
+
+				$r = new Streams_Related();
+				$rs = $r->select()->where(array(
+					'publisherId'     => $stream->publisherId,
+					'streamName'      => $stream->name,
+					'relationType'    => $relationType,
+					'fromPublisherId' => $user->id
+				))->fetchDbRows();
+
+				$count = $rs ? count($rs) : 0;
+
+				if ($count > 0) {
+					$totalCreditsOwed += ($baseCredits * $count);
+				}
+			}
+		}
+
+		// ------------------------------------------------------------------
+		// Step 3: check balance
+		// ------------------------------------------------------------------
+		$creditsAvailable = Assets_Credits::amount(null, $user->id);
+
+		if ($creditsAvailable < $totalCreditsOwed) {
 			throw new Q_Exception_PaymentRequired(array(
-				'message'=> $stream->name,
+				'message' => $stream->name,
+				'needed'  => $totalCreditsOwed,
+				'has'     => $creditsAvailable
 			));
 		}
 	}
@@ -221,10 +426,136 @@ abstract class Assets extends Base_Assets
 		return $result;
 	}
 
+	/**
+	 * Force a real-money payment on behalf of the logged-in user,
+	 * after the client has explicitly authorized it (e.g. via popup + SetupIntent).
+	 *
+	 * This bypasses the credits system entirely. The server validates:
+	 *   (1) workflow legitimacy,
+	 *   (2) quota limits,
+	 *   (3) payment gateway success.
+	 *
+	 * @method forcePayment
+	 * @static
+	 * @param {float}  $amount  Amount in the given currency.
+	 * @param {string} $reason  Business reason or semantic label.
+	 * @param {array}  [$options] Optional arguments:
+	 *     @param {string} [$options.currency="credits"] Currency code ("credits", "USD", "EUR", etc.).
+	 *     @param {string} [$options.payments="stripe"] Payment processor key.
+	 *     @param {string} [$options.userId] User performing the payment.
+	 *     @param {string} [$options.resourceId=""] Quota resource bucket.
+	 *     @param {string} [$options.quotaName="forcePayment"] Quota name.
+	 *     @param {int}    [$options.units] Explicit quota units, otherwise auto.
+	 *     @param {array}  [$options.metadata] Arbitrary metadata.
+	 *
+	 * @throws Users_Exception_Quota
+	 * @throws Exception
+	 * @return bool
+	 */
+	static function forcePayment($amount, $reason, $options = array())
+	{
+		// Validate amount
+		$amount = floatval($amount);
+		if ($amount < 0) {
+			throw new Q_Exception_WrongType(array(
+				'field' => 'amount',
+				'type'  => 'positive number'
+			));
+		}
+
+		// Resolve requested currency (default: credits)
+		$currency = strtoupper(Q::ifset($options, 'currency', 'credits'));
+
+		// Determine user
+		$userId = Q::ifset($options, 'userId', Users::loggedInUser(true)->id);
+
+		// Determine payment processor
+		$payments = Q::ifset($options, 'payments', 'stripe');
+
+		// If caller passed currency="credits", convert to first real currency
+		if ($currency === 'CREDITS') {
+
+			// Exchange table: e.g. {"credits":1, "usd":100, "eur":90}
+			$exchange = Q_Config::get('Assets', 'credits', 'exchange', array());
+
+			$realCurrency = null;
+
+			// Pick first non-credits currency
+			foreach ($exchange as $code => $ratio) {
+				$codeUpper = strtoupper($code);
+				if ($codeUpper !== 'CREDITS') {
+					$realCurrency = $codeUpper;
+					break;
+				}
+			}
+
+			// Fallback only if config has no real currencies
+			if (!$realCurrency) {
+				$realCurrency = 'USD';
+			}
+
+			// Convert credits -> realCurrency
+			$amount = Assets_Credits::convert($amount, 'credits', $realCurrency);
+			$currency = $realCurrency;
+		}
+
+		// At this point, $amount is a real money amount in $currency.
+
+		// Quota parameters
+		$quotaName  = Q::ifset($options, 'quotaName',  'forcePayment');
+		$resourceId = Q::ifset($options, 'resourceId', '');
+
+		// Quota units: if not provided, convert real currency -> USD (only as a universal quota baseline)
+		$units = Q::ifset($options, 'units', null);
+		if ($units === null) {
+			// Convert to USD for quota consistency
+			$amountUSD = Assets_Credits::convert($amount, $currency, 'USD');
+
+			// Units is ceiling of USD amount
+			$units = ceil($amountUSD);
+		}
+
+		// 1. Check and reserve quota (starts transaction)
+		$quota = Users_Quota::check(
+			$userId,
+			$resourceId,
+			$quotaName,
+			true,
+			$units,
+			array(),
+			true
+		);
+
+		// 2. Attempt real-money charge
+		try {
+
+			$result = Assets::charge(
+				$payments,
+				$amount,
+				$currency,
+				array(
+					'user'     => Users::fetch($userId, true),
+					'reason'   => $reason,
+					'metadata' => Q::ifset($options, 'metadata', array())
+				)
+			);
+
+			// Commit quota usage
+			$quota->used($units);
+			return true;
+
+		} catch (Exception $e) {
+
+			// Roll back quota reservation
+			Users_Quota::rollback()->execute(false, Q::ifset($quota, 'shards', array()));
+			throw $e;
+		}
+	}
+
 	static $columns = array();
 	static $options = array();
 	const PAYMENT_TO_USER = 'PaymentToUser';
 	const JOINED_PAID_STREAM = 'JoinedPaidStream';
 	const LEFT_PAID_STREAM = 'LeftPaidStream';
-	const CREATED_COMMUNITY = 'CreaterCommunity';
+	const CREATED_COMMUNITY = 'CreatedCommunity';
 };

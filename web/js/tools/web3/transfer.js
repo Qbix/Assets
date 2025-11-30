@@ -135,7 +135,7 @@ Q.Tool.define("Assets/web3/transfer", function (options) {
                     $this.addClass("Q_working");
     
                     if (tokenInfo.tokenName === "credits") {
-                        return Assets.Credits.pay({
+                        return Assets.pay({
                             amount: amount,
                             currency: "credits",
                             userId: userSelected.userId,

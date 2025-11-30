@@ -176,8 +176,53 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 			'currency' => $currency,
 			'metadata' => !empty($options['metadata']) ? $options['metadata'] : null
 		);
+		if (!empty($options['capture_method'])) {
+			$params['capture_method'] = $options['capture_method'];
+		}
 
 		$intent = \Stripe\PaymentIntent::create($params); // can throw some exception
+
+		return $intent;
+	}
+
+	/**
+	 * Create a SetupIntent (store a payment method for future off_session use)
+	 * @method createSetupIntent
+	 * @param {array} [$options=array()] Additional options
+	 * @param {string} [$options.metadata] Optional metadata
+	 * @throws \Stripe\Exception\CardException
+	 * @return object  The SetupIntent object
+	 */
+	function createSetupIntent($options = array())
+	{
+		$options = array_merge($this->options, $options);
+
+		// Ensure metadata exists and attach userId
+		$options['metadata'] = Q::ifset($options, 'metadata', array());
+		$options['metadata']['userId'] = $options['user']->id;
+
+		// Get or create Stripe customer
+		$customer = new Assets_Customer();
+		$customer->userId  = $options['user']->id;
+		$customer->payments = 'stripe';
+		$customer->hash     = Assets_Customer::getHash();
+
+		if (!$customer->retrieve()) {
+			$stripeCustomer = self::createCustomer($options['user']);
+			$customer->customerId = $stripeCustomer->id;
+			$customer->save();
+		}
+
+		Q_Valid::requireFields(array('user'), $options, true);
+
+		$params = array(
+			'customer' => $customer->customerId,
+			'usage'    => 'off_session',
+			'metadata' => !empty($options['metadata']) ? $options['metadata'] : null
+		);
+
+		// Create SetupIntent
+		$intent = \Stripe\SetupIntent::create($params);
 
 		return $intent;
 	}
@@ -296,9 +341,112 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 		return null;
 	}
 
-	static function log ($key, $title, $message=null) {
-		Q::log('______________________________________________', $key);
-		Q::log(date('Y-m-d H:i:s').': '.$title, $key);
+	/**
+	 * Resolve metadata for Stripe events in a fault-tolerant way.
+	 * Ensures that the resulting metadata contains userId, user, chargeId, and customerId.
+	 * @method resolveMetadata
+	 * @static
+	 * @param {array} metadata Existing metadata extracted from Stripe objects.
+	 * @param {Object} event The Stripe event passed by the webhook handler.
+	 * @param {string} eventType Stripe event type, such as "payment_intent.succeeded" or "invoice.paid".
+	 * @throws {Exception} Thrown if userId or chargeId cannot be reliably determined.
+	 * @return {array} Normalized metadata including userId, user, chargeId, and customerId.
+	 */
+	static function resolveMetadata($metadata, $event, $eventType)
+	{
+		$stripe = new \Stripe\StripeClient(
+			Q_Config::expect('Assets', 'payments', 'stripe', 'secret')
+		);
+
+		$object = $event->data->object;
+
+		// -------------------------------------------------------------
+		// 1. Resolve chargeId and customerId depending on event type
+		// -------------------------------------------------------------
+
+		if ($eventType === "payment_intent.succeeded") {
+			$metadata["chargeId"]   = Q::ifset($object, "id", null);
+			$metadata["customerId"] = Q::ifset($object, "customer", null);
+		} else if ($eventType === "invoice.paid") {
+			$pi = Q::ifset($object, "payment_intent", null);
+			if ($pi) {
+				$metadata["chargeId"] = $pi;
+			}
+			$metadata["customerId"] = Q::ifset($object, "customer", null);
+		}
+
+		// -------------------------------------------------------------
+		// 2. Resolve userId using the deterministic priority order:
+		// -------------------------------------------------------------
+		// Priority:
+		//   1. direct metadata.userId
+		//   2. subscription.metadata.userId
+		//   3. customer.metadata.userId
+		//   4. invoice line metadata.userId
+		// -------------------------------------------------------------
+
+		// #1 direct metadata
+		if (!empty($metadata["userId"])) {
+			// already resolved
+		} else {
+
+			// #2 subscription metadata (only invoice.paid)
+			if ($eventType === "invoice.paid" && !empty($object->subscription)) {
+				try {
+					$subscription = $stripe->subscriptions->retrieve($object->subscription);
+					if (!empty($subscription->metadata->userId)) {
+						$metadata["userId"] = $subscription->metadata->userId;
+					}
+				} catch (Exception $e) {
+					// ignore; fall through to next step
+				}
+			}
+
+			// #3 customer metadata
+			if (empty($metadata["userId"]) && !empty($metadata["customerId"])) {
+				try {
+					$customer = $stripe->customers->retrieve($metadata["customerId"]);
+					if (!empty($customer->metadata->userId)) {
+						$metadata["userId"] = $customer->metadata->userId;
+					}
+				} catch (Exception $e) {
+					// ignore; fall through
+				}
+			}
+
+			// #4 invoice line item metadata
+			if (
+				empty($metadata["userId"]) &&
+				$eventType === "invoice.paid" &&
+				isset($object->lines->data[0]->metadata->userId)
+			) {
+				$metadata["userId"] = $object->lines->data[0]->metadata->userId;
+			}
+		}
+
+		// Final validation: userId must exist
+		if (empty($metadata["userId"])) {
+			throw new Exception("Unable to resolve userId for $eventType");
+		}
+
+		// -------------------------------------------------------------
+		// 3. Attach user object
+		// -------------------------------------------------------------
+		$metadata["user"] = Users::fetch($metadata["userId"], true);
+
+		// -------------------------------------------------------------
+		// 4. chargeId must be present
+		// -------------------------------------------------------------
+		if (empty($metadata["chargeId"])) {
+			throw new Exception("Unable to resolve chargeId for $eventType");
+		}
+
+		return $metadata;
+	}
+
+
+	static function log ($title, $message=null) {
+		Q::log(date('Y-m-d H:i:s').': '.$title, 'stripe');
 		if ($message) {
 			Q::log($message, $key, array(
 				"maxLength" => 10000

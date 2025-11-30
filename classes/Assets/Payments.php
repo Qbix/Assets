@@ -3,6 +3,18 @@
 abstract class Assets_Payments
 {
 	// common functionality could go here
+
+	/**
+	 * Called by various Db methods to get a custom row object
+	 * @param {string} $platform e.g. "stripe" or "authnet"
+	 * @return Assets_Payments
+	 */
+	static function adapter($platform)
+	{
+		$platform = ucfirst($platform);
+		$className = "Assets_Payments_$platform";
+		return new $className();
+	}
 }
 
 interface Assets_Payments_Interface

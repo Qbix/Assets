@@ -1,4 +1,4 @@
-Q.exports(function(priv){
+Q.exports(function(Assets, priv){
     /**
     * Show an authnet dialog where the user can choose their payment profile,
     * then show a confirmation box to make a payment, and then charge that

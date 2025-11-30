@@ -14,7 +14,12 @@ var priv = {};
 var _badgeRect = {};
 var _ival;
 
-var Assets = Q.Assets = Q.plugins.Assets = {
+var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
+
+	/**
+	 * Unified method to pay an amount
+	 */
+	pay: new Q.Method(),
 
 	/**
 	 * Operates with credits.
@@ -24,7 +29,6 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 	Credits: Q.Method.define({
 		getStream: new Q.Method(),
 		buy: new Q.Method(),
-		pay: new Q.Method(),
 		/**
 		 * Convert from currency to credits
 		 * @method convertToCredits
@@ -178,7 +182,6 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 			if (Q.getObject("Payments.loaded", Assets)) {
 				return true;
 			}
-
 			throw new Q.Error("In order to use Assets.Payments methods need to call method Assets.Payments.load()");
 		},
 		authnet: new Q.Method({
@@ -228,10 +231,9 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 				}
 			});
 		}
-	}, 
-		'{{Assets}}/js/methods/Assets/Payments',
+	}, '{{Assets}}/js/methods/Assets/Payments',
 		function(){
-			return [priv];
+			return [Assets, priv];
 		}
 	),
 
@@ -522,7 +524,10 @@ var Assets = Q.Assets = Q.plugins.Assets = {
 			}}
 		}
 	}, '{{Assets}}/js/methods/Assets/Web3'),
-};
+}, '{{Assets}}/js/methods/Assets', 
+function() {
+	return [Assets, priv];
+});
 
 
 //    var priv = Q.Method.define({
@@ -555,16 +560,6 @@ priv._redirectToBrowserTab = function _redirectToBrowserTab(options) {
 		Q.handle(options.onFailure, null, [err]);
 	});
 }
-
-
-// define methods for Users to replace method stubs
-Q.Method.define(
-	Assets, 
-	'{{Assets}}/js/methods/Assets', 
-	function() {
-		return [priv];
-	}
-);
 
 Q.Text.addFor(
 	['Q.Tool.define', 'Q.Template.set'],

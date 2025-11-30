@@ -1,4 +1,4 @@
-Q.exports(function(priv){
+Q.exports(function(Assets, priv){
     Q.Template.set('Assets/stripe/payment',
         `<div class="Assets_Stripe_requestButton"></div>
             <div class="Assets_Stripe_elements"></div>
@@ -15,6 +15,7 @@ Q.exports(function(priv){
     *  @param {Object} options.metadata Data to pass to payment gateway to get them back and save to message instructions
     *  @param {String} [options.currency="usd"] the currency to pay in.
     *  @param {String} [options.assetsPaymentsDialogClass] to add to dialog classes list
+    *  @param {String} [options.authorize] authorize the card to be charged later, always charges 0 now regardles of amount
     *  @param {Function} [callback]
     */
     return function standardStripe(options, callback) {
@@ -22,13 +23,21 @@ Q.exports(function(priv){
 
         var paymentRequestButton, paymentElement;
         var customClassName = Q.getObject("assetsPaymentsDialogClass", options);
+
         var _renderTemplate = function (dialog) {
-            var pipeDialog = new Q.Pipe(["currencySymbol", "paymentIntent"], function (params) {
+
+            // CHANGED: paymentIntent -> intent (for both PI and SI)
+            var pipeDialog = new Q.Pipe(["currencySymbol", "intent"], function (params) {
                 var currencySymbol = params.currencySymbol[0];
-                var clientSecret = params.paymentIntent[0];
+                var intentData    = params.intent[0]; // will contain {client_secret, intent_type}
+
+                var clientSecret  = intentData.client_secret;
+                var intentType    = intentData.intent_type;   // "payment" or "setup"
+
                 var amount = parseInt(options.amount);
                 var $payButton = $("button[name=pay]", dialog);
 
+                // same button label
                 $payButton.text(Q.Assets.texts.payment.Pay + ' ' + currencySymbol + amount.toFixed(2));
 
                 var pipeElements = new Q.Pipe(['paymentRequest', 'payment'], function (params) {
@@ -46,7 +55,15 @@ Q.exports(function(priv){
                     requestPayerName: true,
                     requestPayerEmail: true
                 });
+
                 paymentRequest.on('paymentmethod', function(ev) {
+                    // For PaymentIntent ONLY. SetupIntent does not support paymentRequest flow.
+                    if (intentType === "setup") {
+                        ev.complete('fail');
+                        Q.alert("SetupIntent does not support Payment Request API");
+                        return;
+                    }
+
                     // Confirm the PaymentIntent without handling potential next actions (yet).
                     Q.Assets.Payments.stripeObject.confirmCardPayment(
                         clientSecret,
@@ -54,52 +71,40 @@ Q.exports(function(priv){
                         {handleActions: false}
                     ).then(function(confirmResult) {
                         if (confirmResult.error) {
-                            // Report to the browser that the payment failed, prompting it to
-                            // re-show the payment interface, or show an error message and close
-                            // the payment interface.
                             ev.complete('fail');
-
                             console.error(confirmResult.error);
                             Q.alert("Payment failed");
                             return;
                         }
 
-                        // Report to the browser that the confirmation was successful, prompting
-                        // it to close the browser payment method collection interface.
                         ev.complete('success');
-
                         Q.Dialogs.pop();
 
-                        // Check if the PaymentIntent requires any actions and if so let Stripe.js
-                        // handle the flow. If using an API version older than "2019-02-11"
-                        // instead check for: `paymentIntent.status === "requires_source_action"`.
-                        if (confirmResult.paymentIntent.status === "requires_source_action" || confirmResult.paymentIntent.status === "requires_action") {
-                            // Let Stripe.js handle the rest of the payment flow.
+                        if (confirmResult.paymentIntent.status === "requires_source_action"
+                            || confirmResult.paymentIntent.status === "requires_action") {
+
                             Q.Assets.Payments.stripeObject.confirmCardPayment(clientSecret).then(function(result) {
                                 if (result.error) {
-                                    // The payment failed -- ask your customer for a new payment method.
                                     Q.alert(result.error.message);
                                 } else {
-                                    // The payment has succeeded.
-                                    //Assets.Payments.stripePaymentResult({status: 'succeeded'})
+                                    // payment succeeded
                                 }
                             });
                         } else {
-                            // The payment has succeeded.
-                            //Assets.Payments.stripePaymentResult({status: 'succeeded'})
+                            // payment succeeded
                         }
                     });
                 });
+
                 paymentRequestButton = Q.Assets.Payments.stripeObject.elements().create('paymentRequestButton', {
                     paymentRequest: paymentRequest,
                 });
                 paymentRequestButton.on('ready', pipeElements.fill('paymentRequest'));
 
-                // Check the availability of the Payment Request API first.
                 paymentRequest.canMakePayment().then(function(result) {
                     var $paymentRequestButton = $(".Assets_Stripe_requestButton", dialog);
 
-                    if (result) {
+                    if (result && intentType === "payment") {
                         paymentRequestButton.mount($paymentRequestButton[0]);
                     } else {
                         $paymentRequestButton.hide();
@@ -113,38 +118,68 @@ Q.exports(function(priv){
                     clientSecret,
                     appearance: Q.Assets.Payments.stripe.appearance || {}
                 });
+
                 paymentElement = elements.create('payment', {
                     wallets: {
                         applePay: 'never',
                         googlePay: 'never'
                     }
                 });
+
                 paymentElement.on('ready', pipeElements.fill('payment'));
                 paymentElement.mount($(".Assets_Stripe_elements", dialog)[0]);
 
+                // Handle the Pay button
                 $payButton.on(Q.Pointer.fastclick, function () {
                     var $this = $(this);
                     $this.addClass("Q_working");
-                    Q.Assets.Payments.stripeObject.confirmPayment({
-                        elements,
-                        confirmParams: {
-                            return_url: Q.url("{{baseUrl}}/me/credits")
-                        },
-                        redirect: 'if_required'
-                    }).then(function (response) {
-                        Q.Dialogs.pop();
 
-                        if (response.error) {
-                            if (response.error.type === "card_error" || response.error.type === "validation_error") {
-                                Q.alert(response.error.message);
-                            } else {
-                                Q.alert("An unexpected error occurred.");
+                    // CHANGED: support both PaymentIntent + SetupIntent
+                    var stripeObject = Q.Assets.Payments.stripeObject;
+
+                    if (intentType === "setup") {
+                        // SetupIntent flow
+                        stripeObject.confirmSetup({
+                            elements,
+                            confirmParams: {
+                                return_url: Q.url("{{baseUrl}}/me/credits")
+                            },
+                            redirect: "if_required"
+                        }).then(function (response) {
+                            Q.Dialogs.pop();
+
+                            if (response.error) {
+                                if (response.error.type === "card_error" || response.error.type === "validation_error") {
+                                    Q.alert(response.error.message);
+                                } else {
+                                    Q.alert("An unexpected error occurred.");
+                                }
+                                return;
                             }
-                            return;
-                        }
+                            // SetupIntent succeeded. Webhook will finalize storage.
+                        });
+                    } else {
+                        // PaymentIntent flow
+                        stripeObject.confirmPayment({
+                            elements,
+                            confirmParams: {
+                                return_url: Q.url("{{baseUrl}}/me/credits")
+                            },
+                            redirect: 'if_required'
+                        }).then(function (response) {
+                            Q.Dialogs.pop();
 
-                        //Assets.Payments.stripePaymentResult(paymentIntent);
-                    });
+                            if (response.error) {
+                                if (response.error.type === "card_error" || response.error.type === "validation_error") {
+                                    Q.alert(response.error.message);
+                                } else {
+                                    Q.alert("An unexpected error occurred.");
+                                }
+                                return;
+                            }
+                            // Payment succeeded
+                        });
+                    }
                 });
                 // </create stripe "payment" element>
             });
@@ -154,7 +189,17 @@ Q.exports(function(priv){
                 pipeDialog.fill("currencySymbol")(symbol);
             });
 
-            // get payment intent
+            var fields = {
+                amount: options.amount,
+                currency: options.currency,
+                metadata: options.metadata
+            };
+            if (options.authorize) {
+                fields.authorize = true;
+                fields.amount = 0;
+            }
+
+            // get intent (could be setupIntent or paymentIntent)
             Q.req("Assets/payment", "intent", function (err, response) {
                 var msg = Q.firstErrorMessage(err, response && response.errors);
                 if (msg) {
@@ -162,14 +207,16 @@ Q.exports(function(priv){
                     return Q.alert(msg);
                 }
 
-                var paymentIntent = Q.getObject(["slots", "intent"], response);
-                var clientSecret = paymentIntent.client_secret;
+                var intentSlot = Q.getObject(["slots", "intent"], response);
+                var clientSecret = intentSlot.client_secret;
+                var intentType   = intentSlot.intent_type; // "payment" or "setup"
+                var token        = intentSlot.token;
+
                 if (!clientSecret) {
                     Q.handle(callback, null, [true]);
                     Q.Dialogs.pop();
                     throw new Q.Exception('clientSecret empty');
                 }
-                var token = paymentIntent.token;
                 if (!token) {
                     Q.handle(callback, null, [true]);
                     Q.Dialogs.pop();
@@ -177,22 +224,27 @@ Q.exports(function(priv){
                 }
 
                 // listen Assets/credits stream for message
-                Q.Streams.Stream.onMessage(Q.Users.currentCommunityId, 'Assets/credits/' + Q.Users.loggedInUser.id, 'Assets/credits/bought')
-                    .set(function(message) {
-                        if (token !== message.getInstruction('token')) {
-                            return;
-                        }
+                Q.Streams.Stream.onMessage(
+                    Q.Users.currentCommunityId,
+                    'Assets/credits/' + Q.Users.loggedInUser.id,
+                    'Assets/credits/bought'
+                ).set(function(message) {
+                    if (token !== message.getInstruction('token')) {
+                        return;
+                    }
 
-                        Q.handle(callback, null, [null]);
-                    }, token);
+                    Q.handle(callback, null, [null]);
+                }, token);
 
-                pipeDialog.fill("paymentIntent")(clientSecret);
+                // pipe this unified intent
+                pipeDialog.fill("intent")({
+                    client_secret: clientSecret,
+                    intent_type: intentType,
+                    token: token
+                });
+
             }, {
-                fields: {
-                    amount: options.amount,
-                    currency: options.currency,
-                    metadata: options.metadata
-                }
+                fields: fields
             });
         };
 
@@ -232,4 +284,4 @@ Q.exports(function(priv){
 
         Q.Dialogs.push(dialogOptions);
     }
-})
+});

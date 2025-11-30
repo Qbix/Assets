@@ -32,7 +32,33 @@ class Assets_Customer extends Base_Assets_Customer
 	 * @return {String} hash
 	 */
 	static function getHash () {
-		return Q_Utils::hash(Q_Config::expect('Assets', 'payments', 'stripe', 'secret').Q_Config::expect('Assets', 'payments', 'stripe', 'publishableKey').Q_Config::get("Assets", "payments", "stripe", "clientId", null));
+		return Q_Utils::hash(Q_Config::expect('Assets', 'payments', 'stripe', 'secret')
+			.Q_Config::expect('Assets', 'payments', 'stripe', 'publishableKey')
+			.Q_Config::get("Assets", "payments", "stripe", "clientId", null));
+	}
+
+	/**
+	 * Does necessary preparations for saving a stream in the database.
+	 * @method beforeSave
+	 * @param {array} $modifiedFields
+	 *	The array of fields
+	 * @param {array} $options
+	 *  Not used at the moment
+	 * @param {array} $internal
+	 *  Can be used to pass pre-fetched objects
+	 * @return {array}
+	 * @throws {Exception}
+	 *	If mandatory field is not set
+	 */
+	function beforeSave(
+		$modifiedFields,
+		$options = array(),
+		$internal = array()
+	) {
+		if (empty($modifiedFields['hash'])) {
+			$this->hash = $modifiedFields['hash'] = self::getHash();
+		}
+		return parent::beforeSave($modifiedFields);
 	}
 
 	/**

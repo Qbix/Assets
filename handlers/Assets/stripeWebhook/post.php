@@ -1,93 +1,167 @@
 <?php
 
-require_once ASSETS_PLUGIN_DIR.DS.'vendor'.DS.'autoload.php';
+require_once ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
 
 /**
  * Stripe webhook https://stripe.com/docs/webhooks
  */
-function Assets_stripeWebhook_post ($params)
+function Assets_stripeWebhook_post($params = array())
 {
-    $payload = @file_get_contents('php://input');
-	$event = null;
+	$payload         = @file_get_contents('php://input');
 	$endpoint_secret = Q_Config::expect("Assets", "payments", "stripe", "webhookSecret");
+	$event           = null;
 
+	// ---------------------------------------------------------------------
+	// Parse event payload
+	// ---------------------------------------------------------------------
 	try {
 		$event = \Stripe\Event::constructFrom(json_decode($payload, true));
-	} catch(\UnexpectedValueException $e) {
-		// Invalid payload
-
-		Assets_Payments_Stripe::log('Stripe.webhook', 'Webhook error while parsing basic request.', $e);
+	} catch (\UnexpectedValueException $e) {
+		Assets_Payments_Stripe::log('stripe', 'Webhook error while parsing basic request.', $e);
 		http_response_code(400);
 		exit;
 	}
 
-	// Only verify the event if there is an endpoint secret defined
-	// Otherwise use the basic decoded event
-	$sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
+	// ---------------------------------------------------------------------
+	// Signature verification
+	// ---------------------------------------------------------------------
 	try {
+		$sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
 		$event = \Stripe\Webhook::constructEvent($payload, $sig_header, $endpoint_secret);
-	} catch(\Stripe\Exception\SignatureVerificationException $e) {
-		// Invalid signature
-		Assets_Payments_Stripe::log('Stripe.webhook', 'Webhook error while validating signature.', $e);
+	} catch (\Stripe\Exception\SignatureVerificationException $e) {
+		Assets_Payments_Stripe::log('stripe', 'Webhook error while validating signature.', $e);
 		http_response_code(400);
 		exit;
 	}
 
-	// Handle the event
+	// Unified helper
+	$stripe = new Assets_Payments_Stripe;
+
+	// ---------------------------------------------------------------------
+	// Event dispatch
+	// ---------------------------------------------------------------------
 	switch ($event->type) {
+
+		/**
+		 * ===============================================================
+		 * payment_intent.succeeded — one-time payments
+		 * ===============================================================
+		 */
 		case 'payment_intent.succeeded':
-			$paymentIntent = $event->data->object; // contains a \Stripe\PaymentIntent
+			$pi = $event->data->object;
 
-			// need to response http code 200 to stripe endpoint regardless of processing our engine
-			// because regardless of our exceptions we got payment_intent.succeeded event
-			// otherwise stripe will block our webhook
 			try {
-				//Assets_Payments_Stripe::log('Stripe.webhook', 'Payment success!', $paymentIntent);
+				$amount   = (int)Q::ifset($pi, "amount", null) / 100;
+				$currency = Q::ifset($pi, "currency", null);
+				$metadata = Q::ifset($pi, "metadata", array());
 
-				$amount = (int)Q::ifset($paymentIntent, "amount", null);
-				$amount /= 100; // amount in cents, need to convert to dollars
-				$currency = Q::ifset($paymentIntent, "currency", null);
-				$metadata = Q::ifset($paymentIntent, "metadata", array());
+				// Resolve all required metadata (userId, user, chargeId, customerId, stream)
+				$metadata = $stripe->resolveMetadata($metadata, $event, 'payment_intent.succeeded');
 
-				// check app
-				if (Q::app() != Q::ifset($metadata, "app", null)) {
+				// Respect app boundary
+				if (Q::app() !== Q::ifset($metadata, "app", null)) {
+                    Assets_Payments_Stripe::log('stripe', 'payment_intent.succeeded but for wrong app');
 					break;
 				}
 
-				// set user to metadata
-				$userId = Q::ifset($metadata, "userId", null);
-				if (!$userId) {
-					throw new Exception("user id not found");
-				}
-				$metadata["user"] = Users::fetch($userId, true);
-
-				// set payment id to metadata
-				$chargeId = Q::ifset($paymentIntent, "id", null);
-				if (!$chargeId) {
-					throw new Exception("payment intent id not found");
-				}
-				$metadata["chargeId"] = $chargeId;
-
-				// set customer id to metadata
-				$customerId = Q::ifset($paymentIntent, "customer", null);
-				$metadata["customerId"] = $customerId;
-
-				// set stream to metadata
-				$publisherId = Q::ifset($metadata, "publisherId", null);
-				$streamName = Q::ifset($metadata, "streamName", null);
-				if ($publisherId && $streamName) {
-					$metadata["stream"] = Streams::fetchOne($publisherId, $publisherId, $streamName);
-				}
-
 				Assets::charge("stripe", $amount, $currency, $metadata);
+
 			} catch (Exception $e) {
-				Assets_Payments_Stripe::log('Stripe.webhook', 'Exception occur during process payment intent', $e);
+				Assets_Payments_Stripe::log('stripe', 'Exception during payment_intent.succeeded', $e);
 			}
 
 			break;
+
+		/**
+		 * ===============================================================
+		 * invoice.paid — subscriptions & recurring billing
+		 * ===============================================================
+		 */
+		case 'invoice.paid':
+			$invoice = $event->data->object;
+
+			try {
+				$amount   = (int)Q::ifset($invoice, "amount_paid", null) / 100;
+				$currency = Q::ifset($invoice, "currency", null);
+
+				// Prefer line-item metadata (matches existing behavior)
+				$metadata = array();
+				if (isset($invoice->lines->data[0]->metadata)) {
+					$metadata = $invoice->lines->data[0]->metadata;
+				}
+
+				// Resolve metadata with fallback search:
+				// - Metadata.userId
+				// - Subscription.metadata.userId
+				// - Customer.metadata.userId
+				// - Adds chargeId, customerId, stream
+				$metadata = $stripe->resolveMetadata($metadata, $event, 'invoice.paid');
+
+				Assets::charge("stripe", $amount, $currency, $metadata);
+
+				Assets_Payments_Stripe::log('invoice.paid processed successfully', $invoice);
+
+			} catch (Exception $e) {
+				Assets_Payments_Stripe::log('Exception during invoice.paid', $e);
+			}
+
+			break;
+
+		/**
+		 * ===============================================================
+		 * setup_intent.succeeded — save default payment method
+		 * ===============================================================
+		 */
+		case 'setup_intent.succeeded':
+			$si = $event->data->object;
+
+			try {
+				$metadata = Q::ifset($si, "metadata", array());
+				$userId   = Q::ifset($metadata, "userId", null);
+				if (!$userId) {
+                    Assets_Payments_Stripe::log("Stripe setup intent: Missing metadata, cannot determine userId. Invoice: $invoiceId");
+                    http_response_code(200);
+                    return;   // Return 200 OK, so Stripe stops retrying
+				}
+
+				$user = Users::fetch($userId, true);
+
+				$paymentMethodId = Q::ifset($si, "payment_method", null);
+				$customerId      = Q::ifset($si, "customer", null);
+
+				if (!$paymentMethodId || !$customerId) {
+					Assets_Payments_Stripe::log("Stripe setup intent: Missing metadata, cannot determine userId. Invoice: $invoiceId");
+				}
+
+				$stripeClient = new \Stripe\StripeClient(
+					Q_Config::expect('Assets', 'payments', 'stripe', 'secret')
+				);
+
+				$stripeClient->customers->update($customerId, array(
+					'invoice_settings' => array(
+						'default_payment_method' => $paymentMethodId
+					)
+				));
+
+				Assets_Payments_Stripe::log('SetupIntent succeeded, default payment method saved', $si);
+
+			} catch (Exception $e) {
+				Assets_Payments_Stripe::log('Exception in setup_intent.succeeded', $e);
+			}
+
+			break;
+
+		/**
+		 * ===============================================================
+		 * Unknown event fallback
+		 * ===============================================================
+		 */
 		default:
-			Assets_Payments_Stripe::log('Stripe.webhook', 'Received unknown event type', $event->type);
+			Assets_Payments_Stripe::log('Received unknown event type', $event->type);
 	}
-    http_response_code(200); // PHP 5.4 or greater
-    exit;
+
+	http_response_code(200);
+	exit;
 }
+
+Assets_stripeWebhook_post();

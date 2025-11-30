@@ -125,7 +125,7 @@ class Assets_Credits extends Base_Assets_Credits
 	}
 	
 	/**
-	 * Amount of credits
+	 * Amount of community credits a user has
 	 * @method amount
 	 * @static
 	 * @param {string} [$communityId=Users::communityid()]
@@ -175,106 +175,7 @@ class Assets_Credits extends Base_Assets_Credits
 		}
 		return true;
 	}
-	/**
-	 * Make a user spend credits. Use the $more array to send credits to a publisher of a stream, instead.
-	 * @method spend
-	 * @static
-	 * @param {string} $communityId The community managing the credits, pass null for Users::currentCommunity()
-	 * @param {integer} $amount The amount of credits to spend.
-	 * @param {string} $reason Identifies the reason for spending. Can't be null.
-	 * @param {string} [$userId=null] User which is spendings the credits. Defaults to logged-in user.
-	 * @param {array} [$more] An array supplying more info, including
-	 * @param {string} [$more.toPublisherId] The publisher of the valuable stream for which payment is being made
-	 * @param {string} [$more.toStreamName] The name of the valuable stream for which payment is being made
-	 * @param {array} [$more.items] an array of items, each with "publisherId", "streamName" and "amount"
-	 * @throws {Users_Exception_NotLoggedIn} If user is not logged in
-	 */
-	static function spend($communityId, $amount, $reason, $userId = null, $more = array())
-	{
-		if (!$communityId) {
-			$communityId = Users::communityId();
-		}
-		$amount = (int)$amount;
-		if ($amount < 0) {
-			throw new Q_Exception_WrongType(array(
-				'field' => 'amount',
-				'type' => 'positive integer'
-			));
-		}
 
-		if (empty($reason)) {
-			throw new Q_Exception_RequiredField(array('field' => 'reason'));
-		}
-
-		$userId = $userId ? $userId : Users::loggedInUser(true)->id;
-
-		$toPublisherId = Q::ifset($more, "toPublisherId", null);
-		$toStreamName = Q::ifset($more, "toStreamName", null);
-		$items = Q::ifset($more, "items", null);
-
-		// make sure the amount is consistent
-		self::checkAmount($amount, $items, true);
-
-		// if user spend credits to stream, make it send credits to stream publisher
-		if ($toPublisherId && $toStreamName) {
-			self::transfer($communityId, $amount, $reason, $toPublisherId, $userId, $more);
-
-			/**
-			 * @event Assets/credits/spend {after}
-			 */
-			Q::event('Assets/credits/spent', @compact(
-				'toPublisherId', 'toStreamName', 'amount', 'userId'
-			), 'after');
-
-			return;
-		}
-
-		$stream = self::stream($communityId, $userId, $communityId);
-		$existing_amount = $stream->getAttribute('amount');
-		if ($existing_amount < $amount) {
-			throw new Assets_Exception_NotEnoughCredits(array(
-				'missing' => $amount - $existing_amount
-			));
-		}
-
-		if (is_array($items)) {
-			foreach ($items as $item) {
-				$more['fromPublisherId'] = $item['publisherId'];
-				$more['fromStreamName'] = $item['streamName'];
-				$assets_credits = self::createRow($communityId, $item['amount'], $reason, null, $userId, $more);
-			}
-		} else {
-			$assets_credits = self::createRow($communityId, $amount, $reason, null, $userId, $more);
-		}
-
-		// decrease credits only after credit rows created
-		$stream->setAttribute('amount', $existing_amount - $amount);
-		$stream->changed();
-
-		$more['amount'] = $amount;
-		$more['toStreamTitle'] = $assets_credits->getAttribute("toStreamTitle");
-		$more['fromStreamTitle'] = $assets_credits->getAttribute("fromStreamTitle");
-		$more['toUserId'] = $toPublisherId;
-		$more['items'] = $items;
-
-		$instructions_json = Q::json_encode(array_merge(
-			array(
-				'app' => Q::app(),
-				'operation' => '-',
-				'reason' => self::reasonToText($reason, $more)
-			),
-			self::fillInstructions($assets_credits, $more)
-		));
-
-		$text = Q_Text::get('Assets/content');
-		$type = 'Assets/credits/spent';
-		$content = Q::ifset($text, 'messages', $type, 'content', "Spent {{amount}} credits");
-		$stream->post($userId, array(
-			'type' => $type,
-			'content' => $content,
-			'instructions' => $instructions_json
-		));
-	}
 	/**
 	 * Grant credits to a user
 	 * @method grant
@@ -349,24 +250,23 @@ class Assets_Credits extends Base_Assets_Credits
 
 		return true;
 	}
-	
+
 	/**
 	 * Transfer credits, as the logged-in user, to another user
 	 * @method transfer
 	 * @static
-	 * @param {string} $communityId The community managing the credits, pass null for Users::currentCommunity()
+	 * @param {string} $communityId The community managing the credits, pass null for Users::communityId()
 	 * @param {integer} $amount The amount of credits to transfer.
 	 * @param {string} $toUserId The id of the user to whom you will transfer the credits
 	 * @param {string} $reason Identifies the reason for transfer. Can't be null.
 	 * @param {string} [$fromUserId=null] null = logged user
 	 * @param {array} [$more] An array supplying more information
 	 * @param {array} [$more.items] an array of items, each with "publisherId", "streamName" and "amount"
-	 * @param {array} [$more.forcePayment=false] If true and not enough credits, try to charge credits.
-	 *   Also used for forcing payments to happen if amount = 0
-	 * @param {string} [$more.toPublisherId] The publisher of the value-producing stream for which the payment is made
-	 * @param {string} [$more.toStreamName] The name of the stream value-producing for which the payment is made
-	 * @param {string} [$more.fromPublisherId] The publisher of the value-consuming stream on whose behalf the payment is made
-	 * @param {string} [$more.fromStreamName] The name of the value-consuming stream on whose behalf the payment is made
+	 * @param {boolean} [$more.forcePayment=false] If true and not enough credits, try to top up via real money
+	 * @param {string} [$more.toPublisherId]  Stream publisher for which the payment is made
+	 * @param {string} [$more.toStreamName]   Stream name for which the payment is made
+	 * @param {string} [$more.fromPublisherId] Publisher of the consuming stream
+	 * @param {string} [$more.fromStreamName]  Name of the consuming stream
 	 * @return {float} Returns how much was ultimately transferred
 	 */
 	static function transfer($communityId, $amount, $reason, $toUserId, $fromUserId = null, $more = array())
@@ -374,15 +274,16 @@ class Assets_Credits extends Base_Assets_Credits
 		if (!$communityId) {
 			$communityId = Users::communityId();
 		}
+
 		$amount = floatval($amount);
 		if ($amount < 0) {
 			throw new Q_Exception_WrongType(array(
 				'field' => 'amount',
-				'type' => 'positive number'
+				'type'  => 'positive number'
 			));
 		}
 
-		if ($amount == 0 and empty($more['forceTransfer'])) {
+		if ($amount == 0 && empty($more['forceTransfer'])) {
 			return 0;
 		}
 
@@ -390,85 +291,299 @@ class Assets_Credits extends Base_Assets_Credits
 			throw new Q_Exception_RequiredField(array('field' => 'reason'));
 		}
 
-		$fromUserId = $fromUserId ? $fromUserId : Users::loggedInUser(true)->id;
+		$fromUserId = $fromUserId ?: Users::loggedInUser(true)->id;
 
-		if ($toUserId == $fromUserId) {
-			throw new Q_Exception_WrongValue(array('field' => 'fromUserId', 'range' => 'you can\'t transfer to yourself'));
-		}
-
-		$more['amount'] = $amount;
-
-		$payments = Q::ifset($more, "payments", "stripe");
-		$from_stream = self::stream($communityId, $fromUserId, $communityId);
-		$existing_amount = $from_stream->getAttribute('amount');
-		if ($existing_amount < $amount) {
-			// if forcePayment true, try to charge more funds for credits
-			if (Q::ifset($more, "forcePayment", false)) {
-				try {
-					Assets::charge($payments, Assets_Credits::convert($amount, "credits", "USD"));
-				} catch (Exception $e) {
-
-				}
-
-				// if charge success, turn off forcePayment and try again
-				$more["forcePayment"] = false;
-				return self::transfer($communityId, $amount, $reason, $toUserId, $fromUserId, $more);
-			}
-
-			throw new Assets_Exception_NotEnoughCredits(array(
-				'missing' => $amount - $existing_amount
+		if ($toUserId === $fromUserId) {
+			throw new Q_Exception_WrongValue(array(
+				'field' => 'fromUserId',
+				'range' => 'you can\'t transfer to yourself'
 			));
 		}
 
-		$items = Q::ifset($more, "items", null);
-
-		// make sure the amount is consistent
-		self::checkAmount($amount, $items, true);
-
-		if (is_array($items)) {
-			foreach ($items as $item) {
-				$more['fromPublisherId'] = $item['publisherId'];
-				$more['fromStreamName'] = $item['streamName'];
-				$assets_credits = self::createRow($communityId,$item['amount'], $reason, $toUserId, $fromUserId, $more);
-			}
-		} else {
-			$assets_credits = self::createRow($communityId, $amount, $reason, $toUserId, $fromUserId, $more);
+		if (!empty($more['items'])) {
+			self::checkAmount($amount, $more['items'], true);
 		}
 
-		// decrease credits only after credits rows created
-		$from_stream->setAttribute('amount', $existing_amount - $amount);
-		$from_stream->changed();
+		//--------------------------------------------------------------------
+		// 1. Begin TX by locking payer stream
+		//--------------------------------------------------------------------
+		$from_stream = self::stream($communityId, $fromUserId, $communityId);
+		$from_stream->retrieve('*', true, array(
+			'begin' => 'FOR UPDATE', // ONLY BEGIN HERE
+			'rollbackIfMissing' => true
+		));
+		$currentCredits = floatval($from_stream->getAttribute('amount'));
 
-		$instructions = self::fillInstructions($assets_credits, $more);
-		$instructions['app'] = Q::app();
-		$instructions['reason'] = self::reasonToText($reason, $instructions);
-		$instructions['operation'] = '-';
+		//--------------------------------------------------------------------
+		// 2. Insufficient credits → auto top up
+		//--------------------------------------------------------------------
+		if ($currentCredits < $amount) {
+
+			if (empty($more['forcePayment'])) {
+				$from_stream->executeRollback();
+				throw new Assets_Exception_NotEnoughCredits(array(
+					'missing' => $amount - $currentCredits
+				));
+			}
+
+			$missingCredits = $amount - $currentCredits;
+
+			try {
+				Assets::forcePayment($missingCredits, $reason, array(
+					"userId"   => $fromUserId,
+					"currency" => "credits",
+					"payments" => Q::ifset($more, "payments", "stripe"),
+					"metadata" => Q::ifset($more, "metadata", array())
+				));
+			} catch (Exception $e) {
+				$from_stream->executeRollback();
+				throw new Assets_Exception_NotEnoughCredits(array(
+					"missing" => $missingCredits,
+					"error"   => $e->getMessage()
+				));
+			}
+
+			// retry
+			$more["forcePayment"] = false;
+			$from_stream->executeCommit(); 
+			return self::transfer($communityId, $amount, $reason, $toUserId, $fromUserId, $more);
+		}
+
+		//--------------------------------------------------------------------
+		// 3. Lock receiver stream (no second BEGIN)
+		//--------------------------------------------------------------------
+		$to_stream = self::stream($communityId, $toUserId, $communityId, true);
+		$to_stream->retrieve('*', true, array(
+			'rollbackIfMissing' => true   // no 'begin'
+		));
+
+		//--------------------------------------------------------------------
+		// 4. Create ledger row (no COMMIT)
+		//--------------------------------------------------------------------
+		$more["amount"]          = $amount;
+		$more["toUserId"]        = $toUserId;
+		$more["fromStreamTitle"] = null;
+		$more["toStreamTitle"]   = null;
+
+		try {
+
+			$assets_credits = self::createRow(
+				$communityId,
+				$amount,
+				$reason,
+				$toUserId,
+				$fromUserId,
+				$more
+			);
+			$assets_credits->save(false, false);
+
+			//----------------------------------------------------------------
+			// 5. Deduct payer (no commit)
+			//----------------------------------------------------------------
+			$from_stream->setAttribute('amount', $currentCredits - $amount);
+			$from_stream->save(false, false);
+
+			//----------------------------------------------------------------
+			// 6. Increase receiver (SAVE LAST)
+			//    This save() will produce the final Db_Query, and THAT query
+			//    should carry ->commit(), resolving the TX started earlier.
+			//----------------------------------------------------------------
+			$to_stream->setAttribute(
+				'amount',
+				$to_stream->getAttribute('amount') + $amount
+			);
+
+			// attach commit to the receiver's save()
+			$to_stream->save(false, array(
+				'commit' => true  // this will attach COMMIT to this query
+			));
+
+		} catch (Exception $e) {
+			$from_stream->executeRollback();
+			throw $e;
+		}
+
+		//--------------------------------------------------------------------
+		// 7. Post-commit feeds
+		//--------------------------------------------------------------------
 		$text = Q_Text::get('Assets/content');
+		$instructions = self::fillInstructions($assets_credits, $more);
+		$instructions['app']    = Q::app();
+		$instructions['reason'] = self::reasonToText($reason, $instructions);
+
+		// Sender feed
+		$instructions['operation'] = '-';
 		$type = 'Assets/credits/sent';
 		$content = Q::ifset($text, 'messages', $type, 'content', "Sent {{amount}} credits");
+
 		$from_stream->post($communityId, array(
-			'type' => $type,
-			'content' => Q::interpolate($content, $instructions),
+			'type'         => $type,
+			'content'      => Q::interpolate($content, $instructions),
 			'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
 		));
-		
-		// TODO: add journaling system
-		// Because if the following fails, then someone will lose credits
-		// without the other person getting them. For now we will rely on the user complaining.
-		$to_stream = self::stream($communityId, $toUserId, $communityId, true);
-		$to_stream->setAttribute('amount', $to_stream->getAttribute('amount') + $amount);
-		$to_stream->changed();
+
+		// Receiver feed
 		$instructions['operation'] = '+';
-		$text = Q_Text::get('Assets/content');
 		$type = 'Assets/credits/received';
 		$content = Q::ifset($text, 'messages', $type, 'content', "Received {{amount}} credits");
+
 		$to_stream->post($communityId, array(
-			'type' => $type,
-			'content' => Q::interpolate($content, $instructions),
+			'type'         => $type,
+			'content'      => Q::interpolate($content, $instructions),
 			'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
 		));
+
 		return $amount;
 	}
+
+	/**
+	 * Spend credits from the logged-in user on a value-producing stream.
+	 * This supports automatic top-ups (real money) via forcePayment(),
+	 * itemized spending, and the standard Qbix credit accounting model.
+	 *
+	 * @method spend
+	 * @static
+	 * @param {string|null} $communityId Community managing these credits.
+	 * @param {float} $amountCredits Amount of credits to spend.
+	 * @param {string} $reason Semantic reason for the spend.
+	 * @param {string} $fromUserId User spending the credits.
+	 * @param {array} [$options] Extra metadata:
+	 *     @param {boolean} [$options.forcePayment=false]
+	 *         If true and user lacks credits, auto top-up via real money.
+	 *     @param {string} [$options.payments="stripe"]
+	 *         Payment gateway key.
+	 *     @param {string} [$options.toPublisherId]
+	 *     @param {string} [$options.toStreamName]
+	 *     @param {array}  [$options.items] Itemized spend: each {publisherId, streamName, amount}
+	 *     @param {array}  [$options.metadata] Metadata passed to payment gateway.
+	 *
+	 * @throws Assets_Exception_NotEnoughCredits
+	 * @return float Actual credits spent.
+	 */
+	static function spend($communityId, $amountCredits, $reason, $fromUserId, $options = array())
+	{
+		// Normalize community
+		if (!$communityId) {
+			$communityId = Users::communityId();
+		}
+
+		// Validate reason
+		if (!$reason) {
+			throw new Q_Exception_RequiredField(array("field" => "reason"));
+		}
+
+		// Validate items
+		$items = isset($options["items"]) ? $options["items"] : null;
+		if ($items) {
+			self::checkAmount($amountCredits, $items, true);
+		}
+
+		//--------------------------------------------------------------------
+		// 1. Begin TX by locking only the payer balance stream
+		//--------------------------------------------------------------------
+		$fromStream = Assets::stream($communityId, $fromUserId, $communityId);
+		$fromStream->retrieve('*', true, array(
+			'begin' => 'FOR UPDATE',    // SINGLE TX BEGIN
+			'rollbackIfMissing' => true
+		));
+		$currentCredits = floatval($fromStream->getAttribute("amount"));
+
+		$force   = isset($options["forcePayment"]) ? $options["forcePayment"] : false;
+		$gateway = isset($options["payments"]) ? $options["payments"] : "stripe";
+
+		//--------------------------------------------------------------------
+		// 2. Auto-top-up if insufficient credits
+		//--------------------------------------------------------------------
+		if ($currentCredits < $amountCredits) {
+
+			if (!$force) {
+				$fromStream->executeRollback();
+				throw new Assets_Exception_NotEnoughCredits(array(
+					"missing" => $amountCredits - $currentCredits
+				));
+			}
+
+			$missing = $amountCredits - $currentCredits;
+
+			try {
+				Assets::forcePayment($missing, $reason, array(
+					"userId"   => $fromUserId,
+					"currency" => "credits",
+					"payments" => $gateway,
+					"metadata" => isset($options["metadata"]) ? $options["metadata"] : array()
+				));
+			} catch (Exception $e) {
+				$fromStream->executeRollback();
+				throw new Assets_Exception_NotEnoughCredits(array(
+					"missing" => $missing,
+					"error"   => $e->getMessage()
+				));
+			}
+
+			// retry spend, after top-up
+			$options["forcePayment"] = false;
+			$fromStream->executeCommit();
+			return self::spend($communityId, $amountCredits, $reason, $fromUserId, $options);
+		}
+
+		//--------------------------------------------------------------------
+		// 3. Create ledger row (no commit)
+		//--------------------------------------------------------------------
+		$more = $options;
+		$more["amount"]          = $amountCredits;
+		$more["fromStreamTitle"] = null;
+		$more["toStreamTitle"]   = null;
+
+		try {
+
+			$assets_credits = self::createRow(
+				$communityId,
+				$amountCredits,
+				$reason,
+				null,          // spend() has no toUserId
+				$fromUserId,
+				$more
+			);
+			$assets_credits->save(false, false);
+
+			//----------------------------------------------------------------
+			// 4. Deduct payer credits (no commit)
+			//----------------------------------------------------------------
+			$fromStream->setAttribute("amount", $currentCredits - $amountCredits);
+
+			// FINAL SAVE → attach COMMIT here
+			$fromStream->save(false, array(
+				'commit' => true   // triggers DB-level COMMIT for the entire TX
+			));
+
+		} catch (Exception $e) {
+
+			$fromStream->executeRollback();
+			throw $e;
+		}
+
+		//--------------------------------------------------------------------
+		// 5. Post-commit feeds (side-effects only)
+		//--------------------------------------------------------------------
+		$text = Q_Text::get("Assets/content");
+		$instructions = self::fillInstructions($assets_credits, $more);
+		$instructions["app"]       = Q::app();
+		$instructions["reason"]    = self::reasonToText($reason, $instructions);
+		$instructions["operation"] = "-";
+
+		$type = "Assets/credits/spent";
+		$content = Q::ifset($text, "messages", $type, "content", "Spent {{amount}} credits");
+
+		$fromStream->post($communityId, array(
+			"type"         => $type,
+			"content"      => Q::interpolate($content, $instructions),
+			"instructions" => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
+		));
+
+		return $amountCredits;
+	}
+
+
 	/**
 	 * Fill message instructions with needed info
 	 * @method fillInstructions
@@ -578,21 +693,27 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @method convert
 	 * @static
 	 * @param {number} $amount
-	 * @param {string} $fromCurrency
-	 * @param {string} $toCurrency
+	 * @param {string} [$fromCurrency="credits"]
+	 * @param {string} [$toCurrency="credits"]
 	 * @return {float}
 	 */
-	static function convert($amount, $fromCurrency, $toCurrency)
+	static function convert($amount, $fromCurrency=null, $toCurrency=null)
 	{
 		$amount = floatval($amount);
+		if (!$fromCurrency) {
+			$fromCurrency = 'credits';
+		}
+		if (!$toCurrency) {
+			$toCurrency = 'credits';
+		}
 		if ($fromCurrency == $toCurrency) {
 			return (float)$amount;
-		} elseif (!$fromCurrency or $fromCurrency == "credits") {
+		} elseif ($fromCurrency == "credits") {
 			$rate = Q_Config::expect('Assets', 'credits', 'exchange', $toCurrency);
-			$amount = (float)$amount / $rate;
-		} elseif (!$toCurrency or $toCurrency == "credits") {
-			$rate = Q_Config::expect('Assets', 'credits', 'exchange', $fromCurrency);
 			$amount = (float)$amount * $rate;
+		} elseif ($toCurrency == "credits") {
+			$rate = Q_Config::expect('Assets', 'credits', 'exchange', $fromCurrency);
+			$amount = (float)$amount / $rate;
 		} else {
 			throw new Assets_Exception_Convert(compact('fromCurrency', 'toCurrency'));
 		}
@@ -681,14 +802,14 @@ class Assets_Credits extends Base_Assets_Credits
 	}
 
 	/**
-	 * Pay bonus to user if user buys a lot of credits
-	 * @method payBonus
+	 * Award bonus credits to user if user buys a lot of credits at once
+	 * @method award
 	 * @static
 	 * @param {string} $communityId The community issuing the credits, pass null for Users::currentCommunity()
 	 * @param {string|number} $amount Amount of credits to pay bonus from
 	 * @param {string} [$userId] User id to pay bonus. If empty - logged in user.
 	 */
-	static function payBonus ($communityId, $amount, $userId=null) {
+	static function awardBonus ($communityId, $amount, $userId=null) {
 		if (!$communityId) {
 			$communityId = Users::communityId();
 		}
