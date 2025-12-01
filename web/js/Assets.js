@@ -674,7 +674,7 @@ Q.onInit.add(function () {
 			return console.warn("Assets/text: " + msg);
 		}
 
-		Q.text.Assets = text;
+		Q.text.Assets = Q.Text.collection[Q.Text.language]['Assets/content'];
 	});
 
 	Q.extend(Q.Users.Web3.chains, Q.Assets.Web3.chains);
