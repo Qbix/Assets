@@ -66,7 +66,7 @@ Q.exports(function(){
 
                     Q.Assets.Payments.stripe({
                         amount: amount,
-                        currency: currency,
+                        currency: options.currency,
                         metadata: options.metadata
                     }, function(err, data) {
                         if (err) {

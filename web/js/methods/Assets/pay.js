@@ -70,7 +70,7 @@ Q.exports(function (Assets, priv) {
 
 				Q.Assets.Credits.buy({
 					missing: true,
-					amount: details.needCredits * rate,
+					amount: details.needCredits / rate,
 					metadata: metadata,
 					onSuccess: function () {
 						// retry after buying credits
