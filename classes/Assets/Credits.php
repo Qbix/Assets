@@ -481,7 +481,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------------
 		// 1. Begin TX by locking only the payer balance stream
 		//--------------------------------------------------------------------
-		$fromStream = Assets::stream($communityId, $fromUserId, $communityId);
+		$fromStream = Assets_Credits::stream($communityId, $fromUserId, $communityId);
 		$fromStream->retrieve('*', true, array(
 			'begin' => 'FOR UPDATE',    // SINGLE TX BEGIN
 			'rollbackIfMissing' => true

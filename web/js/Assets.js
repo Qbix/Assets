@@ -54,7 +54,11 @@ var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 	setCreditsBadge: function () {
 		var config = Assets.creditsBadge;
 		if (Q.isEmpty(config)) {
-			return console.info("Assets.setCreditsBadge: if you want credits badge, please define object Q.Assets.creditsBadge");
+			if (!Assets.setCreditsBadge.informed) {
+				Assets.setCreditsBadge.informed = true;
+				console.info("Assets.setCreditsBadge: if you want credits badge, please define object Q.Assets.creditsBadge");
+			}
+			return;
 		}
 		var element = config.$element ? config.$element[0] : (config.element || document.querySelector('.Users_loggedIn #dashboard_user .Users_avatar_icon'));
 		var ds = document.getElementById('dashboard_slot');
