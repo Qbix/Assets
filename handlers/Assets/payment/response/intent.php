@@ -22,7 +22,9 @@
  *         "BoughtCredits": {
  *           "withoutIntentToken": {
  *             "min": 1,
- *             "max": 1000
+ *             "max": 1000,
+ *             "currencies": ["usd"],
+ *             "gateways": ["stripe"]
  *           }
  *         }
  *       }
@@ -32,12 +34,13 @@
  * Meaning:
  *   • If "withoutIntentToken" exists, token is OPTIONAL
  *   • Amount must be within min/max
- *   • Amount/currency/gateway are taken from client request (trusted small range)
+ *   • Currency must be in the allowed list
+ *   • Gateway must be in the allowed list
  *
  * Otherwise:
  *   • Token IS REQUIRED
  *   • Amount/currency/gateway/userId *MUST* match instructions stored in Users_Intent
- *   • ANY mismatch == Q_Exception_InvalidInput
+ *   • ANY mismatch is silently overridden to match intent
  * ---------------------------------------------------------------------------
  */
 function Assets_payment_response_intent($options)
@@ -52,11 +55,13 @@ function Assets_payment_response_intent($options)
 	 *   Check whether tokenless mode is allowed for this reason
 	 * ----------------------------------------------------------------------
 	 */
-	$config = Q_Config::get('Assets', 'payments', 'reasons', $reason, false);
+	$config       = Q_Config::get('Assets', 'payments', 'reasons', $reason, false);
 	$tokenlessCfg = Q::ifset($config, 'withoutIntentToken', null);
 
 	$tokenlessAllowed = false;
-	$requestedAmount = floatval(Q::ifset($options, 'amount', 0));
+	$requestedAmount  = floatval(Q::ifset($options, 'amount', 0));
+	$requestedCurrency = strtolower(Q::ifset($options, 'currency', 'usd'));
+	$requestedGateway  = Q::ifset($options, 'payments', 'stripe');
 
 	if ($tokenlessCfg) {
 
@@ -66,13 +71,29 @@ function Assets_payment_response_intent($options)
 
 		if ($min !== null && $requestedAmount < $min) {
 			throw new Q_Exception_FailedValidation(array(
-				'message' => "Amount must be ≥ $min for reason '$reason'"
+				'message' => "Amount must be >= $min for reason '$reason'"
 			));
 		}
 
 		if ($max !== null && $requestedAmount > $max) {
 			throw new Q_Exception_FailedValidation(array(
-				'message' => "Amount must be ≤ $max for reason '$reason'"
+				'message' => "Amount must be <= $max for reason '$reason'"
+			));
+		}
+
+		// Currency whitelist
+		$allowedCurrencies = Q::ifset($tokenlessCfg, 'currencies', array('usd'));
+		if (!in_array($requestedCurrency, $allowedCurrencies)) {
+			throw new Q_Exception_FailedValidation(array(
+				'message' => "Unsupported currency '$requestedCurrency' for reason '$reason'"
+			));
+		}
+
+		// Gateway whitelist
+		$allowedGateways = Q::ifset($tokenlessCfg, 'gateways', array('stripe'));
+		if (!in_array($requestedGateway, $allowedGateways)) {
+			throw new Q_Exception_FailedValidation(array(
+				'message' => "Unsupported payment gateway '$requestedGateway' for reason '$reason'"
 			));
 		}
 
@@ -88,8 +109,8 @@ function Assets_payment_response_intent($options)
 		Q_Valid::requireFields(
 			array('intentToken'),
 			$options,
-			true,  // throwIfMissing
-			true   // emptyMeansMissing
+			true,
+			true
 		);
 	}
 
@@ -101,7 +122,6 @@ function Assets_payment_response_intent($options)
 	$intent = null;
 	if (!$tokenlessAllowed) {
 
-		// Load Users_Intent (server-side verified token)
 		$intent = Users_Intent::fromToken($options['intentToken']);
 		if (!$intent || !$intent->isValid()) {
 			throw new Q_Exception_FailedValidation(array(
@@ -109,7 +129,6 @@ function Assets_payment_response_intent($options)
 			));
 		}
 
-		// Prevent re-use of completed intents
 		if (!empty($intent->completedTime)) {
 			throw new Q_Exception_FailedValidation(array(
 				'message' => 'Intent already completed'
@@ -124,17 +143,17 @@ function Assets_payment_response_intent($options)
 	 */
 	if ($tokenlessAllowed) {
 
-		// TRUSTED because range-limited (min/max)
-		$amount   = $requestedAmount;
-		$currency = Q::ifset($options, 'currency', 'usd');
-		$gateway  = Q::ifset($options, 'payments', 'stripe');
-		$userIdIntent = Users::loggedInUserId();
+		// TRUSTED because range-limited and currency/gateway whitelisted
+		$amount        = $requestedAmount;
+		$currency      = $requestedCurrency;
+		$gateway       = $requestedGateway;
+		$userIdIntent  = Users::loggedInUserId();
 
 	} else {
 
 		$instr = $intent->getAllInstructions();
 
-		// These MUST come only from server-stored intent instructions
+		// These MUST come from server-stored intent instructions
 		$amount        = isset($instr['amount'])   ? $instr['amount']   : null;
 		$reason        = isset($instr['reason'])   ? $instr['reason']   : null;
 		$currency      = isset($instr['currency']) ? $instr['currency'] : 'usd';
@@ -145,7 +164,6 @@ function Assets_payment_response_intent($options)
 		 * ------------------------------------------------------------------
 		 *   INVALID-INPUT PROTECTION
 		 *   If client tampered with ANY of these, SILENTLY OVERRIDE
-		 *   (instead of throwing)
 		 * ------------------------------------------------------------------
 		 */
 		if (array_key_exists('amount', $options)
@@ -190,7 +208,6 @@ function Assets_payment_response_intent($options)
 		}
 	}
 
-	// Always override currency from authoritative data
 	$options['currency'] = $currency;
 
 	// Prepare metadata for Stripe
@@ -198,14 +215,13 @@ function Assets_payment_response_intent($options)
 	$userId = $user ? $user->id : '';
 
 	$metadata = array();
-	$metadata['token']       = uniqid();
-	$metadata['app']         = Q::app();
-	$metadata['userId']      = $userId;
-	$metadata['sessionId']   = Q_Session::id();
+	$metadata['token']     = uniqid();
+	$metadata['app']       = Q::app();
+	$metadata['userId']    = $userId;
+	$metadata['sessionId'] = Q_Session::id();
 
-	// Only attach intentToken in intent mode
 	if (!$tokenlessAllowed && $intent) {
-		$metadata['intentToken'] = $intent->token; // ← Key binding to webhook verification
+		$metadata['intentToken'] = $intent->token;
 	}
 
 	if ($avatar = Streams_Avatar::fetch($userId, $userId)) {
@@ -272,7 +288,6 @@ function Assets_payment_response_intent($options)
 		$intent_type = 'payment';
 	}
 
-	// Return client secret to payments procesor
 	return array(
 		'client_secret' => $intentObj->client_secret,
 		'token'         => $metadata['token'],
