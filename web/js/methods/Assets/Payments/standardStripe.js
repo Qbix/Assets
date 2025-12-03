@@ -32,6 +32,9 @@ Q.exports(function(Assets, priv){
             });
         }
 
+        var onMessage;
+        var onMessageToken;
+
         var _renderTemplate = function (dialog) {
 
             // CHANGED: paymentIntent -> intent (for both PI and SI)
@@ -42,7 +45,7 @@ Q.exports(function(Assets, priv){
                 var clientSecret  = intentData.client_secret;
                 var intentType    = intentData.intent_type;   // "payment" or "setup"
 
-                var amount = parseInt(options.amount);
+                var amount = Math.round(options.amount * 100) / 100;
                 var $payButton = $("button[name=pay]", dialog);
 
                 // same button label
@@ -68,7 +71,9 @@ Q.exports(function(Assets, priv){
                     // For PaymentIntent ONLY. SetupIntent does not support paymentRequest flow.
                     if (intentType === "setup") {
                         ev.complete('fail');
-                        Q.alert("SetupIntent does not support Payment Request API");
+                        var err = "SetupIntent does not support Payment Request API";
+                        Q.alert(err);
+                        Q.handle(callback, Q.Assets, [err]);
                         return;
                     }
 
@@ -81,7 +86,9 @@ Q.exports(function(Assets, priv){
                         if (confirmResult.error) {
                             ev.complete('fail');
                             console.error(confirmResult.error);
+                            var err = confirmResult.error;
                             Q.alert("Payment failed");
+                            Q.handle(callback, Q.Assets, [err]);
                             return;
                         }
 
@@ -94,8 +101,10 @@ Q.exports(function(Assets, priv){
                             Q.Assets.Payments.stripeObject.confirmCardPayment(clientSecret).then(function(result) {
                                 if (result.error) {
                                     Q.alert(result.error.message);
+                                    Q.handle(callback, Q.Assets, [result.error]);
                                 } else {
                                     // payment succeeded
+                                    Q.handle(callback, Q.Assets, [null]);
                                 }
                             });
                         } else {
@@ -157,11 +166,11 @@ Q.exports(function(Assets, priv){
                             Q.Dialogs.pop();
 
                             if (response.error) {
+                                var err = "An unexpected error occurred.";
                                 if (response.error.type === "card_error" || response.error.type === "validation_error") {
                                     Q.alert(response.error.message);
-                                } else {
-                                    Q.alert("An unexpected error occurred.");
                                 }
+                                Q.handle(callback, Q.Assets, [err]);
                                 return;
                             }
                             // SetupIntent succeeded. Webhook will finalize storage.
@@ -178,14 +187,15 @@ Q.exports(function(Assets, priv){
                             Q.Dialogs.pop();
 
                             if (response.error) {
+                                var err = "An unexpected error occurred.";
                                 if (response.error.type === "card_error" || response.error.type === "validation_error") {
                                     Q.alert(response.error.message);
-                                } else {
-                                    Q.alert("An unexpected error occurred.");
                                 }
+                                Q.handle(callback, Q.Assets, [err]);
                                 return;
                             }
                             // Payment succeeded
+                            Q.handle(callback, Q.Assets, [null]);
                         });
                     }
                 });
@@ -222,28 +232,30 @@ Q.exports(function(Assets, priv){
                 var token        = intentSlot.token;
 
                 if (!clientSecret) {
-                    Q.handle(callback, null, [true]);
+                    Q.handle(callback, Q.Assets, [true]);
                     Q.Dialogs.pop();
                     throw new Q.Exception('clientSecret empty');
                 }
                 if (!token) {
-                    Q.handle(callback, null, [true]);
+                    Q.handle(callback, Q.Assets, [true]);
                     Q.Dialogs.pop();
                     throw new Q.Exception('token empty');
                 }
 
                 // listen Assets/credits stream for message
-                Q.Streams.Stream.onMessage(
+                onMessage = Q.Streams.Stream.onMessage(
                     Q.Users.currentCommunityId,
                     'Assets/credits/' + Q.Users.loggedInUser.id,
                     'Assets/credits/bought'
-                ).set(function(message) {
+                );
+                onMessage.set(function(message) {
                     if (token !== message.getInstruction('token')) {
+                        Q.handle(callback, Q.Assets, ["Bought, but wrong token"]);
                         return;
                     }
-
-                    Q.handle(callback, null, [null]);
+                    Q.handle(callback, Q.Assets, [null]);
                 }, token);
+                onMessageToken = token;
 
                 // pipe this unified intent
                 pipeDialog.fill("intent")({
@@ -260,13 +272,14 @@ Q.exports(function(Assets, priv){
         if (options.preloadElement) {
             return Q.Template.render("Assets/stripe/payment", {}, function (err, html) {
                 if (err) {
+                    Q.handle(callback, Q.Assets, [err]);
                     return;
                 }
 
                 var dialogElement = $("<div>")[0];
                 Q.replace(dialogElement, html);
                 _renderTemplate(dialogElement);
-                Q.handle(callback, null, [null, dialogElement]);
+                Q.handle(callback, Q.Assets, [null, dialogElement]);
             });
         }
 
@@ -277,7 +290,10 @@ Q.exports(function(Assets, priv){
             onClose: function () {
                 paymentRequestButton && paymentRequestButton.destroy();
                 paymentElement && paymentElement.destroy();
-                Q.handle(callback, null, [true]);
+                if (onMessage && onMessageToken) {
+                    onMessage.remove(onMessageToken);
+                }
+                Q.handle(callback, Q.Assets, [true]);
             }
         };
         if (options.preloadedElement) {
