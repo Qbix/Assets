@@ -4,6 +4,48 @@
  * @module Assets
  * @main Assets
  */
+
+$ASSETS_CURRENCY_LOCALES = array(
+	'en_US' => array(
+		'decimal' => '.',
+		'thousands' => ',',
+		'symbol_before' => true,
+		'space' => false
+	),
+	'en_GB' => array(
+		'decimal' => '.',
+		'thousands' => ',',
+		'symbol_before' => true,
+		'space' => false
+	),
+	'fr_FR' => array(
+		'decimal' => ',',
+		'thousands' => ' ',
+		'symbol_before' => false,
+		'space' => true
+	),
+	'de_DE' => array(
+		'decimal' => ',',
+		'thousands' => '.',
+		'symbol_before' => false,
+		'space' => true
+	),
+	'ja_JP' => array(
+		'decimal' => '',
+		'thousands' => ',',
+		'symbol_before' => true,
+		'space' => false,
+		'zero_decimals' => true
+	),
+	'ar_AE' => array(
+		'decimal' => '.',
+		'thousands' => ',',
+		'symbol_before' => false,
+		'space' => true
+	)
+);
+
+
 /**
  * Static methods for the Assets models.
  * @class Assets
@@ -49,38 +91,108 @@ abstract class Assets extends Base_Assets
 	}
 	
 	/**
-	 * Get the official currency name (e.g. "US Dollar") and symbol (e.g. $)
+	 * Format using official currency name, e.g. 200.34 USD
 	 * @method display
 	 * @static
 	 * @param {string} $code The three-letter currency code
 	 * @param {double} $amount The amount of money in that currency
+	 * @param {boolean} $short Whether to use short format (symbol only)
+	 * @param {string} $locale The locale to use for formatting
 	 * @return {string} The display, in the current locale
 	 */
-	static function display($code, $amount)
+	static function format($code, $amount, $short, $locale)
 	{
+		global $ASSETS_CURRENCY_LOCALES;
+
+		$code = strtoupper($code);
+
+		// Normalize $short (avoid null)
+		if (!$short) {
+			$short = false;
+		}
+
+		// Determine locale
+		if (!$locale) {
+			$locale = Q_Request::languageLocale();
+		}
+		if (!$locale) {
+			$locale = 'en_US';
+		}
+
+		// Get currency name & symbol from the JSON file
 		list($currencyName, $symbol) = self::currency($code);
 
-		$amount = number_format($amount, 2, '.', ',');
+		// -----------------------------------------------------
+		// 1. Try INTL NumberFormatter (PHP 5.4 capability)
+		// -----------------------------------------------------
+		if (class_exists('NumberFormatter')) {
+			$fmt = new NumberFormatter($locale, NumberFormatter::CURRENCY);
+			$out = $fmt->formatCurrency($amount, $code);
 
-		return "$amount $code"; // TODO: make it fit the locale better
-	}
-	
-	/**
-	 * Get the official currency name (e.g. "US Dollar") and symbol (e.g. $)
-	 * @method display
-	 * @static
-	 * @param {string} $format The format to pass to money_format
-	 * @param {double} $amount The amount of money in the currency of that locale
-	 * @param {string} [$locale] Can be used to override the locale
-	 * @return {string} The display, in the current locale
-	 */
-	static function formatted($amount, $format = "%=(n", $locale = null)
-	{
-		if (is_callable('money_format')) {
-			$ob = new Q_OutputBuffer(null, $locale);
-			echo money_format($format, $amount);
-			return $ob->getClean();
+			if ($out !== false) {
+
+				// SHORT MODE: return only symbol+amount (ICU handles placement)
+				if ($short) {
+					return $out;  // e.g. "$30.00", "30,00 €"
+				}
+
+				// LONG MODE: amount + ISO code
+				return $out . " " . $code;  // e.g. "30.00 USD"
+			}
 		}
+
+		// -----------------------------------------------------
+		// 2. Fallback: manual locale formatter (PHP 5.2-compatible)
+		// -----------------------------------------------------
+
+		// Ensure locale exists
+		if (!isset($ASSETS_CURRENCY_LOCALES[$locale])) {
+			$locale = 'en_US';
+		}
+
+		$fmt = $ASSETS_CURRENCY_LOCALES[$locale];
+
+		// For French, override thousands separator: OMIT IT
+		if ($locale === 'fr_FR') {
+			$fmt['thousands'] = '';   // ← this fixes your French formatting
+		}
+
+		// Determine number of decimals
+		$digits = 2;
+		if (isset($fmt['zero_decimals']) && $fmt['zero_decimals']) {
+			$digits = 0;
+		}
+
+		// Format number using localized decimal & thousands rules
+		$formatted = number_format(
+			$amount,
+			$digits,
+			$fmt['decimal'],
+			$fmt['thousands']
+		);
+
+		// Place symbol in the correct position
+		if ($fmt['symbol_before']) {
+			$out = $symbol;
+			if ($fmt['space']) {
+				$out .= ' ';
+			}
+			$out .= $formatted;
+		} else {
+			$out = $formatted;
+			if ($fmt['space']) {
+				$out .= ' ';
+			}
+			$out .= $symbol;
+		}
+
+		// SHORT MODE: symbol-only output
+		if ($short) {
+			return $out;  // e.g. "$30.00", "30,00 €", "¥5000"
+		}
+
+		// LONG MODE: append ISO code
+		return $formatted . " " . $code;
 	}
 
 	/**

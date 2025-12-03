@@ -39,7 +39,7 @@ function Assets_after_Assets_charge($params)
 	$publisher = Users_User::fetch($publisherId, true);
 
 	list($currencyName, $symbol) = Assets::currency($currency);
-	$displayAmount = Assets::display($currency, $amount);
+	$displayAmount = Assets::format($currency, $amount, true);
 	$communityId = Users::communityId();
 	$communityName = Users::communityName();
 	$communitySuffix = Users::communitySuffix();
