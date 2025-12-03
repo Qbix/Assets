@@ -74,6 +74,7 @@ Q.exports(function (Assets, priv) {
 					missing: true,
 					reason: options.reason,
 					amount: (details.needCredits - details.haveCredits) / rate,
+					intentToken: details.intentToken,
 					metadata: metadata,
 					onSuccess: function () {
 						// retry after buying credits

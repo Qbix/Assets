@@ -10,7 +10,7 @@ Q.exports(function(Assets, priv){
     * @method standardStripe
     * @static
     *  @param {Object} [options] Any additional options to pass to the stripe checkout config, and also:
-    *  @param {Float} options.amount the amount to pay.
+    *  @param {Float} [options.amount] the amount to pay.
     *  @param {String} [options.currency="usd"] the currency to pay in.
     *  @param {String} options.description Payment description.
     *  @param {String} [options.assetsPaymentsDialogClass] to add to dialog classes list
@@ -211,7 +211,8 @@ Q.exports(function(Assets, priv){
                 amount: options.amount,
                 currency: options.currency,
                 metadata: options.metadata,
-                reason: options.reason
+                reason: options.reason,
+                intentToken: options.intentToken
             };
             if (options.authorize) {
                 fields.authorize = 1;

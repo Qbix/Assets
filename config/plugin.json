@@ -111,6 +111,11 @@
 		}
 	},
 	"Users": {
+		"intents": {
+			"actions": {
+				"Assets/charge": true
+			}
+		},
 		"web3": {
 			"contracts": {
 				"Assets/templates/R1/Auction/factory": {
@@ -431,7 +436,12 @@
 				}
 			},
 			"reasons": {
-				"BoughtCredits": true
+				"BoughtCredits": {
+					"withouIntentToken": {
+						"min": 1,
+						"max": 1000
+					}
+				}
 			}
 		},
 		"credits": {

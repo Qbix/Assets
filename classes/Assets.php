@@ -196,113 +196,6 @@ abstract class Assets extends Base_Assets
 	}
 
 	/**
-	 * Makes a one-time charge on a customer account using a payments processor
-	 * @method charge
-	 * @static
-	 * @param {string} $payments The type of payments processor, could be "Authnet" or "Stripe"
-	 * @param {string} $amount specify the amount
-	 * @param {string} [$currency="USD"] set the currency, which will affect the amount
-	 * @param {array} [$options=array()] Any additional options
-	 * @param {string} [$options.chargeId] Payment id to set as id field of Assets_Charge table.
-	 *  If this is defined it means payment already processed (for example from webhook)
-	 *  and hence no need to call $adapter->charge
-	 * @param {Users_User} [$options.user=Users::loggedInUser()] Which user to charge
-	 * @param {string} [$options.communityId] Which community's credits to grant on success
-	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or subscription stream
-	 * @param {string} [$options.reason] Business reason or semantic label.
-	 * @param {string} [$options.description=null] Description for the customer
-	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
-	 * @throws \Stripe\Error\Card
-	 * @throws Assets_Exception_DuplicateTransaction
-	 * @throws Assets_Exception_HeldForReview
-	 * @throws Assets_Exception_ChargeFailed
-	 * @return {Assets_Charge} The saved database row for the charge
-	 */
-	static function charge($payments, $amount, $currency = 'USD', $options = array())
-	{
-		/* normalize currency to uppercase, handle null/empty strings */
-		if (!$currency) {
-			$currency = 'USD';
-		}
-		$currency = strtoupper($currency);
-
-		$user = Q::ifset($options, 'user', Users::loggedInUser(false));
-		$communityId = Q::ifset($options, 'communityId', Users::communityId());
-		$chargeId = Q::ifset($options, 'chargeId', null);
-
-		$className = 'Assets_Payments_' . ucfirst($payments);
-
-		/**
-		 * @event Assets/charge {before}
-		 * @param {Assets_Payments} adapter
-		 * @param {array} options
-		 */
-		Q::event('Assets/charge', @compact(
-			'adapter', 'options', 'payments', 'amount', 'currency'
-		), 'before');
-
-		if ($chargeId) {
-			/* already paid; adapter not needed */
-			$adapter = null;
-			$customerId = Q::ifset($options, 'customerId', null);
-		} else {
-			// create adapter and perform actual charge
-			$adapter = new $className((array)$options);
-			$customerId = $adapter->charge($amount, $currency, $options);
-		}
-
-		// create charge row
-		$charge = new Assets_Charge();
-		$charge->userId = $user->id;
-
-		if ($chargeId) {
-			$charge->id = $chargeId;
-			if ($charge->retrieve()) {
-				// prevent duplicate DB row
-				return $charge;
-			}
-		}
-
-		$charge->description = 'BoughtCredits';
-
-		/* store metadata */
-		$attributes = array(
-			'payments'    => $payments,
-			'customerId'  => $customerId,
-			'amount'      => sprintf('%0.2f', $amount),
-			'currency'    => $currency,
-			'communityId' => $communityId,
-			'credits'     => Assets_Credits::convert($amount, $currency, 'credits')
-		);
-
-		$charge->attributes = Q::json_encode($attributes);
-		$charge->save();
-
-		/**
-		 * Event that occurs after a charge.
-		 * The default handler grants credits to a user.
-		 * @event Assets/charge {after}
-		 * @param {Assets_charge} charge
-		 * @param {Assets_Payments} adapter
-		 * @param {string} currency
-		 * @param {float} amount
-		 * @param {string} communityId
-		 * @param {string} payments
-		 * @param {array} options
-		 */
-		Q::event(
-			'Assets/charge',
-			@compact(
-				'payments', 'amount', 'currency',
-				'user', 'communityId', 'charge', 'options'
-			),
-			'after'
-		);
-
-		return $charge;
-	}
-		
-	/**
 	 * Unified credits payment engine.
 	 * Handles credit spending, transfers, optional auto top-ups, and itemized pays.
 	 *
@@ -337,14 +230,37 @@ abstract class Assets extends Base_Assets
 			);
 		}
 
-		// 1. Convert original currency → credits
-		$needCredits     = Assets_Credits::convert($amount, $currency, "credits");
-		$haveCredits  = Assets_Credits::amount($communityId, $userId);
+		// 1. Convert original currency -> credits
+		$needCredits = Assets_Credits::convert($amount, $currency, "credits");
+		$haveCredits = Assets_Credits::amount($communityId, $userId);
 
 		// 2. Not enough credits?
 		if ($haveCredits < $needCredits) {
 
-			$missingCredits = $needCredits - $haveCredits;
+			$credits = $needCredits - $haveCredits;
+
+			// Amount in real currency (ex: USD)
+			$amountCurrency = Assets_Credits::convert($credits, "credits", $currency);
+
+			// Create secure Users_Intent instead of Q_Capability
+			$instructions = array(
+				"userId"        => $userId,
+				"communityId"   => $communityId,
+				"credits"       => $credits,
+				"currency"      => $currency,
+				"amount"        => $amountCurrency,
+				"reason"        => $reason,
+				"gateway"       => $gateway,
+				"toPublisherId" => $toPublisher,
+				"toStreamName"  => $toStream,
+				"toUserId"      => $toUser
+			);
+
+			$intent = Users_Intent::newIntent(
+				"Assets/charge",   // action
+				$userId,
+				$instructions
+			);
 
 			if ($force) {
 
@@ -352,22 +268,24 @@ abstract class Assets extends Base_Assets
 				// passing currency="credits" so autoCharge resolves real currency internally.
 				try {
 					Assets::autoCharge(
-						$missingCredits,         // amount in credits
+						$credits,         // amount in credits
 						$reason,
 						array(
 							"userId"   => $userId,
-							"currency" => "credits",    // << key change: allow internal conversion
+							"currency" => "credits",    // key change: allow internal conversion
 							"payments" => $gateway,
 							"metadata" => isset($options["metadata"]) ? $options["metadata"] : array()
 						)
 					);
 				} catch (Exception $e) {
+					// SECURITY: return intent token so client can continue securely
 					return array(
 						"success" => false,
 						"details" => array(
-							"haveCredits"     => $haveCredits,
+							"haveCredits" => $haveCredits,
 							"needCredits" => $needCredits,
-							"error"       => $e->getMessage()
+							"error"       => $e->getMessage(),
+							"intentToken" => $intent->token
 						)
 					);
 				}
@@ -377,12 +295,13 @@ abstract class Assets extends Base_Assets
 				return Assets::pay($communityId, $userId, $amount, $reason, $options);
 			}
 
-			// Not enough credits, no auto top-up allowed
+			// Not enough credits, no auto top-up allowed — return intent token
 			return array(
 				"success" => false,
 				"details" => array(
 					"haveCredits" => $haveCredits,
-					"needCredits" => $needCredits
+					"needCredits" => $needCredits,
+					"intentToken" => $intent->token
 				)
 			);
 		}
@@ -411,7 +330,7 @@ abstract class Assets extends Base_Assets
 		return array(
 			"success" => true,
 			"details" => array(
-				"haveCredits"     => $haveCredits,
+				"haveCredits" => $haveCredits,
 				"needCredits" => $needCredits
 			)
 		);

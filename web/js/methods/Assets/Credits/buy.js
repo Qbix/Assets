@@ -23,7 +23,7 @@ Q.exports(function(){
             templateName = 'Assets/credits/missing';
             title = Q.text.Assets.credits.NeedMoreCredits;
             NotEnoughCredits = Q.text.Assets.credits.NotEnoughCredits.interpolate({
-                amount: options.amount,
+                amount: options.amount.toFixed(2),
                 currency: options.currency
             });
         }
@@ -69,7 +69,8 @@ Q.exports(function(){
                         amount: amount,
                         currency: options.currency,
                         metadata: options.metadata,
-                        reason: options.reason
+                        reason: options.reason,
+                        intentToken: options.intentToken
                     }, function(err, data) {
                         if (err) {
                             return Q.handle(options.onFailure, null, [err]);

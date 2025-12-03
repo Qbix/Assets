@@ -5,7 +5,7 @@ Q.exports(function(Assets, priv){
     * @method stripe
     * @static
     *  @param {Object} [options] Any additional options to pass to the stripe checkout config, and also:
-    *  @param {Number} options.amount the amount to pay.
+    *  @param {Number} [options.amount] the amount to pay.
     *  @param {String} [options.currency="usd"] the currency to pay in.
     *  @param {String} [options.description] Operation code which detailed text can be fetch from lang json (Assets/content/payments).
     *  @param {boolean} [options.reason] Specify a reason for this payment, from Assets/payments/reasons config
