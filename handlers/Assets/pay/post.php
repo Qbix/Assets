@@ -50,7 +50,7 @@ function Assets_pay_post($params = array())
 	// Itemized amounts
 	$items = Q::ifset($req, "items", null);
 
-	$details = Assets::pay(
+	$result = Assets::pay(
 		Q::ifset($params, 'communityId', null), // communityId or null
 		$userId,                                // actor
 		$amount,                                // amount in original currency
@@ -66,6 +66,6 @@ function Assets_pay_post($params = array())
 		)
 	);
 
-	Q_response::setSlot('success', $details['success']);
-	Q_response::setSlot('details', $details['details']);
+	Q_response::setSlot('success', $result['success']);
+	Q_response::setSlot('details', $result['details']);
 }

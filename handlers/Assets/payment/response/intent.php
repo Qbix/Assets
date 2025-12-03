@@ -27,13 +27,19 @@ function Assets_payment_response_intent($options)
 	// Use provided currency or default to USD
 	$options['currency'] = Q::ifset($options, 'currency', 'usd');
 
+	$userId = $user ? $user->id : '';
+
 	// Prepare metadata for Stripe
 	$user = Users::loggedInUser();
 	$metadata = array();
 	$metadata['token'] = uniqid();
 	$metadata['app'] = Q::app();
-	$metadata['userId'] = $user ? $user->id : '';
+	$metadata['userId'] = $userId;
 	$metadata['sessionId'] = Q_Session::id();
+	if ($avatar = Streams_Avatar::fetch($userId, $userId)) {
+		$metadata['firstName'] = $avatar->firstName;
+		$metadata['lastName'] = $avatar->lastName;
+	}
 	if (!empty($options['reason'])) {
 		if (!Q_Config::get('Assets', 'payments', 'reasons', $options['reason'], null)) {
 			throw new Q_Exception_WrongValue(array(

@@ -17,6 +17,8 @@ Q.exports(function (Assets, priv) {
 	 */
 	return function pay(options) {
 
+		options = Q.extend(Q.Assets.pay.options, options);
+
 		// Allow passing Streams_Stream directly
 		var stream = options.toStream;
 		if (Q.Streams && Q.Streams.isStream && Q.Streams.isStream(stream)) {
@@ -70,7 +72,8 @@ Q.exports(function (Assets, priv) {
 
 				Q.Assets.Credits.buy({
 					missing: true,
-					amount: details.needCredits / rate,
+					reason: options.reason,
+					amount: (details.needCredits - details.haveCredits) / rate,
 					metadata: metadata,
 					onSuccess: function () {
 						// retry after buying credits

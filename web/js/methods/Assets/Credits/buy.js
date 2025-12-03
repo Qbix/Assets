@@ -17,12 +17,12 @@ Q.exports(function(){
             missing: false
         }, options);
         var title = Q.text.Assets.credits.BuyCredits;
-        var YouMissingCredits = null;
+        var NotEnoughCredits = null;
         var templateName = 'Assets/credits/buy';
         if (options.missing) {
             templateName = 'Assets/credits/missing';
-            title = Q.text.Assets.credits.MissingCredits;
-            YouMissingCredits = Q.text.Assets.credits.YouMissingCredits.interpolate({
+            title = Q.text.Assets.credits.NeedMoreCredits;
+            NotEnoughCredits = Q.text.Assets.credits.NotEnoughCredits.interpolate({
                 amount: options.amount,
                 currency: options.currency
             });
@@ -49,7 +49,7 @@ Q.exports(function(){
                 name: templateName,
                 fields: {
                     amount: options.amount,
-                    YouMissingCredits: YouMissingCredits,
+                    NotEnoughCredits: NotEnoughCredits,
                     bonuses: bonuses,
                     texts: Q.text.Assets.credits
                 }
@@ -57,7 +57,8 @@ Q.exports(function(){
             onActivate: function (dialog) {
                 $("button[name=buy]", dialog).on(Q.Pointer.fastclick, function () {
                     paymentStarted = true;
-                    var amount = parseInt($("input[name=amount]", dialog).val());
+                    var amount = $("input[name=amount]", dialog).val();
+                    amount = Math.round(amount * 100) / 100;
                     if (!amount) {
                         return Q.alert(Q.text.Assets.credits.ErrorInvalidAmount);
                     }
@@ -67,7 +68,8 @@ Q.exports(function(){
                     Q.Assets.Payments.stripe({
                         amount: amount,
                         currency: options.currency,
-                        metadata: options.metadata
+                        metadata: options.metadata,
+                        reason: options.reason
                     }, function(err, data) {
                         if (err) {
                             return Q.handle(options.onFailure, null, [err]);
@@ -86,7 +88,7 @@ Q.exports(function(){
 });
 
 Q.Template.set('Assets/credits/missing',
-    '<div class="Assets_credits_buy_missing">{{YouMissingCredits}}</div>' +
+    '<div class="Assets_credits_buy_missing">{{NotEnoughCredits}}</div>' +
     '<input type="hidden" name="amount" value="{{amount}}">' +
     '<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
 );

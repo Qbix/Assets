@@ -339,12 +339,12 @@ abstract class Assets extends Base_Assets
 
 		// 1. Convert original currency → credits
 		$needCredits     = Assets_Credits::convert($amount, $currency, "credits");
-		$currentCredits  = Assets_Credits::amount($communityId, $userId);
+		$haveCredits  = Assets_Credits::amount($communityId, $userId);
 
 		// 2. Not enough credits?
-		if ($currentCredits < $needCredits) {
+		if ($haveCredits < $needCredits) {
 
-			$missingCredits = $needCredits - $currentCredits;
+			$missingCredits = $needCredits - $haveCredits;
 
 			if ($force) {
 
@@ -365,7 +365,7 @@ abstract class Assets extends Base_Assets
 					return array(
 						"success" => false,
 						"details" => array(
-							"credits"     => $currentCredits,
+							"haveCredits"     => $haveCredits,
 							"needCredits" => $needCredits,
 							"error"       => $e->getMessage()
 						)
@@ -381,7 +381,7 @@ abstract class Assets extends Base_Assets
 			return array(
 				"success" => false,
 				"details" => array(
-					"credits"     => $currentCredits,
+					"haveCredits" => $haveCredits,
 					"needCredits" => $needCredits
 				)
 			);
@@ -411,7 +411,7 @@ abstract class Assets extends Base_Assets
 		return array(
 			"success" => true,
 			"details" => array(
-				"credits"     => $currentCredits,
+				"haveCredits"     => $haveCredits,
 				"needCredits" => $needCredits
 			)
 		);

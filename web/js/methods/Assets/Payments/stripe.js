@@ -9,6 +9,7 @@ Q.exports(function(Assets, priv){
     *  @param {String} [options.currency="usd"] the currency to pay in.
     *  @param {String} [options.description] Operation code which detailed text can be fetch from lang json (Assets/content/payments).
     *  @param {boolean} [options.reason] Specify a reason for this payment, from Assets/payments/reasons config
+    *  @param {boolean} [options.metadata] Specify additional metadata, e.g. what the user is going to be paying for
     *  @param {Function} [callback] The function to call, receives (err, paymentSlot)
     */
     return function stripe(options, callback) {

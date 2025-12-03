@@ -16,6 +16,7 @@ Q.exports(function(Assets, priv){
     *  @param {String} [options.assetsPaymentsDialogClass] to add to dialog classes list
     *  @param {String} [options.authorize] authorize the card to be charged later, always charges 0 now regardles of amount
     *  @param {boolean} [options.reason] Specify a reason for this payment, from Assets/payments/reasons config
+    *  @param {boolean} [options.metadata] Specify additional metadata, e.g. what the user is going to be paying for
     *  @param {Function} [callback]
     */
     return function standardStripe(options, callback) {
@@ -184,8 +185,7 @@ Q.exports(function(Assets, priv){
                             },
                             redirect: 'if_required'
                         }).then(function (response) {
-                            Q.Dialogs.pop();
-
+                            $this.removeClass("Q_working");
                             if (response.error) {
                                 var err = "An unexpected error occurred.";
                                 if (response.error.type === "card_error" || response.error.type === "validation_error") {
