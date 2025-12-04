@@ -168,7 +168,8 @@ class Assets_Credits extends Base_Assets_Credits
 			if ($throwIfNotEqual) {
 				throw new Q_Exception_WrongValue(array(
 					'field' => 'amount',
-					'range' => $checkSum
+					'range' => $checkSum,
+					'value' => $amount
 				));
 			}
 			return false;
@@ -551,7 +552,7 @@ class Assets_Credits extends Base_Assets_Credits
 			//----------------------------------------------------------------
 			$fromStream->setAttribute("amount", $currentCredits - $amountCredits);
 
-			// FINAL SAVE → attach COMMIT here
+			// FINAL SAVE: attach COMMIT here
 			$fromStream->save(false, array(
 				'commit' => true   // triggers DB-level COMMIT for the entire TX
 			));
@@ -560,6 +561,10 @@ class Assets_Credits extends Base_Assets_Credits
 
 			$fromStream->executeRollback();
 			throw $e;
+		}
+
+		if ($texts = Q_Config::get('Assets', 'credits', 'text', 'load', array())) {
+			Q_Text::get($texts); // to load the overrides
 		}
 
 		//--------------------------------------------------------------------
@@ -593,7 +598,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @return {Array}
 	 */
 	static function fillInstructions ($assetsCredits, $more = array()) {
-		$more['messageId'] = $assetsCredits->id;
+		$more['creditsId'] = $assetsCredits->id;
 		$more['toStreamTitle'] = $assetsCredits->getAttribute("toStreamTitle");
 		$more['fromStreamTitle'] = $assetsCredits->getAttribute("fromStreamTitle");
 		$more['toUserId'] = $assetsCredits->toUserId ? $assetsCredits->toUserId : $assetsCredits->getAttribute("toUserId");

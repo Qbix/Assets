@@ -164,8 +164,6 @@ Q.exports(function(Assets, priv){
                             },
                             redirect: "if_required"
                         }).then(function (response) {
-                            Q.Dialogs.pop();
-
                             if (response.error) {
                                 var err = "An unexpected error occurred.";
                                 if (response.error.type === "card_error" || response.error.type === "validation_error") {
@@ -175,6 +173,7 @@ Q.exports(function(Assets, priv){
                                 return;
                             }
                             // SetupIntent succeeded. Webhook will finalize storage.
+                            Q.Dialogs.pop();
                         });
                     } else {
                         // PaymentIntent flow
@@ -195,6 +194,7 @@ Q.exports(function(Assets, priv){
                                 return;
                             }
                             // Payment succeeded
+                            Q.Dialogs.pop();
                             Q.handle(callback, Q.Assets, [null]);
                         });
                     }

@@ -100,7 +100,7 @@ abstract class Assets extends Base_Assets
 	 * @param {string} $locale The locale to use for formatting
 	 * @return {string} The display, in the current locale
 	 */
-	static function format($code, $amount, $short, $locale)
+	static function format($code, $amount, $short, $locale = null)
 	{
 		global $ASSETS_CURRENCY_LOCALES;
 
@@ -222,6 +222,12 @@ abstract class Assets extends Base_Assets
 		$toUser      = isset($options["toUserId"]) ? $options["toUserId"] : null;
 
 		$items       = isset($options["items"]) ? $options["items"] : null;
+		if (!empty($items)) {
+			foreach ($items as $k => $item) {
+				$options['items'][$k]['amount'] = $items[$k]['amount'] = 
+					Assets_Credits::convert($amount, $currency, "credits");
+			}
+		}
 
 		if (!$reason) {
 			return array(
@@ -405,6 +411,9 @@ abstract class Assets extends Base_Assets
 		}
 
 		$charge->description = 'BoughtCredits';
+		if (!empty($options['reason'])) {
+			$charge->description .= ": "  .$options['reason'];
+		}
 
 		/* store metadata */
 		$attributes = array(

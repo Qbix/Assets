@@ -7,7 +7,7 @@ function Assets_after_Assets_charge($params)
 	$amount = $params['amount'];
 	$currency = $params['currency'];
 	$charge = $params['charge'];
-	$adapter = $params['adapter'];
+	$adapter = Q::ifset($params, 'adapter', null);
 	$options = $params['options'];
 
 	// rate for currency required

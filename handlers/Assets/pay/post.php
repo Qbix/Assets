@@ -45,7 +45,7 @@ function Assets_pay_post($params = array())
 	);
 
 	// Detect user destination
-	$toUserId = Q::ifset($req, "toUserId", null);
+	$toUserId = $toPublisherId ? $toPublisherId : Q::ifset($req, "toUserId", null);
 
 	// Itemized amounts
 	$items = Q::ifset($req, "items", null);
@@ -58,7 +58,7 @@ function Assets_pay_post($params = array())
 		array(
 			"currency"      => $currency,
 			"payments"      => $payments,
-			"autoCharge"  => $force,
+			"autoCharge"    => $force,
 			"toUserId"      => $toUserId,
 			"toPublisherId" => $toPublisherId,
 			"toStreamName"  => $toStreamName,

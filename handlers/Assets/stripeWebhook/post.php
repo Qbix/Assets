@@ -27,16 +27,7 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 
 			if ($intent && $intent->isValid()) {
 
-				$instructions = $intent->instructions;
-
-				if (!is_array($instructions)) {
-					Assets_Payments_Stripe::log(
-						"stripe",
-						"Invalid intent instructions",
-						array("metadata" => $metadata, "event" => $event)
-					);
-					return;
-				}
+				$instructions = $intent->getAllInstructions();
 
 				try {
 					Assets::pay(
@@ -56,7 +47,7 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 					);
 
 					// Consume the intent so it can't be reused
-					$intent->consume();
+					$intent->complete(array('success' => true));
 
 					Assets_Payments_Stripe::log(
 						"stripe",
