@@ -72,15 +72,15 @@ Q.exports(function (Assets, priv) {
 
 				Q.Assets.Credits.buy({
 					missing: true,
+					skipDialog: true,
 					reason: options.reason,
 					amount: (details.needCredits - details.haveCredits) / rate,
 					intentToken: details.intentToken,
 					metadata: metadata,
 					onSuccess: function () {
-						// retry after buying credits
-						Q.Assets.pay(options);
+						// the pay will be retried by the webhook
+						// based on the previously saved intent information
 					},
-
 					onFailure: options.onFailure
 				});
 

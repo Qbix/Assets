@@ -3,6 +3,87 @@
 require_once ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
 
 /**
+ * Unified handler for completed Stripe charges.
+ * Performs:
+ *  1) Assets::charge()
+ *  2) If metadata contains intentToken → continue pending Assets::pay()
+ *
+ * NOTE: This preserves idempotency because chargeId is included in metadata.
+ */
+function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $event)
+{
+	try {
+		// -------------------------------------------------------------
+		// Perform normal credit purchase charge
+		// -------------------------------------------------------------
+		$charge = Assets::charge("stripe", $amount, $currency, $metadata);
+
+		// -------------------------------------------------------------
+		// Check for Users_Intent continuation (pending Assets::pay)
+		// -------------------------------------------------------------
+		if (!empty($metadata['intentToken'])) {
+
+			$intent = Users_Intent::fetch($metadata['intentToken']);
+
+			if ($intent && $intent->isValid()) {
+
+				$instructions = $intent->instructions;
+
+				if (!is_array($instructions)) {
+					Assets_Payments_Stripe::log(
+						"stripe",
+						"Invalid intent instructions",
+						array("metadata" => $metadata, "event" => $event)
+					);
+					return;
+				}
+
+				try {
+					Assets::pay(
+						$instructions['communityId'],
+						$instructions['userId'],
+						$instructions['amount'],    // the original currency request
+						$instructions['reason'],
+						array(
+							"currency"        => $instructions['currency'],
+							"payments"        => $instructions['gateway'],
+							"toPublisherId"   => isset($instructions['toPublisherId']) ? $instructions['toPublisherId'] : null,
+							"toStreamName"    => isset($instructions['toStreamName']) ? $instructions['toStreamName'] : null,
+							"toUserId"        => isset($instructions['toUserId']) ? $instructions['toUserId'] : null,
+							"autoCharge"      => false,
+							"metadata"        => $metadata
+						)
+					);
+
+					// Consume the intent so it can't be reused
+					$intent->consume();
+
+					Assets_Payments_Stripe::log(
+						"stripe",
+						"Intent payment completed",
+						array("instructions" => $instructions)
+					);
+
+				} catch (Exception $e) {
+					Assets_Payments_Stripe::log(
+						"stripe",
+						"Error completing intent payment",
+						$e
+					);
+				}
+			}
+		}
+
+	} catch (Exception $e) {
+		Assets_Payments_Stripe::log(
+			"stripe",
+			"Unified handler error",
+			$e
+		);
+	}
+}
+
+/**
  * Stripe webhook https://stripe.com/docs/webhooks
  */
 function Assets_stripeWebhook_post($params = array())
@@ -53,7 +134,7 @@ function Assets_stripeWebhook_post($params = array())
 				$amount   = (int)(isset($pi->amount) ? $pi->amount : 0) / 100;
 				$currency = isset($pi->currency) ? $pi->currency : null;
 
-				$metaObj = isset($pi->metadata) ? $pi->metadata : null;
+				$metaObj  = isset($pi->metadata) ? $pi->metadata : null;
 				$metadata = _stripe_meta($metaObj);
 
 				$metadata = Assets_Payments_Stripe::resolveMetadata(
@@ -62,7 +143,7 @@ function Assets_stripeWebhook_post($params = array())
 					'payment_intent.succeeded'
 				);
 
-				$app = Q::app();
+				$app     = Q::app();
 				$metaApp = isset($metadata['app']) ? $metadata['app'] : null;
 
 				if ($app !== $metaApp) {
@@ -70,7 +151,8 @@ function Assets_stripeWebhook_post($params = array())
 					break;
 				}
 
-				Assets::charge("stripe", $amount, $currency, $metadata);
+				// Use unified handler (charge + continue intent)
+				Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $event);
 
 			} catch (Exception $e) {
 				Assets_Payments_Stripe::log('stripe', 'Error in payment_intent.succeeded', $e);
@@ -108,7 +190,8 @@ function Assets_stripeWebhook_post($params = array())
 					'invoice.paid'
 				);
 
-				Assets::charge("stripe", $amount, $currency, $metadata);
+				// Use unified handler (charge + continue intent)
+				Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $event);
 
 				Assets_Payments_Stripe::log('invoice.paid processed successfully', $invoice);
 
@@ -139,7 +222,7 @@ function Assets_stripeWebhook_post($params = array())
 
 				$user = Users::fetch($userId, true);
 
-				$pm = isset($si->payment_method) ? $si->payment_method : null;
+				$pm         = isset($si->payment_method) ? $si->payment_method : null;
 				$customerId = isset($si->customer) ? $si->customer : null;
 
 				if (!$pm || !$customerId) {
