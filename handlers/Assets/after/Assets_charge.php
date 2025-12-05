@@ -52,8 +52,8 @@ function Assets_after_Assets_charge($params)
 		'months', 'startDate', 'endDate', 'link'
 	);
 	
-	$emailAddress = Q::ifset($user->emailAddress, $user->emailAddressPending);
-	$mobileNumber = Q::ifset($user->mobileNumber, $user->mobileNumberPending);
+	$emailAddress = $user->emailAddress ? $user->emailAddress : $user->emailAddressPending;
+	$mobileNumber = $user->mobileNumber ? $user->mobileNumber : $user->mobileNumberPending;
 	if ($emailAddress or ($user->emailAddressPending and !$user->mobileNumber)) {
 		$email = new Users_Email();
 		$email->address = $emailAddress;
@@ -76,8 +76,8 @@ function Assets_after_Assets_charge($params)
 		}
 	}
 
-	$emailAddress = Q::ifset($publisher->emailAddress, $publisher->emailAddressPending);
-	$mobileNumber = Q::ifset($publisher->mobileNumber, $publisher->mobileNumberPending);
+	$emailAddress = $publisher->emailAddress ? $publisher->emailAddress : $publisher->emailAddressPending;
+	$mobileNumber = $publisher->mobileNumber ? $publisher->mobileNumber : $publisher->mobileNumberPending;
 	if ($publisher->emailAddress) {
 		$email = new Users_Email();
 		$email->address = $publisher->emailAddress;

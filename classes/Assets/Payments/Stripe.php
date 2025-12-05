@@ -114,10 +114,10 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 		$avatar = Streams_Avatar::fetch($user->id, $user->id);
 		$params["name"] = $avatar->displayName();
 		if ($user->emailAddress) {
-			$params['email'] = $user->emailAddress;
+			$params['email'] = $user->emailAddress ? $user->emailAddress : $user->emailAddressPending;
 		}
 		if ($user->mobileNumber) {
-			$params['phone'] = $user->mobileNumber;
+			$params['phone'] = $user->mobileNumber ? $user->mobileNumber : $user->mobileNumberPending;
 		}
 
 		return \Stripe\Customer::create($params);
