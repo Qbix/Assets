@@ -62,7 +62,7 @@ Q.exports(function(Assets, priv){
                     currency: options.currency.toLowerCase(),
                     total: {
                         label: options.description,
-                        amount: amount * 100, // stripe need amount in minimum units (cents)
+                        amount: Math.round(amount * 100), // stripe need amount in minimum units (cents)
                     },
                     requestPayerName: true,
                     requestPayerEmail: true

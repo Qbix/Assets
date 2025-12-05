@@ -76,6 +76,8 @@ function Assets_after_Assets_charge($params)
 		}
 	}
 
+	$emailAddress = Q::ifset($publisher->emailAddress, $publisher->emailAddressPending);
+	$mobileNumber = Q::ifset($publisher->mobileNumber, $publisher->mobileNumberPending);
 	if ($publisher->emailAddress) {
 		$email = new Users_Email();
 		$email->address = $publisher->emailAddress;
