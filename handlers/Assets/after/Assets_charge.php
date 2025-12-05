@@ -78,9 +78,9 @@ function Assets_after_Assets_charge($params)
 
 	$emailAddress = $publisher->emailAddress ? $publisher->emailAddress : $publisher->emailAddressPending;
 	$mobileNumber = $publisher->mobileNumber ? $publisher->mobileNumber : $publisher->mobileNumberPending;
-	if ($publisher->emailAddress) {
+	if ($emailAddress) {
 		$email = new Users_Email();
-		$email->address = $publisher->emailAddress;
+		$email->address = $emailAddress;
 		$email->retrieve(true);
 		$emailSubject = Q_Config::get('Assets', 'transactional', 'charge', 'subject', false);
 		$emailView = Q_Config::get('Assets', 'transactional', 'charge', 'body', false);
@@ -89,9 +89,9 @@ function Assets_after_Assets_charge($params)
 				$email->sendMessage($emailSubject, $emailView, $fields);
 			} catch (Exception $e) {}
 		}
-	} else if ($publisher->mobileNumber) {
+	} else if ($mobileNumber) {
 		$mobile = new Users_Mobile();
-		$mobile->number = $publisher->mobileNumber;
+		$mobile->number = $mobileNumber;
 		$mobile->retrieve(true);
 		if ($mobileView = Q_Config::get('Assets', 'transactional', 'charge', 'mobile', 
 			Q_Config::get('Assets', 'transactional', 'charge', 'sms', false)
