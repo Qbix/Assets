@@ -52,7 +52,6 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	 */
 	function charge($amount, $currency = 'USD', $options = array())
 	{
-		throw new Exception('moo');
 		$options = array_merge($this->options, $options);
 		Q_Valid::requireFields(array('user'), $options, true);
 		$user = $options['user'];
