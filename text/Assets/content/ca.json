@@ -72,7 +72,7 @@
 		"CreatePaidStream": "per crear {{toStreamName}}",
 		"JoinedPaidStream": "per reservar a &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
 		"CreatedCommunity": "per crear comunitat &quot; {{communityId}} &quot;",
-		"LeftPaidStream": "com a devoluci\u00f3 de la reserva a &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"LeftPaidStream": "com a reemborsament de reserva a &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
 		"BoughtCredits": "S&#39;han comprat {{amount}} cr\u00e8dits",
 		"BonusCredits": "Bonificaci\u00f3 {{amount}} cr\u00e8dits",
 		"BuyAmountCredits": "Compra {{amount}} cr\u00e8dits",

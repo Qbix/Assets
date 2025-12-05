@@ -260,7 +260,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {integer} $amount The amount of credits to transfer.
 	 * @param {string} $toUserId The id of the user to whom you will transfer the credits
 	 * @param {string} $reason Identifies the reason for transfer. Can't be null.
-	 * @param {string} [$fromUserId=null] null = logged user
+	 * @param {string} [$fromUserId] By default, this is the logged-in user 
 	 * @param {array} [$more] An array supplying more information
 	 * @param {array} [$more.items] an array of items, each with "publisherId", "streamName" and "amount"
 	 * @param {boolean} [$more.autoCharge=false] If true and not enough credits, try to top up via real money
@@ -292,7 +292,7 @@ class Assets_Credits extends Base_Assets_Credits
 			throw new Q_Exception_RequiredField(array('field' => 'reason'));
 		}
 
-		$fromUserId = $fromUserId ?: Users::loggedInUser(true)->id;
+		$fromUserId = $fromUserId ? $fromUserId : Users::loggedInUser(true)->id;
 
 		if ($toUserId === $fromUserId) {
 			throw new Q_Exception_WrongValue(array(
@@ -310,7 +310,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------------
 		$from_stream = self::stream($communityId, $fromUserId, $communityId);
 		$from_stream->retrieve('*', true, array(
-			'begin' => 'FOR UPDATE', // ONLY BEGIN HERE
+			'begin' => true, // ONLY BEGIN HERE
 			'rollbackIfMissing' => true
 		));
 		$currentCredits = floatval($from_stream->getAttribute('amount'));
@@ -479,12 +479,24 @@ class Assets_Credits extends Base_Assets_Credits
 			self::checkAmount($amountCredits, $items, true);
 		}
 
+		/**
+		 * Hook before payment of credits.
+		 * @event Assets/credits/spend {before}
+		 */
+		if (false === Q::event(
+			'Assets/credits/spend',
+			@compact('communityId', 'amountCredits', 'reason', 'fromUserId', 'options'),
+			'before'
+		)) {
+			return false;
+		}
+
 		//--------------------------------------------------------------------
-		// 1. Begin TX by locking only the payer balance stream
+		// 1. Begin TX: lock only payer balance stream
 		//--------------------------------------------------------------------
 		$fromStream = Assets_Credits::stream($communityId, $fromUserId, $communityId);
 		$fromStream->retrieve('*', true, array(
-			'begin' => 'FOR UPDATE',    // SINGLE TX BEGIN
+			'begin' => true,
 			'rollbackIfMissing' => true
 		));
 		$currentCredits = floatval($fromStream->getAttribute("amount"));
@@ -528,12 +540,39 @@ class Assets_Credits extends Base_Assets_Credits
 		}
 
 		//--------------------------------------------------------------------
-		// 3. Create ledger row (no commit)
+		// 3. Identify publisher receiving the credits
+		//--------------------------------------------------------------------
+		$toPublisherId = isset($options["toPublisherId"]) ? $options["toPublisherId"] : null;
+
+		if (!$toPublisherId) {
+			$fromStream->executeRollback();
+			throw new Q_Exception_RequiredField(array(
+				"field" => "options.toPublisherId"
+			));
+		}
+
+		//--------------------------------------------------------------------
+		// 4. Lock publisher stream (no begin)
+		//--------------------------------------------------------------------
+		$toStream = Assets_Credits::stream($communityId, $toPublisherId, $communityId, true);
+		$toStream->retrieve('*', true, array(
+			'rollbackIfMissing' => true
+		));
+		$publisherCredits = floatval($toStream->getAttribute("amount"));
+
+		//--------------------------------------------------------------------
+		// 5. Create ledger row (no commit)
 		//--------------------------------------------------------------------
 		$more = $options;
 		$more["amount"]          = $amountCredits;
 		$more["fromStreamTitle"] = null;
 		$more["toStreamTitle"]   = null;
+
+		foreach ($more as $k => $v) {
+			if (is_object($v) or is_array($v)) {
+				unset($more[$k]);
+			}
+		}
 
 		try {
 
@@ -548,13 +587,34 @@ class Assets_Credits extends Base_Assets_Credits
 			$assets_credits->save(false, false);
 
 			//----------------------------------------------------------------
-			// 4. Deduct payer credits (no commit)
+			// 6. Deduct payer (no commit)
 			//----------------------------------------------------------------
 			$fromStream->setAttribute("amount", $currentCredits - $amountCredits);
+			$fromStream->save(false, false);
 
-			// FINAL SAVE: attach COMMIT here
-			$fromStream->save(false, array(
-				'commit' => true   // triggers DB-level COMMIT for the entire TX
+			//----------------------------------------------------------------
+			// 7. Credit publisher (SAVE LAST → COMMIT HERE)
+			//----------------------------------------------------------------
+			$toStream->setAttribute("amount", $publisherCredits + $amountCredits);
+
+			/**
+			 * Hook before payment of credits.
+			 * @event Assets/credits/spend {after}
+			 */
+			if (false === Q::event(
+				'Assets/credits/spend',
+				@compact(
+					'communityId', 'amountCredits', 'reason', 'fromUserId', 'options',
+					 'currentCredits', 'publisherCredits', 'amountCredits'
+				),
+				'after'
+			)) {
+				return false;
+			}
+
+			// COMMIT attached here (publisher)
+			$toStream->save(false, array(
+				'commit' => true
 			));
 
 		} catch (Exception $e) {
@@ -563,12 +623,15 @@ class Assets_Credits extends Base_Assets_Credits
 			throw $e;
 		}
 
+		//--------------------------------------------------------------------
+		// 8. Post-commit text loading
+		//--------------------------------------------------------------------
 		if ($texts = Q_Config::get('Assets', 'credits', 'text', 'load', array())) {
-			Q_Text::get($texts); // to load the overrides
+			Q_Text::get($texts);
 		}
 
 		//--------------------------------------------------------------------
-		// 5. Post-commit feeds (side-effects only)
+		// 9. Post-commit feed
 		//--------------------------------------------------------------------
 		$text = Q_Text::get("Assets/content");
 		$instructions = self::fillInstructions($assets_credits, $more);
@@ -586,6 +649,96 @@ class Assets_Credits extends Base_Assets_Credits
 		));
 
 		return $amountCredits;
+	}
+
+	/**
+	 * Refund credits from one user to another
+	 * @method refund
+	 * @static
+	 * @param {string|null} $communityId Community managing these credits.
+	 * @param {float} $amountCredits Amount of credits to refund.
+	 * @param {string} $reason Semantic reason for the refund.
+	 * @param {string} $fromUserId User from whom the credits are taken.
+	 * @param {string} $toUserId User to whom the credits are given.
+	 * @param {array} [$options] Extra metadata.
+	 * @return float Actual credits refunded.
+	 */
+	public static function refund($communityId, $amountCredits, $reason, $fromUserId, $toUserId, $options = array())
+	{
+		// Normalize community
+		if (!$communityId) {
+			$communityId = Users::communityId();
+		}
+
+		if (!$reason)       throw new Q_Exception_RequiredField(array("field" => "reason"));
+		if (!$fromUserId)   throw new Q_Exception_RequiredField(array("field" => "fromUserId"));
+		if (!$toUserId)     throw new Q_Exception_RequiredField(array("field" => "toUserId"));
+
+		//--------------------------------------------------------------
+		// BEFORE HOOK
+		//--------------------------------------------------------------
+		if (false === Q::event(
+			'Assets/credits/refund',
+			@compact('communityId','amountCredits','reason','fromUserId','toUserId','options'),
+			'before'
+		)) {
+			return false;
+		}
+
+		//--------------------------------------------------------------
+		// IMPORTANT: Suppress transfer() feeds and autoCharge
+		//--------------------------------------------------------------
+		$options = array_merge($options, array(
+			'forceTransfer' => true,     // ensure transfer runs even with 0 amount
+			'autoCharge'    => false,    // never charge real money in refund
+			'_suppressFeeds'=> true      // custom internal flag
+		));
+
+		//--------------------------------------------------------------
+		// Execute atomic transfer using the working TX pattern
+		//--------------------------------------------------------------
+		$transferred = self::transfer(
+			$communityId,
+			$amountCredits,
+			$reason,
+			$toUserId,
+			$fromUserId,
+			$options
+		);
+
+		//--------------------------------------------------------------
+		// AFTER HOOK (post-TX commit)
+		//--------------------------------------------------------------
+		Q::event(
+			'Assets/credits/refund',
+			@compact('communityId','amountCredits','reason','fromUserId','toUserId','options'),
+			'after'
+		);
+
+		//--------------------------------------------------------------
+		// Post-commit refund feed
+		//--------------------------------------------------------------
+		$text = Q_Text::get("Assets/content");
+
+		$instructions = array(
+			"app"       => Q::app(),
+			"reason"    => self::reasonToText($reason, array()),
+			"amount"    => $amountCredits,
+			"operation" => "+"
+		);
+
+		$type    = "Assets/credits/refunded";
+		$content = Q::ifset($text, "messages", $type, "content", "Refunded {{amount}} credits");
+
+		$toStream = Assets_Credits::stream($communityId, $toUserId, $communityId, true);
+
+		$toStream->post($communityId, array(
+			"type"         => $type,
+			"content"      => Q::interpolate($content, $instructions),
+			"instructions" => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
+		));
+
+		return $transferred;
 	}
 
 
@@ -663,10 +816,6 @@ class Assets_Credits extends Base_Assets_Credits
 		unset($more['toPublisherId']);
 		unset($more['toStreamName']);
 
-		if ($toUserId) {
-			$more['toUserId'] = $toUserId;
-		}
-
 		if ($toPublisherId && $toStreamName) {
 			$more['toStreamTitle'] = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName)->title;
 			$more['toUserId'] = $toPublisherId;
@@ -680,7 +829,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$assets_credits = new Assets_Credits();
 		$assets_credits->id = uniqid();
 		$assets_credits->fromUserId = $fromUserId;
-		$assets_credits->toUserId = $toUserId;
+		$assets_credits->toUserId = $toUserId ? $toUserId : $toPublisherId;
 		$assets_credits->toPublisherId = $toPublisherId;
 		$assets_credits->toStreamName = $toStreamName;
 		$assets_credits->fromPublisherId = $fromPublisherId;
@@ -688,7 +837,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$assets_credits->reason = $reason;
 		$assets_credits->communityId = $communityId;
 		$assets_credits->amount = $amount;
-		$assets_credits->attributes = Q::json_encode($more);
+		$assets_credits->setAttribute($more);
 		$assets_credits->save();
 
 		return $assets_credits;
@@ -751,10 +900,12 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $userId user tested paid stream
 	 * @param {Streams_Stream|array} $toStream Stream or array('publisherId' => ..., 'streamName' => ...)
 	 * @param {Streams_Stream|array} [$fromStream] Stream or array('publisherId' => ..., 'streamName' => ...)
+	 * @param {array} [$options]
+	 * @param {array} [$options.reasons] Array of other reasons to check
 	 * @throws
 	 * @return {Boolean|Object}
 	 */
-	static function checkJoinPaid($userId, $toStream, $fromStream = null)
+	static function checkJoinPaid($userId, $toStream, $fromStream = null, $options = array())
 	{
 		$toPublisherId = Q::ifset($toStream, "publisherId", null);
 		$toStreamName = Q::ifset($toStream, "streamName", Q::ifset($toStream, "name", null));
@@ -765,6 +916,12 @@ class Assets_Credits extends Base_Assets_Credits
 		$fromPublisherId = Q::ifset($fromStream, "publisherId", null);
 		$fromStreamName = Q::ifset($fromStream, "streamName", null);
 
+		$reasons = array('JoinedPaidStream');
+		if (!empty($options['reasons'])) {
+			$reasons = array_merge($reasons, $options['reasons']);
+		}
+
+		// find latest credits transfer
 		$joined_assets_credits = Assets_Credits::select()
 		->where(array(
 			'fromUserId' => $userId,
@@ -772,7 +929,7 @@ class Assets_Credits extends Base_Assets_Credits
 			'toStreamName' => $toStreamName,
 			'fromPublisherId' => $fromPublisherId,
 			'fromStreamName' => $fromStreamName,
-			'reason' => 'JoinedPaidStream'
+			'reason' => $reasons
 		))
 		->ignoreCache()
 		->options(array("dontCache" => true))

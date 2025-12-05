@@ -72,7 +72,7 @@
 		"CreatePaidStream": "{{toStreamName}} \u09a4\u09c8\u09b0\u09bf \u0995\u09b0\u09be\u09b0 \u099c\u09a8\u09cd\u09af",
 		"JoinedPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName = &#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot; \u098f \u09b8\u0982\u09b0\u0995\u09cd\u09b7\u09a3\u09c7\u09b0 \u099c\u09a8\u09cd\u09af",
 		"CreatedCommunity": "\u09b8\u09ae\u09cd\u09aa\u09cd\u09b0\u09a6\u09be\u09af\u09bc \u09a4\u09c8\u09b0\u09bf\u09b0 \u099c\u09a8\u09cd\u09af &quot; {{communityId}} &quot;",
-		"LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot; \u098f \u09b0\u09bf\u099c\u09be\u09b0\u09cd\u09ad\u09c7\u09b6\u09a8 \u09ab\u09c7\u09b0\u09a4 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7",
+		"LeftPaidStream": "&quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot; \u09a4\u09c7 \u09b0\u09bf\u099c\u09be\u09b0\u09cd\u09ad\u09c7\u09b6\u09a8 \u09b0\u09bf\u09ab\u09be\u09a8\u09cd\u09a1 \u09b9\u09bf\u09b8\u09be\u09ac\u09c7",
 		"BoughtCredits": "{{amount}} \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09c7\u09a8\u09be",
 		"BonusCredits": "\u09ac\u09cb\u09a8\u09be\u09b8 {{amount}} \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f",
 		"BuyAmountCredits": "{{amount}} \u0995\u09cd\u09b0\u09c7\u09a1\u09bf\u099f \u0995\u09bf\u09a8\u09c1\u09a8",

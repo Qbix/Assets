@@ -128,7 +128,7 @@ function Assets_history_response_tool($options)
 				'currency' => $attributes['currency'],
 				'communityId' => $attributes['communityId'],
 				'description' => $description,
-				'date' => $row->insertedTime
+				'date' => $row->insertedTime,
 			);
 		}
 	}

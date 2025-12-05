@@ -52,6 +52,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	 */
 	function charge($amount, $currency = 'USD', $options = array())
 	{
+		throw new Exception('moo');
 		$options = array_merge($this->options, $options);
 		Q_Valid::requireFields(array('user'), $options, true);
 		$user = $options['user'];
@@ -432,7 +433,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 		// -------------------------------------------------------------
 		// 3. Attach user object
 		// -------------------------------------------------------------
-		$metadata["user"] = Users::fetch($metadata["userId"], true);
+		// $metadata["user"] = Users::fetch($metadata["userId"], true);
 
 		// -------------------------------------------------------------
 		// 4. chargeId must be present

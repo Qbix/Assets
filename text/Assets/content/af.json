@@ -72,7 +72,7 @@
 		"CreatePaidStream": "vir die skep van {{toStreamName}}",
 		"JoinedPaidStream": "vir bespreking in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
 		"CreatedCommunity": "vir die skep van gemeenskap &quot; {{communityId}} &quot;",
-		"LeftPaidStream": "as besprekingterugbetaling in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"LeftPaidStream": "as &#39;n besprekingsterugbetaling in &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
 		"BoughtCredits": "Het {{amount}} krediete gekoop",
 		"BonusCredits": "Bonus {{amount}} krediete",
 		"BuyAmountCredits": "Koop {{amount}} krediete",

@@ -52,9 +52,11 @@ function Assets_after_Assets_charge($params)
 		'months', 'startDate', 'endDate', 'link'
 	);
 	
-	if ($user->emailAddress) {
+	$emailAddress = Q::ifset($user->emailAddress, $user->emailAddressPending);
+	$mobileNumber = Q::ifset($user->mobileNumber, $user->mobileNumberPending);
+	if ($emailAddress or ($user->emailAddressPending and !$user->mobileNumber)) {
 		$email = new Users_Email();
-		$email->address = $user->emailAddress;
+		$email->address = $emailAddress;
 		$email->retrieve(true);
 		$emailSubject = Q_Config::get('Assets', 'transactional', 'charged', 'subject', false);
 		$emailView = Q_Config::get('Assets', 'transactional', 'charged', 'body', false);
@@ -63,9 +65,9 @@ function Assets_after_Assets_charge($params)
 				$email->sendMessage($emailSubject, $emailView, $fields);
 			} catch (Exception $e) {}
 		}
-	} else if ($user->mobileNumber) {
+	} else if ($mobileNumber) {
 		$mobile = new Users_Mobile();
-		$mobile->number = $user->mobileNumber;
+		$mobile->number = $mobileNumber;
 		$mobile->retrieve(true);
 		if ($mobileView = Q_Config::get('Assets', 'transactional', 'charged', 'mobile', false)) {
 			try {

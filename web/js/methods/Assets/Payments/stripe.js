@@ -4,6 +4,7 @@ Q.exports(function(Assets, priv){
     * and then charge that payment profile.
     * @method stripe
     * @static
+    *  @param {String} intentToken the token to fetch the intent to charge
     *  @param {Object} [options] Any additional options to pass to the stripe checkout config, and also:
     *  @param {Number} [options.amount] the amount to pay.
     *  @param {String} [options.currency="usd"] the currency to pay in.
@@ -18,8 +19,8 @@ Q.exports(function(Assets, priv){
                 Q.Assets.Payments.stripe.options,
                 options
             );
-            if (!options.amount) {
-                var err = _error("Assets.Payments.stripe: amount is required");
+            if (!options.intentToken && !options.amount) {
+                var err = "Assets.Payments.stripe: amount is required unless intentToken is provided";
                 return Q.handle(callback, null, [err]);
             }
 

@@ -72,7 +72,7 @@
 		"CreatePaidStream": "{{toStreamName}} yaratmaq \u00fc\u00e7\u00fcn",
 		"JoinedPaidStream": "rezervasiya \u00fc\u00e7\u00fcn &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{toStreamName}} &#39;&gt; {{toStreamTitle}}</a> &quot;",
 		"CreatedCommunity": "icma yaratmaq \u00fc\u00e7\u00fcn &quot; {{communityId}} &quot;",
-		"LeftPaidStream": "rezervasiya \u00f6d\u0259ni\u015fi olaraq &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
+		"LeftPaidStream": "rezervasiyan\u0131n geri qaytar\u0131lmas\u0131 kimi &quot; <a data-publisherId='<i translate='no'>999 &#39; data-streamName=&#39; {{fromStreamName}} &#39;&gt; {{fromStreamTitle}}</a> &quot;",
 		"BoughtCredits": "{{amount}} kredit al\u0131b",
 		"BonusCredits": "Bonus {{amount}} kredit",
 		"BuyAmountCredits": "{{amount}} kredit al\u0131n",

@@ -256,6 +256,9 @@ function Assets_payment_response_intent($options)
 	}
 
 	$stripeCustomerId = $customer->customerId;
+	
+	// don't remove this intent, we will need it when the webhook is called later
+	// $intent->remove();
 
 	/**
 	 * ----------------------------------------------------------------------
