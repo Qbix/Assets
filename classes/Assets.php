@@ -231,7 +231,7 @@ abstract class Assets extends Base_Assets
 		$user        = Users::fetch($userId, true);
 
 		$currency = isset($options["currency"]) ? $options["currency"] : "USD";
-		$gateway  = isset($options["payments"]) ? $options["payments"] : "stripe";
+		$payments  = isset($options["payments"]) ? $options["payments"] : "stripe";
 		$autoCharge    = isset($options["autoCharge"]) ? $options["autoCharge"] : false;
 
 		$toPublisherId = isset($options["toPublisherId"]) ? $options["toPublisherId"] : null;
@@ -263,20 +263,23 @@ abstract class Assets extends Base_Assets
 		//-------------------------------------------------------------
 		if ($haveCredits < $needCredits) {
 
-			$creditsMissing = $needCredits - $haveCredits;
-			$amountCurrency = Assets_Credits::convert($creditsMissing, "credits", $currency);
+			$missingCredits = $needCredits - $haveCredits;
+			$amountCurrency = Assets_Credits::convert($missingCredits, "credits", $currency);
+
+			$metadata = isset($options["metadata"]) ? $options["metadata"] : array();
 
 			$instructions = array(
 				"userId"        => $userId,
 				"communityId"   => $communityId,
-				"credits"       => $creditsMissing,
+				"credits"       => $missingCredits,
 				"currency"      => $currency,
 				"amount"        => $amountCurrency,
 				"reason"        => $reason,
-				"gateway"       => $gateway,
+				"payments"      => $payments,
 				"toPublisherId" => $toPublisherId,
 				"toStreamName"  => $toStreamName,
-				"toUserId"      => $toUser
+				"toUserId"      => $toUser,
+				"needCredits"   => $needCredits
 			);
 
 			$intent = Users_Intent::newIntent("Assets/charge", $userId, $instructions);
@@ -285,15 +288,17 @@ abstract class Assets extends Base_Assets
 			if ($autoCharge) {
 				try {
 					Assets::autoCharge(
-						$creditsMissing,
+						$missingCredits,
 						$reason,
 						array(
 							"userId"   => $userId,
 							"currency" => "credits",
-							"payments" => $gateway,
-							"metadata" => isset($options["metadata"]) ? $options["metadata"] : array()
+							"payments" => $payments,
+							"metadata" => $metadata,
+							"intentToken" => $intent->token
 						)
 					);
+					// if charge is successful, Stripe will continue with intent
 				} catch (Exception $e) {
 					// No throw — always return structured
 					return array(
@@ -307,10 +312,6 @@ abstract class Assets extends Base_Assets
 						)
 					);
 				}
-
-				// retry payment after autocharge
-				$options["autoCharge"] = false;
-				return self::pay($communityId, $userId, $amount, $reason, $options);
 			}
 
 			// Not allowed to charge automatically: return intent token
@@ -415,6 +416,9 @@ abstract class Assets extends Base_Assets
 	 */
 	static function charge($payments, $amount, $currency = 'USD', $options = array())
 	{
+		if (empty($options['chargeId'])) {
+			throw new Q_Exception("moo");
+		}
 		// -------------------------------------------------------------
 		// Normalize currency
 		// -------------------------------------------------------------
@@ -422,6 +426,7 @@ abstract class Assets extends Base_Assets
 			$currency = 'USD';
 		}
 		$currency = strtoupper($currency);
+		$credits = Assets_Credits::convert($amount, $currency, 'credits');
 
 		$user        = Q::ifset($options, 'user', Users::loggedInUser(false));
 		$communityId = Q::ifset($options, 'communityId', Users::communityId());
@@ -438,6 +443,9 @@ abstract class Assets extends Base_Assets
 		$baseMetadata = array(
 			"userId"      => $user ? $user->id : null,
 			"communityId" => $communityId,
+			"currency"    => $currency,
+			"amount"      => $amount,
+			"credits"     => $credits,
 			"reason"      => Q::ifset($options, "reason", null),
 			"app"         => Q::app(),
 			"autoCharge"  => Q::ifset($options, "autoCharge", false) ? "1" : "0"
@@ -506,7 +514,7 @@ abstract class Assets extends Base_Assets
 			'amount'      => sprintf('%0.2f', $amount),
 			'currency'    => $currency,
 			'communityId' => $communityId,
-			'credits'     => Assets_Credits::convert($amount, $currency, 'credits'),
+			'credits'     => $credits,
 			'metadata'    => $mergedMeta
 		);
 
@@ -636,7 +644,7 @@ abstract class Assets extends Base_Assets
 		// At this point, $amount is a real money amount in $currency.
 
 		// Quota parameters
-		$quotaName  = Q::ifset($options, 'quotaName',  'autoCharge');
+		$quotaName  = Q::ifset($options, 'quotaName',  'Assets/autoCharge');
 		$resourceId = Q::ifset($options, 'resourceId', '');
 
 		// Quota units: if not provided, convert real currency -> USD (only as a universal quota baseline)
@@ -654,7 +662,7 @@ abstract class Assets extends Base_Assets
 			$userId,
 			$resourceId,
 			$quotaName,
-			true,
+			true,			// throw if quota exceeded
 			$units,
 			array(),
 			true
@@ -662,7 +670,6 @@ abstract class Assets extends Base_Assets
 
 		// 2. Attempt real-money charge
 		try {
-
 			$result = Assets::charge(
 				$payments,
 				$amount,
@@ -677,9 +684,7 @@ abstract class Assets extends Base_Assets
 			// Commit quota usage
 			$quota->used($units);
 			return true;
-
 		} catch (Exception $e) {
-
 			// Roll back quota reservation
 			Users_Quota::rollback()->execute(false, Q::ifset($quota, 'shards', array()));
 			throw $e;

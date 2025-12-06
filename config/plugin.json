@@ -108,6 +108,13 @@
 				"defaultCacheBust": 1000,
 				"maxStretch": 2
 			}
+		},
+		"quotas": {
+			"Assets/autoCharge": {
+				"86400": {
+					"": 100
+				}
+			}
 		}
 	},
 	"Users": {

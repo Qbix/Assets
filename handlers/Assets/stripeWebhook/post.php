@@ -50,33 +50,39 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 		// -------------------------------------------------------------
 		// Check for Users_Intent continuation (pending Assets::pay)
 		// -------------------------------------------------------------
-		$continue = (
+		$shouldContinue = (
 			!empty($metadata['intentToken'])
 			&& (!isset($metadata['autoCharge']) || $metadata['autoCharge'] !== "1")
 		);
 
-        if ($continue) {
+        if ($shouldContinue) {
 			$intent = Users_Intent::fetch($metadata['intentToken']);
 			if ($intent && $intent->isValid()) {
 
 				$instructions = $intent->getAllInstructions();
 
+				// get amount of credits to transfer
+				$amount = $instructions['amount'];
+				$options = Q::take($instructions, array(
+					'currency', 'payments',
+					'toPublisherId', 'toStreamName', 'toUserId', 'metadata'
+				));
+				$options['autoCharge'] = false;
+				if ($needCredits = $intent->getInstruction('needCredits', 0)) {
+					$amount = $intent->getInstruction('amount');
+					$options['currency'] = $intent->getInstruction('currency');
+				}
+
+				// make the payment (continuation from intent)
 				$result = Assets::pay(
 					$instructions['communityId'],
 					$instructions['userId'],
-					$instructions['amount'],
+					$amount,
 					$instructions['reason'],
-					array(
-						"currency"        => $instructions['currency'],
-						"payments"        => $instructions['gateway'],
-						"toPublisherId"   => $instructions['toPublisherId'] ?? null,
-						"toStreamName"    => $instructions['toStreamName'] ?? null,
-						"toUserId"        => $instructions['toUserId'] ?? null,
-						"autoCharge"      => false,
-						"metadata"        => $metadata
-					)
+					$options
 				);
 
+				// complete the intent, then take actions
 				$intent->complete(array('success' => $result['success']));
 
 				Assets_Payments_Stripe::log(
