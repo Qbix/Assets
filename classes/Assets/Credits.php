@@ -660,10 +660,10 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $reason Semantic reason for the refund.
 	 * @param {string} $fromUserId User from whom the credits are taken.
 	 * @param {string} $toUserId User to whom the credits are given.
-	 * @param {array} [$options] Extra metadata.
+	 * @param {array} [$more] Any additional options for transfer().
 	 * @return float Actual credits refunded.
 	 */
-	public static function refund($communityId, $amountCredits, $reason, $fromUserId, $toUserId, $options = array())
+	public static function refund($communityId, $amountCredits, $reason, $fromUserId, $toUserId, $more = array())
 	{
 		// Normalize community
 		if (!$communityId) {
@@ -688,7 +688,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------
 		// IMPORTANT: Suppress transfer() feeds and autoCharge
 		//--------------------------------------------------------------
-		$options = array_merge($options, array(
+		$more = array_merge($more, array(
 			'forceTransfer' => true,     // ensure transfer runs even with 0 amount
 			'autoCharge'    => false,    // never charge real money in refund
 			'_suppressFeeds'=> true      // custom internal flag
@@ -703,7 +703,7 @@ class Assets_Credits extends Base_Assets_Credits
 			$reason,
 			$toUserId,
 			$fromUserId,
-			$options
+			$more
 		);
 
 		//--------------------------------------------------------------
@@ -722,7 +722,7 @@ class Assets_Credits extends Base_Assets_Credits
 
 		$instructions = array(
 			"app"       => Q::app(),
-			"reason"    => self::reasonToText($reason, array()),
+			"reason"    => self::reasonToText($reason, $more),
 			"amount"    => $amountCredits,
 			"operation" => "+"
 		);

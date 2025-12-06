@@ -64,7 +64,7 @@ Q.exports(function (Assets, priv) {
 				}
 
 				var rate = Q.getObject(['exchange', options.currency], Q.Assets.Credits);
-				if (!rate) {
+				if (!rate && options.currency !== 'credits') {
 					return Q.alert(Q.text.Assets.credits.ErrorInvalidCurrency.interpolate({
 						currency: options.currency
 					}));

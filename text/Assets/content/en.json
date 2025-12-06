@@ -74,7 +74,7 @@
 		"CreatePaidStream": "for creating {{toStreamName}}",
 		"JoinedPaidStream": "for reservation in \"<a data-publisherId='{{toPublisherId}}' data-streamName='{{toStreamName}}'>{{toStreamTitle}}</a>\"",
 		"CreatedCommunity": "for creating community \"{{communityId}}\"",
-		"LeftPaidStream": "as a reservation refund in \"<a data-publisherId='{{fromPublisherId}}' data-streamName='{{fromStreamName}}'>{{fromStreamTitle}}</a>\"",
+		"LeftPaidStream": "as a reservation refund in \"<a data-publisherId='{{toPublisherId}}' data-streamName='{{toStreamName}}'>{{toStreamTitle}}</a>\"",
 		"BoughtCredits": "Bought {{amount}} credits",
 		"BonusCredits": "Bonus {{amount}} credits",
 		"BuyAmountCredits": "Buy {{amount}} credits",

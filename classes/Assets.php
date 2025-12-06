@@ -472,9 +472,11 @@ abstract class Assets extends Base_Assets
 		// Charge Stripe or reuse existing chargeId
 		// -------------------------------------------------------------
 		if ($chargeId) {
+			// existing charge, just save it
 			$customerId = Q::ifset($options, 'customerId', null);
 		} else {
 			// instantiate adapter after before-hook runs
+			// and actually charge stripe
 			$adapter = new $className((array)$options);
 			$customerId = $adapter->charge($amount, $currency, $options);  // Stripe call
 		}
@@ -488,7 +490,7 @@ abstract class Assets extends Base_Assets
 		if ($chargeId) {
 			$charge->id = $chargeId;
 			if ($charge->retrieve()) {
-				// already exists → idempotent
+				// already exists -- idempotent
 				return $charge;
 			}
 		}
