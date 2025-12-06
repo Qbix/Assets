@@ -482,6 +482,11 @@ class Assets_Credits extends Base_Assets_Credits
 		/**
 		 * Hook before payment of credits.
 		 * @event Assets/credits/spend {before}
+		 * @param {string} communityId
+		 * @param {float} amountCredits
+		 * @param {string} reason
+		 * @param {string} fromUserId
+		 * @param {array} options
 		 */
 		if (false === Q::event(
 			'Assets/credits/spend',
@@ -600,6 +605,14 @@ class Assets_Credits extends Base_Assets_Credits
 			/**
 			 * Hook before payment of credits.
 			 * @event Assets/credits/spend {after}
+			 * @param {string} communityId
+			 * @param {float} amountCredits
+			 * @param {string} reason
+			 * @param {string} fromUserId
+			 * @param {array} options
+			 * @param {float} currentCredits
+			 * @param {float} publisherCredits
+			 * @param {float} amountCredits
 			 */
 			if (false === Q::event(
 				'Assets/credits/spend',

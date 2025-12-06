@@ -2,6 +2,9 @@
 	
 function Assets_after_Assets_charge($params)
 {
+	if (!$params['wasCharged']) {
+		return;
+	}
 	$user = $params['user'];
 	$payments = $params['payments'];
 	$amount = $params['amount'];

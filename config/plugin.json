@@ -452,6 +452,11 @@
 				}
 			}
 		},
+		"charges": {
+			"simulate": {
+				"failed": false
+			}
+		},
 		"credits": {
 			"spend": {
 				"Communities/create": 20,

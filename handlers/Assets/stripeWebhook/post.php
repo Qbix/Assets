@@ -69,8 +69,8 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 				));
 				$options['autoCharge'] = false;
 				if ($needCredits = $intent->getInstruction('needCredits', 0)) {
-					$amount = $intent->getInstruction('amount');
-					$options['currency'] = $intent->getInstruction('currency');
+					$amount = $intent->getInstruction('credits');
+					$options['currency'] = 'credits';
 				}
 
 				// make the payment (continuation from intent)

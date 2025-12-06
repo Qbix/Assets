@@ -296,6 +296,10 @@ abstract class Assets extends Base_Assets
 							"payments" => $payments,
 							"metadata" => $metadata,
 							"intentToken" => $intent->token
+							// no need for full intent object,
+							// because this will result in a direct request
+							// to the payments processor,
+							// and our webhook can later fetch the intent from the database.
 						)
 					);
 					// if charge is successful, Stripe will continue with intent
@@ -315,12 +319,14 @@ abstract class Assets extends Base_Assets
 			}
 
 			// Not allowed to charge automatically: return intent token
+			// as well as intent so the client knows what to do.
 			return array(
 				"success" => false,
 				"details" => array(
 					"haveCredits" => $haveCredits,
 					"needCredits" => $needCredits,
-					"intentToken" => $intent->token
+					"intentToken" => $intent->token,
+					'intent' => $intent->exportArray()
 				)
 			);
 		}
@@ -417,7 +423,9 @@ abstract class Assets extends Base_Assets
 	static function charge($payments, $amount, $currency = 'USD', $options = array())
 	{
 		if (empty($options['chargeId'])) {
-			throw new Q_Exception("moo");
+			if (Q_Config::get('Assets', 'charges', 'simulate', 'failed', false)) {
+				throw new Assets_Exception_ChargeFailed();
+			}
 		}
 		// -------------------------------------------------------------
 		// Normalize currency
@@ -480,7 +488,7 @@ abstract class Assets extends Base_Assets
 		// Charge Stripe or reuse existing chargeId
 		// -------------------------------------------------------------
 		if ($chargeId) {
-			// existing charge, just save it
+			// existing charge, just save it, and fire the hook with wasCharged
 			$customerId = Q::ifset($options, 'customerId', null);
 		} else {
 			// instantiate adapter after before-hook runs
@@ -521,9 +529,19 @@ abstract class Assets extends Base_Assets
 		$charge->attributes = Q::json_encode($attributes);
 		$charge->save();
 
-		// -------------------------------------------------------------
-		// HOOK: AFTER Assets/charge
-		// -------------------------------------------------------------
+		$wasCharged = !empty($options['chargeId']);
+
+		/**
+		 * Hook after a Assets/charge has been made successfully.
+		 * Handlers should always check wasCharged === true before
+		 * generating any side effects!
+		 * @event Assets/charge {before}d
+		 * @param {string} communityId
+		 * @param {float} amountCredits
+		 * @param {string} reason
+		 * @param {string} fromUserId
+		 * @param {array} options
+		 */
 		Q::event(
 			'Assets/charge',
 			@compact(
@@ -534,6 +552,7 @@ abstract class Assets extends Base_Assets
 				'communityId',
 				'charge',
 				'options',
+				'wasCharged',
 				'adapter'     // now a fully initialized adapter (unless chargeId)
 			),
 			'after'
@@ -585,6 +604,7 @@ abstract class Assets extends Base_Assets
 	 *     @param {string} [$options.currency="credits"] Currency code ("credits", "USD", "EUR", etc.).
 	 *     @param {string} [$options.payments="stripe"] Payment processor key.
 	 *     @param {string} [$options.userId] User performing the payment.
+	 *     @param {string} [$options.intentId] You can pass the id of a Users_Intent for continuations
 	 *     @param {string} [$options.resourceId=""] Quota resource bucket.
 	 *     @param {string} [$options.quotaName="autoCharge"] Quota name.
 	 *     @param {int}    [$options.units] Explicit quota units, otherwise auto.
@@ -668,18 +688,15 @@ abstract class Assets extends Base_Assets
 			true
 		);
 
+		$user = Users::fetch($userId, true);
+		$metadata = Q::ifset($options, 'metadata', array());
+		Q::take($options, array('intentToken'), $metadata);
+
 		// 2. Attempt real-money charge
 		try {
-			$result = Assets::charge(
-				$payments,
-				$amount,
-				$currency,
-				array(
-					'user'     => Users::fetch($userId, true),
-					'reason'   => $reason,
-					'metadata' => Q::ifset($options, 'metadata', array())
-				)
-			);
+			$result = Assets::charge($payments, $amount, $currency, compact(
+				'user', 'reason', 'metadata'
+			));
 
 			// Commit quota usage
 			$quota->used($units);
