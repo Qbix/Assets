@@ -405,6 +405,108 @@ abstract class Assets extends Base_Assets
 	 * @param {string} $amount specify the amount
 	 * @param {string} [$currency="USD"] set the currency, which will affect the amount
 	 * @param {array} [$options=array()] Any additional options
+	 * @param {Users_User} [$options.user=Users::loggedInUser()] Which user to charge
+	 * @param {string} [$options.communityId] Which community's credits to grant on success
+	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or subscription stream
+	 * @param {string} [$options.reason] Business reason or semantic label.
+	 * @param {string} [$options.description=null] Description for the customer
+	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
+	 * @throws \Stripe\Error\Card
+	 * @throws Assets_Exception_DuplicateTransaction
+	 * @throws Assets_Exception_HeldForReview
+	 * @throws Assets_Exception_ChargeFailed
+	 * @return {boolean} Whether a charge was initiated.
+	 */
+	static function charge($payments, $amount, $currency = 'USD', $options = array())
+	{
+		if (Q_Config::get('Assets', 'charges', 'simulate', 'failed', false)) {
+			throw new Assets_Exception_ChargeFailed();
+		}
+		if (!$currency) {
+			$currency = 'USD';
+		}
+		$currency = strtoupper($currency);
+		$credits = Assets_Credits::convert($amount, $currency, 'credits');
+		$user        = Q::ifset($options, 'user', Users::loggedInUser(false));
+		$communityId = Q::ifset($options, 'communityId', Users::communityId());
+		$className = 'Assets_Payments_' . ucfirst($payments);
+		$baseMetadata = array(
+			"userId"      => $user ? $user->id : null,
+			"communityId" => $communityId,
+			"currency"    => $currency,
+			"amount"      => $amount,
+			"credits"     => $credits,
+			"reason"      => Q::ifset($options, "reason", null),
+			"app"         => Q::app(),
+			"autoCharge"  => Q::ifset($options, "autoCharge", false) ? "1" : "0"
+		);
+		$mergedMeta = array_merge(
+			$baseMetadata,
+			Q::ifset($options, 'metadata', array())
+		);
+		$options['metadata'] = $mergedMeta;
+		$adapter = null;
+		/**
+		 * Hook before a Assets/charge is about to be made.
+		 * Handlers can return false to cancel it.
+		 * @event Assets/charge {before}
+		 * @param {string} communityId
+		 * @param {float} amountCredits
+		 * @param {string} reason
+		 * @param {string} fromUserId
+		 * @param {array} options
+		 */
+		if (false === Q::event(
+			'Assets/charge',
+			@compact(
+				'adapter',
+				'options',
+				'payments',
+				'amount',
+				'currency'
+			),
+			'before'
+		)) {
+			return false;
+		}
+		// instantiate adapter after before-hook runs
+		// and actually charge stripe
+		$adapter = new $className((array)$options);
+		$customerId = $adapter->charge($amount, $currency, $options);  // Stripe call
+		/**
+		 * Hook after a Assets/charge has been made successfully.
+		 * @event Assets/charge {after}
+		 * @param {string} communityId
+		 * @param {float} amountCredits
+		 * @param {string} reason
+		 * @param {string} fromUserId
+		 * @param {array} options
+		 */
+		Q::event(
+			'Assets/charge',
+			@compact(
+				'payments',
+				'amount',
+				'currency',
+				'user',
+				'communityId',
+				'options',
+				'customerId',
+				'adapter'
+			),
+			'after'
+		);
+		return true; // the rest will be done by the webhook!!
+	}
+
+	/**
+	 * Records a successful one charge on a customer account using a payments processor
+	 * @method charged
+	 * @static
+	 * @param {string} $payments The type of payments processor, could be "Authnet" or "Stripe"
+	 * @param {string} $amount specify the amount
+	 * @param {string} [$currency="USD"] set the currency, which will affect the amount
+	 * @param {array} [$options=array()] Any additional options
 	 * @param {string} [$options.chargeId] Payment id to set as id field of Assets_Charge table.
 	 *  If this is defined it means payment already processed (for example from webhook)
 	 *  and hence no need to call $adapter->charge
@@ -420,34 +522,16 @@ abstract class Assets extends Base_Assets
 	 * @throws Assets_Exception_ChargeFailed
 	 * @return {Assets_Charge} The saved database row for the charge
 	 */
-	static function charge($payments, $amount, $currency = 'USD', $options = array())
+	static function charged($payments, $amount, $currency = 'USD', $options = array())
 	{
-		if (empty($options['chargeId'])) {
-			if (Q_Config::get('Assets', 'charges', 'simulate', 'failed', false)) {
-				throw new Assets_Exception_ChargeFailed();
-			}
-		}
-		// -------------------------------------------------------------
-		// Normalize currency
-		// -------------------------------------------------------------
 		if (!$currency) {
 			$currency = 'USD';
 		}
 		$currency = strtoupper($currency);
 		$credits = Assets_Credits::convert($amount, $currency, 'credits');
-
 		$user        = Q::ifset($options, 'user', Users::loggedInUser(false));
 		$communityId = Q::ifset($options, 'communityId', Users::communityId());
 		$chargeId    = Q::ifset($options, 'chargeId', null);
-
-		// -------------------------------------------------------------
-		// Build adapter class name (critical)
-		// -------------------------------------------------------------
-		$className = 'Assets_Payments_' . ucfirst($payments);
-
-		// -------------------------------------------------------------
-		// Build merged metadata
-		// -------------------------------------------------------------
 		$baseMetadata = array(
 			"userId"      => $user ? $user->id : null,
 			"communityId" => $communityId,
@@ -458,105 +542,80 @@ abstract class Assets extends Base_Assets
 			"app"         => Q::app(),
 			"autoCharge"  => Q::ifset($options, "autoCharge", false) ? "1" : "0"
 		);
-
 		$mergedMeta = array_merge(
 			$baseMetadata,
 			Q::ifset($options, 'metadata', array())
 		);
-
 		$options['metadata'] = $mergedMeta;
-
-		// prepare adapter variable so hook sees it
 		$adapter = null;
-
-		// -------------------------------------------------------------
-		// HOOK: BEFORE Assets/charge
-		// -------------------------------------------------------------
-		Q::event(
-			'Assets/charge',
-			@compact(
-				'adapter',   // null before instantiation
-				'options',
-				'payments',
-				'amount',
-				'currency'
-			),
-			'before'
-		);
-
-		// -------------------------------------------------------------
-		// Charge Stripe or reuse existing chargeId
-		// -------------------------------------------------------------
-		if ($chargeId) {
-			// existing charge, just save it, and fire the hook with wasCharged
-			$customerId = Q::ifset($options, 'customerId', null);
-		} else {
-			// instantiate adapter after before-hook runs
-			// and actually charge stripe
-			$adapter = new $className((array)$options);
-			$customerId = $adapter->charge($amount, $currency, $options);  // Stripe call
-		}
-
-		// -------------------------------------------------------------
-		// Save charge row
-		// -------------------------------------------------------------
+		$customerId = Q::ifset($options, 'customerId', null);
 		$charge = new Assets_Charge();
 		$charge->userId = $user ? $user->id : null;
-
-		if ($chargeId) {
-			$charge->id = $chargeId;
-			if ($charge->retrieve()) {
-				// already exists -- idempotent
-				return $charge;
+		$charge->id = $chargeId;
+		if (!$charge->retrieve()) {
+			/**
+			 * Hook before a charge is about to be saved.
+			 * Handlers shouldn't return false unless they totally override this default method.
+			 * @event Assets/charged {before}
+			 */
+			if (false === Q::event(
+				'Assets/charged',
+				@compact(
+					'adapter',
+					'options',
+					'payments',
+					'amount',
+					'currency',
+					'chargeId'
+				),
+				'before'
+			)) {
+				return false;
 			}
+
+			// only do this once per charge -- idempotent
+			$charge->description = 'BoughtCredits';
+			if (!empty($options['reason'])) {
+				$charge->description .= ": ".$options['reason'];
+			}
+			$charge->publisherId = Q::ifset($options, 'metadata', 'toPublisherId', Q::ifset(
+				$options, 'metadata', 'publisherId', ''
+			));
+			$charge->streamName = Q::ifset($options, 'metadata', 'toStreamName', Q::ifset(
+				$options, 'metadata', 'streamName', ''
+			));
+			$attributes = array(
+				'payments'    => $payments,
+				'customerId'  => $customerId,
+				'amount'      => sprintf('%0.2f', $amount),
+				'currency'    => $currency,
+				'communityId' => $communityId,
+				'credits'     => $credits,
+				'metadata'    => $mergedMeta
+			);
+
+			$charge->attributes = Q::json_encode($attributes);
+			$charge->save();
+
+			/**
+			 * Hook after a Assets/charge has been made successfully and recorded.
+			 * This is where handlers should send notifications, etc. to users!
+			 * @event Assets/charged {after}
+			 */
+			Q::event(
+				'Assets/charged',
+				@compact(
+					'payments',
+					'amount',
+					'currency',
+					'user',
+					'communityId',
+					'charge',
+					'options'
+				),
+				'after'
+			);
 		}
-
-		$charge->description = 'BoughtCredits';
-		if (!empty($options['reason'])) {
-			$charge->description .= ": ".$options['reason'];
-		}
-
-		$attributes = array(
-			'payments'    => $payments,
-			'customerId'  => $customerId,
-			'amount'      => sprintf('%0.2f', $amount),
-			'currency'    => $currency,
-			'communityId' => $communityId,
-			'credits'     => $credits,
-			'metadata'    => $mergedMeta
-		);
-
-		$charge->attributes = Q::json_encode($attributes);
-		$charge->save();
-
-		$wasCharged = !empty($options['chargeId']);
-
-		/**
-		 * Hook after a Assets/charge has been made successfully.
-		 * Handlers should always check wasCharged === true before
-		 * generating any side effects!
-		 * @event Assets/charge {before}d
-		 * @param {string} communityId
-		 * @param {float} amountCredits
-		 * @param {string} reason
-		 * @param {string} fromUserId
-		 * @param {array} options
-		 */
-		Q::event(
-			'Assets/charge',
-			@compact(
-				'payments',
-				'amount',
-				'currency',
-				'user',
-				'communityId',
-				'charge',
-				'options',
-				'wasCharged',
-				'adapter'     // now a fully initialized adapter (unless chargeId)
-			),
-			'after'
-		);
 
 		return $charge;
 	}

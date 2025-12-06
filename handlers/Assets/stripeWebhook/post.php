@@ -45,7 +45,7 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 		// -------------------------------------------------------------
 		// Record a normal credit purchase charge (idempotent because chargeId exists)
 		// -------------------------------------------------------------
-		$charge = Assets::charge("stripe", $amount, $currency, $metadata);
+		$charge = Assets::charged("stripe", $amount, $currency, $metadata);
 
 		// -------------------------------------------------------------
 		// Check for Users_Intent continuation (pending Assets::pay)
@@ -56,7 +56,6 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 		);
 
         if ($shouldContinue) {
-			$intent = Users_Intent::fetch($metadata['intentToken']);
 			if ($intent && $intent->isValid()) {
 
 				$instructions = $intent->getAllInstructions();
