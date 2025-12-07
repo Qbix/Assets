@@ -316,7 +316,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$currentCredits = floatval($from_stream->getAttribute('amount'));
 
 		//--------------------------------------------------------------------
-		// 2. Insufficient credits → auto top up
+		// 2. Insufficient credits to auto top up
 		//--------------------------------------------------------------------
 		if ($currentCredits < $amount) {
 
@@ -598,7 +598,7 @@ class Assets_Credits extends Base_Assets_Credits
 			$fromStream->save(false, false);
 
 			//----------------------------------------------------------------
-			// 7. Credit publisher (SAVE LAST → COMMIT HERE)
+			// 7. Credit publisher (SAVE LAST to COMMIT HERE)
 			//----------------------------------------------------------------
 			$toStream->setAttribute("amount", $publisherCredits + $amountCredits);
 

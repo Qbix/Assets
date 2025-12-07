@@ -209,6 +209,7 @@ abstract class Assets extends Base_Assets
 	 * @param {array} [$options]
 	 * @param {string} [$options.payments="stripe"]
 	 * @param {string} [$options.currency="USD"]
+	 * @param {string} [$options.toUserId] the user getting paid, defaults to publisherId if that one is set
 	 * @param {string} [$options.toPublisherId] publisherId of the stream to pay for
 	 * @param {string} [$options.toStreamName] name of the stream to pay for
 	 * @param {string} [$options.autoCharge] set to true to attempt to automatically charge missing amount
@@ -236,12 +237,15 @@ abstract class Assets extends Base_Assets
 
 		$toPublisherId = isset($options["toPublisherId"]) ? $options["toPublisherId"] : null;
 		$toStreamName  = isset($options["toStreamName"]) ? $options["toStreamName"] : null;
-		$toUser        = isset($options["toUserId"]) ? $options["toUserId"] : null;
+		$toUserId        = isset($options["toUserId"]) ? $options["toUserId"] : null;
+		if (!$toUserId and $toPublisherId) {
+			$toUserId = $toPublisherId;
+		}
 
 		$items = isset($options["items"]) ? $options["items"] : null;
 		if (!empty($items)) {
 			foreach ($items as $k => $item) {
-				$options['items'][$k]['amount'] = Assets_Credits::convert($amount, $currency, "credits");
+				$options['items'][$k]['amount'] = Assets_Credits::convert($options['items'][$k]['amount'], $currency, "credits");
 			}
 		}
 
@@ -253,7 +257,7 @@ abstract class Assets extends Base_Assets
 		}
 
 		//-------------------------------------------------------------
-		// 1. Convert original currency → credits
+		// 1. Convert original currency to credits
 		//-------------------------------------------------------------
 		$needCredits = Assets_Credits::convert($amount, $currency, "credits");
 		$haveCredits = Assets_Credits::amount($communityId, $userId);
@@ -278,57 +282,58 @@ abstract class Assets extends Base_Assets
 				"payments"      => $payments,
 				"toPublisherId" => $toPublisherId,
 				"toStreamName"  => $toStreamName,
-				"toUserId"      => $toUser,
+				"toUserId"      => $toUserId,
 				"needCredits"   => $needCredits
 			);
 
 			$intent = Users_Intent::newIntent("Assets/charge", $userId, $instructions);
 
-			// Attempt autoCharge?
-			if ($autoCharge) {
-				try {
-					Assets::autoCharge(
-						$missingCredits,
-						$reason,
-						array(
-							"userId"   => $userId,
-							"currency" => "credits",
-							"payments" => $payments,
-							"metadata" => $metadata,
-							"intentToken" => $intent->token
-							// no need for full intent object,
-							// because this will result in a direct request
-							// to the payments processor,
-							// and our webhook can later fetch the intent from the database.
-						)
-					);
-					// if charge is successful, Stripe will continue with intent
-				} catch (Exception $e) {
-					// No throw — always return structured
-					return array(
-						"success" => false,
-						"details" => array(
-							"haveCredits" => $haveCredits,
-							"needCredits" => $needCredits,
-							"error"       => $e->getMessage(),
-							"intentToken" => $intent->token,
-							"intent" => 	$intent->exportArray()
-						)
-					);
-				}
+			if (!$autoCharge) {
+				// Not allowed to charge automatically: return intent token
+				// as well as intent object so the client knows what to do.
+				return array(
+					"success" => false,
+					"details" => array(
+						"haveCredits" => $haveCredits,
+						"needCredits" => $needCredits,
+						"intentToken" => $intent->token,
+						'intent' => $intent->exportArray()
+					)
+				);
 			}
 
-			// Not allowed to charge automatically: return intent token
-			// as well as intent so the client knows what to do.
-			return array(
-				"success" => false,
-				"details" => array(
-					"haveCredits" => $haveCredits,
-					"needCredits" => $needCredits,
-					"intentToken" => $intent->token,
-					'intent' => $intent->exportArray()
-				)
-			);
+			try {
+				Assets::autoCharge(
+					$missingCredits,
+					$reason,
+					array(
+						"userId"   => $userId,
+						"currency" => "credits",
+						"payments" => $payments,
+						"metadata" => $metadata,
+						"intentToken" => $intent->token
+						// no need for full intent object,
+						// because this will result in a direct request
+						// to the payments processor,
+						// and our webhook can later fetch the intent from the database.
+					)
+				);
+				// if charge is successful, Stripe will continue with intent
+			} catch (Exception $e) {
+				// No throw — always return structured.
+				// Return intent token as well as the
+				// intent object, so client knows what to do.
+				return array(
+					"success" => false,
+					"details" => array(
+						"haveCredits" => $haveCredits,
+						"needCredits" => $needCredits,
+						"error"       => $e->getMessage(),
+						"intentToken" => $intent->token,
+						"intent" => 	$intent->exportArray()
+					)
+				);
+			}
 		}
 
 		//-------------------------------------------------------------
@@ -336,7 +341,7 @@ abstract class Assets extends Base_Assets
 		//-------------------------------------------------------------
 		$opts = array_merge($options, array(
 			"amount"   => $needCredits,
-			"payments" => $gateway
+			"payments" => $payments
 		));
 
 		//-------------------------------------------------------------
@@ -360,8 +365,8 @@ abstract class Assets extends Base_Assets
 		try {
 			if ($toPublisherId && $toStreamName) {
 				Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
-			} else if ($toUser) {
-				Assets_Credits::transfer($communityId, $needCredits, $reason, $toUser, $userId, $opts);
+			} else if ($toUserId) {
+				Assets_Credits::transfer($communityId, $needCredits, $reason, $toUserId, $userId, $opts);
 			} else {
 				return array(
 					"success" => false,

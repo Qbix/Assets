@@ -26,7 +26,7 @@ Q.exports(function (Assets, priv) {
 					.get("payment_intent_client_secret");
 
 			if (!clientSecret) {
-				// No redirect → finish
+				// No redirect to finish
 				return Q.handle(callback, Q.Assets.Payments, [null, Q.Assets.Payments.stripeObject]);
 			}
 

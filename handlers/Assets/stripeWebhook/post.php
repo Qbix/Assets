@@ -6,7 +6,7 @@ require_once ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
  * Unified handler for completed Stripe charges.
  * Performs:
  *  1) Assets::charge()
- *  2) If metadata contains intentToken → continue pending Assets::pay()
+ *  2) If metadata contains intentToken to continue pending Assets::pay()
  *
  * Idempotency is preserved because we inject $metadata['chargeId']
  * using Stripe’s unique charge.id or payment_intent.id fallback.
@@ -56,7 +56,8 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 		);
 
         if ($shouldContinue) {
-			if ($intent && $intent->isValid()) {
+			$intent = new Users_Intent(array('token' => $metadata['intentToken']));
+			if ($intent->retrieve() && $intent->isValid()) {
 
 				$instructions = $intent->getAllInstructions();
 
@@ -152,6 +153,9 @@ function Assets_stripeWebhook_post($params = array())
 	// -------------------------------------------------------------
 	switch ($event->type) {
 
+		// ---------------------------------------------------------
+		// PAYMENT INTENT SUCCEEDED
+		// ---------------------------------------------------------
 		case 'payment_intent.succeeded':
 			try {
 				$pi       = $event->data->object;
@@ -164,10 +168,10 @@ function Assets_stripeWebhook_post($params = array())
 				);
 
 				// Inject chargeId for idempotency
-				$chargeObj = $pi->charges->data[0] ?? null;
+				$chargeObj          = $pi->charges->data[0] ?? null;
 				$metadata['chargeId'] = $chargeObj->id ?? $pi->id;
 
-				// app check
+				// App check
 				if (($metadata['app'] ?? null) !== Q::app()) {
 					Assets_Payments_Stripe::log('stripe', 'PI succeeded but wrong app');
 					break;
@@ -180,7 +184,9 @@ function Assets_stripeWebhook_post($params = array())
 			}
 			break;
 
-
+		// ---------------------------------------------------------
+		// INVOICE PAID (Subscriptions)
+		// ---------------------------------------------------------
 		case 'invoice.paid':
 			try {
 				$invoice  = $event->data->object;
@@ -197,19 +203,18 @@ function Assets_stripeWebhook_post($params = array())
 					$metadata, $event, 'invoice.paid'
 				);
 
-				// Inject invoice id as chargeId equivalent
 				$metadata['chargeId'] = $invoice->id;
 
 				Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $event);
-
-				Assets_Payments_Stripe::log('invoice.paid processed successfully', $invoice);
 
 			} catch (Exception $e) {
 				Assets_Payments_Stripe::log('stripe', 'Error in invoice.paid', $e);
 			}
 			break;
 
-
+		// ---------------------------------------------------------
+		// SETUP INTENT SUCCEEDED
+		// ---------------------------------------------------------
 		case 'setup_intent.succeeded':
 			try {
 				$si       = $event->data->object;
@@ -246,16 +251,18 @@ function Assets_stripeWebhook_post($params = array())
 			}
 			break;
 
-
+		// ---------------------------------------------------------
+		// IGNORE EVERYTHING ELSE
+		// ---------------------------------------------------------
 		default:
-			Assets_Payments_Stripe::log('Received unknown event', $event->type);
+			Assets_Payments_Stripe::log('stripe', 'Ignoring event', $event->type);
+			return;
 	}
 }
 
 
-
 /**
- * Normalize Stripe metadata object → array
+ * Normalize Stripe metadata object to array
  */
 function _stripe_meta($m)
 {
