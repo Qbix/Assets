@@ -21,13 +21,13 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 		// -------------------------------------------------------------
 		// Ensure idempotency: chargeId must exist if coming from webhook
 		// -------------------------------------------------------------
-		$chargeId = $metadata['chargeId'] ?? null;
+		$chargeId = Q::ifset($metadata, 'chargeId', null);
 		if (!$chargeId) {
 			// fallback — extract unique identifier from Stripe event
 			if ($event->type === 'payment_intent.succeeded') {
 				$pi = $event->data->object;
-				$chargeObj = $pi->charges->data[0] ?? null;
-				$chargeId  = $chargeObj->id ?? $pi->id;   // fallback to PI id
+				$chargeObj = Q::ifset($pi, 'charges', 'data', 0, null);
+				$chargeId  = Q::ifset($chargeObj, 'id', $pi->id);   // fallback to PI id
 			}
 			else if ($event->type === 'invoice.paid') {
 				$invoice = $event->data->object;
@@ -127,7 +127,7 @@ function Assets_stripeWebhook_post($params = array())
 	// Validate signature
 	// -------------------------------------------------------------
 	try {
-		$sig = $_SERVER['HTTP_STRIPE_SIGNATURE'] ?? '';
+		$sig = Q::ifset($_SERVER, 'HTTP_STRIPE_SIGNATURE', '');
 		$event = \Stripe\Webhook::constructEvent($payload, $sig, $endpoint_secret);
 	} catch (Exception $e) {
 		Assets_Payments_Stripe::log('stripe', 'Webhook signature error', $e);
@@ -159,20 +159,22 @@ function Assets_stripeWebhook_post($params = array())
 		case 'payment_intent.succeeded':
 			try {
 				$pi       = $event->data->object;
-				$amount   = (int)($pi->amount ?? 0) / 100;
-				$currency = $pi->currency ?? null;
+				$amount   = (int)(Q::ifset($pi, 'amount', 0)) / 100;
+				$currency = Q::ifset($pi, 'currency',  null);
 
-				$metadata = _stripe_meta($pi->metadata ?? null);
+				$metadata = _stripe_meta(Q::ifset($pi, 'metadata', null));
 				$metadata = Assets_Payments_Stripe::resolveMetadata(
 					$metadata, $event, 'payment_intent.succeeded'
 				);
 
 				// Inject chargeId for idempotency
-				$chargeObj          = $pi->charges->data[0] ?? null;
-				$metadata['chargeId'] = $chargeObj->id ?? $pi->id;
+				$chargeObj          = Q::ifset($pi, 'charges', 'data', 0, null);
+				$metadata['chargeId'] = Q::ifset($chargeObj, 'id', $pi->id);
+
+				Q::log($metadata, 'm');
 
 				// App check
-				if (($metadata['app'] ?? null) !== Q::app()) {
+				if (Q::ifset($metadata, 'app', null) !== Q::app()) {
 					Assets_Payments_Stripe::log('stripe', 'PI succeeded but wrong app');
 					break;
 				}
@@ -190,8 +192,8 @@ function Assets_stripeWebhook_post($params = array())
 		case 'invoice.paid':
 			try {
 				$invoice  = $event->data->object;
-				$amount   = (int)($invoice->amount_paid ?? 0) / 100;
-				$currency = $invoice->currency ?? null;
+				$amount   = (int)Q::ifset($invoice, 'amount_paid', 0) / 100;
+				$currency = Q::ifset($invoice, 'currency', null);
 
 				$lineMeta = null;
 				if (isset($invoice->lines->data[0]->metadata)) {
@@ -218,16 +220,16 @@ function Assets_stripeWebhook_post($params = array())
 		case 'setup_intent.succeeded':
 			try {
 				$si       = $event->data->object;
-				$metadata = _stripe_meta($si->metadata ?? null);
+				$metadata = _stripe_meta(Q::ifset($si, 'metadata', null));
 
-				$userId = $metadata['userId'] ?? null;
+				$userId = Q::ifset($metadata, 'userId', null);
 				if (!$userId) {
 					Assets_Payments_Stripe::log("Stripe setup intent missing userId");
 					return;
 				}
 
-				$pm         = $si->payment_method ?? null;
-				$customerId = $si->customer ?? null;
+				$pm         = Q::ifset($si, 'payment_method', null);
+				$customerId = Q::ifset($si, 'customer', null);
 
 				if (!$pm || !$customerId) {
 					Assets_Payments_Stripe::log("setup_intent missing fields");
