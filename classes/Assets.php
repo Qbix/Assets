@@ -311,7 +311,8 @@ abstract class Assets extends Base_Assets
 						"currency" => "credits",
 						"payments" => $payments,
 						"metadata" => $metadata,
-						"intentToken" => $intent->token
+						"intentToken" => $intent->token,
+						"dontLogMissingCustomer" => true
 						// no need for full intent object,
 						// because this will result in a direct request
 						// to the payments processor,
@@ -416,6 +417,8 @@ abstract class Assets extends Base_Assets
 	 * @param {string} [$options.reason] Business reason or semantic label.
 	 * @param {string} [$options.description=null] Description for the customer
 	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
+	*  @param {boolean} [$options.dontLogMissingCustomer] used internally
+	 * @param {boolean} 
 	 * @throws \Stripe\Error\Card
 	 * @throws Assets_Exception_DuplicateTransaction
 	 * @throws Assets_Exception_HeldForReview
@@ -668,11 +671,12 @@ abstract class Assets extends Base_Assets
 	 *     @param {string} [$options.currency="credits"] Currency code ("credits", "USD", "EUR", etc.).
 	 *     @param {string} [$options.payments="stripe"] Payment processor key.
 	 *     @param {string} [$options.userId] User performing the payment.
-	 *     @param {string} [$options.intentId] You can pass the id of a Users_Intent for continuations
+	 *     @param {string} [$options.intentToken] You can pass the token of a Users_Intent for continuations
 	 *     @param {string} [$options.resourceId=""] Quota resource bucket.
 	 *     @param {string} [$options.quotaName="autoCharge"] Quota name.
 	 *     @param {int}    [$options.units] Explicit quota units, otherwise auto.
 	 *     @param {array}  [$options.metadata] Arbitrary metadata.
+	 *     @param {boolean} [$options.dontLogMissingCustomer] used internally
 	 *
 	 * @throws Users_Exception_Quota
 	 * @throws Exception
@@ -759,7 +763,7 @@ abstract class Assets extends Base_Assets
 		// 2. Attempt real-money charge
 		try {
 			$result = Assets::charge($payments, $amount, $currency, compact(
-				'user', 'reason', 'metadata'
+				'user', 'reason', 'metadata', 'dontLogMissingCustomer'
 			));
 
 			// Commit quota usage

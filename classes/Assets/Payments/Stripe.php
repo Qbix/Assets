@@ -47,6 +47,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	 * @param {string} [$options.subscription=null] if this charge is related to a subscription stream
 	 * @param {string} [$options.subscription.publisherId]
 	 * @param {string} [$options.subscription.streamName]
+	 * @param {boolean} [$options.dontLogMissingCustomer] used internally
 	 * @throws \Stripe\Exception\CardException
 	 * @return {string} The customerId of the Assets_Customer that was successfully charged
 	 */
@@ -63,7 +64,9 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 		$customer->hash = Assets_Customer::getHash();
 		if (!$customer->retrieve() || !$customer->customerId) {
 			$err_mesage = "Invalid stripe customer id for userId=".$user->id;
-			self::log('Stripe.charges', $err_mesage);
+			if (empty($options['dontLogMissingCustomer'])) {
+				self::log('Stripe.charges', $err_mesage);
+			}
 			throw new Exception($err_mesage);
 		}
 
@@ -76,7 +79,6 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 			"off_session" => true,
 			"confirm" => true,
 		);
-		Q::take($options, array('description', 'metadata'), $params);
 
 		$stripeClient = new \Stripe\StripeClient($this->options['secret']);
 		$paymentMethods = $stripeClient->paymentMethods->all(['customer' => $customer->customerId, 'type' => 'card']);
