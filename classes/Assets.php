@@ -203,9 +203,9 @@ abstract class Assets extends Base_Assets
 	 * @method pay
 	 * @static
 	 * @param {string|null} $communityId
-	 * @param {string} $userId
+	 * @param {string} $userId The user who is being paid
 	 * @param {number} $amount Amount in the original currency
-	 * @param {string} $reason
+	 * @param {string} $reason The reason for the payment
 	 * @param {array} [$options]
 	 * @param {string} [$options.payments="stripe"]
 	 * @param {string} [$options.currency="USD"]
@@ -229,7 +229,6 @@ abstract class Assets extends Base_Assets
 		}
 
 		$communityId = $communityId ? $communityId : Users::communityId();
-		$user        = Users::fetch($userId, true);
 
 		$currency = isset($options["currency"]) ? $options["currency"] : "USD";
 		$payments  = isset($options["payments"]) ? $options["payments"] : "stripe";
@@ -348,6 +347,7 @@ abstract class Assets extends Base_Assets
 		//-------------------------------------------------------------
 		// 4. Optional subscription
 		//-------------------------------------------------------------
+		$stream = null;
 		if ($toPublisherId && $toStreamName) {
 			try {
 				$stream = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName);
@@ -364,8 +364,10 @@ abstract class Assets extends Base_Assets
 		// 5. Spend or Transfer inside try/catch
 		//-------------------------------------------------------------
 		try {
-			if ($toPublisherId && $toStreamName) {
+			if ($stream) {
 				Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
+				$referredAction = 'Assets/pay';
+				Users_Referred::handleReferral($userId, $toPublisherId, $referredAction, $stream->type);
 			} else if ($toUserId) {
 				Assets_Credits::transfer($communityId, $needCredits, $reason, $toUserId, $userId, $opts);
 			} else {
