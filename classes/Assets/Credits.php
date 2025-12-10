@@ -151,7 +151,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @method checkAmount
 	 * @static
 	 * @param {integer} $amount The amount of credits to spend.
-	 * @param {array} [$more.items] an array of items, each with "amount" key, and perhaps other data
+	 * @param {array} [$items] an array of items, each with "amount" key, and perhaps other data
 	 * @param {boolean} [$throwIfNotEqual=false]
 	 * @throws {Exception} If not equal
 	 */
@@ -185,13 +185,13 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {integer} $amount The amount of credits to grant.
 	 * @param {string} $reason Identifies the reason for granting the credits. Can't be null.
 	 * @param {string} [$userId=Users::loggedInUser()] User who is granted the credits. Null = logged user.
-	 * @param {array} [$more=array()] An array supplying more optional info, including
-	 * @param {string} [$more.publisherId] The publisher of the stream representing the purchase
-	 * @param {string} [$more.streamName] The name of the stream representing the purchase
-	 * @param {string} [$more.fromUserId=Q::app()] Consider passing Users::communityId() here instead
+	 * @param {array} [$attributes=array()] An array supplying attributes optional info, including
+	 * @param {string} [$attributes.publisherId] The publisher of the stream representing the purchase
+	 * @param {string} [$attributes.streamName] The name of the stream representing the purchase
+	 * @param {string} [$attributes.fromUserId=Q::app()] Consider passing Users::communityId() here instead
 	 * @return {boolean} Whether the grant occurred
 	 */
-	static function grant($communityId, $amount, $reason, $userId = null, $more = array())
+	static function grant($communityId, $amount, $reason, $userId = null, $attributes = array())
 	{
 		if (!$communityId) {
 			$communityId = Users::communityId();
@@ -201,7 +201,7 @@ class Assets_Credits extends Base_Assets_Credits
 			return false;
 		}
 
-		$more['amount'] = $amount;
+		$attributes['amount'] = $amount;
 
 		if (empty($reason)) {
 			throw new Q_Exception_RequiredField(array('field' => 'reason'));
@@ -213,38 +213,35 @@ class Assets_Credits extends Base_Assets_Credits
 		$stream->setAttribute('amount', $stream->getAttribute('amount') + $amount);
 		$stream->changed($communityId);
 
-		$fromUserId = Q::ifset($more, 'fromUserId', Q::app());
+		$fromUserId = Q::ifset($attributes, 'fromUserId', Q::app());
 
-		$assets_credits = self::createRow($communityId, $amount, $reason, $userId, $fromUserId, $more);
+		$assets_credits = self::createRow($communityId, $amount, $reason, $userId, $fromUserId, $attributes);
 
 		// Post that this user granted $amount credits by $reason
 		$text = Q_Text::get('Assets/content');
 		$utext = Q_Text::get('Users/content');
-		$more['toUserName'] = $more['invitedUserName'] = Q::ifset($utext, 'avatar', 'Someone', 'Someone');
+		$attributes['toUserName'] = $attributes['invitedUserName'] = Q::ifset($utext, 'avatar', 'Someone', 'Someone');
 		if ($communityId === Users::communityId()) {
-			$more['fromUserName'] = Users::communityName();
+			$attributes['fromUserName'] = Users::communityName();
 		} else {
-			$more['fromUserName'] = 'Community'; // reason text usually won't interpolate this
+			$attributes['fromUserName'] = 'Community'; // reason text usually won't interpolate this
 		}
 		$instructions = array_merge(array(
 			'app' => Q::app(),
 			'operation' => '+'
-		), self::fillInstructions($assets_credits, $more));
+		), self::attributesSnapshot($assets_credits, $attributes));
 		if ($reason == 'BoughtCredits') {
 			$type = 'Assets/credits/bought';
 		} elseif ($reason == 'BonusCredits') {
 			$type = 'Assets/credits/bonus';
 		} else {
 			$type = 'Assets/credits/granted';
-			$instructions['reason'] = self::reasonToText($reason, $instructions);
+			$instructions['reason'] = self::reasonToText($reason, $attributes);
 		}
 
 		$content = Q::ifset($text, 'messages', $type, "content", "Granted {{amount}} credits");
-		$stream->post($userId, array(
-			'type' => $type,
-			'content' => Q::interpolate($content, @compact('amount')),
-			'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
-		), true);
+		$content = Q::interpolate($content, @compact('amount'));
+		$stream->post($userId, compact('type', 'content', 'instructions'), true);
 
 		// TODO: take commissions out of the grant and give to user who invited this user
 		// $commission = Q_Config::expect("Assets", "credits", "commissions", "watching");
@@ -261,16 +258,16 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $toUserId The id of the user to whom you will transfer the credits
 	 * @param {string} $reason Identifies the reason for transfer. Can't be null.
 	 * @param {string} [$fromUserId] By default, this is the logged-in user 
-	 * @param {array} [$more] An array supplying more information
-	 * @param {array} [$more.items] an array of items, each with "publisherId", "streamName" and "amount"
-	 * @param {boolean} [$more.autoCharge=false] If true and not enough credits, try to top up via real money
-	 * @param {string} [$more.toPublisherId]  Stream publisher for which the payment is made
-	 * @param {string} [$more.toStreamName]   Stream name for which the payment is made
-	 * @param {string} [$more.fromPublisherId] Publisher of the consuming stream
-	 * @param {string} [$more.fromStreamName]  Name of the consuming stream
+	 * @param {array} [$attributes] An array supplying more information
+	 * @param {array} [$attributes.items] an array of items, each with "publisherId", "streamName" and "amount"
+	 * @param {boolean} [$attributes.autoCharge=false] If true and not enough credits, try to top up via real money
+	 * @param {string} [$attributes.toPublisherId]  Stream publisher for which the payment is made
+	 * @param {string} [$attributes.toStreamName]   Stream name for which the payment is made
+	 * @param {string} [$attributes.fromPublisherId] Publisher of the consuming stream
+	 * @param {string} [$attributes.fromStreamName]  Name of the consuming stream
 	 * @return {float} Returns how much was ultimately transferred
 	 */
-	static function transfer($communityId, $amount, $reason, $toUserId, $fromUserId = null, $more = array())
+	static function transfer($communityId, $amount, $reason, $toUserId, $fromUserId = null, $attributes = array())
 	{
 		if (!$communityId) {
 			$communityId = Users::communityId();
@@ -284,7 +281,7 @@ class Assets_Credits extends Base_Assets_Credits
 			));
 		}
 
-		if ($amount == 0 && empty($more['forceTransfer'])) {
+		if ($amount == 0 && empty($attributes['forceTransfer'])) {
 			return 0;
 		}
 
@@ -301,8 +298,8 @@ class Assets_Credits extends Base_Assets_Credits
 			));
 		}
 
-		if (!empty($more['items'])) {
-			self::checkAmount($amount, $more['items'], true);
+		if (!empty($attributes['items'])) {
+			self::checkAmount($amount, $attributes['items'], true);
 		}
 
 		//--------------------------------------------------------------------
@@ -320,7 +317,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------------
 		if ($currentCredits < $amount) {
 
-			if (empty($more['autoCharge'])) {
+			if (empty($attributes['autoCharge'])) {
 				$from_stream->executeRollback();
 				throw new Assets_Exception_NotEnoughCredits(array(
 					'missing' => $amount - $currentCredits
@@ -333,8 +330,8 @@ class Assets_Credits extends Base_Assets_Credits
 				Assets::autoCharge($missingCredits, $reason, array(
 					"userId"   => $fromUserId,
 					"currency" => "credits",
-					"payments" => Q::ifset($more, "payments", "stripe"),
-					"metadata" => Q::ifset($more, "metadata", array())
+					"payments" => Q::ifset($attributes, "payments", "stripe"),
+					"metadata" => Q::ifset($attributes, "metadata", array())
 				));
 			} catch (Exception $e) {
 				$from_stream->executeRollback();
@@ -345,9 +342,9 @@ class Assets_Credits extends Base_Assets_Credits
 			}
 
 			// retry
-			$more["autoCharge"] = false;
+			$attributes["autoCharge"] = false;
 			$from_stream->executeCommit(); 
-			return self::transfer($communityId, $amount, $reason, $toUserId, $fromUserId, $more);
+			return self::transfer($communityId, $amount, $reason, $toUserId, $fromUserId, $attributes);
 		}
 
 		//--------------------------------------------------------------------
@@ -361,10 +358,10 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------------
 		// 4. Create ledger row (no COMMIT)
 		//--------------------------------------------------------------------
-		$more["amount"]          = $amount;
-		$more["toUserId"]        = $toUserId;
-		$more["fromStreamTitle"] = null;
-		$more["toStreamTitle"]   = null;
+		$attributes["amount"]          = $amount;
+		$attributes["toUserId"]        = $toUserId;
+		$attributes["fromStreamTitle"] = null;
+		$attributes["toStreamTitle"]   = null;
 
 		try {
 
@@ -374,7 +371,7 @@ class Assets_Credits extends Base_Assets_Credits
 				$reason,
 				$toUserId,
 				$fromUserId,
-				$more
+				$attributes
 			);
 			$assets_credits->save(false, false);
 
@@ -408,7 +405,7 @@ class Assets_Credits extends Base_Assets_Credits
 		// 7. Post-commit feeds
 		//--------------------------------------------------------------------
 		$text = Q_Text::get('Assets/content');
-		$instructions = self::fillInstructions($assets_credits, $more);
+		$instructions = self::attributesSnapshot($assets_credits, $attributes);
 		$instructions['app']    = Q::app();
 		$instructions['reason'] = self::reasonToText($reason, $instructions);
 
@@ -568,14 +565,14 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------------
 		// 5. Create ledger row (no commit)
 		//--------------------------------------------------------------------
-		$more = $options;
-		$more["amount"]          = $amountCredits;
-		$more["fromStreamTitle"] = null;
-		$more["toStreamTitle"]   = null;
+		$attributes = $options;
+		$attributes["amount"]          = $amountCredits;
+		$attributes["fromStreamTitle"] = null;
+		$attributes["toStreamTitle"]   = null;
 
-		foreach ($more as $k => $v) {
+		foreach ($attributes as $k => $v) {
 			if (is_object($v) or is_array($v)) {
-				unset($more[$k]);
+				unset($attributes[$k]);
 			}
 		}
 
@@ -587,7 +584,7 @@ class Assets_Credits extends Base_Assets_Credits
 				$reason,
 				null,          // spend() has no toUserId
 				$fromUserId,
-				$more
+				$attributes
 			);
 			$assets_credits->save(false, false);
 
@@ -647,7 +644,7 @@ class Assets_Credits extends Base_Assets_Credits
 		// 9. Post-commit feed
 		//--------------------------------------------------------------------
 		$text = Q_Text::get("Assets/content");
-		$instructions = self::fillInstructions($assets_credits, $more);
+		$instructions = self::attributesSnapshot($assets_credits, $attributes);
 		$instructions["app"]       = Q::app();
 		$instructions["reason"]    = self::reasonToText($reason, $instructions);
 		$instructions["operation"] = "-";
@@ -673,10 +670,10 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $reason Semantic reason for the refund.
 	 * @param {string} $fromUserId User from whom the credits are taken.
 	 * @param {string} $toUserId User to whom the credits are given.
-	 * @param {array} [$more] Any additional options for transfer().
+	 * @param {array} [$attributes] Any additional options for transfer().
 	 * @return float Actual credits refunded.
 	 */
-	public static function refund($communityId, $amountCredits, $reason, $fromUserId, $toUserId, $more = array())
+	public static function refund($communityId, $amountCredits, $reason, $fromUserId, $toUserId, $attributes = array())
 	{
 		// Normalize community
 		if (!$communityId) {
@@ -701,7 +698,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------
 		// IMPORTANT: Suppress transfer() feeds and autoCharge
 		//--------------------------------------------------------------
-		$more = array_merge($more, array(
+		$attributes = array_merge($attributes, array(
 			'forceTransfer' => true,     // ensure transfer runs even with 0 amount
 			'autoCharge'    => false,    // never charge real money in refund
 			'_suppressFeeds'=> true      // custom internal flag
@@ -716,7 +713,7 @@ class Assets_Credits extends Base_Assets_Credits
 			$reason,
 			$toUserId,
 			$fromUserId,
-			$more
+			$attributes
 		);
 
 		//--------------------------------------------------------------
@@ -735,7 +732,7 @@ class Assets_Credits extends Base_Assets_Credits
 
 		$instructions = array(
 			"app"       => Q::app(),
-			"reason"    => self::reasonToText($reason, $more),
+			"reason"    => self::reasonToText($reason, $attributes),
 			"amount"    => $amountCredits,
 			"operation" => "+"
 		);
@@ -756,35 +753,35 @@ class Assets_Credits extends Base_Assets_Credits
 
 
 	/**
-	 * Fill message instructions with needed info
-	 * @method fillInstructions
+	 * Fill message instructions with needed attributes
+	 * @method attributesSnapshot
 	 * @static
 	 * @param {Assets_Credits} $assetsCredits Assets credits row.
-	 * @param {array} [$more=array()] Predefined instructions array.
+	 * @param {array} [$attributes=array()] Predefined instructions array.
 	 * @return {Array}
 	 */
-	static function fillInstructions ($assetsCredits, $more = array()) {
-		$more['creditsId'] = $assetsCredits->id;
-		$more['toStreamTitle'] = $assetsCredits->getAttribute("toStreamTitle");
-		$more['fromStreamTitle'] = $assetsCredits->getAttribute("fromStreamTitle");
-		$more['toUserId'] = $assetsCredits->toUserId ? $assetsCredits->toUserId : $assetsCredits->getAttribute("toUserId");
-		$more['fromUserId'] = $assetsCredits->fromUserId ? $assetsCredits->fromUserId : $assetsCredits->getAttribute("fromUserId");
-		$more['invitedUserId'] = $assetsCredits->getAttribute("invitedUserId");
-		$more['fromPublisherId'] = $assetsCredits->fromPublisherId;
-		$more['fromStreamName'] = $assetsCredits->fromStreamName;
-		$more['toPublisherId'] = $assetsCredits->toPublisherId;
-		$more['toStreamName'] = $assetsCredits->toStreamName;
-		if (empty($more['toUserName']) && !empty($more['toUserId'])) {
-			$more['toUserName'] = Streams::displayName($more['toUserId']);
+	static function attributesSnapshot ($assetsCredits, $attributes = array()) {
+		$attributes['creditsId'] = $assetsCredits->id;
+		$attributes['toStreamTitle'] = $assetsCredits->getAttribute("toStreamTitle");
+		$attributes['fromStreamTitle'] = $assetsCredits->getAttribute("fromStreamTitle");
+		$attributes['toUserId'] = $assetsCredits->toUserId ? $assetsCredits->toUserId : $assetsCredits->getAttribute("toUserId");
+		$attributes['fromUserId'] = $assetsCredits->fromUserId ? $assetsCredits->fromUserId : $assetsCredits->getAttribute("fromUserId");
+		$attributes['invitedUserId'] = $assetsCredits->getAttribute("invitedUserId");
+		$attributes['fromPublisherId'] = $assetsCredits->fromPublisherId;
+		$attributes['fromStreamName'] = $assetsCredits->fromStreamName;
+		$attributes['toPublisherId'] = $assetsCredits->toPublisherId;
+		$attributes['toStreamName'] = $assetsCredits->toStreamName;
+		if (empty($attributes['toUserName']) && !empty($attributes['toUserId'])) {
+			$attributes['toUserName'] = Streams::displayName($attributes['toUserId']);
 		}
-		if (empty($more['fromUserName']) && !empty($more['fromUserId'])) {
-			$more['fromUserName'] = Streams::displayName($more['fromUserId']);
+		if (empty($attributes['fromUserName']) && !empty($attributes['fromUserId'])) {
+			$attributes['fromUserName'] = Streams::displayName($attributes['fromUserId']);
 		}
-		if (empty($more['invitedUserName']) && !empty($more['invitedUserId'])) {
-			$more['invitedUserName'] = Streams::displayName($more['invitedUserId']);
+		if (empty($attributes['invitedUserName']) && !empty($attributes['invitedUserId'])) {
+			$attributes['invitedUserName'] = Streams::displayName($attributes['invitedUserId']);
 		}
 
-		return $more;
+		return $attributes;
 	}
 	/**
 	 * Create row in Assets_Credits table
@@ -795,14 +792,14 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $reason Identifies the reason for the transfer. Required.
 	 * @param {string} $toUserId User id who gets the credits.
 	 * @param {string} $fromUserId User id who transfer the credits.
-	 * @param {array} [$more] An array supplying more optional info, including things like
-	 * @param {string} [$more.toPublisherId] The publisher of the value-producing stream for which the payment is made
-	 * @param {string} [$more.toStreamName] The name of the stream value-producing for which the payment is made
-	 * @param {string} [$more.fromPublisherId] The publisher of the value-consuming stream on whose behalf the payment is made
-	 * @param {string} [$more.fromStreamName] The name of the value-consuming stream on whose behalf the payment is made
+	 * @param {array} [$attributes] An array supplying more optional info, including things like
+	 * @param {string} [$attributes.toPublisherId] The publisher of the value-producing stream for which the payment is made
+	 * @param {string} [$attributes.toStreamName] The name of the stream value-producing for which the payment is made
+	 * @param {string} [$attributes.fromPublisherId] The publisher of the value-consuming stream on whose behalf the payment is made
+	 * @param {string} [$attributes.fromStreamName] The name of the value-consuming stream on whose behalf the payment is made
 	 * @return {Assets_Credits} Assets_Credits row
 	 */
-	private static function createRow ($communityId, $amount, $reason, $toUserId = null, $fromUserId = null, $more = array())
+	private static function createRow ($communityId, $amount, $reason, $toUserId = null, $fromUserId = null, $attributes = array())
 	{
 		if (!$communityId) {
 			$communityId = Users::communityId();
@@ -811,32 +808,32 @@ class Assets_Credits extends Base_Assets_Credits
 		$toStreamName = null;
 		$fromPublisherId = null;
 		$fromStreamName = null;
-		if (Q::ifset($more, "toPublisherId", null)) {
-			$toPublisherId = $more['toPublisherId'];
+		if (Q::ifset($attributes, "toPublisherId", null)) {
+			$toPublisherId = $attributes['toPublisherId'];
 		}
-		if (Q::ifset($more, "toStreamName", null)) {
-			$toStreamName = $more['toStreamName'];
+		if (Q::ifset($attributes, "toStreamName", null)) {
+			$toStreamName = $attributes['toStreamName'];
 		}
-		if (Q::ifset($more, "fromPublisherId", null)) {
-			$fromPublisherId = $more['fromPublisherId'];
+		if (Q::ifset($attributes, "fromPublisherId", null)) {
+			$fromPublisherId = $attributes['fromPublisherId'];
 		}
-		if (Q::ifset($more, "fromStreamName", null)) {
-			$fromStreamName = $more['fromStreamName'];
+		if (Q::ifset($attributes, "fromStreamName", null)) {
+			$fromStreamName = $attributes['fromStreamName'];
 		}
 
-		unset($more['fromPublisherId']);
-		unset($more['fromStreamName']);
-		unset($more['toPublisherId']);
-		unset($more['toStreamName']);
+		unset($attributes['fromPublisherId']);
+		unset($attributes['fromStreamName']);
+		unset($attributes['toPublisherId']);
+		unset($attributes['toStreamName']);
 
 		if ($toPublisherId && $toStreamName) {
-			$more['toStreamTitle'] = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName)->title;
-			$more['toUserId'] = $toPublisherId;
+			$attributes['toStreamTitle'] = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName)->title;
+			$attributes['toUserId'] = $toPublisherId;
 		}
 
 		if ($fromPublisherId && $fromStreamName) {
-			$more['fromStreamTitle'] = Streams_Stream::fetch($fromPublisherId, $fromPublisherId, $fromStreamName, true)->title;
-			$more['fromUserId'] = $fromPublisherId;
+			$attributes['fromStreamTitle'] = Streams_Stream::fetch($fromPublisherId, $fromPublisherId, $fromStreamName, true)->title;
+			$attributes['fromUserId'] = $fromPublisherId;
 		}
 
 		$assets_credits = new Assets_Credits();
@@ -850,7 +847,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$assets_credits->reason = $reason;
 		$assets_credits->communityId = $communityId;
 		$assets_credits->amount = $amount;
-		$assets_credits->setAttribute($more);
+		$assets_credits->setAttribute($attributes);
 		$assets_credits->save();
 
 		return $assets_credits;
@@ -892,16 +889,16 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @method reasonToText
 	 * @static
 	 * @param {string} $key json key to search in Assets/content/credits.
-	 * @param {array} $more additional data needed to interpolate json with.
+	 * @param {array} $attributes additional data needed to interpolate json with.
 	 * @return {string}
 	 */
-	static function reasonToText($key, $more = array())
+	static function reasonToText($key, $attributes = array())
 	{
 		$texts = Q_Text::get('Assets/content');
 		$text = Q::ifset($texts, 'credits', $key, null);
 
-		if ($text && $more) {
-			$text = Q::interpolate($text, $more);
+		if ($text && $attributes) {
+			$text = Q::interpolate($text, $attributes);
 		}
 
 		return $text;
