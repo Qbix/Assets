@@ -1163,7 +1163,17 @@ class Assets_Credits extends Base_Assets_Credits
 		//---------------------------------------------------------
 		// Compute discount credits
 		//---------------------------------------------------------
-		$discountCredits = self::maxAmountFromPaymentAttribute(
+		$referrerUserId = Q::ifset($options, 'referrerUserId', null);
+
+		// fallback
+		if (!$referrerUserId) {
+			// If user arrived via invite, pass inviter into options earlier
+			$referrerUserId = Streams::$followedInvite
+				? Streams::$followedInvite->invitingUserId
+				: $userId;
+		}
+
+		$discountCredits = Assets_Credits::maxAmountFromPaymentAttribute(
 			$stream,
 			'discounts',
 			$needCredits,
