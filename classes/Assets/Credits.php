@@ -1019,7 +1019,42 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string|null} referrerUserId The inviter whose labels/roles determine rewards.
 	 *
 	 * @return {double} Maximum resulting credits; 0 if none match.
+	 *
+	 * Payment attribute schema (inside stream->attributes["payment"]):
+	 *
+	 *   {
+	 *     "payment": {
+	 *       "<type>": {                    // "discounts" or "commissions"
+	 *         "inviter": {
+	 *           "labels": {
+	 *             "<labelName>": {
+	 *               "credits":  <int>,     // fixed credits
+	 *               "amount":   <float>,   // fixed currency amount (auto-converted to credits)
+	 *               "fraction": <float>    // fraction of needCredits (e.g. 0.20 for 20%)
+	 *             }
+	 *           },
+	 *           "participantRoles": {
+	 *             "<roleName>": {
+	 *               "credits":  <int>,
+	 *               "amount":   <float>,
+	 *               "fraction": <float>
+	 *             }
+	 *           }
+	 *         }
+	 *       }
+	 *     }
+	 *   }
+	 *
+	 * Matching rules:
+	 *   - A rule applies if the inviter has the label or the participantRole.
+	 *   - Multiple rules may match; only the maximum resulting credits is returned.
+	 *
+	 * Ordering:
+	 *   1. credits
+	 *   2. amount → converted to credits
+	 *   3. fraction × needCredits
 	 */
+
 	static function maxAmountFromPaymentAttribute(
 		$stream,
 		$type,
@@ -1110,7 +1145,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 *   - {number}  amount   The discount in currency units
 	 *   - {number}  fraction The percentage discount of the original price
 	 */
-	static function discountInfo($stream, $userId, $currency = null)
+	static function discountInfo($stream, $userId, $currency = null, $referrerUserId = null)
 	{
 		$payment = $stream->getAttribute('payment', array());
 		$amount = Q::ifset($payment, 'amount', 0);
@@ -1121,12 +1156,16 @@ class Assets_Credits extends Base_Assets_Credits
 		$currency = $currency ?: Q::ifset($payment, 'currency', 'USD');
 		$needCredits = self::convert($amount, $currency, 'credits');
 	
+		if (empty($referrerUserId)) {
+			$referrerUserId = $userId;
+		}
+
 		$discountCredits = self::maxAmountFromPaymentAttribute(
 			$stream,
 			'discounts',
 			$needCredits,
 			$currency,
-			$userId
+			$referrerUserId
 		);
 	
 		if ($discountCredits <= 0) {
