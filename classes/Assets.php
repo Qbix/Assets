@@ -203,7 +203,7 @@ abstract class Assets extends Base_Assets
 	 * @method pay
 	 * @static
 	 * @param {string|null} $communityId
-	 * @param {string} $userId The user who is being paid
+	 * @param {string} $userId The user who is paying
 	 * @param {number} $amount Amount in the original currency
 	 * @param {string} $reason The reason for the payment
 	 * @param {array} [$options]
@@ -350,7 +350,9 @@ abstract class Assets extends Base_Assets
 		$stream = null;
 		if ($toPublisherId && $toStreamName) {
 			try {
-				$stream = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName);
+				$stream = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName, '*', array(
+					'skipAccess' => true
+				));
 				$sub = Q::ifset($options, 'subscribe', array());
 				if ($sub !== false) {
 					$stream->subscribe($sub);
@@ -367,7 +369,11 @@ abstract class Assets extends Base_Assets
 			if ($stream) {
 				Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
 				$referredAction = 'Assets/pay';
-				Users_Referred::handleReferral($userId, $toPublisherId, $referredAction, $stream->type);
+				$extras = compact('amount', 'haveCredits', 'needCredits', 'reason');
+				Q::take($options, array(
+					'payments', 'currency', 'toUserId', 'toPublisherId', 'toStreamName'
+				), $extras);
+				Users_Referred::handleReferral($userId, $toPublisherId, $referredAction, $stream->type, compact('extras'));
 			} else if ($toUserId) {
 				Assets_Credits::transfer($communityId, $needCredits, $reason, $toUserId, $userId, $opts);
 			} else {
@@ -389,7 +395,7 @@ abstract class Assets extends Base_Assets
 		//-------------------------------------------------------------
 		Q::event(
 			'Assets/pay',
-			@compact('communityId', 'userId', 'amount', 'reason', 'options'),
+			@compact('communityId', 'userId', 'amount', 'reason', 'options', 'stream', 'needCredits', 'haveCredits'),
 			'after'
 		);
 

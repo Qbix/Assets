@@ -184,11 +184,11 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $communityId The community managing the credits, pass null for Users::currentCommunity()
 	 * @param {integer} $amount The amount of credits to grant.
 	 * @param {string} $reason Identifies the reason for granting the credits. Can't be null.
-	 * @param {string} [$userId=Users::loggedInUser()] User who is granted the credits. Null = logged user.
+	 * @param {string} [$userId=Users::loggedInUser()] User who is granted the credits. Defaults to logged in user.
 	 * @param {array} [$attributes=array()] An array supplying attributes optional info, including
 	 * @param {string} [$attributes.publisherId] The publisher of the stream representing the purchase
 	 * @param {string} [$attributes.streamName] The name of the stream representing the purchase
-	 * @param {string} [$attributes.fromUserId=Q::app()] Consider passing Users::communityId() here instead
+	 * @param {string} [$attributes.fromUserId=Users::communityId()] Consider passing Users::currentCommunityId() here.
 	 * @return {boolean} Whether the grant occurred
 	 */
 	static function grant($communityId, $amount, $reason, $userId = null, $attributes = array())
@@ -213,7 +213,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$stream->setAttribute('amount', $stream->getAttribute('amount') + $amount);
 		$stream->changed($communityId);
 
-		$fromUserId = Q::ifset($attributes, 'fromUserId', Q::app());
+		$fromUserId = Q::ifset($attributes, 'fromUserId', Users::communityId());
 
 		$assets_credits = self::createRow($communityId, $amount, $reason, $userId, $fromUserId, $attributes);
 

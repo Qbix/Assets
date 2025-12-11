@@ -21,6 +21,7 @@
 			"Users/insertUser": ["Assets/after/Users_insertUser"],
 			"Users/updateUserIds": ["Assets/after/Users_updateUserIds"],
 			"Users/filter/users": ["Assets/after/Users_filter_users"],
+			"Assets/pay": ["Assets/after/Assets_pay"],
 			"Assets/charged": ["Assets/after/Assets_charged"],
 			"Assets/credits/spent": ["Assets/after/Assets_credits_spent"],
 			"Assets/startSubscription": ["Assets/after/Assets_startSubscription"],
