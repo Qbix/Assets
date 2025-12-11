@@ -55,6 +55,29 @@ $ASSETS_CURRENCY_LOCALES = array(
 abstract class Assets extends Base_Assets
 {
 	/**
+	 * Returns the first currency under Assets/credits/exchange that's not "credits"
+	 * @method appCurrency
+	 * @static
+	 * @return {string} Defaults to USD
+	 */
+	static function appCurrency()
+	{
+		// Exchange table: e.g. {"credits":1, "usd":100, "eur":90}
+		$exchange = Q_Config::get('Assets', 'credits', 'exchange', array());
+		$realCurrency = null;
+		// Pick first non-credits currency
+		foreach ($exchange as $code => $ratio) {
+			$codeUpper = strtoupper($code);
+			if ($codeUpper !== 'CREDITS') {
+				$realCurrency = $codeUpper;
+				break;
+			}
+		}
+		// Fallback only if config has no real currencies
+		return $realCurrency ? $realCurrency : 'USD';
+	}
+	
+	/**
 	 * Get the official currency name (e.g. "US Dollar") and symbol (e.g. $)
 	 * @method currency
 	 * @static
@@ -67,8 +90,8 @@ abstract class Assets extends Base_Assets
 		$config = Q_Config::get('Assets', 'currencies', array());
         $json = Q::readFile(ASSETS_PLUGIN_CONFIG_DIR.DS.'currencies.json',
 		Q::take($config, array(
-			'ignoreCache' => true,
-			'dontCache' => true,
+			'ignoreCache' => false,
+			'dontCache' => false,
 			'duration' => 3600
 		)));
 		$code = strtoupper($code);
@@ -261,8 +284,35 @@ abstract class Assets extends Base_Assets
 		$needCredits = Assets_Credits::convert($amount, $currency, "credits");
 		$haveCredits = Assets_Credits::amount($communityId, $userId);
 
+		// -------------------------------------------------------------
+		// 2. Apply inviter-based discounts (if any)
+		// -------------------------------------------------------------
+		$stream = null;
+		if ($toPublisherId && $toStreamName) {
+			try {
+				$stream = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName, '*', array(
+					'skipAccess' => true
+				));
+
+				$discountCredits = Assets_Credits::maxAmountFromPaymentAttribute(
+					$stream,
+					'discounts',
+					$needCredits,
+					$currency,
+					$userId // discount applies to THIS paying user
+				);
+
+				if ($discountCredits > 0) {
+					$needCredits = max(0, $needCredits - $discountCredits);
+				}
+
+			} catch (Exception $e) {
+				// Fail-safe: ignore discounts, never break payment flow
+			}
+		}
+
 		//-------------------------------------------------------------
-		// 2. Insufficient credits
+		// 3. Attempt to initiate charge if insufficient credits
 		//-------------------------------------------------------------
 		if ($haveCredits < $needCredits) {
 
@@ -337,7 +387,7 @@ abstract class Assets extends Base_Assets
 		}
 
 		//-------------------------------------------------------------
-		// 3. Prepare opts for spend/transfer
+		// 4. Prepare opts for spend/transfer
 		//-------------------------------------------------------------
 		$opts = array_merge($options, array(
 			"amount"   => $needCredits,
@@ -345,14 +395,10 @@ abstract class Assets extends Base_Assets
 		));
 
 		//-------------------------------------------------------------
-		// 4. Optional subscription
+		// 5. Optional subscription
 		//-------------------------------------------------------------
-		$stream = null;
-		if ($toPublisherId && $toStreamName) {
+		if ($stream) {
 			try {
-				$stream = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName, '*', array(
-					'skipAccess' => true
-				));
 				$sub = Q::ifset($options, 'subscribe', array());
 				if ($sub !== false) {
 					$stream->subscribe($sub);
@@ -363,13 +409,14 @@ abstract class Assets extends Base_Assets
 		}
 
 		//-------------------------------------------------------------
-		// 5. Spend or Transfer inside try/catch
+		// 6. Spend or Transfer inside try/catch
 		//-------------------------------------------------------------
 		try {
 			if ($stream) {
 				Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
 				$referredAction = 'Assets/pay';
 				$extras = compact('amount', 'haveCredits', 'needCredits', 'reason');
+				$extras['discountCredits'] = isset($discountCredits) ? $discountCredits : 0;
 				Q::take($options, array(
 					'payments', 'currency', 'toUserId', 'toPublisherId', 'toStreamName'
 				), $extras);
@@ -391,7 +438,7 @@ abstract class Assets extends Base_Assets
 		}
 
 		//-------------------------------------------------------------
-		// 6. After hook
+		// 7. After hook
 		//-------------------------------------------------------------
 		Q::event(
 			'Assets/pay',
@@ -400,7 +447,7 @@ abstract class Assets extends Base_Assets
 		);
 
 		//-------------------------------------------------------------
-		// 7. Success
+		// 8. Success. Break out the expensive bottle of champagne
 		//-------------------------------------------------------------
 		return array(
 			"success" => true,
@@ -712,25 +759,7 @@ abstract class Assets extends Base_Assets
 
 		// If caller passed currency="credits", convert to first real currency
 		if ($currency === 'CREDITS') {
-
-			// Exchange table: e.g. {"credits":1, "usd":100, "eur":90}
-			$exchange = Q_Config::get('Assets', 'credits', 'exchange', array());
-
-			$realCurrency = null;
-
-			// Pick first non-credits currency
-			foreach ($exchange as $code => $ratio) {
-				$codeUpper = strtoupper($code);
-				if ($codeUpper !== 'CREDITS') {
-					$realCurrency = $codeUpper;
-					break;
-				}
-			}
-
-			// Fallback only if config has no real currencies
-			if (!$realCurrency) {
-				$realCurrency = 'USD';
-			}
+			$realCurrency = Assets::appCurrency();
 
 			// Convert credits -> realCurrency
 			$amount = Assets_Credits::convert($amount, 'credits', $realCurrency);
@@ -771,7 +800,7 @@ abstract class Assets extends Base_Assets
 		// 2. Attempt real-money charge
 		try {
 			$result = Assets::charge($payments, $amount, $currency, compact(
-				'user', 'reason', 'metadata', 'dontLogMissingCustomer'
+				'user', 'reason', 'metadata'
 			));
 
 			// Commit quota usage

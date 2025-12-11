@@ -16,7 +16,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @method format
 	 * @static
 	 * @param {float} $amount
-	 * @return {array} The 
+	 * @return {string}
 	 */
 	static function format($amount)
 	{
@@ -414,11 +414,13 @@ class Assets_Credits extends Base_Assets_Credits
 		$type = 'Assets/credits/sent';
 		$content = Q::ifset($text, 'messages', $type, 'content', "Sent {{amount}} credits");
 
-		$from_stream->post($communityId, array(
-			'type'         => $type,
-			'content'      => Q::interpolate($content, $instructions),
-			'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
-		));
+		if (empty($attributes['_suppressFeeds'])) {
+			$from_stream->post($communityId, array(
+				'type'         => $type,
+				'content'      => Q::interpolate($content, $instructions),
+				'instructions' => Q::json_encode($instructions, Q::JSON_FORCE_OBJECT)
+			));
+		}
 
 		// Receiver feed
 		$instructions['operation'] = '+';
@@ -689,7 +691,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------
 		if (false === Q::event(
 			'Assets/credits/refund',
-			@compact('communityId','amountCredits','reason','fromUserId','toUserId','options'),
+			@compact('communityId','amountCredits','reason','fromUserId','toUserId','attributes'),
 			'before'
 		)) {
 			return false;
@@ -721,7 +723,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------
 		Q::event(
 			'Assets/credits/refund',
-			@compact('communityId','amountCredits','reason','fromUserId','toUserId','options'),
+			@compact('communityId','amountCredits','reason','fromUserId','toUserId','attributes'),
 			'after'
 		);
 
@@ -848,8 +850,6 @@ class Assets_Credits extends Base_Assets_Credits
 		$assets_credits->communityId = $communityId;
 		$assets_credits->amount = $amount;
 		$assets_credits->setAttribute($attributes);
-		$assets_credits->save();
-
 		return $assets_credits;
 	}
 	/**
@@ -989,6 +989,7 @@ class Assets_Credits extends Base_Assets_Credits
 
 		$userId = $userId ? $userId : Users::loggedInUser(true)->id;
 
+		// thresholds in config should be in credits
 		$bonuses = Q_Config::get("Assets", "credits", "bonus", "bought", null);
 		if (!is_array($bonuses) || empty($bonuses)) {
 			return;
@@ -1001,6 +1002,163 @@ class Assets_Credits extends Base_Assets_Credits
 				return;
 			}
 		}
+	}
+
+	/**
+	 * Compute the maximum credits-value specified in a payment attribute,
+	 * such as "commissions" or "discounts", based on inviter labels or roles.
+	 * Does not modify anything. Pure helper.
+	 *
+	 * @method maxAmountFromPaymentAttribute
+	 * @static
+	 * @param {Streams_Stream} stream The stream containing payment attributes
+	 * @param {string} type Either "commissions" or "discounts"
+	 * @param {double} needCredits The full credits-value of the purchase
+	 * @param {string|null} currency Currency for converting "amount" entries.
+	 *   If null, tries payment.currency. If still null, returns 0.
+	 * @param {string|null} referrerUserId The inviter whose labels/roles determine rewards.
+	 *
+	 * @return {double} Maximum resulting credits; 0 if none match.
+	 */
+	static function maxAmountFromPaymentAttribute(
+		$stream,
+		$type,
+		$needCredits,
+		$currency = null,
+		$referrerUserId = null
+	) {
+		$payment = $stream->getAttribute('payment', array());
+		$section = Q::ifset($payment, $type, array());
+		$inviter = Q::ifset($section, 'inviter', array());
+		$labels = Q::ifset($inviter, 'labels', array());
+		$proles = Q::ifset($inviter, 'participantRoles', array());
+		if (!$currency) {
+			$currency = Q::ifset($payment, 'currency', null);
+			if (!$currency) {
+				$currency = Assets::appCurrency();
+			}
+		}
+		if (!$referrerUserId) {
+			return 0;
+		}
+		$infos = array();
+
+		//---------------------------------------------------------
+		// 1. Label-based rules
+		//---------------------------------------------------------
+		if ($labels) {
+			$contacts = Users_Contact::select()->where(array(
+				'userId'=>$stream->publisherId,
+				'label'=>array_keys($labels),
+				'contactUserId'=>$referrerUserId
+			))->fetchDbRows();
+
+			foreach ($contacts as $contact) {
+				$infos[] = $labels[$contact->label];
+			}
+		}
+
+		//---------------------------------------------------------
+		// 2. Participant-role rules
+		//---------------------------------------------------------
+		if ($proles) {
+			$participant = new Streams_Participant(array(
+				'publisherId'=>$stream->publisherId,
+				'streamName'=>$stream->name,
+				'userId'=>$referrerUserId
+			));
+			if ($participant->retrieve()) {
+				foreach ($proles as $role=>$info) {
+					if ($participant->testRoles(array($role))) {
+						$infos[] = $info;
+					}
+				}
+			}
+		}
+
+		//---------------------------------------------------------
+		// 3. Compute max credits
+		//---------------------------------------------------------
+		$creditsMax = 0;
+		foreach ($infos as $info) {
+			if ($credits = Q::ifset($info, 'credits', null)) {
+				// already in credits
+			} else if ($amount = Q::ifset($info, 'amount', null)) {
+				$credits = Assets_Credits::convert($amount, $currency, 'credits');
+			} else if ($fraction = Q::ifset($info, 'fraction', null)) {
+				$credits = $needCredits * $fraction;
+			} else {
+				continue;
+			}
+			$creditsMax = max($creditsMax, $credits);
+		}
+
+		return $creditsMax;
+	}
+
+	/**
+	 * Computes discount info for a user invited to a stream.
+	 * Does not modify UI; returns structured information.
+	 *
+	 * @method discountInfo
+	 * @static
+	 * @param {Streams_Stream} $stream The stream being evaluated
+	 * @param {string} $userId The user for whom we compute the discount
+	 * @param {string|null} [$currency] Optional currency override
+	 * @return {array} Returns an associative array with:
+	 *   - {integer} credits  The discount represented in credits
+	 *   - {number}  amount   The discount in currency units
+	 *   - {number}  fraction The percentage discount of the original price
+	 */
+	static function discountInfo($stream, $userId, $currency = null)
+	{
+		$payment = $stream->getAttribute('payment', array());
+		$amount = Q::ifset($payment, 'amount', 0);
+		if ($amount <= 0) {
+			return array('credits'=>0,'amount'=>0,'fraction'=>0,'description'=>'');
+		}
+	
+		$currency = $currency ?: Q::ifset($payment, 'currency', 'USD');
+		$needCredits = self::convert($amount, $currency, 'credits');
+	
+		$discountCredits = self::maxAmountFromPaymentAttribute(
+			$stream,
+			'discounts',
+			$needCredits,
+			$currency,
+			$userId
+		);
+	
+		if ($discountCredits <= 0) {
+			return array('credits'=>0,'amount'=>0,'fraction'=>0,'description'=>'');
+		}
+	
+		$discountAmount = self::convert($discountCredits, 'credits', $currency);
+		$fraction = $amount > 0 ? round($discountAmount / $amount, 2) : 0;
+	
+		// Build localized description
+		$percent = round($fraction * 100);
+		$text = Q_Text::get('Assets/content');
+		$dtext = Q::ifset($text, 'discounts', array());
+	
+		if ($percent > 0) {
+			$description = Q::interpolate(
+				Q::ifset($dtext, 'PercentDescription', ''),
+				array('percent' => $percent . '%')
+			);
+		} else {
+			$description = Q::interpolate(
+				Q::ifset($dtext, 'FormattedDescription', ''),
+				array('format' => Q_Html::formatCurrency($discountAmount, $currency))
+			);
+		}
+	
+		return array(
+			'credits'     => $discountCredits,
+			'amount'      => $discountAmount,
+			'fraction'    => $fraction,
+			'description' => $description
+		);
 	}
 
 	/**
