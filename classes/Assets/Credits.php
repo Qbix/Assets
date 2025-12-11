@@ -1152,14 +1152,17 @@ class Assets_Credits extends Base_Assets_Credits
 		if ($amount <= 0) {
 			return array('credits'=>0,'amount'=>0,'fraction'=>0,'description'=>'');
 		}
-	
+
 		$currency = $currency ?: Q::ifset($payment, 'currency', 'USD');
 		$needCredits = self::convert($amount, $currency, 'credits');
-	
+
 		if (empty($referrerUserId)) {
 			$referrerUserId = $userId;
 		}
 
+		//---------------------------------------------------------
+		// Compute discount credits
+		//---------------------------------------------------------
 		$discountCredits = self::maxAmountFromPaymentAttribute(
 			$stream,
 			'discounts',
@@ -1167,31 +1170,58 @@ class Assets_Credits extends Base_Assets_Credits
 			$currency,
 			$referrerUserId
 		);
-	
+
 		if ($discountCredits <= 0) {
 			return array('credits'=>0,'amount'=>0,'fraction'=>0,'description'=>'');
 		}
-	
+
 		$discountAmount = self::convert($discountCredits, 'credits', $currency);
 		$fraction = $amount > 0 ? round($discountAmount / $amount, 2) : 0;
-	
-		// Build localized description
-		$percent = round($fraction * 100);
-		$text = Q_Text::get('Assets/content');
+
+
+		//---------------------------------------------------------
+		// Detect whether the matched rule used "fraction"
+		//---------------------------------------------------------
+		$payment = $stream->getAttribute('payment', array());
+		$section = Q::ifset($payment, 'discounts', array());
+		$inviter = Q::ifset($section, 'inviter', array());
+		$labels  = Q::ifset($inviter, 'labels', array());
+		$proles  = Q::ifset($inviter, 'participantRoles', array());
+
+		$explicitFraction = false;
+		foreach (array($labels, $proles) as $group) {
+			foreach ($group as $info) {
+				if (isset($info['fraction'])) {
+					$explicitFraction = true;
+					break 2;
+				}
+			}
+		}
+
+
+		//---------------------------------------------------------
+		// Build localized description using Assets::format()
+		//---------------------------------------------------------
+		$text  = Q_Text::get('Assets/content');
 		$dtext = Q::ifset($text, 'discounts', array());
-	
-		if ($percent > 0) {
+
+		if ($explicitFraction) {
+			$percent = round($fraction * 100);
+
 			$description = Q::interpolate(
 				Q::ifset($dtext, 'PercentDescription', ''),
 				array('percent' => $percent . '%')
 			);
 		} else {
+			// Use your currency formatter — short format gives e.g. "$25.00"
+			$formatted = Assets::format($currency, $discountAmount, true);
+
 			$description = Q::interpolate(
 				Q::ifset($dtext, 'FormattedDescription', ''),
-				array('format' => Q_Html::formatCurrency($discountAmount, $currency))
+				array('format' => $formatted)
 			);
 		}
-	
+
 		return array(
 			'credits'     => $discountCredits,
 			'amount'      => $discountAmount,
