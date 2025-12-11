@@ -294,13 +294,39 @@ abstract class Assets extends Base_Assets
 					'skipAccess' => true
 				));
 
+				// Determine inviter (referrer) if present
+				$referrerUserId = null;
+
+				// 1. If an invite was followed in this request:
+				if (isset(Streams::$followedInvite) && Streams::$followedInvite) {
+					$referrerUserId = Streams::$followedInvite->invitingUserId;
+				}
+
+				// 2. Or if a referral is stored on the participant record (common case)
+				if (!$referrerUserId && $stream) {
+					$participant = new Streams_Participant(array(
+						'publisherId' => $stream->publisherId,
+						'streamName'  => $stream->name,
+						'userId'      => $userId
+					));
+					if ($participant->retrieve()) {
+						$referrerUserId = $participant->extra('invitingUserId');
+					}
+				}
+
+				// Fallback (no inviter)
+				if (!$referrerUserId) {
+					$referrerUserId = null;
+				}
+
 				$discountCredits = Assets_Credits::maxAmountFromPaymentAttribute(
 					$stream,
 					'discounts',
 					$needCredits,
 					$currency,
-					$userId // discount applies to THIS paying user
+					$referrerUserId
 				);
+
 
 				if ($discountCredits > 0) {
 					$needCredits = max(0, $needCredits - $discountCredits);
