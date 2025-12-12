@@ -45,4 +45,12 @@ Assets_Credits.prototype.setUp = function () {
 	// overrides the Base class
 };
 
+Assets_Credits.prototype.beforeSave = function (modifiedFields) {
+	if (!this.communityId) {
+		this.communityId = Users.communityId();
+		modifiedFields.communityId = this.communityId;
+	}
+	return modifiedFields;
+};
+
 module.exports = Assets_Credits;

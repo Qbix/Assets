@@ -25,6 +25,15 @@ var Row = Q.require('Db/Row');
  * @param {String|Buffer} [fields.id] defaults to ""
  * @param {String|Buffer} [fields.publisherId] defaults to ""
  * @param {String|Buffer} [fields.streamName] defaults to ""
+ * @param {Number} [fields.amount] defaults to 0
+ * @param {String} [fields.currency] defaults to null
+ * @param {Integer} [fields.credits] defaults to 0
+ * @param {String} [fields.paymentProvider] defaults to null
+ * @param {String} [fields.providerCustomerId] defaults to null
+ * @param {Integer} [fields.autoCharge] defaults to 0
+ * @param {String|Buffer} [fields.communityId] defaults to null
+ * @param {String} [fields.app] defaults to null
+ * @param {String} [fields.reason] defaults to null
  * @param {String} [fields.description] defaults to ""
  * @param {String} [fields.attributes] defaults to ""
  * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
@@ -59,6 +68,60 @@ Q.mixin(Base, Row);
  * @type String|Buffer
  * @default ""
  * name of the stream regarding which the charge was made
+ */
+/**
+ * @property amount
+ * @type Number
+ * @default 0
+ * 
+ */
+/**
+ * @property currency
+ * @type String
+ * @default null
+ * 
+ */
+/**
+ * @property credits
+ * @type Integer
+ * @default 0
+ * 
+ */
+/**
+ * @property paymentProvider
+ * @type String
+ * @default null
+ * 
+ */
+/**
+ * @property providerCustomerId
+ * @type String
+ * @default null
+ * 
+ */
+/**
+ * @property autoCharge
+ * @type Integer
+ * @default 0
+ * 
+ */
+/**
+ * @property communityId
+ * @type String|Buffer
+ * @default null
+ * 
+ */
+/**
+ * @property app
+ * @type String
+ * @default null
+ * 
+ */
+/**
+ * @property reason
+ * @type String
+ * @default null
+ * 
  */
 /**
  * @property description
@@ -297,6 +360,15 @@ Base.fieldNames = function () {
 		"id",
 		"publisherId",
 		"streamName",
+		"amount",
+		"currency",
+		"credits",
+		"paymentProvider",
+		"providerCustomerId",
+		"autoCharge",
+		"communityId",
+		"app",
+		"reason",
 		"description",
 		"attributes",
 		"insertedTime",
@@ -454,6 +526,318 @@ Base.prototype.maxSize_streamName = function () {
 Base.column_streamName = function () {
 
 return [["varbinary","255","",false],false,"",""];
+};
+
+/**
+ * Method is called before setting the field to verify if value is a number
+ * @method beforeSet_amount
+ * @param {number} value
+ * @return {number} The value
+ * @throws {Error} If 'value' is not number
+ */
+Base.prototype.beforeSet_amount = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		value = Number(value);
+		if (isNaN(value))
+			throw new Error('Non-number value being assigned to '+this.table()+".amount");
+		return value;
+};
+
+	/**
+	 * Returns schema information for amount column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_amount = function () {
+
+return [["decimal","10,2","",false],true,"",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+ * Optionally accept numeric value which is converted to string
+ * @method beforeSet_currency
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
+ */
+Base.prototype.beforeSet_currency = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		if (typeof value !== "string" && typeof value !== "number")
+			throw new Error('Must pass a String to '+this.table()+".currency");
+		if (typeof value === "string" && value.length > 3)
+			throw new Error('Exceedingly long value being assigned to '+this.table()+".currency");
+		return value;
+};
+
+	/**
+	 * Returns the maximum string length that can be assigned to the currency field
+	 * @return {integer}
+	 */
+Base.prototype.maxSize_currency = function () {
+
+		return 3;
+};
+
+	/**
+	 * Returns schema information for currency column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_currency = function () {
+
+return [["char","3","",false],true,"",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if integer value falls within allowed limits
+ * @method beforeSet_credits
+ * @param {integer} value
+ * @return {integer} The value
+ * @throws {Error} An exception is thrown if 'value' is not integer or does not fit in allowed range
+ */
+Base.prototype.beforeSet_credits = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		value = Number(value);
+		if (isNaN(value) || Math.floor(value) != value) 
+			throw new Error('Non-integer value being assigned to '+this.table()+".credits");
+		if (value < -9.2233720368548E+18 || value > 9223372036854775807)
+			throw new Error("Out-of-range value "+JSON.stringify(value)+" being assigned to "+this.table()+".credits");
+		return value;
+};
+
+/**
+ * Returns the maximum integer that can be assigned to the credits field
+ * @return {integer}
+ */
+Base.prototype.maxSize_credits = function () {
+
+		return 9223372036854775807;
+};
+
+	/**
+	 * Returns schema information for credits column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_credits = function () {
+
+return [["bigint",null,null,null],true,"",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+ * Optionally accept numeric value which is converted to string
+ * @method beforeSet_paymentProvider
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
+ */
+Base.prototype.beforeSet_paymentProvider = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		if (typeof value !== "string" && typeof value !== "number")
+			throw new Error('Must pass a String to '+this.table()+".paymentProvider");
+		if (typeof value === "string" && value.length > 32)
+			throw new Error('Exceedingly long value being assigned to '+this.table()+".paymentProvider");
+		return value;
+};
+
+	/**
+	 * Returns the maximum string length that can be assigned to the paymentProvider field
+	 * @return {integer}
+	 */
+Base.prototype.maxSize_paymentProvider = function () {
+
+		return 32;
+};
+
+	/**
+	 * Returns schema information for paymentProvider column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_paymentProvider = function () {
+
+return [["varchar","32","",false],true,"MUL",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+ * Optionally accept numeric value which is converted to string
+ * @method beforeSet_providerCustomerId
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
+ */
+Base.prototype.beforeSet_providerCustomerId = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		if (typeof value !== "string" && typeof value !== "number")
+			throw new Error('Must pass a String to '+this.table()+".providerCustomerId");
+		if (typeof value === "string" && value.length > 255)
+			throw new Error('Exceedingly long value being assigned to '+this.table()+".providerCustomerId");
+		return value;
+};
+
+	/**
+	 * Returns the maximum string length that can be assigned to the providerCustomerId field
+	 * @return {integer}
+	 */
+Base.prototype.maxSize_providerCustomerId = function () {
+
+		return 255;
+};
+
+	/**
+	 * Returns schema information for providerCustomerId column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_providerCustomerId = function () {
+
+return [["varchar","255","",false],true,"",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if integer value falls within allowed limits
+ * @method beforeSet_autoCharge
+ * @param {integer} value
+ * @return {integer} The value
+ * @throws {Error} An exception is thrown if 'value' is not integer or does not fit in allowed range
+ */
+Base.prototype.beforeSet_autoCharge = function (value) {
+		if (value instanceof Db.Expression) return value;
+		value = Number(value);
+		if (isNaN(value) || Math.floor(value) != value) 
+			throw new Error('Non-integer value being assigned to '+this.table()+".autoCharge");
+		if (value < -128 || value > 127)
+			throw new Error("Out-of-range value "+JSON.stringify(value)+" being assigned to "+this.table()+".autoCharge");
+		return value;
+};
+
+/**
+ * Returns the maximum integer that can be assigned to the autoCharge field
+ * @return {integer}
+ */
+Base.prototype.maxSize_autoCharge = function () {
+
+		return 127;
+};
+
+	/**
+	 * Returns schema information for autoCharge column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_autoCharge = function () {
+
+return [["tinyint","1","",false],false,"","0"];
+};
+
+/**
+ * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+ * Optionally accept numeric value which is converted to string
+ * @method beforeSet_communityId
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
+ */
+Base.prototype.beforeSet_communityId = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		if (typeof value !== "string" && typeof value !== "number" && !(value instanceof Buffer))
+			throw new Error('Must pass a String or Buffer to '+this.table()+".communityId");
+		if (typeof value === "string" && value.length > 31)
+			throw new Error('Exceedingly long value being assigned to '+this.table()+".communityId");
+		return value;
+};
+
+	/**
+	 * Returns the maximum string length that can be assigned to the communityId field
+	 * @return {integer}
+	 */
+Base.prototype.maxSize_communityId = function () {
+
+		return 31;
+};
+
+	/**
+	 * Returns schema information for communityId column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_communityId = function () {
+
+return [["varbinary","31","",false],true,"MUL",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+ * Optionally accept numeric value which is converted to string
+ * @method beforeSet_app
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
+ */
+Base.prototype.beforeSet_app = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		if (typeof value !== "string" && typeof value !== "number")
+			throw new Error('Must pass a String to '+this.table()+".app");
+		if (typeof value === "string" && value.length > 64)
+			throw new Error('Exceedingly long value being assigned to '+this.table()+".app");
+		return value;
+};
+
+	/**
+	 * Returns the maximum string length that can be assigned to the app field
+	 * @return {integer}
+	 */
+Base.prototype.maxSize_app = function () {
+
+		return 64;
+};
+
+	/**
+	 * Returns schema information for app column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_app = function () {
+
+return [["varchar","64","",false],true,"",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+ * Optionally accept numeric value which is converted to string
+ * @method beforeSet_reason
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
+ */
+Base.prototype.beforeSet_reason = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		if (typeof value !== "string" && typeof value !== "number")
+			throw new Error('Must pass a String to '+this.table()+".reason");
+		if (typeof value === "string" && value.length > 64)
+			throw new Error('Exceedingly long value being assigned to '+this.table()+".reason");
+		return value;
+};
+
+	/**
+	 * Returns the maximum string length that can be assigned to the reason field
+	 * @return {integer}
+	 */
+Base.prototype.maxSize_reason = function () {
+
+		return 64;
+};
+
+	/**
+	 * Returns schema information for reason column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_reason = function () {
+
+return [["varchar","64","",false],true,"",null];
 };
 
 /**

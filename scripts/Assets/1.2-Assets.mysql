@@ -1,0 +1,18 @@
+ALTER TABLE {{prefix}}charge
+ADD COLUMN amount DECIMAL(10,2) NULL AFTER streamName,
+ADD COLUMN currency CHAR(3) NULL AFTER amount,
+ADD COLUMN credits BIGINT NULL AFTER currency,
+
+ADD COLUMN paymentProvider VARCHAR(32) NULL AFTER credits,
+ADD COLUMN providerCustomerId VARCHAR(255) NULL AFTER paymentProvider,
+ADD COLUMN autoCharge TINYINT(1) NOT NULL DEFAULT 0 AFTER providerCustomerId,
+
+ADD COLUMN communityId VARBINARY(31) NULL AFTER autoCharge,
+ADD COLUMN app VARCHAR(64) NULL AFTER communityId,
+ADD COLUMN reason VARCHAR(64) NULL AFTER app,
+
+ADD KEY byCommunity (communityId,insertedTime),
+ADD KEY byProviderCustomer (paymentProvider,providerCustomerId);
+
+ALTER TABLE {{prefix}}credits
+ALTER communityId DROP DEFAULT;

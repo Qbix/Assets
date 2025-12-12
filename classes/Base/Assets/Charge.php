@@ -20,6 +20,15 @@
  * @param {string} [$fields.id] defaults to ""
  * @param {string} [$fields.publisherId] defaults to ""
  * @param {string} [$fields.streamName] defaults to ""
+ * @param {float} [$fields.amount] defaults to 0
+ * @param {string} [$fields.currency] defaults to null
+ * @param {integer} [$fields.credits] defaults to 0
+ * @param {string} [$fields.paymentProvider] defaults to null
+ * @param {string} [$fields.providerCustomerId] defaults to null
+ * @param {integer} [$fields.autoCharge] defaults to 0
+ * @param {string} [$fields.communityId] defaults to null
+ * @param {string} [$fields.app] defaults to null
+ * @param {string} [$fields.reason] defaults to null
  * @param {string} [$fields.description] defaults to ""
  * @param {string} [$fields.attributes] defaults to ""
  * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
@@ -50,6 +59,60 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @type string
 	 * @default ""
 	 * name of the stream regarding which the charge was made
+	 */
+	/**
+	 * @property $amount
+	 * @type float
+	 * @default 0
+	 * 
+	 */
+	/**
+	 * @property $currency
+	 * @type string
+	 * @default null
+	 * 
+	 */
+	/**
+	 * @property $credits
+	 * @type integer
+	 * @default 0
+	 * 
+	 */
+	/**
+	 * @property $paymentProvider
+	 * @type string
+	 * @default null
+	 * 
+	 */
+	/**
+	 * @property $providerCustomerId
+	 * @type string
+	 * @default null
+	 * 
+	 */
+	/**
+	 * @property $autoCharge
+	 * @type integer
+	 * @default 0
+	 * 
+	 */
+	/**
+	 * @property $communityId
+	 * @type string
+	 * @default null
+	 * 
+	 */
+	/**
+	 * @property $app
+	 * @type string
+	 * @default null
+	 * 
+	 */
+	/**
+	 * @property $reason
+	 * @type string
+	 * @default null
+	 * 
 	 */
 	/**
 	 * @property $description
@@ -157,7 +220,6 @@ abstract class Base_Assets_Charge extends Db_Row
 			}
 			$fields = implode(',', $fieldNames);
 		}
-		$alias = isset($alias) ? ' '.$alias : '';
 		$q = self::db()->select($fields, self::table(true, $alias));
 		$q->className = 'Assets_Charge';
 		return $q;
@@ -510,6 +572,485 @@ return array (
 );			
 	}
 
+	function beforeSet_amount($value)
+	{
+		if (!isset($value)) {
+			return array('amount', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('amount', $value);
+		}
+		if (!is_numeric($value))
+			throw new Exception('Non-numeric value being assigned to '.$this->getTable().".amount");
+		$value = floatval($value);
+		return array('amount', $value);			
+	}
+
+	/**
+	 * Returns schema information for amount column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_amount()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'decimal',
+    1 => '10,2',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => '',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+	 * Optionally accept numeric value which is converted to string
+	 * @method beforeSet_currency
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not string or is exceedingly long
+	 */
+	function beforeSet_currency($value)
+	{
+		if (!isset($value)) {
+			return array('currency', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('currency', $value);
+		}
+		if (!is_string($value) and !is_numeric($value))
+			throw new Exception('Must pass a string to '.$this->getTable().".currency");
+		if (strlen($value) > 3)
+			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".currency");
+		return array('currency', $value);			
+	}
+
+	/**
+	 * Returns the maximum string length that can be assigned to the currency field
+	 * @return {integer}
+	 */
+	function maxSize_currency()
+	{
+
+		return 3;			
+	}
+
+	/**
+	 * Returns schema information for currency column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_currency()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'char',
+    1 => '3',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => '',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if integer value falls within allowed limits
+	 * @method beforeSet_credits
+	 * @param {integer} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not integer or does not fit in allowed range
+	 */
+	function beforeSet_credits($value)
+	{
+		if (!isset($value)) {
+			return array('credits', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('credits', $value);
+		}
+		if (!is_numeric($value) or floor($value) != $value)
+			throw new Exception('Non-integer value being assigned to '.$this->getTable().".credits");
+		$value = intval($value);
+		if ($value < -9.2233720368548E+18 or $value > 9223372036854775807) {
+			$json = json_encode($value);
+			throw new Exception("Out-of-range value $json being assigned to ".$this->getTable().".credits");
+		}
+		return array('credits', $value);			
+	}
+
+	/**
+	 * @method maxSize_credits
+	 * Returns the maximum integer that can be assigned to the credits field
+	 * @return {integer}
+	 */
+	function maxSize_credits()
+	{
+
+		return 9223372036854775807;			
+	}
+
+	/**
+	 * Returns schema information for credits column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_credits()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'bigint',
+    1 => NULL,
+    2 => NULL,
+    3 => NULL,
+  ),
+  1 => true,
+  2 => '',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+	 * Optionally accept numeric value which is converted to string
+	 * @method beforeSet_paymentProvider
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not string or is exceedingly long
+	 */
+	function beforeSet_paymentProvider($value)
+	{
+		if (!isset($value)) {
+			return array('paymentProvider', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('paymentProvider', $value);
+		}
+		if (!is_string($value) and !is_numeric($value))
+			throw new Exception('Must pass a string to '.$this->getTable().".paymentProvider");
+		if (strlen($value) > 32)
+			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".paymentProvider");
+		return array('paymentProvider', $value);			
+	}
+
+	/**
+	 * Returns the maximum string length that can be assigned to the paymentProvider field
+	 * @return {integer}
+	 */
+	function maxSize_paymentProvider()
+	{
+
+		return 32;			
+	}
+
+	/**
+	 * Returns schema information for paymentProvider column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_paymentProvider()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'varchar',
+    1 => '32',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => 'MUL',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+	 * Optionally accept numeric value which is converted to string
+	 * @method beforeSet_providerCustomerId
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not string or is exceedingly long
+	 */
+	function beforeSet_providerCustomerId($value)
+	{
+		if (!isset($value)) {
+			return array('providerCustomerId', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('providerCustomerId', $value);
+		}
+		if (!is_string($value) and !is_numeric($value))
+			throw new Exception('Must pass a string to '.$this->getTable().".providerCustomerId");
+		if (strlen($value) > 255)
+			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".providerCustomerId");
+		return array('providerCustomerId', $value);			
+	}
+
+	/**
+	 * Returns the maximum string length that can be assigned to the providerCustomerId field
+	 * @return {integer}
+	 */
+	function maxSize_providerCustomerId()
+	{
+
+		return 255;			
+	}
+
+	/**
+	 * Returns schema information for providerCustomerId column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_providerCustomerId()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'varchar',
+    1 => '255',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => '',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if integer value falls within allowed limits
+	 * @method beforeSet_autoCharge
+	 * @param {integer} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not integer or does not fit in allowed range
+	 */
+	function beforeSet_autoCharge($value)
+	{
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('autoCharge', $value);
+		}
+		if (!is_numeric($value) or floor($value) != $value)
+			throw new Exception('Non-integer value being assigned to '.$this->getTable().".autoCharge");
+		$value = intval($value);
+		if ($value < -128 or $value > 127) {
+			$json = json_encode($value);
+			throw new Exception("Out-of-range value $json being assigned to ".$this->getTable().".autoCharge");
+		}
+		return array('autoCharge', $value);			
+	}
+
+	/**
+	 * @method maxSize_autoCharge
+	 * Returns the maximum integer that can be assigned to the autoCharge field
+	 * @return {integer}
+	 */
+	function maxSize_autoCharge()
+	{
+
+		return 127;			
+	}
+
+	/**
+	 * Returns schema information for autoCharge column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_autoCharge()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'tinyint',
+    1 => '1',
+    2 => '',
+    3 => false,
+  ),
+  1 => false,
+  2 => '',
+  3 => '0',
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+	 * Optionally accept numeric value which is converted to string
+	 * @method beforeSet_communityId
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not string or is exceedingly long
+	 */
+	function beforeSet_communityId($value)
+	{
+		if (!isset($value)) {
+			return array('communityId', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('communityId', $value);
+		}
+		if (!is_string($value) and !is_numeric($value))
+			throw new Exception('Must pass a string to '.$this->getTable().".communityId");
+		if (strlen($value) > 31)
+			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".communityId");
+		return array('communityId', $value);			
+	}
+
+	/**
+	 * Returns the maximum string length that can be assigned to the communityId field
+	 * @return {integer}
+	 */
+	function maxSize_communityId()
+	{
+
+		return 31;			
+	}
+
+	/**
+	 * Returns schema information for communityId column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_communityId()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'varbinary',
+    1 => '31',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => 'MUL',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+	 * Optionally accept numeric value which is converted to string
+	 * @method beforeSet_app
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not string or is exceedingly long
+	 */
+	function beforeSet_app($value)
+	{
+		if (!isset($value)) {
+			return array('app', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('app', $value);
+		}
+		if (!is_string($value) and !is_numeric($value))
+			throw new Exception('Must pass a string to '.$this->getTable().".app");
+		if (strlen($value) > 64)
+			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".app");
+		return array('app', $value);			
+	}
+
+	/**
+	 * Returns the maximum string length that can be assigned to the app field
+	 * @return {integer}
+	 */
+	function maxSize_app()
+	{
+
+		return 64;			
+	}
+
+	/**
+	 * Returns schema information for app column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_app()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'varchar',
+    1 => '64',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => '',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+	 * Optionally accept numeric value which is converted to string
+	 * @method beforeSet_reason
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not string or is exceedingly long
+	 */
+	function beforeSet_reason($value)
+	{
+		if (!isset($value)) {
+			return array('reason', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('reason', $value);
+		}
+		if (!is_string($value) and !is_numeric($value))
+			throw new Exception('Must pass a string to '.$this->getTable().".reason");
+		if (strlen($value) > 64)
+			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".reason");
+		return array('reason', $value);			
+	}
+
+	/**
+	 * Returns the maximum string length that can be assigned to the reason field
+	 * @return {integer}
+	 */
+	function maxSize_reason()
+	{
+
+		return 64;			
+	}
+
+	/**
+	 * Returns schema information for reason column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_reason()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'varchar',
+    1 => '64',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => '',
+  3 => NULL,
+);			
+	}
+
 	/**
 	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
 	 * Optionally accept numeric value which is converted to string
@@ -761,7 +1302,7 @@ return array (
 	 */
 	static function fieldNames($table_alias = null, $field_alias_prefix = null)
 	{
-		$field_names = array('userId', 'id', 'publisherId', 'streamName', 'description', 'attributes', 'insertedTime', 'updatedTime');
+		$field_names = array('userId', 'id', 'publisherId', 'streamName', 'amount', 'currency', 'credits', 'paymentProvider', 'providerCustomerId', 'autoCharge', 'communityId', 'app', 'reason', 'description', 'attributes', 'insertedTime', 'updatedTime');
 		$result = $field_names;
 		if (!empty($table_alias)) {
 			$temp = array();
