@@ -274,5 +274,3 @@ function _stripe_meta($m)
 	}
 	return array();
 }
-
-Assets_stripeWebhook_post();

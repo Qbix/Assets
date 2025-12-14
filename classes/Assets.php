@@ -663,6 +663,8 @@ abstract class Assets extends Base_Assets
 		$charge->userId = $user ? $user->id : null;
 		$charge->id = $chargeId;
 		if (!$charge->retrieve()) {
+			// only do this once per charge -- idempotent
+
 			/**
 			 * Hook before a charge is about to be saved.
 			 * Handlers shouldn't return false unless they totally override this default method.
@@ -683,7 +685,6 @@ abstract class Assets extends Base_Assets
 				return false;
 			}
 
-			// only do this once per charge -- idempotent
 			$charge->description = 'BoughtCredits';
 			if (!empty($options['reason'])) {
 				$charge->description .= ": ".$options['reason'];
@@ -701,11 +702,11 @@ abstract class Assets extends Base_Assets
 				'currency'    => $currency,
 				'communityId' => $communityId,
 				'credits'     => $credits,
-				'metadata'    => $mergedMeta,
-				'communityId' => $communityId
+				'metadata'    => $mergedMeta
 			);
 
 			$charge->attributes = Q::json_encode($attributes);
+			$charge->communityId = $communityId;
 			$charge->save();
 
 			/**
