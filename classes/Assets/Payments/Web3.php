@@ -173,4 +173,65 @@ class Assets_Payments_Web3 extends Assets_Payments
 
 		return $result;
 	}
+
+    /**
+	 * Parse and verify Moralis webhook
+	 *
+	 * @method parseWebhook
+	 * @static
+	 * @param {string} $payload Raw HTTP body
+	 * @param {array}  &$context Mutable context
+	 * @throws Exception
+	 * @return array Parsed Moralis event
+	 */
+	static function parseWebhook($payload, array &$context)
+	{
+		$secret = Q_Config::expect(
+			'Assets', 'payments', 'moralis', 'webhookSecret'
+		);
+
+		// Normalize headers
+		$headers = array();
+		foreach ($_SERVER as $k => $v) {
+			if (Q::startsWith($k, 'HTTP_')) {
+				$headers[strtolower(str_replace('_', '-', substr($k, 5)))] = $v;
+			}
+		}
+
+		$sig = Q::ifset($headers, 'x-signature', null);
+		if (!$sig) {
+			throw new Exception('Missing Moralis X-Signature header');
+		}
+
+		// Moralis signature = hex(HMAC_SHA256(payload, secret))
+		$computed = hash_hmac('sha256', $payload, $secret);
+
+		if (!hash_equals($computed, $sig)) {
+			throw new Exception('Moralis webhook signature verification failed');
+		}
+
+		$data = json_decode($payload, true);
+		if (!$data) {
+			throw new Exception('Invalid Moralis JSON payload');
+		}
+
+		// Enrich context
+		$context['payments']   = 'moralis';
+		$context['eventType']  = Q::ifset($data, 'type', null);
+		$context['chainId']    = Q::ifset($data, 'chainId', null);
+		$context['eventId']    = Q::ifset($data, 'id', null);
+		$context['headers']    = $headers;
+		$context['rawPayload'] = $payload;
+
+		return $data;
+	}
+
+    static function log ($title, $message=null) {
+		Q::log(date('Y-m-d H:i:s').': '.$title, 'web3');
+		if ($message) {
+			Q::log($message, 'stripe', array(
+				"maxLength" => 10000
+			));
+		}
+	}    
 }

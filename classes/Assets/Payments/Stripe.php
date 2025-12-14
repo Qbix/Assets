@@ -266,7 +266,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	/**
 	 * Fetch successful Stripe charges that should be honored.
 	 * No DB writes. No hooks. No side effects.
-	 *
+	*
 	 * @method fetchSuccessfulCharges
 	 * @param {array} $options
 	 * @param {string|null} [$options.customerId]
@@ -498,6 +498,53 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 		}
 
 		return $metadata;
+	}
+
+	/**
+	 * Parse and verify Stripe webhook payload
+	 *
+	 * @method parseWebhook
+	 * @static
+	 * @param {string} $payload Raw HTTP body
+	 * @param {array}  &$context Mutable context (headers, metadata)
+	 * @throws Exception
+	 * @return \Stripe\Event
+	 */
+	static function parseWebhook($payload, array &$context)
+	{
+		$secret = Q_Config::expect('Assets', 'payments', 'stripe', 'webhookSecret');
+
+		$headers = array();
+		foreach ($_SERVER as $k => $v) {
+			if (Q::startsWith($k, 'HTTP_')) {
+				$headers[strtolower(str_replace('_', '-', substr($k, 5)))] = $v;
+			}
+		}
+
+		$sig = Q::ifset($headers, 'stripe-signature', null);
+		if (!$sig) {
+			throw new Exception("Missing Stripe-Signature header");
+		}
+
+		try {
+			$event = \Stripe\Webhook::constructEvent(
+				$payload,
+				$sig,
+				$secret
+			);
+		} catch (Exception $e) {
+			self::log('Stripe webhook signature verification failed', $e->getMessage());
+			throw $e;
+		}
+
+		// Enrich context (read-only elsewhere)
+		$context['payments']   = 'stripe';
+		$context['eventType']  = $event->type;
+		$context['eventId']    = $event->id;
+		$context['headers']    = $headers;
+		$context['rawPayload'] = $payload;
+
+		return $event;
 	}
 
 

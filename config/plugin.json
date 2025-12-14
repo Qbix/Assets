@@ -25,6 +25,7 @@
 			"Assets/charged": ["Assets/after/Assets_charged"],
 			"Assets/credits/spent": ["Assets/after/Assets_credits_spent"],
 			"Assets/startSubscription": ["Assets/after/Assets_startSubscription"],
+			"Assets/log": ["Assets/after/Assets_log"],
 			"Streams/invite/accept": ["Assets/after/Streams_inviteAccept"],
 			"Streams/Stream/exportArray": ["Assets/after/Streams_Stream_exportArray"],
 			"Db/Row/Streams_Stream/insertManyAndExecute": ["Assets/after/Db_Row_Streams_Stream_insertManyAndExecute"],

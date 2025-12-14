@@ -335,6 +335,74 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 		return $result;
 	}
 
+	/**
+	 * Parse and verify Authorize.Net webhook
+	 *
+	 * @method parseWebhook
+	 * @static
+	 * @param {string} $payload Raw HTTP body
+	 * @param {array}  &$context Mutable context
+	 * @throws Exception
+	 * @return array Parsed webhook event
+	 */
+	static function parseWebhook($payload, array &$context)
+	{
+		$secret = Q_Config::expect(
+			'Assets', 'payments', 'authnet', 'webhookSecret'
+		);
+
+		// Normalize headers
+		$headers = array();
+		foreach ($_SERVER as $k => $v) {
+			if (Q::startsWith($k, 'HTTP_')) {
+				$headers[strtolower(str_replace('_', '-', substr($k, 5)))] = $v;
+			}
+		}
+
+		$sigHeader = Q::ifset($headers, 'x-anet-signature', null);
+		if (!$sigHeader) {
+			throw new Exception('Missing X-ANET-SIGNATURE header');
+		}
+
+		if (!Q::startsWith($sigHeader, 'sha512=')) {
+			throw new Exception('Invalid Authnet signature format');
+		}
+
+		$providedSig = substr($sigHeader, 7);
+
+		$computedSig = hash_hmac(
+			'sha512',
+			$payload,
+			$secret
+		);
+
+		if (!hash_equals($computedSig, $providedSig)) {
+			throw new Exception('Authnet webhook signature verification failed');
+		}
+
+		$data = json_decode($payload, true);
+		if (!$data) {
+			throw new Exception('Invalid Authnet JSON payload');
+		}
+
+		// Enrich context
+		$context['payments']   = 'authnet';
+		$context['eventType']  = Q::ifset($data, 'eventType', null);
+		$context['eventId']    = Q::ifset($data, 'id', null);
+		$context['headers']    = $headers;
+		$context['rawPayload'] = $payload;
+
+		return $data;
+	}
+
+	static function log ($title, $message=null) {
+		Q::log(date('Y-m-d H:i:s').': '.$title, 'authnet');
+		if ($message) {
+			Q::log($message, 'stripe', array(
+				"maxLength" => 10000
+			));
+		}
+	}
 	
 	public $options = array();
 
