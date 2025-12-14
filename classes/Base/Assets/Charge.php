@@ -202,6 +202,65 @@ abstract class Base_Assets_Charge extends Db_Row
 	}
 
 	/**
+	 * Returns index metadata for the table
+	 * @method indexes
+	 * @static
+	 * @return {array}
+	 */
+	static function indexes()
+	{
+		return array (
+  'PRIMARY' => 
+  array (
+    'unique' => true,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'userId',
+      1 => 'id',
+    ),
+  ),
+  'byCommunity' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'communityId',
+      1 => 'insertedTime',
+    ),
+  ),
+  'byProviderCustomer' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'paymentProvider',
+      1 => 'providerCustomerId',
+    ),
+  ),
+);
+	}
+
+	/**
+	 * Returns true if a left-prefix index exists for the given columns
+	 * @method hasIndexOn
+	 * @static
+	 * @param {array} $columns
+	 * @return {boolean}
+	 */
+	static function hasIndexOn(array $columns)
+	{
+		foreach (self::indexes() as $idx) {
+			if (array_slice($idx['columns'], 0, count($columns)) === $columns) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * Create SELECT query to the class table
 	 * @method select
 	 * @static

@@ -173,6 +173,100 @@ abstract class Base_Assets_Credits extends Db_Row
 	}
 
 	/**
+	 * Returns index metadata for the table
+	 * @method indexes
+	 * @static
+	 * @return {array}
+	 */
+	static function indexes()
+	{
+		return array (
+  'PRIMARY' => 
+  array (
+    'unique' => true,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'id',
+    ),
+  ),
+  'fromUserId' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'fromUserId',
+    ),
+  ),
+  'toUserId' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'toUserId',
+    ),
+  ),
+  'toStream' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'toPublisherId',
+      1 => 'toStreamName',
+    ),
+  ),
+  'fromStream' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'fromPublisherId',
+      1 => 'fromStreamName',
+    ),
+  ),
+  'credits' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'amount',
+    ),
+  ),
+  'reason' => 
+  array (
+    'unique' => false,
+    'type' => 'BTREE',
+    'columns' => 
+    array (
+      0 => 'reason',
+    ),
+  ),
+);
+	}
+
+	/**
+	 * Returns true if a left-prefix index exists for the given columns
+	 * @method hasIndexOn
+	 * @static
+	 * @param {array} $columns
+	 * @return {boolean}
+	 */
+	static function hasIndexOn(array $columns)
+	{
+		foreach (self::indexes() as $idx) {
+			if (array_slice($idx['columns'], 0, count($columns)) === $columns) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * Create SELECT query to the class table
 	 * @method select
 	 * @static

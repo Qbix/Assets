@@ -1,0 +1,9 @@
+ALTER TABLE {{prefix}}charge
+ADD COLUMN status ENUM(
+	'pending',
+	'completed',
+	'failed',
+	'reversed'
+) NOT NULL DEFAULT 'pending',
+ADD INDEX byStatus (status),
+ADD INDEX byStatusInsertedTime (status, insertedTime);
