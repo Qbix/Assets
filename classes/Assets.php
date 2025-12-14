@@ -740,7 +740,7 @@ abstract class Assets extends Base_Assets
 	 *  - Resolves provider customer context (if available)
 	 *  - Fetches provider-confirmed successful charges
 	 *  - Ensures idempotency by skipping already-recorded charge IDs
-	 *  - Records missing charges locally via Assets::charged()
+	 *  - Optionally records missing charges locally via Assets::charged()
 	 *  - Marks newly recorded charges as completed
 	 *
 	 * Safe to call repeatedly.
@@ -748,15 +748,14 @@ abstract class Assets extends Base_Assets
 	 * @method honorOutstandingSuccessfulCharges
 	 * @static
 	 * @param {string} $payments
-	 *  The payments adapter key (e.g. "stripe", "authnet", "web3").
 	 * @param {string} [$userId]
 	 * @param {array} [$options]
-	 *  Optional adapter-specific options. May include:
-	 *   - {Users_User} user      Used to avoid fetching user again
-	 *   - {string} customerId    Explicit provider customer id (optional)
-	 *   - {integer} limit        Max number of provider charges to inspect
-	 * @return {int}
-	 *  Number of charges newly honored and recorded.
+	 *   - {boolean} dryRun        If true, do not call Assets::charged()
+	 *   - {Users_User} user
+	 *   - {string} customerId
+	 *   - {integer} limit
+	 * @return {array}
+	 *   Array of arrays describing what was (or would be) passed to Assets::charged()
 	 * @throws Q_Exception_WrongType
 	 * @throws Q_Exception_MissingRow
 	 */
@@ -768,26 +767,22 @@ abstract class Assets extends Base_Assets
 		}
 
 		$adapter = null;
+		$results = array();
+		$dryRun  = !empty($options['dryRun']);
 
 		/**
 		 * Fired before honoring outstanding charges.
-		 * Handlers may return false to cancel.
-		 *
-		 * @event Assets/honorCharges {before}
-		 * @param {string} payments
-		 * @param {array} options
-		 * @param {object|null} adapter
 		 */
 		if (false === Q::event(
 			'Assets/honorCharges',
 			@compact('payments', 'options', 'adapter'),
 			'before'
 		)) {
-			return 0;
+			return $results;
 		}
 
 		// -------------------------------------------------
-		// Resolve customerId ONCE (before adapter call)
+		// Resolve user
 		// -------------------------------------------------
 		if (isset($options['user'])) {
 			$user = $options['user'];
@@ -806,6 +801,10 @@ abstract class Assets extends Base_Assets
 				));
 			}
 		}
+
+		// -------------------------------------------------
+		// Resolve customerId ONCE
+		// -------------------------------------------------
 		if (empty($options['customerId'])) {
 			$customer = new Assets_Customer();
 			$customer->userId   = $user->id;
@@ -819,23 +818,10 @@ abstract class Assets extends Base_Assets
 		// Instantiate adapter AFTER before-hook and customer resolution
 		$adapter = new $className((array)$options);
 
-		/**
-		 * Adapter-level fetch.
-		* Adapter MUST return only charges that can be attributed
-		* to a concrete user (directly or indirectly).
-		* Adapter MAY use customerId, wallet, or provider-native identifiers.
-		 *
-		 * Returned rows MUST contain:
-		 *   - chargeId   (string, provider-unique)
-		 *   - userId     (string)
-		 *   - amount     (float)
-		 *   - currency   (string)
-		 *   - metadata   (array)
-		 *   - customerId (string|null)
-		 */
+		// -------------------------------------------------
+		// Fetch provider-confirmed successful charges
+		// -------------------------------------------------
 		$charges = $adapter->fetchSuccessfulCharges($options);
-
-		$honored = 0;
 
 		foreach ($charges as $c) {
 
@@ -856,51 +842,56 @@ abstract class Assets extends Base_Assets
 			}
 
 			// -------------------------------------------------
-			// Record completed charge (credits minted here)
+			// Build payload for Assets::charged()
 			// -------------------------------------------------
+			$payload = array(
+				'chargeId'    => $chargeId,
+				'user'        => $user,
+				'communityId' => Q::ifset($c['metadata'], 'communityId', null),
+				'reason'      => Q::ifset($c['metadata'], 'reason', null),
+				'metadata'    => $c['metadata'],
+				'customerId'  => Q::ifset($c, 'customerId', null),
+				'autoCharge'  => true
+			);
+
+			$results[] = array(
+				'payments' => $payments,
+				'amount'   => $c['amount'],
+				'currency' => $c['currency'],
+				'options'  => $payload
+			);
+
+			// -------------------------------------------------
+			// Execute unless dry-run
+			// -------------------------------------------------
+			if ($dryRun) {
+				continue;
+			}
+
 			$charge = Assets::charged(
 				$payments,
 				$c['amount'],
 				$c['currency'],
-				array(
-					'chargeId'    => $chargeId,
-					'user'        => $user,
-					'communityId' => Q::ifset($c['metadata'], 'communityId', null),
-					'reason'      => Q::ifset($c['metadata'], 'reason', null),
-					'metadata'    => $c['metadata'],
-					'customerId'  => Q::ifset($c, 'customerId', null),
-					'autoCharge'  => true
-				)
+				$payload
 			);
 
-			// -------------------------------------------------
-			// Mark charge as completed and confirmed
-			// -------------------------------------------------
 			if ($charge) {
 				$charge->status = 'completed';
 				$charge->confirmedTime = new Db_Expression('CURRENT_TIMESTAMP');
 				$charge->save();
 			}
-
-			$honored++;
 		}
 
 		/**
 		 * Fired after honoring outstanding charges.
-		 *
-		 * @event Assets/honorCharges {after}
-		 * @param {string} payments
-		 * @param {array} options
-		 * @param {object} adapter
-		 * @param {int} honored
 		 */
 		Q::event(
 			'Assets/honorCharges',
-			@compact('payments', 'options', 'adapter', 'honored'),
+			@compact('payments', 'options', 'adapter'),
 			'after'
 		);
 
-		return $honored;
+		return $results;
 	}
 
 	/**
