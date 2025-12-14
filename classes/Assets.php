@@ -251,6 +251,15 @@ abstract class Assets extends Base_Assets
 			return array("success" => false, "details" => array("error" => "rejected-by-hook"));
 		}
 
+		if (empty($options['skipHonoringOutstandingSuccessfulCharges'])) {
+			Assets::honorOutstandingSuccessfulCharges(
+				Q::ifset($options, 'payments', 'stripe'),
+				array(
+					'user' => Users_User::fetch($userId, true)
+				)
+			);
+		}
+
 		$communityId = $communityId ? $communityId : Users::communityId();
 
 		$currency = isset($options["currency"]) ? $options["currency"] : "USD";
@@ -263,6 +272,9 @@ abstract class Assets extends Base_Assets
 		if (!$toUserId and $toPublisherId) {
 			$toUserId = $toPublisherId;
 		}
+
+		$fromPublisherId = isset($options["fromPublisherId"]) ? $options["fromPublisherId"] : null;
+		$fromStreamName  = isset($options["fromStreamName"]) ? $options["fromStreamName"] : null;
 
 		$items = isset($options["items"]) ? $options["items"] : null;
 		if (!empty($items)) {
@@ -360,6 +372,11 @@ abstract class Assets extends Base_Assets
 				"toUserId"      => $toUserId,
 				"needCredits"   => $needCredits
 			);
+			if ($fromPublisherId and $fromStreamName) {
+				$instructions = array_merge($instructions, compact(
+					'fromPublisherId', 'fromStreamName'
+				));
+			}
 
 			$intent = Users_Intent::newIntent("Assets/charge", $userId, $instructions);
 
@@ -527,7 +544,7 @@ abstract class Assets extends Base_Assets
 			"credits"     => $credits,
 			"reason"      => Q::ifset($options, "reason", null),
 			"app"         => Q::app(),
-			"autoCharge"  => Q::ifset($options, "autoCharge", false) ? "1" : "0"
+			"autoCharge"  => Q::ifset($options, "autoCharge", false) ? 1 : 0
 		);
 		$mergedMeta = array_merge(
 			$baseMetadata,
@@ -589,124 +606,101 @@ abstract class Assets extends Base_Assets
 	}
 
 	/**
-	 * Records a successful one charge on a customer account using a payments processor
-	 * @method charged
+	 * Honor successful external charges that were already finalized
+	 * at the payment provider but not yet recorded locally.
+	 *
+	 * Idempotent. Safe to call repeatedly.
+	 *
+	 * @method honorOutstandingSuccessfulCharges
 	 * @static
-	 * @param {string} $payments The type of payments processor, could be "Authnet" or "Stripe"
-	 * @param {string} $amount specify the amount
-	 * @param {string} [$currency="USD"] set the currency, which will affect the amount
-	 * @param {array} [$options=array()] Any additional options
-	 * @param {string} [$options.chargeId] Payment id to set as id field of Assets_Charge table.
-	 *  If this is defined it means payment already processed (for example from webhook)
-	 *  and hence no need to call $adapter->charge
-	 * @param {Users_User} [$options.user=Users::loggedInUser()] Which user to charge
-	 * @param {string} [$options.communityId] Which community's credits to grant on success
-	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or subscription stream
-	 * @param {string} [$options.reason] Business reason or semantic label.
-	 * @param {string} [$options.description=null] Description for the customer
-	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
-	 * @throws \Stripe\Error\Card
-	 * @throws Assets_Exception_DuplicateTransaction
-	 * @throws Assets_Exception_HeldForReview
-	 * @throws Assets_Exception_ChargeFailed
-	 * @return {Assets_Charge} The saved database row for the charge
+	 * @param {string} $payments
+	 * @param {array}  [$options]
+	 * @return {int} Number of charges honored
 	 */
-	static function charged($payments, $amount, $currency = 'USD', $options = array())
+	static function honorOutstandingSuccessfulCharges($payments = 'stripe', $options = array())
 	{
-		if (!$currency) {
-			$currency = 'USD';
+		$className = 'Assets_Payments_' . ucfirst($payments);
+		if (!class_exists($className)) {
+			throw new Exception("Payments adapter not found: $className");
 		}
-		$currency = strtoupper($currency);
-		$credits = Assets_Credits::convert($amount, $currency, 'credits');
-		$user        = Q::ifset($options, 'user', Users::loggedInUser(false));
-		$communityId = Q::ifset($options, 'communityId', Users::communityId());
-		$chargeId    = Q::ifset($options, 'chargeId', null);
-		$baseMetadata = array(
-			"userId"      => $user ? $user->id : null,
-			"communityId" => $communityId,
-			"currency"    => $currency,
-			"amount"      => $amount,
-			"credits"     => $credits,
-			"reason"      => Q::ifset($options, "reason", null),
-			"app"         => Q::app(),
-			"autoCharge"  => Q::ifset($options, "autoCharge", false) ? "1" : "0"
-		);
-		$mergedMeta = array_merge(
-			$baseMetadata,
-			Q::ifset($options, 'metadata', array())
-		);
-		$options['metadata'] = $mergedMeta;
+
 		$adapter = null;
-		$customerId = Q::ifset($options, 'customerId', null);
-		$charge = new Assets_Charge();
-		$charge->userId = $user ? $user->id : null;
-		$charge->id = $chargeId;
-		if (!$charge->retrieve()) {
-			/**
-			 * Hook before a charge is about to be saved.
-			 * Handlers shouldn't return false unless they totally override this default method.
-			 * @event Assets/charged {before}
-			 */
-			if (false === Q::event(
-				'Assets/charged',
-				@compact(
-					'adapter',
-					'options',
-					'payments',
-					'amount',
-					'currency',
-					'chargeId'
-				),
-				'before'
-			)) {
-				return false;
-			}
 
-			// only do this once per charge -- idempotent
-			$charge->description = 'BoughtCredits';
-			if (!empty($options['reason'])) {
-				$charge->description .= ": ".$options['reason'];
-			}
-			$charge->publisherId = Q::ifset($options, 'metadata', 'toPublisherId', Q::ifset(
-				$options, 'metadata', 'publisherId', ''
-			));
-			$charge->streamName = Q::ifset($options, 'metadata', 'toStreamName', Q::ifset(
-				$options, 'metadata', 'streamName', ''
-			));
-			$attributes = array(
-				'payments'    => $payments,
-				'customerId'  => $customerId,
-				'amount'      => sprintf('%0.2f', $amount),
-				'currency'    => $currency,
-				'communityId' => $communityId,
-				'credits'     => $credits,
-				'metadata'    => $mergedMeta
-			);
-
-			$charge->attributes = Q::json_encode($attributes);
-			$charge->save();
-
-			/**
-			 * Hook after a Assets/charge has been made successfully and recorded.
-			 * This is where handlers should send notifications, etc. to users!
-			 * @event Assets/charged {after}
-			 */
-			Q::event(
-				'Assets/charged',
-				@compact(
-					'payments',
-					'amount',
-					'currency',
-					'user',
-					'communityId',
-					'charge',
-					'options'
-				),
-				'after'
-			);
+		/**
+		 * @event Assets/honorCharges {before}
+		 */
+		if (false === Q::event(
+			'Assets/honorCharges',
+			@compact('payments', 'options', 'adapter'),
+			'before'
+		)) {
+			return 0;
 		}
 
-		return $charge;
+		// Instantiate adapter AFTER before-hook
+		$adapter = new $className((array)$options);
+
+		// Provider-level successful charges (Stripe PI succeeded, Web3 confirmed tx, etc)
+		$charges = $adapter->fetchSuccessfulCharges($options);
+
+		$honored = 0;
+
+		foreach ($charges as $c) {
+
+			$chargeId = $c['chargeId'];
+
+			// -------------------------------------------------
+			// Idempotency: already recorded?
+			// -------------------------------------------------
+			$existing = new Assets_Charge();
+			$existing->id = $chargeId;
+			if ($existing->retrieve()) {
+				continue;
+			}
+
+			$user = Users_User::fetch($c['userId'], true);
+			if (!$user) {
+				continue;
+			}
+
+			// -------------------------------------------------
+			// Record completed charge (credits minted here)
+			// -------------------------------------------------
+			$charge = Assets::charged(
+				$payments,
+				$c['amount'],
+				$c['currency'],
+				array(
+					'chargeId'    => $chargeId,
+					'user'        => $user,
+					'communityId' => Q::ifset($c['metadata'], 'communityId', null),
+					'reason'      => Q::ifset($c['metadata'], 'reason', null),
+					'metadata'    => $c['metadata'],
+					'customerId'  => Q::ifset($c, 'customerId', null),
+					'autoCharge'  => true
+				)
+			);
+
+			// Explicitly mark as completed
+			if ($charge) {
+				$charge->status = 'completed';
+				$charge->confirmedTime = new Db_Expression('CURRENT_TIMESTAMP');
+				$charge->save();
+			}
+
+			$honored++;
+		}
+
+		/**
+		 * @event Assets/honorCharges {after}
+		 */
+		Q::event(
+			'Assets/honorCharges',
+			@compact('payments', 'options', 'adapter', 'honored'),
+			'after'
+		);
+
+		return $honored;
 	}
 
 	/**

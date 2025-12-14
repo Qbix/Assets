@@ -45,6 +45,14 @@ function Assets_after_Assets_charged($params)
 	$communitySuffix = Users::communitySuffix();
 	$link = Q_Request::baseUrl().'/me/credits/charges';
 
+	if (!empty($options['skipAllSideEffects'])) {
+		return;
+	}
+
+	if (!empty($options['skipNotifications'])) {
+		return;
+	}
+
 	$fields = @compact(
 		'user', 'publisher', 'publisherId', 'communityId', 'communityName', 'communitySuffix',
 		'description', 'subscription', 'stream', 'plan', 'currency', 

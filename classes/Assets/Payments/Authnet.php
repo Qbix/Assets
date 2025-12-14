@@ -249,6 +249,92 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 		}
 		return $fresponse->getToken();
 	}
+
+	/**
+	 * Fetch successful Auth.net charges that should be honored.
+	 * No DB writes. No hooks. No side effects.
+	 *
+	 * @method fetchSuccessfulCharges
+	 * @param {array} [$options]
+	 * @param {integer} [$options.limit=100]
+	 * @return {array}
+	 */
+	function fetchSuccessfulCharges($options = array())
+	{
+		$options = array_merge($this->options, $options);
+
+		$merchantAuthentication = new AnetAPI\MerchantAuthenticationType();
+		$merchantAuthentication->setName($options['authname']);
+		$merchantAuthentication->setTransactionKey($options['authkey']);
+
+		$request = new AnetAPI\GetSettledBatchListRequest();
+		$request->setMerchantAuthentication($merchantAuthentication);
+		$request->setIncludeStatistics(true);
+
+		$controller = new AnetController\GetSettledBatchListController($request);
+		$response = $controller->executeWithApiResponse($options['server']);
+
+		if (!$response || $response->getMessages()->getResultCode() !== "Ok") {
+			return array();
+		}
+
+		$result = array();
+		$batches = $response->getBatchList();
+
+		foreach ($batches as $batch) {
+			$batchId = $batch->getBatchId();
+
+			$req = new AnetAPI\GetTransactionListRequest();
+			$req->setMerchantAuthentication($merchantAuthentication);
+			$req->setBatchId($batchId);
+
+			$ctrl = new AnetController\GetTransactionListController($req);
+			$resp = $ctrl->executeWithApiResponse($options['server']);
+
+			if (!$resp || $resp->getMessages()->getResultCode() !== "Ok") {
+				continue;
+			}
+
+			$transactions = $resp->getTransactions();
+			if (!$transactions) {
+				continue;
+			}
+
+			foreach ($transactions as $tx) {
+				if ($tx->getTransactionStatus() !== "settledSuccessfully") {
+					continue;
+				}
+
+				$customerId = $tx->getCustomerProfileId();
+				if (!$customerId) {
+					continue;
+				}
+
+				// Resolve userId via Assets_Customer
+				$customer = new Assets_Customer();
+				$customer->payments = 'authnet';
+				$customer->customerId = $customerId;
+
+				if (!$customer->retrieve()) {
+					continue;
+				}
+
+				$result[] = array(
+					'chargeId'   => $tx->getTransId(),
+					'customerId' => $customerId,
+					'userId'     => $customer->userId,
+					'amount'     => (float)$tx->getSettleAmount(),
+					'currency'   => 'USD', // Auth.net accounts are single-currency
+					'metadata'   => array(
+						'userId' => $customer->userId
+					)
+				);
+			}
+		}
+
+		return $result;
+	}
+
 	
 	public $options = array();
 

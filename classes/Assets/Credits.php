@@ -260,7 +260,6 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} [$fromUserId] By default, this is the logged-in user 
 	 * @param {array} [$attributes] An array supplying more information
 	 * @param {array} [$attributes.items] an array of items, each with "publisherId", "streamName" and "amount"
-	 * @param {boolean} [$attributes.autoCharge=false] If true and not enough credits, try to top up via real money
 	 * @param {string} [$attributes.toPublisherId]  Stream publisher for which the payment is made
 	 * @param {string} [$attributes.toStreamName]   Stream name for which the payment is made
 	 * @param {string} [$attributes.fromPublisherId] Publisher of the consuming stream
@@ -316,35 +315,10 @@ class Assets_Credits extends Base_Assets_Credits
 		// 2. Insufficient credits to auto top up
 		//--------------------------------------------------------------------
 		if ($currentCredits < $amount) {
-
-			if (empty($attributes['autoCharge'])) {
-				$from_stream->executeRollback();
-				throw new Assets_Exception_NotEnoughCredits(array(
-					'missing' => $amount - $currentCredits
-				));
-			}
-
-			$missingCredits = $amount - $currentCredits;
-
-			try {
-				Assets::autoCharge($missingCredits, $reason, array(
-					"userId"   => $fromUserId,
-					"currency" => "credits",
-					"payments" => Q::ifset($attributes, "payments", "stripe"),
-					"metadata" => Q::ifset($attributes, "metadata", array())
-				));
-			} catch (Exception $e) {
-				$from_stream->executeRollback();
-				throw new Assets_Exception_NotEnoughCredits(array(
-					"missing" => $missingCredits,
-					"error"   => $e->getMessage()
-				));
-			}
-
-			// retry
-			$attributes["autoCharge"] = false;
-			$from_stream->executeCommit(); 
-			return self::transfer($communityId, $amount, $reason, $toUserId, $fromUserId, $attributes);
+			$from_stream->executeRollback();
+			throw new Assets_Exception_NotEnoughCredits(array(
+				'missing' => $amount - $currentCredits
+			));
 		}
 
 		//--------------------------------------------------------------------
@@ -505,42 +479,16 @@ class Assets_Credits extends Base_Assets_Credits
 		));
 		$currentCredits = floatval($fromStream->getAttribute("amount"));
 
-		$force   = isset($options["autoCharge"]) ? $options["autoCharge"] : false;
 		$gateway = isset($options["payments"]) ? $options["payments"] : "stripe";
 
 		//--------------------------------------------------------------------
 		// 2. Auto-top-up if insufficient credits
 		//--------------------------------------------------------------------
 		if ($currentCredits < $amountCredits) {
-
-			if (!$force) {
-				$fromStream->executeRollback();
-				throw new Assets_Exception_NotEnoughCredits(array(
-					"missing" => $amountCredits - $currentCredits
-				));
-			}
-
-			$missing = $amountCredits - $currentCredits;
-
-			try {
-				Assets::autoCharge($missing, $reason, array(
-					"userId"   => $fromUserId,
-					"currency" => "credits",
-					"payments" => $gateway,
-					"metadata" => isset($options["metadata"]) ? $options["metadata"] : array()
-				));
-			} catch (Exception $e) {
-				$fromStream->executeRollback();
-				throw new Assets_Exception_NotEnoughCredits(array(
-					"missing" => $missing,
-					"error"   => $e->getMessage()
-				));
-			}
-
-			// retry spend, after top-up
-			$options["autoCharge"] = false;
-			$fromStream->executeCommit();
-			return self::spend($communityId, $amountCredits, $reason, $fromUserId, $options);
+			$fromStream->executeRollback();
+			throw new Assets_Exception_NotEnoughCredits(array(
+				"missing" => $amountCredits - $currentCredits
+			));
 		}
 
 		//--------------------------------------------------------------------
@@ -785,6 +733,7 @@ class Assets_Credits extends Base_Assets_Credits
 
 		return $attributes;
 	}
+
 	/**
 	 * Create row in Assets_Credits table
 	 * @method createRow

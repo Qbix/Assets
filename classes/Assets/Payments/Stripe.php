@@ -264,6 +264,62 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	}
 
 	/**
+	 * Fetch successful Stripe charges that should be honored.
+	 * No DB writes. No hooks. No side effects.
+	 *
+	 * @method fetchSuccessfulCharges
+	 * @param {array} $options
+	 * @param {string} $options.customerId REQUIRED
+	 * @param {integer} [$options.limit=100]
+	 * @return {array}
+	 */
+	function fetchSuccessfulCharges($options = array())
+	{
+		Q_Valid::requireFields(array('customerId'), $options, true);
+
+		$stripe = new \Stripe\StripeClient($this->options['secret']);
+		$result = array();
+
+		$intents = $stripe->paymentIntents->all(array(
+			'customer' => $options['customerId'],
+			'limit'    => Q::ifset($options, 'limit', 100)
+		));
+
+		foreach ($intents->data as $intent) {
+
+			if ($intent->status !== 'succeeded') {
+				continue;
+			}
+
+			if (empty($intent->amount_received)) {
+				continue;
+			}
+
+			try {
+				$metadata = self::resolveMetadata(
+					(array)$intent->metadata,
+					(object)['data' => (object)['object' => $intent]],
+					'payment_intent.succeeded'
+				);
+			} catch (Exception $e) {
+				continue;
+			}
+
+			$result[] = array(
+				'chargeId'   => $intent->id,
+				'customerId' => $intent->customer,
+				'userId'     => $metadata['userId'],
+				'amount'     => $intent->amount_received / 100,
+				'currency'   => strtoupper($intent->currency),
+				'metadata'   => $metadata
+			);
+		}
+
+		return $result;
+	}
+
+
+	/**
 	 * Check if connected account ready to use
 	 * @method connectedAccountReady
 	 * @param {array} [$account]
