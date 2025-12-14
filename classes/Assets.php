@@ -251,30 +251,29 @@ abstract class Assets extends Base_Assets
 			return array("success" => false, "details" => array("error" => "rejected-by-hook"));
 		}
 
+		$communityId = $communityId ? $communityId : Users::communityId();
+
+		$currency = Q::ifset($options, 'currency', 'USD');
+		$payments  = Q::ifset($options, 'payments', 'stripe');
+		$autoCharge    = Q::ifset($options, 'autoCharge', false);
+
+		$toPublisherId = Q::ifset($options, 'toPublisherId', null);
+		$toStreamName  = Q::ifset($options, 'toStreamName', null);
+		$toUserId        = Q::ifset($options, 'toUserId', 0);
+		if (!$toUserId and $toPublisherId) {
+			$toUserId = $toPublisherId;
+		}
+
 		if (empty($options['skipHonoringOutstandingSuccessfulCharges'])) {
 			try {
 				Assets::honorOutstandingSuccessfulCharges(
-					Q::ifset($options, 'payments', 'stripe'),
-					array(
-						'user' => Users_User::fetch($userId, true)
-					)
+					$payments,
+					$userId,
+					array('user' => Users_User::fetch($userId, true))
 				);
 			} catch (Exception $e) {
 				// keep going, this shouldn't block it
 			}
-		}
-
-		$communityId = $communityId ? $communityId : Users::communityId();
-
-		$currency = isset($options["currency"]) ? $options["currency"] : "USD";
-		$payments  = isset($options["payments"]) ? $options["payments"] : "stripe";
-		$autoCharge    = isset($options["autoCharge"]) ? $options["autoCharge"] : false;
-
-		$toPublisherId = isset($options["toPublisherId"]) ? $options["toPublisherId"] : null;
-		$toStreamName  = isset($options["toStreamName"]) ? $options["toStreamName"] : null;
-		$toUserId        = isset($options["toUserId"]) ? $options["toUserId"] : null;
-		if (!$toUserId and $toPublisherId) {
-			$toUserId = $toPublisherId;
 		}
 
 		$fromPublisherId = isset($options["fromPublisherId"]) ? $options["fromPublisherId"] : null;
@@ -626,15 +625,18 @@ abstract class Assets extends Base_Assets
 	 * @static
 	 * @param {string} $payments
 	 *  The payments adapter key (e.g. "stripe", "authnet", "web3").
+	 * @param {string} [$userId]
 	 * @param {array} [$options]
 	 *  Optional adapter-specific options. May include:
-	 *   - {Users_User} user       Used to resolve customer context
+	 *   - {Users_User} user      Used to avoid fetching user again
 	 *   - {string} customerId    Explicit provider customer id (optional)
 	 *   - {integer} limit        Max number of provider charges to inspect
 	 * @return {int}
-	 *  Number of charges newly honored and recorded
+	 *  Number of charges newly honored and recorded.
+	 * @throws Q_Exception_WrongType
+	 * @throws Q_Exception_MissingRow
 	 */
-	static function honorOutstandingSuccessfulCharges($payments = 'stripe', $options = array())
+	static function honorOutstandingSuccessfulCharges($payments, $userId, $options = array())
 	{
 		$className = 'Assets_Payments_' . ucfirst($payments);
 		if (!class_exists($className)) {
@@ -663,9 +665,26 @@ abstract class Assets extends Base_Assets
 		// -------------------------------------------------
 		// Resolve customerId ONCE (before adapter call)
 		// -------------------------------------------------
-		if (empty($options['customerId']) && !empty($options['user'])) {
+		if (isset($options['user'])) {
+			$user = $options['user'];
+			if (!($user instanceof Users_User)) {
+				throw new Q_Exception_WrongType(array(
+					'field' => 'options[user]',
+					'type' => 'Users_User'
+				));
+			}
+		} else {
+			$user = Users_User::fetch($userId);
+			if (!$user) {
+				throw new Q_Exception_MissingRow(array(
+					'table' => 'users_user',
+					'criteria' => "userId = $userId"
+				));
+			}
+		}
+		if (empty($options['customerId'])) {
 			$customer = new Assets_Customer();
-			$customer->userId   = $options['user']->id;
+			$customer->userId   = $user->id;
 			$customer->payments = $payments;
 			$customer->hash     = Assets_Customer::getHash();
 			if ($customer->retrieve()) {
@@ -673,14 +692,14 @@ abstract class Assets extends Base_Assets
 			}
 		}
 
-		// Instantiate adapter AFTER before-hook and AFTER customer resolution
+		// Instantiate adapter AFTER before-hook and customer resolution
 		$adapter = new $className((array)$options);
 
 		/**
 		 * Adapter-level fetch.
-		 * Adapter MUST:
-		 *  - Filter by customerId internally
-		 *  - Return [] if customerId is missing
+		* Adapter MUST return only charges that can be attributed
+		* to a concrete user (directly or indirectly).
+		* Adapter MAY use customerId, wallet, or provider-native identifiers.
 		 *
 		 * Returned rows MUST contain:
 		 *   - chargeId   (string, provider-unique)
@@ -759,7 +778,6 @@ abstract class Assets extends Base_Assets
 
 		return $honored;
 	}
-
 
 	/**
 	 * Returns a list of streams the user can pay for
