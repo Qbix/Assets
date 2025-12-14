@@ -1,6 +1,5 @@
 <?php
 
-require('Q.inc.php');
 require_once ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
 
 /**
@@ -275,3 +274,5 @@ function _stripe_meta($m)
 	}
 	return array();
 }
+
+Assets_stripeWebhook_post();

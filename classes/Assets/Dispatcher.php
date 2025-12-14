@@ -6,10 +6,7 @@
 
 /**
  * Dispatches inbound payment / web3 webhook events
- * (Stripe, Authnet, Moralis, etc.)
- *
- * This is NOT a web dispatcher.
- * It is a webhook event router.
+ * using provider adapters.
  *
  * @class Assets_Dispatcher
  */
@@ -37,8 +34,8 @@ class Assets_Dispatcher
 	 * @method dispatch
 	 * @static
 	 * @param {string} $payments  e.g. "stripe", "authnet", "moralis"
-	 * @param {mixed}  $event     payments-specific parsed event
-	 * @param {array}  $context   Normalized metadata (appId, headers, raw payload)
+	 * @param {mixed}  $event     Provider-specific parsed event
+	 * @param {array}  $context   Headers, payload, metadata
 	 * @return {boolean}
 	 */
 	static function dispatch($payments, $event, array $context = array())
@@ -49,89 +46,96 @@ class Assets_Dispatcher
 			return false;
 		}
 
-		$params = compact('payments', 'event', 'context');
+		$adapter = self::createAdapter($payments, $context);
 
 		try {
-			// ---------------------------------------------
-			// Validate event (signatures, replay protection)
-			// ---------------------------------------------
-			if (!isset(self::$skip['Assets/validate'])) {
-				/**
-				 * @event Assets/validate
-				 * @param {string} payments
-				 * @param {mixed} event
-				 * @param {array} context
-				 */
-				Q::event('Assets/validate', $params, true);
+			// -------------------------------------------------
+			// Validate webhook (pure, no side effects)
+			// -------------------------------------------------
+			if (method_exists($adapter, 'validateWebhook')) {
+				$adapter->validateWebhook($event, $context);
 			}
 
-			// ---------------------------------------------
-			// Normalize payments event → canonical shape
-			// ---------------------------------------------
-			if (!isset(self::$skip['Assets/normalize'])) {
-				/**
-				 * @event Assets/normalize
-				 * @param {string} payments
-				 * @param {mixed} event
-				 * @param {array} context
-				 */
-				Q::event('Assets/normalize', $params, true);
+			// -------------------------------------------------
+			// Normalize provider event → canonical domain event
+			// -------------------------------------------------
+			if (!method_exists($adapter, 'normalizeWebhook')) {
+				throw new Exception(
+					get_class($adapter) . " missing normalizeWebhook()"
+				);
 			}
 
-			// ---------------------------------------------
-			// Perform side effects (charges, credits, NFTs)
-			// ---------------------------------------------
-			if (!isset(self::$skip['Assets/action'])) {
-				/**
-				 * @event Assets/action
-				 * @param {string} payments
-				 * @param {mixed} event
-				 * @param {array} context
-				 */
-				Q::event('Assets/action', $params);
+			$normalized = $adapter->normalizeWebhook($event, $context);
+
+			if (!$normalized || !is_array($normalized)) {
+				self::result('Webhook ignored (no canonical event)');
+				return true;
 			}
 
-			// ---------------------------------------------
-			// Persist payments / trustlines / receipts
-			// ---------------------------------------------
-			if (!isset(self::$skip['Q/payments'])) {
-				/**
-				 * @event Q/payments
-				 * @param {array} params
-				 */
-				Q::event('Q/payments', $params, true);
+			// -------------------------------------------------
+			// Dispatch canonical domain update
+			// -------------------------------------------------
+			switch ($normalized['type']) {
+
+				case 'paymentSucceeded':
+					/**
+					 * @event Assets/update/paymentSucceeded
+					 */
+					Q::event(
+						'Assets/update/paymentSucceeded',
+						$normalized
+					);
+					break;
+
+				default:
+					self::result('Webhook ignored (unknown type)');
+					return true;
 			}
 
-			// ---------------------------------------------
-			// Logging / metrics
-			// ---------------------------------------------
-			if (!isset(self::$skip['Assets/log'])) {
-				/**
-				 * @event Assets/log
-				 * @param {array} params
-				 */
-				Q::event('Assets/log', $params, true);
-			}
+			// -------------------------------------------------
+			// Persistence / accounting (pure)
+			// -------------------------------------------------
+			Q::event('Q/payments', $normalized, true);
+
+			// -------------------------------------------------
+			// Logging / metrics (pure)
+			// -------------------------------------------------
+			Q::event('Assets/log', $normalized, true);
 
 		} catch (Exception $exception) {
-			/**
-			 * @event Assets/exception
-			 * @param {Exception} exception
-			 */
-			Q::event('Assets/exception', @compact('payments', 'event', 'context', 'exception'));
+			Q::event(
+				'Assets/exception',
+				compact('payments', 'event', 'context', 'exception')
+			);
+			throw $exception;
 		}
 
 		self::$served = 'response';
-		self::result('Webhook processed');
+		self::result("$payments webhook processed");
 		return true;
 	}
 
 	/**
-	 * Skip a stage
+	 * Instantiate payments adapter
+	 *
+	 * @method createAdapter
+	 * @static
+	 * @param {string} $payments
+	 * @param {array}  $context
+	 * @return Assets_Payments_Interface
 	 */
-	static function skip($eventName)
+	protected static function createAdapter($payments, array $context)
 	{
-		self::$skip[$eventName] = true;
+		$class = 'Assets_Payments_' . ucfirst(strtolower($payments));
+
+		if (!class_exists($class)) {
+			throw new Exception("Payments adapter not found: $class");
+		}
+
+		// Allow adapters to accept context/options if they want
+		return new $class(array(
+			'context' => $context
+		));
 	}
 
 	/**
@@ -139,5 +143,4 @@ class Assets_Dispatcher
 	 */
 	public static $served;
 	public static $startedDispatch = false;
-	protected static $skip = array();
 }

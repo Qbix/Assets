@@ -226,6 +226,91 @@ class Assets_Payments_Web3 extends Assets_Payments
 		return $data;
 	}
 
+    /**
+     * Lightweight validation of Moralis webhook
+     *
+     * @method validateWebhook
+     * @param {array} $event Parsed Moralis event
+     * @param {array} &$context
+     * @throws Exception
+     */
+    function validateWebhook($event, array &$context)
+    {
+        if (!is_array($event)) {
+            throw new Exception("Invalid Moralis webhook payload");
+        }
+
+        if (empty($context['chainId'])) {
+            throw new Exception("Missing chainId in Moralis webhook");
+        }
+
+        // Optional future hooks:
+        // - replay protection
+        // - block finality checks
+    }
+
+    /**
+     * Normalize Moralis webhook into canonical domain update
+     *
+     * @method normalizeWebhook
+     * @param {array} $event Moralis webhook payload
+     * @param {array} &$context
+     * @return {array|null}
+     */
+    function normalizeWebhook($event, array &$context)
+    {
+        // We only care about confirmed ERC20 transfers
+        if (
+            Q::ifset($event, 'type', null) !== 'erc20_transfer' ||
+            Q::ifset($event, 'confirmed', false) !== true
+        ) {
+            return null;
+        }
+
+        $chainId = Q::ifset($context, 'chainId', null);
+        if (!$chainId) {
+            return null;
+        }
+
+        $from = strtolower(Q::ifset($event, 'from', null));
+        $to   = strtolower(Q::ifset($event, 'to', null));
+        $hash = Q::ifset($event, 'transaction_hash', null);
+        $amount = Q::ifset($event, 'value', null);
+
+        if (!$from || !$to || !$hash || !$amount) {
+            return null;
+        }
+
+        $userId = Users_Web3::getUserIdByWallet($from);
+        if (!$userId) {
+            return null;
+        }
+
+        return array(
+            'type' => 'paymentSucceeded',
+
+            'data' => array(
+                'payments'   => 'web3',
+                'chargeId'   => $hash,
+                'customerId' => strtolower($chainId . ':' . $from),
+                'userId'     => $userId,
+                'amount'     => (string)$amount,
+                'currency'   => 'ERC20',
+                'metadata'   => array(
+                    'chainId' => $chainId,
+                    'from'    => $from,
+                    'to'      => $to,
+                    'token'   => Q::ifset($event, 'contract', null)
+                )
+            ),
+
+            // Envelope (optional but extremely useful)
+            'eventId'   => Q::ifset($context, 'eventId', null),
+            'eventType' => Q::ifset($context, 'eventType', null),
+            'raw'       => $event
+        );
+    }
+
     static function log ($title, $message=null) {
 		Q::log(date('Y-m-d H:i:s').': '.$title, 'web3');
 		if ($message) {

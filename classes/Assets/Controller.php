@@ -50,6 +50,17 @@ class Assets_Controller
 					throw new Exception("Unknown payments provider: $payments");
 			}
 
+            // ACK right away, to prevent retries
+            http_response_code(200);
+            header("Content-Length: 0");
+            header("Connection: close");
+            @ob_end_flush();
+            flush();
+            if (function_exists('fastcgi_finish_request')) {
+                fastcgi_finish_request();
+            }
+
+
 			// Dispatch normalized webhook
 			Assets_Dispatcher::dispatch($payments, $event, $context);
 

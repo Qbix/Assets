@@ -336,22 +336,63 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 	}
 
 	/**
-	 * Parse and verify Authorize.Net webhook
+	 * Validate Authorize.Net webhook structure
+	 *
+	 * NOTE:
+	 * - Signature already verified in parseWebhook()
+	 * - This is structural / semantic validation only
+	 *
+	 * @method validateWebhook
+	 * @param {array} $event Parsed Authnet webhook event
+	 * @param {array} &$context Mutable context
+	 * @throws Exception
+	 */
+	function validateWebhook($event, array &$context)
+	{
+		if (!is_array($event)) {
+			throw new Exception('Authnet webhook event must be an array');
+		}
+
+		// Required high-level fields (per Authnet docs)
+		if (empty($event['eventType'])) {
+			throw new Exception('Authnet webhook missing eventType');
+		}
+
+		if (empty($event['payload']) || !is_array($event['payload'])) {
+			throw new Exception('Authnet webhook missing payload');
+		}
+
+		// Optional: basic replay hook (future-proof)
+		if (!empty($context['updateId'])) {
+			// If you later add idempotency checks:
+			// Assets_WebhookLog::assertNotProcessed($context['updateId']);
+		}
+
+		// Nothing else to validate here
+	}
+
+
+	/**
+	 * Parse and verify Authorize.Net webhook payload
 	 *
 	 * @method parseWebhook
-	 * @static
 	 * @param {string} $payload Raw HTTP body
-	 * @param {array}  &$context Mutable context
+	 * @param {array}  &$context Mutable context (read-only downstream)
 	 * @throws Exception
-	 * @return array Parsed webhook event
+	 * @return array Parsed Authnet webhook event
 	 */
-	static function parseWebhook($payload, array &$context)
+	function parseWebhook($payload, array &$context)
 	{
 		$secret = Q_Config::expect(
-			'Assets', 'payments', 'authnet', 'webhookSecret'
+			'Assets',
+			'payments',
+			'authnet',
+			'webhookSecret'
 		);
 
+		// ---------------------------------------------
 		// Normalize headers
+		// ---------------------------------------------
 		$headers = array();
 		foreach ($_SERVER as $k => $v) {
 			if (Q::startsWith($k, 'HTTP_')) {
@@ -369,31 +410,32 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 		}
 
 		$providedSig = substr($sigHeader, 7);
-
-		$computedSig = hash_hmac(
-			'sha512',
-			$payload,
-			$secret
-		);
+		$computedSig = hash_hmac('sha512', $payload, $secret);
 
 		if (!hash_equals($computedSig, $providedSig)) {
 			throw new Exception('Authnet webhook signature verification failed');
 		}
 
-		$data = json_decode($payload, true);
-		if (!$data) {
+		// ---------------------------------------------
+		// Parse JSON
+		// ---------------------------------------------
+		$event = json_decode($payload, true);
+		if (!is_array($event)) {
 			throw new Exception('Invalid Authnet JSON payload');
 		}
 
-		// Enrich context
+		// ---------------------------------------------
+		// Enrich context (read-only downstream)
+		// ---------------------------------------------
 		$context['payments']   = 'authnet';
-		$context['eventType']  = Q::ifset($data, 'eventType', null);
-		$context['eventId']    = Q::ifset($data, 'id', null);
+		$context['sourceType'] = Q::ifset($event, 'eventType', null);
+		$context['updateId']   = Q::ifset($event, 'id', null);
 		$context['headers']    = $headers;
 		$context['rawPayload'] = $payload;
 
-		return $data;
+		return $event;
 	}
+
 
 	static function log ($title, $message=null) {
 		Q::log(date('Y-m-d H:i:s').': '.$title, 'authnet');

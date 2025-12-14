@@ -501,52 +501,94 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	}
 
 	/**
-	 * Parse and verify Stripe webhook payload
+	 * Validate Stripe webhook (lightweight, no side effects)
 	 *
-	 * @method parseWebhook
-	 * @static
-	 * @param {string} $payload Raw HTTP body
-	 * @param {array}  &$context Mutable context (headers, metadata)
+	 * @method validateWebhook
+	 * @param {mixed} $event Parsed Stripe\Event
+	 * @param {array} &$context Mutable context
 	 * @throws Exception
-	 * @return \Stripe\Event
 	 */
-	static function parseWebhook($payload, array &$context)
+	function validateWebhook($event, array &$context)
 	{
-		$secret = Q_Config::expect('Assets', 'payments', 'stripe', 'webhookSecret');
-
-		$headers = array();
-		foreach ($_SERVER as $k => $v) {
-			if (Q::startsWith($k, 'HTTP_')) {
-				$headers[strtolower(str_replace('_', '-', substr($k, 5)))] = $v;
-			}
+		if (!$event || empty($event->id) || empty($event->type)) {
+			throw new Exception("Invalid Stripe webhook payload");
 		}
 
-		$sig = Q::ifset($headers, 'stripe-signature', null);
-		if (!$sig) {
-			throw new Exception("Missing Stripe-Signature header");
-		}
-
-		try {
-			$event = \Stripe\Webhook::constructEvent(
-				$payload,
-				$sig,
-				$secret
-			);
-		} catch (Exception $e) {
-			self::log('Stripe webhook signature verification failed', $e->getMessage());
-			throw $e;
-		}
-
-		// Enrich context (read-only elsewhere)
-		$context['payments']   = 'stripe';
-		$context['eventType']  = $event->type;
-		$context['eventId']    = $event->id;
-		$context['headers']    = $headers;
-		$context['rawPayload'] = $payload;
-
-		return $event;
+		// Optional replay / idempotency hooks can live here later
+		// Signature verification already happened in parseWebhook()
 	}
 
+	/**
+	 * Normalize Stripe webhook into canonical domain update
+	 *
+	 * @method normalizeWebhook
+	 * @param {mixed} $event Stripe\Event
+	 * @param {array} &$context
+	 * @return {array|null} Canonical update or null if ignored
+	 */
+	function normalizeWebhook($event, array &$context)
+	{
+		$type = $event->type;
+
+		// We only care about successful money movement
+		if (
+			$type !== 'payment_intent.succeeded' &&
+			$type !== 'invoice.paid'
+		) {
+			return null;
+		}
+
+		$object = $event->data->object;
+
+		$metadata = self::resolveMetadata(
+			(array) Q::ifset($object, 'metadata', array()),
+			$event,
+			$type
+		);
+
+		$amountCents = Q::ifset(
+			$object,
+			'amount_received',
+			Q::ifset($object, 'amount_paid', null)
+		);
+
+		if (!$amountCents) {
+			return null;
+		}
+
+		return array(
+			// -----------------------------
+			// Canonical update descriptor
+			// -----------------------------
+			'type' => 'paymentSucceeded',
+
+			// -----------------------------
+			// Provenance
+			// -----------------------------
+			'payments'  => 'stripe',
+			'updateId'  => $event->id,
+			'sourceType'=> $type,
+
+			// -----------------------------
+			// Idempotency + ownership
+			// -----------------------------
+			'chargeId'   => $metadata['chargeId'],
+			'customerId' => Q::ifset($metadata, 'customerId', null),
+			'userId'     => $metadata['userId'],
+
+			// -----------------------------
+			// Value
+			// -----------------------------
+			'amount'   => $amountCents / 100,
+			'currency' => strtoupper($object->currency),
+
+			// -----------------------------
+			// Attachments
+			// -----------------------------
+			'metadata' => $metadata,
+			'raw'      => $event
+		);
+	}
 
 	static function log ($title, $message=null) {
 		Q::log(date('Y-m-d H:i:s').': '.$title, 'stripe');
