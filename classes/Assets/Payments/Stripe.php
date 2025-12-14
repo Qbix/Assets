@@ -103,6 +103,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 
 		return $customer->customerId;
 	}
+
 	/**
 	 * Create stripe customer.
 	 * Allow you to perform recurring charges, and to track multiple charges, that are associated with the same customer
@@ -117,6 +118,13 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 		$params["name"] = $avatar->displayName();
 		$params['email'] = $user->emailAddress ? $user->emailAddress : $user->emailAddressPending;
 		$params['phone'] = $user->mobileNumber ? $user->mobileNumber : $user->mobileNumberPending;
+		$params["metadata"] = array_merge(
+		Q::ifset($params, 'metadata', array()),
+			array(
+				'userId' => $user->id,
+				'app'    => Q::app()
+			)
+		);
 
 		return \Stripe\Customer::create($params);
 	}
@@ -300,7 +308,7 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 
 			try {
 				$metadata = self::resolveMetadata(
-					(array)$intent->metadata,
+					$intent->metadata->toArray(),
 					(object)['data' => (object)['object' => $intent]],
 					'payment_intent.succeeded'
 				);
