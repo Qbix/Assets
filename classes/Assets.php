@@ -748,17 +748,24 @@ abstract class Assets extends Base_Assets
 	 * @method honorOutstandingSuccessfulCharges
 	 * @static
 	 * @param {string} $payments
+	 *  The payments adapter key (e.g. "stripe", "authnet", "web3").
 	 * @param {string} [$userId]
+	 *  Optional userId to scope reconciliation.
 	 * @param {array} [$options]
-	 *   - {boolean} dryRun        If true, do not call Assets::charged()
-	 *   - {Users_User} user
-	 *   - {string} customerId
-	 *   - {integer} limit
+	 *  Optional adapter- and execution-specific options.
+	 * @param {boolean} [$options.dryRun=false]
+	 *  If true, do not call Assets::charged() or perform any side effects.
+	 * @param {Users_User} [$options.user]
+	 *  Explicit user object to avoid fetching by userId.
+	 * @param {string} [$options.customerId]
+	 *  Explicit provider customer id to scope provider queries.
+	 * @param {integer} [$options.limit]
+	 *  Maximum number of provider charges to inspect.
 	 * @return {array}
-	 *   Array of arrays describing what was (or would be) passed to Assets::charged()
+	 *  Array of arrays describing what was (or would be) passed to Assets::charged().
 	 * @throws Q_Exception_WrongType
 	 * @throws Q_Exception_MissingRow
-	 */
+	*/
 	static function honorOutstandingSuccessfulCharges($payments, $userId, $options = array())
 	{
 		$className = 'Assets_Payments_' . ucfirst($payments);
@@ -801,6 +808,7 @@ abstract class Assets extends Base_Assets
 				));
 			}
 		}
+		$options['user'] = $user;
 
 		// -------------------------------------------------
 		// Resolve customerId ONCE
