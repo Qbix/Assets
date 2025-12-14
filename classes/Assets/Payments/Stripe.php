@@ -269,19 +269,23 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	 *
 	 * @method fetchSuccessfulCharges
 	 * @param {array} $options
-	 * @param {string} $options.customerId REQUIRED
+	 * @param {string|null} [$options.customerId]
 	 * @param {integer} [$options.limit=100]
 	 * @return {array}
 	 */
 	function fetchSuccessfulCharges($options = array())
 	{
-		Q_Valid::requireFields(array('customerId'), $options, true);
+		$customerId = Q::ifset($options, 'customerId', null);
+		if (!$customerId) {
+			// No customer yet → nothing to reconcile
+			return array();
+		}
 
 		$stripe = new \Stripe\StripeClient($this->options['secret']);
 		$result = array();
 
 		$intents = $stripe->paymentIntents->all(array(
-			'customer' => $options['customerId'],
+			'customer' => $customerId,
 			'limit'    => Q::ifset($options, 'limit', 100)
 		));
 
@@ -290,7 +294,6 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 			if ($intent->status !== 'succeeded') {
 				continue;
 			}
-
 			if (empty($intent->amount_received)) {
 				continue;
 			}
@@ -317,7 +320,6 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 
 		return $result;
 	}
-
 
 	/**
 	 * Check if connected account ready to use

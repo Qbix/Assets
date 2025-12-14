@@ -252,12 +252,16 @@ abstract class Assets extends Base_Assets
 		}
 
 		if (empty($options['skipHonoringOutstandingSuccessfulCharges'])) {
-			Assets::honorOutstandingSuccessfulCharges(
-				Q::ifset($options, 'payments', 'stripe'),
-				array(
-					'user' => Users_User::fetch($userId, true)
-				)
-			);
+			try {
+				Assets::honorOutstandingSuccessfulCharges(
+					Q::ifset($options, 'payments', 'stripe'),
+					array(
+						'user' => Users_User::fetch($userId, true)
+					)
+				);
+			} catch (Exception $e) {
+				// keep going, this shouldn't block it
+			}
 		}
 
 		$communityId = $communityId ? $communityId : Users::communityId();
@@ -609,13 +613,26 @@ abstract class Assets extends Base_Assets
 	 * Honor successful external charges that were already finalized
 	 * at the payment provider but not yet recorded locally.
 	 *
-	 * Idempotent. Safe to call repeatedly.
+	 * This method:
+	 *  - Resolves provider customer context (if available)
+	 *  - Fetches provider-confirmed successful charges
+	 *  - Ensures idempotency by skipping already-recorded charge IDs
+	 *  - Records missing charges locally via Assets::charged()
+	 *  - Marks newly recorded charges as completed
+	 *
+	 * Safe to call repeatedly.
 	 *
 	 * @method honorOutstandingSuccessfulCharges
 	 * @static
 	 * @param {string} $payments
-	 * @param {array}  [$options]
-	 * @return {int} Number of charges honored
+	 *  The payments adapter key (e.g. "stripe", "authnet", "web3").
+	 * @param {array} [$options]
+	 *  Optional adapter-specific options. May include:
+	 *   - {Users_User} user       Used to resolve customer context
+	 *   - {string} customerId    Explicit provider customer id (optional)
+	 *   - {integer} limit        Max number of provider charges to inspect
+	 * @return {int}
+	 *  Number of charges newly honored and recorded
 	 */
 	static function honorOutstandingSuccessfulCharges($payments = 'stripe', $options = array())
 	{
@@ -627,7 +644,13 @@ abstract class Assets extends Base_Assets
 		$adapter = null;
 
 		/**
+		 * Fired before honoring outstanding charges.
+		 * Handlers may return false to cancel.
+		 *
 		 * @event Assets/honorCharges {before}
+		 * @param {string} payments
+		 * @param {array} options
+		 * @param {object|null} adapter
 		 */
 		if (false === Q::event(
 			'Assets/honorCharges',
@@ -637,10 +660,36 @@ abstract class Assets extends Base_Assets
 			return 0;
 		}
 
-		// Instantiate adapter AFTER before-hook
+		// -------------------------------------------------
+		// Resolve customerId ONCE (before adapter call)
+		// -------------------------------------------------
+		if (empty($options['customerId']) && !empty($options['user'])) {
+			$customer = new Assets_Customer();
+			$customer->userId   = $options['user']->id;
+			$customer->payments = $payments;
+			$customer->hash     = Assets_Customer::getHash();
+			if ($customer->retrieve()) {
+				$options['customerId'] = $customer->customerId;
+			}
+		}
+
+		// Instantiate adapter AFTER before-hook and AFTER customer resolution
 		$adapter = new $className((array)$options);
 
-		// Provider-level successful charges (Stripe PI succeeded, Web3 confirmed tx, etc)
+		/**
+		 * Adapter-level fetch.
+		 * Adapter MUST:
+		 *  - Filter by customerId internally
+		 *  - Return [] if customerId is missing
+		 *
+		 * Returned rows MUST contain:
+		 *   - chargeId   (string, provider-unique)
+		 *   - userId     (string)
+		 *   - amount     (float)
+		 *   - currency   (string)
+		 *   - metadata   (array)
+		 *   - customerId (string|null)
+		 */
 		$charges = $adapter->fetchSuccessfulCharges($options);
 
 		$honored = 0;
@@ -650,7 +699,7 @@ abstract class Assets extends Base_Assets
 			$chargeId = $c['chargeId'];
 
 			// -------------------------------------------------
-			// Idempotency: already recorded?
+			// Idempotency: skip if already recorded
 			// -------------------------------------------------
 			$existing = new Assets_Charge();
 			$existing->id = $chargeId;
@@ -681,7 +730,9 @@ abstract class Assets extends Base_Assets
 				)
 			);
 
-			// Explicitly mark as completed
+			// -------------------------------------------------
+			// Mark charge as completed and confirmed
+			// -------------------------------------------------
 			if ($charge) {
 				$charge->status = 'completed';
 				$charge->confirmedTime = new Db_Expression('CURRENT_TIMESTAMP');
@@ -692,7 +743,13 @@ abstract class Assets extends Base_Assets
 		}
 
 		/**
+		 * Fired after honoring outstanding charges.
+		 *
 		 * @event Assets/honorCharges {after}
+		 * @param {string} payments
+		 * @param {array} options
+		 * @param {object} adapter
+		 * @param {int} honored
 		 */
 		Q::event(
 			'Assets/honorCharges',
@@ -702,6 +759,7 @@ abstract class Assets extends Base_Assets
 
 		return $honored;
 	}
+
 
 	/**
 	 * Returns a list of streams the user can pay for
