@@ -3,108 +3,6 @@
 require_once ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
 
 /**
- * Unified handler for completed Stripe charges.
- * Performs:
- *  1) Assets::charge()
- *  2) If metadata contains intentToken to continue pending Assets::pay()
- *
- * Idempotency is preserved because we inject $metadata['chargeId']
- * using Stripe’s unique charge.id or payment_intent.id fallback.
- */
-function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $event)
-{
-	try {
-		if (isset($metadata['userId'])) {
-			Users::setLoggedInUser($metadata['userId']);
-		}
-
-		// -------------------------------------------------------------
-		// Ensure idempotency: chargeId must exist if coming from webhook
-		// -------------------------------------------------------------
-		$chargeId = Q::ifset($metadata, 'chargeId', null);
-		if (!$chargeId) {
-			// fallback — extract unique identifier from Stripe event
-			if ($event->type === 'payment_intent.succeeded') {
-				$pi = $event->data->object;
-				$chargeObj = Q::ifset($pi, 'charges', 'data', 0, null);
-				$chargeId  = Q::ifset($chargeObj, 'id', $pi->id);   // fallback to PI id
-			}
-			else if ($event->type === 'invoice.paid') {
-				$invoice = $event->data->object;
-				$chargeId = $invoice->id;
-			}
-			else if ($event->type === 'setup_intent.succeeded') {
-				// setup_intent does not affect charges; leave unset
-			}
-
-			if ($chargeId) {
-				$metadata['chargeId'] = $chargeId;
-			}
-		}
-
-		// -------------------------------------------------------------
-		// Record a normal credit purchase charge (idempotent because chargeId exists)
-		// -------------------------------------------------------------
-		$charge = Assets::charged("stripe", $amount, $currency, $metadata);
-
-		// -------------------------------------------------------------
-		// Check for Users_Intent continuation (pending Assets::pay)
-		// -------------------------------------------------------------
-		$shouldContinue = (
-			!empty($metadata['intentToken'])
-			&& (!isset($metadata['autoCharge']) || $metadata['autoCharge'] !== "1")
-		);
-
-        if ($shouldContinue) {
-			$intent = new Users_Intent(array('token' => $metadata['intentToken']));
-			if ($intent->retrieve() && $intent->isValid()) {
-
-				$instructions = $intent->getAllInstructions();
-
-				// get amount of credits to transfer
-				$amount = $instructions['amount'];
-				$options = Q::take($instructions, array(
-					'currency', 'payments',
-					'toPublisherId', 'toStreamName', 'toUserId', 'metadata'
-				));
-				$options['autoCharge'] = false;
-				if ($needCredits = $intent->getInstruction('needCredits', 0)) {
-					$amount = $intent->getInstruction('credits');
-					$options['currency'] = 'credits';
-				}
-
-				// make the payment (continuation from intent)
-				$result = Assets::pay(
-					$instructions['communityId'],
-					$instructions['userId'],
-					$amount,
-					$instructions['reason'],
-					$options
-				);
-
-				// complete the intent, then take actions
-				$intent->complete(array('success' => $result['success']));
-
-				Assets_Payments_Stripe::log(
-					"stripe",
-					"Intent payment completed (webhook)",
-					array("instructions" => $instructions, "result" => $result)
-				);
-			}
-		}
-
-	} catch (Exception $e) {
-		Assets_Payments_Stripe::log(
-			"stripe",
-			"Unified handler error",
-			$e
-		);
-	}
-}
-
-
-
-/**
  * Stripe webhook — immediately ACK Stripe, then process in background.
  */
 function Assets_stripeWebhook_post($params = array())
@@ -262,6 +160,105 @@ function Assets_stripeWebhook_post($params = array())
 	}
 }
 
+/**
+ * Unified handler for completed Stripe charges.
+ * Performs:
+ *  1) Assets::charge()
+ *  2) If metadata contains intentToken to continue pending Assets::pay()
+ *
+ * Idempotency is preserved because we inject $metadata['chargeId']
+ * using Stripe’s unique charge.id or payment_intent.id fallback.
+ */
+function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $event)
+{
+	try {
+		if (isset($metadata['userId'])) {
+			Users::setLoggedInUser($metadata['userId']);
+		}
+
+		// -------------------------------------------------------------
+		// Ensure idempotency: chargeId must exist if coming from webhook
+		// -------------------------------------------------------------
+		$chargeId = Q::ifset($metadata, 'chargeId', null);
+		if (!$chargeId) {
+			// fallback — extract unique identifier from Stripe event
+			if ($event->type === 'payment_intent.succeeded') {
+				$pi = $event->data->object;
+				$chargeObj = Q::ifset($pi, 'charges', 'data', 0, null);
+				$chargeId  = Q::ifset($chargeObj, 'id', $pi->id);   // fallback to PI id
+			}
+			else if ($event->type === 'invoice.paid') {
+				$invoice = $event->data->object;
+				$chargeId = $invoice->id;
+			}
+			else if ($event->type === 'setup_intent.succeeded') {
+				// setup_intent does not affect charges; leave unset
+			}
+
+			if ($chargeId) {
+				$metadata['chargeId'] = $chargeId;
+			}
+		}
+
+		// -------------------------------------------------------------
+		// Record a normal credit purchase charge (idempotent because chargeId exists)
+		// -------------------------------------------------------------
+		$charge = Assets::charged("stripe", $amount, $currency, $metadata);
+
+		// -------------------------------------------------------------
+		// Check for Users_Intent continuation (pending Assets::pay)
+		// -------------------------------------------------------------
+		$shouldContinue = (
+			!empty($metadata['intentToken'])
+			&& (!isset($metadata['autoCharge']) || $metadata['autoCharge'] !== "1")
+		);
+
+        if ($shouldContinue) {
+			$intent = new Users_Intent(array('token' => $metadata['intentToken']));
+			if ($intent->retrieve() && $intent->isValid()) {
+
+				$instructions = $intent->getAllInstructions();
+
+				// get amount of credits to transfer
+				$amount = $instructions['amount'];
+				$options = Q::take($instructions, array(
+					'currency', 'payments',
+					'toPublisherId', 'toStreamName', 'toUserId', 'metadata'
+				));
+				$options['autoCharge'] = false;
+				if ($needCredits = $intent->getInstruction('needCredits', 0)) {
+					$amount = $intent->getInstruction('credits');
+					$options['currency'] = 'credits';
+				}
+
+				// make the payment (continuation from intent)
+				$result = Assets::pay(
+					$instructions['communityId'],
+					$instructions['userId'],
+					$amount,
+					$instructions['reason'],
+					$options
+				);
+
+				// complete the intent, then take actions
+				$intent->complete(array('success' => $result['success']));
+
+				Assets_Payments_Stripe::log(
+					"stripe",
+					"Intent payment completed (webhook)",
+					array("instructions" => $instructions, "result" => $result)
+				);
+			}
+		}
+
+	} catch (Exception $e) {
+		Assets_Payments_Stripe::log(
+			"stripe",
+			"Unified handler error",
+			$e
+		);
+	}
+}
 
 /**
  * Normalize Stripe metadata object to array
@@ -275,6 +272,3 @@ function _stripe_meta($m)
 	}
 	return array();
 }
-
-// Entry point
-Assets_stripeWebhook_post();

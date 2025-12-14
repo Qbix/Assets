@@ -895,8 +895,9 @@ abstract class Assets extends Base_Assets
 
 		// 2. Attempt real-money charge
 		try {
+			$dontLogMissingCustomer = Q::ifset($options, 'dontLogMissingCustomer', true);
 			$result = Assets::charge($payments, $amount, $currency, compact(
-				'user', 'reason', 'metadata'
+				'user', 'reason', 'metadata', 'dontLogMissingCustomer'
 			));
 
 			// Commit quota usage
