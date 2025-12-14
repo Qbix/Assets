@@ -9,10 +9,6 @@ function Assets_update_paymentSucceeded($data, $envelope)
 {
 	$metadata = Q::ifset($data, 'metadata', array());
 
-	if (isset($data['userId'])) {
-		Users::setLoggedInUser($data['userId']);
-	}
-
 	// ---------------------------------------------
 	// 1. Idempotent charge record
 	// ---------------------------------------------
@@ -21,7 +17,8 @@ function Assets_update_paymentSucceeded($data, $envelope)
 		$data['amount'],
 		$data['currency'],
 		array_merge($metadata, array(
-			'chargeId' => $data['chargeId']
+			'chargeId' => $data['chargeId'],
+            'userId' => $data['userId']
 		))
 	);
 

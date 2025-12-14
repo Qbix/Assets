@@ -14,10 +14,6 @@ require_once ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
 function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $event)
 {
 	try {
-		if (isset($metadata['userId'])) {
-			Users::setLoggedInUser($metadata['userId']);
-		}
-
 		// -------------------------------------------------------------
 		// Ensure idempotency: chargeId must exist if coming from webhook
 		// -------------------------------------------------------------

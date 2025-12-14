@@ -347,7 +347,6 @@ class Assets_Credits extends Base_Assets_Credits
 				$fromUserId,
 				$attributes
 			);
-			$assets_credits->save(false, false);
 
 			//----------------------------------------------------------------
 			// 5. Deduct payer (no commit)
@@ -536,7 +535,6 @@ class Assets_Credits extends Base_Assets_Credits
 				$fromUserId,
 				$attributes
 			);
-			$assets_credits->save(false, false);
 
 			//----------------------------------------------------------------
 			// 6. Deduct payer (no commit)
@@ -748,7 +746,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} [$attributes.toStreamName] The name of the stream value-producing for which the payment is made
 	 * @param {string} [$attributes.fromPublisherId] The publisher of the value-consuming stream on whose behalf the payment is made
 	 * @param {string} [$attributes.fromStreamName] The name of the value-consuming stream on whose behalf the payment is made
-	 * @return {Assets_Credits} Assets_Credits row
+	 * @return {Assets_Credits} Assets_Credits row that was saved
 	 */
 	private static function createRow ($communityId, $amount, $reason, $toUserId = null, $fromUserId = null, $attributes = array())
 	{
@@ -799,6 +797,7 @@ class Assets_Credits extends Base_Assets_Credits
 		$assets_credits->communityId = $communityId;
 		$assets_credits->amount = $amount;
 		$assets_credits->setAttribute($attributes);
+		$assets_credits->save(false, false);
 		return $assets_credits;
 	}
 	/**

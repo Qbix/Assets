@@ -639,11 +639,11 @@ abstract class Assets extends Base_Assets
 		}
 		$currency = strtoupper($currency);
 		$credits = Assets_Credits::convert($amount, $currency, 'credits');
-		$user        = Q::ifset($options, 'user', Users::loggedInUser(false));
+		$userId        = Q::ifset($options, 'userId', null);
 		$communityId = Q::ifset($options, 'communityId', Users::communityId());
 		$chargeId    = Q::ifset($options, 'chargeId', null);
 		$baseMetadata = array(
-			"userId"      => $user ? $user->id : null,
+			"userId"      => $userId,
 			"communityId" => $communityId,
 			"currency"    => $currency,
 			"amount"      => $amount,
@@ -660,7 +660,7 @@ abstract class Assets extends Base_Assets
 		$adapter = null;
 		$customerId = Q::ifset($options, 'customerId', null);
 		$charge = new Assets_Charge();
-		$charge->userId = $user ? $user->id : null;
+		$charge->userId = $userId;
 		$charge->id = $chargeId;
 		if (!$charge->retrieve()) {
 			// only do this once per charge -- idempotent
@@ -695,6 +695,7 @@ abstract class Assets extends Base_Assets
 			$charge->streamName = Q::ifset($options, 'metadata', 'toStreamName', Q::ifset(
 				$options, 'metadata', 'streamName', ''
 			));
+			$charge->status = 'completed';
 			$attributes = array(
 				'payments'    => $payments,
 				'customerId'  => $customerId,
@@ -844,8 +845,7 @@ abstract class Assets extends Base_Assets
 				continue;
 			}
 
-			$user = Users_User::fetch($c['userId'], true);
-			if (!$user) {
+			if (!Users_User::fetch($c['userId'])) {
 				continue;
 			}
 
@@ -854,7 +854,7 @@ abstract class Assets extends Base_Assets
 			// -------------------------------------------------
 			$payload = array(
 				'chargeId'    => $chargeId,
-				'user'        => $user,
+				'userId'        => $c['userId'],
 				'communityId' => Q::ifset($c['metadata'], 'communityId', null),
 				'reason'      => Q::ifset($c['metadata'], 'reason', null),
 				'metadata'    => $c['metadata'],
@@ -876,18 +876,9 @@ abstract class Assets extends Base_Assets
 				continue;
 			}
 
-			$charge = Assets::charged(
-				$payments,
-				$c['amount'],
-				$c['currency'],
-				$payload
-			);
-
-			if ($charge) {
-				$charge->status = 'completed';
-				$charge->confirmedTime = new Db_Expression('CURRENT_TIMESTAMP');
-				$charge->save();
-			}
+			Q::event('Assets/update/paymentSucceeded', array_merge(
+				compact('payments'), $c
+			));
 		}
 
 		/**
