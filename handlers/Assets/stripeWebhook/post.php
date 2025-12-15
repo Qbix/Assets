@@ -167,8 +167,6 @@ function Assets_stripeWebhook_post($params = array())
 				$chargeObj          = Q::ifset($pi, 'charges', 'data', 0, null);
 				$metadata['chargeId'] = Q::ifset($chargeObj, 'id', $pi->id);
 
-				Q::log($metadata, 'm');
-
 				// App check
 				if (Q::ifset($metadata, 'app', null) !== Q::app()) {
 					Assets_Payments_Stripe::log('stripe', 'PI succeeded but wrong app');

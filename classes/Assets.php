@@ -446,6 +446,7 @@ abstract class Assets extends Base_Assets
 		if ($stream) {
 			try {
 				$sub = Q::ifset($options, 'subscribe', array());
+				$sub['userId'] = $userId;
 				if ($sub !== false) {
 					$stream->subscribe($sub);
 				}
