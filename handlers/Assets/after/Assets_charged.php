@@ -53,6 +53,7 @@ function Assets_after_Assets_charged($params)
 		return;
 	}
 
+	$user = Users_User::fetch($userId, true);
 	$fields = @compact(
 		'user', 'publisher', 'publisherId', 'communityId', 'communityName', 'communitySuffix',
 		'description', 'subscription', 'stream', 'plan', 'currency', 
@@ -60,7 +61,6 @@ function Assets_after_Assets_charged($params)
 		'months', 'startDate', 'endDate', 'link'
 	);
 	
-	$user = Users_User::fetch($userId);
 	$emailAddress = $user->emailAddress ? $user->emailAddress : $user->emailAddressPending;
 	$mobileNumber = $user->mobileNumber ? $user->mobileNumber : $user->mobileNumberPending;
 	if ($emailAddress or ($user->emailAddressPending and !$user->mobileNumber)) {

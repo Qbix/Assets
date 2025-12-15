@@ -625,7 +625,8 @@ abstract class Assets extends Base_Assets
 	 * @param {string} [$options.reason] Business reason or semantic label.
 	 * @param {string} [$options.description=null] Description for the customer
 	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
-	 * @param {boolean} [$options.skipSideEffects] Skip all 
+	 * @param {boolean} [$options.skipNotifications] Skip sending notifications
+	 * @param {boolean} [$options.skipAllSideEffects] Skip all side effects, including sending notifications
 	 * @throws \Stripe\Error\Card
 	 * @throws Assets_Exception_DuplicateTransaction
 	 * @throws Assets_Exception_HeldForReview
@@ -725,7 +726,6 @@ abstract class Assets extends Base_Assets
 					'communityId',
 					'chargeId',
 					'userId',
-					'user',
 					'charge',
 					'options'
 				),
@@ -876,6 +876,7 @@ abstract class Assets extends Base_Assets
 			// Idempotency: skip if already recorded
 			// ---------------------------------------------
 			$existing = new Assets_Charge();
+			$existing->userId = $userId;
 			$existing->id = $chargeId;
 			if ($existing->retrieve()) {
 				continue;

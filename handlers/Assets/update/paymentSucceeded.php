@@ -27,7 +27,7 @@ function Assets_update_paymentSucceeded($data, $envelope)
 	// ---------------------------------------------
 	if (
 		!empty($metadata['intentToken']) &&
-		Q::ifset($metadata, 'autoCharge', null) !== "1"
+		Q::ifset($metadata, 'autoCharge', null) != 1
 	) {
 		$intent = new Users_Intent(array(
 			'token' => $metadata['intentToken']
