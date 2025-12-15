@@ -411,8 +411,7 @@ class Assets_Credits extends Base_Assets_Credits
 
 	/**
 	 * Spend credits from the logged-in user on a value-producing stream.
-	 * This supports automatic top-ups (real money) via autoCharge(),
-	 * itemized spending, and the standard Qbix credit accounting model.
+	 * This supports itemized spending, and the standard credit accounting model.
 	 *
 	 * @method spend
 	 * @static
@@ -421,10 +420,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $reason Semantic reason for the spend.
 	 * @param {string} $fromUserId User spending the credits.
 	 * @param {array} [$options] Extra metadata:
-	 *     @param {boolean} [$options.autoCharge=false]
-	 *         If true and user lacks credits, auto top-up via real money.
-	 *     @param {string} [$options.payments="stripe"]
-	 *         Payment gateway key.
+	 *     @param {string} [$options.payments="stripe"] Payment gateway key.
 	 *     @param {string} [$options.toPublisherId]
 	 *     @param {string} [$options.toStreamName]
 	 *     @param {array}  [$options.items] Itemized spend: each {publisherId, streamName, amount}
@@ -477,8 +473,6 @@ class Assets_Credits extends Base_Assets_Credits
 			'rollbackIfMissing' => true
 		));
 		$currentCredits = floatval($fromStream->getAttribute("amount"));
-
-		$gateway = isset($options["payments"]) ? $options["payments"] : "stripe";
 
 		//--------------------------------------------------------------------
 		// 2. Auto-top-up if insufficient credits
@@ -548,7 +542,7 @@ class Assets_Credits extends Base_Assets_Credits
 			$toStream->setAttribute("amount", $publisherCredits + $amountCredits);
 
 			/**
-			 * Hook before payment of credits.
+			 * Hook after payment of credits.
 			 * @event Assets/credits/spend {after}
 			 * @param {string} communityId
 			 * @param {float} amountCredits
@@ -563,10 +557,11 @@ class Assets_Credits extends Base_Assets_Credits
 				'Assets/credits/spend',
 				@compact(
 					'communityId', 'amountCredits', 'reason', 'fromUserId', 'options',
-					 'currentCredits', 'publisherCredits', 'amountCredits'
+					 'currentCredits', 'publisherCredits'
 				),
 				'after'
 			)) {
+				$fromStream->executeRollback();
 				return false;
 			}
 
@@ -581,15 +576,28 @@ class Assets_Credits extends Base_Assets_Credits
 			throw $e;
 		}
 
+
+		//----------------------------------------------------------------
+		// 8. Handle referral for spend action
+		// This may be undone by a matching internal refund
+		//----------------------------------------------------------------
+		$referredAction = 'Assets/credits/spend';
+		$extras = @compact('amountCredits', 'reason');
+		Q::take($options, array(
+			'payments', 'currency', 'toUserId', 'toPublisherId', 'toStreamName'
+		), $extras);
+		Users_Referred::handleReferral($fromUserId, $toPublisherId, $referredAction, $toStream->type, compact('extras'));
+
+
 		//--------------------------------------------------------------------
-		// 8. Post-commit text loading
+		// 9. Post-commit text loading
 		//--------------------------------------------------------------------
 		if ($texts = Q_Config::get('Assets', 'credits', 'text', 'load', array())) {
 			Q_Text::get($texts);
 		}
 
 		//--------------------------------------------------------------------
-		// 9. Post-commit feed
+		// 10. Post-commit feed
 		//--------------------------------------------------------------------
 		$text = Q_Text::get("Assets/content");
 		$instructions = self::attributesSnapshot($assets_credits, $attributes);
@@ -1002,7 +1010,6 @@ class Assets_Credits extends Base_Assets_Credits
 	 *   2. amount → converted to credits
 	 *   3. fraction × needCredits
 	 */
-
 	static function maxAmountFromPaymentAttribute(
 		$stream,
 		$type,
@@ -1019,6 +1026,13 @@ class Assets_Credits extends Base_Assets_Credits
 			$currency = Q::ifset($payment, 'currency', null);
 			if (!$currency) {
 				$currency = Assets::appCurrency();
+			}
+		}
+		if (!$referrerUserId) {
+			if ($token = Streams_Invite::tokenAcceptedInSession()) {
+				if ($invite = Streams_Invite::fromToken($token)) {
+					$referrerUserId = $invite->invitingUserId;
+				}
 			}
 		}
 		if (!$referrerUserId) {
@@ -1104,21 +1118,15 @@ class Assets_Credits extends Base_Assets_Credits
 		$currency = $currency ?: Q::ifset($payment, 'currency', 'USD');
 		$needCredits = self::convert($amount, $currency, 'credits');
 
-		if (empty($referrerUserId)) {
-			$referrerUserId = $userId;
-		}
-
 		//---------------------------------------------------------
 		// Compute discount credits
 		//---------------------------------------------------------
-		$referrerUserId = Q::ifset($options, 'referrerUserId', null);
-
-		// fallback
 		if (!$referrerUserId) {
-			// If user arrived via invite, pass inviter into options earlier
-			$referrerUserId = Streams::$followedInvite
-				? Streams::$followedInvite->invitingUserId
-				: $userId;
+			if ($token = Streams_Invite::tokenAcceptedInSession()) {
+				if ($invite = Streams_Invite::fromToken($token)) {
+					$referrerUserId = $invite->invitingUserId;
+				}
+			}
 		}
 
 		$discountCredits = Assets_Credits::maxAmountFromPaymentAttribute(

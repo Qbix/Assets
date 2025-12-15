@@ -193,7 +193,7 @@
 	},
 	"discounts": {
 		"PercentDescription": "You've unlocked a {{percent}} discount.",
-		"FormattedDescription": "You've unlocked a discount to save {{format}}."
+		"FormattedDescription": "You've unlocked a discount to save {{format}}"
 	},
 	"types": {
 		"Assets/credits": {

@@ -18,7 +18,7 @@ function Assets_update_paymentSucceeded($data, $envelope)
 		$data['currency'],
 		array_merge($metadata, array(
 			'chargeId' => $data['chargeId'],
-            'userId' => $data['userId']
+			'userId'   => $data['userId']
 		))
 	);
 
@@ -37,30 +37,32 @@ function Assets_update_paymentSucceeded($data, $envelope)
 
 			$instructions = $intent->getAllInstructions();
 
-			$amount  = $instructions['amount'];
 			$options = Q::take($instructions, array(
 				'currency', 'payments',
 				'toPublisherId', 'toStreamName',
 				'toUserId', 'metadata'
 			));
-
 			$options['autoCharge'] = false;
 
-			if ($intent->getInstruction('needCredits', 0)) {
-				$amount = $intent->getInstruction('credits');
+			$needCredits = $intent->getInstruction('needCredits', 0);
+			if ($needCredits) {
 				$options['currency'] = 'credits';
 			}
 
-			$result = Assets::pay(
-				$instructions['communityId'],
-				$instructions['userId'],
-				$amount,
-				$instructions['reason'],
-				$options
-			);
+			$spentCredits = 0;
+			if ($needCredits) {
+				$spentCredits = Assets_Credits::spend(
+					$instructions['communityId'],
+					$needCredits,
+					$instructions['reason'],
+					$instructions['userId'],
+					$options
+				);
+			}
 
 			$intent->complete(array(
-				'success' => $result['success']
+				'success'      => (!$needCredits || $spentCredits > 0),
+				'spentCredits' => $spentCredits
 			));
 		}
 	}

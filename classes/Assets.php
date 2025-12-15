@@ -313,8 +313,10 @@ abstract class Assets extends Base_Assets
 				$referrerUserId = null;
 
 				// 1. If an invite was followed in this request:
-				if (isset(Streams::$followedInvite) && Streams::$followedInvite) {
-					$referrerUserId = Streams::$followedInvite->invitingUserId;
+				if ($token = Streams_Invite::tokenAcceptedInSession()) {
+					if ($invite = Streams_Invite::fromToken($token)) {
+						$referrerUserId = $invite->invitingUserId;
+					}
 				}
 
 				// 2. Or if a referral is stored on the participant record (common case)
@@ -327,11 +329,6 @@ abstract class Assets extends Base_Assets
 					if ($participant->retrieve()) {
 						$referrerUserId = $participant->extra('invitingUserId');
 					}
-				}
-
-				// Fallback (no inviter)
-				if (!$referrerUserId) {
-					$referrerUserId = null;
 				}
 
 				$discountCredits = Assets_Credits::maxAmountFromPaymentAttribute(
@@ -461,13 +458,6 @@ abstract class Assets extends Base_Assets
 		try {
 			if ($stream) {
 				Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
-				$referredAction = 'Assets/pay';
-				$extras = compact('amount', 'haveCredits', 'needCredits', 'reason');
-				$extras['discountCredits'] = isset($discountCredits) ? $discountCredits : 0;
-				Q::take($options, array(
-					'payments', 'currency', 'toUserId', 'toPublisherId', 'toStreamName'
-				), $extras);
-				Users_Referred::handleReferral($userId, $toPublisherId, $referredAction, $stream->type, compact('extras'));
 			} else if ($toUserId) {
 				Assets_Credits::transfer($communityId, $needCredits, $reason, $toUserId, $userId, $opts);
 			} else {
@@ -712,6 +702,14 @@ abstract class Assets extends Base_Assets
 			$charge->attributes = Q::json_encode($attributes);
 			$charge->communityId = $communityId;
 			$charge->save();
+
+			// Handle referral, if any
+			$referredAction = 'Assets/credits/charge';
+			$extras = compact('amount', 'currency', 'credits');
+			Q::take($options, array(
+				'payments', 'amount', 'currency', 'toUserId', 'toPublisherId', 'toStreamName'
+			), $extras);
+			Users_Referred::handleReferral($userId, $communityId, $referredAction, $stream->type, compact('extras'));
 
 			/**
 			 * Hook after a Assets/charge has been made successfully and recorded.

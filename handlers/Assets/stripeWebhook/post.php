@@ -58,33 +58,37 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 				$instructions = $intent->getAllInstructions();
 
 				// get amount of credits to transfer
-				$amount = $instructions['amount'];
 				$options = Q::take($instructions, array(
 					'currency', 'payments',
 					'toPublisherId', 'toStreamName', 'toUserId', 'metadata'
 				));
 				$options['autoCharge'] = false;
 				if ($needCredits = $intent->getInstruction('needCredits', 0)) {
-					$amount = $intent->getInstruction('credits');
 					$options['currency'] = 'credits';
 				}
 
-				// make the payment (continuation from intent)
-				$result = Assets::pay(
-					$instructions['communityId'],
-					$instructions['userId'],
-					$amount,
-					$instructions['reason'],
-					$options
-				);
+				$spentCredits = 0;
+				if ($needCredits) {
+					$spentCredits = Assets_Credits::spend(
+						$instructions['communityId'],
+						$needCredits,
+						$instructions['reason'],
+						$instructions['userId'],
+						$options
+					);
+				}
+				$success = (!$needCredits or $spentCredits > 0);
 
 				// complete the intent, then take actions
-				$intent->complete(array('success' => $result['success']));
+				$intent->complete(array(
+					'success' => $success,
+					'spentCredits' => $spentCredits
+				));
 
 				Assets_Payments_Stripe::log(
 					"stripe",
 					"Intent payment completed (webhook)",
-					array("instructions" => $instructions, "result" => $result)
+					array("instructions" => $instructions, "success" => $success)
 				);
 			}
 		}
