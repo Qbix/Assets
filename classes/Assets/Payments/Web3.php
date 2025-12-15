@@ -175,6 +175,82 @@ class Assets_Payments_Web3 extends Assets_Payments
 	}
 
     /**
+     * Fetch refunded Web3 charges.
+     *
+     * A refunded charge is defined as a transaction that explicitly
+     * references a prior transaction via metadata.refundOf, or is
+     * marked with status = "refunded".
+     *
+     * No DB writes. No hooks. No side effects.
+     *
+     * @method fetchRefundedCharges
+     * @param {array} [$options]
+     * @param {integer} [$options.limit=100]
+     * @param {string} [$options.chainId]
+     * @return {array}
+     *  Each entry contains at minimum:
+     *   - chargeId (original transactionId)
+     */
+    function fetchRefundedCharges($options = array())
+    {
+        $result = array();
+
+        $chainId = Q::ifset($options, 'chainId', null);
+        if (!$chainId) {
+            $chains = Q_Config::get('Users', 'apps', 'web3', array());
+            $chainId = array_key_first($chains);
+        }
+
+        $limit = Q::ifset($options, 'limit', 100);
+
+        // ---------------------------------------------
+        // Strategy:
+        // Look for transactions that explicitly declare
+        // themselves as refunds of earlier transactions
+        // ---------------------------------------------
+        $rows = Users_Web3Transaction::select()
+            ->where(array(
+                'chainId' => $chainId,
+                'status'  => array('refunded', 'confirmed')
+            ))
+            ->orderBy('updatedTime DESC')
+            ->limit($limit)
+            ->fetchDbRows();
+
+        foreach ($rows as $tx) {
+
+            $meta = Q::ifset($tx, 'metadata', array());
+            if (is_string($meta)) {
+                $meta = json_decode($meta, true) ?: array();
+            }
+
+            // Case 1: explicit refund marker
+            if (!empty($meta['refundOf'])) {
+                $result[] = array(
+                    'chargeId'       => $meta['refundOf'],
+                    'refundTxId'     => $tx->transactionId,
+                    'chainId'        => $chainId,
+                    'refundedBy'     => $tx->toAddress,
+                    'metadata'       => $meta
+                );
+                continue;
+            }
+
+            // Case 2: explicit refunded status (optional)
+            if ($tx->status === 'refunded') {
+                $result[] = array(
+                    'chargeId'   => $tx->transactionId,
+                    'chainId'    => $chainId,
+                    'metadata'   => $meta
+                );
+            }
+        }
+
+        return $result;
+    }
+
+
+    /**
 	 * Parse and verify Moralis webhook
 	 *
 	 * @method parseWebhook

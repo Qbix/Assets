@@ -336,6 +336,128 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 	}
 
 	/**
+	 * Fetch refunded Authorize.Net charges.
+	 *
+	 * A refunded charge is defined as a transaction of type
+	 * "refundTransaction" that references an original transaction
+	 * via refTransId.
+	 *
+	 * No DB writes. No hooks. No side effects.
+	 *
+	 * @method fetchRefundedCharges
+	 * @param {array} [$options]
+	 * @param {integer} [$options.limit=100]
+	 * @return {array}
+	 */
+	/**
+	 * Fetch refunded Authorize.Net charges.
+	 *
+	 * @method fetchRefundedCharges
+	 * @param {array} [$options]
+	 * @param {integer} [$options.limit=100]
+	 * @return {array}
+	 */
+	function fetchRefundedCharges($options = array())
+	{
+		$options = array_merge($this->options, $options);
+
+		$merchantAuthentication = new AnetAPI\MerchantAuthenticationType();
+		$merchantAuthentication->setName($options['authname']);
+		$merchantAuthentication->setTransactionKey($options['authkey']);
+
+		$result = array();
+		$limit  = Q::ifset($options, 'limit', 100);
+
+		// ---------------------------------------------
+		// Get recent settled batches
+		// ---------------------------------------------
+		$request = new AnetAPI\GetSettledBatchListRequest();
+		$request->setMerchantAuthentication($merchantAuthentication);
+		$request->setIncludeStatistics(true);
+
+		$controller = new AnetController\GetSettledBatchListController($request);
+		$response   = $controller->executeWithApiResponse($options['server']);
+
+		if (!$response || $response->getMessages()->getResultCode() !== "Ok") {
+			return array();
+		}
+
+		$batches = $response->getBatchList();
+		if (!$batches) {
+			return array();
+		}
+
+		foreach ($batches as $batch) {
+
+			$req = new AnetAPI\GetTransactionListRequest();
+			$req->setMerchantAuthentication($merchantAuthentication);
+			$req->setBatchId($batch->getBatchId());
+
+			$ctrl = new AnetController\GetTransactionListController($req);
+			$resp = $ctrl->executeWithApiResponse($options['server']);
+
+			if (!$resp || $resp->getMessages()->getResultCode() !== "Ok") {
+				continue;
+			}
+
+			$transactions = $resp->getTransactions();
+			if (!$transactions) {
+				continue;
+			}
+
+			foreach ($transactions as $tx) {
+
+				// ---------------------------------------------
+				// We only care about refunds
+				// ---------------------------------------------
+				if ($tx->getTransactionType() !== 'refundTransaction') {
+					continue;
+				}
+
+				$refundId   = $tx->getTransId();
+				$chargeId  = $tx->getRefTransId();
+				$amount    = (float)$tx->getSettleAmount();
+				$customerId = $tx->getCustomerProfileId();
+
+				if (!$chargeId || !$customerId) {
+					continue;
+				}
+
+				// ---------------------------------------------
+				// Resolve user via Assets_Customer
+				// ---------------------------------------------
+				$customer = new Assets_Customer();
+				$customer->payments   = 'authnet';
+				$customer->customerId = $customerId;
+
+				if (!$customer->retrieve()) {
+					continue;
+				}
+
+				$result[] = array(
+					'chargeId'   => $chargeId,      // ORIGINAL charge
+					'refundId'   => $refundId,      // refund transaction
+					'customerId' => $customerId,
+					'userId'     => $customer->userId,
+					'amount'     => $amount,
+					'currency'   => 'USD',
+					'metadata'   => array(
+						'refundId' => $refundId,
+						'payments' => 'authnet'
+					)
+				);
+
+				if (count($result) >= $limit) {
+					return $result;
+				}
+			}
+		}
+
+		return $result;
+	}
+
+
+	/**
 	 * Validate Authorize.Net webhook structure
 	 *
 	 * NOTE:

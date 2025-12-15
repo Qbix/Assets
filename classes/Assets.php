@@ -739,10 +739,11 @@ abstract class Assets extends Base_Assets
 	 *
 	 * This method:
 	 *  - Resolves provider customer context (if available)
+	 *  - Optionally fetches refunded charges first and suppresses them
 	 *  - Fetches provider-confirmed successful charges
 	 *  - Ensures idempotency by skipping already-recorded charge IDs
-	 *  - Optionally records missing charges locally via Assets::charged()
-	 *  - Marks newly recorded charges as completed
+	 *  - Cancels matching Users_Intent records for refunded charges
+	 *  - Emits canonical Assets/update/paymentSucceeded events
 	 *
 	 * Safe to call repeatedly.
 	 *
@@ -750,12 +751,14 @@ abstract class Assets extends Base_Assets
 	 * @static
 	 * @param {string} $payments
 	 *  The payments adapter key (e.g. "stripe", "authnet", "web3").
-	 * @param {string} [$userId]
-	 *  Optional userId to scope reconciliation.
+	 * @param {string} $userId
+	 *  UserId to scope reconciliation (unless options[user] provided).
 	 * @param {array} [$options]
-	 *  Optional adapter- and execution-specific options.
+	 *  Adapter- and execution-specific options.
 	 * @param {boolean} [$options.dryRun=false]
-	 *  If true, do not call Assets::charged() or perform any side effects.
+	 *  If true, do not emit events or perform side effects.
+	 * @param {boolean} [$options.skipRefundedCharges=false]
+	 *  If true, refunded charges are ignored and no intent cancellation occurs.
 	 * @param {Users_User} [$options.user]
 	 *  Explicit user object to avoid fetching by userId.
 	 * @param {string} [$options.customerId]
@@ -763,10 +766,10 @@ abstract class Assets extends Base_Assets
 	 * @param {integer} [$options.limit]
 	 *  Maximum number of provider charges to inspect.
 	 * @return {array}
-	 *  Array of arrays describing what was (or would be) passed to Assets::charged().
+	 *  Array describing charges that were (or would be) honored.
 	 * @throws Q_Exception_WrongType
 	 * @throws Q_Exception_MissingRow
-	*/
+	 */
 	static function honorOutstandingSuccessfulCharges($payments, $userId, $options = array())
 	{
 		$className = 'Assets_Payments_' . ucfirst($payments);
@@ -774,16 +777,16 @@ abstract class Assets extends Base_Assets
 			throw new Exception("Payments adapter not found: $className");
 		}
 
-		$adapter = null;
-		$results = array();
-		$dryRun  = !empty($options['dryRun']);
+		$results   = array();
+		$dryRun    = !empty($options['dryRun']);
+		$skipRefunds = !empty($options['skipRefundedCharges']);
 
-		/**
-		 * Fired before honoring outstanding charges.
-		 */
+		// -------------------------------------------------
+		// Before hook
+		// -------------------------------------------------
 		if (false === Q::event(
 			'Assets/honorCharges',
-			@compact('payments', 'options', 'adapter'),
+			@compact('payments', 'options'),
 			'before'
 		)) {
 			return $results;
@@ -797,14 +800,14 @@ abstract class Assets extends Base_Assets
 			if (!($user instanceof Users_User)) {
 				throw new Q_Exception_WrongType(array(
 					'field' => 'options[user]',
-					'type' => 'Users_User'
+					'type'  => 'Users_User'
 				));
 			}
 		} else {
 			$user = Users_User::fetch($userId);
 			if (!$user) {
 				throw new Q_Exception_MissingRow(array(
-					'table' => 'users_user',
+					'table'    => 'users_user',
 					'criteria' => "userId = $userId"
 				));
 			}
@@ -812,7 +815,7 @@ abstract class Assets extends Base_Assets
 		$options['user'] = $user;
 
 		// -------------------------------------------------
-		// Resolve customerId ONCE
+		// Resolve customerId once
 		// -------------------------------------------------
 		if (empty($options['customerId'])) {
 			$customer = new Assets_Customer();
@@ -824,69 +827,93 @@ abstract class Assets extends Base_Assets
 			}
 		}
 
-		// Instantiate adapter AFTER before-hook and customer resolution
 		$adapter = new $className((array)$options);
 
 		// -------------------------------------------------
-		// Fetch provider-confirmed successful charges
+		// Fetch refunded charges first (unless skipped)
+		// -------------------------------------------------
+		$refunded = array();
+
+		if (!$skipRefunds && method_exists($adapter, 'fetchRefundedCharges')) {
+			foreach ($adapter->fetchRefundedCharges($options) as $r) {
+				if (!empty($r['chargeId'])) {
+					$refunded[$r['chargeId']] = true;
+				}
+			}
+		}
+
+		// -------------------------------------------------
+		// Fetch successful charges
 		// -------------------------------------------------
 		$charges = $adapter->fetchSuccessfulCharges($options);
 
 		foreach ($charges as $c) {
 
-			$chargeId = $c['chargeId'];
+			$chargeId = Q::ifset($c, 'chargeId', null);
+			if (!$chargeId) {
+				continue;
+			}
 
-			// -------------------------------------------------
+			// ---------------------------------------------
+			// Skip refunded charges + cancel intent
+			// ---------------------------------------------
+			if (!$skipRefunds && isset($refunded[$chargeId])) {
+
+				$intentToken = Q::ifset($c, 'metadata', 'intentToken', null);
+				if ($intentToken) {
+					$intent = new Users_Intent(array('token' => $intentToken));
+					if ($intent->retrieve()) {
+						$intent->cancel(array('reason' => 'refunded'));
+					}
+				}
+				continue;
+			}
+
+			// ---------------------------------------------
 			// Idempotency: skip if already recorded
-			// -------------------------------------------------
+			// ---------------------------------------------
 			$existing = new Assets_Charge();
 			$existing->id = $chargeId;
 			if ($existing->retrieve()) {
 				continue;
 			}
 
-			if (!Users_User::fetch($c['userId'])) {
+			// ---------------------------------------------
+			// Skip invalid users
+			// ---------------------------------------------
+			if (empty($c['userId']) || !Users_User::fetch($c['userId'])) {
 				continue;
 			}
-
-			// -------------------------------------------------
-			// Build payload for Assets::charged()
-			// -------------------------------------------------
-			$payload = array(
-				'chargeId'    => $chargeId,
-				'userId'        => $c['userId'],
-				'communityId' => Q::ifset($c['metadata'], 'communityId', null),
-				'reason'      => Q::ifset($c['metadata'], 'reason', null),
-				'metadata'    => $c['metadata'],
-				'customerId'  => Q::ifset($c, 'customerId', null),
-				'autoCharge'  => true
-			);
 
 			$results[] = array(
 				'payments' => $payments,
 				'amount'   => $c['amount'],
 				'currency' => $c['currency'],
-				'options'  => $payload
+				'chargeId' => $chargeId
 			);
 
-			// -------------------------------------------------
-			// Execute unless dry-run
-			// -------------------------------------------------
 			if ($dryRun) {
 				continue;
 			}
 
-			Q::event('Assets/update/paymentSucceeded', array_merge(
-				compact('payments'), $c
-			));
+			// ---------------------------------------------
+			// Emit canonical domain event
+			// ---------------------------------------------
+			Q::event(
+				'Assets/update/paymentSucceeded',
+				array_merge(
+					array('payments' => $payments),
+					$c
+				)
+			);
 		}
 
-		/**
-		 * Fired after honoring outstanding charges.
-		 */
+		// -------------------------------------------------
+		// After hook
+		// -------------------------------------------------
 		Q::event(
 			'Assets/honorCharges',
-			@compact('payments', 'options', 'adapter'),
+			@compact('payments', 'options'),
 			'after'
 		);
 

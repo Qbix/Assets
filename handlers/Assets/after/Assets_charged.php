@@ -2,7 +2,7 @@
 	
 function Assets_after_Assets_charged($params)
 {
-	$user = $params['user'];
+	$userId = $params['userId'];
 	$payments = $params['payments'];
 	$amount = $params['amount'];
 	$currency = $params['currency'];
@@ -15,7 +15,7 @@ function Assets_after_Assets_charged($params)
 
 	// issue community's currency to user
 	$communityId = Q::ifset($params, 'communityId', null);
-	Assets_Credits::grant($communityId, $credits, 'BoughtCredits', $user->id, array(
+	Assets_Credits::grant($communityId, $credits, 'BoughtCredits', $userId, array(
 		"charge" => @compact("amount", "currency"),
 		"token" => Q::ifset($options, 'token', null)
 	));
@@ -23,10 +23,10 @@ function Assets_after_Assets_charged($params)
 	// check Assets/credits/bonus
 	$reason = Q::ifset($params, 'options', 'reason', null);
 	if ($reason == 'BoughtCredits') {
-		Assets_Credits::awardBonus(null, $amount, $user->id);
+		Assets_Credits::awardBonus(null, $amount, $userId);
 	}
 
-	$text = Q_Text::get('Assets/content', array('language' => Users::getLanguage($user->id)));
+	$text = Q_Text::get('Assets/content', array('language' => Users::getLanguage($userId)));
 	$description = Q::interpolate(Q::ifset($text, 'credits', 'forMessages', 'BoughtCredits', Q::ifset($text, 'credits', 'BoughtCredits', 'Bought {{amount}} credits')), array('amount' => $credits));
 
 	$stream = Q::ifset($options, 'stream', null);
@@ -60,6 +60,7 @@ function Assets_after_Assets_charged($params)
 		'months', 'startDate', 'endDate', 'link'
 	);
 	
+	$user = Users_User::fetch($userId);
 	$emailAddress = $user->emailAddress ? $user->emailAddress : $user->emailAddressPending;
 	$mobileNumber = $user->mobileNumber ? $user->mobileNumber : $user->mobileNumberPending;
 	if ($emailAddress or ($user->emailAddressPending and !$user->mobileNumber)) {

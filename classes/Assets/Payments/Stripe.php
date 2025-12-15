@@ -330,6 +330,88 @@ class Assets_Payments_Stripe extends Assets_Payments implements Assets_Payments_
 	}
 
 	/**
+	 * Fetch refunded Stripe charges that should cancel or suppress intents.
+	 * No DB writes. No hooks. No side effects.
+	 *
+	 * @method fetchRefundedCharges
+	 * @param {array} $options
+	 * @param {string|null} [$options.customerId]
+	 * @param {integer} [$options.limit=100]
+	 * @return {array}
+	 */
+	function fetchRefundedCharges($options = array())
+	{
+		$customerId = Q::ifset($options, 'customerId', null);
+		if (!$customerId) {
+			return array();
+		}
+
+		$stripe = new \Stripe\StripeClient($this->options['secret']);
+		$result = array();
+
+		// Refunds are attached to charges; charges may belong to payment intents
+		$refunds = $stripe->refunds->all(array(
+			'limit' => Q::ifset($options, 'limit', 100)
+		));
+
+		foreach ($refunds->data as $refund) {
+
+			if ($refund->status !== 'succeeded') {
+				continue;
+			}
+
+			$chargeId = $refund->charge;
+			if (!$chargeId) {
+				continue;
+			}
+
+			// Retrieve the charge to resolve intent + metadata
+			try {
+				$charge = $stripe->charges->retrieve($chargeId);
+			} catch (Exception $e) {
+				continue;
+			}
+
+			// Skip unrelated customers
+			if ($charge->customer !== $customerId) {
+				continue;
+			}
+
+			$intent = null;
+			if (!empty($charge->payment_intent)) {
+				try {
+					$intent = $stripe->paymentIntents->retrieve($charge->payment_intent);
+				} catch (Exception $e) {}
+			}
+
+			// Resolve metadata (prefer intent, fallback to charge)
+			try {
+				$metadata = self::resolveMetadata(
+					($intent && $intent->metadata)
+						? $intent->metadata->toArray()
+						: ($charge->metadata ? $charge->metadata->toArray() : array()),
+					(object)['data' => (object)['object' => ($intent ?: $charge)]],
+					'charge.refunded'
+				);
+			} catch (Exception $e) {
+				continue;
+			}
+
+			$result[] = array(
+				'chargeId'   => $chargeId,
+				'refundId'   => $refund->id,
+				'customerId' => $charge->customer,
+				'userId'     => Q::ifset($metadata, 'userId', null),
+				'amount'     => $refund->amount / 100,
+				'currency'   => strtoupper($refund->currency),
+				'metadata'   => $metadata
+			);
+		}
+
+		return $result;
+	}
+
+	/**
 	 * Check if connected account ready to use
 	 * @method connectedAccountReady
 	 * @param {array} [$account]
