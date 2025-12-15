@@ -619,7 +619,7 @@ abstract class Assets extends Base_Assets
 	 * @param {string} [$options.chargeId] Payment id to set as id field of Assets_Charge table.
 	 *  If this is defined it means payment already processed (for example from webhook)
 	 *  and hence no need to call $adapter->charge
-	 * @param {Users_User} [$options.user=Users::loggedInUser()] Which user to charge
+	 * @param {string} [$options.userId] Or you can simply pass userId here
 	 * @param {string} [$options.communityId] Which community's credits to grant on success
 	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or subscription stream
 	 * @param {string} [$options.reason] Business reason or semantic label.
@@ -639,7 +639,7 @@ abstract class Assets extends Base_Assets
 		}
 		$currency = strtoupper($currency);
 		$credits = Assets_Credits::convert($amount, $currency, 'credits');
-		$userId        = Q::ifset($options, 'userId', null);
+		$userId      = Q::ifset($options, 'userId', null);
 		$communityId = Q::ifset($options, 'communityId', Users::communityId());
 		$chargeId    = Q::ifset($options, 'chargeId', null);
 		$baseMetadata = array(
@@ -678,7 +678,8 @@ abstract class Assets extends Base_Assets
 					'payments',
 					'amount',
 					'currency',
-					'chargeId'
+					'chargeId',
+					'userId'
 				),
 				'before'
 			)) {
@@ -721,8 +722,10 @@ abstract class Assets extends Base_Assets
 					'payments',
 					'amount',
 					'currency',
-					'user',
 					'communityId',
+					'chargeId',
+					'userId',
+					'user',
 					'charge',
 					'options'
 				),
