@@ -882,12 +882,29 @@ class Assets_Credits extends Base_Assets_Credits
 		$fromPublisherId = Q::ifset($fromStream, "publisherId", null);
 		$fromStreamName = Q::ifset($fromStream, "streamName", null);
 
-		$reasons = array('JoinedPaidStream');
-		if (!empty($options['reasons'])) {
-			$reasons = array_merge($reasons, $options['reasons']);
-		}
+        $latestLeftPaidStream = 0;
+        $leftReason = 'LeftPaidStream';
 
-		// find latest credits transfer
+        // find latest date user left paid stream
+        $left_assets_credits = Assets_Credits::select()
+            ->where(array(
+                'toUserId' => $userId,
+                'toPublisherId' => $fromPublisherId,
+                'toStreamName' => $fromStreamName,
+                'fromPublisherId' => $toPublisherId,
+                'fromStreamName' => $toStreamName,
+                'reason' => $leftReason
+            ))
+            ->ignoreCache()
+            ->options(array("dontCache" => true))
+            ->orderBy('insertedTime', false)
+            ->limit(1)
+            ->fetchDbRow();
+        if ($left_assets_credits) {
+            $latestLeftPaidStream = $left_assets_credits->insertedTime;
+        }
+
+		// find all credits transfer for paid stream latest than latest left stream
 		$joined_assets_credits = Assets_Credits::select()
 		->where(array(
 			'fromUserId' => $userId,
@@ -895,38 +912,46 @@ class Assets_Credits extends Base_Assets_Credits
 			'toStreamName' => $toStreamName,
 			'fromPublisherId' => $fromPublisherId,
 			'fromStreamName' => $fromStreamName,
-			'reason' => $reasons
+			'reason !=' => $leftReason,
+            'insertedTime >' => $latestLeftPaidStream
 		))
 		->ignoreCache()
 		->options(array("dontCache" => true))
-		->orderBy('insertedTime', false)
-		->limit(1)
-		->fetchDbRow();
+		->orderBy('insertedTime', true)
+		->fetchDbRows();
 
-		if ($joined_assets_credits) {
-			$left_assets_credits = Assets_Credits::select()
-			->where(array(
-				'toUserId' => $userId,
-				'toPublisherId' => $fromPublisherId,
-				'toStreamName' => $fromStreamName,
-				'fromPublisherId' => $toPublisherId,
-				'fromStreamName' => $toStreamName,
-				'reason' => 'LeftPaidStream'
-			))
-			->ignoreCache()
-			->options(array("dontCache" => true))
-			->orderBy('insertedTime', false)
-			->limit(1)
-			->fetchDbRow();
+		if (empty($joined_assets_credits)) {
+            return false;
+        }
 
-			if ($left_assets_credits && $left_assets_credits->insertedTime > $joined_assets_credits->insertedTime) {
-				return false;
-			}
+        $data = new stdClass();
+        $data->fromUserId = $userId;
+        $data->toUserId = $toPublisherId;
+        $data->toPublisherId = $toPublisherId;
+        $data->toStreamName = $toStreamName;
+        $data->fromPublisherId = $fromPublisherId;
+        $data->fromStreamName = $fromStreamName;
+        $data->amount = 0;
 
-			return $joined_assets_credits;
-		}
+        foreach ($joined_assets_credits as $joined_assets_credit) {
+            $data->amount += $joined_assets_credit->amount;
+        }
 
-		return false;
+        // as $joined_assets_credits ordered by insertedTime asc than the last row is the latest
+        $data->insertedTime = $joined_assets_credit->insertedTime;
+        $data->updatedTime = $joined_assets_credit->updatedTime;
+        $data->communityId = $joined_assets_credit->communityId;
+        $data->reason = $joined_assets_credit->reason;
+
+        if ($data->amount > 0) {
+            $stream = Streams::fetchOne($toPublisherId, $toPublisherId, $toStreamName);
+            $payment = $stream->getAttribute("payment");
+            if ($data->amount >= self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits')) {
+                return $data;
+            }
+        }
+
+        return false;
 	}
 
 	/**
