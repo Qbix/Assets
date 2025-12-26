@@ -147,7 +147,7 @@ function Assets_payment_response_intent($options)
 		$amount        = $requestedAmount;
 		$currency      = $requestedCurrency;
 		$gateway       = $requestedGateway;
-		$userIdIntent  = Users::loggedInUserId();
+		$userIdIntent  = Users::loggedInUser(true)->id;
 
 	} else {
 
