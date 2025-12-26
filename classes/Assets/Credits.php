@@ -860,23 +860,21 @@ class Assets_Credits extends Base_Assets_Credits
 		return $text;
 	}
 	/**
-	 * Check if user paid to join some stream.
-	 * @method checkJoinPaid
+	 * Get information about payments for stream
+	 * @method getPaymentsInfo
 	 * @static
 	 * @param {string} $userId user tested paid stream
 	 * @param {Streams_Stream|array} $toStream Stream or array('publisherId' => ..., 'streamName' => ...)
 	 * @param {Streams_Stream|array} [$fromStream] Stream or array('publisherId' => ..., 'streamName' => ...)
-	 * @param {array} [$options]
-	 * @param {array} [$options.reasons] Array of other reasons to check
 	 * @throws
 	 * @return {Boolean|Object}
 	 */
-	static function checkJoinPaid($userId, $toStream, $fromStream = null, $options = array())
+	static function getPaymentsInfo($userId, $toStream, $fromStream = null)
 	{
 		$toPublisherId = Q::ifset($toStream, "publisherId", null);
 		$toStreamName = Q::ifset($toStream, "streamName", Q::ifset($toStream, "name", null));
 		if (!$toPublisherId || !$toStreamName) {
-			throw new Exception('Assets_Credits::checkJoinPaid: toStream invalid');
+			throw new Exception('Assets_Credits::getPaymentsInfo: toStream invalid');
 		}
 
 		$fromPublisherId = Q::ifset($fromStream, "publisherId", null);
@@ -905,7 +903,7 @@ class Assets_Credits extends Base_Assets_Credits
         }
 
 		// find all credits transfer for paid stream latest than latest left stream
-		$joined_assets_credits = Assets_Credits::select()
+		$rows = Assets_Credits::select()
 		->where(array(
 			'fromUserId' => $userId,
 			'toPublisherId' => $toPublisherId,
@@ -913,45 +911,39 @@ class Assets_Credits extends Base_Assets_Credits
 			'fromPublisherId' => $fromPublisherId,
 			'fromStreamName' => $fromStreamName,
 			'reason !=' => $leftReason,
-            'insertedTime >' => $latestLeftPaidStream
+            'insertedTime >=' => $latestLeftPaidStream
 		))
 		->ignoreCache()
 		->options(array("dontCache" => true))
 		->orderBy('insertedTime', true)
 		->fetchDbRows();
 
-		if (empty($joined_assets_credits)) {
-            return false;
-        }
+        $conclusion = array(
+            "fromUserId" => $userId,
+            "toUserId" => $toPublisherId,
+            "toPublisherId" => $toPublisherId,
+            "toStreamName" => $toStreamName,
+            "fromPublisherId" => $fromPublisherId,
+            "fromStreamName" => $fromStreamName,
+            "amount" => 0,
+            "fullyPaid" => false
+        );
 
-        $data = new stdClass();
-        $data->fromUserId = $userId;
-        $data->toUserId = $toPublisherId;
-        $data->toPublisherId = $toPublisherId;
-        $data->toStreamName = $toStreamName;
-        $data->fromPublisherId = $fromPublisherId;
-        $data->fromStreamName = $fromStreamName;
-        $data->amount = 0;
+        if (!empty($rows)) {
+            foreach ($rows as $row) {
+                $conclusion['amount'] += $row->amount;
+            }
 
-        foreach ($joined_assets_credits as $joined_assets_credit) {
-            $data->amount += $joined_assets_credit->amount;
-        }
-
-        // as $joined_assets_credits ordered by insertedTime asc than the last row is the latest
-        $data->insertedTime = $joined_assets_credit->insertedTime;
-        $data->updatedTime = $joined_assets_credit->updatedTime;
-        $data->communityId = $joined_assets_credit->communityId;
-        $data->reason = $joined_assets_credit->reason;
-
-        if ($data->amount > 0) {
-            $stream = Streams::fetchOne($toPublisherId, $toPublisherId, $toStreamName);
-            $payment = $stream->getAttribute("payment");
-            if ($data->amount >= self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits')) {
-                return $data;
+            if ($conclusion["amount"] > 0) {
+                $stream = Streams::fetchOne($toPublisherId, $toPublisherId, $toStreamName);
+                $payment = $stream->getAttribute("payment");
+                if ($conclusion["amount"] >= self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits')) {
+                    $conclusion["fullyPaid"] = true;
+                }
             }
         }
 
-        return false;
+        return compact("rows", "conclusion");
 	}
 
 	/**
