@@ -860,73 +860,90 @@ class Assets_Credits extends Base_Assets_Credits
 		return $text;
 	}
 	/**
-	 * Check if user paid to join some stream.
-	 * @method checkJoinPaid
+	 * Get information about payments for stream
+	 * @method getPaymentsInfo
 	 * @static
 	 * @param {string} $userId user tested paid stream
 	 * @param {Streams_Stream|array} $toStream Stream or array('publisherId' => ..., 'streamName' => ...)
 	 * @param {Streams_Stream|array} [$fromStream] Stream or array('publisherId' => ..., 'streamName' => ...)
-	 * @param {array} [$options]
-	 * @param {array} [$options.reasons] Array of other reasons to check
 	 * @throws
 	 * @return {Boolean|Object}
 	 */
-	static function checkJoinPaid($userId, $toStream, $fromStream = null, $options = array())
+	static function getPaymentsInfo($userId, $toStream, $fromStream = null)
 	{
 		$toPublisherId = Q::ifset($toStream, "publisherId", null);
 		$toStreamName = Q::ifset($toStream, "streamName", Q::ifset($toStream, "name", null));
 		if (!$toPublisherId || !$toStreamName) {
-			throw new Exception('Assets_Credits::checkJoinPaid: toStream invalid');
+			throw new Exception('Assets_Credits::getPaymentsInfo: toStream invalid');
 		}
 
 		$fromPublisherId = Q::ifset($fromStream, "publisherId", null);
 		$fromStreamName = Q::ifset($fromStream, "streamName", null);
 
-		$reasons = array('JoinedPaidStream');
-		if (!empty($options['reasons'])) {
-			$reasons = array_merge($reasons, $options['reasons']);
-		}
+        $latestLeftPaidStream = 0;
+        $leftReason = 'LeftPaidStream';
 
-		// find latest credits transfer
-		$joined_assets_credits = Assets_Credits::select()
+        // find latest date user left paid stream
+        $left_assets_credits = Assets_Credits::select()
+            ->where(array(
+                'toUserId' => $userId,
+                'toPublisherId' => $fromPublisherId,
+                'toStreamName' => $fromStreamName,
+                'fromPublisherId' => $toPublisherId,
+                'fromStreamName' => $toStreamName,
+                'reason' => $leftReason
+            ))
+            ->ignoreCache()
+            ->options(array("dontCache" => true))
+            ->orderBy('insertedTime', false)
+            ->limit(1)
+            ->fetchDbRow();
+        if ($left_assets_credits) {
+            $latestLeftPaidStream = $left_assets_credits->insertedTime;
+        }
+
+		// find all credits transfer for paid stream latest than latest left stream
+		$rows = Assets_Credits::select()
 		->where(array(
 			'fromUserId' => $userId,
 			'toPublisherId' => $toPublisherId,
 			'toStreamName' => $toStreamName,
 			'fromPublisherId' => $fromPublisherId,
 			'fromStreamName' => $fromStreamName,
-			'reason' => $reasons
+			'reason !=' => $leftReason,
+            'insertedTime >=' => $latestLeftPaidStream
 		))
 		->ignoreCache()
 		->options(array("dontCache" => true))
-		->orderBy('insertedTime', false)
-		->limit(1)
-		->fetchDbRow();
+		->orderBy('insertedTime', true)
+		->fetchDbRows();
 
-		if ($joined_assets_credits) {
-			$left_assets_credits = Assets_Credits::select()
-			->where(array(
-				'toUserId' => $userId,
-				'toPublisherId' => $fromPublisherId,
-				'toStreamName' => $fromStreamName,
-				'fromPublisherId' => $toPublisherId,
-				'fromStreamName' => $toStreamName,
-				'reason' => 'LeftPaidStream'
-			))
-			->ignoreCache()
-			->options(array("dontCache" => true))
-			->orderBy('insertedTime', false)
-			->limit(1)
-			->fetchDbRow();
+        $conclusion = array(
+            "fromUserId" => $userId,
+            "toUserId" => $toPublisherId,
+            "toPublisherId" => $toPublisherId,
+            "toStreamName" => $toStreamName,
+            "fromPublisherId" => $fromPublisherId,
+            "fromStreamName" => $fromStreamName,
+            "amount" => 0,
+            "fullyPaid" => false
+        );
 
-			if ($left_assets_credits && $left_assets_credits->insertedTime > $joined_assets_credits->insertedTime) {
-				return false;
-			}
+        if (!empty($rows)) {
+            foreach ($rows as $row) {
+                $conclusion['amount'] += $row->amount;
+            }
 
-			return $joined_assets_credits;
-		}
+            if ($conclusion["amount"] > 0) {
+                $stream = Streams::fetchOne($toPublisherId, $toPublisherId, $toStreamName);
+                $payment = $stream->getAttribute("payment");
+                if ($conclusion["amount"] >= self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits')) {
+                    $conclusion["fullyPaid"] = true;
+                }
+            }
+        }
 
-		return false;
+        return compact("rows", "conclusion");
 	}
 
 	/**
