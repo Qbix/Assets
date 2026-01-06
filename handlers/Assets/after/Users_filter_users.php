@@ -23,11 +23,11 @@ function Assets_after_Users_filter_users($params, &$result)
     foreach ($personIds as $pid) {
         $streamNames[] = "Assets/credits/$pid";
     }
+    $decimalString = Db::decimalToString($credits);
     $sns = Streams_RelatedTo::select('fromStreamName')->where(array(
         'toPublisherId' => Users::communityId(),
         'toStreamName' => 'Assets/category/credits',
-        'type' => new Db_Range("attribute/peak=", true, false, true),
-        'weight' => new Db_Range($credits, true, false, null)
+        'type' => new Db_Range("attribute/peak=$decimalString", true, false, true)
     ))->where(array(
         'fromStreamName' => $streamNames
     ))->orderBy('type', false)
