@@ -704,7 +704,7 @@ Q.onInit.add(function () {
 
 			var _createNotice = function (message) {
 				// check if message already displayed
-				var messageId = message.getInstruction('messageId') || message.getInstruction('token');
+				var messageId = message.getInstruction('creditsId') || message.getInstruction('token');
 				if (Q.isEmpty(this.usedIds)) {
 					this.usedIds = [messageId];
 				} else if (this.usedIds.includes(messageId)) {

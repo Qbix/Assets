@@ -27,7 +27,7 @@ Q.exports(function(Assets, priv){
 
         options = Q.extend({}, options);
         if (options.reason) {
-            options.description = Q.text.Assets.payments.reasons[options.reason].interpolate({
+            options.description = Q.text.Assets.credits.BuyAmountCredits.interpolate({
                 amount: options.amount,
                 currency: options.currency
             });
