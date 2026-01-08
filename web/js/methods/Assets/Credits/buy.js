@@ -16,6 +16,7 @@ Q.exports(function () {
 			amount: 10,
 			currency: 'USD',
 			missing: false,
+			reason: 'BoughtCredits',
 			skipDialog: false
 		}, options);
 
@@ -39,6 +40,19 @@ Q.exports(function () {
 				bonus: "<span class='bonus'>" + bonus + "</span>"
 			}));
 		});
+
+		Q.Template.set('Assets/credits/missing',
+			'<div class="Assets_credits_buy_missing">{{YouMissingCredits}}</div>' +
+			'<input type="hidden" name="amount" value="{{amount}}">' +
+			'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
+		);
+		Q.Template.set('Assets/credits/buy',
+			'{{#each bonuses}}' +
+			'	<div class="Assets_credits_bonus">{{{this}}}</div>' +
+			'{{/each}}' +
+			'<div class="Assets_credits_buy"><input name="amount" value="{{amount}}"> {{texts.Credits}}</div>' +
+			'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
+		);
 
 		// Load payment lib
 		Q.Assets.Payments.load();
