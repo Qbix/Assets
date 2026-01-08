@@ -73,7 +73,6 @@
 		"CreatePrivateChat": "for private chat with {{toUserName}}",
 		"CreatePaidStream": "for creating {{toStreamName}}",
 		"JoinedPaidStream": "for participation in \"<a data-publisherId='{{toPublisherId}}' data-streamName='{{toStreamName}}'>{{toStreamTitle}}</a>\"",
-		"EventParticipation": "for reservation to \"<a data-publisherId='{{toPublisherId}}' data-streamName='{{toStreamName}}'>{{toStreamTitle}}</a>\"",
 		"CreatedCommunity": "for creating community \"{{communityId}}\"",
 		"LeftPaidStream": "as a reservation refund from \"<a data-publisherId='{{fromPublisherId}}' data-streamName='{{fromStreamName}}'>{{fromStreamTitle}}</a>\"",
 		"BoughtCredits": "Bought {{amount}} credits",
