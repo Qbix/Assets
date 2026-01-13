@@ -230,7 +230,7 @@ class Assets_Credits extends Base_Assets_Credits
 			'app' => Q::app(),
 			'operation' => '+'
 		), self::attributesSnapshot($assets_credits, $attributes));
-		if ($reason == 'BoughtCredits') {
+		if ($reason == Assets::BOUGHT_CREDITS) {
 			$type = 'Assets/credits/bought';
 		} elseif ($reason == 'BonusCredits') {
 			$type = 'Assets/credits/bonus';

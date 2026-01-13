@@ -396,7 +396,7 @@ abstract class Assets extends Base_Assets
 			try {
 				Assets::autoCharge(
 					$missingCredits,
-					$reason,
+					self::BOUGHT_CREDITS,
 					array(
 						"userId"   => $userId,
 						"currency" => "credits",
@@ -677,7 +677,7 @@ abstract class Assets extends Base_Assets
 				return false;
 			}
 
-			$charge->description = 'BoughtCredits';
+			$charge->description = self::BOUGHT_CREDITS;
 			if (!empty($options['reason'])) {
 				$charge->description .= ": ".$options['reason'];
 			}
@@ -1059,4 +1059,5 @@ abstract class Assets extends Base_Assets
 	const JOINED_PAID_STREAM = 'JoinedPaidStream';
 	const LEFT_PAID_STREAM = 'LeftPaidStream';
 	const CREATED_COMMUNITY = 'CreatedCommunity';
+    const BOUGHT_CREDITS = 'BoughtCredits';
 };

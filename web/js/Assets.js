@@ -37,6 +37,9 @@ var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 		 *  @param {String} currency
 		 */
 		convertToCredits: function (amount, currency) {
+			if (currency.toLowerCase() === 'credits') {
+				return amount;
+			}
 			var exchange = Q.getObject(["exchange", currency], Q.Assets.Credits);
 
 			if (!exchange) {
