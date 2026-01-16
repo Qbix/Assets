@@ -15,19 +15,19 @@ function Assets_after_Assets_charged($params)
 
 	// issue community's currency to user
 	$communityId = Q::ifset($params, 'communityId', null);
-	Assets_Credits::grant($communityId, $credits, 'BoughtCredits', $userId, array(
+	Assets_Credits::grant($communityId, $credits, Assets::BOUGHT_CREDITS, $userId, array(
 		"charge" => @compact("amount", "currency"),
 		"token" => Q::ifset($options, 'token', null)
 	));
 
 	// check Assets/credits/bonus
 	$reason = Q::ifset($params, 'options', 'reason', null);
-	if ($reason == 'BoughtCredits') {
+	if ($reason == Assets::BOUGHT_CREDITS) {
 		Assets_Credits::awardBonus(null, $amount, $userId);
 	}
 
 	$text = Q_Text::get('Assets/content', array('language' => Users::getLanguage($userId)));
-	$description = Q::interpolate(Q::ifset($text, 'credits', 'forMessages', 'BoughtCredits', Q::ifset($text, 'credits', 'BoughtCredits', 'Bought {{amount}} credits')), array('amount' => $credits));
+	$description = Q::interpolate(Q::ifset($text, 'credits', 'forMessages', Assets::BOUGHT_CREDITS, Q::ifset($text, 'credits', 'BoughtCredits', 'Bought {{amount}} credits')), array('amount' => $credits));
 
 	$stream = Q::ifset($options, 'stream', null);
 	if ($stream) {

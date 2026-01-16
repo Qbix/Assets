@@ -230,7 +230,7 @@ class Assets_Credits extends Base_Assets_Credits
 			'app' => Q::app(),
 			'operation' => '+'
 		), self::attributesSnapshot($assets_credits, $attributes));
-		if ($reason == 'BoughtCredits') {
+		if ($reason == Assets::BOUGHT_CREDITS) {
 			$type = 'Assets/credits/bought';
 		} elseif ($reason == 'BonusCredits') {
 			$type = 'Assets/credits/bonus';
@@ -937,7 +937,10 @@ class Assets_Credits extends Base_Assets_Credits
             if ($conclusion["amount"] > 0) {
                 $stream = Streams::fetchOne($toPublisherId, $toPublisherId, $toStreamName);
                 $payment = $stream->getAttribute("payment");
-                if ($conclusion["amount"] >= self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits')) {
+                $discount = self::discountInfo($stream, $userId);
+                $paymentCredits = self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits');
+                $totalCredits = $paymentCredits - $discount['credits'];
+                if ($conclusion["amount"] >= $totalCredits) {
                     $conclusion["fullyPaid"] = true;
                 }
             }
