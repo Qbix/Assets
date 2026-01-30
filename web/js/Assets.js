@@ -707,13 +707,13 @@ Q.onInit.add(function () {
 
 			var _createNotice = function (message) {
 				// check if message already displayed
-				var messageId = message.getInstruction('creditsId') || message.getInstruction('token');
+				var creditsId = message.getInstruction('creditsId') || message.getInstruction('token');
 				if (Q.isEmpty(this.usedIds)) {
-					this.usedIds = [messageId];
-				} else if (this.usedIds.includes(messageId)) {
+					this.usedIds = [creditsId];
+				} else if (this.usedIds.includes(creditsId)) {
 					return;
 				} else {
-					this.usedIds.push(messageId);
+					this.usedIds.push(creditsId);
 				}
 
 				var reason = message.getInstruction('reason');
