@@ -96,13 +96,13 @@ abstract class Assets extends Base_Assets
 		)));
 		$code = strtoupper($code);
 		$currencies = Q::json_decode($json, true);
-		if (!isset($currencies['symbols'][$code])) {
+		if (!Q::ifset($currencies, 'symbols', $code, null)) {
 			throw new Q_Exception_BadValue(array(
 				'internal' => 'currency', 
 				'problem' => "no symbol found for $code"
 			), 'currency');
 		}
-		if (!isset($currencies['names'][$code])) {
+		if (!Q::ifset($currencies, 'names', $code, null)) {
 			throw new Q_Exception_BadValue(array(
 				'internal' => 'currency', 
 				'problem' => "no name found for $code"
@@ -169,7 +169,7 @@ abstract class Assets extends Base_Assets
 		// -----------------------------------------------------
 
 		// Ensure locale exists
-		if (!isset($ASSETS_CURRENCY_LOCALES[$locale])) {
+		if (!Q::ifset($ASSETS_CURRENCY_LOCALES, $locale, null)) {
 			$locale = 'en_US';
 		}
 
@@ -182,7 +182,7 @@ abstract class Assets extends Base_Assets
 
 		// Determine number of decimals
 		$digits = 2;
-		if (isset($fmt['zero_decimals']) && $fmt['zero_decimals']) {
+		if (Q::ifset($fmt, 'zero_decimals', null)) {
 			$digits = 0;
 		}
 
@@ -276,10 +276,10 @@ abstract class Assets extends Base_Assets
 		// 	}
 		// }
 
-		$fromPublisherId = isset($options["fromPublisherId"]) ? $options["fromPublisherId"] : null;
-		$fromStreamName  = isset($options["fromStreamName"]) ? $options["fromStreamName"] : null;
+		$fromPublisherId = Q::ifset($options, "fromPublisherId", null);
+		$fromStreamName  = Q::ifset($options, "fromStreamName", null);
 
-		$items = isset($options["items"]) ? $options["items"] : null;
+		$items = Q::ifset($options, "items", null);
 		if (!empty($items)) {
 			foreach ($items as $k => $item) {
 				$options['items'][$k]['amount'] = Assets_Credits::convert($options['items'][$k]['amount'], $currency, "credits");
@@ -339,7 +339,6 @@ abstract class Assets extends Base_Assets
 					$referrerUserId
 				);
 
-
 				if ($discountCredits > 0) {
 					$needCredits = max(0, $needCredits - $discountCredits);
 				}
@@ -357,7 +356,7 @@ abstract class Assets extends Base_Assets
 			$missingCredits = $needCredits - $haveCredits;
 			$amountCurrency = Assets_Credits::convert($missingCredits, "credits", $currency);
 
-			$metadata = isset($options["metadata"]) ? $options["metadata"] : array();
+			$metadata = Q::ifset($options, "metadata", array());
 
 			$instructions = array(
 				"userId"        => $userId,
@@ -397,7 +396,7 @@ abstract class Assets extends Base_Assets
 			try {
 				Assets::autoCharge(
 					$missingCredits,
-					$reason,
+					self::BOUGHT_CREDITS,
 					array(
 						"userId"   => $userId,
 						"currency" => "credits",
@@ -678,7 +677,7 @@ abstract class Assets extends Base_Assets
 				return false;
 			}
 
-			$charge->description = 'BoughtCredits';
+			$charge->description = self::BOUGHT_CREDITS;
 			if (!empty($options['reason'])) {
 				$charge->description .= ": ".$options['reason'];
 			}
@@ -797,7 +796,7 @@ abstract class Assets extends Base_Assets
 		// -------------------------------------------------
 		// Resolve user
 		// -------------------------------------------------
-		if (isset($options['user'])) {
+		if (Q::ifset($options, 'user', null)) {
 			$user = $options['user'];
 			if (!($user instanceof Users_User)) {
 				throw new Q_Exception_WrongType(array(
@@ -859,7 +858,7 @@ abstract class Assets extends Base_Assets
 			// ---------------------------------------------
 			// Skip refunded charges + cancel intent
 			// ---------------------------------------------
-			if (!$skipRefunds && isset($refunded[$chargeId])) {
+			if (!$skipRefunds && Q::ifset($refunded, $chargeId, null)) {
 
 				$intentToken = Q::ifset($c, 'metadata', 'intentToken', null);
 				if ($intentToken) {
@@ -1060,4 +1059,5 @@ abstract class Assets extends Base_Assets
 	const JOINED_PAID_STREAM = 'JoinedPaidStream';
 	const LEFT_PAID_STREAM = 'LeftPaidStream';
 	const CREATED_COMMUNITY = 'CreatedCommunity';
+    const BOUGHT_CREDITS = 'BoughtCredits';
 };
