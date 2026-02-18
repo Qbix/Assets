@@ -6,6 +6,7 @@ Q.exports(function () {
 	* @param {number} [options.amount=10] Amount to spend, in terms of currency
 	* @param {string} [options.currency=USD] Currency ISO 4217 code (USD, EUR etc)
 	* @param {string} [options.missing=false] Whether to show text about credits missing.
+	* @param {string} [options.title] Can override title of dialog
 	* @param {object} [options.metadata] Data to pass to payment gateway to get them back and save to message instructions
 	* @param {function} [options.onSuccess] Callback to run when payment has completed successfully.
 	* @param {function} [options.onFailure] Callback to run when payment failed.
@@ -20,7 +21,7 @@ Q.exports(function () {
 			skipDialog: false
 		}, options);
 
-		var title = Q.text.Assets.credits.BuyCredits;
+		var title = options.title || Q.text.Assets.credits.BuyCredits;
 		var NotEnoughCredits = null;
 		var templateName = 'Assets/credits/buy';
 
