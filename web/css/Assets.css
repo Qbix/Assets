@@ -147,15 +147,17 @@ input[type=text], input[type=number], input[type=datetime-local], input[type=dat
 }
 .Assets_credits_buy .Q_dialog_content .Assets_credits_bonus {
 	margin-bottom: 10px;
-	color: blue;
+	padding: 10px;
+    border: 1px dashed;
+    border-radius: 10px;
+	text-align: center;
 }
 .Assets_credits_buy .Q_dialog_content .Assets_credits_bonus .credits {
 	font-weight: bold;
-	color: red;
 }
 .Assets_credits_buy .Q_dialog_content .Assets_credits_bonus .bonus {
 	font-weight: bold;
-	color: green;
+	color: rgb(32, 148, 32);
 }
 
 .Assets_subscriptions_showPlansRelated .Q_dialog_content {
