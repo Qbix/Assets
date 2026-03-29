@@ -793,8 +793,32 @@ class Assets_Credits extends Base_Assets_Credits
 			$attributes['fromUserId'] = $fromPublisherId;
 		}
 
+		// -----------------------------
+		// Deterministic txId generation
+		// -----------------------------
+
+		$nonce = Q::ifset($attributes, 'nonce', null);
+
+		if ($nonce === null) {
+			// fallback if not provided (not ideal but safe-ish)
+			$nonce = microtime(true);
+		}
+
+		$payload = json_encode(array(
+			'fromUserId' => $fromUserId,
+			'toUserId' => $toUserId ?: $toPublisherId,
+			'amount' => $amount,
+			'communityId' => $communityId,
+			'nonce' => $nonce
+		));
+
+		// sha256 → hex → take first 10 chars
+		$txId = substr(hash('sha256', $payload), 0, 16);
+
+		// -----------------------------
+
 		$assets_credits = new Assets_Credits();
-		$assets_credits->id = uniqid();
+		$assets_credits->id = Assets::db()->uniqueId(Assets_Credits::table(), 'id');
 		$assets_credits->fromUserId = $fromUserId;
 		$assets_credits->toUserId = $toUserId ? $toUserId : $toPublisherId;
 		$assets_credits->toPublisherId = $toPublisherId;
