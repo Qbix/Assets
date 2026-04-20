@@ -706,8 +706,7 @@ class Assets_Credits extends Base_Assets_Credits
 
 		return $transferred;
 	}
-
-
+	
 	/**
 	 * Fill message instructions with needed attributes
 	 * @method attributesSnapshot

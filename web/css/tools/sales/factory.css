@@ -1,0 +1,19 @@
+.Assets_sales_factory {
+	padding: 20px;
+}
+
+.Assets_sales_factory h3 {
+	margin-bottom: 20px;
+}
+
+.Assets_sales_factory .form-group {
+	margin-bottom: 15px;
+}
+
+.Assets_sales_factory input {
+	width: 100%;
+}
+
+.Assets_sales_factory button {
+	margin-top: 10px;
+}
