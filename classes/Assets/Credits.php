@@ -903,43 +903,47 @@ class Assets_Credits extends Base_Assets_Credits
 		$fromPublisherId = Q::ifset($fromStream, "publisherId", null);
 		$fromStreamName = Q::ifset($fromStream, "streamName", null);
 
-        $latestLeftPaidStream = 0;
+        $latestLeftPaidStream = null;
         $leftReason = 'LeftPaidStream';
 
-        // find latest date user left paid stream
-        $left_assets_credits = Assets_Credits::select()
-            ->where(array(
-                'toUserId' => $userId,
-                'toPublisherId' => $fromPublisherId,
-                'toStreamName' => $fromStreamName,
-                'fromPublisherId' => $toPublisherId,
-                'fromStreamName' => $toStreamName,
-                'reason' => $leftReason
-            ))
-            ->ignoreCache()
-            ->options(array("dontCache" => true))
-            ->orderBy('insertedTime', false)
-            ->limit(1)
-            ->fetchDbRow();
-        if ($left_assets_credits) {
-            $latestLeftPaidStream = $left_assets_credits->insertedTime;
-        }
-
-		// find all credits transfer for paid stream latest than latest left stream
-		$rows = Assets_Credits::select()
-		->where(array(
+		$criteriaTo = array(
+			'toUserId' => $userId,
+			'toPublisherId' => $fromPublisherId,
+			'toStreamName' => $fromStreamName,
+			'fromPublisherId' => $toPublisherId,
+			'fromStreamName' => $toStreamName,
+			'reason' => $leftReason
+		);
+		$criteriaFrom = array(
 			'fromUserId' => $userId,
 			'toPublisherId' => $toPublisherId,
 			'toStreamName' => $toStreamName,
 			'fromPublisherId' => $fromPublisherId,
 			'fromStreamName' => $fromStreamName,
-			'reason !=' => $leftReason,
-            'insertedTime >=' => $latestLeftPaidStream
-		))
-		->ignoreCache()
-		->options(array("dontCache" => true))
-		->orderBy('insertedTime', true)
-		->fetchDbRows();
+			'reason !=' => $leftReason
+		);
+
+        // find latest date user left paid stream
+        $left_assets_credits = Assets_Credits::select()
+            ->where($criteriaTo)
+            ->ignoreCache()
+            ->options(array("dontCache" => true))
+            ->orderBy('insertedTime', false)
+            ->limit(1)
+            ->fetchDbRow();
+
+        if ($left_assets_credits) {
+            $latestLeftPaidStream = $left_assets_credits->insertedTime;
+			$criteriaFrom['insertedTime >='] = $latestLeftPaidStream;
+        }
+
+		// find all credits transfer for paid stream latest than latest left stream
+		$rows = Assets_Credits::select()
+			->where($criteriaFrom)
+			->ignoreCache()
+			->options(array("dontCache" => true))
+			->orderBy('insertedTime', true)
+			->fetchDbRows();
 
         $conclusion = array(
             "fromUserId" => $userId,
