@@ -27,7 +27,7 @@ Q.exports(function () {
 
 		var BuyInCredits = Q.text.Assets.credits.BuyInCredits.interpolate({
 			amount: '<input name="amount" value="{{amount}}">'.interpolate(options),
-			currency: options.currency
+			currency: options.currency.toUpperCase()
 		});
 
 		if (options.missing) {
@@ -56,7 +56,7 @@ Q.exports(function () {
 			'{{#each bonuses}}' +
 			'	<div class="Assets_credits_bonus">{{{this}}}</div>' +
 			'{{/each}}' +
-			'<div class="Assets_credits_buy">{{BuyInCredits}}</div>' +
+			'<div class="Assets_credits_buy">{{{BuyInCredits}}}</div>' +
 			'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
 		);
 
