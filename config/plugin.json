@@ -512,8 +512,8 @@
 			},
 			"bonus": {
 				"bought": {
-					"5000": 10, /* if user bought 5000 credits at once, he will get 10% bonus */
-					"10000": 15 /* if user bought 10000 credits at once, he will get 15% bonus */
+					"5000": 0.1, /* if user bought 5000 credits at once, he will get 10% bonus */
+					"10000": 0.15 /* if user bought 10000 credits at once, he will get 15% bonus */
 				}
 			},
 			"amount": {

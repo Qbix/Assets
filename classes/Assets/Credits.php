@@ -999,8 +999,8 @@ class Assets_Credits extends Base_Assets_Credits
 		}
 
 		krsort($bonuses, SORT_NUMERIC);
-		foreach ($bonuses as $key => $percent) {
-			$bonus = intval(floatval($key) * floatval($percent) / 100);
+		foreach ($bonuses as $key => $fraction) {
+			$bonus = intval(floatval($key) * floatval($fraction));
 			if ($amount >= $key) {
 				self::grant($communityId, $bonus, "BonusCredits", $userId);
 				return;

@@ -49,10 +49,10 @@ Q.exports(function () {
 		}
 
 		var bonuses = [];
-		Q.each(Q.getObject("credits.bonus.bought", Q.Assets), function (credits, percent) {
+		Q.each(Q.getObject("credits.bonus.bought", Q.Assets), function (credits, fraction) {
 			bonuses.push(Q.text.Assets.credits.BuyBonus.interpolate({
 				amount: "<span class='credits'>" + credits + "</span>",
-				bonus: "<span class='bonus'>" + percent + "%</span>"
+				bonus: "<span class='bonus'>" + Math.floor(fraction*100) + "%</span>"
 			}));
 		});
 

@@ -967,8 +967,8 @@ abstract class Assets extends Base_Assets
 	 *     @param {string} [$options.userId] User performing the payment.
 	 *     @param {string} [$options.intentToken] You can pass the token of a Users_Intent for continuations
 	 *     @param {string} [$options.resourceId=""] Quota resource bucket.
-	 *     @param {string} [$options.quotaName="autoCharge"] Quota name.
-	 *     @param {int}    [$options.units] Explicit quota units, otherwise auto.
+	 *     @param {string} [$options.quotaName="Assets/autoCharge"] Quota name.
+	 *     @param {int}    [$options.units] Explicit quota units, otherwise in USD.
 	 *     @param {array}  [$options.metadata] Arbitrary metadata.
 	 *     @param {boolean} [$options.dontLogMissingCustomer] used internally
 	 *
