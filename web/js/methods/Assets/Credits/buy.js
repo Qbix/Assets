@@ -35,7 +35,7 @@ Q.exports(function () {
 		});
 
 		var BuyInCredits = Q.text.Assets.credits.BuyInCredits.interpolate({
-			amount: '<input name="amount" value="{{amount}}">'.interpolate(options),
+			amount: '<input name="amount" value="{{amount}}" inputmode="numeric">'.interpolate(options),
 			currency: options.currency.toUpperCase()
 		});
 
@@ -117,6 +117,9 @@ Q.exports(function () {
 				}
 			},
 			onActivate: function (dialog) {
+				$("input[name=amount").on(Q.Pointer.fastclick, function () {
+					$(this).select();
+				});
 				$("button[name=buy]", dialog).on(Q.Pointer.fastclick, function () {
 					paymentStarted = true;
 
