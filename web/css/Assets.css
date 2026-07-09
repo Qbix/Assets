@@ -147,6 +147,10 @@ input[type=text], input[type=number], input[type=datetime-local], input[type=dat
 	padding: 10px;
 	text-align: center;
 }
+.Assets_credits_buy .Q_dialog_content .Assets_credits_conversion .currency,
+.Assets_credits_buy .Q_dialog_content .Assets_credits_conversion .credits {
+	font-weight: bold;
+}
 .Assets_credits_buy .Q_dialog_content .Assets_credits_bonus {
 	margin-bottom: 10px;
 	padding: 10px;
