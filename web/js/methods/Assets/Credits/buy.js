@@ -26,7 +26,7 @@ Q.exports(function () {
 		var templateName = 'Assets/credits/buy';
 		var exchange = Q.Assets.Credits.exchange[options.currency];
 
-		var conversion = Q.Assets.Credits.conversion.interpolate({
+		var conversion = Q.text.Assets.credits.Conversion.interpolate({
 			amount: '<span class="credits">&nbsp;1&nbsp;</span>',
 			currency: options.currency,
 			exchange: '<span class="credits">&nbsp;{{exchange}}&nbsp;</span>'.interpolate({
