@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} krediiti",
 			"BonusCredits": "{{amount}} krediiti"
-		}
+		},
+		"BuyInCredits": "Osta {{amount}} {{currency}} krediiti",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} ainepunkti"
 	},
 	"history": {
 		"Date": "Kuup\u00e4ev",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "kirjuta midagi selle panuse kohta..."
+	},
+	"discounts": {
+		"PercentDescription": "Oled avanud {{percent}} allahindluse.",
+		"FormattedDescription": "Olete avanud allahindluse, millega saate s\u00e4\u00e4sta {{format}}"
 	}
 }

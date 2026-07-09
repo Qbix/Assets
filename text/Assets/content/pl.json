@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kredyt\u00f3w",
 			"BonusCredits": "{{amount}} kredyt\u00f3w"
-		}
+		},
+		"BuyInCredits": "Kup {{amount}} {{currency}} kredyt\u00f3w",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kredyt\u00f3w"
 	},
 	"history": {
 		"Date": "Data",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "napisz co\u015b na temat tego wk\u0142adu..."
+	},
+	"discounts": {
+		"PercentDescription": "Odblokowa\u0142e\u015b zni\u017ck\u0119 {{percent}} .",
+		"FormattedDescription": "Odblokowa\u0142e\u015b zni\u017ck\u0119 i zaoszcz\u0119dzi\u0142e\u015b {{format}}"
 	}
 }

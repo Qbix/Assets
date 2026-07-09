@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kredit",
 			"BonusCredits": "{{amount}} kredit"
-		}
+		},
+		"BuyInCredits": "V\u00e1s\u00e1roljon {{amount}} {{currency}} kreditet",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kredit"
 	},
 	"history": {
 		"Date": "D\u00e1tum",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "\u00edrj valamit err\u0151l a hozz\u00e1j\u00e1rul\u00e1sr\u00f3l..."
+	},
+	"discounts": {
+		"PercentDescription": "{{percent}} es kedvezm\u00e9nyt kapt\u00e1l.",
+		"FormattedDescription": "{{format}} megtakar\u00edt\u00e1si kedvezm\u00e9nyt oldott fel"
 	}
 }

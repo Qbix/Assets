@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kredit",
 			"BonusCredits": "{{amount}} kredit"
-		}
+		},
+		"BuyInCredits": "Kreditl\u0259 {{amount}} {{currency}} al\u0131n",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kredit"
 	},
 	"history": {
 		"Date": "Tarix",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "bu t\u00f6hf\u0259 haqq\u0131nda n\u0259s\u0259 yaz\u0131n..."
+	},
+	"discounts": {
+		"PercentDescription": "{{percent}} endirimd\u0259n yararland\u0131n\u0131z.",
+		"FormattedDescription": "{{format}} q\u0259na\u0259t etm\u0259k \u00fc\u00e7\u00fcn endirimd\u0259n yararland\u0131n\u0131z"
 	}
 }

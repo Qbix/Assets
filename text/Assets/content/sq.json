@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kredite",
 			"BonusCredits": "{{amount}} kredite"
-		}
+		},
+		"BuyInCredits": "Bli {{amount}} {{currency}} n\u00eb kredite",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kredite"
 	},
 	"history": {
 		"Date": "Data",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "shkruani di\u00e7ka p\u00ebr k\u00ebt\u00eb kontribut..."
+	},
+	"discounts": {
+		"PercentDescription": "Ke zhbllokuar nj\u00eb zbritje {{percent}} .",
+		"FormattedDescription": "Ke zhbllokuar nj\u00eb zbritje p\u00ebr t\u00eb kursyer {{format}}"
 	}
 }

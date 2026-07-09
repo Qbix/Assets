@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} krediitti\u00e4",
 			"BonusCredits": "{{amount}} krediitti\u00e4"
-		}
+		},
+		"BuyInCredits": "Osta {{amount}} {{currency}} krediittein\u00e4",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} opintopistett\u00e4"
 	},
 	"history": {
 		"Date": "P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "kirjoita jotain t\u00e4st\u00e4 panoksesta..."
+	},
+	"discounts": {
+		"PercentDescription": "Olet avannut {{percent}} alennuksen.",
+		"FormattedDescription": "Olet avannut alennuksen, jolla voit s\u00e4\u00e4st\u00e4\u00e4 {{format}}"
 	}
 }

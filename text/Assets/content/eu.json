@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kreditu",
 			"BonusCredits": "{{amount}} kreditu"
-		}
+		},
+		"BuyInCredits": "Erosi {{amount}} {{currency}} kredituetan",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kreditu"
 	},
 	"history": {
 		"Date": "Data",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "idatzi ekarpen honi buruz zerbait..."
+	},
+	"discounts": {
+		"PercentDescription": "{{percent}} deskontua lortu duzu.",
+		"FormattedDescription": "{{format}} aurrezteko deskontua desblokeatu duzu"
 	}
 }

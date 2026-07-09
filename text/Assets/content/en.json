@@ -85,6 +85,7 @@
 		"BuyCredits": "Buy Credits",
 		"BuyBonus": "Purchasing {{amount}} credits at once will result in a bonus of {{bonus}} credits.",
 		"Buy": "Buy",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} credits",
 		"PurchaseCredits": "Purchase Credits",
 		"Credits": "Credits",
 		"ErrorInvalidAmount": "Amount invalid",

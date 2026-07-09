@@ -130,9 +130,6 @@ input[type=text], input[type=number], input[type=datetime-local], input[type=dat
 	font-weight: bold;
 	margin: 10px;
 }
-.Assets_credits_buy .Q_dialog_content .Assets_credits_buy {
-	text-transform: lowercase;
-}
 .Assets_credits_buy .Q_dialog_content .Assets_credits_buy input {
 	height: 40px;
 	width: 80px;
@@ -144,6 +141,11 @@ input[type=text], input[type=number], input[type=datetime-local], input[type=dat
 .Assets_credits_buy .Q_dialog_content button[name=buy] {
 	display: block;
 	margin: 0 auto 10px;
+}
+.Assets_credits_buy .Q_dialog_content .Assets_credits_conversion {
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: center;
 }
 .Assets_credits_buy .Q_dialog_content .Assets_credits_bonus {
 	margin-bottom: 10px;

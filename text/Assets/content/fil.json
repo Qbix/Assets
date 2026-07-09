@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} na mga kredito",
 			"BonusCredits": "{{amount}} na mga kredito"
-		}
+		},
+		"BuyInCredits": "Bumili ng {{amount}} {{currency}} na kredito",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kredito"
 	},
 	"history": {
 		"Date": "Petsa",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "mag-type ng isang bagay tungkol sa kontribusyon na ito..."
+	},
+	"discounts": {
+		"PercentDescription": "Na-unlock mo na ang {{percent}} na diskwento.",
+		"FormattedDescription": "Na-unlock mo na ang diskwento para makatipid {{format}}"
 	}
 }

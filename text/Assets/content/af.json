@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} krediete",
 			"BonusCredits": "{{amount}} krediete"
-		}
+		},
+		"BuyInCredits": "Koop {{amount}} {{currency}} in krediete",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} krediete"
 	},
 	"history": {
 		"Date": "Datum",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "tik iets oor hierdie bydrae..."
+	},
+	"discounts": {
+		"PercentDescription": "Jy het &#39;n {{percent}} afslag ontsluit.",
+		"FormattedDescription": "Jy het &#39;n afslag ontsluit om {{format}} te bespaar"
 	}
 }

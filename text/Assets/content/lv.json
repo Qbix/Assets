@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kred\u012bti",
 			"BonusCredits": "{{amount}} kred\u012bti"
-		}
+		},
+		"BuyInCredits": "P\u0113rciet {{amount}} {{currency}} kred\u012btos",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kred\u012btpunkti"
 	},
 	"history": {
 		"Date": "Datums",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "ierakstiet kaut ko par \u0161o ieguld\u012bjumu..."
+	},
+	"discounts": {
+		"PercentDescription": "J\u016bs esat atblo\u0137\u0113jis {{percent}} atlaidi.",
+		"FormattedDescription": "J\u016bs esat atblo\u0137\u0113jis atlaidi, lai ietaup\u012btu {{format}}"
 	}
 }

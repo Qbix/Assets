@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} Credits",
 			"BonusCredits": "{{amount}} Credits"
-		}
+		},
+		"BuyInCredits": "Kaufen Sie {{amount}} {{currency}} Credits",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} Credits"
 	},
 	"history": {
 		"Date": "Datum",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "schreiben Sie etwas zu diesem Beitrag..."
+	},
+	"discounts": {
+		"PercentDescription": "Sie haben einen Rabatt {{percent}} freigeschaltet.",
+		"FormattedDescription": "Sie haben einen Rabatt freigeschaltet und sparen {{format}}"
 	}
 }

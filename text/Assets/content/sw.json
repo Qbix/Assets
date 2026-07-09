@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} mikopo",
 			"BonusCredits": "{{amount}} mikopo"
-		}
+		},
+		"BuyInCredits": "Nunua salio {{amount}} {{currency}}",
+		"Conversion": "{{{amount}}} {{{currency}}} = salio {{{exchange}}}"
 	},
 	"history": {
 		"Date": "Tarehe",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "andika kitu kuhusu mchango huu..."
+	},
+	"discounts": {
+		"PercentDescription": "Umefungua punguzo la {{percent}} .",
+		"FormattedDescription": "Umefungua punguzo la bei ili kuokoa {{format}}"
 	}
 }

@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0456\u0432",
 			"BonusCredits": "{{amount}} \u043a\u0440\u0435\u0434\u0438\u0442\u0456\u0432"
-		}
+		},
+		"BuyInCredits": "\u041a\u0443\u043f\u0438\u0442\u0438 {{amount}} {{currency}} \u043a\u0440\u0435\u0434\u0438\u0442\u0456\u0432",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} \u043a\u0440\u0435\u0434\u0438\u0442\u0456\u0432"
 	},
 	"history": {
 		"Date": "\u0414\u0430\u0442\u0430",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "\u043d\u0430\u043f\u0438\u0448\u0456\u0442\u044c \u0449\u043e\u0441\u044c \u043f\u0440\u043e \u0446\u0435\u0439 \u0432\u043d\u0435\u0441\u043e\u043a..."
+	},
+	"discounts": {
+		"PercentDescription": "\u0412\u0438 \u043e\u0442\u0440\u0438\u043c\u0430\u043b\u0438 \u0437\u043d\u0438\u0436\u043a\u0443 {{percent}} .",
+		"FormattedDescription": "\u0412\u0438 \u043e\u0442\u0440\u0438\u043c\u0430\u043b\u0438 \u0437\u043d\u0438\u0436\u043a\u0443 \u0442\u0430 \u0437\u0430\u043e\u0449\u0430\u0434\u0438\u043b\u0438 {{format}}"
 	}
 }

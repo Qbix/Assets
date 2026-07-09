@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kredit",
 			"BonusCredits": "{{amount}} kredit"
-		}
+		},
+		"BuyInCredits": "Beli {{amount}} {{currency}} dalam kredit",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kredit"
 	},
 	"history": {
 		"Date": "Tarikh",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "taip sesuatu tentang sumbangan ini..."
+	},
+	"discounts": {
+		"PercentDescription": "Anda telah mendapat diskaun {{percent}} .",
+		"FormattedDescription": "Anda telah mendapat diskaun untuk menjimatkan {{format}}"
 	}
 }

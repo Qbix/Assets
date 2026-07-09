@@ -24,6 +24,15 @@ Q.exports(function () {
 		var title = options.title || Q.text.Assets.credits.BuyCredits;
 		var NotEnoughCredits = null;
 		var templateName = 'Assets/credits/buy';
+		var exchange = Q.Assets.Credits.exchange[options.currency];
+
+		var conversion = Q.Assets.Credits.conversion.interpolate({
+			amount: '<span class="credits">&nbsp;1&nbsp;</span>',
+			currency: options.currency,
+			exchange: '<span class="credits">&nbsp;{{exchange}}&nbsp;</span>'.interpolate({
+				exchange: exchange
+			})
+		});
 
 		var BuyInCredits = Q.text.Assets.credits.BuyInCredits.interpolate({
 			amount: '<input name="amount" value="{{amount}}">'.interpolate(options),
@@ -40,10 +49,10 @@ Q.exports(function () {
 		}
 
 		var bonuses = [];
-		Q.each(Q.getObject("credits.bonus.bought", Q.Assets), function (credits, bonus) {
+		Q.each(Q.getObject("credits.bonus.bought", Q.Assets), function (credits, percent) {
 			bonuses.push(Q.text.Assets.credits.BuyBonus.interpolate({
 				amount: "<span class='credits'>" + credits + "</span>",
-				bonus: "<span class='bonus'>" + bonus + "</span>"
+				bonus: "<span class='bonus'>" + percent + "%</span>"
 			}));
 		});
 
@@ -53,6 +62,7 @@ Q.exports(function () {
 			'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
 		);
 		Q.Template.set('Assets/credits/buy',
+			'<div class="Assets_credits_conversion">{{{conversion}}}</div>' +
 			'{{#each bonuses}}' +
 			'	<div class="Assets_credits_bonus">{{{this}}}</div>' +
 			'{{/each}}' +
@@ -101,6 +111,7 @@ Q.exports(function () {
 					currency: options.currency,
 					NotEnoughCredits: NotEnoughCredits,
 					BuyInCredits: BuyInCredits,
+					conversion: conversion,
 					bonuses: bonuses,
 					texts: Q.text.Assets.credits
 				}

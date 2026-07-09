@@ -992,14 +992,15 @@ class Assets_Credits extends Base_Assets_Credits
 
 		$userId = $userId ? $userId : Users::loggedInUser(true)->id;
 
-		// thresholds in config should be in credits
+		// thresholds in config should be in percentages
 		$bonuses = Q_Config::get("Assets", "credits", "bonus", "bought", null);
 		if (!is_array($bonuses) || empty($bonuses)) {
 			return;
 		}
 
 		krsort($bonuses, SORT_NUMERIC);
-		foreach ($bonuses as $key => $bonus) {
+		foreach ($bonuses as $key => $percent) {
+			$bonus = intval(floatval($key) * floatval($percent) / 100);
 			if ($amount >= $key) {
 				self::grant($communityId, $bonus, "BonusCredits", $userId);
 				return;

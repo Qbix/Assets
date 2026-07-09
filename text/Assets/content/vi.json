@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} t\u00edn ch\u1ec9",
 			"BonusCredits": "{{amount}} t\u00edn ch\u1ec9"
-		}
+		},
+		"BuyInCredits": "Mua {{amount}} {{currency}} \u0111i\u1ec3m t\u00edn d\u1ee5ng",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} t\u00edn ch\u1ec9"
 	},
 	"history": {
 		"Date": "Ng\u00e0y",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "g\u00f5 \u0111i\u1ec1u g\u00ec \u0111\u00f3 v\u1ec1 s\u1ef1 \u0111\u00f3ng g\u00f3p n\u00e0y..."
+	},
+	"discounts": {
+		"PercentDescription": "B\u1ea1n \u0111\u00e3 nh\u1eadn \u0111\u01b0\u1ee3c m\u00e3 gi\u1ea3m gi\u00e1 {{percent}} .",
+		"FormattedDescription": "B\u1ea1n \u0111\u00e3 \u0111\u01b0\u1ee3c h\u01b0\u1edfng \u01b0u \u0111\u00e3i gi\u1ea3m gi\u00e1 {{format}}"
 	}
 }

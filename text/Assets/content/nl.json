@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kredieten",
 			"BonusCredits": "{{amount}} kredieten"
-		}
+		},
+		"BuyInCredits": "Koop {{amount}} {{currency}} aan credits",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} studiepunten"
 	},
 	"history": {
 		"Date": "Datum",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "typ iets over deze bijdrage..."
+	},
+	"discounts": {
+		"PercentDescription": "Je hebt een korting {{percent}} ontgrendeld.",
+		"FormattedDescription": "Je hebt een korting ontgrendeld waarmee je {{format}} kunt besparen."
 	}
 }

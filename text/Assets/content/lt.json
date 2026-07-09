@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kreditai",
 			"BonusCredits": "{{amount}} kreditai"
-		}
+		},
+		"BuyInCredits": "Pirkite {{amount}} {{currency}} kredit\u0173",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kreditai"
 	},
 	"history": {
 		"Date": "Data",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "para\u0161yk k\u0105 nors apie \u0161\u012f ind\u0117l\u012f..."
+	},
+	"discounts": {
+		"PercentDescription": "Atrakinote {{percent}} nuolaid\u0105.",
+		"FormattedDescription": "Atrakinote nuolaid\u0105, leid\u017eian\u010di\u0105 sutaupyti {{format}}"
 	}
 }

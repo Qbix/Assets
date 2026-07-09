@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kreditter",
 			"BonusCredits": "{{amount}} kreditter"
-		}
+		},
+		"BuyInCredits": "K\u00f8b {{amount}} {{currency}} i kreditter",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kreditter"
 	},
 	"history": {
 		"Date": "Dato",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "skriv noget om dette bidrag..."
+	},
+	"discounts": {
+		"PercentDescription": "Du har f\u00e5et rabat p\u00e5 {{percent}} .",
+		"FormattedDescription": "Du har l\u00e5st op for en rabat, s\u00e5 du kan spare {{format}}"
 	}
 }

@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} po\u00e4ng",
 			"BonusCredits": "{{amount}} po\u00e4ng"
-		}
+		},
+		"BuyInCredits": "K\u00f6p {{amount}} {{currency}} i krediter",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} po\u00e4ng"
 	},
 	"history": {
 		"Date": "Datum",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "skriv n\u00e5got om detta bidrag..."
+	},
+	"discounts": {
+		"PercentDescription": "Du har l\u00e5st upp en {{percent}} rabatt.",
+		"FormattedDescription": "Du har l\u00e5st upp en rabatt f\u00f6r att spara {{format}}"
 	}
 }

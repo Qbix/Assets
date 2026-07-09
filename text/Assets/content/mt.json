@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kredtu",
 			"BonusCredits": "{{amount}} kredtu"
-		}
+		},
+		"BuyInCredits": "Ixtri {{amount}} {{currency}} f&#39;krediti",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kreditu"
 	},
 	"history": {
 		"Date": "Data",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "ittajpja xi \u0127a\u0121a dwar din il-kontribuzzjoni..."
+	},
+	"discounts": {
+		"PercentDescription": "Ifta\u0127t skont ta&#39; {{percent}} .",
+		"FormattedDescription": "Ifta\u0127t skont biex tiffranka {{format}}"
 	}
 }

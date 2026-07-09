@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} credyd",
 			"BonusCredits": "{{amount}} credyd"
-		}
+		},
+		"BuyInCredits": "Prynu {{amount}} {{currency}} mewn credydau",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} credyd"
 	},
 	"history": {
 		"Date": "Dyddiad",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "Teipiwch rywbeth am y cyfraniad hwn..."
+	},
+	"discounts": {
+		"PercentDescription": "Rydych chi wedi datgloi gostyngiad {{percent}} .",
+		"FormattedDescription": "Rydych chi wedi datgloi gostyngiad i arbed {{format}}"
 	}
 }

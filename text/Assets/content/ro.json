@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} credite",
 			"BonusCredits": "{{amount}} credite"
-		}
+		},
+		"BuyInCredits": "Cump\u0103r\u0103 {{amount}} {{currency}} \u00een credite",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} credite"
 	},
 	"history": {
 		"Date": "Data",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "scrie ceva despre aceast\u0103 contribu\u021bie..."
+	},
+	"discounts": {
+		"PercentDescription": "Ai deblocat o reducere de {{percent}} .",
+		"FormattedDescription": "Ai deblocat o reducere pentru a economisi {{format}}"
 	}
 }

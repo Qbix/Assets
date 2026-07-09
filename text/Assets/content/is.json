@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} einingar",
 			"BonusCredits": "{{amount}} einingar"
-		}
+		},
+		"BuyInCredits": "Kauptu {{amount}} {{currency}} \u00ed inneignum",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} einingar"
 	},
 	"history": {
 		"Date": "Dagsetning",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "skrifa\u00f0u eitthva\u00f0 um \u00feetta framlag..."
+	},
+	"discounts": {
+		"PercentDescription": "\u00de\u00fa hefur fengi\u00f0 {{percent}} afsl\u00e1tt.",
+		"FormattedDescription": "\u00de\u00fa hefur opna\u00f0 afsl\u00e1tt til a\u00f0 spara {{format}}"
 	}
 }

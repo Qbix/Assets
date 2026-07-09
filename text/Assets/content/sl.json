@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} kreditov",
 			"BonusCredits": "{{amount}} kreditov"
-		}
+		},
+		"BuyInCredits": "Kupite {{amount}} {{currency}} kreditov",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} kreditov"
 	},
 	"history": {
 		"Date": "Datum",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "napi\u0161i nekaj o tem prispevku..."
+	},
+	"discounts": {
+		"PercentDescription": "Odklenili ste popust v {{percent}} .",
+		"FormattedDescription": "Odklenili ste popust in prihranili {{format}}"
 	}
 }

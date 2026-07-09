@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}}\u5b66\u5206",
 			"BonusCredits": "{{amount}}\u5b66\u5206"
-		}
+		},
+		"BuyInCredits": "\u8d2d\u4e70{{amount}} {{currency}}\u79ef\u5206",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}}\u5b66\u5206"
 	},
 	"history": {
 		"Date": "\u65e5\u671f",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "\u8f93\u5165\u4e00\u4e9b\u5173\u4e8e\u6b64\u8d21\u732e\u7684\u5185\u5bb9..."
+	},
+	"discounts": {
+		"PercentDescription": "\u60a8\u5df2\u89e3\u9501{{percent}}\u6298\u6263\u3002",
+		"FormattedDescription": "\u60a8\u5df2\u89e3\u9501\u6298\u6263\uff0c\u53ef\u8282\u7701{{format}}"
 	}
 }

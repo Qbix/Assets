@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} creidmheasanna",
 			"BonusCredits": "{{amount}} creidmheasanna"
-		}
+		},
+		"BuyInCredits": "Ceannaigh {{amount}} {{currency}} i gcreidmheasanna",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} creidi\u00faint"
 	},
 	"history": {
 		"Date": "D\u00e1ta",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "cl\u00f3scr\u00edobh rud \u00e9igin faoin rann\u00edoca\u00edocht seo..."
+	},
+	"discounts": {
+		"PercentDescription": "T\u00e1 lascaine {{percent}} d\u00edghlas\u00e1ilte agat.",
+		"FormattedDescription": "T\u00e1 lascaine d\u00edghlas\u00e1ilte agat chun {{format}} a sh\u00e1bh\u00e1il"
 	}
 }

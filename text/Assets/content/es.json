@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}} cr\u00e9ditos",
 			"BonusCredits": "{{amount}} cr\u00e9ditos"
-		}
+		},
+		"BuyInCredits": "Compra {{amount}} {{currency}} en cr\u00e9ditos",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}} cr\u00e9ditos"
 	},
 	"history": {
 		"Date": "Fecha",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "escribe algo sobre esta contribuci\u00f3n..."
+	},
+	"discounts": {
+		"PercentDescription": "Has desbloqueado un descuento {{percent}} .",
+		"FormattedDescription": "Has desbloqueado un descuento para ahorrar {{format}}"
 	}
 }

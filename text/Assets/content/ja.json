@@ -89,7 +89,9 @@
 		"forMessages": {
 			"BoughtCredits": "{{amount}}\u30af\u30ec\u30b8\u30c3\u30c8",
 			"BonusCredits": "{{amount}}\u30af\u30ec\u30b8\u30c3\u30c8"
-		}
+		},
+		"BuyInCredits": "{{amount}} {{currency}}\u30af\u30ec\u30b8\u30c3\u30c8\u3092\u8cfc\u5165",
+		"Conversion": "{{{amount}}} {{{currency}}} = {{{exchange}}}\u30af\u30ec\u30b8\u30c3\u30c8"
 	},
 	"history": {
 		"Date": "\u65e5\u306b\u3061",
@@ -695,5 +697,9 @@
 	},
 	"fundrise": {
 		"placeholder": "\u3053\u306e\u8ca2\u732e\u306b\u3064\u3044\u3066\u4f55\u304b\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044..."
+	},
+	"discounts": {
+		"PercentDescription": "{{percent}}\u5272\u5f15\u304c\u30a2\u30f3\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f\u3002",
+		"FormattedDescription": "{{format}}\u306e\u5272\u5f15\u304c\u30a2\u30f3\u30ed\u30c3\u30af\u3055\u308c\u307e\u3057\u305f"
 	}
 }
