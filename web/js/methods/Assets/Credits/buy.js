@@ -25,6 +25,11 @@ Q.exports(function () {
 		var NotEnoughCredits = null;
 		var templateName = 'Assets/credits/buy';
 
+		var BuyInCredits = Q.text.Assets.credits.BuyInCredits.interpolate({
+			amount: '<input name="amount" value="{{amount}}">'.interpolate(options),
+			currency: options.currency
+		});
+
 		if (options.missing) {
 			templateName = 'Assets/credits/missing';
 			title = Q.text.Assets.credits.NeedMoreCredits;
@@ -51,7 +56,7 @@ Q.exports(function () {
 			'{{#each bonuses}}' +
 			'	<div class="Assets_credits_bonus">{{{this}}}</div>' +
 			'{{/each}}' +
-			'<div class="Assets_credits_buy"><input name="amount" value="{{amount}}"> {{texts.Credits}}</div>' +
+			'<div class="Assets_credits_buy">{{BuyInCredits}}</div>' +
 			'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
 		);
 
@@ -93,7 +98,9 @@ Q.exports(function () {
 				name: templateName,
 				fields: {
 					amount: options.amount,
+					currency: options.currency,
 					NotEnoughCredits: NotEnoughCredits,
+					BuyInCredits: BuyInCredits,
 					bonuses: bonuses,
 					texts: Q.text.Assets.credits
 				}
