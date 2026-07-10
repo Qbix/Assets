@@ -29,10 +29,10 @@
 Q.Tool.define("Assets/payment", function (options) {
 	var tool = this;
 	var state = tool.state;
-	state.payments = state.toCapitalized();
+	var payments = state.payments.toCapitalized();
 	var currency = state.currency.toLocaleLowerCase();
 
-	if (state.payments === 'Authnet' && currency !== 'usd') {
+	if (payments === 'Authnet' && currency !== 'usd') {
 		throw new Q.Error("Authnet doesn't support currencies other than USD", 'currency');
 	}
 
@@ -57,8 +57,8 @@ Q.Tool.define("Assets/payment", function (options) {
 		pipe.fill("data")(data.slots.tool);
 	}, {
 		fields: {
-			payments: state.payments,
-			currency: state.currency,
+			payments,
+			currency,
 			reason: state.reason
 		}
 	});
