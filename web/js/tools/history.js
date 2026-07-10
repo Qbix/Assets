@@ -45,7 +45,7 @@ Q.Tool.define("Assets/history", function (options) {
 	});
 
 	// listen Assets/credits stream to update history online
-	Q.Streams.get(Q.Users.currentCommunityId, "Assets/credits/" + Q.Users.loggedInUser.id, function (err) {
+	Q.Streams.get(Q.Users.communityId, "Assets/credits/" + Q.Users.loggedInUser.id, function (err) {
 		if (err) {
 			return;
 		}

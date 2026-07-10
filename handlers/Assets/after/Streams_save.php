@@ -76,7 +76,8 @@ function Assets_grant_credits_for_filling_personal_streams($params) {
 	Assets_Credits::grant(null, $credits, $reason, $stream->publisherId, array(
 		'toStreamName' => $stream->name,
 		'FilledStreamTitle' => $stream->title,
-		'invitedUserId' => $stream->publisherId
+		'invitedUserId' => $stream->publisherId,
+		'invitedUserName' => Assets_Credits::invitedUserName($stream->publisherId, $stream)
 	));
 }
 
@@ -150,6 +151,7 @@ function Assets_grant_credits_for_invited_users ($params) {
 
 	Assets_Credits::grant(null, $credits, "InvitedUserFilledStream", $inviteRow->invitingUserId, array(
 		'invitedUserId' => $invitedUser->id,
+		'invitedUserName' => Assets_Credits::invitedUserName($invitedUser->id, $stream),
 		'FilledStreamTitle' => $stream->title
 	));
 }
