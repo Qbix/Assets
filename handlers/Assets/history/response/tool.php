@@ -53,6 +53,24 @@ function Assets_history_response_tool($options)
 
 		$rows = $queryRows->fetchDbRows();
 
+		// Best stored invitedUserName per invitee among this history set
+		$someone = Q::interpolate(array('Streams/content', array('avatar', 'Someone')));
+		$bestInvitedNames = array();
+		foreach ($rows as $row) {
+			$attr = Q::json_decode($row->attributes, true);
+			if (!is_array($attr)) {
+				continue;
+			}
+			$iid = Q::ifset($attr, 'invitedUserId', null);
+			$iname = Q::ifset($attr, 'invitedUserName', null);
+			if (!$iid || !$iname || $iname === $someone) {
+				continue;
+			}
+			if (!isset($bestInvitedNames[$iid]) || strlen($iname) > strlen($bestInvitedNames[$iid])) {
+				$bestInvitedNames[$iid] = $iname;
+			}
+		}
+
 		foreach ($rows as $i => $row) {
 			$attributes = Q::json_decode($row->attributes, true);
 			$attributes['amount'] = $row->amount;
@@ -62,16 +80,38 @@ function Assets_history_response_tool($options)
 			$attributes['fromStreamName'] = $row->fromStreamName;
 
 			// for backward compatibility when invitedUserName was displayName
-			$attributes['invitedUserName'] = Q::ifset($attributes, 'invitedUserName', Q::ifset($attributes, 'displayName', null));
+			$storedInvitedUserName = Q::ifset($attributes, 'invitedUserName', Q::ifset($attributes, 'displayName', null));
+			$attributes['invitedUserName'] = $storedInvitedUserName;
 
-			if (!empty($attributes['invitedUserId']) && empty($attributes['invitedUserName'])) {
-				$attributes['invitedUserName'] = Streams::displayName($attributes['invitedUserId']);
+			// Prefer live name; else best stored name among sibling rows; else stored; else Someone
+			if (!empty($attributes['invitedUserId'])) {
+				$resolved = Streams::displayName(
+					$attributes['invitedUserId'],
+					array('fullAccess' => true)
+				);
+				$fromSiblings = Q::ifset($bestInvitedNames, $attributes['invitedUserId'], null);
+				if ($resolved && $resolved !== $someone) {
+					$attributes['invitedUserName'] = $resolved;
+				} elseif ($fromSiblings) {
+					$attributes['invitedUserName'] = $fromSiblings;
+				} elseif (!empty($storedInvitedUserName) && $storedInvitedUserName !== $someone) {
+					$attributes['invitedUserName'] = $storedInvitedUserName;
+				} else {
+					$attributes['invitedUserName'] = $resolved ? $resolved : $someone;
+				}
 			}
+
 			if (!empty($attributes['toUserId']) && empty($attributes['toUserName'])) {
-				$attributes['toUserName'] = Streams::displayName($attributes['toUserId']);
+				$attributes['toUserName'] = Streams::displayName(
+					$attributes['toUserId'],
+					array('fullAccess' => true)
+				);
 			}
 			if (!empty($attributes['fromUserId']) && empty($attributes['fromUserName'])) {
-				$attributes['fromUserName'] = Streams::displayName($attributes['fromUserId']);
+				$attributes['fromUserName'] = Streams::displayName(
+					$attributes['fromUserId'],
+					array('fullAccess' => true)
+				);
 			}
 
 			$amount = $row->amount;

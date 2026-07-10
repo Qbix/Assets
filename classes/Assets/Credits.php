@@ -215,12 +215,37 @@ class Assets_Credits extends Base_Assets_Credits
 
 		$fromUserId = Q::ifset($attributes, 'fromUserId', Users::communityId());
 
+		// Resolve display names before persisting attributes on the credits row
+		$someoneLabel = Q::interpolate(array('Streams/content', array('avatar', 'Someone')));
+		if (!empty($attributes['invitedUserId'])) {
+			$current = Q::ifset($attributes, 'invitedUserName', null);
+			if (empty($current) || $current === $someoneLabel) {
+				$attributes['invitedUserName'] = self::invitedUserName($attributes['invitedUserId']);
+			}
+		}
+
 		$assets_credits = self::createRow($communityId, $amount, $reason, $userId, $fromUserId, $attributes);
+
+		// Upgrade older rows for this invitee (InviteAcceptedBy "Someone" → full name)
+		if (!empty($attributes['invitedUserId']) && !empty($attributes['invitedUserName'])
+			&& $attributes['invitedUserName'] !== $someoneLabel) {
+			self::backfillInvitedUserName(
+				$attributes['invitedUserId'],
+				$attributes['invitedUserName'],
+				$userId
+			);
+		}
 
 		// Post that this user granted $amount credits by $reason
 		$text = Q_Text::get('Assets/content');
 		$utext = Q_Text::get('Users/content');
-		$attributes['toUserName'] = $attributes['invitedUserName'] = Q::ifset($utext, 'avatar', 'Someone', 'Someone');
+		$someone = Q::ifset($utext, 'avatar', 'Someone', 'Someone');
+		if (empty($attributes['toUserName'])) {
+			$attributes['toUserName'] = $someone;
+		}
+		if (empty($attributes['invitedUserName'])) {
+			$attributes['invitedUserName'] = $someone;
+		}
 		if ($communityId === Users::communityId()) {
 			$attributes['fromUserName'] = Users::communityName();
 		} else {
@@ -236,7 +261,7 @@ class Assets_Credits extends Base_Assets_Credits
 			$type = 'Assets/credits/bonus';
 		} else {
 			$type = 'Assets/credits/granted';
-			$instructions['reason'] = self::reasonToText($reason, $attributes);
+			$instructions['reason'] = self::reasonToText($reason, $instructions);
 		}
 
 		$content = Q::ifset($text, 'messages', $type, "content", "Granted {{amount}} credits");
@@ -733,7 +758,10 @@ class Assets_Credits extends Base_Assets_Credits
 			$attributes['fromUserName'] = Streams::displayName($attributes['fromUserId']);
 		}
 		if (empty($attributes['invitedUserName']) && !empty($attributes['invitedUserId'])) {
-			$attributes['invitedUserName'] = Streams::displayName($attributes['invitedUserId']);
+			$attributes['invitedUserName'] = Streams::displayName(
+				$attributes['invitedUserId'],
+				array('fullAccess' => true)
+			);
 		}
 
 		return $attributes;
@@ -863,6 +891,100 @@ class Assets_Credits extends Base_Assets_Credits
 
 		return $amount;
 	}
+
+	/**
+	 * Resolve a durable invited-user display name for credit attributes.
+	 * Builds first+last from name streams (and the stream being saved), then
+	 * falls back to Streams::displayName. Never returns a partial name when
+	 * both parts are available.
+	 * @method invitedUserName
+	 * @static
+	 * @param {string} $userId
+	 * @param {Streams_Stream|null} [$stream]
+	 * @return {string}
+	 */
+	static function invitedUserName($userId, $stream = null)
+	{
+		$someone = Q::interpolate(array('Streams/content', array('avatar', 'Someone')));
+
+		$first = null;
+		$last = null;
+		if ($stream) {
+			if ($stream->name === 'Streams/user/firstName' && $stream->content) {
+				$first = $stream->content;
+			} elseif ($stream->name === 'Streams/user/lastName' && $stream->content) {
+				$last = $stream->content;
+			}
+		}
+		if ($first === null) {
+			$row = Streams_Stream::select()->where(array(
+				'publisherId' => $userId,
+				'name' => 'Streams/user/firstName'
+			))->fetchDbRow();
+			if ($row && $row->content) {
+				$first = $row->content;
+			}
+		}
+		if ($last === null) {
+			$row = Streams_Stream::select()->where(array(
+				'publisherId' => $userId,
+				'name' => 'Streams/user/lastName'
+			))->fetchDbRow();
+			if ($row && $row->content) {
+				$last = $row->content;
+			}
+		}
+		$built = trim(implode(' ', array_filter(array($first, $last))));
+		if ($built !== '') {
+			return $built;
+		}
+
+		$name = Streams::displayName($userId, array('fullAccess' => true));
+		return ($name && $name !== $someone) ? $name : $someone;
+	}
+
+	/**
+	 * Propagate a real invitedUserName onto older credit rows for the same invitee
+	 * (e.g. InviteAcceptedBy stored "Someone" before names were filled).
+	 * @method backfillInvitedUserName
+	 * @static
+	 * @param {string} $invitedUserId
+	 * @param {string} $invitedUserName
+	 * @param {string} [$toUserId] Limit to credits granted to this user (the inviter)
+	 */
+	static function backfillInvitedUserName($invitedUserId, $invitedUserName, $toUserId = null)
+	{
+		$someone = Q::interpolate(array('Streams/content', array('avatar', 'Someone')));
+		if (empty($invitedUserId) || empty($invitedUserName) || $invitedUserName === $someone) {
+			return;
+		}
+		$query = self::select();
+		if ($toUserId) {
+			$query = $query->where(array('toUserId' => $toUserId));
+		}
+		foreach ($query->fetchDbRows() as $row) {
+			$attr = Q::json_decode($row->attributes, true);
+			if (!is_array($attr)) {
+				continue;
+			}
+			if (Q::ifset($attr, 'invitedUserId', null) !== $invitedUserId) {
+				continue;
+			}
+			$current = Q::ifset($attr, 'invitedUserName', null);
+			if ($current === $invitedUserName) {
+				continue;
+			}
+			// Upgrade Someone or a shorter/partial name to the fuller name
+			if (empty($current) || $current === $someone
+				|| (strpos($invitedUserName, $current) === 0 && $invitedUserName !== $current)
+			) {
+				$attr['invitedUserName'] = $invitedUserName;
+				$row->attributes = Q::json_encode($attr);
+				$row->save();
+			}
+		}
+	}
+
 	/**
 	 * Convert reason to readable text.
 	 * @method reasonToText
