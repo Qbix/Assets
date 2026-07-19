@@ -337,7 +337,7 @@ abstract class Base_Assets_NftAttributes extends Db_Row
 		}
 		if (!is_string($value) and !is_numeric($value))
 			throw new Exception('Must pass a string to '.$this->getTable().".publisherId");
-		if (strlen($value) > 8)
+		if (mb_strlen($value) > 8)
 			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".publisherId");
 		return array('publisherId', $value);			
 	}
@@ -392,7 +392,7 @@ return array (
 		}
 		if (!is_string($value) and !is_numeric($value))
 			throw new Exception('Must pass a string to '.$this->getTable().".display_type");
-		if (strlen($value) > 50)
+		if (mb_strlen($value) > 50)
 			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".display_type");
 		return array('display_type', $value);			
 	}
@@ -447,7 +447,7 @@ return array (
 		}
 		if (!is_string($value) and !is_numeric($value))
 			throw new Exception('Must pass a string to '.$this->getTable().".trait_type");
-		if (strlen($value) > 100)
+		if (mb_strlen($value) > 100)
 			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".trait_type");
 		return array('trait_type', $value);			
 	}
@@ -502,7 +502,7 @@ return array (
 		}
 		if (!is_string($value) and !is_numeric($value))
 			throw new Exception('Must pass a string to '.$this->getTable().".value");
-		if (strlen($value) > 100)
+		if (mb_strlen($value) > 100)
 			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".value");
 		return array('value', $value);			
 	}
