@@ -65,6 +65,11 @@
 				"include": ["Assets"]
 			}
 		},
+		"webserver": {
+			"preload": [
+				"Assets", "Assets_Credits", "Assets_Charge", "Assets_Badge"
+			]
+		},
 		"bundle": {
 			"exclude": {
 				"Assets": ["img"]
