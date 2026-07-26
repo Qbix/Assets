@@ -2,7 +2,7 @@
 	"Q": {
 		"pluginInfo": {
 			"Assets": {
-				"version": "1.3",
+				"version": "1.4",
 				"compatible": "0.7",
 				"requires": {"Q": "0.9", "Streams": "0.9"},
 				"connections": ["Assets", "Streams"]
@@ -10,6 +10,7 @@
 		},
 		"handlersBeforeEvent": {
 			"Q/responseExtras": ["Assets/before/Q_responseExtras"],
+			"Q/sessionExtras": ["Assets/before/Q_sessionExtras"],
 			"Streams/create/Assets/service": ["Assets/before/Streams_create_Assets_service"],
 			"Streams/Stream/save/Assets/credits": ["Assets/before/Streams_Stream_save_Assets_credits"],
 			"Streams/Dialogs/invite/complete": ["Assets/before/Streams_Dialogs_invite_complete"],
@@ -267,6 +268,10 @@
 					"0x89": "0x04010100099d18Da3d85886Ad297e8F654797d99",
 					"0x13881": "0x12Fa616220E1c55c98268690e2eAa5024a3F8BD7"
 				}
+			},
+			"spender": {
+				"address": null,
+				"privateKey": null
 			}
 		},
 		"roles": {
@@ -427,17 +432,42 @@
 			},
 			"Assets/invoice": {
 				"emoji": "🧾",
-				"create": true, 
+				"create": true,
 				"edit": true,
 				"defaults": {
-					"title": "Invoice to receive funds",
-					"readLevel": 40,
-					"writeLevel": 0,
-					"adminLevel": 0
+					"title": "Invoice",
+					"icon": "Assets/invoice",
+					"readLevel": 23,
+					"writeLevel": 10,
+					"adminLevel": 0,
+					"attributes": {
+						"amount": 0,
+						"currency": "USD",
+						"status": "pending",
+						"payments": ["credits", "stripe"],
+						"web3": null
+					}
+				},
+				"messages": {
+					"Assets/invoice/paid": {
+						"subject": ["Assets/content", ["notifications", "Assets/invoice/paid"]]
+					},
+					"Assets/invoice/expired": {
+						"subject": ["Assets/content", ["notifications", "Assets/invoice/expired"]]
+					},
+					"Assets/invoice/canceled": {
+						"subject": ["Assets/content", ["notifications", "Assets/invoice/canceled"]]
+					}
+				},
+				"restricted": {
+					"attributes": {
+						"prefixes": ["Assets/"]
+					}
 				}
 			}
 		},
 		"possibleUserStreams": {
+			"Assets/user/invoices": true,
 			"Assets/user/NFTs": true,
 			"Assets/NFT/contracts": true,
 			"Assets/NFT/series": true
@@ -687,6 +717,13 @@
 				"0xa86a": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",	/* Avalanche */
 				"0xfa": "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",	/* Fantom    */
 				"0x19": "0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23"	/* Cronos    */
+			}
+		},
+		"customers": {
+			"restricted": {
+				"attributes": {
+					"prefixes": ["Assets/"]
+				}
 			}
 		}
 	}

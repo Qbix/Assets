@@ -19,7 +19,7 @@ Q.exports(function(Assets, priv){
     *  @param {boolean} [options.metadata] Specify additional metadata, e.g. what the user is going to be paying for
     *  @param {Function} [callback]
     */
-    return function standardStripe(options, callback) {
+    return Q.promisify(function standardStripe(options, callback) {
         Q.Assets.Payments.checkLoaded();
 
         var paymentRequestButton, paymentElement;
@@ -310,5 +310,5 @@ Q.exports(function(Assets, priv){
         }
 
         Q.Dialogs.push(dialogOptions);
-    }
+    });
 });

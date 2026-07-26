@@ -240,7 +240,7 @@ abstract class Assets extends Base_Assets
 	 *   on successful payment. Pass false here to skip subscribing.
 	 * @return array ("success" => bool, "details" => array)
 	 */
-	static function pay($communityId, $userId, $amount, $reason, $options = array())
+static function pay($communityId, $userId, $amount, $reason, $options = array())
 	{
 		// Hook {before}
 		if (false === Q::event(
@@ -377,7 +377,23 @@ abstract class Assets extends Base_Assets
 				));
 			}
 
-			$intent = Users_Intent::newIntent("Assets/charge", $userId, $instructions);
+			// Reuse an existing intent if the client passed one back
+			// (probe → confirm → re-call pattern), to avoid minting
+			// a duplicate that could be honored twice by the webhook.
+			$intent = null;
+			$intentToken = Q::ifset($options, 'intentToken', null);
+			if ($intentToken) {
+				$intent = new Users_Intent(array('token' => $intentToken));
+				if (!$intent->retrieve() or !$intent->isValid()
+				or $intent->userId !== $userId) {
+					$intent = null;
+				}
+			}
+			if (!$intent) {
+				$intent = Users_Intent::newIntent("Assets/charge", $userId, $instructions);
+			}
+
+			$paymentMethod = self::paymentMethod($userId, compact('payments'));
 
 			if (!$autoCharge) {
 				// Not allowed to charge automatically: return intent token
@@ -385,10 +401,11 @@ abstract class Assets extends Base_Assets
 				return array(
 					"success" => false,
 					"details" => array(
-						"haveCredits" => $haveCredits,
-						"needCredits" => $needCredits,
-						"intentToken" => $intent->token,
-						'intent' => $intent->exportArray()
+						"haveCredits"   => $haveCredits,
+						"needCredits"   => $needCredits,
+						"paymentMethod" => $paymentMethod,
+						"intentToken"   => $intent->token,
+						"intent"        => $intent->exportArray()
 					)
 				);
 			}
@@ -404,25 +421,25 @@ abstract class Assets extends Base_Assets
 						"metadata" => $metadata,
 						"intentToken" => $intent->token,
 						"dontLogMissingCustomer" => true
-						// no need for full intent object,
-						// because this will result in a direct request
-						// to the payments processor,
-						// and our webhook can later fetch the intent from the database.
 					)
 				);
 				// if charge is successful, Stripe will continue with intent
 			} catch (Exception $e) {
+				if (Q::ifset($e, 'code', null) === 'missing_payment_method'
+				or strpos($e->getMessage(), 'no attached payment') !== false) {
+					Assets::rememberPaymentMethod($userId, $payments, null);
+					$paymentMethod = null;
+				}
 				// No throw — always return structured.
-				// Return intent token as well as the
-				// intent object, so client knows what to do.
 				return array(
 					"success" => false,
 					"details" => array(
-						"haveCredits" => $haveCredits,
-						"needCredits" => $needCredits,
-						"error"       => $e->getMessage(),
-						"intentToken" => $intent->token,
-						"intent" => 	$intent->exportArray()
+						"haveCredits"   => $haveCredits,
+						"needCredits"   => $needCredits,
+						"paymentMethod" => $paymentMethod,
+						"error"         => $e->getMessage(),
+						"intentToken"   => $intent->token,
+						"intent"        => $intent->exportArray()
 					)
 				);
 			}
@@ -466,7 +483,6 @@ abstract class Assets extends Base_Assets
 				);
 			}
 		} catch (Exception $e) {
-			// This is the big change — NEVER THROW
 			return array(
 				"success" => false,
 				"details" => array("error" => $e->getMessage())
@@ -483,7 +499,7 @@ abstract class Assets extends Base_Assets
 		);
 
 		//-------------------------------------------------------------
-		// 8. Success. Break out the expensive bottle of champagne
+		// 8. Success
 		//-------------------------------------------------------------
 		return array(
 			"success" => true,
@@ -920,6 +936,95 @@ abstract class Assets extends Base_Assets
 		);
 
 		return $results;
+	}
+
+	/**
+	 * Remember (or forget) what payment method is on file, so both server and
+	 * client can know without a round trip to the payments processor.
+	 * Pass null for $info to record "nothing on file".
+	 * @method rememberPaymentMethod
+	 * @static
+	 * @param {string} $userId
+	 * @param {string} $payments
+	 * @param {array|null} [$info] array('brand', 'last4', 'expMonth', 'expYear')
+	 */
+	static function rememberPaymentMethod($userId, $payments, $info = null)
+	{
+		$customer = new Assets_Customer();
+		$customer->userId   = $userId;
+		$customer->payments = $payments;
+		$customer->hash     = Assets_Customer::getHash();
+		if ($customer->retrieve()) {
+			$attributes = $customer->attributes
+				? Q::json_decode($customer->attributes, true)
+				: array();
+			$attributes['paymentMethod'] = $info;
+			$attributes['paymentMethodUpdated'] = time();
+			$customer->attributes = Q::json_encode($attributes);
+			$customer->save();
+		}
+
+		// mirror onto the stream the client already listens to
+		try {
+			$stream = Assets_Credits::userStream($userId); // your accessor
+			if ($stream) {
+				$stream->setAttribute('paymentMethod', $info);
+				$stream->changed();
+			}
+		} catch (Exception $e) {
+			// never let the mirror break the webhook
+		}
+	}
+
+	/**
+	 * Returns the saved payment method details for a user, or null if unavailable.
+	 *
+	 * @method paymentMethod
+	 * @static
+	 * @param {string} $userId
+	 * @param {array} [$options=array()] Options such as payment processor in `payments`.
+	 * @return {array|null} Payment method info (for example brand, last4, expMonth, expYear).
+	 */
+	static function paymentMethod($userId, $options = array())
+	{
+		$payments = Q::ifset($options, 'payments', 'stripe');
+
+		$customer = new Assets_Customer();
+		$customer->userId   = $userId;
+		$customer->payments = $payments;
+		$customer->hash     = Assets_Customer::getHash();
+		if (!$customer->retrieve()) {
+			return null;
+		}
+
+		// Existing customer with no attributes: grandfathered in.
+		// They have a payment method on file from before we started
+		// tracking it locally. Return a generic hint that expires
+		// in 10 years — a failed charge will clear it, a successful
+		// one will replace it with real card details via the webhook.
+		if (!$customer->attributes) {
+			return array(
+				'brand'    => null,
+				'last4'    => null,
+				'expMonth' => 12,
+				'expYear'  => date('Y') + 10,
+				'grandfathered' => true
+			);
+		}
+
+		$attributes = Q::json_decode($customer->attributes, true);
+		$pm = Q::ifset($attributes, 'paymentMethod', null);
+		if (!$pm) {
+			return null;
+		}
+		// treat an expired card as absent
+		if (!empty($pm['expYear'])) {
+			$exp = mktime(0, 0, 0, $pm['expMonth'] + 1, 1, $pm['expYear']);
+			if ($exp < time()) {
+				return null;
+			}
+		}
+		return $pm;
 	}
 
 	/**

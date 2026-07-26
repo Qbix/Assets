@@ -25,6 +25,7 @@ var Row = Q.require('Db/Row');
  * @param {String} [fields.payments] defaults to "stripe"
  * @param {String|Buffer} [fields.customerId] defaults to ""
  * @param {String} [fields.hash] defaults to ""
+ * @param {String} [fields.attributes] defaults to null
  * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
  * @param {String|Db.Expression} [fields.updatedTime] defaults to null
  */
@@ -57,6 +58,12 @@ Q.mixin(Base, Row);
  * @type String
  * @default ""
  * hashed string of secret and public keys to initiate customer with payment env
+ */
+/**
+ * @property attributes
+ * @type String
+ * @default null
+ * attributes are stored as JSON
  */
 /**
  * @property insertedTime
@@ -284,6 +291,7 @@ Base.fieldNames = function () {
 		"payments",
 		"customerId",
 		"hash",
+		"attributes",
 		"insertedTime",
 		"updatedTime"
 	];
@@ -324,7 +332,7 @@ Base.prototype.maxSize_userId = function () {
 	 */
 Base.column_userId = function () {
 
-return [["varbinary","31","",false],false,"PRI",""];
+return [["varbinary","31","",false],false,"PRI",null];
 };
 
 /**
@@ -385,7 +393,7 @@ Base.prototype.maxSize_customerId = function () {
 	 */
 Base.column_customerId = function () {
 
-return [["varbinary","255","",false],false,"",""];
+return [["varbinary","255","",false],false,"",null];
 };
 
 /**
@@ -424,6 +432,42 @@ Base.prototype.maxSize_hash = function () {
 Base.column_hash = function () {
 
 return [["varchar","32","",false],false,"PRI",null];
+};
+
+/**
+ * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+ * Optionally accept numeric value which is converted to string
+ * @method beforeSet_attributes
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' is not string or is exceedingly long
+ */
+Base.prototype.beforeSet_attributes = function (value) {
+		if (value == undefined) return value;
+		if (value instanceof Db.Expression) return value;
+		if (typeof value !== "string" && typeof value !== "number")
+			throw new Error('Must pass a String to '+this.table()+".attributes");
+		if (typeof value === "string" && value.length > 1023)
+			throw new Error('Exceedingly long value being assigned to '+this.table()+".attributes");
+		return value;
+};
+
+	/**
+	 * Returns the maximum string length that can be assigned to the attributes field
+	 * @return {integer}
+	 */
+Base.prototype.maxSize_attributes = function () {
+
+		return 1023;
+};
+
+	/**
+	 * Returns schema information for attributes column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_attributes = function () {
+
+return [["varchar","1023","",false],true,"",null];
 };
 
 /**
@@ -486,7 +530,7 @@ return [["timestamp",null,null,null],true,"",null];
  * @throws {Error} If e.g. mandatory field is not set or a bad values are supplied
  */
 Base.prototype.beforeSave = function (value) {
-	var fields = ['hash'], i;
+	var fields = ['userId','hash'], i;
 	if (!this._retrieved) {
 		var table = this.table();
 		for (i=0; i<fields.length; i++) {
@@ -497,6 +541,12 @@ Base.prototype.beforeSave = function (value) {
 	}
 	// convention: we'll have updatedTime = insertedTime if just created.
 	this['updatedTime'] = value['updatedTime'] = new Db.Expression('CURRENT_TIMESTAMP');
+	if (this.fields["userId"] == undefined && value["userId"] == undefined) {
+		this.fields["userId"] = value["userId"] = "";
+	}
+	if (this.fields["customerId"] == undefined && value["customerId"] == undefined) {
+		this.fields["customerId"] = value["customerId"] = "";
+	}
 	if (this.fields["hash"] == undefined && value["hash"] == undefined) {
 		this.fields["hash"] = value["hash"] = "";
 	}

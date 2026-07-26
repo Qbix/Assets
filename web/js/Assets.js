@@ -581,6 +581,14 @@ Q.Tool.define({
 		js: "{{Assets}}/js/tools/payment.js",
 		css: "{{Assets}}/css/tools/AssetsPayment.css"
 	},
+	"Assets/invoice": {
+		js: "{{Assets}}/js/tools/invoice.js",
+		css: "{{Assets}}/css/tools/invoice.css"
+	},
+	"Assets/invoice/preview": {
+		js: "{{Assets}}/js/tools/invoice/preview.js",
+		css: "{{Assets}}/css/tools/invoice/preview.css"
+	},
 	"Assets/sales/factory": {
 		js: "{{Assets}}/js/tools/sales/factory.js",
 		css: "{{Assets}}/css/tools/sales/factory.css"

@@ -136,12 +136,13 @@ abstract class Base_Assets_Connected extends Db_Row
   'PRIMARY' => 
   array (
     'unique' => true,
-    'type' => 'BTREE',
+    'type' => 'btree',
     'columns' => 
     array (
       0 => 'userId',
       1 => 'payments',
     ),
+    'partial' => false,
   ),
 );
 	}
@@ -170,7 +171,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	 * @param {string|array} [$fields=null] The fields as strings, or array of alias=>field.
 	 *   The default is to return all fields of the table.
 	 * @param {string} [$alias=null] Table alias.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function select($fields=null, $alias = null)
 	{
@@ -192,7 +193,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	 * @method update
 	 * @static
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function update($alias = null)
 	{
@@ -208,7 +209,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	 * @static
 	 * @param {string} [$table_using=null] If set, adds a USING clause with this table
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function delete($table_using = null, $alias = null)
 	{
@@ -224,7 +225,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	 * @static
 	 * @param {array} [$fields=array()] The fields as an associative array of column => value pairs
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function insert($fields = array(), $alias = null)
 	{
@@ -270,7 +271,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	 *  from code that knows about this transactionKey. Passing a transactionKey that doesn't
 	 *  match the latest one on the transaction "stack" also generates an error.
 	 *  Passing "*" here matches any transaction key that may have been on the top of the stack.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function begin($lockType = null, $transactionKey = null)
 	{
@@ -290,7 +291,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	 *  from code that knows about this transactionKey. Passing a transactionKey that doesn't
 	 *  match the latest one on the transaction "stack" also generates an error.
 	 *  Passing "*" here matches any transaction key that may have been on the top of the stack.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function commit($transactionKey = null)
 	{
@@ -305,7 +306,7 @@ abstract class Base_Assets_Connected extends Db_Row
 	 * @static
 	 * @param {array} $criteria Can be used to target the rollback to some shards.
 	 *  Otherwise you'll have to specify shards yourself when calling execute().
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function rollback()
 	{

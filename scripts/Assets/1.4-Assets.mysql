@@ -1,0 +1,2 @@
+ALTER TABLE {{prefix}}customer
+ADD COLUMN `attributes` varchar(1023) DEFAULT NULL COMMENT 'attributes are stored as JSON' AFTER `hash`;

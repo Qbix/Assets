@@ -20,6 +20,7 @@
  * @param {string} [$fields.payments] defaults to "stripe"
  * @param {string} [$fields.customerId] defaults to ""
  * @param {string} [$fields.hash] defaults to ""
+ * @param {string} [$fields.attributes] defaults to null
  * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
  * @param {string|Db_Expression} [$fields.updatedTime] defaults to null
  */
@@ -48,6 +49,12 @@ abstract class Base_Assets_Customer extends Db_Row
 	 * @type string
 	 * @default ""
 	 * hashed string of secret and public keys to initiate customer with payment env
+	 */
+	/**
+	 * @property $attributes
+	 * @type string
+	 * @default null
+	 * attributes are stored as JSON
 	 */
 	/**
 	 * @property $insertedTime
@@ -137,13 +144,14 @@ abstract class Base_Assets_Customer extends Db_Row
   'PRIMARY' => 
   array (
     'unique' => true,
-    'type' => 'BTREE',
+    'type' => 'btree',
     'columns' => 
     array (
       0 => 'userId',
       1 => 'payments',
       2 => 'hash',
     ),
+    'partial' => false,
   ),
 );
 	}
@@ -172,7 +180,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	 * @param {string|array} [$fields=null] The fields as strings, or array of alias=>field.
 	 *   The default is to return all fields of the table.
 	 * @param {string} [$alias=null] Table alias.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function select($fields=null, $alias = null)
 	{
@@ -194,7 +202,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	 * @method update
 	 * @static
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function update($alias = null)
 	{
@@ -210,7 +218,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	 * @static
 	 * @param {string} [$table_using=null] If set, adds a USING clause with this table
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function delete($table_using = null, $alias = null)
 	{
@@ -226,7 +234,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	 * @static
 	 * @param {array} [$fields=array()] The fields as an associative array of column => value pairs
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function insert($fields = array(), $alias = null)
 	{
@@ -272,7 +280,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	 *  from code that knows about this transactionKey. Passing a transactionKey that doesn't
 	 *  match the latest one on the transaction "stack" also generates an error.
 	 *  Passing "*" here matches any transaction key that may have been on the top of the stack.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function begin($lockType = null, $transactionKey = null)
 	{
@@ -292,7 +300,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	 *  from code that knows about this transactionKey. Passing a transactionKey that doesn't
 	 *  match the latest one on the transaction "stack" also generates an error.
 	 *  Passing "*" here matches any transaction key that may have been on the top of the stack.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function commit($transactionKey = null)
 	{
@@ -307,7 +315,7 @@ abstract class Base_Assets_Customer extends Db_Row
 	 * @static
 	 * @param {array} $criteria Can be used to target the rollback to some shards.
 	 *  Otherwise you'll have to specify shards yourself when calling execute().
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function rollback()
 	{
@@ -367,7 +375,7 @@ return array (
   ),
   1 => false,
   2 => 'PRI',
-  3 => '',
+  3 => NULL,
 );			
 	}
 
@@ -461,7 +469,7 @@ return array (
   ),
   1 => false,
   2 => '',
-  3 => '',
+  3 => NULL,
 );			
 	}
 
@@ -516,6 +524,61 @@ return array (
   ),
   1 => false,
   2 => 'PRI',
+  3 => NULL,
+);			
+	}
+
+	/**
+	 * Method is called before setting the field and verifies if value is string of length within acceptable limit.
+	 * Optionally accept numeric value which is converted to string
+	 * @method beforeSet_attributes
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value is not string or is exceedingly long
+	 */
+	function beforeSet_attributes($value)
+	{
+		if (!isset($value)) {
+			return array('attributes', $value);
+		}
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('attributes', $value);
+		}
+		if (!is_string($value) and !is_numeric($value))
+			throw new Exception('Must pass a string to '.$this->getTable().".attributes");
+		if (mb_strlen($value) > 1023)
+			throw new Exception('Exceedingly long value being assigned to '.$this->getTable().".attributes");
+		return array('attributes', $value);			
+	}
+
+	/**
+	 * Returns the maximum string length that can be assigned to the attributes field
+	 * @return {integer}
+	 */
+	function maxSize_attributes()
+	{
+
+		return 1023;			
+	}
+
+	/**
+	 * Returns schema information for attributes column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_attributes()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'varchar',
+    1 => '1023',
+    2 => '',
+    3 => false,
+  ),
+  1 => true,
+  2 => '',
   3 => NULL,
 );			
 	}
@@ -628,7 +691,7 @@ return array (
 	{
 		if (!$this->retrieved) {
 			$table = $this->getTable();
-			foreach (array('hash') as $name) {
+			foreach (array('userId','hash') as $name) {
 				if (!isset($value[$name])) {
 					throw new Exception("the field $table.$name needs a value, because it is NOT NULL, not auto_increment, and lacks a default value.");
 				}
@@ -636,6 +699,12 @@ return array (
 		}						
 		// convention: we'll have updatedTime = insertedTime if just created.
 		$this->updatedTime = $value['updatedTime'] = new Db_Expression('CURRENT_TIMESTAMP');
+		if (!isset($this->fields["userId"]) and !isset($value["userId"])) {
+			$this->userId = $value["userId"] = "";
+		}
+		if (!isset($this->fields["customerId"]) and !isset($value["customerId"])) {
+			$this->customerId = $value["customerId"] = "";
+		}
 		if (!isset($this->fields["hash"]) and !isset($value["hash"])) {
 			$this->hash = $value["hash"] = "";
 		}
@@ -652,7 +721,7 @@ return array (
 	 */
 	static function fieldNames($table_alias = null, $field_alias_prefix = null)
 	{
-		$field_names = array('userId', 'payments', 'customerId', 'hash', 'insertedTime', 'updatedTime');
+		$field_names = array('userId', 'payments', 'customerId', 'hash', 'attributes', 'insertedTime', 'updatedTime');
 		$result = $field_names;
 		if (!empty($table_alias)) {
 			$temp = array();

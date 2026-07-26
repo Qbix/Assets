@@ -46,6 +46,28 @@
 		"YourAccountCreated": "Your account has been created successfully!",
 		"YourAccountAlreadyCreated": "Your account has already been created and is ready to use"
 	},
+	"invoice": {
+		"pending": "Pending",
+		"paid": "Paid",
+		"expired": "Expired",
+		"canceled": "Canceled",
+		"NewInvoice": "New Invoice",
+		"CreateInvoice": "Create Invoice",
+		"DefaultTitle": "Invoice",
+		"TitlePlaceholder": "What is this for?",
+		"AmountPlaceholder": "0.00",
+		"PayWithCryptoWallet": "Pay with crypto wallet",
+		"SelectToken": "Select a token to pay with",
+		"Authorize": "Authorize",
+		"PayNow": "Pay now",
+		"SwitchChain": "Please switch to {{chainName}}",
+		"SwitchNetwork": "Switch Network",
+		"ApprovingToken": "Approving token...",
+		"NoAcceptedTokens": "No accepted tokens found in your wallet",
+		"PayWithBitcoin": "Pay with Bitcoin",
+		"CopyLightningInvoice": "Copy Lightning Invoice",
+		"Copied": "Copied!"
+	},
 	"payment": {
 		"AboutOrder": "Info about order",
 		"PaymentMethod": "Payment method",
@@ -60,7 +82,12 @@
 		"ChooseCurrency": "Choose a currency",
 		"YouCanSendUpTo": "You can send up to {{amount}} {{symbol}}",
 		"Send": "Send",
-		"EnterAmount": "enter amount"
+		"EnterAmount": "enter amount",
+		"confirm": {
+			"AutoCharge": "Would you like to use your saved payment method on file to pay {{amount}} for {{reason}}?",
+			"AutoChargeToSpecificPaymentMethod": "Would you like to use your saved payment method on file ending in {{last4}} to pay {{amount}} for {{reason}}?",
+			"AutoChargeToSpecificWeb3": "Would you like to use your {{token}} allowance on {{chainName}} from {{address}} to pay {{amount}} for {{reason}}?"
+		}
 	},
 	"credits": {
 		"InviteAcceptedBy": "Invite accepted by {{invitedUserName}}",

@@ -244,10 +244,34 @@ function Assets_stripeWebhook_post($params = array())
 					)
 				));
 
+				$pmObj = $stripe->paymentMethods->retrieve($pm);
+				$card  = Q::ifset($pmObj, 'card', null);
+				Assets::rememberPaymentMethod($userId, 'stripe', array(
+					'brand'    => $card ? $card->brand : $pmObj->type,
+					'last4'    => $card ? $card->last4 : null,
+					'expMonth' => $card ? $card->exp_month : null,
+					'expYear'  => $card ? $card->exp_year : null
+				));
+
 				Assets_Payments_Stripe::log('SetupIntent succeeded, PM stored', $si);
 
 			} catch (Exception $e) {
 				Assets_Payments_Stripe::log('stripe', 'Error in setup_intent.succeeded', $e);
+			}
+			break;
+
+		// ---------------------------------------------------------
+		// PAYMENT METHOD WAS DETACHED
+		// ---------------------------------------------------------
+		case 'payment_method.detached':
+			try {
+				$pmObj = $event->data->object;
+				$customerId = Q::ifset($event, 'data', 'previous_attributes', 'customer', null);
+				if ($userId = Assets::userIdFromCustomerId($customerId, 'stripe')) {
+					Assets::rememberPaymentMethod($userId, 'stripe', null);
+				}
+			} catch (Exception $e) {
+				Assets_Payments_Stripe::log('stripe', 'Error in payment_method.detached', $e);
 			}
 			break;
 

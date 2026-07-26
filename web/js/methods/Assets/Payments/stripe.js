@@ -13,7 +13,7 @@ Q.exports(function(Assets, priv){
     *  @param {boolean} [options.metadata] Specify additional metadata, e.g. what the user is going to be paying for
     *  @param {Function} [callback] The function to call, receives (err, paymentSlot)
     */
-    return function stripe(options, callback) {
+    return Q.promisify(function stripe(options, callback) {
          Q.Assets.Payments.load(function _continue() {
             options = Q.extend({},
                 Q.Assets.Payments.stripe.options,
@@ -41,6 +41,5 @@ Q.exports(function(Assets, priv){
                 Q.Assets.Payments.standardStripe(options, callback);
             }
         });
-    }
-
+    });
 })

@@ -38,6 +38,7 @@ var Row = Q.require('Db/Row');
  * @param {String} [fields.attributes] defaults to ""
  * @param {String|Db.Expression} [fields.insertedTime] defaults to new Db.Expression("CURRENT_TIMESTAMP")
  * @param {String|Db.Expression} [fields.updatedTime] defaults to null
+ * @param {String} [fields.status] defaults to "pending"
  */
 function Base (fields) {
 	Base.constructors.apply(this, arguments);
@@ -145,6 +146,12 @@ Q.mixin(Base, Row);
  * @property updatedTime
  * @type String|Db.Expression
  * @default null
+ * 
+ */
+/**
+ * @property status
+ * @type String
+ * @default "pending"
  * 
  */
 
@@ -372,7 +379,8 @@ Base.fieldNames = function () {
 		"description",
 		"attributes",
 		"insertedTime",
-		"updatedTime"
+		"updatedTime",
+		"status"
 	];
 };
 
@@ -487,7 +495,7 @@ Base.prototype.maxSize_publisherId = function () {
 	 */
 Base.column_publisherId = function () {
 
-return [["varbinary","31","",false],false,"",""];
+return [["varbinary","31","",false],false,"",null];
 };
 
 /**
@@ -525,7 +533,7 @@ Base.prototype.maxSize_streamName = function () {
 	 */
 Base.column_streamName = function () {
 
-return [["varbinary","255","",false],false,"",""];
+return [["varbinary","255","",false],false,"",null];
 };
 
 /**
@@ -968,6 +976,29 @@ return [["timestamp",null,null,null],true,"",null];
 };
 
 /**
+ * Method is called before setting the field and verifies if value belongs to enum values list
+ * @method beforeSet_status
+ * @param {string} value
+ * @return {string} The value
+ * @throws {Error} An exception is thrown if 'value' does not belong to enum values list
+ */
+Base.prototype.beforeSet_status = function (value) {
+		if (value instanceof Db.Expression) return value;
+		if (['pending','completed','failed','reversed'].indexOf(value) < 0)
+			throw new Error("Out-of-range value "+JSON.stringify(value)+" being assigned to "+this.table()+".status");
+		return value;
+};
+
+	/**
+	 * Returns schema information for status column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+Base.column_status = function () {
+
+return [["enum","'pending','completed','failed','reversed'","",false],false,"MUL","pending"];
+};
+
+/**
  * Check if mandatory fields are set and updates 'magic fields' with appropriate values
  * @method beforeSave
  * @param {Object} value The object of fields
@@ -992,6 +1023,12 @@ Base.prototype.beforeSave = function (value) {
 	}
 	if (this.fields["id"] == undefined && value["id"] == undefined) {
 		this.fields["id"] = value["id"] = "";
+	}
+	if (this.fields["publisherId"] == undefined && value["publisherId"] == undefined) {
+		this.fields["publisherId"] = value["publisherId"] = "";
+	}
+	if (this.fields["streamName"] == undefined && value["streamName"] == undefined) {
+		this.fields["streamName"] = value["streamName"] = "";
 	}
 	if (this.fields["description"] == undefined && value["description"] == undefined) {
 		this.fields["description"] = value["description"] = "";

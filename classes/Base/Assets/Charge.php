@@ -33,6 +33,7 @@
  * @param {string} [$fields.attributes] defaults to ""
  * @param {string|Db_Expression} [$fields.insertedTime] defaults to new Db_Expression("CURRENT_TIMESTAMP")
  * @param {string|Db_Expression} [$fields.updatedTime] defaults to null
+ * @param {string} [$fields.status] defaults to "pending"
  */
 abstract class Base_Assets_Charge extends Db_Row
 {
@@ -139,6 +140,12 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * 
 	 */
 	/**
+	 * @property $status
+	 * @type string
+	 * @default "pending"
+	 * 
+	 */
+	/**
 	 * The setUp() method is called the first time
 	 * an object of this class is constructed.
 	 * @method setUp
@@ -213,32 +220,56 @@ abstract class Base_Assets_Charge extends Db_Row
   'PRIMARY' => 
   array (
     'unique' => true,
-    'type' => 'BTREE',
+    'type' => 'btree',
     'columns' => 
     array (
       0 => 'userId',
       1 => 'id',
     ),
+    'partial' => false,
   ),
   'byCommunity' => 
   array (
     'unique' => false,
-    'type' => 'BTREE',
+    'type' => 'btree',
     'columns' => 
     array (
       0 => 'communityId',
       1 => 'insertedTime',
     ),
+    'partial' => false,
   ),
   'byProviderCustomer' => 
   array (
     'unique' => false,
-    'type' => 'BTREE',
+    'type' => 'btree',
     'columns' => 
     array (
       0 => 'paymentProvider',
       1 => 'providerCustomerId',
     ),
+    'partial' => false,
+  ),
+  'byStatus' => 
+  array (
+    'unique' => false,
+    'type' => 'btree',
+    'columns' => 
+    array (
+      0 => 'status',
+    ),
+    'partial' => false,
+  ),
+  'byStatusInsertedTime' => 
+  array (
+    'unique' => false,
+    'type' => 'btree',
+    'columns' => 
+    array (
+      0 => 'status',
+      1 => 'insertedTime',
+    ),
+    'partial' => false,
   ),
 );
 	}
@@ -267,7 +298,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @param {string|array} [$fields=null] The fields as strings, or array of alias=>field.
 	 *   The default is to return all fields of the table.
 	 * @param {string} [$alias=null] Table alias.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function select($fields=null, $alias = null)
 	{
@@ -289,7 +320,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @method update
 	 * @static
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function update($alias = null)
 	{
@@ -305,7 +336,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @static
 	 * @param {string} [$table_using=null] If set, adds a USING clause with this table
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function delete($table_using = null, $alias = null)
 	{
@@ -321,7 +352,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @static
 	 * @param {array} [$fields=array()] The fields as an associative array of column => value pairs
 	 * @param {string} [$alias=null] Table alias
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function insert($fields = array(), $alias = null)
 	{
@@ -367,7 +398,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 *  from code that knows about this transactionKey. Passing a transactionKey that doesn't
 	 *  match the latest one on the transaction "stack" also generates an error.
 	 *  Passing "*" here matches any transaction key that may have been on the top of the stack.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function begin($lockType = null, $transactionKey = null)
 	{
@@ -387,7 +418,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 *  from code that knows about this transactionKey. Passing a transactionKey that doesn't
 	 *  match the latest one on the transaction "stack" also generates an error.
 	 *  Passing "*" here matches any transaction key that may have been on the top of the stack.
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function commit($transactionKey = null)
 	{
@@ -402,7 +433,7 @@ abstract class Base_Assets_Charge extends Db_Row
 	 * @static
 	 * @param {array} $criteria Can be used to target the rollback to some shards.
 	 *  Otherwise you'll have to specify shards yourself when calling execute().
-	 * @return {Db_Query_Mysql} The generated query
+	 * @return {Db_Query} The generated query
 	 */
 	static function rollback()
 	{
@@ -572,7 +603,7 @@ return array (
   ),
   1 => false,
   2 => '',
-  3 => '',
+  3 => NULL,
 );			
 	}
 
@@ -627,7 +658,7 @@ return array (
   ),
   1 => false,
   2 => '',
-  3 => '',
+  3 => NULL,
 );			
 	}
 
@@ -1318,6 +1349,45 @@ return array (
 	}
 
 	/**
+	 * Method is called before setting the field and verifies if value belongs to enum values list
+	 * @method beforeSet_status
+	 * @param {string} $value
+	 * @return {array} An array of field name and value
+	 * @throws {Exception} An exception is thrown if $value does not belong to enum values list
+	 */
+	function beforeSet_status($value)
+	{
+		if ($value instanceof Db_Expression
+               or $value instanceof Db_Range) {
+			return array('status', $value);
+		}
+		if (!in_array($value, array('pending','completed','failed','reversed')))
+			throw new Exception("Out-of-range value '$value' being assigned to ".$this->getTable().".status");
+		return array('status', $value);			
+	}
+
+	/**
+	 * Returns schema information for status column
+	 * @return {array} [[typeName, displayRange, modifiers, unsigned], isNull, key, default]
+	 */
+	static function column_status()
+	{
+
+return array (
+  0 => 
+  array (
+    0 => 'enum',
+    1 => '\'pending\',\'completed\',\'failed\',\'reversed\'',
+    2 => '',
+    3 => false,
+  ),
+  1 => false,
+  2 => 'MUL',
+  3 => 'pending',
+);			
+	}
+
+	/**
 	 * Check if mandatory fields are set and updates 'magic fields' with appropriate values
 	 * @method beforeSave
 	 * @param {array} $value The array of fields
@@ -1342,6 +1412,12 @@ return array (
 		if (!isset($this->fields["id"]) and !isset($value["id"])) {
 			$this->id = $value["id"] = "";
 		}
+		if (!isset($this->fields["publisherId"]) and !isset($value["publisherId"])) {
+			$this->publisherId = $value["publisherId"] = "";
+		}
+		if (!isset($this->fields["streamName"]) and !isset($value["streamName"])) {
+			$this->streamName = $value["streamName"] = "";
+		}
 		if (!isset($this->fields["description"]) and !isset($value["description"])) {
 			$this->description = $value["description"] = "";
 		}
@@ -1361,7 +1437,7 @@ return array (
 	 */
 	static function fieldNames($table_alias = null, $field_alias_prefix = null)
 	{
-		$field_names = array('userId', 'id', 'publisherId', 'streamName', 'amount', 'currency', 'credits', 'paymentProvider', 'providerCustomerId', 'autoCharge', 'communityId', 'app', 'reason', 'description', 'attributes', 'insertedTime', 'updatedTime');
+		$field_names = array('userId', 'id', 'publisherId', 'streamName', 'amount', 'currency', 'credits', 'paymentProvider', 'providerCustomerId', 'autoCharge', 'communityId', 'app', 'reason', 'description', 'attributes', 'insertedTime', 'updatedTime', 'status');
 		$result = $field_names;
 		if (!empty($table_alias)) {
 			$temp = array();
