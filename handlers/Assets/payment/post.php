@@ -35,6 +35,11 @@ function Assets_payment_post($params = array())
 		'userId' => $user->id
 	);
 
+	$intentToken = Q::ifset($req, 'intentToken', null);
+	if ($intentToken) {
+		$metadata['intentToken'] = $intentToken;
+	}
+
 	// need to set false because null will lead to unset slot because isset(null)=false
 	$charge = false;
 	try {
