@@ -393,6 +393,8 @@ abstract class Assets extends Base_Assets
 				$intent = Users_Intent::newIntent("Assets/charge", $userId, $instructions);
 			}
 
+			$metadata['intentToken'] = $intent->token;
+
 			$paymentMethod = Assets_Payments::getPaymentMethod($userId, compact('payments'));
 
 			if (!$autoCharge) {

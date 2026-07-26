@@ -102,38 +102,36 @@ function Assets_payment_response_intent($options)
 
 	/**
 	 * ----------------------------------------------------------------------
-	 *   Require a non-empty intent token unless config explicitly allows no token
-	 * ----------------------------------------------------------------------
-	 */
-	if (!$tokenlessAllowed) {
-		Q_Valid::requireFields(
-			array('intentToken'),
-			$options,
-			true,
-			true
-		);
-	}
-
-	/**
-	 * ----------------------------------------------------------------------
-	 *   Load intent only if token is used
+	 *   Load intent if token is provided.
+	 *   When tokenless is allowed, the intent is optional but still honored.
+	 *   When tokenless is NOT allowed, the intent is required.
 	 * ----------------------------------------------------------------------
 	 */
 	$intent = null;
-	if (!$tokenlessAllowed) {
+	$intentToken = Q::ifset($options, 'intentToken', null);
 
-		$intent = Users_Intent::fromToken($options['intentToken']);
+	if ($intentToken) {
+		$intent = Users_Intent::fromToken($intentToken);
 		if (!$intent || !$intent->isValid()) {
-			throw new Q_Exception_FailedValidation(array(
-				'message' => 'Invalid or expired intent token'
-			));
+			if (!$tokenlessAllowed) {
+				throw new Q_Exception_FailedValidation(array(
+					'message' => 'Invalid or expired intent token'
+				));
+			}
+			$intent = null;
 		}
-
-		if (!empty($intent->completedTime)) {
-			throw new Q_Exception_FailedValidation(array(
-				'message' => 'Intent already completed'
-			));
+		if ($intent && !empty($intent->completedTime)) {
+			if (!$tokenlessAllowed) {
+				throw new Q_Exception_FailedValidation(array(
+					'message' => 'Intent already completed'
+				));
+			}
+			$intent = null;
 		}
+	} else if (!$tokenlessAllowed) {
+		throw new Q_Exception_FailedValidation(array(
+			'message' => 'intentToken is required'
+		));
 	}
 
 	/**
@@ -220,7 +218,7 @@ function Assets_payment_response_intent($options)
 	$metadata['userId']    = $userId;
 	$metadata['sessionId'] = Q_Session::id();
 
-	if (!$tokenlessAllowed && $intent) {
+	if ($intent) {
 		$metadata['intentToken'] = $intent->token;
 	}
 
