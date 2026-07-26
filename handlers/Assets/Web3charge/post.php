@@ -29,7 +29,7 @@ function Assets_Web3charge_post($params = array())
     }
 
     // Get the user's web3 payment method
-    $pm = Assets::paymentMethod($userId, array('payments' => 'web3'));
+    $pm = Assets_Payments::getPaymentMethod($userId, array('payments' => 'web3'));
     if (!$pm || $pm['type'] !== 'erc20_allowance') {
         throw new Q_Exception("No web3 allowance on file");
     }

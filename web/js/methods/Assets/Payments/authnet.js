@@ -11,7 +11,7 @@ Q.exports(function(Assets, priv){
     *  @param {String} [options.token] Required. Should be generated with Assets/payment tool.
     *  @param {String} [options.publisherId=Q.Users.communityId] The publisherId of the Assets/product or Assets/service stream
     *  @param {String} [options.streamName] The name of the Assets/product or Assets/service stream
-    *  @param {String} [options.description] A short name or description of the product or service being purchased.
+    *  @param {String} [options.reason] A short name or description of the product or service being purchased.
     *  @param {Function} [callback] The function to call, receives (err, paymentSlot)
     */
     return function authnet(options, callback) {
@@ -28,6 +28,13 @@ Q.exports(function(Assets, priv){
         if (!o.amount) {
             throw new Q.Error("Assets.Payments.authnet: amount is required");
         }
+        if (options.reason) {
+            var reason = Q.text.Assets.payments.reasons[options.reason]
+                ||  Q.text.Assets.credits.BuyAmountCredits;
+            options.title = options.title || reason.interpolate({
+                amount: Q.Assets.Credits.convertToCredits(options.amount, options.currency)
+            });
+        }
         var $form = $('<form method="post" target="Assets_authnet" />')
             .attr('action', o.action)
             .append($('<input name="Token" type="hidden" />').val(o.token));
@@ -39,7 +46,7 @@ Q.exports(function(Assets, priv){
             'scrolling="yes" ' +
             '></iframe>';
         Q.Dialogs.push(Q.extend({
-            title: o.infoTitle,
+            title: o.title,
             apply: true,
             onActivate: {
                 "Assets": function () {

@@ -240,7 +240,7 @@ abstract class Assets extends Base_Assets
 	 *   on successful payment. Pass false here to skip subscribing.
 	 * @return array ("success" => bool, "details" => array)
 	 */
-static function pay($communityId, $userId, $amount, $reason, $options = array())
+	static function pay($communityId, $userId, $amount, $reason, $options = array())
 	{
 		// Hook {before}
 		if (false === Q::event(
@@ -393,7 +393,7 @@ static function pay($communityId, $userId, $amount, $reason, $options = array())
 				$intent = Users_Intent::newIntent("Assets/charge", $userId, $instructions);
 			}
 
-			$paymentMethod = self::paymentMethod($userId, compact('payments'));
+			$paymentMethod = Assets_Payments::getPaymentMethod($userId, compact('payments'));
 
 			if (!$autoCharge) {
 				// Not allowed to charge automatically: return intent token
@@ -413,7 +413,7 @@ static function pay($communityId, $userId, $amount, $reason, $options = array())
 			try {
 				Assets::autoCharge(
 					$missingCredits,
-					self::BOUGHT_CREDITS,
+					$reason,
 					array(
 						"userId"   => $userId,
 						"currency" => "credits",
@@ -977,57 +977,6 @@ static function pay($communityId, $userId, $amount, $reason, $options = array())
 	}
 
 	/**
-	 * Returns the saved payment method details for a user, or null if unavailable.
-	 *
-	 * @method paymentMethod
-	 * @static
-	 * @param {string} $userId
-	 * @param {array} [$options=array()] Options such as payment processor in `payments`.
-	 * @return {array|null} Payment method info (for example brand, last4, expMonth, expYear).
-	 */
-	static function paymentMethod($userId, $options = array())
-	{
-		$payments = Q::ifset($options, 'payments', 'stripe');
-
-		$customer = new Assets_Customer();
-		$customer->userId   = $userId;
-		$customer->payments = $payments;
-		$customer->hash     = Assets_Customer::getHash();
-		if (!$customer->retrieve()) {
-			return null;
-		}
-
-		// Existing customer with no attributes: grandfathered in.
-		// They have a payment method on file from before we started
-		// tracking it locally. Return a generic hint that expires
-		// in 10 years — a failed charge will clear it, a successful
-		// one will replace it with real card details via the webhook.
-		if (!$customer->attributes) {
-			return array(
-				'brand'    => null,
-				'last4'    => null,
-				'expMonth' => 12,
-				'expYear'  => date('Y') + 10,
-				'grandfathered' => true
-			);
-		}
-
-		$attributes = Q::json_decode($customer->attributes, true);
-		$pm = Q::ifset($attributes, 'paymentMethod', null);
-		if (!$pm) {
-			return null;
-		}
-		// treat an expired card as absent
-		if (!empty($pm['expYear'])) {
-			$exp = mktime(0, 0, 0, $pm['expMonth'] + 1, 1, $pm['expYear']);
-			if ($exp < time()) {
-				return null;
-			}
-		}
-		return $pm;
-	}
-
-	/**
 	 * Returns a list of streams the user can pay for
 	 * @method canPayForStreams
 	 * @static
@@ -1160,6 +1109,8 @@ static function pay($communityId, $userId, $amount, $reason, $options = array())
 
 	static $columns = array();
 	static $options = array();
+
+	// Payment Reasons
 	const PAYMENT_TO_USER = 'PaymentToUser';
 	const JOINED_PAID_STREAM = 'JoinedPaidStream';
 	const LEFT_PAID_STREAM = 'LeftPaidStream';

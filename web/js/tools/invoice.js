@@ -36,7 +36,7 @@ Q.Tool.define("Assets/invoice", function (options) {
 { // methods
 
 	/**
-	 * Load the invoice stream and build payment options.
+	 * Load the invoice stream, fetch payment methods, and build options.
 	 * @method refresh
 	 */
 	refresh: function () {
@@ -59,14 +59,20 @@ Q.Tool.define("Assets/invoice", function (options) {
 			tool.amount = attr.amount;
 			tool.currency = attr.currency;
 			tool.acceptedPayments = attr.payments || [];
-			tool.paymentOptions = [];
 
-			tool._buildCreditOption(attr);
-			tool._buildStripeOptions(attr);
-			tool._buildWeb3Options(attr);
-			tool._buildOpennodeOption(attr);
+			// Fetch payment methods then build options
+			Q.Assets.Payments.getPaymentMethods()
+			.then(function (methods) {
+				tool.savedMethods = methods;
+				tool.paymentOptions = [];
 
-			tool._render();
+				tool._buildCreditOption(attr);
+				tool._buildStripeOptions(attr, methods);
+				tool._buildWeb3Options(attr, methods);
+				tool._buildOpennodeOption(attr);
+
+				tool._render();
+			});
 
 			// Live updates via stream
 			invoice.onFieldChanged('attributes').set(function () {
@@ -117,12 +123,13 @@ Q.Tool.define("Assets/invoice", function (options) {
 	},
 
 	/**
-	 * Build Stripe payment options (saved card + new card).
+	 * Build Stripe payment options from saved payment methods.
 	 * @method _buildStripeOptions
 	 * @private
 	 * @param {Object} attr Invoice stream attributes
+	 * @param {Array} methods Payment methods from getPaymentMethods()
 	 */
-	_buildStripeOptions: function (attr) {
+	_buildStripeOptions: function (attr, methods) {
 		var tool = this;
 		var t = Q.text.Assets.payment;
 
@@ -130,22 +137,11 @@ Q.Tool.define("Assets/invoice", function (options) {
 			return;
 		}
 
-		// Saved cards from session extras
-		var customers = Q.Assets.customers || [];
-		Q.each(customers, function (i, customer) {
-			if (customer.payments !== 'stripe') {
+		// Saved cards from payment methods
+		Q.each(methods, function (i, pm) {
+			if (pm.payments !== 'stripe') {
 				return;
 			}
-			var attributes = customer.attributes
-				? (typeof customer.attributes === 'string'
-					? JSON.parse(customer.attributes)
-					: customer.attributes)
-				: null;
-			var pm = attributes && attributes.paymentMethod;
-			if (!pm) {
-				return;
-			}
-
 			tool.paymentOptions.push({
 				type: 'stripe_saved',
 				icon: 'card',
@@ -168,14 +164,15 @@ Q.Tool.define("Assets/invoice", function (options) {
 	},
 
 	/**
-	 * Build web3 payment options.
-	 * Saved allowances are shown directly (server-side charge).
-	 * Wallet-based payments delegate to Assets/web3/invoice via Q.invoke().
+	 * Build web3 payment options from saved payment methods.
+	 * Saved allowances shown directly (server-side charge).
+	 * Wallet-based payments delegate to Assets/web3/invoice.
 	 * @method _buildWeb3Options
 	 * @private
 	 * @param {Object} attr Invoice stream attributes
+	 * @param {Array} methods Payment methods from getPaymentMethods()
 	 */
-	_buildWeb3Options: function (attr) {
+	_buildWeb3Options: function (attr, methods) {
 		var tool = this;
 		var t = Q.text.Assets.payment;
 
@@ -188,19 +185,10 @@ Q.Tool.define("Assets/invoice", function (options) {
 		var chains = web3.chains || {};
 		var acceptedChainIds = Object.keys(chains);
 
-		// Saved allowances (server-side charge, no wallet needed)
-		var customers = Q.Assets.customers || [];
-		Q.each(customers, function (i, customer) {
-			if (customer.payments !== 'web3') {
-				return;
-			}
-			var attributes = customer.attributes
-				? (typeof customer.attributes === 'string'
-					? JSON.parse(customer.attributes)
-					: customer.attributes)
-				: null;
-			var pm = attributes && attributes.paymentMethod;
-			if (!pm || pm.type !== 'erc20_allowance') {
+		// Saved allowances
+		Q.each(methods, function (i, pm) {
+			if (pm.payments !== 'web3'
+			|| pm.type !== 'erc20_allowance') {
 				return;
 			}
 			if (acceptedTokens.indexOf(pm.token) < 0) {
@@ -459,8 +447,7 @@ Q.Tool.define("Assets/invoice", function (options) {
 
 	/**
 	 * Open Assets/web3/invoice via Q.invoke() to handle
-	 * all wallet-based crypto payment flows (balance display,
-	 * token selection, approve, transfer, swap).
+	 * all wallet-based crypto payment flows.
 	 * @method _payWithWeb3Wallet
 	 * @private
 	 * @param {Object} option
@@ -471,7 +458,7 @@ Q.Tool.define("Assets/invoice", function (options) {
 		var state = tool.state;
 		var attr = tool.invoice.getAllAttributes();
 
-		Q.handle(done); // release spinner on the row
+		Q.handle(done);
 
 		Q.invoke({
 			title: Q.text.Assets.payment.PayWithCryptoWallet,
@@ -498,8 +485,6 @@ Q.Tool.define("Assets/invoice", function (options) {
 
 	/**
 	 * Pay with Bitcoin via OpenNode.
-	 * Creates a charge, then either redirects to hosted checkout
-	 * or shows a QR code inline.
 	 * @method _payWithOpennode
 	 * @private
 	 * @param {Function} done

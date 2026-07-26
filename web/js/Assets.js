@@ -1,8 +1,10 @@
 (function (Q) {
 
 /**
- * Various front-end functionality dealing with awards, badges, credits, etc.
+ * Various front-end functionality dealing with payments, credits,
+ * subscriptions, badges, NFTs, and Web3 commerce.
  * @class Assets
+ * @static
  */
 
 var Users = Q.Users;
@@ -17,17 +19,51 @@ var _ival;
 var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 
 	/**
-	 * Unified method to pay an amount
+	 * Unified method to pay an amount. Probes with autoCharge=false,
+	 * checks credits, and falls through to Credits.buy() if short.
+	 * @method pay
+	 * @static
+	 * @param {Object} options
+	 * @param {Number} options.amount Amount in original currency
+	 * @param {String} options.currency ISO 4217 code (USD, EUR, etc)
+	 * @param {String} [options.userId] Destination user ID
+	 * @param {String} [options.reason] Reason for payment
+	 * @param {Object|Streams_Stream} [options.toStream] Valuable stream or stream info
+	 * @param {Array} [options.items] Array of {publisherId, streamName, amount}
+	 * @param {Function} [options.onSuccess]
+	 * @param {Function} [options.onFailure]
 	 */
 	pay: new Q.Method(),
 
 	/**
-	 * Operates with credits.
+	 * Operates with credits — buying, spending, transferring,
+	 * and converting between credits and fiat currencies.
 	 * @class Assets.Credits
+	 * @static
 	 */
 	
 	Credits: Q.Method.define({
+		/**
+		 * Get the user's credits stream.
+		 * @method getStream
+		 * @static
+		 * @param {Function} callback
+		 */
 		getStream: new Q.Method(),
+		/**
+		 * Buy credits. Checks for saved payment methods first,
+		 * then opens Stripe checkout if needed.
+		 * @method buy
+		 * @static
+		 * @param {Object} options
+		 * @param {Number} [options.amount=10] Amount in currency
+		 * @param {String} [options.currency="USD"] ISO 4217 code
+		 * @param {Boolean} [options.skipDialog=false] Skip amount dialog
+		 * @param {Boolean} [options.skipAutoCharge=false] Skip saved-card check
+		 * @param {String} [options.reason] Payment reason key
+		 * @param {Function} [options.onSuccess]
+		 * @param {Function} [options.onFailure]
+		 */
 		buy: new Q.Method(),
 		/**
 		 * Convert from currency to credits
@@ -145,15 +181,31 @@ var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 		});
 	},
 
+	/**
+	 * Fired when a payment succeeds.
+	 * @event onPaymentSuccess
+	 */
 	onPaymentSuccess: new Q.Event(),
 
+	/**
+	 * Fired before a credits notice is displayed. Receives (options)
+	 * so the handler can modify the notice content or timeout.
+	 * @event onBeforeNotice
+	 */
 	onBeforeNotice: new Q.Event(),
-	onCreditsChanged: new Q.Event(),
-	preSubscribeLogin: new Q.Event(),
 
 	/**
-	 * Operates with subscriptions.
+	 * Fired when the user's credits balance changes.
+	 * Receives (amount) with the new balance.
+	 * @event onCreditsChanged
+	 */
+	onCreditsChanged: new Q.Event(),
+
+	/**
+	 * Operates with subscriptions — subscribing to plans,
+	 * managing recurring payments.
 	 * @class Assets.Subscriptions
+	 * @static
 	 */
 	Subscriptions: Q.Method.define({
 		authnet: new Q.Method({
@@ -175,8 +227,10 @@ var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 	}, '{{Assets}}/js/methods/Assets/Subscriptions'),
 
 	/**
-	 * Operates with payments
+	 * Operates with payments — loading payment processors,
+	 * managing saved payment methods, and processing charges.
 	 * @class Assets.Payments
+	 * @static
 	 */
 	Payments: Q.Method.define({
 		/**
@@ -191,15 +245,49 @@ var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 			}
 			throw new Q.Error("In order to use Assets.Payments methods need to call method Assets.Payments.load()");
 		},
+		/**
+		 * Clear the payment methods cache.
+		 * Called when payment methods change (card added/removed,
+		 * allowance approved, etc.)
+		 * @method clearPaymentMethodsCache
+		 * @static
+		 */
+		clearPaymentMethodsCache: function () {
+			delete Q.Assets._paymentMethods;
+		},
+		/**
+		 * Fetch the user's saved payment methods. Returns a Promise
+		 * resolving with an array of method objects. Cached until
+		 * clearPaymentMethodsCache() is called.
+		 * @method getPaymentMethods
+		 * @static
+		 * @param {Object} [options]
+		 * @param {String} [options.payments] Filter by processor
+		 * @param {Boolean} [options.force=false] Bypass cache
+		 * @return {Promise} Resolves with array of payment method objects
+		 */
+		getPaymentMethods: new Q.Method(),
+		/**
+		 * Returns the user's first saved payment method, or null.
+		 * Convenience wrapper around getPaymentMethods().
+		 * @method getPaymentMethod
+		 * @static
+		 * @param {Object} [options]
+		 * @param {String} [options.payments] Filter by processor
+		 * @param {String} [options.paymentMethodId] Return specific method
+		 * @param {Boolean} [options.force=false] Bypass cache
+		 * @return {Promise} Resolves with a payment method object or null
+		 */
+		getPaymentMethod: new Q.Method(),
 		authnet: new Q.Method({
 			options: {
 				name: Q.Users.communityName,
-				description: 'a product or service'
+				reason: 'BoughtCredits'
 			}
 		}),
 		stripe: new Q.Method({
 			options: {
-				description: 'a product or service',
+				reason: 'BoughtCredits',
 				javascript: 'https://checkout.stripe.com/checkout.js',
 				name: Q.Users.communityName
 			}
@@ -245,8 +333,9 @@ var Assets = Q.Assets = Q.plugins.Assets = Q.Method.define({
 	),
 
 	/**
-	 * For dealing with currencies
+	 * For dealing with currencies, exchange rates, and token balances.
 	 * @class Assets.Currencies
+	 * @static
 	 */
 	Currencies: Q.Method.define({
 		load: new Q.Method(),
@@ -852,6 +941,15 @@ Q.Tool.onActivate('Q/tabs').set(function () {
 	}, 'Assets');
 }, 'Assets');
 
+// Clear payment methods cache when credits stream changes
+// (rememberPaymentMethod mirrors to the credits stream,
+// which fires onCreditsChanged)
+if (Q.Assets.onCreditsChanged) {
+	Q.Assets.onCreditsChanged.set(function () {
+		Q.Assets.Payments.clearPaymentMethodsCache();
+	}, 'Assets.paymentMethods');
+}
+
 // columns settings
 var co = {
 	scrollbarsAutoHide: false,
@@ -896,5 +994,13 @@ $('body').off(Q.Pointer.fastclick, ".Assets_plan_preview_tool[data-onInvoke=open
 		}
 	});
 });
+
+Q.Users.onLogin.set(function (user) {
+	Assets.Payments.clearPaymentMethodsCache();
+}, "Assets");
+
+Q.Users.onLoginLost.set(function (user) {
+	Assets.Payments.clearPaymentMethodsCache();
+}, "Assets");
 
 })(Q, Q.plugins.Assets, Q.plugins.Streams, jQuery);

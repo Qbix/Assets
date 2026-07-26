@@ -73,7 +73,8 @@ function Assets_history_response_tool($options)
 
 		foreach ($rows as $i => $row) {
 			$attributes = Q::json_decode($row->attributes, true);
-			$attributes['amount'] = $row->amount;
+			$fromMe = (Q::ifset($attributes, 'userId', null) === $userId);
+			$attributes['amount'] = $fromMe ? -$row->amount : $row->amount;
 			$attributes['toPublisherId'] = $row->toPublisherId;
 			$attributes['toStreamName'] = $row->toStreamName;
 			$attributes['fromPublisherId'] = $row->fromPublisherId;

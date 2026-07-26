@@ -35,13 +35,18 @@ function Assets_pay_post($params = array())
 	$payments = Q::ifset($req, "payments", "stripe");
 	$amount   = floatval($req['amount']);
 	$reason   = Q::ifset($req, 'reason', null);
-	$force    = Q::ifset($params, "autoCharge", false);
+	$autoCharge    = Q::ifset($req, "autoCharge", false);
 
 	// Detect stream destination
-	$toPublisherId = Q::ifset($req, 'toStream', 'publisherId', null);
+	$toPublisherId = Q::ifset(
+		$req, 'toStream', 'publisherId', 
+		Q::ifset($req, 'metadata', 'toPublisherId', null)
+	);
 	$toStreamName  = Q::ifset(
 		$req, 'toStream', 'streamName',
-		Q::ifset($req, 'toStream', 'name', null)
+		Q::ifset($req, 'toStream', 'name', 
+			Q::ifset($req, 'metadata', 'toStreamName', null)
+		)
 	);
 
 	// Detect user destination
@@ -58,7 +63,7 @@ function Assets_pay_post($params = array())
 		array(
 			"currency"      => $currency,
 			"payments"      => $payments,
-			"autoCharge"    => $force,
+			"autoCharge"    => $autoCharge,
 			"toUserId"      => $toUserId,
 			"toPublisherId" => $toPublisherId,
 			"toStreamName"  => $toStreamName,

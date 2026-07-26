@@ -77,7 +77,7 @@ Server-side steps:
 2. Check the user's credit balance via `Assets_Credits::amount()`.
 3. Apply inviter-based discounts if a stream is involved.
 4. If credits are sufficient, call `Assets_Credits::spend()` or `Assets_Credits::transfer()` to deduct. Return `success: true`.
-5. If insufficient, reuse an existing `Users_Intent` (if the client passed `intentToken`) or mint a new one. Look up the user's saved payment method via `Assets::paymentMethod()`. Return `success: false` with `needCredits`, `haveCredits`, `paymentMethod`, and `intentToken`.
+5. If insufficient, reuse an existing `Users_Intent` (if the client passed `intentToken`) or mint a new one. Look up the user's saved payment method via `Assets_Payments::getPaymentMethod()`. Return `success: false` with `needCredits`, `haveCredits`, `paymentMethod`, and `intentToken`.
 6. If `autoCharge` is true, call `Assets::autoCharge()` to charge the saved payment method. If the charge fails because the card is gone, clear the stale payment method via `Assets::rememberPaymentMethod()` and return the error with the `intentToken` so the client can fall through to interactive checkout.
 7. Fire `Assets/pay` after-event with the result.
 
@@ -111,11 +111,11 @@ Payment method info is stored locally at webhook time — no payment-provider AP
 - `payment_method.detached` webhook → looks up userId via `Assets_Customer::userIdFromCustomerId()` → clears via `rememberPaymentMethod(null)`.
 - Failed auto-charge with "no attached payment" error → clears the stale record in the `pay()` catch block.
 
-**Reading:** `Assets::paymentMethod($userId, $options)` does a local DB read on `Assets_Customer`, checks card expiry, returns the info array or null. For grandfathered customers (existing rows with `attributes = NULL`), returns a generic hint with a 10-year expiry. First successful charge writes real details via the webhook. First failed charge clears the hint. Self-healing.
+**Reading:** `Assets_Payments::getPaymentMethods($userId)` iterates `Assets_Customer` rows, extracts payment method info from attributes, checks card expiry, and returns a flat array of method objects, each with an opaque `id`, `type`, and `payments` key. `Assets_Payments::getPaymentMethod($userId)` is a convenience wrapper returning the first match. For grandfathered customers (existing rows with `attributes = NULL`), returns a generic card hint with a 10-year expiry. First successful charge writes real details via the webhook. First failed charge clears the hint. Self-healing.
 
 **Web3 allowances:** An ERC-20 `approve()` is the blockchain equivalent of saving a card. The server verifies the allowance on-chain after the user approves, then stores it via `rememberPaymentMethod` with `{type: 'erc20_allowance', chainId, token, tokenAddress, decimals, walletAddress, spender, allowance}`.
 
-**Session extras:** `Assets_before_Q_sessionExtras` pushes all `Assets_Customer` rows (with `customerId` and `hash` stripped by `exportArray`) to `Q.Assets.customers` on page load, so the UI can render payment method indicators before any request.
+**Client access:** `Q.Assets.Payments.getPaymentMethods()` returns a Promise resolving with the methods array, fetched from the `Assets/paymentMethods` endpoint and cached until invalidated. `Q.Assets.Payments.getPaymentMethod()` returns a Promise resolving with the first method or null. The `Assets/invoice` tool and `Credits.buy()` both use these to check for saved methods before opening Stripe checkout.
 
 ### Charges
 
@@ -213,7 +213,7 @@ Beyond NFTs, the plugin includes on-chain smart contract templates (with ABIs) f
 The unified payment tool. Loads an `Assets/invoice` stream, discovers available payment methods, and renders them as tappable options. Delegates to specialized tools rather than implementing payment flows itself:
 
 - **Credits** — Shown only if the user has enough. Delegates to `Assets.pay()`.
-- **Saved card** — From `Q.Assets.customers` session data. Delegates to `Assets.pay()` with `autoCharge: true`, which triggers the probe/confirm/charge pattern.
+- **Saved card** — From `Q.Assets.Payments.getPaymentMethods()`. Delegates to `Assets.pay()` with `autoCharge: true`, which triggers the probe/confirm/charge pattern.
 - **New card** — Embeds the existing `Assets/payment` tool (Stripe checkout button with Google Pay support).
 - **Saved web3 allowance** — Calls `Assets/Web3charge` server-side (no wallet interaction needed).
 - **Pay with crypto wallet** — Opens `Assets/web3/invoice` via `Q.invoke()`, which handles wallet connection, chain detection, balance display, token selection, approve/transfer/swap flows.
@@ -288,6 +288,12 @@ Displays the user's current credit balance with optional text-fill scaling. Upda
 |---|---|---|
 | `Assets/invoice` | POST | Create an invoice stream with amount, currency, accepted payments, web3 config |
 | `Assets/invoice` | PUT | Update invoice status (cancel, expire). Publisher or admin only. |
+
+### Payment Method Handlers
+
+| Handler | Method | Purpose |
+|---|---|---|
+| `Assets/paymentMethods` | GET | Returns the logged-in user's saved payment methods (cards, allowances) |
 
 ### Web3 Handlers
 
@@ -431,10 +437,11 @@ Stores per-NFT metadata attributes (trait types, values, display types)
 | `Assets/invoice` stream | Source of truth: amount, currency, status, accepted methods, web3 config |
 | `Assets_Customer.attributes` | Saved payment method info (card details, web3 allowances) |
 | `Assets/credits` stream attributes | Client-side mirror of payment method (real-time socket updates) |
-| `Q.Assets.customers` (session extras) | Page-load snapshot of customer records for immediate UI |
+| `Assets/paymentMethods` endpoint | On-demand fetch of saved payment methods (cached client-side) |
 | `Users_Intent` | Prevents double-charges, carries payment instructions across async gaps |
 | `Assets::pay()` | Server-side orchestrator: credits → discount → intent → charge |
 | `Assets.pay()` (JS) | Client-side orchestrator: probe → confirm → charge → fallback |
+| `Q.Assets.Payments.getPaymentMethods()` | Client-side cached fetch of saved payment methods |
 | `Assets/invoice` tool | Payment method picker, delegates to specialized tools |
 | `Assets/web3/invoice` tool | Full crypto payment flow: wallet → chain → balances → pay/approve/swap |
 | `Assets/web3/balance` tool | Chain selection + token balances with filtering |

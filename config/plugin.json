@@ -10,7 +10,6 @@
 		},
 		"handlersBeforeEvent": {
 			"Q/responseExtras": ["Assets/before/Q_responseExtras"],
-			"Q/sessionExtras": ["Assets/before/Q_sessionExtras"],
 			"Streams/create/Assets/service": ["Assets/before/Streams_create_Assets_service"],
 			"Streams/Stream/save/Assets/credits": ["Assets/before/Streams_Stream_save_Assets_credits"],
 			"Streams/Dialogs/invite/complete": ["Assets/before/Streams_Dialogs_invite_complete"],
@@ -55,6 +54,7 @@
 			"Assets/plan/:publisherId/:planId": { "module": "Assets", "action": "plan" },
 			"Assets/subscription": {"module": "Assets", "action": "subscription"},
 			"Assets/connected": {"module": "Assets", "action": "connected"},
+			"Assets/stripe/webhook": {"module": "Assets", "action": "stripeWebhook"},
 			"Assets/connected/:payments": {"module": "Assets", "action": "connected"},
 			"Assets/connected/:payments/:method": {"module": "Assets", "action": "connected"}
 		},

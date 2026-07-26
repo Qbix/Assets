@@ -1089,7 +1089,7 @@ class Assets_Credits extends Base_Assets_Credits
                 $discount = self::discountInfo($stream, $userId);
                 $paymentCredits = self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits');
                 $totalCredits = $paymentCredits - $discount['credits'];
-                if ($conclusion["amount"] >= $totalCredits) {
+                if ($conclusion["amount"] >= -$totalCredits) {
                     $conclusion["fullyPaid"] = true;
                 }
             }
@@ -1144,7 +1144,7 @@ class Assets_Credits extends Base_Assets_Credits
 	 *   If null, tries payment.currency. If still null, returns 0.
 	 * @param {string|null} referrerUserId The inviter whose labels/roles determine rewards.
 	 *
-	 * @return {double} Maximum resulting credits; 0 if none match.
+	 * @return {double} Maximum resulting credits; 0 if none match or stream is null.
 	 *
 	 * Payment attribute schema (inside stream->attributes["payment"]):
 	 *
@@ -1187,6 +1187,9 @@ class Assets_Credits extends Base_Assets_Credits
 		$currency = null,
 		$referrerUserId = null
 	) {
+		if (empty($stream)) {
+			return 0;
+		}
 		$payment = $stream->getAttribute('payment', array());
 		$section = Q::ifset($payment, $type, array());
 		$inviter = Q::ifset($section, 'inviter', array());
