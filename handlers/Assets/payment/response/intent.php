@@ -129,9 +129,12 @@ function Assets_payment_response_intent($options)
 			$intent = null;
 		}
 	} else if (!$tokenlessAllowed) {
-		throw new Q_Exception_FailedValidation(array(
-			'message' => 'intentToken is required'
-		));
+		Q_Valid::requireFields(
+			array('intentToken'),
+			$options,
+			true,
+			true
+		);
 	}
 
 	/**

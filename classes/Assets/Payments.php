@@ -87,11 +87,8 @@ abstract class Assets_Payments
 		$payments = $row->payments;
 		$customerId = $row->customerId;
 
-		if (!$row->attributes) {
-			// Grandfathered customer: has a card on file from before
-			// we started tracking. Return a generic hint that expires
-			// in 10 years. A failed charge clears it, a successful
-			// one writes real details via the webhook.
+		// attributes is PHP null → column never written → genuinely grandfathered
+		if ($row->attributes === null) {
 			if ($payments === 'stripe' && $customerId) {
 				return array(
 					'id'            => $payments . ':' . $customerId,
@@ -107,10 +104,11 @@ abstract class Assets_Payments
 			return null;
 		}
 
+		// attributes is set — parse it
 		$attributes = Q::json_decode($row->attributes, true);
 		$pm = Q::ifset($attributes, 'paymentMethod', null);
 		if (!$pm) {
-			return null;
+			return null; // explicitly no card on file
 		}
 
 		// Check expiry for card-type methods
@@ -124,7 +122,7 @@ abstract class Assets_Payments
 		// Build the ID based on type
 		$type = Q::ifset($pm, 'type', 'card');
 		if ($type === 'erc20_allowance') {
-			$id = $payments . ':' . Q::ifset($pm, 'chainId', '') 
+			$id = $payments . ':' . Q::ifset($pm, 'chainId', '')
 				. ':' . Q::ifset($pm, 'token', '');
 		} else {
 			$id = $payments . ':' . $customerId;
