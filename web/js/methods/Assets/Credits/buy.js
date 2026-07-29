@@ -176,11 +176,12 @@ Q.exports(function () {
 			var c = Q.text.Assets.payment.confirm;
 			var template, fields;
 			var amountText = o.amount + ' ' + (o.currency || 'USD');
+			var amount = parseFloat(amountText).toFixed(2);
 
 			if (pm.type === 'erc20_allowance') {
 				template = c.AutoChargeToSpecificWeb3;
 				fields = {
-					amount: amountText,
+					amount: amount,
 					token: pm.token || '',
 					chainName: pm.chainName || pm.chainId || '',
 					address: Q.Users.Web3.abbreviateAddress(
@@ -191,14 +192,14 @@ Q.exports(function () {
 			} else if (pm.last4) {
 				template = c.AutoChargeToSpecificPaymentMethod;
 				fields = {
-					amount: amountText,
+					amount: amount,
 					last4: pm.last4,
 					reason: o.reason || ''
 				};
 			} else {
 				template = c.AutoCharge;
 				fields = {
-					amount: amountText,
+					amount: amount,
 					reason: o.reason || ''
 				};
 			}
