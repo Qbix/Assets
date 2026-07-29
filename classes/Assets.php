@@ -313,7 +313,7 @@ abstract class Assets extends Base_Assets
 				$referrerUserId = null;
 
 				// 1. If an invite was followed in this request:
-				if ($token = Streams_Invite::tokenAcceptedInSession()) {
+				if ($token = Streams_Invite::tokenInSession()) {
 					if ($invite = Streams_Invite::fromToken($token)) {
 						$referrerUserId = $invite->invitingUserId;
 					}
@@ -617,7 +617,12 @@ abstract class Assets extends Base_Assets
 	}
 
 	/**
-	 * Records a successful one charge on a customer account using a payments processor
+	 * Records a charge that has already succeeded at the payments processor.
+	 * This does not contact the processor — it persists the result (typically from
+	 * a webhook) and fires the Assets/charged {before} and {after} hooks.
+	 * Idempotent per chargeId: a second call with the same chargeId returns the
+	 * existing row without re-running side effects.
+	 *
 	 * @method charged
 	 * @static
 	 * @param {string} $payments The type of payments processor, could be "Authnet" or "Stripe"
@@ -629,17 +634,23 @@ abstract class Assets extends Base_Assets
 	 *  and hence no need to call $adapter->charge
 	 * @param {string} [$options.userId] Or you can simply pass userId here
 	 * @param {string} [$options.communityId] Which community's credits to grant on success
-	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or subscription stream
+	 * @param {string} [$options.customerId] Processor-side customer id, recorded in attributes
+	 * @param {Streams_Stream} [$options.stream=null] Related Assets/product, service or
+	 *  subscription stream. Used only to supply the stream type to the referral handler.
+	 *  If omitted, it is fetched from the metadata below; if that fails, the referral
+	 *  is skipped rather than failing the charge record.
 	 * @param {string} [$options.reason] Business reason or semantic label.
+	 * @param {boolean} [$options.autoCharge=false] Whether this came from an automatic charge
 	 * @param {string} [$options.description=null] Description for the customer
-	 * @param {string} [$options.metadata=null] Additional metadata to store with the charge
+	 * @param {array} [$options.metadata=null] Additional metadata to store with the charge
+	 * @param {string} [$options.metadata.toPublisherId] Publisher of the stream paid for;
+	 *  falls back to metadata.publisherId
+	 * @param {string} [$options.metadata.toStreamName] Name of the stream paid for;
+	 *  falls back to metadata.streamName
 	 * @param {boolean} [$options.skipNotifications] Skip sending notifications
 	 * @param {boolean} [$options.skipAllSideEffects] Skip all side effects, including sending notifications
-	 * @throws \Stripe\Error\Card
-	 * @throws Assets_Exception_DuplicateTransaction
-	 * @throws Assets_Exception_HeldForReview
-	 * @throws Assets_Exception_ChargeFailed
-	 * @return {Assets_Charge} The saved database row for the charge
+	 * @return {Assets_Charge|false} The saved row, the pre-existing row if this chargeId was
+	 *  already recorded, or false if a {before} handler cancelled it.
 	 */
 	static function charged($payments, $amount, $currency = 'USD', $options = array())
 	{
@@ -668,6 +679,15 @@ abstract class Assets extends Base_Assets
 		$options['metadata'] = $mergedMeta;
 		$adapter = null;
 		$customerId = Q::ifset($options, 'customerId', null);
+
+		// Resolve the stream this charge was for, once, from the merged metadata.
+		$publisherId = Q::ifset($mergedMeta, 'toPublisherId',
+			Q::ifset($mergedMeta, 'publisherId', '')
+		);
+		$streamName = Q::ifset($mergedMeta, 'toStreamName',
+			Q::ifset($mergedMeta, 'streamName', '')
+		);
+
 		$charge = new Assets_Charge();
 		$charge->userId = $userId;
 		$charge->id = $chargeId;
@@ -699,12 +719,8 @@ abstract class Assets extends Base_Assets
 			if (!empty($options['reason'])) {
 				$charge->description .= ": ".$options['reason'];
 			}
-			$charge->publisherId = Q::ifset($options, 'metadata', 'toPublisherId', Q::ifset(
-				$options, 'metadata', 'publisherId', ''
-			));
-			$charge->streamName = Q::ifset($options, 'metadata', 'toStreamName', Q::ifset(
-				$options, 'metadata', 'streamName', ''
-			));
+			$charge->publisherId = $publisherId;
+			$charge->streamName = $streamName;
 			$charge->status = 'completed';
 			$attributes = array(
 				'payments'    => $payments,
@@ -720,13 +736,42 @@ abstract class Assets extends Base_Assets
 			$charge->communityId = $communityId;
 			$charge->save();
 
-			// Handle referral, if any
-			$referredAction = 'Assets/credits/charge';
-			$extras = compact('amount', 'currency', 'credits');
-			Q::take($options, array(
-				'payments', 'amount', 'currency', 'toUserId', 'toPublisherId', 'toStreamName'
-			), $extras);
-			Users_Referred::handleReferral($userId, $communityId, $referredAction, $stream->type, compact('extras'));
+			// Handle referral, if any.
+			// Runs in webhook context (no logged-in user), so fetch with skipAccess,
+			// and never let a referral problem undo a recorded charge.
+			try {
+				$stream = Q::ifset($options, 'stream', null);
+				if (!$stream and $publisherId and $streamName) {
+					$stream = Streams_Stream::fetch(
+						$publisherId, $publisherId, $streamName, '*',
+						array('skipAccess' => true)
+					);
+				}
+				if ($stream) {
+					if (!$publisherId) {
+						$publisherId = $stream->publisherId;
+					}
+					if (!$streamName) {
+						$streamName = $stream->name;
+					}
+					// payments is a function parameter and the to* keys live in
+					// metadata, not at the top level of $options — so build these
+					// from the values already resolved above rather than Q::take.
+					$referredAction = 'Assets/credits/charge';
+					$extras = compact('payments', 'amount', 'currency', 'credits');
+					$extras['reason'] = Q::ifset($options, 'reason', null);
+					$extras['chargeId'] = $charge->id;
+					$extras['toPublisherId'] = $publisherId;
+					$extras['toStreamName'] = $streamName;
+					$extras['toUserId'] = Q::ifset($mergedMeta, 'toUserId', $publisherId);
+					Users_Referred::handleReferral(
+						$userId, $communityId, $referredAction,
+						$stream->type, compact('extras')
+					);
+				}
+			} catch (Throwable $e) {
+				Q::log("Assets::charged referral skipped: " . $e->getMessage());
+			}
 
 			/**
 			 * Hook after a Assets/charge has been made successfully and recorded.
@@ -956,19 +1001,18 @@ abstract class Assets extends Base_Assets
 		$customer->userId   = $userId;
 		$customer->payments = $payments;
 		$customer->hash     = Assets_Customer::getHash();
-		if ($customer->retrieve()) {
-			$attributes = $customer->attributes
-				? Q::json_decode($customer->attributes, true)
-				: array();
-			$attributes['paymentMethod'] = $info;
-			$attributes['paymentMethodUpdated'] = time();
-			$customer->attributes = Q::json_encode($attributes);
-			$customer->save();
+		if (!$customer->retrieve()) {
+			$customer->customerId = '';   // ← see note below
 		}
+		$customer->setAttribute(array(
+			'paymentMethod' => $info,
+			'paymentMethodUpdated' => time()
+		), null, true);
+		$customer->save();
 
 		// mirror onto the stream the client already listens to
 		try {
-			$stream = Assets_Credits::userStream($userId); // your accessor
+			$stream = Assets_Credits::stream(null, $userId, $userId);
 			if ($stream) {
 				$stream->setAttribute('paymentMethod', $info);
 				$stream->changed();

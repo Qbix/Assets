@@ -183,6 +183,10 @@ class Assets_Customer extends Base_Assets_Customer
 		if (empty($modifiedFields['hash'])) {
 			$this->hash = $modifiedFields['hash'] = self::getHash();
 		}
+		if (!$this->wasRetrieved() && empty($this->attributes)) {
+			$this->attributes = Q::json_encode(array('paymentMethod' => null));
+			$modifiedFields['attributes'] = $this->attributes;
+		}
 		return parent::beforeSave($modifiedFields);
 	}
 

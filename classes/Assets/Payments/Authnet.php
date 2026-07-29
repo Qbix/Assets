@@ -42,7 +42,11 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 	}
 	
 	/**
-	 * Executes some API calls and obtains a customer id
+	 * Executes some API calls and obtains a customer id.
+	 * Always persists the resulting Assets_Customer row, and records what is
+	 * known about the payment method on it:
+	 *  - profile newly created at Authnet  => paymentMethod = null (nothing on file yet)
+	 *  - profile already existed (E00039)  => paymentMethodUnknown = true (must ask Authnet)
 	 * @method customerId
 	 * @return {string} The customer id
 	 */
@@ -62,6 +66,7 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 		$customer = new Assets_Customer();
 		$customer->userId = $user->id;
 		$customer->payments = 'authnet';
+		$customer->hash = Assets_Customer::getHash();
 		if ($customer->retrieve()) {
 			return $customer->customerId;
 		}
@@ -80,27 +85,40 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 
 		$response = $controller->executeWithApiResponse($options['server']);
 
-		if ($response != null && $response->getMessages()->getResultCode() == "Ok") {
-			return $response->getCustomerProfileId();
+		if (!isset($response)) {
+			throw new Assets_Exception_InvalidResponse(array(
+				'response' => 'empty response'
+			));
 		}
-		
-		if ($response != null && $response->getMessages()->getResultCode() == "Ok") {
+
+		if ($response->getMessages()->getResultCode() == "Ok") {
+			// Brand new profile at Authnet: no payment profile attached yet.
 			$customerId = $response->getCustomerProfileId();
+			$knownToHaveNoPaymentMethod = true;
 		} else {
 			$messages = $response->getMessages()->getMessage();
 			$message = reset($messages);
 		
 			// workaround to get customerProfileId
 			// https://community.developer.authorize.net/t5/Integration-and-Testing/How-to-lookup-customerProfileId-and-paymentProfileId-by/td-p/52501
-			if (isset($response) and ($message->getCode() != "E00039")) {
+			if ($message->getCode() != "E00039") {
 				throw new Assets_Exception_InvalidResponse(array(
 					'response' => $message->getCode() . ' ' . $message->getText()
 				));
 			}
 			$parts = explode(' ', $message->getText());
 			$customerId = $parts[5];
+			// Profile already existed at Authnet — it may or may not have a
+			// payment profile. Don't assert either way; force a lookup later.
+			$knownToHaveNoPaymentMethod = false;
 		}
+
 		$customer->customerId = $customerId;
+		if ($knownToHaveNoPaymentMethod) {
+			$customer->setAttribute('paymentMethod', null, true);
+		} else {
+			$customer->setAttribute('paymentMethodUnknown', true, true);
+		}
 		$customer->save();
 		return $customerId;
 	}
@@ -133,6 +151,10 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 		$profileSelected = $response->getProfile();
 		$paymentProfilesSelected = $profileSelected->getPaymentProfiles();
 		if ($paymentProfilesSelected == null) {
+			// Authoritative answer from Authnet: nothing on file.
+			Assets::rememberPaymentMethod(
+				Q::ifset($this->options, 'user', 'id', null), 'authnet', null
+			);
 			throw new Assets_Exception_PaymentMethodRequired();
 		}
 		return $paymentProfilesSelected[0]->getCustomerPaymentProfileId();
@@ -310,7 +332,9 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 					continue;
 				}
 
-				// Resolve userId via Assets_Customer
+				// Resolve userId via Assets_Customer.
+				// Looked up by (payments, customerId) — deliberately without
+				// hash, matching Assets_Customer::userIdFromCustomerId().
 				$customer = new Assets_Customer();
 				$customer->payments = 'authnet';
 				$customer->customerId = $customerId;
@@ -343,14 +367,6 @@ class Assets_Payments_Authnet extends Assets_Payments implements Assets_Payments
 	 * via refTransId.
 	 *
 	 * No DB writes. No hooks. No side effects.
-	 *
-	 * @method fetchRefundedCharges
-	 * @param {array} [$options]
-	 * @param {integer} [$options.limit=100]
-	 * @return {array}
-	 */
-	/**
-	 * Fetch refunded Authorize.Net charges.
 	 *
 	 * @method fetchRefundedCharges
 	 * @param {array} [$options]

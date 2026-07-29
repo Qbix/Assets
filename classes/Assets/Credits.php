@@ -1089,7 +1089,7 @@ class Assets_Credits extends Base_Assets_Credits
                 $discount = self::discountInfo($stream, $userId);
                 $paymentCredits = self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits');
                 $totalCredits = $paymentCredits - $discount['credits'];
-                if ($conclusion["amount"] >= -$totalCredits) {
+                if ($conclusion["amount"] >= $totalCredits) {
                     $conclusion["fullyPaid"] = true;
                 }
             }
@@ -1202,7 +1202,7 @@ class Assets_Credits extends Base_Assets_Credits
 			}
 		}
 		if (!$referrerUserId) {
-			if ($token = Streams_Invite::tokenAcceptedInSession()) {
+			if ($token = Streams_Invite::tokenInSession()) {
 				if ($invite = Streams_Invite::fromToken($token)) {
 					$referrerUserId = $invite->invitingUserId;
 				}
@@ -1295,7 +1295,7 @@ class Assets_Credits extends Base_Assets_Credits
 		// Compute discount credits
 		//---------------------------------------------------------
 		if (!$referrerUserId) {
-			if ($token = Streams_Invite::tokenAcceptedInSession()) {
+			if ($token = Streams_Invite::tokenInSession()) {
 				if ($invite = Streams_Invite::fromToken($token)) {
 					$referrerUserId = $invite->invitingUserId;
 				}
