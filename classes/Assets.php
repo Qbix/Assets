@@ -303,6 +303,7 @@ abstract class Assets extends Base_Assets
 		// 2. Apply inviter-based discounts (if any)
 		// -------------------------------------------------------------
 		$stream = null;
+		$discountCredits = 0;
 		if ($toPublisherId && $toStreamName) {
 			try {
 				$stream = Streams_Stream::fetch($toPublisherId, $toPublisherId, $toStreamName, '*', array(
@@ -369,7 +370,9 @@ abstract class Assets extends Base_Assets
 				"toPublisherId" => $toPublisherId,
 				"toStreamName"  => $toStreamName,
 				"toUserId"      => $toUserId,
-				"needCredits"   => $needCredits
+				"needCredits"   => $needCredits,
+				"discountCredits" => $discountCredits,
+				"referrerUserId" => $referrerUserId
 			);
 			if ($fromPublisherId and $fromStreamName) {
 				$instructions = array_merge($instructions, compact(
