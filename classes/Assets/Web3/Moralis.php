@@ -1,5 +1,8 @@
 <?php
-require_once Q_PLUGIN_DIR.DS.'vendor'.DS.'autoload.php';
+$_composerAutoload = Q_PLUGIN_DIR.DS.'vendor'.DS.'autoload.php';
+if (file_exists($_composerAutoload)) {
+	require_once $_composerAutoload; // optional: plugin works without it
+}
 
 /**
  * @module Assets

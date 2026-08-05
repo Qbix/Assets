@@ -1,6 +1,6 @@
 <?php
 
-function Assets_after_Streams_inviteAccept($params)
+function Assets_after_Streams_invite_accept($params)
 {
 	// Make earning for invited user
 	$invite = $params['invite'];

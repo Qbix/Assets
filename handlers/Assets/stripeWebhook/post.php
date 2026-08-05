@@ -1,6 +1,9 @@
 <?php
 
-require_once ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
+$_composerAutoload = ASSETS_PLUGIN_DIR . DS . 'vendor' . DS . 'autoload.php';
+if (file_exists($_composerAutoload)) {
+	require_once $_composerAutoload; // optional: plugin works without it
+}
 
 /**
  * Unified handler for completed Stripe charges.
@@ -46,12 +49,7 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 		// -------------------------------------------------------------
 		// Check for Users_Intent continuation (pending Assets::pay)
 		// -------------------------------------------------------------
-		$shouldContinue = (
-			!empty($metadata['intentToken'])
-			&& (!isset($metadata['autoCharge']) || $metadata['autoCharge'] !== "1")
-		);
-
-        if ($shouldContinue) {
+		if ($shouldContinue) {
 			$intent = new Users_Intent(array('token' => $metadata['intentToken']));
 			if ($intent->retrieve() && $intent->isValid()) {
 
