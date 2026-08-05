@@ -512,14 +512,7 @@ class Assets_Credits extends Base_Assets_Credits
 		//--------------------------------------------------------------------
 		// 3. Identify publisher receiving the credits
 		//--------------------------------------------------------------------
-		$toPublisherId = isset($options["toPublisherId"]) ? $options["toPublisherId"] : null;
-
-		if (!$toPublisherId) {
-			$fromStream->executeRollback();
-			throw new Q_Exception_RequiredField(array(
-				"field" => "options.toPublisherId"
-			));
-		}
+		$toPublisherId = Q::ifset($options, "toPublisherId", Users::communityId());
 
 		//--------------------------------------------------------------------
 		// 4. Lock publisher stream (no begin)
