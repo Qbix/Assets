@@ -66,6 +66,8 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 				if ($needCredits = $intent->getInstruction('needCredits', 0)) {
 					$options['currency'] = 'credits';
 				}
+				$options['metadata'] = $metadata;
+				$options['intent'] = $intent;
 
 				$spentCredits = 0;
 				if ($needCredits) {

@@ -1004,10 +1004,11 @@ class Assets_Credits extends Base_Assets_Credits
 	 * @param {string} $userId user tested paid stream
 	 * @param {Streams_Stream|array} $toStream Stream or array('publisherId' => ..., 'streamName' => ...)
 	 * @param {Streams_Stream|array} [$fromStream] Stream or array('publisherId' => ..., 'streamName' => ...)
+	 * @param {string} [$referrerUserId]
 	 * @throws
 	 * @return {Boolean|Object}
 	 */
-	static function getPaymentsInfo($userId, $toStream, $fromStream = null)
+	static function getPaymentsInfo($userId, $toStream, $fromStream = null, $referrerUserId = null)
 	{
 		$toPublisherId = Q::ifset($toStream, "publisherId", null);
 		$toStreamName = Q::ifset($toStream, "streamName", Q::ifset($toStream, "name", null));
@@ -1079,7 +1080,7 @@ class Assets_Credits extends Base_Assets_Credits
             if ($conclusion["amount"] > 0) {
                 $stream = Streams::fetchOne($toPublisherId, $toPublisherId, $toStreamName);
                 $payment = $stream->getAttribute("payment");
-                $discount = self::discountInfo($stream, $userId);
+                $discount = self::discountInfo($stream, $userId, null, $referrerUserId);
                 $paymentCredits = self::convert(Q::ifset($payment, 'amount', 0), Q::ifset($payment, 'currency', 'credits'), 'credits');
                 $totalCredits = $paymentCredits - $discount['credits'];
                 if ($conclusion["amount"] >= $totalCredits) {
