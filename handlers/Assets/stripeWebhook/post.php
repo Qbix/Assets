@@ -49,6 +49,22 @@ function Assets_handleStripeSuccessfulCharge($amount, $currency, $metadata, $eve
 		// -------------------------------------------------------------
 		// Check for Users_Intent continuation (pending Assets::pay)
 		// -------------------------------------------------------------
+		// $shouldContinue was read here but never assigned -- on PHP 8 that is
+		// a warning and evaluates to null, so this block never ran and a
+		// pending Assets::pay intent was never continued after the charge.
+		//
+		// autoCharge arrives as the string "1" when it round-trips through
+		// Stripe metadata, but this file also sets it as a PHP bool
+		// ($options['autoCharge'] = false, below). Comparing against "1" alone
+		// means a real boolean true reads as "not an autoCharge" and the block
+		// continues -- the expensive direction, since continuing spends credits.
+		$shouldContinue = (
+			!empty($metadata['intentToken'])
+			&& !filter_var(
+				Q::ifset($metadata, 'autoCharge', false),
+				FILTER_VALIDATE_BOOLEAN
+			)
+		);
 		if ($shouldContinue) {
 			$intent = new Users_Intent(array('token' => $metadata['intentToken']));
 			if ($intent->retrieve() && $intent->isValid()) {
