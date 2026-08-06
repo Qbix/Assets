@@ -1179,9 +1179,13 @@ class Assets_Credits extends Base_Assets_Credits
 		$type,
 		$needCredits,
 		$currency = null,
-		$referrerUserId = null
+		$referrerUserId = null,
+		$options = array()
 	) {
 		if (empty($stream)) {
+			if (!empty($options['returnWinningInfo'])) {
+				return array('credits' => 0, 'info' => null);
+			}
 			return 0;
 		}
 		$payment = $stream->getAttribute('payment', array());
@@ -1241,9 +1245,10 @@ class Assets_Credits extends Base_Assets_Credits
 		}
 
 		//---------------------------------------------------------
-		// 3. Compute max credits
+		// 3. Compute max credits, and remember WHICH rule won
 		//---------------------------------------------------------
 		$creditsMax = 0;
+		$winningInfo = null;
 		foreach ($infos as $info) {
 			if ($credits = Q::ifset($info, 'credits', null)) {
 				// already in credits
@@ -1254,9 +1259,15 @@ class Assets_Credits extends Base_Assets_Credits
 			} else {
 				continue;
 			}
-			$creditsMax = max($creditsMax, $credits);
+			if ($credits > $creditsMax) {
+				$creditsMax = $credits;
+				$winningInfo = $info;
+			}
 		}
 
+		if (!empty($options['returnWinningInfo'])) {
+			return array('credits' => $creditsMax, 'info' => $winningInfo);
+		}
 		return $creditsMax;
 	}
 
@@ -1296,13 +1307,16 @@ class Assets_Credits extends Base_Assets_Credits
 			}
 		}
 
-		$discountCredits = Assets_Credits::maxAmountFromPaymentAttribute(
+		$result = Assets_Credits::maxAmountFromPaymentAttribute(
 			$stream,
 			'discounts',
 			$needCredits,
 			$currency,
-			$referrerUserId
+			$referrerUserId,
+			array('returnWinningInfo' => true)
 		);
+		$discountCredits = $result['credits'];
+		$winningInfo = $result['info'];
 
 		if ($discountCredits <= 0) {
 			return array('credits'=>0,'amount'=>0,'fraction'=>0,'description'=>'');
@@ -1311,30 +1325,9 @@ class Assets_Credits extends Base_Assets_Credits
 		$discountAmount = self::convert($discountCredits, 'credits', $currency);
 		$fraction = $amount > 0 ? round($discountAmount / $amount, 2) : 0;
 
+		$explicitFraction = $winningInfo && isset($winningInfo['fraction']);
 
-		//---------------------------------------------------------
-		// Detect whether the matched rule used "fraction"
-		//---------------------------------------------------------
-		$payment = $stream->getAttribute('payment', array());
-		$section = Q::ifset($payment, 'discounts', array());
-		$inviter = Q::ifset($section, 'inviter', array());
-		$labels  = Q::ifset($inviter, 'labels', array());
-		$proles  = Q::ifset($inviter, 'participantRoles', array());
-
-		$explicitFraction = false;
-		foreach (array($labels, $proles) as $group) {
-			foreach ($group as $info) {
-				if (isset($info['fraction'])) {
-					$explicitFraction = true;
-					break 2;
-				}
-			}
-		}
-
-
-		//---------------------------------------------------------
 		// Build localized description using Assets::format()
-		//---------------------------------------------------------
 		$text  = Q_Text::get('Assets/content');
 		$dtext = Q::ifset($text, 'discounts', array());
 
