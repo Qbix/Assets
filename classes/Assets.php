@@ -477,16 +477,18 @@ abstract class Assets extends Base_Assets
 		// 6. Spend or Transfer inside try/catch
 		//-------------------------------------------------------------
 		try {
-			if ($stream) {
-				Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
-			} else if ($toUserId) {
-				Assets_Credits::transfer($communityId, $needCredits, $reason, $toUserId, $userId, $opts);
-			} else {
-				return array(
-					"success" => false,
-					"details" => array("error" => "No valid payment target")
-				);
-			}
+			if ($needCredits > 0) {
+				if ($stream) {
+					Assets_Credits::spend($communityId, $needCredits, $reason, $userId, $opts);
+				} else if ($toUserId) {
+					Assets_Credits::transfer($communityId, $needCredits, $reason, $toUserId, $userId, $opts);
+				} else {
+					return array(
+						"success" => false,
+						"details" => array("error" => "No valid payment target")
+					);
+				}
+			} // otherwise, no transfer occurs, no Users_Referred record for payment
 		} catch (Exception $e) {
 			return array(
 				"success" => false,
