@@ -1,0 +1,82 @@
+-- Assets plugin — flattened POSTGRES DDL
+-- {{prefix}} is substituted by Qbix at install time.
+
+CREATE TABLE IF NOT EXISTS {{prefix}}badge (
+    app BYTEA NOT NULL,
+    name varchar(63) NOT NULL,
+    title text NOT NULL,
+    pic_small BYTEA NOT NULL,
+    pic_big BYTEA NOT NULL,
+    points SMALLINT NOT NULL DEFAULT '0',
+    PRIMARY KEY (app,name)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}charge (
+    userId BYTEA NOT NULL,
+    id BYTEA NOT NULL,
+    subscriptionId BYTEA NOT NULL,
+    description varchar(255) NOT NULL,
+    attributes varchar(1023) NOT NULL,
+    insertedTime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime timestamp NULL DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}connected (
+    merchantUserId BYTEA NOT NULL,
+    payments varchar(255) NOT NULL,
+    accountId varchar(255) NOT NULL,
+    refreshToken varchar(255) NOT NULL,
+    insertedTime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime timestamp NULL DEFAULT NULL,
+    PRIMARY KEY (merchantUserId,payments)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}credits (
+    id BYTEA NOT NULL,
+    fromUserId BYTEA NULL,
+    toUserId BYTEA NULL,
+    fromPublisherId BYTEA NULL,
+    fromStreamName BYTEA NULL,
+    toPublisherId BYTEA NULL,
+    toStreamName BYTEA NULL,
+    reason varchar(255) NOT NULL,
+    credits SMALLINT NOT NULL,
+    attributes varchar(1023) NULL,
+    insertedTime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime timestamp NULL DEFAULT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}customer (
+    userId BYTEA NOT NULL DEFAULT '',
+    payments TEXT NOT NULL DEFAULT 'stripe',
+    customerId BYTEA NOT NULL DEFAULT '',
+    PRIMARY KEY (userId,payments)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}earned (
+    userId BIGINT NOT NULL,
+    app BYTEA NOT NULL,
+    badge_name varchar(255) NOT NULL,
+    insertedTime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}leader (
+    app BYTEA NOT NULL,
+    day date NOT NULL,
+    userId BIGINT NOT NULL,
+    points SMALLINT NOT NULL DEFAULT '0',
+    PRIMARY KEY (app,day,userId)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}nft_attributes (
+    publisherId varchar(8) NOT NULL,
+    display_type varchar(50) NOT NULL,
+    trait_type varchar(100) NOT NULL,
+    value varchar(100) NOT NULL,
+    insertedTime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime timestamp NULL DEFAULT NULL,
+    PRIMARY KEY (publisherId, display_type, trait_type, value)
+);
+
+-- Indexes

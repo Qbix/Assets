@@ -1,0 +1,99 @@
+CREATE TABLE IF NOT EXISTS {{prefix}}badge (
+    appId TEXT DEFAULT '',
+    communityId TEXT DEFAULT '',
+    name TEXT DEFAULT '',
+    icon TEXT DEFAULT '',
+    title TEXT DEFAULT '',
+    description TEXT DEFAULT '',
+    points INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (appId, communityId, name)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}charge (
+    userId TEXT DEFAULT '',
+    id TEXT DEFAULT '',
+    publisherId TEXT DEFAULT '',
+    streamName TEXT DEFAULT '',
+    amount REAL NOT NULL DEFAULT 0,
+    currency TEXT DEFAULT '',
+    credits REAL NOT NULL DEFAULT 0,
+    paymentProvider TEXT DEFAULT '',
+    providerCustomerId TEXT DEFAULT '',
+    autoCharge TEXT DEFAULT '',
+    communityId TEXT DEFAULT '',
+    app TEXT DEFAULT '',
+    reason TEXT DEFAULT '',
+    description TEXT DEFAULT '',
+    attributes TEXT DEFAULT '',
+    insertedTime TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime TEXT NULL DEFAULT NULL,
+    status TEXT DEFAULT '',
+    PRIMARY KEY (userId, id)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}connected (
+    userId TEXT DEFAULT '',
+    payments TEXT DEFAULT '',
+    accountId TEXT DEFAULT '',
+    refreshToken TEXT DEFAULT '',
+    insertedTime TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime TEXT NULL DEFAULT NULL,
+    PRIMARY KEY (userId, payments)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}credits (
+    id TEXT DEFAULT '',
+    fromUserId TEXT DEFAULT '',
+    toUserId TEXT DEFAULT '',
+    fromPublisherId TEXT DEFAULT '',
+    fromStreamName TEXT DEFAULT '',
+    toPublisherId TEXT DEFAULT '',
+    toStreamName TEXT DEFAULT '',
+    reason TEXT DEFAULT '',
+    communityId TEXT DEFAULT '',
+    amount REAL NOT NULL DEFAULT 0,
+    attributes TEXT DEFAULT '',
+    insertedTime TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime TEXT NULL DEFAULT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}customer (
+    userId TEXT DEFAULT '',
+    payments TEXT DEFAULT '',
+    customerId TEXT DEFAULT '',
+    hash TEXT DEFAULT '',
+    attributes TEXT DEFAULT '',
+    insertedTime TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime TEXT NULL DEFAULT NULL,
+    PRIMARY KEY (userId, payments)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}earned (
+    appId TEXT DEFAULT '',
+    communityId TEXT DEFAULT '',
+    earnedTime TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    userId TEXT DEFAULT '',
+    badgeName TEXT DEFAULT '',
+    publisherId TEXT DEFAULT '',
+    streamName TEXT DEFAULT '',
+    PRIMARY KEY (appId, communityId, earnedTime, userId)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}leader (
+    communityId TEXT DEFAULT '',
+    day TEXT DEFAULT '',
+    userId TEXT DEFAULT '',
+    points INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (communityId, day, userId)
+);
+
+CREATE TABLE IF NOT EXISTS {{prefix}}nft_attributes (
+    publisherId TEXT DEFAULT '',
+    display_type TEXT DEFAULT '',
+    trait_type TEXT DEFAULT '',
+    value TEXT DEFAULT '',
+    insertedTime TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedTime TEXT NULL DEFAULT NULL,
+    PRIMARY KEY (publisherId, display_type, trait_type, value)
+);
