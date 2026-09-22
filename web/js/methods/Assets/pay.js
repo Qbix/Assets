@@ -86,16 +86,37 @@ Q.exports(function (Assets, priv) {
 				metadata.streamName  = options.toStream.streamName  || "";
 			}
 
-			var rate = Q.getObject(['exchange', options.currency], Q.Assets.Credits);
-			if (!rate && options.currency !== 'credits') {
+			// Q.Assets.Credits.exchange only has rates for real-world
+			// currencies converting INTO credits (e.g. exchange.USD = 100),
+			// never for 'credits' itself — a payment already priced in
+			// credits (e.g. Media episode unlocks, Communities private
+			// chats) has no rate to look up here. Price the top-up dialog
+			// in the platform's default real currency instead; Credits.buy()
+			// still ends up crediting the account with exactly the missing
+			// amount either way.
+			var buyCurrency = (options.currency === 'credits')
+				? (Q.Assets.Credits.defaultCurrency || 'USD')
+				: options.currency;
+
+			var rate = Q.getObject(['exchange', buyCurrency], Q.Assets.Credits);
+			if (!rate) {
 				return Q.alert(Q.text.Assets.credits.ErrorInvalidCurrency.interpolate({
-					currency: options.currency
+					currency: buyCurrency
 				}));
 			}
 
+			// Deliberately NOT passing skipDialog: true here (unlike the
+			// original code) — that bypassed Credits.buy()'s own "you're
+			// short N credits, want to buy more?" dialog entirely and went
+			// straight to opening a real Stripe charge, which both skips
+			// the user-facing message this is supposed to show and fails
+			// outright wherever Stripe isn't configured yet. Showing the
+			// dialog first and letting the user's own "Purchase Credits"
+			// click be what triggers Stripe is the correct, more robust
+			// order regardless of whether real payment methods are set up.
 			Q.Assets.Credits.buy(Q.extend({}, options, {
 				missing: true,
-				skipDialog: true,
+				currency: buyCurrency,
 				amount: (details.needCredits - details.haveCredits) / rate,
 				intentToken: details.intentToken,
 				metadata: metadata
