@@ -46,10 +46,7 @@ function Assets_Web3approved_post($params = array())
     }
 
     // Look up token config for decimals
-    $tokenConfig = Q_Config::get(
-        'Assets', 'currencies', 'tokens', $token, array()
-    );
-    $decimals = Q::ifset($tokenConfig, 'decimals', 18);
+    $decimals = Assets_Currency_Web3::decimals($token, $chainId);
 
     // Store the allowance
     Assets::rememberPaymentMethod($userId, 'web3', array(

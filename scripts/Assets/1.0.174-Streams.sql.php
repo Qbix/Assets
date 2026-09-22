@@ -2,6 +2,13 @@
 
 function Assets_1_0_174_Streams_mysql()
 {
+    // Skip on SQLite — uses MySQL-specific CONCAT() and main. prefix.
+    // On fresh installs there is no data to migrate anyway.
+    $dsn = Q_Config::get('Db', 'connections', 'Streams', 'dsn', '');
+    if (stripos($dsn, 'sqlite') !== false) {
+        echo "Skipping Assets/credits migration on SQLite (no data to migrate)\n";
+        return;
+    }
     $communityId = Users::communityId();
     echo "Inserting Assets/credits access rows...".PHP_EOL;
     $table = Streams_Access::table();
