@@ -87,7 +87,7 @@ Q.exports(function () {
 			});
 
 			Q.Template.set('Assets/credits/missing',
-				'<div class="Assets_credits_buy_missing">{{YouMissingCredits}}</div>' +
+				'<div class="Assets_credits_buy_missing">{{NotEnoughCredits}}</div>' +
 				'<input type="hidden" name="amount" value="{{amount}}">' +
 				'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
 			);

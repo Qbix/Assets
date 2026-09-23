@@ -11,6 +11,21 @@ Q.exports(function (Assets, priv) {
             return Q.handle(callback, Q.Assets.Payments, [null, Q.Assets.Payments.stripeObject]);
         }
 
+        // Assets/before/Q_responseExtras.php only sets up
+        // Q.Assets.Payments.stripe when Assets.payments.stripe.publishableKey
+        // is actually configured server-side — on an app that hasn't set up
+        // Stripe yet, this stays undefined. Loading Stripe.js is then
+        // meaningless (there's no key to construct Stripe() with), so skip
+        // it and call back successfully with no stripeObject rather than
+        // throwing here: callers like Credits.buy() need the rest of their
+        // flow (checking for a saved payment method, showing the "buy more
+        // credits" dialog) to still work even when card payments aren't
+        // configured yet — only actually charging a card should require it.
+        if (!Q.Assets.Payments.stripe || !Q.Assets.Payments.stripe.jsLibrary) {
+            Q.Assets.Payments.loaded = true;
+            return Q.handle(callback, Q.Assets.Payments, [null, null]);
+        }
+
 		Q.addScript(Q.Assets.Payments.stripe.jsLibrary, function () {
 
 			try {
