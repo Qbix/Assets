@@ -32,8 +32,6 @@ var Assets = Q.Assets;
  */
 Q.Tool.define("Assets/credits/buy",
 
-"{{Assets}}/js/tools/credits/buy.js",
-
 function (options) {
 	var tool = this;
 	var state = this.state;
