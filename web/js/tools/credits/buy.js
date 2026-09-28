@@ -10,10 +10,9 @@ var Assets = Q.Assets;
 /**
  * Buy credits using Stripe, web3, or both.
  *
- * Both rails go through Assets/payment:
- *   - payments='stripe' → Stripe Elements (existing)
- *   - payments='web3'   → embeds Assets/web3/invoice internally
- *     (wallet, tokens, Uniswap swap, direct transfer, QR on desktop)
+ * Stripe rail calls Q.Assets.Payments.stripe() directly.
+ * Web3 rail embeds Assets/web3/invoice
+ *   (wallet, tokens, Uniswap swap, direct transfer, QR on desktop).
  *
  * No invoice stream is created. Charges go in Assets_Charge.
  * On success: POSTs to Assets/credits to grant.
@@ -31,9 +30,15 @@ var Assets = Q.Assets;
  * @param {Boolean} [options.showWithdraw] Show withdraw for payout-role users
  * @param {Q.Event} [options.onPaid] Fired with (method, details)
  */
-Q.Tool.define("Assets/credits/buy", function (options) {
+Q.Tool.define("Assets/credits/buy",
+
+"{{Assets}}/js/tools/credits/buy.js",
+
+function (options) {
 	var tool = this;
 	var state = this.state;
+
+	Q.addStylesheet('{{Assets}}/css/pay.css', 'Assets');
 
 	// Merge config defaults
 	var cfg = Q.getObject('Assets.credits.buy', Q) || {};
@@ -127,7 +132,10 @@ Q.Tool.define("Assets/credits/buy", function (options) {
 	},
 
 	/**
-	 * Select a rail and embed Assets/payment with the right config.
+	 * Select a rail and start the matching payment flow.
+	 * Stripe: calls Q.Assets.Payments.stripe() directly
+	 *   (avoids the Assets/payment tool's intent-slot handshake).
+	 * Web3: embeds Assets/web3/invoice directly.
 	 * @method _selectRail
 	 * @private
 	 */
@@ -145,31 +153,66 @@ Q.Tool.define("Assets/credits/buy", function (options) {
 		var $checkout = $te.find('.Assets_pay_checkout');
 		$checkout.empty();
 
-		// Both rails go through Assets/payment
-		var paymentOpts = {
-			payments: type,
+		if (type === 'stripe') {
+			tool._startStripe($checkout);
+		} else if (type === 'web3') {
+			tool._startWeb3($checkout);
+		}
+	},
+
+	/**
+	 * Start Stripe checkout via Q.Assets.Payments.stripe() directly.
+	 * @method _startStripe
+	 * @private
+	 */
+	_startStripe: function ($checkout) {
+		var tool = this;
+		var state = tool.state;
+
+		Q.Assets.Payments.load(function () {
+			Q.Assets.Payments.stripe({
+				amount: state.amount,
+				currency: state.currency,
+				description: state.description || tool._credits + ' credits',
+				reason: 'credits'
+			}, function (err, data) {
+				if (err) {
+					$checkout.html(
+						'<div class="Assets_pay_status Assets_pay_status_error">'
+						+ (Q.firstErrorMessage(err) || 'Payment failed')
+						+ '</div>'
+					);
+					return;
+				}
+				tool._onSuccess('stripe', data);
+			});
+		});
+	},
+
+	/**
+	 * Start web3 checkout by embedding Assets/web3/invoice directly.
+	 * @method _startWeb3
+	 * @private
+	 */
+	_startWeb3: function ($checkout) {
+		var tool = this;
+		var state = tool.state;
+
+		var web3Opts = {
 			amount: state.amount,
 			currency: state.currency,
-			description: state.description || tool._credits + ' credits',
-			reason: 'credits',
-			onPay: function (method, details) {
-				tool._onSuccess(type, details);
-			}
+			web3: state.web3,
+			onPaid: new Q.Event(function (method, details) {
+				tool._onSuccess('web3', details);
+			})
 		};
-
-		if (type === 'web3' && state.web3) {
-			paymentOpts.web3 = state.web3;
-		}
-		if (type === 'stripe' && state.stripe) {
-			paymentOpts.publishableKey = state.stripe.publishableKey;
-		}
 
 		var $el = $('<div></div>');
 		$checkout.append($el);
 
 		Q.activate(
-			Q.Tool.prepare($el[0], 'Assets/payment',
-				paymentOpts, tool.prefix + type + '_payment')
+			Q.Tool.prepare($el[0], 'Assets/web3/invoice',
+				web3Opts, tool.prefix + 'web3_invoice')
 		);
 	},
 
