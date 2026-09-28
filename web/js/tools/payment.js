@@ -9,7 +9,7 @@
  * @class Assets payment
  * @constructor
  * @param {array} options Override various options for this tool
- *  @param {string} options.payments can be "authnet" or "stripe"
+ *  @param {string} options.payments can be "stripe", "web3", or "authnet"
  *  @param {string} options.amount the amount to pay.
  *  @param {string} [options.currency="usd"] the currency to pay in. (authnet supports only "usd")
  *  @param {string} [options.payButton] Can override the title of the pay button
@@ -24,6 +24,11 @@
  *  @param {boolean} [options.bitcoin=false] Specify whether to accept Bitcoin (true or false).
  *  @param {boolean} [options.alipay=false] Specify whether to accept Alipay ('auto', true, or false). 
  *  @param {boolean} [options.alipayReusable=false] Specify if you need reusable access to the customer's Alipay account (true or false).
+ *  @param {Object} [options.web3] Web3 payment config, passed to Assets/web3/invoice.
+ *    Carries address, tokens, chains, directTransfer, uniswapRouter —
+ *    everything that tool understands. Required when payments='web3'.
+ *  @param {String} [options.publisherId] Optional invoice stream publisher (for web3 stream-based flow)
+ *  @param {String} [options.streamName] Optional invoice stream name
  */
 
 Q.Tool.define("Assets/payment", function (options) {
@@ -38,6 +43,12 @@ Q.Tool.define("Assets/payment", function (options) {
 
 	if (!state.amount) {
 		throw new Q.Error("Assets/payment: amount is required");
+	}
+
+	// Web3: delegate to Assets/web3/invoice (wallet, tokens, swap, QR)
+	if (payments === 'Web3') {
+		tool._initWeb3();
+		return;
 	}
 
 	var pipe = new Q.pipe(["payments", "data"], function (params) {
@@ -79,6 +90,9 @@ Q.Tool.define("Assets/payment", function (options) {
 	bitcoin: false,
 	alipay: false,
 	alipayReusable: false,
+	web3: null,
+	publisherId: null,
+	streamName: null,
 	name: Q.Users.communityName,
 	userId: Q.Users.loggedInUserId(),
 	onPay: new Q.Event()
@@ -199,6 +213,47 @@ Q.Tool.define("Assets/payment", function (options) {
 
 			state.preloadedElement = element;
 		});
+	},
+	/**
+	 * Initialize web3 payment by embedding Assets/web3/invoice.
+	 * The web3/invoice tool handles wallet connection, token selection,
+	 * balance display, Uniswap swap, direct transfer, allowance,
+	 * and QR code fallback for desktop.
+	 * @method _initWeb3
+	 * @private
+	 */
+	_initWeb3: function () {
+		var tool = this;
+		var state = tool.state;
+
+		var web3Opts = {
+			amount: state.amount,
+			currency: state.currency,
+			onPaid: new Q.Event(function (method, details) {
+				Q.handle(state.onPay, tool, [method, details]);
+			})
+		};
+
+		// Pass web3 config directly (no stream needed)
+		if (state.web3) {
+			web3Opts.web3 = state.web3;
+		}
+
+		// Or pass stream reference (invoice-based flow)
+		if (state.publisherId) {
+			web3Opts.publisherId = state.publisherId;
+		}
+		if (state.streamName) {
+			web3Opts.streamName = state.streamName;
+		}
+
+		var $el = $('<div></div>');
+		$(tool.element).append($el);
+
+		Q.activate(
+			Q.Tool.prepare($el[0], 'Assets/web3/invoice',
+				web3Opts, tool.prefix + 'web3')
+		);
 	},
 	Q: {
 		beforeRemove: function () {

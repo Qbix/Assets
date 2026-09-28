@@ -1,0 +1,19 @@
+{
+	"Assets": {
+		"credits": {
+			"buy": {
+				"stripe": null,
+				"web3": null
+			}
+		}
+	},
+	"Q": {
+		"javascript": {
+			"Assets": {
+				"css": {
+					"{{Assets}}/css/pay.css": true
+				}
+			}
+		}
+	}
+}

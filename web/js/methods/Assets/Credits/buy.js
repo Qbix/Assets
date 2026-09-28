@@ -1,10 +1,15 @@
 Q.exports(function () {
 	/**
-	 * Buy credits.
-	 * If the user has a saved payment method, offers to charge it
-	 * via Assets/buy (which just charges and grants credits — the
-	 * webhook handles the intent to complete the actual purchase).
-	 * Otherwise opens Stripe checkout.
+	 * Buy credits via Stripe, web3 wallet, or both.
+	 *
+	 * When web3 is configured alongside Stripe, the user sees a rail
+	 * picker (Assets/credits/buy tool) and chooses their payment method.
+	 * When only one rail is configured, it is selected automatically.
+	 *
+	 * If the user has a saved payment method (card on file or ERC-20
+	 * allowance), offers to auto-charge it first. Otherwise opens
+	 * the payment dialog.
+	 *
 	 * @method buy
 	 * @param {Object} options
 	 * @param {Number} [options.amount=10] Amount to spend, in terms of currency
@@ -15,11 +20,19 @@ Q.exports(function () {
 	 * @param {Object} [options.metadata] Additional metadata
 	 * @param {String} [options.title] Override the dialog title
 	 * @param {String} [options.explanation] Display an explanation on top of the dialog
-	 * @param {String} [options.intentToken] Reuse an existing intent
+	 * @param {String} [options.intentToken] Reuse an existing Stripe intent
+	 * @param {Object|null} [options.stripe] Stripe rail config.
+	 *   Defaults to {} (enabled, key resolved from Assets/Payments config).
+	 *   Pass null to disable the Stripe rail entirely.
+	 * @param {String} [options.stripe.publishableKey] Stripe publishable key override
+	 * @param {Object|null} [options.web3] Web3 rail config (tokens, chains, etc).
+	 *   Defaults to null (disabled). When set, the rail picker shows
+	 *   a crypto option alongside Stripe.
+	 * @param {String} [options.web3.detailText] Override the crypto rail subtitle
 	 * @param {Function} [options.onSuccess] Callback on successful payment
 	 * @param {Function} [options.onFailure] Callback on failed payment
 	 * @param {Boolean} [options.skipDialog=false] Bypass amount dialog, start payment immediately
-	 * @param {Boolean} [options.skipAutoCharge=false] Skip saved-card confirm, go straight to Stripe
+	 * @param {Boolean} [options.skipAutoCharge=false] Skip saved-card confirm, go straight to rails
 	 */
 	return function buy(options) {
 		options = Q.extend({
@@ -28,13 +41,24 @@ Q.exports(function () {
 			missing: false,
 			reason: 'BoughtCredits',
 			skipDialog: false,
-			skipAutoCharge: false
+			skipAutoCharge: false,
+			stripe: undefined,
+			web3: undefined
 		}, options);
+
+		// Merge config defaults for payment rails
+		var cfg = Q.getObject('Assets.credits.buy', Q) || {};
+		if (options.stripe === undefined) {
+			options.stripe = cfg.stripe || {};
+		}
+		if (options.web3 === undefined) {
+			options.web3 = cfg.web3 || null;
+		}
 
 		// Load payment lib
 		Q.Assets.Payments.load();
 
-		// ─── Check for saved payment method before Stripe ───
+		// ─── Check for saved payment method before showing rails ───
 		if (!options.skipAutoCharge) {
 			Q.Assets.Payments.getPaymentMethod()
 			.then(function (pm) {
@@ -52,9 +76,15 @@ Q.exports(function () {
 
 		function _proceedToBuy(options) {
 			var title = options.title || Q.text.Assets.credits.BuyCredits;
-			var NotEnoughCredits = null;
-			var templateName = 'Assets/credits/buy';
+
+			// Skip amount dialog — go straight to payment
+			if (options.skipDialog) {
+				return _showPayment(options);
+			}
+
 			var exchange = Q.Assets.Credits.exchange[options.currency];
+			var NotEnoughCredits = null;
+			var templateName = 'Assets/credits/buy/amount';
 
 			var conversion = Q.text.Assets.credits.Conversion.interpolate({
 				amount: '<span class="credits">&nbsp;1&nbsp;</span>',
@@ -70,7 +100,7 @@ Q.exports(function () {
 			});
 
 			if (options.missing) {
-				templateName = 'Assets/credits/missing';
+				templateName = 'Assets/credits/buy/missing';
 				title = Q.text.Assets.credits.NeedMoreCredits;
 				NotEnoughCredits = Q.text.Assets.credits.NotEnoughCredits.interpolate({
 					amount: options.amount.toFixed(2),
@@ -86,12 +116,12 @@ Q.exports(function () {
 				}));
 			});
 
-			Q.Template.set('Assets/credits/missing',
+			Q.Template.set('Assets/credits/buy/missing',
 				'<div class="Assets_credits_buy_missing">{{NotEnoughCredits}}</div>' +
 				'<input type="hidden" name="amount" value="{{amount}}">' +
 				'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
 			);
-			Q.Template.set('Assets/credits/buy',
+			Q.Template.set('Assets/credits/buy/amount',
 				'<div class="Assets_credits_conversion">{{{conversion}}}</div>' +
 				'{{#each bonuses}}' +
 				'	<div class="Assets_credits_bonus">{{{this}}}</div>' +
@@ -100,12 +130,6 @@ Q.exports(function () {
 				'<button class="Q_button" name="buy">{{texts.PurchaseCredits}}</button>'
 			);
 
-			// --- skipDialog flow ---
-			if (options.skipDialog) {
-				return _openStripe(options);
-			}
-
-			// --- Normal dialog flow ---
 			var paymentStarted = false;
 
 			Q.Dialogs.push({
@@ -124,7 +148,7 @@ Q.exports(function () {
 					}
 				},
 				onActivate: function (dialog) {
-					$("input[name=amount").on(Q.Pointer.fastclick, function () {
+					$("input[name=amount", dialog).on(Q.Pointer.fastclick, function () {
 						$(this).select();
 					});
 					$("button[name=buy]", dialog).on(Q.Pointer.fastclick, function () {
@@ -139,7 +163,7 @@ Q.exports(function () {
 
 						Q.Dialogs.pop();
 
-						_openStripe(Q.extend({}, options, { amount: amount }));
+						_showPayment(Q.extend({}, options, { amount: amount }));
 					});
 				},
 				onClose: function () {
@@ -150,7 +174,11 @@ Q.exports(function () {
 			});
 		}
 
-		function _openStripe(o) {
+		/**
+		 * Open a dialog with the Assets/credits/buy tool,
+		 * which shows the rail picker and handles payment.
+		 */
+		function _showPayment(o) {
 			var amount = Math.round(o.amount * 100) / 100;
 			if (!amount) {
 				return Q.handle(o.onFailure, null, [
@@ -158,17 +186,31 @@ Q.exports(function () {
 				]);
 			}
 
-			Q.Assets.Payments.stripe({
+			var toolOptions = {
 				amount: amount,
 				currency: o.currency,
-				metadata: o.metadata,
-				reason: o.reason,
-				intentToken: o.intentToken
-			}, function (err, data) {
-				if (err) {
-					return Q.handle(o.onFailure, null, [err]);
+				description: o.explanation,
+				stripe: o.stripe,
+				web3: o.web3,
+				onPaid: function (method, details) {
+					Q.Dialogs.pop();
+					Q.handle(o.onSuccess, null, [null, details]);
 				}
-				return Q.handle(o.onSuccess, null, [null, data]);
+			};
+
+			Q.Dialogs.push({
+				title: o.title || Q.text.Assets.credits.BuyCredits,
+				className: 'Assets_credits_buy Assets_credits_buy_payment',
+				onActivate: function (dialog) {
+					var element = Q.Tool.setUpElement(
+						'div', 'Assets/credits/buy', toolOptions
+					);
+					dialog.appendChild(element);
+					Q.activate(element);
+				},
+				onClose: function () {
+					Q.handle(o.onFailure);
+				}
 			});
 		}
 
@@ -210,7 +252,7 @@ Q.exports(function () {
 					Q.Assets.Credits.buy(o);
 					return;
 				}
-				// Charge saved card via Assets/buy — just charges
+				// Charge saved method via Assets/buy — just charges
 				// and grants credits. The webhook handles the intent
 				// to complete the actual purchase (event join, etc.)
 				Q.req('Assets/buy', ['success'],
@@ -219,7 +261,7 @@ Q.exports(function () {
 							err, response && response.errors
 						);
 						if (msg) {
-							// Charge failed — fall back to Stripe
+							// Charge failed — fall back to rail picker
 							o.skipAutoCharge = true;
 							Q.Assets.Credits.buy(o);
 							return;

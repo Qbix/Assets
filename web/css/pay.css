@@ -1,0 +1,176 @@
+/* Assets/credits/buy — payment rail picker and checkout */
+
+.Assets_pay {
+  --pay-bg: var(--Intercoin-color-surface, #fff);
+  --pay-text: var(--Intercoin-color-text, #222);
+  --pay-muted: var(--Intercoin-color-muted, #777);
+  --pay-accent: var(--Intercoin-color-accent, #4A90D9);
+  --pay-border: var(--Intercoin-color-border, #e0e0e0);
+  --pay-radius: var(--Intercoin-radius, 8px);
+  --pay-success: #2e7d32;
+  --pay-danger: #c62828;
+
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  color: var(--pay-text);
+}
+
+.Assets_pay_header {
+  text-align: center;
+  padding: 16px 0 12px;
+}
+
+.Assets_pay_amount {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.Assets_pay_currency {
+  font-size: 14px;
+  color: var(--pay-muted);
+  margin-top: 2px;
+}
+
+.Assets_pay_description {
+  font-size: 13px;
+  color: var(--pay-muted);
+  margin-top: 6px;
+}
+
+/* Rail picker */
+.Assets_pay_rails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.Assets_pay_rail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--pay-border);
+  border-radius: var(--pay-radius);
+  background: var(--pay-bg);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.Assets_pay_rail:hover {
+  border-color: var(--pay-accent);
+}
+
+.Assets_pay_rail.Assets_pay_rail_selected {
+  border-color: var(--pay-accent);
+  box-shadow: 0 0 0 1px var(--pay-accent);
+}
+
+.Assets_pay_rail_icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.Assets_pay_rail_icon_stripe {
+  background: #635bff;
+  color: #fff;
+}
+
+.Assets_pay_rail_icon_web3 {
+  background: #f6851b;
+  color: #fff;
+}
+
+.Assets_pay_rail_icon_credits {
+  background: var(--pay-success);
+  color: #fff;
+}
+
+.Assets_pay_rail_label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.Assets_pay_rail_detail {
+  font-size: 12px;
+  color: var(--pay-muted);
+  margin-top: 1px;
+}
+
+/* Checkout area — shows after rail selection */
+.Assets_pay_checkout {
+  margin-top: 12px;
+  padding: 16px;
+  border: 1px solid var(--pay-border);
+  border-radius: var(--pay-radius);
+  min-height: 60px;
+}
+
+.Assets_pay_checkout:empty {
+  display: none;
+}
+
+/* Action button */
+.Assets_pay_button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: var(--pay-radius);
+  background: var(--pay-accent);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.Assets_pay_button:hover { opacity: 0.9; }
+.Assets_pay_button:disabled { opacity: 0.5; cursor: default; }
+
+/* Status */
+.Assets_pay_status {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+}
+
+.Assets_pay_status_success {
+  color: var(--pay-success);
+}
+
+.Assets_pay_status_error {
+  color: var(--pay-danger);
+}
+
+/* Waiting state */
+.Assets_pay.Q_working .Assets_pay_button {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .Assets_pay:not(.Intercoin_light) {
+    --pay-bg: #1a1a2e;
+    --pay-text: #e0e0e0;
+    --pay-muted: #888;
+    --pay-border: #333;
+  }
+}
+
+.Intercoin_dark .Assets_pay {
+  --pay-bg: #1a1a2e;
+  --pay-text: #e0e0e0;
+  --pay-muted: #888;
+  --pay-border: #333;
+}

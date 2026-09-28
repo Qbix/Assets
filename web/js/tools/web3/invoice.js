@@ -25,8 +25,8 @@ var Users = Q.Users;
  *   {
  *     address: "0xDEFAULT...",
  *     tokens: ["USDC", "USDT"],
- *     allowance: true,
- *     directTransfer: false,
+ *     allowance: false,
+ *     directTransfer: true,
  *     chains: {
  *       "0x89": { address: "0x...", uniswapRouter: "0x..." },
  *       "0x1": {}
@@ -44,8 +44,8 @@ var Users = Q.Users;
  *   If provided, uses this directly instead of loading from stream.
  *   @param {String} [options.web3.address] Default recipient wallet
  *   @param {Array} [options.web3.tokens] Accepted token symbols
- *   @param {Boolean} [options.web3.allowance=true] Enable approve flow
- *   @param {Boolean} [options.web3.directTransfer=false] Enable direct transfer
+ *   @param {Boolean} [options.web3.allowance] Enable approve flow (fallback)
+ *   @param {Boolean} [options.web3.directTransfer=true] Enable direct transfer (default)
  *   @param {Object} [options.web3.chains] Object keyed by chainId. Each value:
  *     @param {String} [options.web3.chains.*.address] Override recipient
  *     @param {Array} [options.web3.chains.*.accept] Swappable token addresses
@@ -152,8 +152,8 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 			tokens:         web3.tokens || [],
 			accept:         chainCfg.accept || [],
 			uniswapRouter:  chainCfg.uniswapRouter || null,
-			allowance:      web3.allowance !== false,
-			directTransfer: !!web3.directTransfer
+			allowance:      !!web3.allowance,  // opt-in, not default
+			directTransfer: web3.directTransfer !== false  // on by default
 		};
 	},
 
@@ -352,22 +352,20 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 				)
 			);
 
-			tool.$('.Assets_web3_invoice_btn_approve')
+			// Single Pay button — dispatches to the right method
+			tool.$('.Assets_web3_invoice_btn_pay')
 				.on(Q.Pointer.fastclick, function (e) {
 					e.stopPropagation();
-					tool._onButtonClick($(this), '_doApprove');
-				});
-
-			tool.$('.Assets_web3_invoice_btn_direct')
-				.on(Q.Pointer.fastclick, function (e) {
-					e.stopPropagation();
-					tool._onButtonClick($(this), '_doDirectTransfer');
-				});
-
-			tool.$('.Assets_web3_invoice_btn_swap')
-				.on(Q.Pointer.fastclick, function (e) {
-					e.stopPropagation();
-					tool._onButtonClick($(this), '_doSwap');
+					var tokenInfo = tool.selectedToken;
+					var config = tool.currentConfig;
+					var method;
+					if (tool._tokenNeedsSwap(tokenInfo, config)
+					&& config.uniswapRouter) {
+						method = '_doSwap';
+					} else {
+						method = '_doDirectTransfer';
+					}
+					tool._onButtonClick($(this), method);
 				});
 		});
 	},
@@ -414,12 +412,15 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 		var config = tool.currentConfig;
 		var needsSwap = tool._tokenNeedsSwap(tokenInfo, config);
 
-		tool.$('.Assets_web3_invoice_btn_approve')
-			.toggle(config.allowance && !needsSwap);
-		tool.$('.Assets_web3_invoice_btn_direct')
-			.toggle(config.directTransfer && !needsSwap);
-		tool.$('.Assets_web3_invoice_btn_swap')
-			.toggle(needsSwap && !!config.uniswapRouter);
+		// Single button — always visible, label changes
+		var $payBtn = tool.$('.Assets_web3_invoice_btn_pay');
+		if (needsSwap && config.uniswapRouter) {
+			$payBtn.find('.Assets_web3_invoice_btn_label')
+				.text(Q.getObject('Assets.payment.SwapAndPay', Q.text) || 'Swap & Pay');
+		} else {
+			$payBtn.find('.Assets_web3_invoice_btn_label')
+				.text(Q.getObject('Assets.payment.PayNow', Q.text) || 'Pay');
+		}
 
 		if (needsSwap && config.uniswapRouter) {
 			tool._updateSwapQuote(tokenInfo, config);
@@ -688,6 +689,62 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 		var config = tool.currentConfig;
 		var decimals = tokenInfo.decimals || 18;
 		var zeroAddress = Users.Web3.zeroAddress;
+
+		// When no in-page wallet: QR on desktop, deep link on mobile
+		if (typeof window.ethereum === 'undefined' || !window.ethereum) {
+			var payOpts = {
+				token: tokenInfo.tokenAddress === zeroAddress
+					? null : tokenInfo.tokenAddress,
+				amount: state.amount,
+				decimals: decimals,
+				chainId: parseInt(chainId)
+			};
+			var uri = Q.Links.ethereumPay(config.address, payOpts);
+
+			if (!Q.info.isMobile) {
+				// Desktop: show QR code dialog
+				Q.addScript('{{Q}}/js/qrcode/qrcode.js', function () {
+					Q.Dialogs.push({
+						title: 'Scan to pay',
+						onActivate: function (container) {
+							var $c = $(container).find('.Q_dialog_content');
+							var tokenName = tokenInfo.tokenName || 'ETH';
+							$c.append(
+								'<div style="text-align:center;padding:8px 0;'
+								+ 'font-size:16px;font-weight:600">'
+								+ 'Pay ' + state.amount + ' ' + tokenName
+								+ '</div>'
+							);
+							var qrDiv = document.createElement('div');
+							qrDiv.style.cssText = 'text-align:center;padding:16px 0';
+							try {
+								new QRCode(qrDiv, {
+									text: uri,
+									width: 250, height: 250,
+									colorDark: '#000000',
+									colorLight: '#ffffff',
+									correctLevel: QRCode.CorrectLevel.H
+								});
+							} catch (e) {
+								qrDiv.textContent = uri;
+							}
+							$c.append(qrDiv);
+							$c.append(
+								'<div style="text-align:center;font-size:12px;'
+								+ 'color:#888;padding:4px 0">'
+								+ 'Scan with your wallet app</div>'
+							);
+						},
+						onClose: function () { Q.handle(done); }
+					});
+				});
+			} else {
+				// Mobile: deep link
+				window.location.href = uri;
+				Q.handle(done);
+			}
+			return;
+		}
 
 		if (tokenInfo.tokenAddress === zeroAddress) {
 			Users.Web3.transaction(
@@ -993,28 +1050,13 @@ Q.Template.set("Assets/web3/invoice/main",
 +	'      <span class="Assets_web3_invoice_selected_balance">'
 +	'      </span>'
 +	'    </div>'
-+	'    {{#if allowanceEnabled}}'
-+	'    <button class="Q_button Assets_web3_invoice_btn_approve">'
++	'    <button class="Q_button Assets_web3_invoice_btn_pay">'
 +	'      <img src="{{Users}}/img/platforms/web3.png"'
 +	'           class="Assets_web3_invoice_btn_icon" />'
-+	'      {{payment.Authorize}}'
++	'      <span class="Assets_web3_invoice_btn_label">'
++	'        {{payment.PayNow}}'
++	'      </span>'
 +	'    </button>'
-+	'    {{/if}}'
-+	'    {{#if directEnabled}}'
-+	'    <button class="Q_button Assets_web3_invoice_btn_direct">'
-+	'      <img src="{{Users}}/img/platforms/web3.png"'
-+	'           class="Assets_web3_invoice_btn_icon" />'
-+	'      {{payment.PayNow}}'
-+	'    </button>'
-+	'    {{/if}}'
-+	'    {{#if hasSwap}}'
-+	'    <button class="Q_button Assets_web3_invoice_btn_swap"'
-+	'            style="display:none">'
-+	'      <img src="{{Users}}/img/platforms/web3.png"'
-+	'           class="Assets_web3_invoice_btn_icon" />'
-+	'      {{payment.Swap}}'
-+	'    </button>'
-+	'    {{/if}}'
 +	'  </div>'
 +	'</div>',
 	{ text: ['Assets/content'] }
