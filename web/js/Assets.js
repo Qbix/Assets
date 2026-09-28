@@ -662,6 +662,9 @@ Q.Text.addFor(
 	'Assets/', ["Assets/content"]
 );
 Q.Tool.define({
+	"Assets/credits/buy": {
+		js: "{{Assets}}/js/tools/credits/buy.js"
+	},
 	"Assets/subscription": {
 		js: "{{Assets}}/js/tools/subscription.js",
 		css: "{{Assets}}/css/tools/AssetsSubscription.css"
