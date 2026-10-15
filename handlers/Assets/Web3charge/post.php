@@ -40,7 +40,7 @@ function Assets_Web3charge_post($params = array())
 
     // Verify allowance on-chain
     $currentAllowance = Users_Web3::execute(
-        'Assets/templates/R1/ERC20',
+        'Assets/templates/ERC20',
         $pm['tokenAddress'], 'allowance',
         array($pm['walletAddress'], $pm['spender']),
         $pm['chainId'], false
@@ -58,7 +58,7 @@ function Assets_Web3charge_post($params = array())
     set_time_limit(120);
 
     $txHash = Users_Web3::execute(
-        'Assets/templates/R1/ERC20',
+        'Assets/templates/ERC20',
         $pm['tokenAddress'], 'transferFrom',
         array($pm['walletAddress'], $spenderAddr, $tokenAmount),
         $pm['chainId'], false, null, 0,

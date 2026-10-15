@@ -35,7 +35,7 @@ function Assets_Web3approved_post($params = array())
     }
 
     $allowance = Users_Web3::execute(
-        'Assets/templates/R1/ERC20',
+        'Assets/templates/ERC20',
         $tokenAddress, 'allowance',
         array($walletAddress, $spenderAddress),
         $chainId, false

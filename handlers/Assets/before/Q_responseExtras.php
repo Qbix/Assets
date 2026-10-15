@@ -7,6 +7,13 @@ function Assets_before_Q_responseExtras() {
 	Q_Response::setScriptData('Q.plugins.Assets.Credits.amount', Assets_Credits::amount());
 	Q_Response::setScriptData('Q.plugins.Assets.Credits.exchange', Q_Config::expect('Assets', 'credits', 'exchange'));
 
+	// Assets/credits/buy (the rail-picker tool/method) reads this config
+	// directly off Q.Assets.credits.buy (not Q.plugins.Assets...) via
+	// Q.getObject('Assets.credits.buy', Q) — nothing ever sent this to
+	// the client before, so Assets.credits.buy.{stripe,web3} in config
+	// (including app overrides) was silently inert.
+	Q_Response::setScriptData('Q.Assets.credits.buy', Q_Config::get('Assets', 'credits', 'buy', array()));
+
 	if ($publishableKey = Q_Config::get('Assets', 'payments', 'stripe', 'publishableKey', null)) {
 		if ($jsLibrary = Q_Config::get('Assets', 'payments', 'stripe', 'jsLibrary', null)) {
 			Q_Response::setScriptData('Q.plugins.Assets.Payments.stripe.jsLibrary', $jsLibrary);
@@ -40,6 +47,13 @@ function Assets_before_Q_responseExtras() {
 	Q_Response::setScriptData('Q.plugins.Assets.Web3.defaultChain', Assets_NFT::getDefaultChain());
 	Q_Response::setScriptData('Q.plugins.Assets.NFT.relationType', Assets_NFT::$relationType);
 	Q_Response::setScriptData('Q.plugins.Assets.currencies.tokens', Q_Config::get("Assets", "currencies", "tokens", array()));
+
+	// Assets/web3/invoice and Assets/web3/balance both read this via
+	// Q.getObject(['currencies','tokens',symbol], Q.Assets) -- the bare
+	// Q.Assets namespace, not Q.plugins.Assets above -- so without this,
+	// every accepted-token / primary-token lookup in those tools always
+	// resolves to undefined and silently filters out every balance.
+	Q_Response::setScriptData('Q.Assets.currencies.tokens', Q_Config::get("Assets", "currencies", "tokens", array()));
 
 	Q_Response::setScriptData('Q.plugins.Assets.NFT.icon', Q_Config::expect("Q", "images", "NFT/icon"));
 	Q_Response::setScriptData('Q.plugins.Assets.NFT.series.icon', Q_Config::expect("Q", "images", "NFT/series/icon"));
