@@ -251,7 +251,7 @@ function (options) {
 			Q.prompt('How many credits to withdraw?',
 			function (val) {
 				if (!val) { $btn.removeClass('Q_working'); return; }
-				Q.req('Assets/credits/withdraw', ['result'],
+				Q.req('Assets/creditsWithdraw', ['result'],
 				function (err, response) {
 					$btn.removeClass('Q_working');
 					var msg = Q.firstErrorMessage(

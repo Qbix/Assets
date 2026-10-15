@@ -11,12 +11,23 @@
  * credits — Assets/web3/spender/address. Its private key is at
  * Assets/web3/spender/privateKey in local/app.json.
  *
+ * Named "creditsWithdraw" (one segment), not "credits/withdraw" (two),
+ * deliberately: every /action.php AJAX request's module/action gets
+ * resolved by Q_ActionController::execute() by splitting the URL path
+ * and keeping only the first two segments — a real, platform-level bug,
+ * since anything beyond that (like "credits" + "withdraw" here) is
+ * silently discarded, routing the request to a different, shorter
+ * action instead of this one. Fixing that is a platform-core change;
+ * this handler avoids it entirely by never having more than one segment
+ * after the module to begin with. See /home/liubomyr/Qbix/workflow/web3-instruction.md
+ * section 10 for the full story.
+ *
  * @module Assets
- * @class HTTP Assets credits withdraw
+ * @class HTTP Assets creditsWithdraw
  * @method POST
  * @param {Number} $params.credits Number of credits to withdraw
  */
-function Assets_credits_withdraw_post($params = array())
+function Assets_creditsWithdraw_post($params = array())
 {
 	$user = Users::loggedInUser(true);
 	$req = array_merge($_REQUEST, $params);
