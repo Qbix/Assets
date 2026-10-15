@@ -36,7 +36,7 @@ function (options) {
 	var tool = this;
 	var state = this.state;
 
-	Q.addStylesheet('{{Assets}}/css/pay.css', 'Assets');
+	Q.addStylesheet('{{Assets}}/css/pay.css');
 
 	// Merge config defaults
 	var cfg = Q.getObject('Assets.credits.buy', Q) || {};

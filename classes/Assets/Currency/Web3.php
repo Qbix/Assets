@@ -269,9 +269,16 @@ class Assets_Currency_Web3 {
 			);
 		}
 
-		// Native balance via raw RPC (outside the batch — it's not a contract call)
+		// Native balance via raw RPC (outside the batch — it's not a contract call).
+		// Users::appInfo() alone only returns Users/apps/web3/<id> (normally
+		// just the "*" wildcard, with no rpcUrl at all) -- Users_Web3::objects()
+		// additionally merges in Users/web3/chains/<id>, which is where rpcUrl
+		// actually lives for every chain configured this way (including every
+		// chain the ERC-20 balanceOf batch call below already successfully
+		// resolves through the same function). Without this, native-currency
+		// balance silently never appears for any chain.
 		try {
-			list(, $appInfo) = Users::appInfo('web3', $chainId, true);
+			list($appInfo) = Users_Web3::objects($chainId);
 			$rpcUrl = Q::ifset($appInfo, 'rpcUrl', null);
 			if ($rpcUrl) {
 				$response = Q_Utils::post($rpcUrl, Q::json_encode(array(
@@ -309,7 +316,7 @@ class Assets_Currency_Web3 {
 			$i = 0;
 			foreach ($tokensToQuery as $symbol => $info) {
 				Users_Web3::execute(
-					'Assets/templates/R1/ERC20',
+					'Assets/templates/ERC20',
 					$info['address'], 'balanceOf',
 					array($walletAddress),
 					$chainId, false
@@ -339,7 +346,7 @@ class Assets_Currency_Web3 {
 			foreach ($tokensToQuery as $symbol => $info) {
 				try {
 					$balance = Users_Web3::execute(
-						'Assets/templates/R1/ERC20',
+						'Assets/templates/ERC20',
 						$info['address'], 'balanceOf',
 						array($walletAddress),
 						$chainId, false

@@ -37,8 +37,13 @@ function Assets_credits_withdraw_post($params = array())
 		));
 	}
 
-	// Check balance
-	$balance = Assets_Credits::amount($user->id);
+	// Fast-fail balance check (communityId null, matching every
+	// Assets_Credits::grant() call site elsewhere in the codebase). This is
+	// advisory only, to avoid an RPC round-trip for an obviously-insufficient
+	// balance — it is NOT what actually prevents a double withdrawal; that
+	// guarantee comes from Assets_Credits::spend()'s own row lock, used below
+	// *before* any on-chain send is attempted (see the TOCTOU note there).
+	$balance = Assets_Credits::amount(null, $user->id);
 	if ($balance < $credits) {
 		throw new Q_Exception(array(
 			'message' => "Insufficient credits: have $balance, requested $credits"
@@ -55,8 +60,14 @@ function Assets_credits_withdraw_post($params = array())
 	}
 	$payoutAmount = $credits / $exchange; // e.g. 100 credits / 10 rate = $10
 
-	// Determine payout rail
-	$web3Xid = Users::xid($user->id, 'web3', 'all');
+	// Determine payout rail. There is no static Users::xid() method anywhere
+	// in this codebase (confirmed) -- the real API is the instance method
+	// Users_User::getXid($platformApp), keyed "$platform_$appId" (here
+	// "web3_all", matching the wallet-login flow's own
+	// $user->setXid('web3_all', $walletAddress) call). The old line here
+	// would fatal ("Call to undefined method Users::xid()") on every single
+	// withdrawal request, before ever reaching any rail logic.
+	$web3Xid = $user->getXid('web3_all');
 	// For Stripe: check if user has a Connect account
 	$stripeConnectId = null; // TODO: read from Users_ExternalTo or similar
 
@@ -91,7 +102,9 @@ function Assets_credits_withdraw_post($params = array())
 		// Convert to base units
 		$tokenAmount = bcmul((string)$payoutAmount, bcpow('10', (string)$decimals, 0), 0);
 
-		// Check payer balance
+		// Check payer (spender wallet) balance. Read-only, fail-fast: this
+		// doesn't touch the user's credits, so it's safe to do before anything
+		// mutates state.
 		$payerBalance = Users_Web3::execute(
 			'Assets/templates/ERC20', $tokenAddr, 'balanceOf',
 			array($spenderAddr), $chainId, false
@@ -102,20 +115,62 @@ function Assets_credits_withdraw_post($params = array())
 			));
 		}
 
+		/**
+		 * ------------------------------------------------------------------
+		 *   TOCTOU fix: debit credits BEFORE sending anything on-chain,
+		 *   not after.
+		 * ------------------------------------------------------------------
+		 * The on-chain send is irreversible and can't participate in a DB
+		 * transaction with the credits debit, so the two can never be made
+		 * perfectly atomic together. The previous order (send first, debit
+		 * after) meant the balance was only ever checked via an unlocked
+		 * read — two concurrent requests could both pass that check and
+		 * both trigger a real payout before either debit landed.
+		 *
+		 * Assets_Credits::spend() already takes a real row lock on the
+		 * user's credits stream and re-checks the balance *inside* that
+		 * lock, throwing Assets_Exception_NotEnoughCredits if it's not
+		 * enough — this is the actual concurrency guard. Running it first
+		 * means a second concurrent request can no longer reach the
+		 * on-chain send at all once the first has debited the balance.
+		 *
+		 * If the send itself then fails (insufficient payer liquidity that
+		 * changed between the check above and now, a reverted tx, an RPC
+		 * error, etc.), the credits are refunded via Assets_Credits::grant()
+		 * before the exception is allowed to propagate, so a failed payout
+		 * never silently costs the user their credits.
+		 */
+		Assets_Credits::spend(null, $credits, 'withdrawal', $user->id, array(
+			'rail' => $rail
+		));
+
 		set_time_limit(120);
 
-		$txHash = Users_Web3::execute(
-			'Assets/templates/ERC20', $tokenAddr, 'transfer',
-			array($web3Xid, $tokenAmount),
-			$chainId, false, null, 0,
-			array('from' => $spenderAddr),
-			$spenderKey
-		);
+		try {
+			$txHash = Users_Web3::execute(
+				'Assets/templates/ERC20', $tokenAddr, 'transfer',
+				array($web3Xid, $tokenAmount),
+				$chainId, false, null, 0,
+				array('from' => $spenderAddr),
+				$spenderKey
+			);
+		} catch (Exception $e) {
+			Assets_Credits::grant(null, $credits, 'withdrawal_failed_refund', $user->id, array(
+				'rail' => $rail,
+				'error' => $e->getMessage()
+			));
+			throw $e;
+		}
 
 		$result['txHash'] = $txHash;
 		$result['amount'] = $payoutAmount;
 		$result['token'] = $tokenAddr;
 		$result['chainId'] = $chainId;
+		// Note: unlike before, the txHash isn't known until after spend()
+		// already ran (debiting has to happen first, see above), so it's
+		// no longer attached to that ledger row's own attributes — it's
+		// still returned to the caller in $result, and still traceable
+		// on-chain via the explorer regardless.
 
 	} elseif ($rail === 'stripe') {
 		// Stripe Transfer to the Connect account
@@ -129,12 +184,6 @@ function Assets_credits_withdraw_post($params = array())
 			'message' => "Stripe payouts not yet implemented"
 		));
 	}
-
-	// Deduct credits
-	Assets_Credits::spend($user->id, $credits, 'withdrawal', array(
-		'rail' => $rail,
-		'txHash' => Q::ifset($result, 'txHash', null)
-	));
 
 	Q_Response::setSlot('result', $result);
 }

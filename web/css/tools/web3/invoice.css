@@ -1,22 +1,135 @@
-.bi-asterisk.animate {
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+/* Assets/web3/invoice — pay/top-up with a crypto wallet.
+   Matches ../../pay.css's design language. When nested under the
+   wrapping .Assets_pay element (the usual case, via Assets/credits/buy)
+   this naturally inherits its --pay-* custom properties; each var()
+   below also carries its own fallback for standalone use. */
+
+.Assets_web3_invoice_container {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--pay-text, #222);
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.Assets_web3_invoice_header {
+  text-align: center;
+  margin-bottom: 14px;
+}
 
-.Assets_web3_invoice_btnPay {
-    width:100%;
+.Assets_web3_invoice_payTitle {
+  font-size: 15px;
+  line-height: 1.5;
 }
-.Assets_web3_invoice_select select {
-    width:100%;
+
+.Assets_web3_invoice_recipient {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  color: var(--pay-muted, #777);
 }
-.Assets_web3_invoice_btnContainer {
-    margin-top:20px;
+
+.Assets_web3_invoice_balance {
+  margin: 10px 0;
+  padding: 8px 10px;
+  border: 1px solid var(--pay-border, #e0e0e0);
+  border-radius: var(--pay-radius, 8px);
 }
-.Assets_web3_invoice_interface_title {
-    margin: 7px;
+
+.Assets_web3_invoice_swap_info {
+  min-height: 1em;
+  margin: 6px 2px;
+  font-size: 13px;
+  color: var(--pay-muted, #777);
+}
+.Assets_web3_invoice_swap_info:empty {
+  margin: 0;
+}
+
+.Assets_web3_invoice_actions {
+  margin-top: 14px;
+  transition: opacity 0.15s;
+}
+
+.Assets_web3_invoice_actions.Q_disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.Assets_web3_invoice_selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  padding: 0 2px;
+  font-size: 13px;
+  color: var(--pay-muted, #777);
+}
+
+.Assets_web3_invoice_selected_name {
+  font-weight: 600;
+  color: var(--pay-text, #222);
+}
+
+.Assets_web3_invoice_btn_pay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--pay-radius, 8px);
+  background: var(--pay-accent, #4A90D9);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.Assets_web3_invoice_btn_pay:hover {
+  opacity: 0.9;
+}
+
+.Assets_web3_invoice_btn_icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.Assets_web3_invoice_btn_label {
+  line-height: 1;
+}
+
+/* "Wrong chain" screen (Assets/web3/invoice/switchChain template) */
+
+.Assets_web3_invoice_switch_container {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.Assets_web3_invoice_switch_msg {
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: var(--pay-text, #222);
+}
+
+.Assets_web3_invoice_switch_chains {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Assets_web3_invoice_switch_btn {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid var(--pay-border, #e0e0e0);
+  border-radius: var(--pay-radius, 8px);
+  background: var(--pay-bg, #fff);
+  color: var(--pay-text, #222);
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.Assets_web3_invoice_switch_btn:hover {
+  border-color: var(--pay-accent, #4A90D9);
 }

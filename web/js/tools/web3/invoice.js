@@ -324,7 +324,16 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 			Q.replace(tool.element, html);
 			$te.removeClass('Q_working');
 
-			// Embed Assets/web3/balance tool filtered to accepted tokens
+			// Embed Assets/web3/balance tool filtered to accepted tokens.
+			// When a Uniswap router is configured, don't hard-filter to
+			// just the primary (accepted) token(s) -- that would make
+			// _tokenNeedsSwap()/_doSwap() below permanently unreachable,
+			// since the user could never even select a swappable token
+			// like native ETH in the first place. Show everything the
+			// server returns for this chain instead (optionally further
+			// restricted to config.accept's explicit swappable addresses,
+			// if configured) and let _tokenNeedsSwap() sort out which
+			// selection needs a swap.
 			var $balanceSlot = tool.$(
 				'.Assets_web3_invoice_balance'
 			);
@@ -333,8 +342,11 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 					'Assets/web3/balance', {
 						chainId: chainId,
 						showCredits: false,
-						acceptedTokens: config.tokens,
-						onTokenSelect: new Q.Event(
+						acceptedTokens: config.uniswapRouter
+							? null : config.tokens,
+						tokenAddresses: (config.accept && config.accept.length)
+							? config.accept : null,
+						onTokenChange: new Q.Event(
 							function (tokenInfo) {
 								tool.selectedToken = tokenInfo;
 								tool._updateActions(tokenInfo);
@@ -505,6 +517,17 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 			);
 		}).then(function (factory) {
 			tool._uniswapFactory = factory;
+			// Loading these contracts is async, but the user can select a
+			// swap-needing token (firing _updateSwapQuote) before this
+			// finishes -- a real race, not hypothetical: _updateSwapQuote
+			// silently no-ops (empty swap-info box, no quote, Pay never
+			// gets a _swapAmountIn) if it runs first. Whichever finishes
+			// last -- this, or the token selection -- needs to be the one
+			// that actually computes the quote, so retry it here too.
+			if (tool.selectedToken
+			&& tool._tokenNeedsSwap(tool.selectedToken, config)) {
+				tool._updateSwapQuote(tool.selectedToken, config);
+			}
 		}).catch(function (err) {
 			console.warn(
 				"Assets/web3/invoice: Uniswap init failed", err
@@ -534,8 +557,9 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 		var primaryCfg = Q.getObject(
 			['currencies', 'tokens', primaryToken], Assets
 		);
-		var primaryDecimals = primaryCfg
-			? primaryCfg.decimals || 18 : 18;
+		var primaryDecimals = tool._resolveDecimals(
+			primaryCfg, tool.currentChainId
+		);
 
 		var tokenAddr = tokenInfo.tokenAddress;
 		var zeroAddr = Users.Web3.zeroAddress;
@@ -605,7 +629,7 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 				var spenderAddress = response.slots.address;
 
 				Users.Web3.execute(
-					'Assets/templates/R1/ERC20',
+					'Assets/templates/ERC20',
 					{
 						contractAddress: tokenInfo.tokenAddress,
 						chainId: chainId
@@ -771,7 +795,7 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 			);
 
 			Users.Web3.execute(
-				'Assets/templates/R1/ERC20',
+				'Assets/templates/ERC20',
 				{
 					contractAddress: tokenInfo.tokenAddress,
 					chainId: chainId
@@ -832,8 +856,9 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 		var primaryCfg = Q.getObject(
 			['currencies', 'tokens', primaryToken], Assets
 		);
-		var primaryDecimals = primaryCfg
-			? primaryCfg.decimals || 18 : 18;
+		var primaryDecimals = tool._resolveDecimals(
+			primaryCfg, tool.currentChainId
+		);
 		var amountOut = ethers.utils.parseUnits(
 			state.amount.toString(), primaryDecimals
 		);
@@ -841,17 +866,84 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 		var zeroAddress = Users.Web3.zeroAddress;
 		var isNative = tokenInfo.tokenAddress === zeroAddress;
 
-		if (isNative) {
-			var ethPath = [tool._weth, tool._primaryTokenAddr];
+		// tool._uniswapRouter was built read-only (just a provider, no
+		// signer -- see _loadSwapContracts), which is fine for the quote
+		// calls it's used for elsewhere, but sending an actual transaction
+		// needs a signer-connected instance. Fetch one fresh here instead
+		// of reusing the read-only one for the swap call itself.
+		Users.Web3.getContract(
+			"Assets/templates/Uniswap/V2/Router",
+			{ contractAddress: config.uniswapRouter, chainId: chainId }
+		).then(function (routerWithSigner) {
 
-			tool._uniswapRouter.swapETHForExactTokens(
-				amountOut, ethPath, config.address,
-				state.swapDeadlineTs,
-				{ value: maxAmountIn }
-			).then(function (tx) {
+			if (isNative) {
+				var ethPath = [tool._weth, tool._primaryTokenAddr];
+
+				return routerWithSigner.swapETHForExactTokens(
+					amountOut, ethPath, config.address,
+					state.swapDeadlineTs,
+					{ value: maxAmountIn }
+				).then(function (tx) {
+					Q.Notices.add({
+						content: t.SwappingTokens
+							|| 'Swapping tokens...',
+						timeout: 30
+					});
+					return tx.wait();
+				}).then(function (receipt) {
+					tool._verifyPayment(
+						receipt.transactionHash, chainId,
+						primaryToken, done
+					);
+				});
+			}
+
+			// ERC-20 swap path
+			var swapPath = [
+				tokenInfo.tokenAddress, tool._primaryTokenAddr
+			];
+
+			return Users.Web3.getContract(
+				'Assets/templates/ERC20',
+				{
+					contractAddress: tokenInfo.tokenAddress,
+					chainId: chainId
+				}
+			).then(function (erc20) {
+				return erc20.allowance(
+					tool.walletAddress, config.uniswapRouter
+				).then(function (allowance) {
+					if (allowance.gte(maxAmountIn)) {
+						return routerWithSigner
+							.swapTokensForExactTokens(
+								amountOut, maxAmountIn, swapPath,
+								config.address,
+								state.swapDeadlineTs
+							);
+					}
+
+					Q.Notices.add({
+						content: t.ApprovingToken
+							|| 'Approving token...',
+						timeout: 30
+					});
+
+					return erc20.approve(
+						config.uniswapRouter, maxAmountIn
+					).then(function (approveTx) {
+						return approveTx.wait();
+					}).then(function () {
+						return routerWithSigner
+							.swapTokensForExactTokens(
+								amountOut, maxAmountIn, swapPath,
+								config.address,
+								state.swapDeadlineTs
+							);
+					});
+				});
+			}).then(function (tx) {
 				Q.Notices.add({
-					content: t.SwappingTokens
-						|| 'Swapping tokens...',
+					content: t.SwappingTokens || 'Swapping tokens...',
 					timeout: 30
 				});
 				return tx.wait();
@@ -860,74 +952,14 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 					receipt.transactionHash, chainId,
 					primaryToken, done
 				);
-			}).catch(function (err) {
-				Q.handle(done);
-				Q.alert(
-					Users.Web3.parseMetamaskError(err) || err
-				);
 			});
-			return;
-		}
 
-		// ERC-20 swap path
-		var swapPath = [
-			tokenInfo.tokenAddress, tool._primaryTokenAddr
-		];
-
-		Users.Web3.getContract(
-			'Assets/templates/R1/ERC20',
-			{
-				contractAddress: tokenInfo.tokenAddress,
-				chainId: chainId
-			}
-		).then(function (erc20) {
-			return erc20.allowance(
-				tool.walletAddress, config.uniswapRouter
-			).then(function (allowance) {
-				if (allowance.gte(maxAmountIn)) {
-					return tool._uniswapRouter
-						.swapTokensForExactTokens(
-							amountOut, maxAmountIn, swapPath,
-							config.address,
-							state.swapDeadlineTs
-						);
-				}
-
-				Q.Notices.add({
-					content: t.ApprovingToken
-						|| 'Approving token...',
-					timeout: 30
-				});
-
-				return erc20.approve(
-					config.uniswapRouter, maxAmountIn
-				).then(function (approveTx) {
-					return approveTx.wait();
-				}).then(function () {
-					return tool._uniswapRouter
-						.swapTokensForExactTokens(
-							amountOut, maxAmountIn, swapPath,
-							config.address,
-							state.swapDeadlineTs
-						);
-				});
-			});
-		}).then(function (tx) {
-			Q.Notices.add({
-				content: t.SwappingTokens || 'Swapping tokens...',
-				timeout: 30
-			});
-			return tx.wait();
-		}).then(function (receipt) {
-			tool._verifyPayment(
-				receipt.transactionHash, chainId,
-				primaryToken, done
-			);
 		}).catch(function (err) {
 			Q.handle(done);
 			Q.alert(Users.Web3.parseMetamaskError(err) || err);
 		});
 	},
+
 
 	// =========================================================
 	// SERVER COMMUNICATION
@@ -943,6 +975,14 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 	 */
 	_recordPendingTx: function (txHash, chainId, token) {
 		var state = this.state;
+		// Standalone mode (no invoice stream, e.g. Assets/credits/buy):
+		// there's no stream to bookmark a pending tx against -- this is
+		// purely a crash-recovery aid for the real invoice-stream flow.
+		// Assets/credits' own on-chain re-verification (see Assets/credits
+		// POST handler) already covers standalone purchases independently.
+		if (!state.publisherId) {
+			return;
+		}
 		Q.req('Assets/Web3pending', [], function () {}, {
 			method: 'post',
 			fields: {
@@ -969,6 +1009,24 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 		var tool = this;
 		var state = tool.state;
 
+		// Standalone mode (no invoice stream, e.g. Assets/credits/buy):
+		// there is no Assets/invoice stream to mark paid, so skip
+		// Assets/Web3verify (it requires a real pending invoice
+		// stream) and let the embedder verify + grant instead —
+		// Assets/credits/buy's onPaid handler posts to Assets/credits,
+		// which re-verifies this txHash on-chain before granting.
+		if (!state.publisherId) {
+			Q.handle(done);
+			Q.handle(state.onPaid, tool, [
+				'web3_direct', {
+					token: token,
+					txHash: txHash,
+					chainId: chainId
+				}
+			]);
+			return;
+		}
+
 		Q.req('Assets/Web3verify', ['success'],
 			function (err, response) {
 				Q.handle(done);
@@ -994,6 +1052,35 @@ Q.Tool.define("Assets/web3/invoice", function (options) {
 				}
 			}
 		);
+	},
+
+	/**
+	 * Resolve a token config's decimals for a given chain. Assets.currencies
+	 * .tokens entries store "decimals" either as a flat number, or (like the
+	 * shipped USDC entry) as a per-chain object keyed by chain id with a
+	 * ""-keyed default -- mirrors Assets_Currency_Web3::decimals() on the
+	 * server. Treating that object as already-a-number (truthy, so the
+	 * `|| 18` default never kicks in) made ethers.utils.parseUnits() throw
+	 * synchronously on a non-numeric value, silently breaking the swap
+	 * quote before it could ever set _swapAmountIn.
+	 * @method _resolveDecimals
+	 * @private
+	 * @param {Object} cfg A Assets.currencies.tokens.<SYMBOL> entry
+	 * @param {String} chainId
+	 * @return {Number}
+	 */
+	_resolveDecimals: function (cfg, chainId) {
+		var d = cfg && cfg.decimals;
+		if (d == null) {
+			return 18;
+		}
+		if (typeof d === 'object') {
+			if (chainId != null && d[chainId] != null) {
+				return d[chainId];
+			}
+			return d[''] != null ? d[''] : 18;
+		}
+		return d;
 	},
 
 	/**

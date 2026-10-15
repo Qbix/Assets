@@ -61,8 +61,16 @@ Q.Tool.define("Assets/web3/balance", function (options) {
 		var tool = this;
 		var state = tool.state;
 
+		// state.chainId (when explicitly passed in, e.g. by Assets/web3/invoice
+		// using the wallet's already-connected chain) must decide the template
+		// on its own -- skipWeb3 only matters for deciding whether to render
+		// a chain *selector* when no chainId was given to begin with. Gating
+		// chainId itself by skipWeb3 here rendered an empty, useless <select>
+		// whenever skipWeb3 auto-detected true despite a real chainId already
+		// being set (balanceOf() below already uses the real state.chainId
+		// regardless, so this was a display-only inconsistency).
 		Q.Template.render("Assets/web3/balance", {
-			chainId: state.skipWeb3 ? null : state.chainId,
+			chainId: state.chainId,
 			chains: state.skipWeb3 ? [] : Users.Web3.chains,
 			showCredits: state.showCredits
 		}, function (err, html) {

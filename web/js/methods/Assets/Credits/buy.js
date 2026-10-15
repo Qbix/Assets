@@ -49,7 +49,7 @@ Q.exports(function () {
 		// Merge config defaults for payment rails
 		var cfg = Q.getObject('Assets.credits.buy', Q) || {};
 		if (options.stripe === undefined) {
-			options.stripe = cfg.stripe || {};
+			options.stripe = cfg.stripe || null;
 		}
 		if (options.web3 === undefined) {
 			options.web3 = cfg.web3 || null;
@@ -205,7 +205,13 @@ Q.exports(function () {
 					var element = Q.Tool.setUpElement(
 						'div', 'Assets/credits/buy', toolOptions
 					);
-					dialog.appendChild(element);
+					// append into the dialog's actual content slot, not
+					// the outer .Q_dialog element itself -- appending to
+					// dialog directly leaves .Q_dialog_content as an
+					// empty sibling box above the real content
+					var contentSlot = dialog.querySelector('.Q_dialog_content')
+						|| dialog;
+					contentSlot.appendChild(element);
 					Q.activate(element);
 				},
 				onClose: function () {
