@@ -74,15 +74,25 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: var(--pay-radius, 8px);
-  background: var(--pay-accent, #4A90D9);
-  color: #fff;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.15s;
+  /* This button also carries the generic .Q_button class (see invoice.js's
+     own template), and Communities.css's "#page .Q_button, ..." base rule
+     (an ID selector) sets every one of the properties below too -- (1,1,0)
+     beats this selector's (0,1,0) regardless of source order, so without
+     !important this button silently rendered with the base rule's own
+     padding (0 10px instead of 14px), border, gradient background and
+     text color instead of this file's. Same conflict/fix already
+     documented at Media/episodeForm.css's own Q_button override. */
+  padding: 14px !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: var(--pay-radius, 8px) !important;
+  background: var(--pay-accent, #4A90D9) !important;
+  background-image: none !important;
+  color: #fff !important;
 }
 
 .Assets_web3_invoice_btn_pay:hover {
@@ -120,16 +130,20 @@
 
 .Assets_web3_invoice_switch_btn {
   width: 100%;
-  padding: 12px;
-  border: 1.5px solid var(--pay-border, #e0e0e0);
-  border-radius: var(--pay-radius, 8px);
-  background: var(--pay-bg, #fff);
-  color: var(--pay-text, #222);
   font-size: 15px;
   cursor: pointer;
   transition: border-color 0.15s;
+  /* Same .Q_button / "#page .Q_button, ..." specificity conflict as
+     .Assets_web3_invoice_btn_pay above -- see its own comment. */
+  padding: 12px !important;
+  border: 1.5px solid var(--pay-border, #e0e0e0) !important;
+  box-shadow: none !important;
+  border-radius: var(--pay-radius, 8px) !important;
+  background: var(--pay-bg, #fff) !important;
+  background-image: none !important;
+  color: var(--pay-text, #222) !important;
 }
 
 .Assets_web3_invoice_switch_btn:hover {
-  border-color: var(--pay-accent, #4A90D9);
+  border-color: var(--pay-accent, #4A90D9) !important;
 }
